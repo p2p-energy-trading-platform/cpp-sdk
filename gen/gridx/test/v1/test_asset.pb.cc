@@ -212,11 +212,11 @@ constexpr TestAsset::ParseTableT_ TestAsset::InternalGenerateParseTable_(const :
     {
       PROTOBUF_FIELD_OFFSET(TestAsset, _impl_._has_bits_),
       0, // no _extensions_
-      1, 0,  // max_field_number, fast_idx_mask
+      2, 8,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967294,  // skipmap
+      4294967292,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      1,  // num_field_entries
+      2,  // num_field_entries
       0,  // num_aux_entries
       offsetof(ParseTableT_, field_names),  // no aux_entries
       class_data,
@@ -226,6 +226,10 @@ constexpr TestAsset::ParseTableT_ TestAsset::InternalGenerateParseTable_(const :
       ::_pbi::TcParser::GetTable<::gridx::test::v1::TestAsset>(),  // to_prefetch
       #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
     }, {{
+      // int64 price = 2 [json_name = "price"];
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(TestAsset, _impl_.price_), 1>(),
+       {16, 1, 0,
+        PROTOBUF_FIELD_OFFSET(TestAsset, _impl_.price_)}},
       // string name = 1 [json_name = "name"];
       {::_pbi::TcParser::FastUS1,
        {10, 0, 0,
@@ -235,6 +239,8 @@ constexpr TestAsset::ParseTableT_ TestAsset::InternalGenerateParseTable_(const :
     }}, {{
       // string name = 1 [json_name = "name"];
       {PROTOBUF_FIELD_OFFSET(TestAsset, _impl_.name_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // int64 price = 2 [json_name = "price"];
+      {PROTOBUF_FIELD_OFFSET(TestAsset, _impl_.price_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kInt64)},
     }},
     // no aux_entries
     {{
@@ -252,7 +258,8 @@ inline constexpr TestAsset::Impl_::Impl_(
       : _cached_size_{0},
         name_(
             &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()) {}
+            ::_pbi::ConstantInitialized()),
+        price_{::int64_t{0}} {}
 
 template <typename>
 constexpr TestAsset::TestAsset(::_pbi::ConstantInitialized,
@@ -367,9 +374,11 @@ const ::uint32_t
         2,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::test::v1::TestAsset, _impl_._has_bits_),
-        4, // hasbit index offset
+        5, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::gridx::test::v1::TestAsset, _impl_.name_),
+        PROTOBUF_FIELD_OFFSET(::gridx::test::v1::TestAsset, _impl_.price_),
         0,
+        1,
 };
 
 static const ::_pbi::MigrationSchema
@@ -387,16 +396,16 @@ const char descriptor_table_protodef_gridx_2ftest_2fv1_2ftest_5fasset_2eproto[] 
     "\n\036gridx/test/v1/test_asset.proto\022\rgridx."
     "test.v1\"\\\n\tTestMoney\022#\n\rcurrency_code\030\001 "
     "\001(\tR\014currencyCode\022\024\n\005units\030\002 \001(\003R\005units\022"
-    "\024\n\005nanos\030\003 \001(\005R\005nanos\"\037\n\tTestAsset\022\022\n\004na"
-    "me\030\001 \001(\tR\004nameBHZFgithub.com/p2p-energy-"
-    "trading-platform/go-sdk/gen/gridx/test/v"
-    "1;testv1b\006proto3"
+    "\024\n\005nanos\030\003 \001(\005R\005nanos\"5\n\tTestAsset\022\022\n\004na"
+    "me\030\001 \001(\tR\004name\022\024\n\005price\030\002 \001(\003R\005priceBHZF"
+    "github.com/p2p-energy-trading-platform/g"
+    "o-sdk/gen/gridx/test/v1;testv1b\006proto3"
 };
 static ::absl::once_flag descriptor_table_gridx_2ftest_2fv1_2ftest_5fasset_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_gridx_2ftest_2fv1_2ftest_5fasset_2eproto = {
     false,
     false,
-    256,
+    278,
     descriptor_table_protodef_gridx_2ftest_2fv1_2ftest_5fasset_2eproto,
     "gridx/test/v1/test_asset.proto",
     &descriptor_table_gridx_2ftest_2fv1_2ftest_5fasset_2eproto_once,
@@ -728,6 +737,7 @@ TestAsset::TestAsset(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  _impl_.price_ = from._impl_.price_;
 
   // @@protoc_insertion_point(copy_constructor:gridx.test.v1.TestAsset)
 }
@@ -739,6 +749,7 @@ PROTOBUF_NDEBUG_INLINE TestAsset::Impl_::Impl_(
 
 inline void TestAsset::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.price_ = {};
 }
 TestAsset::~TestAsset() {
   // @@protoc_insertion_point(destructor:gridx.test.v1.TestAsset)
@@ -792,6 +803,7 @@ PROTOBUF_NOINLINE void TestAsset::Clear() {
   if (CheckHasBit(cached_has_bits, 0x00000001U)) {
     _impl_.name_.ClearNonDefaultToEmpty();
   }
+  _impl_.price_ = ::int64_t{0};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -825,6 +837,15 @@ PROTOBUF_NOINLINE void TestAsset::Clear() {
     }
   }
 
+  // int64 price = 2 [json_name = "price"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (this_._internal_price() != 0) {
+      target =
+          ::google::protobuf::internal::WireFormatLite::WriteInt64ToArrayWithField<2>(
+              stream, this_._internal_price(), target);
+    }
+  }
+
   if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
     target =
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
@@ -848,13 +869,21 @@ PROTOBUF_NOINLINE void TestAsset::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void)cached_has_bits;
 
-   {
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
     // string name = 1 [json_name = "name"];
-    cached_has_bits = this_._impl_._has_bits_[0];
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!this_._internal_name().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_name());
+      }
+    }
+    // int64 price = 2 [json_name = "price"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (this_._internal_price() != 0) {
+        total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+            this_._internal_price());
       }
     }
   }
@@ -875,12 +904,19 @@ void TestAsset::MergeImpl(::google::protobuf::MessageLite& to_msg,
   (void)cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
-    if (!from._internal_name().empty()) {
-      _this->_internal_set_name(from._internal_name());
-    } else {
-      if (_this->_impl_.name_.IsDefault()) {
-        _this->_internal_set_name("");
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_name().empty()) {
+        _this->_internal_set_name(from._internal_name());
+      } else {
+        if (_this->_impl_.name_.IsDefault()) {
+          _this->_internal_set_name("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (from._internal_price() != 0) {
+        _this->_impl_.price_ = from._impl_.price_;
       }
     }
   }
@@ -904,6 +940,7 @@ void TestAsset::InternalSwap(TestAsset* PROTOBUF_RESTRICT PROTOBUF_NONNULL other
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, &other->_impl_.name_, arena);
+  swap(_impl_.price_, other->_impl_.price_);
 }
 
 ::google::protobuf::Metadata TestAsset::GetMetadata() const {
