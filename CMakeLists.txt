@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.24)
 
 project(gridx_cpp_sdk
-    VERSION 0.1.0
+    "${CMAKE_CURRENT_SOURCE_DIR}/VERSION"
     LANGUAGES CXX
 )
 
-find_package(Protobuf REQUIRED)
+find_package(Protobuf CONFIG REQUIRED)
 
 file(GLOB_RECURSE GRIDX_PROTO_SRCS CONFIGURE_DEPENDS
     "${CMAKE_CURRENT_SOURCE_DIR}/gen/*.pb.cc"
