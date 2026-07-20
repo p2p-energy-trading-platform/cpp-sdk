@@ -470,6 +470,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TestAsset final : public ::google::
     kNameFieldNumber = 1,
     kTypeFieldNumber = 3,
     kPriceFieldNumber = 2,
+    kTestPriceFieldNumber = 4,
   };
   // string name = 1 [json_name = "name"];
   void clear_name() ;
@@ -511,11 +512,21 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TestAsset final : public ::google::
   void _internal_set_price(::int64_t value);
 
   public:
+  // int32 test_price = 4 [json_name = "testPrice"];
+  void clear_test_price() ;
+  [[nodiscard]] ::int32_t test_price() const;
+  void set_test_price(::int32_t value);
+
+  private:
+  ::int32_t _internal_test_price() const;
+  void _internal_set_test_price(::int32_t value);
+
+  public:
   // @@protoc_insertion_point(class_scope:gridx.test.v1.TestAsset)
  private:
   class _Internal;
   using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<2, 3,
+      ::google::protobuf::internal::TcParseTable<2, 4,
                           0, 40,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
@@ -547,6 +558,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TestAsset final : public ::google::
     ::google::protobuf::internal::ArenaStringPtr name_;
     ::google::protobuf::internal::ArenaStringPtr type_;
     ::int64_t price_;
+    ::int32_t test_price_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -835,6 +847,30 @@ inline void TestAsset::set_allocated_type(::std::string* PROTOBUF_NULLABLE value
     _impl_.type_.Set("", GetArena());
   }
   // @@protoc_insertion_point(field_set_allocated:gridx.test.v1.TestAsset.type)
+}
+
+// int32 test_price = 4 [json_name = "testPrice"];
+inline void TestAsset::clear_test_price() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.test_price_ = 0;
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+}
+inline ::int32_t TestAsset::test_price() const {
+  // @@protoc_insertion_point(field_get:gridx.test.v1.TestAsset.test_price)
+  return _internal_test_price();
+}
+inline void TestAsset::set_test_price(::int32_t value) {
+  _internal_set_test_price(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  // @@protoc_insertion_point(field_set:gridx.test.v1.TestAsset.test_price)
+}
+inline ::int32_t TestAsset::_internal_test_price() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.test_price_;
+}
+inline void TestAsset::_internal_set_test_price(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.test_price_ = value;
 }
 
 #ifdef __GNUC__
