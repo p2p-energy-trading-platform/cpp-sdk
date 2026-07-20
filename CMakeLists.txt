@@ -1,7 +1,20 @@
 cmake_minimum_required(VERSION 3.24)
 
-project(gridx_cpp_sdk
+file(
+    STRINGS
     "${CMAKE_CURRENT_SOURCE_DIR}/VERSION"
+    GRIDX_CPP_SDK_VERSION
+)
+
+string(
+    STRIP
+    "${GRIDX_CPP_SDK_VERSION}"
+    GRIDX_CPP_SDK_VERSION
+)
+
+project(
+    gridx_cpp_sdk
+    VERSION ${GRIDX_CPP_SDK_VERSION}
     LANGUAGES CXX
 )
 
