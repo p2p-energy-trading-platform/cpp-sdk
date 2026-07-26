@@ -230,8 +230,6 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GridTransferRule final : public ::g
 
   // accessors -------------------------------------------------------
   enum : int {
-    kSellerGridZoneFieldNumber = 1,
-    kBuyerGridZoneFieldNumber = 2,
     kUpdatedAtFieldNumber = 6,
     kGridFeePerKwhFieldNumber = 4,
     kAllowedFieldNumber = 3,
@@ -239,36 +237,6 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GridTransferRule final : public ::g
     kSellerGridZoneIdFieldNumber = 7,
     kBuyerGridZoneIdFieldNumber = 8,
   };
-  // string seller_grid_zone = 1 [json_name = "sellerGridZone", deprecated = true];
-  [[deprecated]]  void clear_seller_grid_zone() ;
-  [[nodiscard]] [[deprecated]] const ::std::string& seller_grid_zone() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  [[deprecated]] void set_seller_grid_zone(Arg_&& arg, Args_... args);
-  [[deprecated]] ::std::string* PROTOBUF_NONNULL mutable_seller_grid_zone();
-  [[deprecated]] [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_seller_grid_zone();
-  [[deprecated]] void set_allocated_seller_grid_zone(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_seller_grid_zone() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_seller_grid_zone(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_seller_grid_zone();
-
-  public:
-  // string buyer_grid_zone = 2 [json_name = "buyerGridZone", deprecated = true];
-  [[deprecated]]  void clear_buyer_grid_zone() ;
-  [[nodiscard]] [[deprecated]] const ::std::string& buyer_grid_zone() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  [[deprecated]] void set_buyer_grid_zone(Arg_&& arg, Args_... args);
-  [[deprecated]] ::std::string* PROTOBUF_NONNULL mutable_buyer_grid_zone();
-  [[deprecated]] [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_buyer_grid_zone();
-  [[deprecated]] void set_allocated_buyer_grid_zone(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_buyer_grid_zone() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_buyer_grid_zone(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_buyer_grid_zone();
-
-  public:
   // .google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];
   [[nodiscard]] bool has_updated_at()
       const;
@@ -339,8 +307,8 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GridTransferRule final : public ::g
  private:
   class _Internal;
   using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<3, 8,
-                          1, 78,
+      ::google::protobuf::internal::TcParseTable<3, 6,
+                          1, 0,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
       const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
@@ -368,8 +336,6 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GridTransferRule final : public ::g
         const GridTransferRule& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
-    ::google::protobuf::internal::ArenaStringPtr seller_grid_zone_;
-    ::google::protobuf::internal::ArenaStringPtr buyer_grid_zone_;
     ::google::protobuf::Timestamp* PROTOBUF_NULLABLE updated_at_;
     ::int64_t grid_fee_per_kwh_;
     bool allowed_;
@@ -398,139 +364,11 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GridTransferRule final : public ::g
 
 // GridTransferRule
 
-// string seller_grid_zone = 1 [json_name = "sellerGridZone", deprecated = true];
-inline void GridTransferRule::clear_seller_grid_zone() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.seller_grid_zone_.ClearToEmpty();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
-}
-inline const ::std::string& GridTransferRule::seller_grid_zone() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:gridx.grid.v1.GridTransferRule.seller_grid_zone)
-  return _internal_seller_grid_zone();
-}
-template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void GridTransferRule::set_seller_grid_zone(Arg_&& arg, Args_... args) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
-  _impl_.seller_grid_zone_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:gridx.grid.v1.GridTransferRule.seller_grid_zone)
-}
-inline ::std::string* PROTOBUF_NONNULL GridTransferRule::mutable_seller_grid_zone()
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
-  ::std::string* _s = _internal_mutable_seller_grid_zone();
-  // @@protoc_insertion_point(field_mutable:gridx.grid.v1.GridTransferRule.seller_grid_zone)
-  return _s;
-}
-inline const ::std::string& GridTransferRule::_internal_seller_grid_zone() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.seller_grid_zone_.Get();
-}
-inline void GridTransferRule::_internal_set_seller_grid_zone(const ::std::string& value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.seller_grid_zone_.Set(value, GetArena());
-}
-inline ::std::string* PROTOBUF_NONNULL GridTransferRule::_internal_mutable_seller_grid_zone() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  return _impl_.seller_grid_zone_.Mutable( GetArena());
-}
-inline ::std::string* PROTOBUF_NULLABLE GridTransferRule::release_seller_grid_zone() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:gridx.grid.v1.GridTransferRule.seller_grid_zone)
-  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
-    return nullptr;
-  }
-  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
-  auto* released = _impl_.seller_grid_zone_.Release();
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
-    _impl_.seller_grid_zone_.Set("", GetArena());
-  }
-  return released;
-}
-inline void GridTransferRule::set_allocated_seller_grid_zone(::std::string* PROTOBUF_NULLABLE value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
-  } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
-  }
-  _impl_.seller_grid_zone_.SetAllocated(value, GetArena());
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.seller_grid_zone_.IsDefault()) {
-    _impl_.seller_grid_zone_.Set("", GetArena());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gridx.grid.v1.GridTransferRule.seller_grid_zone)
-}
-
-// string buyer_grid_zone = 2 [json_name = "buyerGridZone", deprecated = true];
-inline void GridTransferRule::clear_buyer_grid_zone() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.buyer_grid_zone_.ClearToEmpty();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
-}
-inline const ::std::string& GridTransferRule::buyer_grid_zone() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:gridx.grid.v1.GridTransferRule.buyer_grid_zone)
-  return _internal_buyer_grid_zone();
-}
-template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void GridTransferRule::set_buyer_grid_zone(Arg_&& arg, Args_... args) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
-  _impl_.buyer_grid_zone_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:gridx.grid.v1.GridTransferRule.buyer_grid_zone)
-}
-inline ::std::string* PROTOBUF_NONNULL GridTransferRule::mutable_buyer_grid_zone()
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
-  ::std::string* _s = _internal_mutable_buyer_grid_zone();
-  // @@protoc_insertion_point(field_mutable:gridx.grid.v1.GridTransferRule.buyer_grid_zone)
-  return _s;
-}
-inline const ::std::string& GridTransferRule::_internal_buyer_grid_zone() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.buyer_grid_zone_.Get();
-}
-inline void GridTransferRule::_internal_set_buyer_grid_zone(const ::std::string& value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.buyer_grid_zone_.Set(value, GetArena());
-}
-inline ::std::string* PROTOBUF_NONNULL GridTransferRule::_internal_mutable_buyer_grid_zone() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  return _impl_.buyer_grid_zone_.Mutable( GetArena());
-}
-inline ::std::string* PROTOBUF_NULLABLE GridTransferRule::release_buyer_grid_zone() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:gridx.grid.v1.GridTransferRule.buyer_grid_zone)
-  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
-    return nullptr;
-  }
-  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
-  auto* released = _impl_.buyer_grid_zone_.Release();
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
-    _impl_.buyer_grid_zone_.Set("", GetArena());
-  }
-  return released;
-}
-inline void GridTransferRule::set_allocated_buyer_grid_zone(::std::string* PROTOBUF_NULLABLE value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
-  } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
-  }
-  _impl_.buyer_grid_zone_.SetAllocated(value, GetArena());
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.buyer_grid_zone_.IsDefault()) {
-    _impl_.buyer_grid_zone_.Set("", GetArena());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gridx.grid.v1.GridTransferRule.buyer_grid_zone)
-}
-
 // bool allowed = 3 [json_name = "allowed"];
 inline void GridTransferRule::clear_allowed() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.allowed_ = false;
-  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
 }
 inline bool GridTransferRule::allowed() const {
   // @@protoc_insertion_point(field_get:gridx.grid.v1.GridTransferRule.allowed)
@@ -538,7 +376,7 @@ inline bool GridTransferRule::allowed() const {
 }
 inline void GridTransferRule::set_allowed(bool value) {
   _internal_set_allowed(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
   // @@protoc_insertion_point(field_set:gridx.grid.v1.GridTransferRule.allowed)
 }
 inline bool GridTransferRule::_internal_allowed() const {
@@ -554,7 +392,7 @@ inline void GridTransferRule::_internal_set_allowed(bool value) {
 inline void GridTransferRule::clear_grid_fee_per_kwh() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.grid_fee_per_kwh_ = ::int64_t{0};
-  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
 }
 inline ::int64_t GridTransferRule::grid_fee_per_kwh() const {
   // @@protoc_insertion_point(field_get:gridx.grid.v1.GridTransferRule.grid_fee_per_kwh)
@@ -562,7 +400,7 @@ inline ::int64_t GridTransferRule::grid_fee_per_kwh() const {
 }
 inline void GridTransferRule::set_grid_fee_per_kwh(::int64_t value) {
   _internal_set_grid_fee_per_kwh(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
   // @@protoc_insertion_point(field_set:gridx.grid.v1.GridTransferRule.grid_fee_per_kwh)
 }
 inline ::int64_t GridTransferRule::_internal_grid_fee_per_kwh() const {
@@ -578,7 +416,7 @@ inline void GridTransferRule::_internal_set_grid_fee_per_kwh(::int64_t value) {
 inline void GridTransferRule::clear_version() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.version_ = 0u;
-  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
 }
 inline ::uint32_t GridTransferRule::version() const {
   // @@protoc_insertion_point(field_get:gridx.grid.v1.GridTransferRule.version)
@@ -586,7 +424,7 @@ inline ::uint32_t GridTransferRule::version() const {
 }
 inline void GridTransferRule::set_version(::uint32_t value) {
   _internal_set_version(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
   // @@protoc_insertion_point(field_set:gridx.grid.v1.GridTransferRule.version)
 }
 inline ::uint32_t GridTransferRule::_internal_version() const {
@@ -600,7 +438,7 @@ inline void GridTransferRule::_internal_set_version(::uint32_t value) {
 
 // .google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];
 inline bool GridTransferRule::has_updated_at() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000004U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000001U);
   PROTOBUF_ASSUME(!value || _impl_.updated_at_ != nullptr);
   return value;
 }
@@ -621,16 +459,16 @@ inline void GridTransferRule::unsafe_arena_set_allocated_updated_at(
   }
   _impl_.updated_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.grid.v1.GridTransferRule.updated_at)
 }
 inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE GridTransferRule::release_updated_at() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
   ::google::protobuf::Timestamp* released = _impl_.updated_at_;
   _impl_.updated_at_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -650,7 +488,7 @@ inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE GridTransferRule::unsafe
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:gridx.grid.v1.GridTransferRule.updated_at)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
   ::google::protobuf::Timestamp* temp = _impl_.updated_at_;
   _impl_.updated_at_ = nullptr;
   return temp;
@@ -665,7 +503,7 @@ inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL GridTransferRule::_intern
 }
 inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL GridTransferRule::mutable_updated_at()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
   ::google::protobuf::Timestamp* _msg = _internal_mutable_updated_at();
   // @@protoc_insertion_point(field_mutable:gridx.grid.v1.GridTransferRule.updated_at)
   return _msg;
@@ -682,9 +520,9 @@ inline void GridTransferRule::set_allocated_updated_at(::google::protobuf::Times
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
   }
 
   _impl_.updated_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
@@ -695,7 +533,7 @@ inline void GridTransferRule::set_allocated_updated_at(::google::protobuf::Times
 inline void GridTransferRule::clear_seller_grid_zone_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.seller_grid_zone_id_ = 0u;
-  ClearHasBit(_impl_._has_bits_[0], 0x00000040U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
 }
 inline ::uint32_t GridTransferRule::seller_grid_zone_id() const {
   // @@protoc_insertion_point(field_get:gridx.grid.v1.GridTransferRule.seller_grid_zone_id)
@@ -703,7 +541,7 @@ inline ::uint32_t GridTransferRule::seller_grid_zone_id() const {
 }
 inline void GridTransferRule::set_seller_grid_zone_id(::uint32_t value) {
   _internal_set_seller_grid_zone_id(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000040U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
   // @@protoc_insertion_point(field_set:gridx.grid.v1.GridTransferRule.seller_grid_zone_id)
 }
 inline ::uint32_t GridTransferRule::_internal_seller_grid_zone_id() const {
@@ -719,7 +557,7 @@ inline void GridTransferRule::_internal_set_seller_grid_zone_id(::uint32_t value
 inline void GridTransferRule::clear_buyer_grid_zone_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.buyer_grid_zone_id_ = 0u;
-  ClearHasBit(_impl_._has_bits_[0], 0x00000080U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
 }
 inline ::uint32_t GridTransferRule::buyer_grid_zone_id() const {
   // @@protoc_insertion_point(field_get:gridx.grid.v1.GridTransferRule.buyer_grid_zone_id)
@@ -727,7 +565,7 @@ inline ::uint32_t GridTransferRule::buyer_grid_zone_id() const {
 }
 inline void GridTransferRule::set_buyer_grid_zone_id(::uint32_t value) {
   _internal_set_buyer_grid_zone_id(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000080U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
   // @@protoc_insertion_point(field_set:gridx.grid.v1.GridTransferRule.buyer_grid_zone_id)
 }
 inline ::uint32_t GridTransferRule::_internal_buyer_grid_zone_id() const {
