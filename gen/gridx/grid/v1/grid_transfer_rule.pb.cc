@@ -49,11 +49,11 @@ constexpr GridTransferRule::ParseTableT_ GridTransferRule::InternalGenerateParse
     {
       PROTOBUF_FIELD_OFFSET(GridTransferRule, _impl_._has_bits_),
       0, // no _extensions_
-      6, 56,  // max_field_number, fast_idx_mask
+      8, 56,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967232,  // skipmap
+      4294967040,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      6,  // num_field_entries
+      8,  // num_field_entries
       1,  // num_aux_entries
       offsetof(ParseTableT_, aux_entries),
       class_data,
@@ -63,12 +63,15 @@ constexpr GridTransferRule::ParseTableT_ GridTransferRule::InternalGenerateParse
       ::_pbi::TcParser::GetTable<::gridx::grid::v1::GridTransferRule>(),  // to_prefetch
       #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
     }, {{
-      {::_pbi::TcParser::MiniParse, {}},
-      // string seller_grid_zone = 1 [json_name = "sellerGridZone"];
+      // uint32 buyer_grid_zone_id = 8 [json_name = "buyerGridZoneId"];
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GridTransferRule, _impl_.buyer_grid_zone_id_), 7>(),
+       {64, 7, 0,
+        PROTOBUF_FIELD_OFFSET(GridTransferRule, _impl_.buyer_grid_zone_id_)}},
+      // string seller_grid_zone = 1 [json_name = "sellerGridZone", deprecated = true];
       {::_pbi::TcParser::FastUS1,
        {10, 0, 0,
         PROTOBUF_FIELD_OFFSET(GridTransferRule, _impl_.seller_grid_zone_)}},
-      // string buyer_grid_zone = 2 [json_name = "buyerGridZone"];
+      // string buyer_grid_zone = 2 [json_name = "buyerGridZone", deprecated = true];
       {::_pbi::TcParser::FastUS1,
        {18, 1, 0,
         PROTOBUF_FIELD_OFFSET(GridTransferRule, _impl_.buyer_grid_zone_)}},
@@ -88,13 +91,16 @@ constexpr GridTransferRule::ParseTableT_ GridTransferRule::InternalGenerateParse
       {::_pbi::TcParser::FastMtS1,
        {50, 2, 0,
         PROTOBUF_FIELD_OFFSET(GridTransferRule, _impl_.updated_at_)}},
-      {::_pbi::TcParser::MiniParse, {}},
+      // uint32 seller_grid_zone_id = 7 [json_name = "sellerGridZoneId"];
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GridTransferRule, _impl_.seller_grid_zone_id_), 6>(),
+       {56, 6, 0,
+        PROTOBUF_FIELD_OFFSET(GridTransferRule, _impl_.seller_grid_zone_id_)}},
     }}, {{
       65535, 65535
     }}, {{
-      // string seller_grid_zone = 1 [json_name = "sellerGridZone"];
+      // string seller_grid_zone = 1 [json_name = "sellerGridZone", deprecated = true];
       {PROTOBUF_FIELD_OFFSET(GridTransferRule, _impl_.seller_grid_zone_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string buyer_grid_zone = 2 [json_name = "buyerGridZone"];
+      // string buyer_grid_zone = 2 [json_name = "buyerGridZone", deprecated = true];
       {PROTOBUF_FIELD_OFFSET(GridTransferRule, _impl_.buyer_grid_zone_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // bool allowed = 3 [json_name = "allowed"];
       {PROTOBUF_FIELD_OFFSET(GridTransferRule, _impl_.allowed_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kBool)},
@@ -104,6 +110,10 @@ constexpr GridTransferRule::ParseTableT_ GridTransferRule::InternalGenerateParse
       {PROTOBUF_FIELD_OFFSET(GridTransferRule, _impl_.version_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt32)},
       // .google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];
       {PROTOBUF_FIELD_OFFSET(GridTransferRule, _impl_.updated_at_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+      // uint32 seller_grid_zone_id = 7 [json_name = "sellerGridZoneId"];
+      {PROTOBUF_FIELD_OFFSET(GridTransferRule, _impl_.seller_grid_zone_id_), _Internal::kHasBitsOffset + 6, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt32)},
+      // uint32 buyer_grid_zone_id = 8 [json_name = "buyerGridZoneId"];
+      {PROTOBUF_FIELD_OFFSET(GridTransferRule, _impl_.buyer_grid_zone_id_), _Internal::kHasBitsOffset + 7, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt32)},
     }},
     {{
         #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -113,7 +123,7 @@ constexpr GridTransferRule::ParseTableT_ GridTransferRule::InternalGenerateParse
         #endif
     }},
     {{
-      "\36\20\17\0\0\0\0\0"
+      "\36\20\17\0\0\0\0\0\0\0\0\0\0\0\0\0"
       "gridx.grid.v1.GridTransferRule"
       "seller_grid_zone"
       "buyer_grid_zone"
@@ -135,7 +145,9 @@ inline constexpr GridTransferRule::Impl_::Impl_(
         updated_at_{nullptr},
         grid_fee_per_kwh_{::int64_t{0}},
         allowed_{false},
-        version_{0u} {}
+        version_{0u},
+        seller_grid_zone_id_{0u},
+        buyer_grid_zone_id_{0u} {}
 
 template <typename>
 constexpr GridTransferRule::GridTransferRule(::_pbi::ConstantInitialized,
@@ -241,19 +253,23 @@ const ::uint32_t
         protodesc_cold) = {
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::grid::v1::GridTransferRule, _impl_._has_bits_),
-        9, // hasbit index offset
+        11, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::gridx::grid::v1::GridTransferRule, _impl_.seller_grid_zone_),
         PROTOBUF_FIELD_OFFSET(::gridx::grid::v1::GridTransferRule, _impl_.buyer_grid_zone_),
         PROTOBUF_FIELD_OFFSET(::gridx::grid::v1::GridTransferRule, _impl_.allowed_),
         PROTOBUF_FIELD_OFFSET(::gridx::grid::v1::GridTransferRule, _impl_.grid_fee_per_kwh_),
         PROTOBUF_FIELD_OFFSET(::gridx::grid::v1::GridTransferRule, _impl_.version_),
         PROTOBUF_FIELD_OFFSET(::gridx::grid::v1::GridTransferRule, _impl_.updated_at_),
+        PROTOBUF_FIELD_OFFSET(::gridx::grid::v1::GridTransferRule, _impl_.seller_grid_zone_id_),
+        PROTOBUF_FIELD_OFFSET(::gridx::grid::v1::GridTransferRule, _impl_.buyer_grid_zone_id_),
         0,
         1,
         4,
         3,
         5,
         2,
+        6,
+        7,
 };
 
 static const ::_pbi::MigrationSchema
@@ -268,15 +284,18 @@ const char descriptor_table_protodef_gridx_2fgrid_2fv1_2fgrid_5ftransfer_5frule_
     protodesc_cold) = {
     "\n&gridx/grid/v1/grid_transfer_rule.proto"
     "\022\rgridx.grid.v1\032\037google/protobuf/timesta"
-    "mp.proto\"\374\001\n\020GridTransferRule\022(\n\020seller_"
-    "grid_zone\030\001 \001(\tR\016sellerGridZone\022&\n\017buyer"
-    "_grid_zone\030\002 \001(\tR\rbuyerGridZone\022\030\n\007allow"
-    "ed\030\003 \001(\010R\007allowed\022\'\n\020grid_fee_per_kwh\030\004 "
-    "\001(\003R\rgridFeePerKwh\022\030\n\007version\030\005 \001(\rR\007ver"
-    "sion\0229\n\nupdated_at\030\006 \001(\0132\032.google.protob"
-    "uf.TimestampR\tupdatedAtBHZFgithub.com/p2"
-    "p-energy-trading-platform/go-sdk/gen/gri"
-    "dx/grid/v1;gridv1b\006proto3"
+    "mp.proto\"\340\002\n\020GridTransferRule\022,\n\020seller_"
+    "grid_zone\030\001 \001(\tB\002\030\001R\016sellerGridZone\022*\n\017b"
+    "uyer_grid_zone\030\002 \001(\tB\002\030\001R\rbuyerGridZone\022"
+    "\030\n\007allowed\030\003 \001(\010R\007allowed\022\'\n\020grid_fee_pe"
+    "r_kwh\030\004 \001(\003R\rgridFeePerKwh\022\030\n\007version\030\005 "
+    "\001(\rR\007version\0229\n\nupdated_at\030\006 \001(\0132\032.googl"
+    "e.protobuf.TimestampR\tupdatedAt\022-\n\023selle"
+    "r_grid_zone_id\030\007 \001(\rR\020sellerGridZoneId\022+"
+    "\n\022buyer_grid_zone_id\030\010 \001(\rR\017buyerGridZon"
+    "eIdBHZFgithub.com/p2p-energy-trading-pla"
+    "tform/go-sdk/gen/gridx/grid/v1;gridv1b\006p"
+    "roto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_gridx_2fgrid_2fv1_2fgrid_5ftransfer_5frule_2eproto_deps[1] = {
@@ -286,7 +305,7 @@ static ::absl::once_flag descriptor_table_gridx_2fgrid_2fv1_2fgrid_5ftransfer_5f
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_gridx_2fgrid_2fv1_2fgrid_5ftransfer_5frule_2eproto = {
     false,
     false,
-    425,
+    525,
     descriptor_table_protodef_gridx_2fgrid_2fv1_2fgrid_5ftransfer_5frule_2eproto,
     "gridx/grid/v1/grid_transfer_rule.proto",
     &descriptor_table_gridx_2fgrid_2fv1_2fgrid_5ftransfer_5frule_2eproto_once,
@@ -349,9 +368,9 @@ GridTransferRule::GridTransferRule(
                offsetof(Impl_, grid_fee_per_kwh_),
            reinterpret_cast<const char*>(&from._impl_) +
                offsetof(Impl_, grid_fee_per_kwh_),
-           offsetof(Impl_, version_) -
+           offsetof(Impl_, buyer_grid_zone_id_) -
                offsetof(Impl_, grid_fee_per_kwh_) +
-               sizeof(Impl_::version_));
+               sizeof(Impl_::buyer_grid_zone_id_));
 
   // @@protoc_insertion_point(copy_constructor:gridx.grid.v1.GridTransferRule)
 }
@@ -367,9 +386,9 @@ inline void GridTransferRule::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) 
   ::memset(reinterpret_cast<char*>(&_impl_) +
                offsetof(Impl_, updated_at_),
            0,
-           offsetof(Impl_, version_) -
+           offsetof(Impl_, buyer_grid_zone_id_) -
                offsetof(Impl_, updated_at_) +
-               sizeof(Impl_::version_));
+               sizeof(Impl_::buyer_grid_zone_id_));
 }
 GridTransferRule::~GridTransferRule() {
   // @@protoc_insertion_point(destructor:gridx.grid.v1.GridTransferRule)
@@ -434,10 +453,10 @@ PROTOBUF_NOINLINE void GridTransferRule::Clear() {
       _impl_.updated_at_->Clear();
     }
   }
-  if (BatchCheckHasBit(cached_has_bits, 0x00000038U)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x000000f8U)) {
     ::memset(&_impl_.grid_fee_per_kwh_, 0, static_cast<::size_t>(
-        reinterpret_cast<char*>(&_impl_.version_) -
-        reinterpret_cast<char*>(&_impl_.grid_fee_per_kwh_)) + sizeof(_impl_.version_));
+        reinterpret_cast<char*>(&_impl_.buyer_grid_zone_id_) -
+        reinterpret_cast<char*>(&_impl_.grid_fee_per_kwh_)) + sizeof(_impl_.buyer_grid_zone_id_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
@@ -462,7 +481,7 @@ PROTOBUF_NOINLINE void GridTransferRule::Clear() {
   (void)cached_has_bits;
 
   cached_has_bits = this_._impl_._has_bits_[0];
-  // string seller_grid_zone = 1 [json_name = "sellerGridZone"];
+  // string seller_grid_zone = 1 [json_name = "sellerGridZone", deprecated = true];
   if (CheckHasBit(cached_has_bits, 0x00000001U)) {
     if (!this_._internal_seller_grid_zone().empty()) {
       const ::std::string& _s = this_._internal_seller_grid_zone();
@@ -472,7 +491,7 @@ PROTOBUF_NOINLINE void GridTransferRule::Clear() {
     }
   }
 
-  // string buyer_grid_zone = 2 [json_name = "buyerGridZone"];
+  // string buyer_grid_zone = 2 [json_name = "buyerGridZone", deprecated = true];
   if (CheckHasBit(cached_has_bits, 0x00000002U)) {
     if (!this_._internal_buyer_grid_zone().empty()) {
       const ::std::string& _s = this_._internal_buyer_grid_zone();
@@ -516,6 +535,24 @@ PROTOBUF_NOINLINE void GridTransferRule::Clear() {
         stream);
   }
 
+  // uint32 seller_grid_zone_id = 7 [json_name = "sellerGridZoneId"];
+  if (CheckHasBit(cached_has_bits, 0x00000040U)) {
+    if (this_._internal_seller_grid_zone_id() != 0) {
+      target = stream->EnsureSpace(target);
+      target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
+          7, this_._internal_seller_grid_zone_id(), target);
+    }
+  }
+
+  // uint32 buyer_grid_zone_id = 8 [json_name = "buyerGridZoneId"];
+  if (CheckHasBit(cached_has_bits, 0x00000080U)) {
+    if (this_._internal_buyer_grid_zone_id() != 0) {
+      target = stream->EnsureSpace(target);
+      target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
+          8, this_._internal_buyer_grid_zone_id(), target);
+    }
+  }
+
   if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
     target =
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
@@ -541,15 +578,15 @@ PROTOBUF_NOINLINE void GridTransferRule::Clear() {
 
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
-    // string seller_grid_zone = 1 [json_name = "sellerGridZone"];
+  if (BatchCheckHasBit(cached_has_bits, 0x000000ffU)) {
+    // string seller_grid_zone = 1 [json_name = "sellerGridZone", deprecated = true];
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!this_._internal_seller_grid_zone().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_seller_grid_zone());
       }
     }
-    // string buyer_grid_zone = 2 [json_name = "buyerGridZone"];
+    // string buyer_grid_zone = 2 [json_name = "buyerGridZone", deprecated = true];
     if (CheckHasBit(cached_has_bits, 0x00000002U)) {
       if (!this_._internal_buyer_grid_zone().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -581,6 +618,20 @@ PROTOBUF_NOINLINE void GridTransferRule::Clear() {
             this_._internal_version());
       }
     }
+    // uint32 seller_grid_zone_id = 7 [json_name = "sellerGridZoneId"];
+    if (CheckHasBit(cached_has_bits, 0x00000040U)) {
+      if (this_._internal_seller_grid_zone_id() != 0) {
+        total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
+            this_._internal_seller_grid_zone_id());
+      }
+    }
+    // uint32 buyer_grid_zone_id = 8 [json_name = "buyerGridZoneId"];
+    if (CheckHasBit(cached_has_bits, 0x00000080U)) {
+      if (this_._internal_buyer_grid_zone_id() != 0) {
+        total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
+            this_._internal_buyer_grid_zone_id());
+      }
+    }
   }
   return this_.MaybeComputeUnknownFieldsSize(total_size,
                                              &this_._impl_._cached_size_);
@@ -600,7 +651,7 @@ void GridTransferRule::MergeImpl(::google::protobuf::MessageLite& to_msg,
   (void)cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x000000ffU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!from._internal_seller_grid_zone().empty()) {
         _this->_internal_set_seller_grid_zone(from._internal_seller_grid_zone());
@@ -642,6 +693,16 @@ void GridTransferRule::MergeImpl(::google::protobuf::MessageLite& to_msg,
         _this->_impl_.version_ = from._impl_.version_;
       }
     }
+    if (CheckHasBit(cached_has_bits, 0x00000040U)) {
+      if (from._internal_seller_grid_zone_id() != 0) {
+        _this->_impl_.seller_grid_zone_id_ = from._impl_.seller_grid_zone_id_;
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000080U)) {
+      if (from._internal_buyer_grid_zone_id() != 0) {
+        _this->_impl_.buyer_grid_zone_id_ = from._impl_.buyer_grid_zone_id_;
+      }
+    }
   }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
@@ -665,8 +726,8 @@ void GridTransferRule::InternalSwap(GridTransferRule* PROTOBUF_RESTRICT PROTOBUF
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.seller_grid_zone_, &other->_impl_.seller_grid_zone_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.buyer_grid_zone_, &other->_impl_.buyer_grid_zone_, arena);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GridTransferRule, _impl_.version_)
-      + sizeof(GridTransferRule::_impl_.version_)
+      PROTOBUF_FIELD_OFFSET(GridTransferRule, _impl_.buyer_grid_zone_id_)
+      + sizeof(GridTransferRule::_impl_.buyer_grid_zone_id_)
       - PROTOBUF_FIELD_OFFSET(GridTransferRule, _impl_.updated_at_)>(
           reinterpret_cast<char*>(&_impl_.updated_at_),
           reinterpret_cast<char*>(&other->_impl_.updated_at_));
