@@ -469,6 +469,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TestAsset final : public ::google::
   enum : int {
     kNameFieldNumber = 1,
     kTypeFieldNumber = 3,
+    kFixBumpFieldNumber = 5,
     kPriceFieldNumber = 2,
     kTestPriceFieldNumber = 4,
   };
@@ -502,6 +503,21 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TestAsset final : public ::google::
   ::std::string* PROTOBUF_NONNULL _internal_mutable_type();
 
   public:
+  // string fix_bump = 5 [json_name = "fixBump"];
+  void clear_fix_bump() ;
+  [[nodiscard]] const ::std::string& fix_bump() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_fix_bump(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_fix_bump();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_fix_bump();
+  void set_allocated_fix_bump(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_fix_bump() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_fix_bump(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_fix_bump();
+
+  public:
   // int64 price = 2 [json_name = "price"];
   void clear_price() ;
   [[nodiscard]] ::int64_t price() const;
@@ -526,8 +542,8 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TestAsset final : public ::google::
  private:
   class _Internal;
   using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<2, 4,
-                          0, 40,
+      ::google::protobuf::internal::TcParseTable<3, 5,
+                          0, 48,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
       const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
@@ -557,6 +573,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TestAsset final : public ::google::
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr name_;
     ::google::protobuf::internal::ArenaStringPtr type_;
+    ::google::protobuf::internal::ArenaStringPtr fix_bump_;
     ::int64_t price_;
     ::int32_t test_price_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -765,7 +782,7 @@ inline void TestAsset::set_allocated_name(::std::string* PROTOBUF_NULLABLE value
 inline void TestAsset::clear_price() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.price_ = ::int64_t{0};
-  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
 }
 inline ::int64_t TestAsset::price() const {
   // @@protoc_insertion_point(field_get:gridx.test.v1.TestAsset.price)
@@ -773,7 +790,7 @@ inline ::int64_t TestAsset::price() const {
 }
 inline void TestAsset::set_price(::int64_t value) {
   _internal_set_price(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
   // @@protoc_insertion_point(field_set:gridx.test.v1.TestAsset.price)
 }
 inline ::int64_t TestAsset::_internal_price() const {
@@ -853,7 +870,7 @@ inline void TestAsset::set_allocated_type(::std::string* PROTOBUF_NULLABLE value
 inline void TestAsset::clear_test_price() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.test_price_ = 0;
-  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
 }
 inline ::int32_t TestAsset::test_price() const {
   // @@protoc_insertion_point(field_get:gridx.test.v1.TestAsset.test_price)
@@ -861,7 +878,7 @@ inline ::int32_t TestAsset::test_price() const {
 }
 inline void TestAsset::set_test_price(::int32_t value) {
   _internal_set_test_price(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
   // @@protoc_insertion_point(field_set:gridx.test.v1.TestAsset.test_price)
 }
 inline ::int32_t TestAsset::_internal_test_price() const {
@@ -871,6 +888,70 @@ inline ::int32_t TestAsset::_internal_test_price() const {
 inline void TestAsset::_internal_set_test_price(::int32_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.test_price_ = value;
+}
+
+// string fix_bump = 5 [json_name = "fixBump"];
+inline void TestAsset::clear_fix_bump() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.fix_bump_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+}
+inline const ::std::string& TestAsset::fix_bump() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.test.v1.TestAsset.fix_bump)
+  return _internal_fix_bump();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void TestAsset::set_fix_bump(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  _impl_.fix_bump_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.test.v1.TestAsset.fix_bump)
+}
+inline ::std::string* PROTOBUF_NONNULL TestAsset::mutable_fix_bump()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::std::string* _s = _internal_mutable_fix_bump();
+  // @@protoc_insertion_point(field_mutable:gridx.test.v1.TestAsset.fix_bump)
+  return _s;
+}
+inline const ::std::string& TestAsset::_internal_fix_bump() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.fix_bump_.Get();
+}
+inline void TestAsset::_internal_set_fix_bump(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.fix_bump_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL TestAsset::_internal_mutable_fix_bump() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.fix_bump_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE TestAsset::release_fix_bump() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.test.v1.TestAsset.fix_bump)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000004U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  auto* released = _impl_.fix_bump_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.fix_bump_.Set("", GetArena());
+  }
+  return released;
+}
+inline void TestAsset::set_allocated_fix_bump(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  }
+  _impl_.fix_bump_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.fix_bump_.IsDefault()) {
+    _impl_.fix_bump_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.test.v1.TestAsset.fix_bump)
 }
 
 #ifdef __GNUC__
