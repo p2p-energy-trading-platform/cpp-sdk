@@ -21,6 +21,7 @@
 #include "google/protobuf/io/coded_stream.h"
 #include "google/protobuf/arena.h"
 #include "google/protobuf/arenastring.h"
+#include "google/protobuf/generated_message_bases.h"
 #include "google/protobuf/generated_message_tctable_decl.h"
 #include "google/protobuf/generated_message_util.h"
 #include "google/protobuf/metadata_lite.h"
@@ -71,6 +72,22 @@ extern LoginResponseGlobalsTypeInternal LoginResponse_globals_;
 extern const ::google::protobuf::internal::ClassDataFull LoginResponse_class_data_;
 #else
 extern const LoginResponseGlobalsTypeInternal LoginResponse_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class LogoutAllRequest;
+struct LogoutAllRequestGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern LogoutAllRequestGlobalsTypeInternal LogoutAllRequest_globals_;
+extern const ::google::protobuf::internal::ClassDataFull LogoutAllRequest_class_data_;
+#else
+extern const LogoutAllRequestGlobalsTypeInternal LogoutAllRequest_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class LogoutAllResponse;
+struct LogoutAllResponseGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern LogoutAllResponseGlobalsTypeInternal LogoutAllResponse_globals_;
+extern const ::google::protobuf::internal::ClassDataFull LogoutAllResponse_class_data_;
+#else
+extern const LogoutAllResponseGlobalsTypeInternal LogoutAllResponse_globals_;
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 class LogoutRequest;
 struct LogoutRequestGlobalsTypeInternal;
@@ -1004,6 +1021,345 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LogoutRequest final : public ::goog
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LogoutAllResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.auth.v1.LogoutAllResponse) */ {
+ public:
+  inline LogoutAllResponse() : LogoutAllResponse(nullptr) {}
+  ~LogoutAllResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(LogoutAllResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(LogoutAllResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr LogoutAllResponse(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline LogoutAllResponse(const LogoutAllResponse& from) : LogoutAllResponse(nullptr, from) {}
+  inline LogoutAllResponse(LogoutAllResponse&& from) noexcept : LogoutAllResponse(nullptr, ::std::move(from)) {}
+  inline LogoutAllResponse& operator=(const LogoutAllResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LogoutAllResponse& operator=(LogoutAllResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const LogoutAllResponse& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LogoutAllResponse>(&LogoutAllResponse_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 7;
+  friend void swap(LogoutAllResponse& a, LogoutAllResponse& b) { a.Swap(&b); }
+  inline void Swap(LogoutAllResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(LogoutAllResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] LogoutAllResponse* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<LogoutAllResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const LogoutAllResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const LogoutAllResponse& from) { LogoutAllResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(LogoutAllResponse* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.LogoutAllResponse"; }
+
+  explicit LogoutAllResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  LogoutAllResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const LogoutAllResponse& from);
+  LogoutAllResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, LogoutAllResponse&& from) noexcept
+      : LogoutAllResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kSuccessFieldNumber = 1,
+  };
+  // bool success = 1 [json_name = "success"];
+  void clear_success() ;
+  [[nodiscard]] bool success() const;
+  void set_success(bool value);
+
+  private:
+  bool _internal_success() const;
+  void _internal_set_success(bool value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.auth.v1.LogoutAllResponse)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<0, 1,
+                          0, 0,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const LogoutAllResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    bool success_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LogoutAllRequest final : public ::google::protobuf::internal::ZeroFieldsBase
+/* @@protoc_insertion_point(class_definition:gridx.auth.v1.LogoutAllRequest) */ {
+ public:
+  inline LogoutAllRequest() : LogoutAllRequest(nullptr) {}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(LogoutAllRequest* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(LogoutAllRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr LogoutAllRequest(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline LogoutAllRequest(const LogoutAllRequest& from) : LogoutAllRequest(nullptr, from) {}
+  inline LogoutAllRequest(LogoutAllRequest&& from) noexcept : LogoutAllRequest(nullptr, ::std::move(from)) {}
+  inline LogoutAllRequest& operator=(const LogoutAllRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LogoutAllRequest& operator=(LogoutAllRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const LogoutAllRequest& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LogoutAllRequest>(&LogoutAllRequest_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 6;
+  friend void swap(LogoutAllRequest& a, LogoutAllRequest& b) { a.Swap(&b); }
+  inline void Swap(LogoutAllRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(LogoutAllRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] LogoutAllRequest* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<LogoutAllRequest>(arena);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const LogoutAllRequest& from) { ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from); }
+  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const LogoutAllRequest& from) { ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from); }
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.LogoutAllRequest"; }
+
+  explicit LogoutAllRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  LogoutAllRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const LogoutAllRequest& from);
+  LogoutAllRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, LogoutAllRequest&& from) noexcept
+      : LogoutAllRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:gridx.auth.v1.LogoutAllRequest)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<0, 0,
+                          0, 0,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
   friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
 };
 // -------------------------------------------------------------------
@@ -2411,6 +2767,38 @@ inline bool LogoutResponse::_internal_success() const {
   return _impl_.success_;
 }
 inline void LogoutResponse::_internal_set_success(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.success_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// LogoutAllRequest
+
+// -------------------------------------------------------------------
+
+// LogoutAllResponse
+
+// bool success = 1 [json_name = "success"];
+inline void LogoutAllResponse::clear_success() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.success_ = false;
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline bool LogoutAllResponse::success() const {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.LogoutAllResponse.success)
+  return _internal_success();
+}
+inline void LogoutAllResponse::set_success(bool value) {
+  _internal_set_success(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.LogoutAllResponse.success)
+}
+inline bool LogoutAllResponse::_internal_success() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.success_;
+}
+inline void LogoutAllResponse::_internal_set_success(bool value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.success_ = value;
 }
