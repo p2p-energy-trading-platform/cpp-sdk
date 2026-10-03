@@ -614,10 +614,9 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserProfile final : public ::google
   enum : int {
     kUserIdFieldNumber = 1,
     kEmailFieldNumber = 2,
-    kFirstNameFieldNumber = 3,
-    kLastNameFieldNumber = 4,
     kStatusFieldNumber = 5,
     kCreatedAtFieldNumber = 6,
+    kNameFieldNumber = 7,
   };
   // string user_id = 1 [json_name = "userId"];
   void clear_user_id() ;
@@ -647,36 +646,6 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserProfile final : public ::google
   const ::std::string& _internal_email() const;
   PROTOBUF_ALWAYS_INLINE void _internal_set_email(const ::std::string& value);
   ::std::string* PROTOBUF_NONNULL _internal_mutable_email();
-
-  public:
-  // string first_name = 3 [json_name = "firstName"];
-  void clear_first_name() ;
-  [[nodiscard]] const ::std::string& first_name() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_first_name(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_first_name();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_first_name();
-  void set_allocated_first_name(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_first_name() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_first_name(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_first_name();
-
-  public:
-  // string last_name = 4 [json_name = "lastName"];
-  void clear_last_name() ;
-  [[nodiscard]] const ::std::string& last_name() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_last_name(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_last_name();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_last_name();
-  void set_allocated_last_name(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_last_name() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_last_name(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_last_name();
 
   public:
   // string status = 5 [json_name = "status"];
@@ -709,12 +678,27 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserProfile final : public ::google
   ::std::string* PROTOBUF_NONNULL _internal_mutable_created_at();
 
   public:
+  // string name = 7 [json_name = "name"];
+  void clear_name() ;
+  [[nodiscard]] const ::std::string& name() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_name(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_name();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_name();
+  void set_allocated_name(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_name() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_name(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_name();
+
+  public:
   // @@protoc_insertion_point(class_scope:gridx.auth.v1.UserProfile)
  private:
   class _Internal;
   using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<3, 6,
-                          0, 81,
+      ::google::protobuf::internal::TcParseTable<3, 5,
+                          0, 66,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
       const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
@@ -744,10 +728,9 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserProfile final : public ::google
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr user_id_;
     ::google::protobuf::internal::ArenaStringPtr email_;
-    ::google::protobuf::internal::ArenaStringPtr first_name_;
-    ::google::protobuf::internal::ArenaStringPtr last_name_;
     ::google::protobuf::internal::ArenaStringPtr status_;
     ::google::protobuf::internal::ArenaStringPtr created_at_;
+    ::google::protobuf::internal::ArenaStringPtr name_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -903,45 +886,29 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UpdateProfileRequest final : public
 
   // accessors -------------------------------------------------------
   enum : int {
-    kFirstNameFieldNumber = 1,
-    kLastNameFieldNumber = 2,
+    kNameFieldNumber = 3,
   };
-  // string first_name = 1 [json_name = "firstName"];
-  void clear_first_name() ;
-  [[nodiscard]] const ::std::string& first_name() const;
+  // string name = 3 [json_name = "name"];
+  void clear_name() ;
+  [[nodiscard]] const ::std::string& name() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_first_name(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_first_name();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_first_name();
-  void set_allocated_first_name(::std::string* PROTOBUF_NULLABLE value);
+  void set_name(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_name();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_name();
+  void set_allocated_name(::std::string* PROTOBUF_NULLABLE value);
 
   private:
-  const ::std::string& _internal_first_name() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_first_name(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_first_name();
-
-  public:
-  // string last_name = 2 [json_name = "lastName"];
-  void clear_last_name() ;
-  [[nodiscard]] const ::std::string& last_name() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_last_name(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_last_name();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_last_name();
-  void set_allocated_last_name(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_last_name() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_last_name(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_last_name();
+  const ::std::string& _internal_name() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_name(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_name();
 
   public:
   // @@protoc_insertion_point(class_scope:gridx.auth.v1.UpdateProfileRequest)
  private:
   class _Internal;
   using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<1, 2,
-                          0, 62,
+      ::google::protobuf::internal::TcParseTable<0, 1,
+                          0, 47,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
       const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
@@ -969,8 +936,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UpdateProfileRequest final : public
         const UpdateProfileRequest& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
-    ::google::protobuf::internal::ArenaStringPtr first_name_;
-    ::google::protobuf::internal::ArenaStringPtr last_name_;
+    ::google::protobuf::internal::ArenaStringPtr name_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -2368,6 +2334,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED RegisterResponse final : public ::g
     kEmailFieldNumber = 2,
     kStatusFieldNumber = 3,
     kCreatedAtFieldNumber = 4,
+    kNameFieldNumber = 5,
   };
   // string user_id = 1 [json_name = "userId"];
   void clear_user_id() ;
@@ -2429,12 +2396,27 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED RegisterResponse final : public ::g
   ::std::string* PROTOBUF_NONNULL _internal_mutable_created_at();
 
   public:
+  // string name = 5 [json_name = "name"];
+  void clear_name() ;
+  [[nodiscard]] const ::std::string& name() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_name(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_name();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_name();
+  void set_allocated_name(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_name() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_name(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_name();
+
+  public:
   // @@protoc_insertion_point(class_scope:gridx.auth.v1.RegisterResponse)
  private:
   class _Internal;
   using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<2, 4,
-                          0, 67,
+      ::google::protobuf::internal::TcParseTable<3, 5,
+                          0, 71,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
       const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
@@ -2466,6 +2448,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED RegisterResponse final : public ::g
     ::google::protobuf::internal::ArenaStringPtr email_;
     ::google::protobuf::internal::ArenaStringPtr status_;
     ::google::protobuf::internal::ArenaStringPtr created_at_;
+    ::google::protobuf::internal::ArenaStringPtr name_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -5520,6 +5503,70 @@ inline void RegisterResponse::set_allocated_created_at(::std::string* PROTOBUF_N
   // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.RegisterResponse.created_at)
 }
 
+// string name = 5 [json_name = "name"];
+inline void RegisterResponse::clear_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+}
+inline const ::std::string& RegisterResponse::name() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.RegisterResponse.name)
+  return _internal_name();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void RegisterResponse::set_name(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  _impl_.name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.RegisterResponse.name)
+}
+inline ::std::string* PROTOBUF_NONNULL RegisterResponse::mutable_name()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  ::std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.RegisterResponse.name)
+  return _s;
+}
+inline const ::std::string& RegisterResponse::_internal_name() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.name_.Get();
+}
+inline void RegisterResponse::_internal_set_name(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL RegisterResponse::_internal_mutable_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.name_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE RegisterResponse::release_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.RegisterResponse.name)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000010U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  auto* released = _impl_.name_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.name_.Set("", GetArena());
+  }
+  return released;
+}
+inline void RegisterResponse::set_allocated_name(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  }
+  _impl_.name_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.name_.IsDefault()) {
+    _impl_.name_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.RegisterResponse.name)
+}
+
 // -------------------------------------------------------------------
 
 // LoginRequest
@@ -6196,139 +6243,11 @@ inline void UserProfile::set_allocated_email(::std::string* PROTOBUF_NULLABLE va
   // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.UserProfile.email)
 }
 
-// string first_name = 3 [json_name = "firstName"];
-inline void UserProfile::clear_first_name() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.first_name_.ClearToEmpty();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
-}
-inline const ::std::string& UserProfile::first_name() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:gridx.auth.v1.UserProfile.first_name)
-  return _internal_first_name();
-}
-template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void UserProfile::set_first_name(Arg_&& arg, Args_... args) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
-  _impl_.first_name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:gridx.auth.v1.UserProfile.first_name)
-}
-inline ::std::string* PROTOBUF_NONNULL UserProfile::mutable_first_name()
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
-  ::std::string* _s = _internal_mutable_first_name();
-  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.UserProfile.first_name)
-  return _s;
-}
-inline const ::std::string& UserProfile::_internal_first_name() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.first_name_.Get();
-}
-inline void UserProfile::_internal_set_first_name(const ::std::string& value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.first_name_.Set(value, GetArena());
-}
-inline ::std::string* PROTOBUF_NONNULL UserProfile::_internal_mutable_first_name() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  return _impl_.first_name_.Mutable( GetArena());
-}
-inline ::std::string* PROTOBUF_NULLABLE UserProfile::release_first_name() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:gridx.auth.v1.UserProfile.first_name)
-  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000004U)) {
-    return nullptr;
-  }
-  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
-  auto* released = _impl_.first_name_.Release();
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
-    _impl_.first_name_.Set("", GetArena());
-  }
-  return released;
-}
-inline void UserProfile::set_allocated_first_name(::std::string* PROTOBUF_NULLABLE value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
-  } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
-  }
-  _impl_.first_name_.SetAllocated(value, GetArena());
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.first_name_.IsDefault()) {
-    _impl_.first_name_.Set("", GetArena());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.UserProfile.first_name)
-}
-
-// string last_name = 4 [json_name = "lastName"];
-inline void UserProfile::clear_last_name() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.last_name_.ClearToEmpty();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
-}
-inline const ::std::string& UserProfile::last_name() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:gridx.auth.v1.UserProfile.last_name)
-  return _internal_last_name();
-}
-template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void UserProfile::set_last_name(Arg_&& arg, Args_... args) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
-  _impl_.last_name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:gridx.auth.v1.UserProfile.last_name)
-}
-inline ::std::string* PROTOBUF_NONNULL UserProfile::mutable_last_name()
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
-  ::std::string* _s = _internal_mutable_last_name();
-  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.UserProfile.last_name)
-  return _s;
-}
-inline const ::std::string& UserProfile::_internal_last_name() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.last_name_.Get();
-}
-inline void UserProfile::_internal_set_last_name(const ::std::string& value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.last_name_.Set(value, GetArena());
-}
-inline ::std::string* PROTOBUF_NONNULL UserProfile::_internal_mutable_last_name() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  return _impl_.last_name_.Mutable( GetArena());
-}
-inline ::std::string* PROTOBUF_NULLABLE UserProfile::release_last_name() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:gridx.auth.v1.UserProfile.last_name)
-  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000008U)) {
-    return nullptr;
-  }
-  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
-  auto* released = _impl_.last_name_.Release();
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
-    _impl_.last_name_.Set("", GetArena());
-  }
-  return released;
-}
-inline void UserProfile::set_allocated_last_name(::std::string* PROTOBUF_NULLABLE value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
-  } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
-  }
-  _impl_.last_name_.SetAllocated(value, GetArena());
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.last_name_.IsDefault()) {
-    _impl_.last_name_.Set("", GetArena());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.UserProfile.last_name)
-}
-
 // string status = 5 [json_name = "status"];
 inline void UserProfile::clear_status() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.status_.ClearToEmpty();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
 }
 inline const ::std::string& UserProfile::status() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
@@ -6338,13 +6257,13 @@ inline const ::std::string& UserProfile::status() const
 template <typename Arg_, typename... Args_>
 PROTOBUF_ALWAYS_INLINE void UserProfile::set_status(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
   _impl_.status_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
   // @@protoc_insertion_point(field_set:gridx.auth.v1.UserProfile.status)
 }
 inline ::std::string* PROTOBUF_NONNULL UserProfile::mutable_status()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
   ::std::string* _s = _internal_mutable_status();
   // @@protoc_insertion_point(field_mutable:gridx.auth.v1.UserProfile.status)
   return _s;
@@ -6364,10 +6283,10 @@ inline ::std::string* PROTOBUF_NONNULL UserProfile::_internal_mutable_status() {
 inline ::std::string* PROTOBUF_NULLABLE UserProfile::release_status() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:gridx.auth.v1.UserProfile.status)
-  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000010U)) {
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000004U)) {
     return nullptr;
   }
-  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
   auto* released = _impl_.status_.Release();
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
     _impl_.status_.Set("", GetArena());
@@ -6377,9 +6296,9 @@ inline ::std::string* PROTOBUF_NULLABLE UserProfile::release_status() {
 inline void UserProfile::set_allocated_status(::std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
   }
   _impl_.status_.SetAllocated(value, GetArena());
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.status_.IsDefault()) {
@@ -6392,7 +6311,7 @@ inline void UserProfile::set_allocated_status(::std::string* PROTOBUF_NULLABLE v
 inline void UserProfile::clear_created_at() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.created_at_.ClearToEmpty();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
 }
 inline const ::std::string& UserProfile::created_at() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
@@ -6402,13 +6321,13 @@ inline const ::std::string& UserProfile::created_at() const
 template <typename Arg_, typename... Args_>
 PROTOBUF_ALWAYS_INLINE void UserProfile::set_created_at(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
   _impl_.created_at_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
   // @@protoc_insertion_point(field_set:gridx.auth.v1.UserProfile.created_at)
 }
 inline ::std::string* PROTOBUF_NONNULL UserProfile::mutable_created_at()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
   ::std::string* _s = _internal_mutable_created_at();
   // @@protoc_insertion_point(field_mutable:gridx.auth.v1.UserProfile.created_at)
   return _s;
@@ -6428,10 +6347,10 @@ inline ::std::string* PROTOBUF_NONNULL UserProfile::_internal_mutable_created_at
 inline ::std::string* PROTOBUF_NULLABLE UserProfile::release_created_at() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:gridx.auth.v1.UserProfile.created_at)
-  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000020U)) {
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000008U)) {
     return nullptr;
   }
-  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
   auto* released = _impl_.created_at_.Release();
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
     _impl_.created_at_.Set("", GetArena());
@@ -6441,15 +6360,79 @@ inline ::std::string* PROTOBUF_NULLABLE UserProfile::release_created_at() {
 inline void UserProfile::set_allocated_created_at(::std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
   }
   _impl_.created_at_.SetAllocated(value, GetArena());
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.created_at_.IsDefault()) {
     _impl_.created_at_.Set("", GetArena());
   }
   // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.UserProfile.created_at)
+}
+
+// string name = 7 [json_name = "name"];
+inline void UserProfile::clear_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+}
+inline const ::std::string& UserProfile::name() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.UserProfile.name)
+  return _internal_name();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void UserProfile::set_name(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  _impl_.name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.UserProfile.name)
+}
+inline ::std::string* PROTOBUF_NONNULL UserProfile::mutable_name()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  ::std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.UserProfile.name)
+  return _s;
+}
+inline const ::std::string& UserProfile::_internal_name() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.name_.Get();
+}
+inline void UserProfile::_internal_set_name(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL UserProfile::_internal_mutable_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.name_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE UserProfile::release_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.UserProfile.name)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000010U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  auto* released = _impl_.name_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.name_.Set("", GetArena());
+  }
+  return released;
+}
+inline void UserProfile::set_allocated_name(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  }
+  _impl_.name_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.name_.IsDefault()) {
+    _impl_.name_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.UserProfile.name)
 }
 
 // -------------------------------------------------------------------
@@ -6562,132 +6545,68 @@ inline void GetProfileResponse::set_allocated_profile(::gridx::auth::v1::UserPro
 
 // UpdateProfileRequest
 
-// string first_name = 1 [json_name = "firstName"];
-inline void UpdateProfileRequest::clear_first_name() {
+// string name = 3 [json_name = "name"];
+inline void UpdateProfileRequest::clear_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.first_name_.ClearToEmpty();
+  _impl_.name_.ClearToEmpty();
   ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
 }
-inline const ::std::string& UpdateProfileRequest::first_name() const
+inline const ::std::string& UpdateProfileRequest::name() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:gridx.auth.v1.UpdateProfileRequest.first_name)
-  return _internal_first_name();
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.UpdateProfileRequest.name)
+  return _internal_name();
 }
 template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void UpdateProfileRequest::set_first_name(Arg_&& arg, Args_... args) {
+PROTOBUF_ALWAYS_INLINE void UpdateProfileRequest::set_name(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   SetHasBit(_impl_._has_bits_[0], 0x00000001U);
-  _impl_.first_name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:gridx.auth.v1.UpdateProfileRequest.first_name)
+  _impl_.name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.UpdateProfileRequest.name)
 }
-inline ::std::string* PROTOBUF_NONNULL UpdateProfileRequest::mutable_first_name()
+inline ::std::string* PROTOBUF_NONNULL UpdateProfileRequest::mutable_name()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   SetHasBit(_impl_._has_bits_[0], 0x00000001U);
-  ::std::string* _s = _internal_mutable_first_name();
-  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.UpdateProfileRequest.first_name)
+  ::std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.UpdateProfileRequest.name)
   return _s;
 }
-inline const ::std::string& UpdateProfileRequest::_internal_first_name() const {
+inline const ::std::string& UpdateProfileRequest::_internal_name() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.first_name_.Get();
+  return _impl_.name_.Get();
 }
-inline void UpdateProfileRequest::_internal_set_first_name(const ::std::string& value) {
+inline void UpdateProfileRequest::_internal_set_name(const ::std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.first_name_.Set(value, GetArena());
+  _impl_.name_.Set(value, GetArena());
 }
-inline ::std::string* PROTOBUF_NONNULL UpdateProfileRequest::_internal_mutable_first_name() {
+inline ::std::string* PROTOBUF_NONNULL UpdateProfileRequest::_internal_mutable_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  return _impl_.first_name_.Mutable( GetArena());
+  return _impl_.name_.Mutable( GetArena());
 }
-inline ::std::string* PROTOBUF_NULLABLE UpdateProfileRequest::release_first_name() {
+inline ::std::string* PROTOBUF_NULLABLE UpdateProfileRequest::release_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:gridx.auth.v1.UpdateProfileRequest.first_name)
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.UpdateProfileRequest.name)
   if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
     return nullptr;
   }
   ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
-  auto* released = _impl_.first_name_.Release();
+  auto* released = _impl_.name_.Release();
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
-    _impl_.first_name_.Set("", GetArena());
+    _impl_.name_.Set("", GetArena());
   }
   return released;
 }
-inline void UpdateProfileRequest::set_allocated_first_name(::std::string* PROTOBUF_NULLABLE value) {
+inline void UpdateProfileRequest::set_allocated_name(::std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     SetHasBit(_impl_._has_bits_[0], 0x00000001U);
   } else {
     ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
   }
-  _impl_.first_name_.SetAllocated(value, GetArena());
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.first_name_.IsDefault()) {
-    _impl_.first_name_.Set("", GetArena());
+  _impl_.name_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.name_.IsDefault()) {
+    _impl_.name_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.UpdateProfileRequest.first_name)
-}
-
-// string last_name = 2 [json_name = "lastName"];
-inline void UpdateProfileRequest::clear_last_name() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.last_name_.ClearToEmpty();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
-}
-inline const ::std::string& UpdateProfileRequest::last_name() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:gridx.auth.v1.UpdateProfileRequest.last_name)
-  return _internal_last_name();
-}
-template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void UpdateProfileRequest::set_last_name(Arg_&& arg, Args_... args) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
-  _impl_.last_name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:gridx.auth.v1.UpdateProfileRequest.last_name)
-}
-inline ::std::string* PROTOBUF_NONNULL UpdateProfileRequest::mutable_last_name()
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
-  ::std::string* _s = _internal_mutable_last_name();
-  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.UpdateProfileRequest.last_name)
-  return _s;
-}
-inline const ::std::string& UpdateProfileRequest::_internal_last_name() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.last_name_.Get();
-}
-inline void UpdateProfileRequest::_internal_set_last_name(const ::std::string& value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.last_name_.Set(value, GetArena());
-}
-inline ::std::string* PROTOBUF_NONNULL UpdateProfileRequest::_internal_mutable_last_name() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  return _impl_.last_name_.Mutable( GetArena());
-}
-inline ::std::string* PROTOBUF_NULLABLE UpdateProfileRequest::release_last_name() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:gridx.auth.v1.UpdateProfileRequest.last_name)
-  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
-    return nullptr;
-  }
-  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
-  auto* released = _impl_.last_name_.Release();
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
-    _impl_.last_name_.Set("", GetArena());
-  }
-  return released;
-}
-inline void UpdateProfileRequest::set_allocated_last_name(::std::string* PROTOBUF_NULLABLE value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
-  } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
-  }
-  _impl_.last_name_.SetAllocated(value, GetArena());
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.last_name_.IsDefault()) {
-    _impl_.last_name_.Set("", GetArena());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.UpdateProfileRequest.last_name)
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.UpdateProfileRequest.name)
 }
 
 // -------------------------------------------------------------------

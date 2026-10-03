@@ -239,11 +239,11 @@ constexpr UserProfile::ParseTableT_ UserProfile::InternalGenerateParseTable_(con
     {
       PROTOBUF_FIELD_OFFSET(UserProfile, _impl_._has_bits_),
       0, // no _extensions_
-      6, 56,  // max_field_number, fast_idx_mask
+      7, 56,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967232,  // skipmap
+      4294967180,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      6,  // num_field_entries
+      5,  // num_field_entries
       0,  // num_aux_entries
       offsetof(ParseTableT_, field_names),  // no aux_entries
       class_data,
@@ -262,23 +262,20 @@ constexpr UserProfile::ParseTableT_ UserProfile::InternalGenerateParseTable_(con
       {::_pbi::TcParser::FastUS1,
        {18, 1, 0,
         PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.email_)}},
-      // string first_name = 3 [json_name = "firstName"];
-      {::_pbi::TcParser::FastUS1,
-       {26, 2, 0,
-        PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.first_name_)}},
-      // string last_name = 4 [json_name = "lastName"];
-      {::_pbi::TcParser::FastUS1,
-       {34, 3, 0,
-        PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.last_name_)}},
+      {::_pbi::TcParser::MiniParse, {}},
+      {::_pbi::TcParser::MiniParse, {}},
       // string status = 5 [json_name = "status"];
       {::_pbi::TcParser::FastUS1,
-       {42, 4, 0,
+       {42, 2, 0,
         PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.status_)}},
       // string created_at = 6 [json_name = "createdAt"];
       {::_pbi::TcParser::FastUS1,
-       {50, 5, 0,
+       {50, 3, 0,
         PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.created_at_)}},
-      {::_pbi::TcParser::MiniParse, {}},
+      // string name = 7 [json_name = "name"];
+      {::_pbi::TcParser::FastUS1,
+       {58, 4, 0,
+        PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.name_)}},
     }}, {{
       65535, 65535
     }}, {{
@@ -286,25 +283,22 @@ constexpr UserProfile::ParseTableT_ UserProfile::InternalGenerateParseTable_(con
       {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.user_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // string email = 2 [json_name = "email"];
       {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.email_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string first_name = 3 [json_name = "firstName"];
-      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.first_name_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string last_name = 4 [json_name = "lastName"];
-      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.last_name_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // string status = 5 [json_name = "status"];
-      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.status_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.status_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // string created_at = 6 [json_name = "createdAt"];
-      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.created_at_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.created_at_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string name = 7 [json_name = "name"];
+      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.name_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     }},
     // no aux_entries
     {{
-      "\31\7\5\12\11\6\12\0"
+      "\31\7\5\6\12\4\0\0"
       "gridx.auth.v1.UserProfile"
       "user_id"
       "email"
-      "first_name"
-      "last_name"
       "status"
       "created_at"
+      "name"
     }},
   };
 }
@@ -320,16 +314,13 @@ inline constexpr UserProfile::Impl_::Impl_(
         email_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        first_name_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        last_name_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
         status_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         created_at_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        name_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()) {}
 
@@ -437,11 +428,11 @@ constexpr UpdateProfileRequest::ParseTableT_ UpdateProfileRequest::InternalGener
     {
       PROTOBUF_FIELD_OFFSET(UpdateProfileRequest, _impl_._has_bits_),
       0, // no _extensions_
-      2, 8,  // max_field_number, fast_idx_mask
+      3, 0,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967292,  // skipmap
+      4294967291,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      2,  // num_field_entries
+      1,  // num_field_entries
       0,  // num_aux_entries
       offsetof(ParseTableT_, field_names),  // no aux_entries
       class_data,
@@ -451,28 +442,21 @@ constexpr UpdateProfileRequest::ParseTableT_ UpdateProfileRequest::InternalGener
       ::_pbi::TcParser::GetTable<::gridx::auth::v1::UpdateProfileRequest>(),  // to_prefetch
       #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
     }, {{
-      // string last_name = 2 [json_name = "lastName"];
+      // string name = 3 [json_name = "name"];
       {::_pbi::TcParser::FastUS1,
-       {18, 1, 0,
-        PROTOBUF_FIELD_OFFSET(UpdateProfileRequest, _impl_.last_name_)}},
-      // string first_name = 1 [json_name = "firstName"];
-      {::_pbi::TcParser::FastUS1,
-       {10, 0, 0,
-        PROTOBUF_FIELD_OFFSET(UpdateProfileRequest, _impl_.first_name_)}},
+       {26, 0, 0,
+        PROTOBUF_FIELD_OFFSET(UpdateProfileRequest, _impl_.name_)}},
     }}, {{
       65535, 65535
     }}, {{
-      // string first_name = 1 [json_name = "firstName"];
-      {PROTOBUF_FIELD_OFFSET(UpdateProfileRequest, _impl_.first_name_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string last_name = 2 [json_name = "lastName"];
-      {PROTOBUF_FIELD_OFFSET(UpdateProfileRequest, _impl_.last_name_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string name = 3 [json_name = "name"];
+      {PROTOBUF_FIELD_OFFSET(UpdateProfileRequest, _impl_.name_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     }},
     // no aux_entries
     {{
-      "\42\12\11\0\0\0\0\0"
+      "\42\4\0\0\0\0\0\0"
       "gridx.auth.v1.UpdateProfileRequest"
-      "first_name"
-      "last_name"
+      "name"
     }},
   };
 }
@@ -482,10 +466,7 @@ inline constexpr UpdateProfileRequest::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
-        first_name_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        last_name_(
+        name_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()) {}
 
@@ -1464,11 +1445,11 @@ constexpr RegisterResponse::ParseTableT_ RegisterResponse::InternalGenerateParse
     {
       PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_._has_bits_),
       0, // no _extensions_
-      4, 24,  // max_field_number, fast_idx_mask
+      5, 56,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967280,  // skipmap
+      4294967264,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      4,  // num_field_entries
+      5,  // num_field_entries
       0,  // num_aux_entries
       offsetof(ParseTableT_, field_names),  // no aux_entries
       class_data,
@@ -1478,10 +1459,7 @@ constexpr RegisterResponse::ParseTableT_ RegisterResponse::InternalGenerateParse
       ::_pbi::TcParser::GetTable<::gridx::auth::v1::RegisterResponse>(),  // to_prefetch
       #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
     }, {{
-      // string created_at = 4 [json_name = "createdAt"];
-      {::_pbi::TcParser::FastUS1,
-       {34, 3, 0,
-        PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.created_at_)}},
+      {::_pbi::TcParser::MiniParse, {}},
       // string user_id = 1 [json_name = "userId"];
       {::_pbi::TcParser::FastUS1,
        {10, 0, 0,
@@ -1494,6 +1472,16 @@ constexpr RegisterResponse::ParseTableT_ RegisterResponse::InternalGenerateParse
       {::_pbi::TcParser::FastUS1,
        {26, 2, 0,
         PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.status_)}},
+      // string created_at = 4 [json_name = "createdAt"];
+      {::_pbi::TcParser::FastUS1,
+       {34, 3, 0,
+        PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.created_at_)}},
+      // string name = 5 [json_name = "name"];
+      {::_pbi::TcParser::FastUS1,
+       {42, 4, 0,
+        PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.name_)}},
+      {::_pbi::TcParser::MiniParse, {}},
+      {::_pbi::TcParser::MiniParse, {}},
     }}, {{
       65535, 65535
     }}, {{
@@ -1505,15 +1493,18 @@ constexpr RegisterResponse::ParseTableT_ RegisterResponse::InternalGenerateParse
       {PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.status_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // string created_at = 4 [json_name = "createdAt"];
       {PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.created_at_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string name = 5 [json_name = "name"];
+      {PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.name_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     }},
     // no aux_entries
     {{
-      "\36\7\5\6\12\0\0\0"
+      "\36\7\5\6\12\4\0\0"
       "gridx.auth.v1.RegisterResponse"
       "user_id"
       "email"
       "status"
       "created_at"
+      "name"
     }},
   };
 }
@@ -1533,6 +1524,9 @@ inline constexpr RegisterResponse::Impl_::Impl_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         created_at_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        name_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()) {}
 
@@ -3559,15 +3553,17 @@ const ::uint32_t
         1,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterResponse, _impl_._has_bits_),
-        7, // hasbit index offset
+        8, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterResponse, _impl_.user_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterResponse, _impl_.email_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterResponse, _impl_.status_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterResponse, _impl_.created_at_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterResponse, _impl_.name_),
         0,
         1,
         2,
         3,
+        4,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::LoginRequest, _impl_._has_bits_),
         5, // hasbit index offset
@@ -3606,19 +3602,17 @@ const ::uint32_t
         0,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UserProfile, _impl_._has_bits_),
-        9, // hasbit index offset
+        8, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UserProfile, _impl_.user_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UserProfile, _impl_.email_),
-        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UserProfile, _impl_.first_name_),
-        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UserProfile, _impl_.last_name_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UserProfile, _impl_.status_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UserProfile, _impl_.created_at_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UserProfile, _impl_.name_),
         0,
         1,
         2,
         3,
         4,
-        5,
         0x000, // bitmap
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::GetProfileResponse, _impl_._has_bits_),
@@ -3627,11 +3621,9 @@ const ::uint32_t
         0,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UpdateProfileRequest, _impl_._has_bits_),
-        5, // hasbit index offset
-        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UpdateProfileRequest, _impl_.first_name_),
-        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UpdateProfileRequest, _impl_.last_name_),
+        4, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UpdateProfileRequest, _impl_.name_),
         0,
-        1,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UpdateProfileResponse, _impl_._has_bits_),
         4, // hasbit index offset
@@ -3697,27 +3689,27 @@ static const ::_pbi::MigrationSchema
     schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
         {0, sizeof(::gridx::auth::v1::RegisterRequest)},
         {7, sizeof(::gridx::auth::v1::RegisterResponse)},
-        {18, sizeof(::gridx::auth::v1::LoginRequest)},
-        {25, sizeof(::gridx::auth::v1::LoginResponse)},
-        {38, sizeof(::gridx::auth::v1::LogoutRequest)},
-        {43, sizeof(::gridx::auth::v1::LogoutResponse)},
-        {48, sizeof(::gridx::auth::v1::LogoutAllRequest)},
-        {49, sizeof(::gridx::auth::v1::LogoutAllResponse)},
-        {54, sizeof(::gridx::auth::v1::UserProfile)},
+        {20, sizeof(::gridx::auth::v1::LoginRequest)},
+        {27, sizeof(::gridx::auth::v1::LoginResponse)},
+        {40, sizeof(::gridx::auth::v1::LogoutRequest)},
+        {45, sizeof(::gridx::auth::v1::LogoutResponse)},
+        {50, sizeof(::gridx::auth::v1::LogoutAllRequest)},
+        {51, sizeof(::gridx::auth::v1::LogoutAllResponse)},
+        {56, sizeof(::gridx::auth::v1::UserProfile)},
         {69, sizeof(::gridx::auth::v1::GetProfileRequest)},
         {70, sizeof(::gridx::auth::v1::GetProfileResponse)},
         {75, sizeof(::gridx::auth::v1::UpdateProfileRequest)},
-        {82, sizeof(::gridx::auth::v1::UpdateProfileResponse)},
-        {87, sizeof(::gridx::auth::v1::ChangePasswordRequest)},
-        {94, sizeof(::gridx::auth::v1::ChangePasswordResponse)},
-        {99, sizeof(::gridx::auth::v1::RequestPasswordResetRequest)},
-        {104, sizeof(::gridx::auth::v1::RequestPasswordResetResponse)},
-        {109, sizeof(::gridx::auth::v1::ResetPasswordRequest)},
-        {116, sizeof(::gridx::auth::v1::ResetPasswordResponse)},
-        {121, sizeof(::gridx::auth::v1::RequestEmailChangeRequest)},
-        {126, sizeof(::gridx::auth::v1::RequestEmailChangeResponse)},
-        {131, sizeof(::gridx::auth::v1::VerifyEmailChangeRequest)},
-        {136, sizeof(::gridx::auth::v1::VerifyEmailChangeResponse)},
+        {80, sizeof(::gridx::auth::v1::UpdateProfileResponse)},
+        {85, sizeof(::gridx::auth::v1::ChangePasswordRequest)},
+        {92, sizeof(::gridx::auth::v1::ChangePasswordResponse)},
+        {97, sizeof(::gridx::auth::v1::RequestPasswordResetRequest)},
+        {102, sizeof(::gridx::auth::v1::RequestPasswordResetResponse)},
+        {107, sizeof(::gridx::auth::v1::ResetPasswordRequest)},
+        {114, sizeof(::gridx::auth::v1::ResetPasswordResponse)},
+        {119, sizeof(::gridx::auth::v1::RequestEmailChangeRequest)},
+        {124, sizeof(::gridx::auth::v1::RequestEmailChangeResponse)},
+        {129, sizeof(::gridx::auth::v1::VerifyEmailChangeRequest)},
+        {134, sizeof(::gridx::auth::v1::VerifyEmailChangeResponse)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
     file_message_globals[] = {
@@ -3749,80 +3741,81 @@ const char descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto[] ABSL_ATT
     protodesc_cold) = {
     "\n\030gridx/auth/v1/auth.proto\022\rgridx.auth.v"
     "1\"C\n\017RegisterRequest\022\024\n\005email\030\001 \001(\tR\005ema"
-    "il\022\032\n\010password\030\002 \001(\tR\010password\"x\n\020Regist"
-    "erResponse\022\027\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005e"
-    "mail\030\002 \001(\tR\005email\022\026\n\006status\030\003 \001(\tR\006statu"
-    "s\022\035\n\ncreated_at\030\004 \001(\tR\tcreatedAt\"@\n\014Logi"
-    "nRequest\022\024\n\005email\030\001 \001(\tR\005email\022\032\n\010passwo"
-    "rd\030\002 \001(\tR\010password\"\245\001\n\rLoginResponse\022\027\n\007"
-    "user_id\030\001 \001(\tR\006userId\022\024\n\005email\030\002 \001(\tR\005em"
-    "ail\022!\n\014access_token\030\003 \001(\tR\013accessToken\022#"
-    "\n\rrefresh_token\030\004 \001(\tR\014refreshToken\022\035\n\ne"
-    "xpires_in\030\005 \001(\003R\texpiresIn\"4\n\rLogoutRequ"
-    "est\022#\n\rrefresh_token\030\001 \001(\tR\014refreshToken"
-    "\"*\n\016LogoutResponse\022\030\n\007success\030\001 \001(\010R\007suc"
-    "cess\"\022\n\020LogoutAllRequest\"-\n\021LogoutAllRes"
-    "ponse\022\030\n\007success\030\001 \001(\010R\007success\"\257\001\n\013User"
-    "Profile\022\027\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005emai"
-    "l\030\002 \001(\tR\005email\022\035\n\nfirst_name\030\003 \001(\tR\tfirs"
-    "tName\022\033\n\tlast_name\030\004 \001(\tR\010lastName\022\026\n\006st"
-    "atus\030\005 \001(\tR\006status\022\035\n\ncreated_at\030\006 \001(\tR\t"
-    "createdAt\"\023\n\021GetProfileRequest\"J\n\022GetPro"
-    "fileResponse\0224\n\007profile\030\001 \001(\0132\032.gridx.au"
-    "th.v1.UserProfileR\007profile\"R\n\024UpdateProf"
-    "ileRequest\022\035\n\nfirst_name\030\001 \001(\tR\tfirstNam"
-    "e\022\033\n\tlast_name\030\002 \001(\tR\010lastName\"M\n\025Update"
-    "ProfileResponse\0224\n\007profile\030\001 \001(\0132\032.gridx"
-    ".auth.v1.UserProfileR\007profile\"e\n\025ChangeP"
-    "asswordRequest\022)\n\020current_password\030\001 \001(\t"
-    "R\017currentPassword\022!\n\014new_password\030\002 \001(\tR"
-    "\013newPassword\"2\n\026ChangePasswordResponse\022\030"
-    "\n\007success\030\001 \001(\010R\007success\"3\n\033RequestPassw"
-    "ordResetRequest\022\024\n\005email\030\001 \001(\tR\005email\"8\n"
-    "\034RequestPasswordResetResponse\022\030\n\007success"
-    "\030\001 \001(\010R\007success\"O\n\024ResetPasswordRequest\022"
-    "\024\n\005token\030\001 \001(\tR\005token\022!\n\014new_password\030\002 "
-    "\001(\tR\013newPassword\"1\n\025ResetPasswordRespons"
-    "e\022\030\n\007success\030\001 \001(\010R\007success\"8\n\031RequestEm"
-    "ailChangeRequest\022\033\n\tnew_email\030\001 \001(\tR\010new"
-    "Email\"6\n\032RequestEmailChangeResponse\022\030\n\007s"
-    "uccess\030\001 \001(\010R\007success\"0\n\030VerifyEmailChan"
-    "geRequest\022\024\n\005token\030\001 \001(\tR\005token\"Q\n\031Verif"
-    "yEmailChangeResponse\0224\n\007profile\030\001 \001(\0132\032."
-    "gridx.auth.v1.UserProfileR\007profile2\343\007\n\013A"
-    "uthService\022K\n\010Register\022\036.gridx.auth.v1.R"
-    "egisterRequest\032\037.gridx.auth.v1.RegisterR"
-    "esponse\022B\n\005Login\022\033.gridx.auth.v1.LoginRe"
-    "quest\032\034.gridx.auth.v1.LoginResponse\022E\n\006L"
-    "ogout\022\034.gridx.auth.v1.LogoutRequest\032\035.gr"
-    "idx.auth.v1.LogoutResponse\022N\n\tLogoutAll\022"
-    "\037.gridx.auth.v1.LogoutAllRequest\032 .gridx"
-    ".auth.v1.LogoutAllResponse\022Q\n\nGetProfile"
-    "\022 .gridx.auth.v1.GetProfileRequest\032!.gri"
-    "dx.auth.v1.GetProfileResponse\022Z\n\rUpdateP"
-    "rofile\022#.gridx.auth.v1.UpdateProfileRequ"
-    "est\032$.gridx.auth.v1.UpdateProfileRespons"
-    "e\022]\n\016ChangePassword\022$.gridx.auth.v1.Chan"
-    "gePasswordRequest\032%.gridx.auth.v1.Change"
-    "PasswordResponse\022o\n\024RequestPasswordReset"
-    "\022*.gridx.auth.v1.RequestPasswordResetReq"
-    "uest\032+.gridx.auth.v1.RequestPasswordRese"
-    "tResponse\022Z\n\rResetPassword\022#.gridx.auth."
-    "v1.ResetPasswordRequest\032$.gridx.auth.v1."
-    "ResetPasswordResponse\022i\n\022RequestEmailCha"
-    "nge\022(.gridx.auth.v1.RequestEmailChangeRe"
-    "quest\032).gridx.auth.v1.RequestEmailChange"
-    "Response\022f\n\021VerifyEmailChange\022\'.gridx.au"
-    "th.v1.VerifyEmailChangeRequest\032(.gridx.a"
-    "uth.v1.VerifyEmailChangeResponseBHZFgith"
-    "ub.com/p2p-energy-trading-platform/go-sd"
-    "k/gen/gridx/auth/v1;authv1b\006proto3"
+    "il\022\032\n\010password\030\002 \001(\tR\010password\"\214\001\n\020Regis"
+    "terResponse\022\027\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005"
+    "email\030\002 \001(\tR\005email\022\026\n\006status\030\003 \001(\tR\006stat"
+    "us\022\035\n\ncreated_at\030\004 \001(\tR\tcreatedAt\022\022\n\004nam"
+    "e\030\005 \001(\tR\004name\"@\n\014LoginRequest\022\024\n\005email\030\001"
+    " \001(\tR\005email\022\032\n\010password\030\002 \001(\tR\010password\""
+    "\245\001\n\rLoginResponse\022\027\n\007user_id\030\001 \001(\tR\006user"
+    "Id\022\024\n\005email\030\002 \001(\tR\005email\022!\n\014access_token"
+    "\030\003 \001(\tR\013accessToken\022#\n\rrefresh_token\030\004 \001"
+    "(\tR\014refreshToken\022\035\n\nexpires_in\030\005 \001(\003R\tex"
+    "piresIn\"4\n\rLogoutRequest\022#\n\rrefresh_toke"
+    "n\030\001 \001(\tR\014refreshToken\"*\n\016LogoutResponse\022"
+    "\030\n\007success\030\001 \001(\010R\007success\"\022\n\020LogoutAllRe"
+    "quest\"-\n\021LogoutAllResponse\022\030\n\007success\030\001 "
+    "\001(\010R\007success\"\252\001\n\013UserProfile\022\027\n\007user_id\030"
+    "\001 \001(\tR\006userId\022\024\n\005email\030\002 \001(\tR\005email\022\026\n\006s"
+    "tatus\030\005 \001(\tR\006status\022\035\n\ncreated_at\030\006 \001(\tR"
+    "\tcreatedAt\022\022\n\004name\030\007 \001(\tR\004nameJ\004\010\003\020\004J\004\010\004"
+    "\020\005R\nfirst_nameR\tlast_name\"\023\n\021GetProfileR"
+    "equest\"J\n\022GetProfileResponse\0224\n\007profile\030"
+    "\001 \001(\0132\032.gridx.auth.v1.UserProfileR\007profi"
+    "le\"M\n\024UpdateProfileRequest\022\022\n\004name\030\003 \001(\t"
+    "R\004nameJ\004\010\001\020\002J\004\010\002\020\003R\nfirst_nameR\tlast_nam"
+    "e\"M\n\025UpdateProfileResponse\0224\n\007profile\030\001 "
+    "\001(\0132\032.gridx.auth.v1.UserProfileR\007profile"
+    "\"e\n\025ChangePasswordRequest\022)\n\020current_pas"
+    "sword\030\001 \001(\tR\017currentPassword\022!\n\014new_pass"
+    "word\030\002 \001(\tR\013newPassword\"2\n\026ChangePasswor"
+    "dResponse\022\030\n\007success\030\001 \001(\010R\007success\"3\n\033R"
+    "equestPasswordResetRequest\022\024\n\005email\030\001 \001("
+    "\tR\005email\"8\n\034RequestPasswordResetResponse"
+    "\022\030\n\007success\030\001 \001(\010R\007success\"O\n\024ResetPassw"
+    "ordRequest\022\024\n\005token\030\001 \001(\tR\005token\022!\n\014new_"
+    "password\030\002 \001(\tR\013newPassword\"1\n\025ResetPass"
+    "wordResponse\022\030\n\007success\030\001 \001(\010R\007success\"8"
+    "\n\031RequestEmailChangeRequest\022\033\n\tnew_email"
+    "\030\001 \001(\tR\010newEmail\"6\n\032RequestEmailChangeRe"
+    "sponse\022\030\n\007success\030\001 \001(\010R\007success\"0\n\030Veri"
+    "fyEmailChangeRequest\022\024\n\005token\030\001 \001(\tR\005tok"
+    "en\"Q\n\031VerifyEmailChangeResponse\0224\n\007profi"
+    "le\030\001 \001(\0132\032.gridx.auth.v1.UserProfileR\007pr"
+    "ofile2\343\007\n\013AuthService\022K\n\010Register\022\036.grid"
+    "x.auth.v1.RegisterRequest\032\037.gridx.auth.v"
+    "1.RegisterResponse\022B\n\005Login\022\033.gridx.auth"
+    ".v1.LoginRequest\032\034.gridx.auth.v1.LoginRe"
+    "sponse\022E\n\006Logout\022\034.gridx.auth.v1.LogoutR"
+    "equest\032\035.gridx.auth.v1.LogoutResponse\022N\n"
+    "\tLogoutAll\022\037.gridx.auth.v1.LogoutAllRequ"
+    "est\032 .gridx.auth.v1.LogoutAllResponse\022Q\n"
+    "\nGetProfile\022 .gridx.auth.v1.GetProfileRe"
+    "quest\032!.gridx.auth.v1.GetProfileResponse"
+    "\022Z\n\rUpdateProfile\022#.gridx.auth.v1.Update"
+    "ProfileRequest\032$.gridx.auth.v1.UpdatePro"
+    "fileResponse\022]\n\016ChangePassword\022$.gridx.a"
+    "uth.v1.ChangePasswordRequest\032%.gridx.aut"
+    "h.v1.ChangePasswordResponse\022o\n\024RequestPa"
+    "sswordReset\022*.gridx.auth.v1.RequestPassw"
+    "ordResetRequest\032+.gridx.auth.v1.RequestP"
+    "asswordResetResponse\022Z\n\rResetPassword\022#."
+    "gridx.auth.v1.ResetPasswordRequest\032$.gri"
+    "dx.auth.v1.ResetPasswordResponse\022i\n\022Requ"
+    "estEmailChange\022(.gridx.auth.v1.RequestEm"
+    "ailChangeRequest\032).gridx.auth.v1.Request"
+    "EmailChangeResponse\022f\n\021VerifyEmailChange"
+    "\022\'.gridx.auth.v1.VerifyEmailChangeReques"
+    "t\032(.gridx.auth.v1.VerifyEmailChangeRespo"
+    "nseBHZFgithub.com/p2p-energy-trading-pla"
+    "tform/go-sdk/gen/gridx/auth/v1;authv1b\006p"
+    "roto3"
 };
 static ::absl::once_flag descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto = {
     false,
     false,
-    2794,
+    2805,
     descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto,
     "gridx/auth/v1/auth.proto",
     &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_once,
@@ -4110,7 +4103,8 @@ PROTOBUF_NDEBUG_INLINE RegisterResponse::Impl_::Impl_(
         user_id_(arena, from.user_id_),
         email_(arena, from.email_),
         status_(arena, from.status_),
-        created_at_(arena, from.created_at_) {}
+        created_at_(arena, from.created_at_),
+        name_(arena, from.name_) {}
 
 RegisterResponse::RegisterResponse(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
@@ -4136,7 +4130,8 @@ PROTOBUF_NDEBUG_INLINE RegisterResponse::Impl_::Impl_(
         user_id_(arena),
         email_(arena),
         status_(arena),
-        created_at_(arena) {}
+        created_at_(arena),
+        name_(arena) {}
 
 inline void RegisterResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
@@ -4156,6 +4151,7 @@ inline void RegisterResponse::SharedDtor(MessageLite& self) {
   this_._impl_.email_.Destroy();
   this_._impl_.status_.Destroy();
   this_._impl_.created_at_.Destroy();
+  this_._impl_.name_.Destroy();
   this_._impl_.~Impl_();
 }
 
@@ -4193,7 +4189,7 @@ PROTOBUF_NOINLINE void RegisterResponse::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000001fU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       _impl_.user_id_.ClearNonDefaultToEmpty();
     }
@@ -4205,6 +4201,9 @@ PROTOBUF_NOINLINE void RegisterResponse::Clear() {
     }
     if (CheckHasBit(cached_has_bits, 0x00000008U)) {
       _impl_.created_at_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+      _impl_.name_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -4270,6 +4269,16 @@ PROTOBUF_NOINLINE void RegisterResponse::Clear() {
     }
   }
 
+  // string name = 5 [json_name = "name"];
+  if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+    if (!this_._internal_name().empty()) {
+      const ::std::string& _s = this_._internal_name();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.RegisterResponse.name");
+      target = stream->WriteStringMaybeAliased(5, _s, target);
+    }
+  }
+
   if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
     target =
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
@@ -4295,7 +4304,7 @@ PROTOBUF_NOINLINE void RegisterResponse::Clear() {
 
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000001fU)) {
     // string user_id = 1 [json_name = "userId"];
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!this_._internal_user_id().empty()) {
@@ -4324,6 +4333,13 @@ PROTOBUF_NOINLINE void RegisterResponse::Clear() {
                                         this_._internal_created_at());
       }
     }
+    // string name = 5 [json_name = "name"];
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+      if (!this_._internal_name().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_name());
+      }
+    }
   }
   return this_.MaybeComputeUnknownFieldsSize(total_size,
                                              &this_._impl_._cached_size_);
@@ -4342,7 +4358,7 @@ void RegisterResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
   (void)cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000001fU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!from._internal_user_id().empty()) {
         _this->_internal_set_user_id(from._internal_user_id());
@@ -4379,6 +4395,15 @@ void RegisterResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
         }
       }
     }
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+      if (!from._internal_name().empty()) {
+        _this->_internal_set_name(from._internal_name());
+      } else {
+        if (_this->_impl_.name_.IsDefault()) {
+          _this->_internal_set_name("");
+        }
+      }
+    }
   }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
@@ -4403,6 +4428,7 @@ void RegisterResponse::InternalSwap(RegisterResponse* PROTOBUF_RESTRICT PROTOBUF
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.email_, &other->_impl_.email_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.status_, &other->_impl_.status_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.created_at_, &other->_impl_.created_at_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, &other->_impl_.name_, arena);
 }
 
 ::google::protobuf::Metadata RegisterResponse::GetMetadata() const {
@@ -5675,10 +5701,9 @@ PROTOBUF_NDEBUG_INLINE UserProfile::Impl_::Impl_(
         _cached_size_{0},
         user_id_(arena, from.user_id_),
         email_(arena, from.email_),
-        first_name_(arena, from.first_name_),
-        last_name_(arena, from.last_name_),
         status_(arena, from.status_),
-        created_at_(arena, from.created_at_) {}
+        created_at_(arena, from.created_at_),
+        name_(arena, from.name_) {}
 
 UserProfile::UserProfile(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
@@ -5703,10 +5728,9 @@ PROTOBUF_NDEBUG_INLINE UserProfile::Impl_::Impl_(
       : _cached_size_{0},
         user_id_(arena),
         email_(arena),
-        first_name_(arena),
-        last_name_(arena),
         status_(arena),
-        created_at_(arena) {}
+        created_at_(arena),
+        name_(arena) {}
 
 inline void UserProfile::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
@@ -5724,10 +5748,9 @@ inline void UserProfile::SharedDtor(MessageLite& self) {
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.user_id_.Destroy();
   this_._impl_.email_.Destroy();
-  this_._impl_.first_name_.Destroy();
-  this_._impl_.last_name_.Destroy();
   this_._impl_.status_.Destroy();
   this_._impl_.created_at_.Destroy();
+  this_._impl_.name_.Destroy();
   this_._impl_.~Impl_();
 }
 
@@ -5765,7 +5788,7 @@ PROTOBUF_NOINLINE void UserProfile::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000001fU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       _impl_.user_id_.ClearNonDefaultToEmpty();
     }
@@ -5773,16 +5796,13 @@ PROTOBUF_NOINLINE void UserProfile::Clear() {
       _impl_.email_.ClearNonDefaultToEmpty();
     }
     if (CheckHasBit(cached_has_bits, 0x00000004U)) {
-      _impl_.first_name_.ClearNonDefaultToEmpty();
-    }
-    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
-      _impl_.last_name_.ClearNonDefaultToEmpty();
-    }
-    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       _impl_.status_.ClearNonDefaultToEmpty();
     }
-    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
       _impl_.created_at_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+      _impl_.name_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -5828,28 +5848,8 @@ PROTOBUF_NOINLINE void UserProfile::Clear() {
     }
   }
 
-  // string first_name = 3 [json_name = "firstName"];
-  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
-    if (!this_._internal_first_name().empty()) {
-      const ::std::string& _s = this_._internal_first_name();
-      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.UserProfile.first_name");
-      target = stream->WriteStringMaybeAliased(3, _s, target);
-    }
-  }
-
-  // string last_name = 4 [json_name = "lastName"];
-  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
-    if (!this_._internal_last_name().empty()) {
-      const ::std::string& _s = this_._internal_last_name();
-      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.UserProfile.last_name");
-      target = stream->WriteStringMaybeAliased(4, _s, target);
-    }
-  }
-
   // string status = 5 [json_name = "status"];
-  if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
     if (!this_._internal_status().empty()) {
       const ::std::string& _s = this_._internal_status();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -5859,12 +5859,22 @@ PROTOBUF_NOINLINE void UserProfile::Clear() {
   }
 
   // string created_at = 6 [json_name = "createdAt"];
-  if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
     if (!this_._internal_created_at().empty()) {
       const ::std::string& _s = this_._internal_created_at();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
           _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.UserProfile.created_at");
       target = stream->WriteStringMaybeAliased(6, _s, target);
+    }
+  }
+
+  // string name = 7 [json_name = "name"];
+  if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+    if (!this_._internal_name().empty()) {
+      const ::std::string& _s = this_._internal_name();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.UserProfile.name");
+      target = stream->WriteStringMaybeAliased(7, _s, target);
     }
   }
 
@@ -5893,7 +5903,7 @@ PROTOBUF_NOINLINE void UserProfile::Clear() {
 
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000001fU)) {
     // string user_id = 1 [json_name = "userId"];
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!this_._internal_user_id().empty()) {
@@ -5908,32 +5918,25 @@ PROTOBUF_NOINLINE void UserProfile::Clear() {
                                         this_._internal_email());
       }
     }
-    // string first_name = 3 [json_name = "firstName"];
-    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
-      if (!this_._internal_first_name().empty()) {
-        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                        this_._internal_first_name());
-      }
-    }
-    // string last_name = 4 [json_name = "lastName"];
-    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
-      if (!this_._internal_last_name().empty()) {
-        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                        this_._internal_last_name());
-      }
-    }
     // string status = 5 [json_name = "status"];
-    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
       if (!this_._internal_status().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_status());
       }
     }
     // string created_at = 6 [json_name = "createdAt"];
-    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
       if (!this_._internal_created_at().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_created_at());
+      }
+    }
+    // string name = 7 [json_name = "name"];
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+      if (!this_._internal_name().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_name());
       }
     }
   }
@@ -5954,7 +5957,7 @@ void UserProfile::MergeImpl(::google::protobuf::MessageLite& to_msg,
   (void)cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000001fU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!from._internal_user_id().empty()) {
         _this->_internal_set_user_id(from._internal_user_id());
@@ -5974,24 +5977,6 @@ void UserProfile::MergeImpl(::google::protobuf::MessageLite& to_msg,
       }
     }
     if (CheckHasBit(cached_has_bits, 0x00000004U)) {
-      if (!from._internal_first_name().empty()) {
-        _this->_internal_set_first_name(from._internal_first_name());
-      } else {
-        if (_this->_impl_.first_name_.IsDefault()) {
-          _this->_internal_set_first_name("");
-        }
-      }
-    }
-    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
-      if (!from._internal_last_name().empty()) {
-        _this->_internal_set_last_name(from._internal_last_name());
-      } else {
-        if (_this->_impl_.last_name_.IsDefault()) {
-          _this->_internal_set_last_name("");
-        }
-      }
-    }
-    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       if (!from._internal_status().empty()) {
         _this->_internal_set_status(from._internal_status());
       } else {
@@ -6000,12 +5985,21 @@ void UserProfile::MergeImpl(::google::protobuf::MessageLite& to_msg,
         }
       }
     }
-    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
       if (!from._internal_created_at().empty()) {
         _this->_internal_set_created_at(from._internal_created_at());
       } else {
         if (_this->_impl_.created_at_.IsDefault()) {
           _this->_internal_set_created_at("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+      if (!from._internal_name().empty()) {
+        _this->_internal_set_name(from._internal_name());
+      } else {
+        if (_this->_impl_.name_.IsDefault()) {
+          _this->_internal_set_name("");
         }
       }
     }
@@ -6031,10 +6025,9 @@ void UserProfile::InternalSwap(UserProfile* PROTOBUF_RESTRICT PROTOBUF_NONNULL o
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.email_, &other->_impl_.email_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.first_name_, &other->_impl_.first_name_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.last_name_, &other->_impl_.last_name_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.status_, &other->_impl_.status_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.created_at_, &other->_impl_.created_at_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, &other->_impl_.name_, arena);
 }
 
 ::google::protobuf::Metadata UserProfile::GetMetadata() const {
@@ -6331,8 +6324,7 @@ PROTOBUF_NDEBUG_INLINE UpdateProfileRequest::Impl_::Impl_(
     [[maybe_unused]] const ::gridx::auth::v1::UpdateProfileRequest& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
-        first_name_(arena, from.first_name_),
-        last_name_(arena, from.last_name_) {}
+        name_(arena, from.name_) {}
 
 UpdateProfileRequest::UpdateProfileRequest(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
@@ -6355,8 +6347,7 @@ PROTOBUF_NDEBUG_INLINE UpdateProfileRequest::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
     [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : _cached_size_{0},
-        first_name_(arena),
-        last_name_(arena) {}
+        name_(arena) {}
 
 inline void UpdateProfileRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
@@ -6372,8 +6363,7 @@ inline void UpdateProfileRequest::SharedDtor(MessageLite& self) {
   }
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
-  this_._impl_.first_name_.Destroy();
-  this_._impl_.last_name_.Destroy();
+  this_._impl_.name_.Destroy();
   this_._impl_.~Impl_();
 }
 
@@ -6411,13 +6401,8 @@ PROTOBUF_NOINLINE void UpdateProfileRequest::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
-    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
-      _impl_.first_name_.ClearNonDefaultToEmpty();
-    }
-    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
-      _impl_.last_name_.ClearNonDefaultToEmpty();
-    }
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    _impl_.name_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
@@ -6442,23 +6427,13 @@ PROTOBUF_NOINLINE void UpdateProfileRequest::Clear() {
   (void)cached_has_bits;
 
   cached_has_bits = this_._impl_._has_bits_[0];
-  // string first_name = 1 [json_name = "firstName"];
+  // string name = 3 [json_name = "name"];
   if (CheckHasBit(cached_has_bits, 0x00000001U)) {
-    if (!this_._internal_first_name().empty()) {
-      const ::std::string& _s = this_._internal_first_name();
+    if (!this_._internal_name().empty()) {
+      const ::std::string& _s = this_._internal_name();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.UpdateProfileRequest.first_name");
-      target = stream->WriteStringMaybeAliased(1, _s, target);
-    }
-  }
-
-  // string last_name = 2 [json_name = "lastName"];
-  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
-    if (!this_._internal_last_name().empty()) {
-      const ::std::string& _s = this_._internal_last_name();
-      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.UpdateProfileRequest.last_name");
-      target = stream->WriteStringMaybeAliased(2, _s, target);
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.UpdateProfileRequest.name");
+      target = stream->WriteStringMaybeAliased(3, _s, target);
     }
   }
 
@@ -6485,21 +6460,13 @@ PROTOBUF_NOINLINE void UpdateProfileRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void)cached_has_bits;
 
-  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
-  cached_has_bits = this_._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
-    // string first_name = 1 [json_name = "firstName"];
+   {
+    // string name = 3 [json_name = "name"];
+    cached_has_bits = this_._impl_._has_bits_[0];
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
-      if (!this_._internal_first_name().empty()) {
+      if (!this_._internal_name().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                        this_._internal_first_name());
-      }
-    }
-    // string last_name = 2 [json_name = "lastName"];
-    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
-      if (!this_._internal_last_name().empty()) {
-        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                        this_._internal_last_name());
+                                        this_._internal_name());
       }
     }
   }
@@ -6520,23 +6487,12 @@ void UpdateProfileRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
   (void)cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
-    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
-      if (!from._internal_first_name().empty()) {
-        _this->_internal_set_first_name(from._internal_first_name());
-      } else {
-        if (_this->_impl_.first_name_.IsDefault()) {
-          _this->_internal_set_first_name("");
-        }
-      }
-    }
-    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
-      if (!from._internal_last_name().empty()) {
-        _this->_internal_set_last_name(from._internal_last_name());
-      } else {
-        if (_this->_impl_.last_name_.IsDefault()) {
-          _this->_internal_set_last_name("");
-        }
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!from._internal_name().empty()) {
+      _this->_internal_set_name(from._internal_name());
+    } else {
+      if (_this->_impl_.name_.IsDefault()) {
+        _this->_internal_set_name("");
       }
     }
   }
@@ -6559,8 +6515,7 @@ void UpdateProfileRequest::InternalSwap(UpdateProfileRequest* PROTOBUF_RESTRICT 
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.first_name_, &other->_impl_.first_name_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.last_name_, &other->_impl_.last_name_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, &other->_impl_.name_, arena);
 }
 
 ::google::protobuf::Metadata UpdateProfileRequest::GetMetadata() const {
