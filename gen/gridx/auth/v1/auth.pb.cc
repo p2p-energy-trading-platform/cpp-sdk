@@ -79,6 +79,14 @@ PROTOBUF_CONSTINIT ::google::protobuf::internal::ReflectionData
         {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
         // ::gridx::auth::v1::VerifyEmailChangeResponse
         {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::auth::v1::VerifyEmailRequest
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::auth::v1::VerifyEmailResponse
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::auth::v1::ResendOtpRequest
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::auth::v1::ResendOtpResponse
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
         // ::gridx::auth::v1::GetUserRequest
         {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
         // ::gridx::auth::v1::GetUserResponse
@@ -93,6 +101,315 @@ PROTOBUF_CONSTINIT ::google::protobuf::internal::ReflectionData
 namespace gridx {
 namespace auth {
 namespace v1 {
+class VerifyEmailResponse::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<VerifyEmailResponse>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(VerifyEmailResponse, _impl_._has_bits_);
+};
+
+constexpr VerifyEmailResponse::ParseTableT_ VerifyEmailResponse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(VerifyEmailResponse, _impl_._has_bits_),
+      0, // no _extensions_
+      2, 8,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967292,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      2,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::auth::v1::VerifyEmailResponse>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // string message = 2 [json_name = "message"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 0, 0,
+        PROTOBUF_FIELD_OFFSET(VerifyEmailResponse, _impl_.message_)}},
+      // bool success = 1 [json_name = "success"];
+      {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(VerifyEmailResponse, _impl_.success_), 1>(),
+       {8, 1, 0,
+        PROTOBUF_FIELD_OFFSET(VerifyEmailResponse, _impl_.success_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // bool success = 1 [json_name = "success"];
+      {PROTOBUF_FIELD_OFFSET(VerifyEmailResponse, _impl_.success_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kBool)},
+      // string message = 2 [json_name = "message"];
+      {PROTOBUF_FIELD_OFFSET(VerifyEmailResponse, _impl_.message_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\41\0\7\0\0\0\0\0"
+      "gridx.auth.v1.VerifyEmailResponse"
+      "message"
+    }},
+  };
+}
+
+
+inline constexpr VerifyEmailResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        message_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        success_{false} {}
+
+template <typename>
+constexpr VerifyEmailResponse::VerifyEmailResponse(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL VerifyEmailResponse::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) VerifyEmailResponse(arena);
+}
+constexpr auto VerifyEmailResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(VerifyEmailResponse), alignof(VerifyEmailResponse));
+}
+constexpr auto VerifyEmailResponse::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &VerifyEmailResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<VerifyEmailResponse>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &VerifyEmailResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<VerifyEmailResponse>(), &VerifyEmailResponse::ByteSizeLong,
+              &VerifyEmailResponse::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(VerifyEmailResponse, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[26],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct VerifyEmailResponseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr VerifyEmailResponseGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 VerifyEmailResponse_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(VerifyEmailResponse::InternalGenerateClassData_(
+            _default, &VerifyEmailResponse_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<VerifyEmailResponse>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~VerifyEmailResponseGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) VerifyEmailResponse _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<VerifyEmailResponse>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(VerifyEmailResponseGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST VerifyEmailResponseGlobalsTypeInternal VerifyEmailResponse_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* VerifyEmailResponse_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return VerifyEmailResponse_globals_.GetClassData();
+#else
+  return VerifyEmailResponse_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class VerifyEmailRequest::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<VerifyEmailRequest>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(VerifyEmailRequest, _impl_._has_bits_);
+};
+
+constexpr VerifyEmailRequest::ParseTableT_ VerifyEmailRequest::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(VerifyEmailRequest, _impl_._has_bits_),
+      0, // no _extensions_
+      2, 8,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967292,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      2,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::auth::v1::VerifyEmailRequest>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // string otp = 2 [json_name = "otp"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(VerifyEmailRequest, _impl_.otp_)}},
+      // string email = 1 [json_name = "email"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(VerifyEmailRequest, _impl_.email_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string email = 1 [json_name = "email"];
+      {PROTOBUF_FIELD_OFFSET(VerifyEmailRequest, _impl_.email_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string otp = 2 [json_name = "otp"];
+      {PROTOBUF_FIELD_OFFSET(VerifyEmailRequest, _impl_.otp_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\40\5\3\0\0\0\0\0"
+      "gridx.auth.v1.VerifyEmailRequest"
+      "email"
+      "otp"
+    }},
+  };
+}
+
+
+inline constexpr VerifyEmailRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        email_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        otp_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+constexpr VerifyEmailRequest::VerifyEmailRequest(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL VerifyEmailRequest::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) VerifyEmailRequest(arena);
+}
+constexpr auto VerifyEmailRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(VerifyEmailRequest), alignof(VerifyEmailRequest));
+}
+constexpr auto VerifyEmailRequest::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &VerifyEmailRequest::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<VerifyEmailRequest>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &VerifyEmailRequest::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<VerifyEmailRequest>(), &VerifyEmailRequest::ByteSizeLong,
+              &VerifyEmailRequest::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(VerifyEmailRequest, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[25],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct VerifyEmailRequestGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr VerifyEmailRequestGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 VerifyEmailRequest_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(VerifyEmailRequest::InternalGenerateClassData_(
+            _default, &VerifyEmailRequest_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<VerifyEmailRequest>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~VerifyEmailRequestGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) VerifyEmailRequest _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<VerifyEmailRequest>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(VerifyEmailRequestGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST VerifyEmailRequestGlobalsTypeInternal VerifyEmailRequest_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* VerifyEmailRequest_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return VerifyEmailRequest_globals_.GetClassData();
+#else
+  return VerifyEmailRequest_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
 class VerifyEmailChangeRequest::_Internal {
  public:
   using HasBits = decltype(::std::declval<VerifyEmailChangeRequest>()._impl_._has_bits_);
@@ -867,6 +1184,293 @@ const ::_pbi::ClassData* ResetPasswordRequest_get_class_data() {
   return ResetPasswordRequest_globals_.GetClassData();
 #else
   return ResetPasswordRequest_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class ResendOtpResponse::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<ResendOtpResponse>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(ResendOtpResponse, _impl_._has_bits_);
+};
+
+constexpr ResendOtpResponse::ParseTableT_ ResendOtpResponse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(ResendOtpResponse, _impl_._has_bits_),
+      0, // no _extensions_
+      1, 0,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967294,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      1,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::auth::v1::ResendOtpResponse>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // bool success = 1 [json_name = "success"];
+      {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ResendOtpResponse, _impl_.success_), 0>(),
+       {8, 0, 0,
+        PROTOBUF_FIELD_OFFSET(ResendOtpResponse, _impl_.success_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // bool success = 1 [json_name = "success"];
+      {PROTOBUF_FIELD_OFFSET(ResendOtpResponse, _impl_.success_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kBool)},
+    }},
+    // no aux_entries
+    {{
+    }},
+  };
+}
+
+
+inline constexpr ResendOtpResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        success_{false} {}
+
+template <typename>
+constexpr ResendOtpResponse::ResendOtpResponse(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL ResendOtpResponse::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) ResendOtpResponse(arena);
+}
+constexpr auto ResendOtpResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(ResendOtpResponse), alignof(ResendOtpResponse));
+}
+constexpr auto ResendOtpResponse::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &ResendOtpResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<ResendOtpResponse>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &ResendOtpResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<ResendOtpResponse>(), &ResendOtpResponse::ByteSizeLong,
+              &ResendOtpResponse::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(ResendOtpResponse, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[28],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct ResendOtpResponseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr ResendOtpResponseGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 ResendOtpResponse_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(ResendOtpResponse::InternalGenerateClassData_(
+            _default, &ResendOtpResponse_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<ResendOtpResponse>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~ResendOtpResponseGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) ResendOtpResponse _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<ResendOtpResponse>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(ResendOtpResponseGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST ResendOtpResponseGlobalsTypeInternal ResendOtpResponse_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* ResendOtpResponse_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return ResendOtpResponse_globals_.GetClassData();
+#else
+  return ResendOtpResponse_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class ResendOtpRequest::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<ResendOtpRequest>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(ResendOtpRequest, _impl_._has_bits_);
+};
+
+constexpr ResendOtpRequest::ParseTableT_ ResendOtpRequest::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(ResendOtpRequest, _impl_._has_bits_),
+      0, // no _extensions_
+      1, 0,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967294,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      1,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::auth::v1::ResendOtpRequest>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // string email = 1 [json_name = "email"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(ResendOtpRequest, _impl_.email_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string email = 1 [json_name = "email"];
+      {PROTOBUF_FIELD_OFFSET(ResendOtpRequest, _impl_.email_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\36\5\0\0\0\0\0\0"
+      "gridx.auth.v1.ResendOtpRequest"
+      "email"
+    }},
+  };
+}
+
+
+inline constexpr ResendOtpRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        email_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+constexpr ResendOtpRequest::ResendOtpRequest(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL ResendOtpRequest::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) ResendOtpRequest(arena);
+}
+constexpr auto ResendOtpRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(ResendOtpRequest), alignof(ResendOtpRequest));
+}
+constexpr auto ResendOtpRequest::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &ResendOtpRequest::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<ResendOtpRequest>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &ResendOtpRequest::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<ResendOtpRequest>(), &ResendOtpRequest::ByteSizeLong,
+              &ResendOtpRequest::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(ResendOtpRequest, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[27],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct ResendOtpRequestGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr ResendOtpRequestGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 ResendOtpRequest_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(ResendOtpRequest::InternalGenerateClassData_(
+            _default, &ResendOtpRequest_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<ResendOtpRequest>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~ResendOtpRequestGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) ResendOtpRequest _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<ResendOtpRequest>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(ResendOtpRequestGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST ResendOtpRequestGlobalsTypeInternal ResendOtpRequest_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* ResendOtpRequest_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return ResendOtpRequest_globals_.GetClassData();
+#else
+  return ResendOtpRequest_class_data_.base();
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 }
 }  // namespace
@@ -3132,7 +3736,7 @@ constexpr auto GetUserResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[26],
+      &file_reflection_data[30],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -3278,7 +3882,7 @@ constexpr auto GetUserRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[25],
+      &file_reflection_data[29],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -3543,7 +4147,7 @@ constexpr auto CheckPermissionResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[28],
+      &file_reflection_data[32],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -3699,7 +4303,7 @@ constexpr auto CheckPermissionRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[27],
+      &file_reflection_data[31],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -4652,6 +5256,30 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::VerifyEmailChangeResponse, _impl_.profile_),
         0,
         0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::VerifyEmailRequest, _impl_._has_bits_),
+        5, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::VerifyEmailRequest, _impl_.email_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::VerifyEmailRequest, _impl_.otp_),
+        0,
+        1,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::VerifyEmailResponse, _impl_._has_bits_),
+        5, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::VerifyEmailResponse, _impl_.success_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::VerifyEmailResponse, _impl_.message_),
+        1,
+        0,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::ResendOtpRequest, _impl_._has_bits_),
+        4, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::ResendOtpRequest, _impl_.email_),
+        0,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::ResendOtpResponse, _impl_._has_bits_),
+        4, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::ResendOtpResponse, _impl_.success_),
+        0,
+        0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::GetUserRequest, _impl_._has_bits_),
         4, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::GetUserRequest, _impl_.user_id_),
@@ -4710,10 +5338,14 @@ static const ::_pbi::MigrationSchema
         {138, sizeof(::gridx::auth::v1::RequestEmailChangeResponse)},
         {143, sizeof(::gridx::auth::v1::VerifyEmailChangeRequest)},
         {148, sizeof(::gridx::auth::v1::VerifyEmailChangeResponse)},
-        {153, sizeof(::gridx::auth::v1::GetUserRequest)},
-        {158, sizeof(::gridx::auth::v1::GetUserResponse)},
-        {171, sizeof(::gridx::auth::v1::CheckPermissionRequest)},
-        {178, sizeof(::gridx::auth::v1::CheckPermissionResponse)},
+        {153, sizeof(::gridx::auth::v1::VerifyEmailRequest)},
+        {160, sizeof(::gridx::auth::v1::VerifyEmailResponse)},
+        {167, sizeof(::gridx::auth::v1::ResendOtpRequest)},
+        {172, sizeof(::gridx::auth::v1::ResendOtpResponse)},
+        {177, sizeof(::gridx::auth::v1::GetUserRequest)},
+        {182, sizeof(::gridx::auth::v1::GetUserResponse)},
+        {195, sizeof(::gridx::auth::v1::CheckPermissionRequest)},
+        {202, sizeof(::gridx::auth::v1::CheckPermissionResponse)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
     file_message_globals[] = {
@@ -4742,6 +5374,10 @@ static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
         &::gridx::auth::v1::RequestEmailChangeResponse_globals_,
         &::gridx::auth::v1::VerifyEmailChangeRequest_globals_,
         &::gridx::auth::v1::VerifyEmailChangeResponse_globals_,
+        &::gridx::auth::v1::VerifyEmailRequest_globals_,
+        &::gridx::auth::v1::VerifyEmailResponse_globals_,
+        &::gridx::auth::v1::ResendOtpRequest_globals_,
+        &::gridx::auth::v1::ResendOtpResponse_globals_,
         &::gridx::auth::v1::GetUserRequest_globals_,
         &::gridx::auth::v1::GetUserResponse_globals_,
         &::gridx::auth::v1::CheckPermissionRequest_globals_,
@@ -4796,61 +5432,71 @@ const char descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto[] ABSL_ATT
     "cess\030\001 \001(\010R\007success\"0\n\030VerifyEmailChange"
     "Request\022\024\n\005token\030\001 \001(\tR\005token\"Q\n\031VerifyE"
     "mailChangeResponse\0224\n\007profile\030\001 \001(\0132\032.gr"
-    "idx.auth.v1.UserProfileR\007profile\")\n\016GetU"
-    "serRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"\200\001\n\017"
-    "GetUserResponse\022\027\n\007user_id\030\001 \001(\tR\006userId"
-    "\022\024\n\005email\030\002 \001(\tR\005email\022\026\n\006status\030\003 \001(\tR\006"
-    "status\022\022\n\004role\030\004 \001(\tR\004role\022\022\n\004name\030\005 \001(\t"
-    "R\004name\"Z\n\026CheckPermissionRequest\022\027\n\007user"
-    "_id\030\001 \001(\tR\006userId\022\'\n\017permission_name\030\002 \001"
-    "(\tR\016permissionName\"3\n\027CheckPermissionRes"
-    "ponse\022\030\n\007allowed\030\001 \001(\010R\007allowed2\350\t\n\013Auth"
-    "Service\022K\n\010Register\022\036.gridx.auth.v1.Regi"
-    "sterRequest\032\037.gridx.auth.v1.RegisterResp"
-    "onse\022B\n\005Login\022\033.gridx.auth.v1.LoginReque"
-    "st\032\034.gridx.auth.v1.LoginResponse\022E\n\006Logo"
-    "ut\022\034.gridx.auth.v1.LogoutRequest\032\035.gridx"
-    ".auth.v1.LogoutResponse\022N\n\tLogoutAll\022\037.g"
-    "ridx.auth.v1.LogoutAllRequest\032 .gridx.au"
-    "th.v1.LogoutAllResponse\022Q\n\nGetProfile\022 ."
-    "gridx.auth.v1.GetProfileRequest\032!.gridx."
-    "auth.v1.GetProfileResponse\022Z\n\rUpdateProf"
-    "ile\022#.gridx.auth.v1.UpdateProfileRequest"
-    "\032$.gridx.auth.v1.UpdateProfileResponse\022]"
-    "\n\016ChangePassword\022$.gridx.auth.v1.ChangeP"
-    "asswordRequest\032%.gridx.auth.v1.ChangePas"
-    "swordResponse\022o\n\024RequestPasswordReset\022*."
-    "gridx.auth.v1.RequestPasswordResetReques"
-    "t\032+.gridx.auth.v1.RequestPasswordResetRe"
-    "sponse\022Z\n\rResetPassword\022#.gridx.auth.v1."
-    "ResetPasswordRequest\032$.gridx.auth.v1.Res"
-    "etPasswordResponse\022i\n\022RequestEmailChange"
-    "\022(.gridx.auth.v1.RequestEmailChangeReque"
-    "st\032).gridx.auth.v1.RequestEmailChangeRes"
-    "ponse\022f\n\021VerifyEmailChange\022\'.gridx.auth."
-    "v1.VerifyEmailChangeRequest\032(.gridx.auth"
-    ".v1.VerifyEmailChangeResponse\022H\n\007GetUser"
-    "\022\035.gridx.auth.v1.GetUserRequest\032\036.gridx."
-    "auth.v1.GetUserResponse\022`\n\017CheckPermissi"
-    "on\022%.gridx.auth.v1.CheckPermissionReques"
-    "t\032&.gridx.auth.v1.CheckPermissionRespons"
-    "e\022W\n\014RefreshToken\022\".gridx.auth.v1.Refres"
-    "hTokenRequest\032#.gridx.auth.v1.RefreshTok"
-    "enResponseBHZFgithub.com/p2p-energy-trad"
-    "ing-platform/go-sdk/gen/gridx/auth/v1;au"
-    "thv1b\006proto3"
+    "idx.auth.v1.UserProfileR\007profile\"<\n\022Veri"
+    "fyEmailRequest\022\024\n\005email\030\001 \001(\tR\005email\022\020\n\003"
+    "otp\030\002 \001(\tR\003otp\"I\n\023VerifyEmailResponse\022\030\n"
+    "\007success\030\001 \001(\010R\007success\022\030\n\007message\030\002 \001(\t"
+    "R\007message\"(\n\020ResendOtpRequest\022\024\n\005email\030\001"
+    " \001(\tR\005email\"-\n\021ResendOtpResponse\022\030\n\007succ"
+    "ess\030\001 \001(\010R\007success\")\n\016GetUserRequest\022\027\n\007"
+    "user_id\030\001 \001(\tR\006userId\"\200\001\n\017GetUserRespons"
+    "e\022\027\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005email\030\002 \001("
+    "\tR\005email\022\026\n\006status\030\003 \001(\tR\006status\022\022\n\004role"
+    "\030\004 \001(\tR\004role\022\022\n\004name\030\005 \001(\tR\004name\"Z\n\026Chec"
+    "kPermissionRequest\022\027\n\007user_id\030\001 \001(\tR\006use"
+    "rId\022\'\n\017permission_name\030\002 \001(\tR\016permission"
+    "Name\"3\n\027CheckPermissionResponse\022\030\n\007allow"
+    "ed\030\001 \001(\010R\007allowed2\216\013\n\013AuthService\022K\n\010Reg"
+    "ister\022\036.gridx.auth.v1.RegisterRequest\032\037."
+    "gridx.auth.v1.RegisterResponse\022B\n\005Login\022"
+    "\033.gridx.auth.v1.LoginRequest\032\034.gridx.aut"
+    "h.v1.LoginResponse\022E\n\006Logout\022\034.gridx.aut"
+    "h.v1.LogoutRequest\032\035.gridx.auth.v1.Logou"
+    "tResponse\022N\n\tLogoutAll\022\037.gridx.auth.v1.L"
+    "ogoutAllRequest\032 .gridx.auth.v1.LogoutAl"
+    "lResponse\022Q\n\nGetProfile\022 .gridx.auth.v1."
+    "GetProfileRequest\032!.gridx.auth.v1.GetPro"
+    "fileResponse\022Z\n\rUpdateProfile\022#.gridx.au"
+    "th.v1.UpdateProfileRequest\032$.gridx.auth."
+    "v1.UpdateProfileResponse\022]\n\016ChangePasswo"
+    "rd\022$.gridx.auth.v1.ChangePasswordRequest"
+    "\032%.gridx.auth.v1.ChangePasswordResponse\022"
+    "o\n\024RequestPasswordReset\022*.gridx.auth.v1."
+    "RequestPasswordResetRequest\032+.gridx.auth"
+    ".v1.RequestPasswordResetResponse\022Z\n\rRese"
+    "tPassword\022#.gridx.auth.v1.ResetPasswordR"
+    "equest\032$.gridx.auth.v1.ResetPasswordResp"
+    "onse\022i\n\022RequestEmailChange\022(.gridx.auth."
+    "v1.RequestEmailChangeRequest\032).gridx.aut"
+    "h.v1.RequestEmailChangeResponse\022f\n\021Verif"
+    "yEmailChange\022\'.gridx.auth.v1.VerifyEmail"
+    "ChangeRequest\032(.gridx.auth.v1.VerifyEmai"
+    "lChangeResponse\022H\n\007GetUser\022\035.gridx.auth."
+    "v1.GetUserRequest\032\036.gridx.auth.v1.GetUse"
+    "rResponse\022`\n\017CheckPermission\022%.gridx.aut"
+    "h.v1.CheckPermissionRequest\032&.gridx.auth"
+    ".v1.CheckPermissionResponse\022T\n\013VerifyEma"
+    "il\022!.gridx.auth.v1.VerifyEmailRequest\032\"."
+    "gridx.auth.v1.VerifyEmailResponse\022N\n\tRes"
+    "endOtp\022\037.gridx.auth.v1.ResendOtpRequest\032"
+    " .gridx.auth.v1.ResendOtpResponse\022W\n\014Ref"
+    "reshToken\022\".gridx.auth.v1.RefreshTokenRe"
+    "quest\032#.gridx.auth.v1.RefreshTokenRespon"
+    "seBHZFgithub.com/p2p-energy-trading-plat"
+    "form/go-sdk/gen/gridx/auth/v1;authv1b\006pr"
+    "oto3"
 };
 static ::absl::once_flag descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto = {
     false,
     false,
-    3572,
+    3964,
     descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto,
     "gridx/auth/v1/auth.proto",
     &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_once,
     nullptr,
     0,
-    29,
+    33,
     schemas,
     file_message_globals,
     TableStruct_gridx_2fauth_2fv1_2fauth_2eproto::offsets,
@@ -10359,6 +11005,901 @@ void VerifyEmailChangeResponse::InternalSwap(VerifyEmailChangeResponse* PROTOBUF
 }
 
 ::google::protobuf::Metadata VerifyEmailChangeResponse::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+VerifyEmailRequest::VerifyEmailRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, VerifyEmailRequest_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.auth.v1.VerifyEmailRequest)
+}
+PROTOBUF_NDEBUG_INLINE VerifyEmailRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::auth::v1::VerifyEmailRequest& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        email_(arena, from.email_),
+        otp_(arena, from.otp_) {}
+
+VerifyEmailRequest::VerifyEmailRequest(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const VerifyEmailRequest& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, VerifyEmailRequest_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  VerifyEmailRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:gridx.auth.v1.VerifyEmailRequest)
+}
+PROTOBUF_NDEBUG_INLINE VerifyEmailRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        email_(arena),
+        otp_(arena) {}
+
+inline void VerifyEmailRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+VerifyEmailRequest::~VerifyEmailRequest() {
+  // @@protoc_insertion_point(destructor:gridx.auth.v1.VerifyEmailRequest)
+  SharedDtor(*this);
+}
+inline void VerifyEmailRequest::SharedDtor(MessageLite& self) {
+  VerifyEmailRequest& this_ = static_cast<VerifyEmailRequest&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.email_.Destroy();
+  this_._impl_.otp_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull VerifyEmailRequest_class_data_ =
+        VerifyEmailRequest::InternalGenerateClassData_(VerifyEmailRequest_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+VerifyEmailRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&VerifyEmailRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(VerifyEmailRequest_class_data_.tc_table);
+  return VerifyEmailRequest_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+VerifyEmailRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&VerifyEmailRequest_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&VerifyEmailRequest_globals_));
+  return VerifyEmailRequest_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const VerifyEmailRequest::ParseTableT_
+    VerifyEmailRequest::_table_ =
+        VerifyEmailRequest::InternalGenerateParseTable_(VerifyEmailRequest_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void VerifyEmailRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.auth.v1.VerifyEmailRequest)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      _impl_.email_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      _impl_.otp_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL VerifyEmailRequest::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const VerifyEmailRequest& this_ = static_cast<const VerifyEmailRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL VerifyEmailRequest::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const VerifyEmailRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.auth.v1.VerifyEmailRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string email = 1 [json_name = "email"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_email().empty()) {
+      const ::std::string& _s = this_._internal_email();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.VerifyEmailRequest.email");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  // string otp = 2 [json_name = "otp"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (!this_._internal_otp().empty()) {
+      const ::std::string& _s = this_._internal_otp();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.VerifyEmailRequest.otp");
+      target = stream->WriteStringMaybeAliased(2, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.auth.v1.VerifyEmailRequest)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t VerifyEmailRequest::ByteSizeLong(const MessageLite& base) {
+  const VerifyEmailRequest& this_ = static_cast<const VerifyEmailRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t VerifyEmailRequest::ByteSizeLong() const {
+  const VerifyEmailRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.auth.v1.VerifyEmailRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    // string email = 1 [json_name = "email"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_email().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_email());
+      }
+    }
+    // string otp = 2 [json_name = "otp"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!this_._internal_otp().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_otp());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void VerifyEmailRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<VerifyEmailRequest*>(&to_msg);
+  auto& from = static_cast<const VerifyEmailRequest&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.auth.v1.VerifyEmailRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_email().empty()) {
+        _this->_internal_set_email(from._internal_email());
+      } else {
+        if (_this->_impl_.email_.IsDefault()) {
+          _this->_internal_set_email("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!from._internal_otp().empty()) {
+        _this->_internal_set_otp(from._internal_otp());
+      } else {
+        if (_this->_impl_.otp_.IsDefault()) {
+          _this->_internal_set_otp("");
+        }
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void VerifyEmailRequest::CopyFrom(const VerifyEmailRequest& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.auth.v1.VerifyEmailRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void VerifyEmailRequest::InternalSwap(VerifyEmailRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.email_, &other->_impl_.email_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.otp_, &other->_impl_.otp_, arena);
+}
+
+::google::protobuf::Metadata VerifyEmailRequest::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+VerifyEmailResponse::VerifyEmailResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, VerifyEmailResponse_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.auth.v1.VerifyEmailResponse)
+}
+PROTOBUF_NDEBUG_INLINE VerifyEmailResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::auth::v1::VerifyEmailResponse& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        message_(arena, from.message_) {}
+
+VerifyEmailResponse::VerifyEmailResponse(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const VerifyEmailResponse& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, VerifyEmailResponse_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  VerifyEmailResponse* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  _impl_.success_ = from._impl_.success_;
+
+  // @@protoc_insertion_point(copy_constructor:gridx.auth.v1.VerifyEmailResponse)
+}
+PROTOBUF_NDEBUG_INLINE VerifyEmailResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        message_(arena) {}
+
+inline void VerifyEmailResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.success_ = {};
+}
+VerifyEmailResponse::~VerifyEmailResponse() {
+  // @@protoc_insertion_point(destructor:gridx.auth.v1.VerifyEmailResponse)
+  SharedDtor(*this);
+}
+inline void VerifyEmailResponse::SharedDtor(MessageLite& self) {
+  VerifyEmailResponse& this_ = static_cast<VerifyEmailResponse&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.message_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull VerifyEmailResponse_class_data_ =
+        VerifyEmailResponse::InternalGenerateClassData_(VerifyEmailResponse_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+VerifyEmailResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&VerifyEmailResponse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(VerifyEmailResponse_class_data_.tc_table);
+  return VerifyEmailResponse_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+VerifyEmailResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&VerifyEmailResponse_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&VerifyEmailResponse_globals_));
+  return VerifyEmailResponse_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const VerifyEmailResponse::ParseTableT_
+    VerifyEmailResponse::_table_ =
+        VerifyEmailResponse::InternalGenerateParseTable_(VerifyEmailResponse_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void VerifyEmailResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.auth.v1.VerifyEmailResponse)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    _impl_.message_.ClearNonDefaultToEmpty();
+  }
+  _impl_.success_ = false;
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL VerifyEmailResponse::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const VerifyEmailResponse& this_ = static_cast<const VerifyEmailResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL VerifyEmailResponse::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const VerifyEmailResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.auth.v1.VerifyEmailResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // bool success = 1 [json_name = "success"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (this_._internal_success() != 0) {
+      target = stream->EnsureSpace(target);
+      target = ::_pbi::WireFormatLite::WriteBoolToArray(
+          1, this_._internal_success(), target);
+    }
+  }
+
+  // string message = 2 [json_name = "message"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_message().empty()) {
+      const ::std::string& _s = this_._internal_message();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.VerifyEmailResponse.message");
+      target = stream->WriteStringMaybeAliased(2, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.auth.v1.VerifyEmailResponse)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t VerifyEmailResponse::ByteSizeLong(const MessageLite& base) {
+  const VerifyEmailResponse& this_ = static_cast<const VerifyEmailResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t VerifyEmailResponse::ByteSizeLong() const {
+  const VerifyEmailResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.auth.v1.VerifyEmailResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    // string message = 2 [json_name = "message"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_message().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_message());
+      }
+    }
+    // bool success = 1 [json_name = "success"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (this_._internal_success() != 0) {
+        total_size += 2;
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void VerifyEmailResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<VerifyEmailResponse*>(&to_msg);
+  auto& from = static_cast<const VerifyEmailResponse&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.auth.v1.VerifyEmailResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_message().empty()) {
+        _this->_internal_set_message(from._internal_message());
+      } else {
+        if (_this->_impl_.message_.IsDefault()) {
+          _this->_internal_set_message("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (from._internal_success() != 0) {
+        _this->_impl_.success_ = from._impl_.success_;
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void VerifyEmailResponse::CopyFrom(const VerifyEmailResponse& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.auth.v1.VerifyEmailResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void VerifyEmailResponse::InternalSwap(VerifyEmailResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.message_, &other->_impl_.message_, arena);
+  swap(_impl_.success_, other->_impl_.success_);
+}
+
+::google::protobuf::Metadata VerifyEmailResponse::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+ResendOtpRequest::ResendOtpRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ResendOtpRequest_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.auth.v1.ResendOtpRequest)
+}
+PROTOBUF_NDEBUG_INLINE ResendOtpRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::auth::v1::ResendOtpRequest& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        email_(arena, from.email_) {}
+
+ResendOtpRequest::ResendOtpRequest(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const ResendOtpRequest& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ResendOtpRequest_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  ResendOtpRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:gridx.auth.v1.ResendOtpRequest)
+}
+PROTOBUF_NDEBUG_INLINE ResendOtpRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        email_(arena) {}
+
+inline void ResendOtpRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+ResendOtpRequest::~ResendOtpRequest() {
+  // @@protoc_insertion_point(destructor:gridx.auth.v1.ResendOtpRequest)
+  SharedDtor(*this);
+}
+inline void ResendOtpRequest::SharedDtor(MessageLite& self) {
+  ResendOtpRequest& this_ = static_cast<ResendOtpRequest&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.email_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull ResendOtpRequest_class_data_ =
+        ResendOtpRequest::InternalGenerateClassData_(ResendOtpRequest_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ResendOtpRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ResendOtpRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(ResendOtpRequest_class_data_.tc_table);
+  return ResendOtpRequest_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ResendOtpRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ResendOtpRequest_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&ResendOtpRequest_globals_));
+  return ResendOtpRequest_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const ResendOtpRequest::ParseTableT_
+    ResendOtpRequest::_table_ =
+        ResendOtpRequest::InternalGenerateParseTable_(ResendOtpRequest_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void ResendOtpRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.auth.v1.ResendOtpRequest)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    _impl_.email_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL ResendOtpRequest::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const ResendOtpRequest& this_ = static_cast<const ResendOtpRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL ResendOtpRequest::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const ResendOtpRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.auth.v1.ResendOtpRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string email = 1 [json_name = "email"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_email().empty()) {
+      const ::std::string& _s = this_._internal_email();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.ResendOtpRequest.email");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.auth.v1.ResendOtpRequest)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t ResendOtpRequest::ByteSizeLong(const MessageLite& base) {
+  const ResendOtpRequest& this_ = static_cast<const ResendOtpRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t ResendOtpRequest::ByteSizeLong() const {
+  const ResendOtpRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.auth.v1.ResendOtpRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+   {
+    // string email = 1 [json_name = "email"];
+    cached_has_bits = this_._impl_._has_bits_[0];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_email().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_email());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void ResendOtpRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<ResendOtpRequest*>(&to_msg);
+  auto& from = static_cast<const ResendOtpRequest&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.auth.v1.ResendOtpRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!from._internal_email().empty()) {
+      _this->_internal_set_email(from._internal_email());
+    } else {
+      if (_this->_impl_.email_.IsDefault()) {
+        _this->_internal_set_email("");
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void ResendOtpRequest::CopyFrom(const ResendOtpRequest& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.auth.v1.ResendOtpRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void ResendOtpRequest::InternalSwap(ResendOtpRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.email_, &other->_impl_.email_, arena);
+}
+
+::google::protobuf::Metadata ResendOtpRequest::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+ResendOtpResponse::ResendOtpResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ResendOtpResponse_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.auth.v1.ResendOtpResponse)
+}
+ResendOtpResponse::ResendOtpResponse(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const ResendOtpResponse& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ResendOtpResponse_get_class_data()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(from._impl_) {
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+PROTOBUF_NDEBUG_INLINE ResendOtpResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0} {}
+
+inline void ResendOtpResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.success_ = {};
+}
+ResendOtpResponse::~ResendOtpResponse() {
+  // @@protoc_insertion_point(destructor:gridx.auth.v1.ResendOtpResponse)
+  SharedDtor(*this);
+}
+inline void ResendOtpResponse::SharedDtor(MessageLite& self) {
+  ResendOtpResponse& this_ = static_cast<ResendOtpResponse&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull ResendOtpResponse_class_data_ =
+        ResendOtpResponse::InternalGenerateClassData_(ResendOtpResponse_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ResendOtpResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ResendOtpResponse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(ResendOtpResponse_class_data_.tc_table);
+  return ResendOtpResponse_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ResendOtpResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ResendOtpResponse_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&ResendOtpResponse_globals_));
+  return ResendOtpResponse_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const ResendOtpResponse::ParseTableT_
+    ResendOtpResponse::_table_ =
+        ResendOtpResponse::InternalGenerateParseTable_(ResendOtpResponse_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void ResendOtpResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.auth.v1.ResendOtpResponse)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.success_ = false;
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL ResendOtpResponse::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const ResendOtpResponse& this_ = static_cast<const ResendOtpResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL ResendOtpResponse::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const ResendOtpResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.auth.v1.ResendOtpResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // bool success = 1 [json_name = "success"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (this_._internal_success() != 0) {
+      target = stream->EnsureSpace(target);
+      target = ::_pbi::WireFormatLite::WriteBoolToArray(
+          1, this_._internal_success(), target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.auth.v1.ResendOtpResponse)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t ResendOtpResponse::ByteSizeLong(const MessageLite& base) {
+  const ResendOtpResponse& this_ = static_cast<const ResendOtpResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t ResendOtpResponse::ByteSizeLong() const {
+  const ResendOtpResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.auth.v1.ResendOtpResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+   {
+    // bool success = 1 [json_name = "success"];
+    cached_has_bits = this_._impl_._has_bits_[0];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (this_._internal_success() != 0) {
+        total_size += 2;
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void ResendOtpResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<ResendOtpResponse*>(&to_msg);
+  auto& from = static_cast<const ResendOtpResponse&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.auth.v1.ResendOtpResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (from._internal_success() != 0) {
+      _this->_impl_.success_ = from._impl_.success_;
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void ResendOtpResponse::CopyFrom(const ResendOtpResponse& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.auth.v1.ResendOtpResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void ResendOtpResponse::InternalSwap(ResendOtpResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.success_, other->_impl_.success_);
+}
+
+::google::protobuf::Metadata ResendOtpResponse::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
