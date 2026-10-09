@@ -1061,280 +1061,6 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED VerifyEmailChangeRequest final : pu
 };
 // -------------------------------------------------------------------
 
-class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserProfile final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:gridx.auth.v1.UserProfile) */ {
- public:
-  inline UserProfile() : UserProfile(nullptr) {}
-  ~UserProfile() PROTOBUF_FINAL;
-
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(UserProfile* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
-    SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(UserProfile));
-  }
-#endif
-
-  template <typename = void>
-  explicit constexpr UserProfile(::google::protobuf::internal::ConstantInitialized,
-                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
-                               class_data);
-
-  inline UserProfile(const UserProfile& from) : UserProfile(nullptr, from) {}
-  inline UserProfile(UserProfile&& from) noexcept : UserProfile(nullptr, ::std::move(from)) {}
-  inline UserProfile& operator=(const UserProfile& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline UserProfile& operator=(UserProfile&& from) noexcept {
-    if (this == &from) return *this;
-    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
-  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
-    return GetDescriptor();
-  }
-  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
-  GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  [[nodiscard]] static const UserProfile& default_instance() {
-    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<UserProfile>(&UserProfile_globals_);
-  }
-  static constexpr int kIndexInFileMessages = 10;
-  friend void swap(UserProfile& a, UserProfile& b) { a.Swap(&b); }
-  inline void Swap(UserProfile* PROTOBUF_NONNULL other) {
-    if (other == this) return;
-    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(UserProfile* PROTOBUF_NONNULL other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  [[nodiscard]] UserProfile* PROTOBUF_NONNULL
-  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<UserProfile>(arena);
-  }
-  using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const UserProfile& from);
-  using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const UserProfile& from) { UserProfile::MergeImpl(*this, from); }
-
-  private:
-  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
-                        const ::google::protobuf::MessageLite& from_msg);
-
-  public:
-  [[nodiscard]] bool IsInitialized() const {
-    return true;
-  }
-  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
-  #if defined(PROTOBUF_CUSTOM_VTABLE)
-  private:
-  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
-  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
-
-  public:
-  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
-  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-    return _InternalSerialize(*this, target, stream);
-  }
-  #else   // PROTOBUF_CUSTOM_VTABLE
-  [[nodiscard]] ::size_t ByteSizeLong() const final;
-  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
-  #endif  // PROTOBUF_CUSTOM_VTABLE
-  [[nodiscard]] int GetCachedSize() const {
-    return _impl_._cached_size_.Get();
-  }
-
-  private:
-  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  static void SharedDtor(MessageLite& self);
-  void InternalSwap(UserProfile* PROTOBUF_NONNULL other);
- private:
-  template <typename T>
-  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.UserProfile"; }
-
-  explicit UserProfile(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  UserProfile(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const UserProfile& from);
-  UserProfile(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, UserProfile&& from) noexcept
-      : UserProfile(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
-  static void* PROTOBUF_NONNULL PlacementNew_(
-      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  static constexpr auto InternalNewImpl_();
-
- public:
-  static constexpr auto InternalGenerateClassData_(
-      const MessageLite& prototype,
-      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
-
-  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  enum : int {
-    kUserIdFieldNumber = 1,
-    kEmailFieldNumber = 2,
-    kStatusFieldNumber = 5,
-    kCreatedAtFieldNumber = 6,
-    kNameFieldNumber = 7,
-  };
-  // string user_id = 1 [json_name = "userId"];
-  void clear_user_id() ;
-  [[nodiscard]] const ::std::string& user_id() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_user_id(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_user_id();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_user_id();
-  void set_allocated_user_id(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_user_id() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_user_id();
-
-  public:
-  // string email = 2 [json_name = "email"];
-  void clear_email() ;
-  [[nodiscard]] const ::std::string& email() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_email(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_email();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_email();
-  void set_allocated_email(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_email() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_email(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_email();
-
-  public:
-  // string status = 5 [json_name = "status"];
-  void clear_status() ;
-  [[nodiscard]] const ::std::string& status() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_status(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_status();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_status();
-  void set_allocated_status(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_status() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_status(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_status();
-
-  public:
-  // string created_at = 6 [json_name = "createdAt"];
-  void clear_created_at() ;
-  [[nodiscard]] const ::std::string& created_at() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_created_at(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_created_at();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_created_at();
-  void set_allocated_created_at(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_created_at() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_created_at(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_created_at();
-
-  public:
-  // string name = 7 [json_name = "name"];
-  void clear_name() ;
-  [[nodiscard]] const ::std::string& name() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_name(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_name();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_name();
-  void set_allocated_name(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_name() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_name(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_name();
-
-  public:
-  // @@protoc_insertion_point(class_scope:gridx.auth.v1.UserProfile)
- private:
-  class _Internal;
-  using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<3, 5,
-                          0, 66,
-                          2>;
-  static constexpr ParseTableT_ InternalGenerateParseTable_(
-      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
-  friend class ::google::protobuf::internal::TcParser;
-  #ifndef PROTOBUF_MESSAGE_GLOBALS
-  static const ParseTableT_ _table_;
-  #endif
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  friend ::google::protobuf::internal::PrivateAccess;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(
-        ::google::protobuf::internal::InternalVisibility visibility,
-        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-    inline explicit Impl_(
-        ::google::protobuf::internal::InternalVisibility visibility,
-        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const UserProfile& from_msg);
-    ::google::protobuf::internal::HasBits<1> _has_bits_;
-    ::google::protobuf::internal::CachedSize _cached_size_;
-    ::google::protobuf::internal::ArenaStringPtr user_id_;
-    ::google::protobuf::internal::ArenaStringPtr email_;
-    ::google::protobuf::internal::ArenaStringPtr status_;
-    ::google::protobuf::internal::ArenaStringPtr created_at_;
-    ::google::protobuf::internal::ArenaStringPtr name_;
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
-};
-// -------------------------------------------------------------------
-
 class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UpdateProfileRequest final : public ::google::protobuf::Message
 /* @@protoc_insertion_point(class_definition:gridx.auth.v1.UpdateProfileRequest) */ {
  public:
@@ -3179,280 +2905,6 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED RequestEmailChangeRequest final : p
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr new_email_;
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
-};
-// -------------------------------------------------------------------
-
-class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED RegisterResponse final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:gridx.auth.v1.RegisterResponse) */ {
- public:
-  inline RegisterResponse() : RegisterResponse(nullptr) {}
-  ~RegisterResponse() PROTOBUF_FINAL;
-
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(RegisterResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
-    SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(RegisterResponse));
-  }
-#endif
-
-  template <typename = void>
-  explicit constexpr RegisterResponse(::google::protobuf::internal::ConstantInitialized,
-                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
-                               class_data);
-
-  inline RegisterResponse(const RegisterResponse& from) : RegisterResponse(nullptr, from) {}
-  inline RegisterResponse(RegisterResponse&& from) noexcept : RegisterResponse(nullptr, ::std::move(from)) {}
-  inline RegisterResponse& operator=(const RegisterResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline RegisterResponse& operator=(RegisterResponse&& from) noexcept {
-    if (this == &from) return *this;
-    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
-  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
-    return GetDescriptor();
-  }
-  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
-  GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  [[nodiscard]] static const RegisterResponse& default_instance() {
-    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<RegisterResponse>(&RegisterResponse_globals_);
-  }
-  static constexpr int kIndexInFileMessages = 1;
-  friend void swap(RegisterResponse& a, RegisterResponse& b) { a.Swap(&b); }
-  inline void Swap(RegisterResponse* PROTOBUF_NONNULL other) {
-    if (other == this) return;
-    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(RegisterResponse* PROTOBUF_NONNULL other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  [[nodiscard]] RegisterResponse* PROTOBUF_NONNULL
-  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<RegisterResponse>(arena);
-  }
-  using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const RegisterResponse& from);
-  using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const RegisterResponse& from) { RegisterResponse::MergeImpl(*this, from); }
-
-  private:
-  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
-                        const ::google::protobuf::MessageLite& from_msg);
-
-  public:
-  [[nodiscard]] bool IsInitialized() const {
-    return true;
-  }
-  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
-  #if defined(PROTOBUF_CUSTOM_VTABLE)
-  private:
-  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
-  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
-
-  public:
-  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
-  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-    return _InternalSerialize(*this, target, stream);
-  }
-  #else   // PROTOBUF_CUSTOM_VTABLE
-  [[nodiscard]] ::size_t ByteSizeLong() const final;
-  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
-  #endif  // PROTOBUF_CUSTOM_VTABLE
-  [[nodiscard]] int GetCachedSize() const {
-    return _impl_._cached_size_.Get();
-  }
-
-  private:
-  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  static void SharedDtor(MessageLite& self);
-  void InternalSwap(RegisterResponse* PROTOBUF_NONNULL other);
- private:
-  template <typename T>
-  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.RegisterResponse"; }
-
-  explicit RegisterResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  RegisterResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const RegisterResponse& from);
-  RegisterResponse(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, RegisterResponse&& from) noexcept
-      : RegisterResponse(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
-  static void* PROTOBUF_NONNULL PlacementNew_(
-      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  static constexpr auto InternalNewImpl_();
-
- public:
-  static constexpr auto InternalGenerateClassData_(
-      const MessageLite& prototype,
-      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
-
-  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  enum : int {
-    kUserIdFieldNumber = 1,
-    kEmailFieldNumber = 2,
-    kStatusFieldNumber = 3,
-    kCreatedAtFieldNumber = 4,
-    kNameFieldNumber = 5,
-  };
-  // string user_id = 1 [json_name = "userId"];
-  void clear_user_id() ;
-  [[nodiscard]] const ::std::string& user_id() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_user_id(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_user_id();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_user_id();
-  void set_allocated_user_id(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_user_id() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_user_id();
-
-  public:
-  // string email = 2 [json_name = "email"];
-  void clear_email() ;
-  [[nodiscard]] const ::std::string& email() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_email(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_email();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_email();
-  void set_allocated_email(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_email() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_email(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_email();
-
-  public:
-  // string status = 3 [json_name = "status"];
-  void clear_status() ;
-  [[nodiscard]] const ::std::string& status() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_status(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_status();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_status();
-  void set_allocated_status(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_status() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_status(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_status();
-
-  public:
-  // string created_at = 4 [json_name = "createdAt"];
-  void clear_created_at() ;
-  [[nodiscard]] const ::std::string& created_at() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_created_at(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_created_at();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_created_at();
-  void set_allocated_created_at(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_created_at() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_created_at(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_created_at();
-
-  public:
-  // string name = 5 [json_name = "name"];
-  void clear_name() ;
-  [[nodiscard]] const ::std::string& name() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_name(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_name();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_name();
-  void set_allocated_name(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_name() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_name(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_name();
-
-  public:
-  // @@protoc_insertion_point(class_scope:gridx.auth.v1.RegisterResponse)
- private:
-  class _Internal;
-  using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<3, 5,
-                          0, 71,
-                          2>;
-  static constexpr ParseTableT_ InternalGenerateParseTable_(
-      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
-  friend class ::google::protobuf::internal::TcParser;
-  #ifndef PROTOBUF_MESSAGE_GLOBALS
-  static const ParseTableT_ _table_;
-  #endif
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  friend ::google::protobuf::internal::PrivateAccess;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(
-        ::google::protobuf::internal::InternalVisibility visibility,
-        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-    inline explicit Impl_(
-        ::google::protobuf::internal::InternalVisibility visibility,
-        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const RegisterResponse& from_msg);
-    ::google::protobuf::internal::HasBits<1> _has_bits_;
-    ::google::protobuf::internal::CachedSize _cached_size_;
-    ::google::protobuf::internal::ArenaStringPtr user_id_;
-    ::google::protobuf::internal::ArenaStringPtr email_;
-    ::google::protobuf::internal::ArenaStringPtr status_;
-    ::google::protobuf::internal::ArenaStringPtr created_at_;
-    ::google::protobuf::internal::ArenaStringPtr name_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -6828,6 +6280,1223 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ChangePasswordRequest final : publi
 };
 // -------------------------------------------------------------------
 
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserProfile final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.auth.v1.UserProfile) */ {
+ public:
+  inline UserProfile() : UserProfile(nullptr) {}
+  ~UserProfile() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(UserProfile* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(UserProfile));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr UserProfile(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline UserProfile(const UserProfile& from) : UserProfile(nullptr, from) {}
+  inline UserProfile(UserProfile&& from) noexcept : UserProfile(nullptr, ::std::move(from)) {}
+  inline UserProfile& operator=(const UserProfile& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline UserProfile& operator=(UserProfile&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const UserProfile& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<UserProfile>(&UserProfile_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 10;
+  friend void swap(UserProfile& a, UserProfile& b) { a.Swap(&b); }
+  inline void Swap(UserProfile* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(UserProfile* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] UserProfile* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<UserProfile>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const UserProfile& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const UserProfile& from) { UserProfile::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(UserProfile* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.UserProfile"; }
+
+  explicit UserProfile(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  UserProfile(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const UserProfile& from);
+  UserProfile(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, UserProfile&& from) noexcept
+      : UserProfile(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kEmailFieldNumber = 2,
+    kStatusFieldNumber = 5,
+    kCreatedAtFieldNumber = 6,
+    kNameFieldNumber = 7,
+    kCreatedAtTimeFieldNumber = 8,
+  };
+  // string user_id = 1 [json_name = "userId"];
+  void clear_user_id() ;
+  [[nodiscard]] const ::std::string& user_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_user_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_user_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_user_id();
+  void set_allocated_user_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_user_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_user_id();
+
+  public:
+  // string email = 2 [json_name = "email"];
+  void clear_email() ;
+  [[nodiscard]] const ::std::string& email() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_email(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_email();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_email();
+  void set_allocated_email(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_email() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_email(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_email();
+
+  public:
+  // string status = 5 [json_name = "status"];
+  void clear_status() ;
+  [[nodiscard]] const ::std::string& status() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_status(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_status();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_status();
+  void set_allocated_status(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_status() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_status(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_status();
+
+  public:
+  // string created_at = 6 [json_name = "createdAt", deprecated = true];
+  [[deprecated]]  void clear_created_at() ;
+  [[nodiscard]] [[deprecated]] const ::std::string& created_at() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  [[deprecated]] void set_created_at(Arg_&& arg, Args_... args);
+  [[deprecated]] ::std::string* PROTOBUF_NONNULL mutable_created_at();
+  [[deprecated]] [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_created_at();
+  [[deprecated]] void set_allocated_created_at(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_created_at() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_created_at(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_created_at();
+
+  public:
+  // string name = 7 [json_name = "name"];
+  void clear_name() ;
+  [[nodiscard]] const ::std::string& name() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_name(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_name();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_name();
+  void set_allocated_name(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_name() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_name(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_name();
+
+  public:
+  // .google.protobuf.Timestamp created_at_time = 8 [json_name = "createdAtTime"];
+  [[nodiscard]] bool has_created_at_time()
+      const;
+  void clear_created_at_time() ;
+  [[nodiscard]] const ::google::protobuf::Timestamp& created_at_time() const;
+  [[nodiscard]] ::google::protobuf::Timestamp* PROTOBUF_NULLABLE release_created_at_time();
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL mutable_created_at_time();
+  void set_allocated_created_at_time(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_created_at_time(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  ::google::protobuf::Timestamp* PROTOBUF_NULLABLE unsafe_arena_release_created_at_time();
+
+  private:
+  const ::google::protobuf::Timestamp& _internal_created_at_time() const;
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_created_at_time();
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.auth.v1.UserProfile)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<3, 6,
+                          1, 66,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const UserProfile& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr user_id_;
+    ::google::protobuf::internal::ArenaStringPtr email_;
+    ::google::protobuf::internal::ArenaStringPtr status_;
+    ::google::protobuf::internal::ArenaStringPtr created_at_;
+    ::google::protobuf::internal::ArenaStringPtr name_;
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE created_at_time_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.auth.v1.SubmitKycRequest) */ {
+ public:
+  inline SubmitKycRequest() : SubmitKycRequest(nullptr) {}
+  ~SubmitKycRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(SubmitKycRequest* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(SubmitKycRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr SubmitKycRequest(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline SubmitKycRequest(const SubmitKycRequest& from) : SubmitKycRequest(nullptr, from) {}
+  inline SubmitKycRequest(SubmitKycRequest&& from) noexcept : SubmitKycRequest(nullptr, ::std::move(from)) {}
+  inline SubmitKycRequest& operator=(const SubmitKycRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline SubmitKycRequest& operator=(SubmitKycRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const SubmitKycRequest& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<SubmitKycRequest>(&SubmitKycRequest_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 33;
+  friend void swap(SubmitKycRequest& a, SubmitKycRequest& b) { a.Swap(&b); }
+  inline void Swap(SubmitKycRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(SubmitKycRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] SubmitKycRequest* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<SubmitKycRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const SubmitKycRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const SubmitKycRequest& from) { SubmitKycRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(SubmitKycRequest* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.SubmitKycRequest"; }
+
+  explicit SubmitKycRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  SubmitKycRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const SubmitKycRequest& from);
+  SubmitKycRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, SubmitKycRequest&& from) noexcept
+      : SubmitKycRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kFullNameFieldNumber = 1,
+    kDubaiIdFieldNumber = 3,
+    kDocumentPathFieldNumber = 4,
+    kDateOfBirthFieldNumber = 2,
+  };
+  // string full_name = 1 [json_name = "fullName"];
+  void clear_full_name() ;
+  [[nodiscard]] const ::std::string& full_name() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_full_name(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_full_name();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_full_name();
+  void set_allocated_full_name(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_full_name() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_full_name(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_full_name();
+
+  public:
+  // string dubai_id = 3 [json_name = "dubaiId"];
+  void clear_dubai_id() ;
+  [[nodiscard]] const ::std::string& dubai_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_dubai_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_dubai_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_dubai_id();
+  void set_allocated_dubai_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_dubai_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_dubai_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_dubai_id();
+
+  public:
+  // string document_path = 4 [json_name = "documentPath"];
+  void clear_document_path() ;
+  [[nodiscard]] const ::std::string& document_path() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_document_path(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_document_path();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_document_path();
+  void set_allocated_document_path(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_document_path() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_document_path(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_document_path();
+
+  public:
+  // .google.type.Date date_of_birth = 2 [json_name = "dateOfBirth"];
+  [[nodiscard]] bool has_date_of_birth()
+      const;
+  void clear_date_of_birth() ;
+  [[nodiscard]] const ::google::type::Date& date_of_birth() const;
+  [[nodiscard]] ::google::type::Date* PROTOBUF_NULLABLE release_date_of_birth();
+  ::google::type::Date* PROTOBUF_NONNULL mutable_date_of_birth();
+  void set_allocated_date_of_birth(::google::type::Date* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_date_of_birth(::google::type::Date* PROTOBUF_NULLABLE value);
+  ::google::type::Date* PROTOBUF_NULLABLE unsafe_arena_release_date_of_birth();
+
+  private:
+  const ::google::type::Date& _internal_date_of_birth() const;
+  ::google::type::Date* PROTOBUF_NONNULL _internal_mutable_date_of_birth();
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.auth.v1.SubmitKycRequest)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<2, 4,
+                          1, 69,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const SubmitKycRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr full_name_;
+    ::google::protobuf::internal::ArenaStringPtr dubai_id_;
+    ::google::protobuf::internal::ArenaStringPtr document_path_;
+    ::google::type::Date* PROTOBUF_NULLABLE date_of_birth_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED RegisterResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.auth.v1.RegisterResponse) */ {
+ public:
+  inline RegisterResponse() : RegisterResponse(nullptr) {}
+  ~RegisterResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(RegisterResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(RegisterResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr RegisterResponse(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline RegisterResponse(const RegisterResponse& from) : RegisterResponse(nullptr, from) {}
+  inline RegisterResponse(RegisterResponse&& from) noexcept : RegisterResponse(nullptr, ::std::move(from)) {}
+  inline RegisterResponse& operator=(const RegisterResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RegisterResponse& operator=(RegisterResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const RegisterResponse& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<RegisterResponse>(&RegisterResponse_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 1;
+  friend void swap(RegisterResponse& a, RegisterResponse& b) { a.Swap(&b); }
+  inline void Swap(RegisterResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(RegisterResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] RegisterResponse* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<RegisterResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const RegisterResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const RegisterResponse& from) { RegisterResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(RegisterResponse* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.RegisterResponse"; }
+
+  explicit RegisterResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  RegisterResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const RegisterResponse& from);
+  RegisterResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, RegisterResponse&& from) noexcept
+      : RegisterResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kEmailFieldNumber = 2,
+    kStatusFieldNumber = 3,
+    kCreatedAtFieldNumber = 4,
+    kNameFieldNumber = 5,
+    kCreatedAtTimeFieldNumber = 6,
+  };
+  // string user_id = 1 [json_name = "userId"];
+  void clear_user_id() ;
+  [[nodiscard]] const ::std::string& user_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_user_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_user_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_user_id();
+  void set_allocated_user_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_user_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_user_id();
+
+  public:
+  // string email = 2 [json_name = "email"];
+  void clear_email() ;
+  [[nodiscard]] const ::std::string& email() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_email(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_email();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_email();
+  void set_allocated_email(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_email() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_email(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_email();
+
+  public:
+  // string status = 3 [json_name = "status"];
+  void clear_status() ;
+  [[nodiscard]] const ::std::string& status() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_status(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_status();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_status();
+  void set_allocated_status(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_status() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_status(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_status();
+
+  public:
+  // string created_at = 4 [json_name = "createdAt", deprecated = true];
+  [[deprecated]]  void clear_created_at() ;
+  [[nodiscard]] [[deprecated]] const ::std::string& created_at() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  [[deprecated]] void set_created_at(Arg_&& arg, Args_... args);
+  [[deprecated]] ::std::string* PROTOBUF_NONNULL mutable_created_at();
+  [[deprecated]] [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_created_at();
+  [[deprecated]] void set_allocated_created_at(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_created_at() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_created_at(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_created_at();
+
+  public:
+  // string name = 5 [json_name = "name"];
+  void clear_name() ;
+  [[nodiscard]] const ::std::string& name() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_name(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_name();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_name();
+  void set_allocated_name(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_name() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_name(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_name();
+
+  public:
+  // .google.protobuf.Timestamp created_at_time = 6 [json_name = "createdAtTime"];
+  [[nodiscard]] bool has_created_at_time()
+      const;
+  void clear_created_at_time() ;
+  [[nodiscard]] const ::google::protobuf::Timestamp& created_at_time() const;
+  [[nodiscard]] ::google::protobuf::Timestamp* PROTOBUF_NULLABLE release_created_at_time();
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL mutable_created_at_time();
+  void set_allocated_created_at_time(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_created_at_time(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  ::google::protobuf::Timestamp* PROTOBUF_NULLABLE unsafe_arena_release_created_at_time();
+
+  private:
+  const ::google::protobuf::Timestamp& _internal_created_at_time() const;
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_created_at_time();
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.auth.v1.RegisterResponse)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<3, 6,
+                          1, 71,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const RegisterResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr user_id_;
+    ::google::protobuf::internal::ArenaStringPtr email_;
+    ::google::protobuf::internal::ArenaStringPtr status_;
+    ::google::protobuf::internal::ArenaStringPtr created_at_;
+    ::google::protobuf::internal::ArenaStringPtr name_;
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE created_at_time_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED KycSubmission final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.auth.v1.KycSubmission) */ {
+ public:
+  inline KycSubmission() : KycSubmission(nullptr) {}
+  ~KycSubmission() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(KycSubmission* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(KycSubmission));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr KycSubmission(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline KycSubmission(const KycSubmission& from) : KycSubmission(nullptr, from) {}
+  inline KycSubmission(KycSubmission&& from) noexcept : KycSubmission(nullptr, ::std::move(from)) {}
+  inline KycSubmission& operator=(const KycSubmission& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline KycSubmission& operator=(KycSubmission&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const KycSubmission& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<KycSubmission>(&KycSubmission_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 35;
+  friend void swap(KycSubmission& a, KycSubmission& b) { a.Swap(&b); }
+  inline void Swap(KycSubmission* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(KycSubmission* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] KycSubmission* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<KycSubmission>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const KycSubmission& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const KycSubmission& from) { KycSubmission::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(KycSubmission* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.KycSubmission"; }
+
+  explicit KycSubmission(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  KycSubmission(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const KycSubmission& from);
+  KycSubmission(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, KycSubmission&& from) noexcept
+      : KycSubmission(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kIdFieldNumber = 1,
+    kUserIdFieldNumber = 2,
+    kFullNameFieldNumber = 3,
+    kDubaiIdFieldNumber = 5,
+    kDocumentPathFieldNumber = 6,
+    kRejectionReasonFieldNumber = 8,
+    kDateOfBirthFieldNumber = 4,
+    kVerifiedAtFieldNumber = 9,
+    kCreatedAtFieldNumber = 10,
+    kUpdatedAtFieldNumber = 11,
+    kStateFieldNumber = 7,
+  };
+  // string id = 1 [json_name = "id"];
+  void clear_id() ;
+  [[nodiscard]] const ::std::string& id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_id();
+  void set_allocated_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_id();
+
+  public:
+  // string user_id = 2 [json_name = "userId"];
+  void clear_user_id() ;
+  [[nodiscard]] const ::std::string& user_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_user_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_user_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_user_id();
+  void set_allocated_user_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_user_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_user_id();
+
+  public:
+  // string full_name = 3 [json_name = "fullName"];
+  void clear_full_name() ;
+  [[nodiscard]] const ::std::string& full_name() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_full_name(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_full_name();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_full_name();
+  void set_allocated_full_name(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_full_name() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_full_name(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_full_name();
+
+  public:
+  // string dubai_id = 5 [json_name = "dubaiId"];
+  void clear_dubai_id() ;
+  [[nodiscard]] const ::std::string& dubai_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_dubai_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_dubai_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_dubai_id();
+  void set_allocated_dubai_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_dubai_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_dubai_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_dubai_id();
+
+  public:
+  // string document_path = 6 [json_name = "documentPath"];
+  void clear_document_path() ;
+  [[nodiscard]] const ::std::string& document_path() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_document_path(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_document_path();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_document_path();
+  void set_allocated_document_path(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_document_path() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_document_path(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_document_path();
+
+  public:
+  // string rejection_reason = 8 [json_name = "rejectionReason"];
+  void clear_rejection_reason() ;
+  [[nodiscard]] const ::std::string& rejection_reason() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_rejection_reason(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_rejection_reason();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_rejection_reason();
+  void set_allocated_rejection_reason(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_rejection_reason() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_rejection_reason(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_rejection_reason();
+
+  public:
+  // .google.type.Date date_of_birth = 4 [json_name = "dateOfBirth"];
+  [[nodiscard]] bool has_date_of_birth()
+      const;
+  void clear_date_of_birth() ;
+  [[nodiscard]] const ::google::type::Date& date_of_birth() const;
+  [[nodiscard]] ::google::type::Date* PROTOBUF_NULLABLE release_date_of_birth();
+  ::google::type::Date* PROTOBUF_NONNULL mutable_date_of_birth();
+  void set_allocated_date_of_birth(::google::type::Date* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_date_of_birth(::google::type::Date* PROTOBUF_NULLABLE value);
+  ::google::type::Date* PROTOBUF_NULLABLE unsafe_arena_release_date_of_birth();
+
+  private:
+  const ::google::type::Date& _internal_date_of_birth() const;
+  ::google::type::Date* PROTOBUF_NONNULL _internal_mutable_date_of_birth();
+
+  public:
+  // .google.protobuf.Timestamp verified_at = 9 [json_name = "verifiedAt"];
+  [[nodiscard]] bool has_verified_at()
+      const;
+  void clear_verified_at() ;
+  [[nodiscard]] const ::google::protobuf::Timestamp& verified_at() const;
+  [[nodiscard]] ::google::protobuf::Timestamp* PROTOBUF_NULLABLE release_verified_at();
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL mutable_verified_at();
+  void set_allocated_verified_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_verified_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  ::google::protobuf::Timestamp* PROTOBUF_NULLABLE unsafe_arena_release_verified_at();
+
+  private:
+  const ::google::protobuf::Timestamp& _internal_verified_at() const;
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_verified_at();
+
+  public:
+  // .google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];
+  [[nodiscard]] bool has_created_at()
+      const;
+  void clear_created_at() ;
+  [[nodiscard]] const ::google::protobuf::Timestamp& created_at() const;
+  [[nodiscard]] ::google::protobuf::Timestamp* PROTOBUF_NULLABLE release_created_at();
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL mutable_created_at();
+  void set_allocated_created_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_created_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  ::google::protobuf::Timestamp* PROTOBUF_NULLABLE unsafe_arena_release_created_at();
+
+  private:
+  const ::google::protobuf::Timestamp& _internal_created_at() const;
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_created_at();
+
+  public:
+  // .google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];
+  [[nodiscard]] bool has_updated_at()
+      const;
+  void clear_updated_at() ;
+  [[nodiscard]] const ::google::protobuf::Timestamp& updated_at() const;
+  [[nodiscard]] ::google::protobuf::Timestamp* PROTOBUF_NULLABLE release_updated_at();
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL mutable_updated_at();
+  void set_allocated_updated_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_updated_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  ::google::protobuf::Timestamp* PROTOBUF_NULLABLE unsafe_arena_release_updated_at();
+
+  private:
+  const ::google::protobuf::Timestamp& _internal_updated_at() const;
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_updated_at();
+
+  public:
+  // .gridx.auth.v1.KycState state = 7 [json_name = "state"];
+  void clear_state() ;
+  [[nodiscard]] ::gridx::auth::v1::KycState state() const;
+  void set_state(::gridx::auth::v1::KycState value);
+
+  private:
+  ::gridx::auth::v1::KycState _internal_state() const;
+  void _internal_set_state(::gridx::auth::v1::KycState value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.auth.v1.KycSubmission)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<4, 11,
+                          4, 99,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const KycSubmission& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr id_;
+    ::google::protobuf::internal::ArenaStringPtr user_id_;
+    ::google::protobuf::internal::ArenaStringPtr full_name_;
+    ::google::protobuf::internal::ArenaStringPtr dubai_id_;
+    ::google::protobuf::internal::ArenaStringPtr document_path_;
+    ::google::protobuf::internal::ArenaStringPtr rejection_reason_;
+    ::google::type::Date* PROTOBUF_NULLABLE date_of_birth_;
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE verified_at_;
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE created_at_;
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE updated_at_;
+    int state_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
+};
+// -------------------------------------------------------------------
+
 class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED VerifyEmailChangeResponse final : public ::google::protobuf::Message
 /* @@protoc_insertion_point(class_definition:gridx.auth.v1.VerifyEmailChangeResponse) */ {
  public:
@@ -7242,31 +7911,31 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UpdateProfileResponse final : publi
 };
 // -------------------------------------------------------------------
 
-class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:gridx.auth.v1.SubmitKycRequest) */ {
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.auth.v1.SubmitKycResponse) */ {
  public:
-  inline SubmitKycRequest() : SubmitKycRequest(nullptr) {}
-  ~SubmitKycRequest() PROTOBUF_FINAL;
+  inline SubmitKycResponse() : SubmitKycResponse(nullptr) {}
+  ~SubmitKycResponse() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(SubmitKycRequest* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+  void operator delete(SubmitKycResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(SubmitKycRequest));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(SubmitKycResponse));
   }
 #endif
 
   template <typename = void>
-  explicit constexpr SubmitKycRequest(::google::protobuf::internal::ConstantInitialized,
+  explicit constexpr SubmitKycResponse(::google::protobuf::internal::ConstantInitialized,
                            const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
                                class_data);
 
-  inline SubmitKycRequest(const SubmitKycRequest& from) : SubmitKycRequest(nullptr, from) {}
-  inline SubmitKycRequest(SubmitKycRequest&& from) noexcept : SubmitKycRequest(nullptr, ::std::move(from)) {}
-  inline SubmitKycRequest& operator=(const SubmitKycRequest& from) {
+  inline SubmitKycResponse(const SubmitKycResponse& from) : SubmitKycResponse(nullptr, from) {}
+  inline SubmitKycResponse(SubmitKycResponse&& from) noexcept : SubmitKycResponse(nullptr, ::std::move(from)) {}
+  inline SubmitKycResponse& operator=(const SubmitKycResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline SubmitKycRequest& operator=(SubmitKycRequest&& from) noexcept {
+  inline SubmitKycResponse& operator=(SubmitKycResponse&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -7295,12 +7964,12 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycRequest final : public ::g
   [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  [[nodiscard]] static const SubmitKycRequest& default_instance() {
-    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<SubmitKycRequest>(&SubmitKycRequest_globals_);
+  [[nodiscard]] static const SubmitKycResponse& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<SubmitKycResponse>(&SubmitKycResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 33;
-  friend void swap(SubmitKycRequest& a, SubmitKycRequest& b) { a.Swap(&b); }
-  inline void Swap(SubmitKycRequest* PROTOBUF_NONNULL other) {
+  static constexpr int kIndexInFileMessages = 34;
+  friend void swap(SubmitKycResponse& a, SubmitKycResponse& b) { a.Swap(&b); }
+  inline void Swap(SubmitKycResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -7308,7 +7977,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycRequest final : public ::g
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(SubmitKycRequest* PROTOBUF_NONNULL other) {
+  void UnsafeArenaSwap(SubmitKycResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -7316,14 +7985,14 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycRequest final : public ::g
 
   // implements Message ----------------------------------------------
 
-  [[nodiscard]] SubmitKycRequest* PROTOBUF_NONNULL
+  [[nodiscard]] SubmitKycResponse* PROTOBUF_NONNULL
   New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<SubmitKycRequest>(arena);
+    return ::google::protobuf::Message::DefaultConstruct<SubmitKycResponse>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const SubmitKycRequest& from);
+  void CopyFrom(const SubmitKycResponse& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const SubmitKycRequest& from) { SubmitKycRequest::MergeImpl(*this, from); }
+  void MergeFrom(const SubmitKycResponse& from) { SubmitKycResponse::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(::google::protobuf::MessageLite& to_msg,
@@ -7361,17 +8030,17 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycRequest final : public ::g
   private:
   void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(SubmitKycRequest* PROTOBUF_NONNULL other);
+  void InternalSwap(SubmitKycResponse* PROTOBUF_NONNULL other);
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.SubmitKycRequest"; }
+  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.SubmitKycResponse"; }
 
-  explicit SubmitKycRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  SubmitKycRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const SubmitKycRequest& from);
-  SubmitKycRequest(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, SubmitKycRequest&& from) noexcept
-      : SubmitKycRequest(arena) {
+  explicit SubmitKycResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  SubmitKycResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const SubmitKycResponse& from);
+  SubmitKycResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, SubmitKycResponse&& from) noexcept
+      : SubmitKycResponse(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
@@ -7390,78 +8059,30 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycRequest final : public ::g
 
   // accessors -------------------------------------------------------
   enum : int {
-    kFullNameFieldNumber = 1,
-    kDubaiIdFieldNumber = 3,
-    kDocumentPathFieldNumber = 4,
-    kDateOfBirthFieldNumber = 2,
+    kSubmissionFieldNumber = 1,
   };
-  // string full_name = 1 [json_name = "fullName"];
-  void clear_full_name() ;
-  [[nodiscard]] const ::std::string& full_name() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_full_name(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_full_name();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_full_name();
-  void set_allocated_full_name(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_full_name() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_full_name(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_full_name();
-
-  public:
-  // string dubai_id = 3 [json_name = "dubaiId"];
-  void clear_dubai_id() ;
-  [[nodiscard]] const ::std::string& dubai_id() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_dubai_id(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_dubai_id();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_dubai_id();
-  void set_allocated_dubai_id(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_dubai_id() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_dubai_id(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_dubai_id();
-
-  public:
-  // string document_path = 4 [json_name = "documentPath"];
-  void clear_document_path() ;
-  [[nodiscard]] const ::std::string& document_path() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_document_path(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_document_path();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_document_path();
-  void set_allocated_document_path(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_document_path() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_document_path(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_document_path();
-
-  public:
-  // .google.type.Date date_of_birth = 2 [json_name = "dateOfBirth"];
-  [[nodiscard]] bool has_date_of_birth()
+  // .gridx.auth.v1.KycSubmission submission = 1 [json_name = "submission"];
+  [[nodiscard]] bool has_submission()
       const;
-  void clear_date_of_birth() ;
-  [[nodiscard]] const ::google::type::Date& date_of_birth() const;
-  [[nodiscard]] ::google::type::Date* PROTOBUF_NULLABLE release_date_of_birth();
-  ::google::type::Date* PROTOBUF_NONNULL mutable_date_of_birth();
-  void set_allocated_date_of_birth(::google::type::Date* PROTOBUF_NULLABLE value);
-  void unsafe_arena_set_allocated_date_of_birth(::google::type::Date* PROTOBUF_NULLABLE value);
-  ::google::type::Date* PROTOBUF_NULLABLE unsafe_arena_release_date_of_birth();
+  void clear_submission() ;
+  [[nodiscard]] const ::gridx::auth::v1::KycSubmission& submission() const;
+  [[nodiscard]] ::gridx::auth::v1::KycSubmission* PROTOBUF_NULLABLE release_submission();
+  ::gridx::auth::v1::KycSubmission* PROTOBUF_NONNULL mutable_submission();
+  void set_allocated_submission(::gridx::auth::v1::KycSubmission* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_submission(::gridx::auth::v1::KycSubmission* PROTOBUF_NULLABLE value);
+  ::gridx::auth::v1::KycSubmission* PROTOBUF_NULLABLE unsafe_arena_release_submission();
 
   private:
-  const ::google::type::Date& _internal_date_of_birth() const;
-  ::google::type::Date* PROTOBUF_NONNULL _internal_mutable_date_of_birth();
+  const ::gridx::auth::v1::KycSubmission& _internal_submission() const;
+  ::gridx::auth::v1::KycSubmission* PROTOBUF_NONNULL _internal_mutable_submission();
 
   public:
-  // @@protoc_insertion_point(class_scope:gridx.auth.v1.SubmitKycRequest)
+  // @@protoc_insertion_point(class_scope:gridx.auth.v1.SubmitKycResponse)
  private:
   class _Internal;
   using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<2, 4,
-                          1, 69,
+      ::google::protobuf::internal::TcParseTable<0, 1,
+                          1, 0,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
       const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
@@ -7486,388 +8107,10 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycRequest final : public ::g
     inline explicit Impl_(
         ::google::protobuf::internal::InternalVisibility visibility,
         ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const SubmitKycRequest& from_msg);
+        const SubmitKycResponse& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
-    ::google::protobuf::internal::ArenaStringPtr full_name_;
-    ::google::protobuf::internal::ArenaStringPtr dubai_id_;
-    ::google::protobuf::internal::ArenaStringPtr document_path_;
-    ::google::type::Date* PROTOBUF_NULLABLE date_of_birth_;
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
-};
-// -------------------------------------------------------------------
-
-class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED KycSubmission final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:gridx.auth.v1.KycSubmission) */ {
- public:
-  inline KycSubmission() : KycSubmission(nullptr) {}
-  ~KycSubmission() PROTOBUF_FINAL;
-
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(KycSubmission* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
-    SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(KycSubmission));
-  }
-#endif
-
-  template <typename = void>
-  explicit constexpr KycSubmission(::google::protobuf::internal::ConstantInitialized,
-                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
-                               class_data);
-
-  inline KycSubmission(const KycSubmission& from) : KycSubmission(nullptr, from) {}
-  inline KycSubmission(KycSubmission&& from) noexcept : KycSubmission(nullptr, ::std::move(from)) {}
-  inline KycSubmission& operator=(const KycSubmission& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline KycSubmission& operator=(KycSubmission&& from) noexcept {
-    if (this == &from) return *this;
-    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
-  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
-    return GetDescriptor();
-  }
-  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
-  GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  [[nodiscard]] static const KycSubmission& default_instance() {
-    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<KycSubmission>(&KycSubmission_globals_);
-  }
-  static constexpr int kIndexInFileMessages = 35;
-  friend void swap(KycSubmission& a, KycSubmission& b) { a.Swap(&b); }
-  inline void Swap(KycSubmission* PROTOBUF_NONNULL other) {
-    if (other == this) return;
-    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(KycSubmission* PROTOBUF_NONNULL other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  [[nodiscard]] KycSubmission* PROTOBUF_NONNULL
-  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<KycSubmission>(arena);
-  }
-  using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const KycSubmission& from);
-  using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const KycSubmission& from) { KycSubmission::MergeImpl(*this, from); }
-
-  private:
-  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
-                        const ::google::protobuf::MessageLite& from_msg);
-
-  public:
-  [[nodiscard]] bool IsInitialized() const {
-    return true;
-  }
-  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
-  #if defined(PROTOBUF_CUSTOM_VTABLE)
-  private:
-  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
-  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
-
-  public:
-  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
-  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-    return _InternalSerialize(*this, target, stream);
-  }
-  #else   // PROTOBUF_CUSTOM_VTABLE
-  [[nodiscard]] ::size_t ByteSizeLong() const final;
-  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
-  #endif  // PROTOBUF_CUSTOM_VTABLE
-  [[nodiscard]] int GetCachedSize() const {
-    return _impl_._cached_size_.Get();
-  }
-
-  private:
-  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  static void SharedDtor(MessageLite& self);
-  void InternalSwap(KycSubmission* PROTOBUF_NONNULL other);
- private:
-  template <typename T>
-  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.KycSubmission"; }
-
-  explicit KycSubmission(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  KycSubmission(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const KycSubmission& from);
-  KycSubmission(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, KycSubmission&& from) noexcept
-      : KycSubmission(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
-  static void* PROTOBUF_NONNULL PlacementNew_(
-      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  static constexpr auto InternalNewImpl_();
-
- public:
-  static constexpr auto InternalGenerateClassData_(
-      const MessageLite& prototype,
-      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
-
-  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  enum : int {
-    kIdFieldNumber = 1,
-    kUserIdFieldNumber = 2,
-    kFullNameFieldNumber = 3,
-    kDubaiIdFieldNumber = 5,
-    kDocumentPathFieldNumber = 6,
-    kRejectionReasonFieldNumber = 8,
-    kDateOfBirthFieldNumber = 4,
-    kVerifiedAtFieldNumber = 9,
-    kCreatedAtFieldNumber = 10,
-    kUpdatedAtFieldNumber = 11,
-    kStateFieldNumber = 7,
-  };
-  // string id = 1 [json_name = "id"];
-  void clear_id() ;
-  [[nodiscard]] const ::std::string& id() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_id(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_id();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_id();
-  void set_allocated_id(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_id() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_id(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_id();
-
-  public:
-  // string user_id = 2 [json_name = "userId"];
-  void clear_user_id() ;
-  [[nodiscard]] const ::std::string& user_id() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_user_id(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_user_id();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_user_id();
-  void set_allocated_user_id(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_user_id() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_user_id();
-
-  public:
-  // string full_name = 3 [json_name = "fullName"];
-  void clear_full_name() ;
-  [[nodiscard]] const ::std::string& full_name() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_full_name(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_full_name();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_full_name();
-  void set_allocated_full_name(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_full_name() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_full_name(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_full_name();
-
-  public:
-  // string dubai_id = 5 [json_name = "dubaiId"];
-  void clear_dubai_id() ;
-  [[nodiscard]] const ::std::string& dubai_id() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_dubai_id(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_dubai_id();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_dubai_id();
-  void set_allocated_dubai_id(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_dubai_id() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_dubai_id(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_dubai_id();
-
-  public:
-  // string document_path = 6 [json_name = "documentPath"];
-  void clear_document_path() ;
-  [[nodiscard]] const ::std::string& document_path() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_document_path(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_document_path();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_document_path();
-  void set_allocated_document_path(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_document_path() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_document_path(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_document_path();
-
-  public:
-  // string rejection_reason = 8 [json_name = "rejectionReason"];
-  void clear_rejection_reason() ;
-  [[nodiscard]] const ::std::string& rejection_reason() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_rejection_reason(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_rejection_reason();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_rejection_reason();
-  void set_allocated_rejection_reason(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_rejection_reason() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_rejection_reason(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_rejection_reason();
-
-  public:
-  // .google.type.Date date_of_birth = 4 [json_name = "dateOfBirth"];
-  [[nodiscard]] bool has_date_of_birth()
-      const;
-  void clear_date_of_birth() ;
-  [[nodiscard]] const ::google::type::Date& date_of_birth() const;
-  [[nodiscard]] ::google::type::Date* PROTOBUF_NULLABLE release_date_of_birth();
-  ::google::type::Date* PROTOBUF_NONNULL mutable_date_of_birth();
-  void set_allocated_date_of_birth(::google::type::Date* PROTOBUF_NULLABLE value);
-  void unsafe_arena_set_allocated_date_of_birth(::google::type::Date* PROTOBUF_NULLABLE value);
-  ::google::type::Date* PROTOBUF_NULLABLE unsafe_arena_release_date_of_birth();
-
-  private:
-  const ::google::type::Date& _internal_date_of_birth() const;
-  ::google::type::Date* PROTOBUF_NONNULL _internal_mutable_date_of_birth();
-
-  public:
-  // .google.protobuf.Timestamp verified_at = 9 [json_name = "verifiedAt"];
-  [[nodiscard]] bool has_verified_at()
-      const;
-  void clear_verified_at() ;
-  [[nodiscard]] const ::google::protobuf::Timestamp& verified_at() const;
-  [[nodiscard]] ::google::protobuf::Timestamp* PROTOBUF_NULLABLE release_verified_at();
-  ::google::protobuf::Timestamp* PROTOBUF_NONNULL mutable_verified_at();
-  void set_allocated_verified_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
-  void unsafe_arena_set_allocated_verified_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
-  ::google::protobuf::Timestamp* PROTOBUF_NULLABLE unsafe_arena_release_verified_at();
-
-  private:
-  const ::google::protobuf::Timestamp& _internal_verified_at() const;
-  ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_verified_at();
-
-  public:
-  // .google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];
-  [[nodiscard]] bool has_created_at()
-      const;
-  void clear_created_at() ;
-  [[nodiscard]] const ::google::protobuf::Timestamp& created_at() const;
-  [[nodiscard]] ::google::protobuf::Timestamp* PROTOBUF_NULLABLE release_created_at();
-  ::google::protobuf::Timestamp* PROTOBUF_NONNULL mutable_created_at();
-  void set_allocated_created_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
-  void unsafe_arena_set_allocated_created_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
-  ::google::protobuf::Timestamp* PROTOBUF_NULLABLE unsafe_arena_release_created_at();
-
-  private:
-  const ::google::protobuf::Timestamp& _internal_created_at() const;
-  ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_created_at();
-
-  public:
-  // .google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];
-  [[nodiscard]] bool has_updated_at()
-      const;
-  void clear_updated_at() ;
-  [[nodiscard]] const ::google::protobuf::Timestamp& updated_at() const;
-  [[nodiscard]] ::google::protobuf::Timestamp* PROTOBUF_NULLABLE release_updated_at();
-  ::google::protobuf::Timestamp* PROTOBUF_NONNULL mutable_updated_at();
-  void set_allocated_updated_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
-  void unsafe_arena_set_allocated_updated_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
-  ::google::protobuf::Timestamp* PROTOBUF_NULLABLE unsafe_arena_release_updated_at();
-
-  private:
-  const ::google::protobuf::Timestamp& _internal_updated_at() const;
-  ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_updated_at();
-
-  public:
-  // .gridx.auth.v1.KycState state = 7 [json_name = "state"];
-  void clear_state() ;
-  [[nodiscard]] ::gridx::auth::v1::KycState state() const;
-  void set_state(::gridx::auth::v1::KycState value);
-
-  private:
-  ::gridx::auth::v1::KycState _internal_state() const;
-  void _internal_set_state(::gridx::auth::v1::KycState value);
-
-  public:
-  // @@protoc_insertion_point(class_scope:gridx.auth.v1.KycSubmission)
- private:
-  class _Internal;
-  using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<4, 11,
-                          4, 99,
-                          2>;
-  static constexpr ParseTableT_ InternalGenerateParseTable_(
-      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
-  friend class ::google::protobuf::internal::TcParser;
-  #ifndef PROTOBUF_MESSAGE_GLOBALS
-  static const ParseTableT_ _table_;
-  #endif
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  friend ::google::protobuf::internal::PrivateAccess;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(
-        ::google::protobuf::internal::InternalVisibility visibility,
-        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-    inline explicit Impl_(
-        ::google::protobuf::internal::InternalVisibility visibility,
-        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const KycSubmission& from_msg);
-    ::google::protobuf::internal::HasBits<1> _has_bits_;
-    ::google::protobuf::internal::CachedSize _cached_size_;
-    ::google::protobuf::internal::ArenaStringPtr id_;
-    ::google::protobuf::internal::ArenaStringPtr user_id_;
-    ::google::protobuf::internal::ArenaStringPtr full_name_;
-    ::google::protobuf::internal::ArenaStringPtr dubai_id_;
-    ::google::protobuf::internal::ArenaStringPtr document_path_;
-    ::google::protobuf::internal::ArenaStringPtr rejection_reason_;
-    ::google::type::Date* PROTOBUF_NULLABLE date_of_birth_;
-    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE verified_at_;
-    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE created_at_;
-    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE updated_at_;
-    int state_;
+    ::gridx::auth::v1::KycSubmission* PROTOBUF_NULLABLE submission_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -8075,213 +8318,6 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetProfileResponse final : public :
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::gridx::auth::v1::UserProfile* PROTOBUF_NULLABLE profile_;
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
-};
-// -------------------------------------------------------------------
-
-class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycResponse final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:gridx.auth.v1.SubmitKycResponse) */ {
- public:
-  inline SubmitKycResponse() : SubmitKycResponse(nullptr) {}
-  ~SubmitKycResponse() PROTOBUF_FINAL;
-
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(SubmitKycResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
-    SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(SubmitKycResponse));
-  }
-#endif
-
-  template <typename = void>
-  explicit constexpr SubmitKycResponse(::google::protobuf::internal::ConstantInitialized,
-                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
-                               class_data);
-
-  inline SubmitKycResponse(const SubmitKycResponse& from) : SubmitKycResponse(nullptr, from) {}
-  inline SubmitKycResponse(SubmitKycResponse&& from) noexcept : SubmitKycResponse(nullptr, ::std::move(from)) {}
-  inline SubmitKycResponse& operator=(const SubmitKycResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline SubmitKycResponse& operator=(SubmitKycResponse&& from) noexcept {
-    if (this == &from) return *this;
-    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
-  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
-    return GetDescriptor();
-  }
-  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
-  GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  [[nodiscard]] static const SubmitKycResponse& default_instance() {
-    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<SubmitKycResponse>(&SubmitKycResponse_globals_);
-  }
-  static constexpr int kIndexInFileMessages = 34;
-  friend void swap(SubmitKycResponse& a, SubmitKycResponse& b) { a.Swap(&b); }
-  inline void Swap(SubmitKycResponse* PROTOBUF_NONNULL other) {
-    if (other == this) return;
-    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(SubmitKycResponse* PROTOBUF_NONNULL other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  [[nodiscard]] SubmitKycResponse* PROTOBUF_NONNULL
-  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<SubmitKycResponse>(arena);
-  }
-  using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const SubmitKycResponse& from);
-  using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const SubmitKycResponse& from) { SubmitKycResponse::MergeImpl(*this, from); }
-
-  private:
-  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
-                        const ::google::protobuf::MessageLite& from_msg);
-
-  public:
-  [[nodiscard]] bool IsInitialized() const {
-    return true;
-  }
-  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
-  #if defined(PROTOBUF_CUSTOM_VTABLE)
-  private:
-  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
-  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
-
-  public:
-  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
-  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-    return _InternalSerialize(*this, target, stream);
-  }
-  #else   // PROTOBUF_CUSTOM_VTABLE
-  [[nodiscard]] ::size_t ByteSizeLong() const final;
-  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
-  #endif  // PROTOBUF_CUSTOM_VTABLE
-  [[nodiscard]] int GetCachedSize() const {
-    return _impl_._cached_size_.Get();
-  }
-
-  private:
-  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  static void SharedDtor(MessageLite& self);
-  void InternalSwap(SubmitKycResponse* PROTOBUF_NONNULL other);
- private:
-  template <typename T>
-  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.SubmitKycResponse"; }
-
-  explicit SubmitKycResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  SubmitKycResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const SubmitKycResponse& from);
-  SubmitKycResponse(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, SubmitKycResponse&& from) noexcept
-      : SubmitKycResponse(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
-  static void* PROTOBUF_NONNULL PlacementNew_(
-      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  static constexpr auto InternalNewImpl_();
-
- public:
-  static constexpr auto InternalGenerateClassData_(
-      const MessageLite& prototype,
-      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
-
-  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  enum : int {
-    kSubmissionFieldNumber = 1,
-  };
-  // .gridx.auth.v1.KycSubmission submission = 1 [json_name = "submission"];
-  [[nodiscard]] bool has_submission()
-      const;
-  void clear_submission() ;
-  [[nodiscard]] const ::gridx::auth::v1::KycSubmission& submission() const;
-  [[nodiscard]] ::gridx::auth::v1::KycSubmission* PROTOBUF_NULLABLE release_submission();
-  ::gridx::auth::v1::KycSubmission* PROTOBUF_NONNULL mutable_submission();
-  void set_allocated_submission(::gridx::auth::v1::KycSubmission* PROTOBUF_NULLABLE value);
-  void unsafe_arena_set_allocated_submission(::gridx::auth::v1::KycSubmission* PROTOBUF_NULLABLE value);
-  ::gridx::auth::v1::KycSubmission* PROTOBUF_NULLABLE unsafe_arena_release_submission();
-
-  private:
-  const ::gridx::auth::v1::KycSubmission& _internal_submission() const;
-  ::gridx::auth::v1::KycSubmission* PROTOBUF_NONNULL _internal_mutable_submission();
-
-  public:
-  // @@protoc_insertion_point(class_scope:gridx.auth.v1.SubmitKycResponse)
- private:
-  class _Internal;
-  using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<0, 1,
-                          1, 0,
-                          2>;
-  static constexpr ParseTableT_ InternalGenerateParseTable_(
-      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
-  friend class ::google::protobuf::internal::TcParser;
-  #ifndef PROTOBUF_MESSAGE_GLOBALS
-  static const ParseTableT_ _table_;
-  #endif
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  friend ::google::protobuf::internal::PrivateAccess;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(
-        ::google::protobuf::internal::InternalVisibility visibility,
-        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-    inline explicit Impl_(
-        ::google::protobuf::internal::InternalVisibility visibility,
-        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const SubmitKycResponse& from_msg);
-    ::google::protobuf::internal::HasBits<1> _has_bits_;
-    ::google::protobuf::internal::CachedSize _cached_size_;
-    ::gridx::auth::v1::KycSubmission* PROTOBUF_NULLABLE submission_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -8628,7 +8664,7 @@ inline void RegisterResponse::set_allocated_status(::std::string* PROTOBUF_NULLA
   // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.RegisterResponse.status)
 }
 
-// string created_at = 4 [json_name = "createdAt"];
+// string created_at = 4 [json_name = "createdAt", deprecated = true];
 inline void RegisterResponse::clear_created_at() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.created_at_.ClearToEmpty();
@@ -8754,6 +8790,99 @@ inline void RegisterResponse::set_allocated_name(::std::string* PROTOBUF_NULLABL
     _impl_.name_.Set("", GetArena());
   }
   // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.RegisterResponse.name)
+}
+
+// .google.protobuf.Timestamp created_at_time = 6 [json_name = "createdAtTime"];
+inline bool RegisterResponse::has_created_at_time() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000020U);
+  PROTOBUF_ASSUME(!value || _impl_.created_at_time_ != nullptr);
+  return value;
+}
+inline const ::google::protobuf::Timestamp& RegisterResponse::_internal_created_at_time() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  const ::google::protobuf::Timestamp* p = _impl_.created_at_time_;
+  return p != nullptr ? *p : *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<::google::protobuf::Timestamp>(&::google::protobuf::Timestamp_globals_);
+}
+inline const ::google::protobuf::Timestamp& RegisterResponse::created_at_time() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.RegisterResponse.created_at_time)
+  return _internal_created_at_time();
+}
+inline void RegisterResponse::unsafe_arena_set_allocated_created_at_time(
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.created_at_time_);
+  }
+  _impl_.created_at_time_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.auth.v1.RegisterResponse.created_at_time)
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE RegisterResponse::release_created_at_time() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ::google::protobuf::Timestamp* released = _impl_.created_at_time_;
+  _impl_.created_at_time_ = nullptr;
+  if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
+    auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    if (GetArena() == nullptr) {
+      delete old;
+    }
+  } else {
+    if (GetArena() != nullptr) {
+      released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    }
+  }
+  return released;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE RegisterResponse::unsafe_arena_release_created_at_time() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.RegisterResponse.created_at_time)
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ::google::protobuf::Timestamp* temp = _impl_.created_at_time_;
+  _impl_.created_at_time_ = nullptr;
+  return temp;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL RegisterResponse::_internal_mutable_created_at_time() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.created_at_time_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::google::protobuf::Timestamp>(GetArena());
+    _impl_.created_at_time_ = reinterpret_cast<::google::protobuf::Timestamp*>(p);
+  }
+  return _impl_.created_at_time_;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL RegisterResponse::mutable_created_at_time()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ::google::protobuf::Timestamp* _msg = _internal_mutable_created_at_time();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.RegisterResponse.created_at_time)
+  return _msg;
+}
+inline void RegisterResponse::set_allocated_created_at_time(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (message_arena == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.created_at_time_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::Message*>(value)->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  }
+
+  _impl_.created_at_time_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.RegisterResponse.created_at_time)
 }
 
 // -------------------------------------------------------------------
@@ -9720,7 +9849,7 @@ inline void UserProfile::set_allocated_status(::std::string* PROTOBUF_NULLABLE v
   // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.UserProfile.status)
 }
 
-// string created_at = 6 [json_name = "createdAt"];
+// string created_at = 6 [json_name = "createdAt", deprecated = true];
 inline void UserProfile::clear_created_at() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.created_at_.ClearToEmpty();
@@ -9846,6 +9975,99 @@ inline void UserProfile::set_allocated_name(::std::string* PROTOBUF_NULLABLE val
     _impl_.name_.Set("", GetArena());
   }
   // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.UserProfile.name)
+}
+
+// .google.protobuf.Timestamp created_at_time = 8 [json_name = "createdAtTime"];
+inline bool UserProfile::has_created_at_time() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000020U);
+  PROTOBUF_ASSUME(!value || _impl_.created_at_time_ != nullptr);
+  return value;
+}
+inline const ::google::protobuf::Timestamp& UserProfile::_internal_created_at_time() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  const ::google::protobuf::Timestamp* p = _impl_.created_at_time_;
+  return p != nullptr ? *p : *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<::google::protobuf::Timestamp>(&::google::protobuf::Timestamp_globals_);
+}
+inline const ::google::protobuf::Timestamp& UserProfile::created_at_time() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.UserProfile.created_at_time)
+  return _internal_created_at_time();
+}
+inline void UserProfile::unsafe_arena_set_allocated_created_at_time(
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.created_at_time_);
+  }
+  _impl_.created_at_time_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.auth.v1.UserProfile.created_at_time)
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE UserProfile::release_created_at_time() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ::google::protobuf::Timestamp* released = _impl_.created_at_time_;
+  _impl_.created_at_time_ = nullptr;
+  if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
+    auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    if (GetArena() == nullptr) {
+      delete old;
+    }
+  } else {
+    if (GetArena() != nullptr) {
+      released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    }
+  }
+  return released;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE UserProfile::unsafe_arena_release_created_at_time() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.UserProfile.created_at_time)
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ::google::protobuf::Timestamp* temp = _impl_.created_at_time_;
+  _impl_.created_at_time_ = nullptr;
+  return temp;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL UserProfile::_internal_mutable_created_at_time() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.created_at_time_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::google::protobuf::Timestamp>(GetArena());
+    _impl_.created_at_time_ = reinterpret_cast<::google::protobuf::Timestamp*>(p);
+  }
+  return _impl_.created_at_time_;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL UserProfile::mutable_created_at_time()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ::google::protobuf::Timestamp* _msg = _internal_mutable_created_at_time();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.UserProfile.created_at_time)
+  return _msg;
+}
+inline void UserProfile::set_allocated_created_at_time(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (message_arena == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.created_at_time_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::Message*>(value)->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  }
+
+  _impl_.created_at_time_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.UserProfile.created_at_time)
 }
 
 // -------------------------------------------------------------------

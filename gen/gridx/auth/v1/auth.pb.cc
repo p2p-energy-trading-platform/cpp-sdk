@@ -562,195 +562,6 @@ const ::_pbi::ClassData* VerifyEmailChangeRequest_get_class_data() {
 }
 }  // namespace
 #endif  // PROTOBUF_CUSTOM_VTABLE
-class UserProfile::_Internal {
- public:
-  using HasBits = decltype(::std::declval<UserProfile>()._impl_._has_bits_);
-  static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(UserProfile, _impl_._has_bits_);
-};
-
-constexpr UserProfile::ParseTableT_ UserProfile::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
-  return ParseTableT_{
-    {
-      PROTOBUF_FIELD_OFFSET(UserProfile, _impl_._has_bits_),
-      0, // no _extensions_
-      7, 56,  // max_field_number, fast_idx_mask
-      offsetof(ParseTableT_, field_lookup_table),
-      4294967180,  // skipmap
-      offsetof(ParseTableT_, field_entries),
-      5,  // num_field_entries
-      0,  // num_aux_entries
-      offsetof(ParseTableT_, field_names),  // no aux_entries
-      class_data,
-      nullptr,  // post_loop_handler
-      ::_pbi::TcParser::GenericFallback,  // fallback
-      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-      ::_pbi::TcParser::GetTable<::gridx::auth::v1::UserProfile>(),  // to_prefetch
-      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
-    }, {{
-      {::_pbi::TcParser::MiniParse, {}},
-      // string user_id = 1 [json_name = "userId"];
-      {::_pbi::TcParser::FastUS1,
-       {10, 0, 0,
-        PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.user_id_)}},
-      // string email = 2 [json_name = "email"];
-      {::_pbi::TcParser::FastUS1,
-       {18, 1, 0,
-        PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.email_)}},
-      {::_pbi::TcParser::MiniParse, {}},
-      {::_pbi::TcParser::MiniParse, {}},
-      // string status = 5 [json_name = "status"];
-      {::_pbi::TcParser::FastUS1,
-       {42, 2, 0,
-        PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.status_)}},
-      // string created_at = 6 [json_name = "createdAt"];
-      {::_pbi::TcParser::FastUS1,
-       {50, 3, 0,
-        PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.created_at_)}},
-      // string name = 7 [json_name = "name"];
-      {::_pbi::TcParser::FastUS1,
-       {58, 4, 0,
-        PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.name_)}},
-    }}, {{
-      65535, 65535
-    }}, {{
-      // string user_id = 1 [json_name = "userId"];
-      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.user_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string email = 2 [json_name = "email"];
-      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.email_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string status = 5 [json_name = "status"];
-      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.status_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string created_at = 6 [json_name = "createdAt"];
-      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.created_at_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string name = 7 [json_name = "name"];
-      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.name_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    }},
-    // no aux_entries
-    {{
-      "\31\7\5\6\12\4\0\0"
-      "gridx.auth.v1.UserProfile"
-      "user_id"
-      "email"
-      "status"
-      "created_at"
-      "name"
-    }},
-  };
-}
-
-
-inline constexpr UserProfile::Impl_::Impl_(
-    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
-    ::_pbi::ConstantInitialized) noexcept
-      : _cached_size_{0},
-        user_id_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        email_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        status_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        created_at_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        name_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()) {}
-
-template <typename>
-constexpr UserProfile::UserProfile(::_pbi::ConstantInitialized,
-                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
-    : ::google::protobuf::Message(
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-          class_data
-#endif  // PROTOBUF_CUSTOM_VTABLE
-          ),
-      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
-}
-inline void* PROTOBUF_NONNULL UserProfile::PlacementNew_(
-    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
-    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
-  return ::new (mem) UserProfile(arena);
-}
-constexpr auto UserProfile::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(UserProfile), alignof(UserProfile));
-}
-constexpr auto UserProfile::InternalGenerateClassData_(
-    const MessageLite& prototype,
-    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
-  return ::google::protobuf::internal::ClassDataFull{
-      ::google::protobuf::internal::ClassData{
-          &prototype,
-#ifndef PROTOBUF_MESSAGE_GLOBALS
-          &_table_.header,
-#else
-          tc_table,
-#endif
-          nullptr,  // IsInitialized
-          &UserProfile::MergeImpl,
-          ::google::protobuf::Message::GetNewImpl<UserProfile>(),
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-          &UserProfile::SharedDtor,
-          ::google::protobuf::Message::GetClearImpl<UserProfile>(), &UserProfile::ByteSizeLong,
-              &UserProfile::_InternalSerialize,
-#endif  // PROTOBUF_CUSTOM_VTABLE
-          PROTOBUF_FIELD_OFFSET(UserProfile, _impl_._cached_size_),
-          false,
-      },
-#ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[10],
-#else   // !PROTOBUF_MESSAGE_GLOBALS
-      &::_pbi::kDescriptorMethods,
-      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
-      nullptr,  // tracker
-#endif  // PROTOBUF_MESSAGE_GLOBALS
-  };
-}
-struct UserProfileGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
-  constexpr UserProfileGlobalsTypeInternal()
-      :
-#ifndef PROTOBUF_MESSAGE_GLOBALS
-        _default(::_pbi::ConstantInitialized{},
-                 UserProfile_class_data_.base())
-#else   // !PROTOBUF_MESSAGE_GLOBALS
-        MessageGlobalsBase(UserProfile::InternalGenerateClassData_(
-            _default, &UserProfile_globals_._table.header)),
-        _default(::_pbi::ConstantInitialized{}, GetClassData()),
-        _table(::_pbi::PrivateAccess::GenerateParseTable<UserProfile>(
-            GetClassData()))
-#endif  // PROTOBUF_MESSAGE_GLOBALS
-  {
-  }
-  ~UserProfileGlobalsTypeInternal() {}
-  union {
-    alignas(::_pbi::kMaxMessageAlignment) UserProfile _default;
-  };
-#ifdef PROTOBUF_MESSAGE_GLOBALS
-  decltype(::_pbi::PrivateAccess::GenerateParseTable<UserProfile>(
-      ::std::declval<const ::_pbi::ClassData*>())) _table;
-#endif
-};
-#ifdef PROTOBUF_MESSAGE_GLOBALS
-static_assert(PROTOBUF_FIELD_OFFSET(UserProfileGlobalsTypeInternal, _default) ==
-              ::_pbi::MessageGlobalsBase::OffsetToDefault());
-#endif  // PROTOBUF_MESSAGE_GLOBALS
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST UserProfileGlobalsTypeInternal UserProfile_globals_
-        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-namespace {
-const ::_pbi::ClassData* UserProfile_get_class_data() {
-#ifdef PROTOBUF_MESSAGE_GLOBALS
-  return UserProfile_globals_.GetClassData();
-#else
-  return UserProfile_class_data_.base();
-#endif  // PROTOBUF_MESSAGE_GLOBALS
-}
-}  // namespace
-#endif  // PROTOBUF_CUSTOM_VTABLE
 class UpdateProfileRequest::_Internal {
  public:
   using HasBits = decltype(::std::declval<UpdateProfileRequest>()._impl_._has_bits_);
@@ -2051,195 +1862,6 @@ const ::_pbi::ClassData* RequestEmailChangeRequest_get_class_data() {
   return RequestEmailChangeRequest_globals_.GetClassData();
 #else
   return RequestEmailChangeRequest_class_data_.base();
-#endif  // PROTOBUF_MESSAGE_GLOBALS
-}
-}  // namespace
-#endif  // PROTOBUF_CUSTOM_VTABLE
-class RegisterResponse::_Internal {
- public:
-  using HasBits = decltype(::std::declval<RegisterResponse>()._impl_._has_bits_);
-  static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_._has_bits_);
-};
-
-constexpr RegisterResponse::ParseTableT_ RegisterResponse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
-  return ParseTableT_{
-    {
-      PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_._has_bits_),
-      0, // no _extensions_
-      5, 56,  // max_field_number, fast_idx_mask
-      offsetof(ParseTableT_, field_lookup_table),
-      4294967264,  // skipmap
-      offsetof(ParseTableT_, field_entries),
-      5,  // num_field_entries
-      0,  // num_aux_entries
-      offsetof(ParseTableT_, field_names),  // no aux_entries
-      class_data,
-      nullptr,  // post_loop_handler
-      ::_pbi::TcParser::GenericFallback,  // fallback
-      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-      ::_pbi::TcParser::GetTable<::gridx::auth::v1::RegisterResponse>(),  // to_prefetch
-      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
-    }, {{
-      {::_pbi::TcParser::MiniParse, {}},
-      // string user_id = 1 [json_name = "userId"];
-      {::_pbi::TcParser::FastUS1,
-       {10, 0, 0,
-        PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.user_id_)}},
-      // string email = 2 [json_name = "email"];
-      {::_pbi::TcParser::FastUS1,
-       {18, 1, 0,
-        PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.email_)}},
-      // string status = 3 [json_name = "status"];
-      {::_pbi::TcParser::FastUS1,
-       {26, 2, 0,
-        PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.status_)}},
-      // string created_at = 4 [json_name = "createdAt"];
-      {::_pbi::TcParser::FastUS1,
-       {34, 3, 0,
-        PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.created_at_)}},
-      // string name = 5 [json_name = "name"];
-      {::_pbi::TcParser::FastUS1,
-       {42, 4, 0,
-        PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.name_)}},
-      {::_pbi::TcParser::MiniParse, {}},
-      {::_pbi::TcParser::MiniParse, {}},
-    }}, {{
-      65535, 65535
-    }}, {{
-      // string user_id = 1 [json_name = "userId"];
-      {PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.user_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string email = 2 [json_name = "email"];
-      {PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.email_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string status = 3 [json_name = "status"];
-      {PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.status_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string created_at = 4 [json_name = "createdAt"];
-      {PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.created_at_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string name = 5 [json_name = "name"];
-      {PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.name_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    }},
-    // no aux_entries
-    {{
-      "\36\7\5\6\12\4\0\0"
-      "gridx.auth.v1.RegisterResponse"
-      "user_id"
-      "email"
-      "status"
-      "created_at"
-      "name"
-    }},
-  };
-}
-
-
-inline constexpr RegisterResponse::Impl_::Impl_(
-    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
-    ::_pbi::ConstantInitialized) noexcept
-      : _cached_size_{0},
-        user_id_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        email_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        status_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        created_at_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        name_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()) {}
-
-template <typename>
-constexpr RegisterResponse::RegisterResponse(::_pbi::ConstantInitialized,
-                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
-    : ::google::protobuf::Message(
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-          class_data
-#endif  // PROTOBUF_CUSTOM_VTABLE
-          ),
-      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
-}
-inline void* PROTOBUF_NONNULL RegisterResponse::PlacementNew_(
-    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
-    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
-  return ::new (mem) RegisterResponse(arena);
-}
-constexpr auto RegisterResponse::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(RegisterResponse), alignof(RegisterResponse));
-}
-constexpr auto RegisterResponse::InternalGenerateClassData_(
-    const MessageLite& prototype,
-    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
-  return ::google::protobuf::internal::ClassDataFull{
-      ::google::protobuf::internal::ClassData{
-          &prototype,
-#ifndef PROTOBUF_MESSAGE_GLOBALS
-          &_table_.header,
-#else
-          tc_table,
-#endif
-          nullptr,  // IsInitialized
-          &RegisterResponse::MergeImpl,
-          ::google::protobuf::Message::GetNewImpl<RegisterResponse>(),
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-          &RegisterResponse::SharedDtor,
-          ::google::protobuf::Message::GetClearImpl<RegisterResponse>(), &RegisterResponse::ByteSizeLong,
-              &RegisterResponse::_InternalSerialize,
-#endif  // PROTOBUF_CUSTOM_VTABLE
-          PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_._cached_size_),
-          false,
-      },
-#ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[1],
-#else   // !PROTOBUF_MESSAGE_GLOBALS
-      &::_pbi::kDescriptorMethods,
-      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
-      nullptr,  // tracker
-#endif  // PROTOBUF_MESSAGE_GLOBALS
-  };
-}
-struct RegisterResponseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
-  constexpr RegisterResponseGlobalsTypeInternal()
-      :
-#ifndef PROTOBUF_MESSAGE_GLOBALS
-        _default(::_pbi::ConstantInitialized{},
-                 RegisterResponse_class_data_.base())
-#else   // !PROTOBUF_MESSAGE_GLOBALS
-        MessageGlobalsBase(RegisterResponse::InternalGenerateClassData_(
-            _default, &RegisterResponse_globals_._table.header)),
-        _default(::_pbi::ConstantInitialized{}, GetClassData()),
-        _table(::_pbi::PrivateAccess::GenerateParseTable<RegisterResponse>(
-            GetClassData()))
-#endif  // PROTOBUF_MESSAGE_GLOBALS
-  {
-  }
-  ~RegisterResponseGlobalsTypeInternal() {}
-  union {
-    alignas(::_pbi::kMaxMessageAlignment) RegisterResponse _default;
-  };
-#ifdef PROTOBUF_MESSAGE_GLOBALS
-  decltype(::_pbi::PrivateAccess::GenerateParseTable<RegisterResponse>(
-      ::std::declval<const ::_pbi::ClassData*>())) _table;
-#endif
-};
-#ifdef PROTOBUF_MESSAGE_GLOBALS
-static_assert(PROTOBUF_FIELD_OFFSET(RegisterResponseGlobalsTypeInternal, _default) ==
-              ::_pbi::MessageGlobalsBase::OffsetToDefault());
-#endif  // PROTOBUF_MESSAGE_GLOBALS
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST RegisterResponseGlobalsTypeInternal RegisterResponse_globals_
-        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-namespace {
-const ::_pbi::ClassData* RegisterResponse_get_class_data() {
-#ifdef PROTOBUF_MESSAGE_GLOBALS
-  return RegisterResponse_globals_.GetClassData();
-#else
-  return RegisterResponse_class_data_.base();
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 }
 }  // namespace
@@ -4657,6 +4279,844 @@ const ::_pbi::ClassData* ChangePasswordRequest_get_class_data() {
 }
 }  // namespace
 #endif  // PROTOBUF_CUSTOM_VTABLE
+class UserProfile::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<UserProfile>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(UserProfile, _impl_._has_bits_);
+};
+
+constexpr UserProfile::ParseTableT_ UserProfile::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(UserProfile, _impl_._has_bits_),
+      0, // no _extensions_
+      8, 56,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967052,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      6,  // num_field_entries
+      1,  // num_aux_entries
+      offsetof(ParseTableT_, aux_entries),
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::auth::v1::UserProfile>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // .google.protobuf.Timestamp created_at_time = 8 [json_name = "createdAtTime"];
+      {::_pbi::TcParser::FastMtS1,
+       {66, 5, 0,
+        PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.created_at_time_)}},
+      // string user_id = 1 [json_name = "userId"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.user_id_)}},
+      // string email = 2 [json_name = "email"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.email_)}},
+      {::_pbi::TcParser::MiniParse, {}},
+      {::_pbi::TcParser::MiniParse, {}},
+      // string status = 5 [json_name = "status"];
+      {::_pbi::TcParser::FastUS1,
+       {42, 2, 0,
+        PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.status_)}},
+      // string created_at = 6 [json_name = "createdAt", deprecated = true];
+      {::_pbi::TcParser::FastUS1,
+       {50, 3, 0,
+        PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.created_at_)}},
+      // string name = 7 [json_name = "name"];
+      {::_pbi::TcParser::FastUS1,
+       {58, 4, 0,
+        PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.name_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string user_id = 1 [json_name = "userId"];
+      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.user_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string email = 2 [json_name = "email"];
+      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.email_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string status = 5 [json_name = "status"];
+      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.status_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string created_at = 6 [json_name = "createdAt", deprecated = true];
+      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.created_at_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string name = 7 [json_name = "name"];
+      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.name_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // .google.protobuf.Timestamp created_at_time = 8 [json_name = "createdAtTime"];
+      {PROTOBUF_FIELD_OFFSET(UserProfile, _impl_.created_at_time_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+    }},
+    {{
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::google::protobuf::Timestamp>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::google::protobuf::Timestamp_globals_},
+        #endif
+    }},
+    {{
+      "\31\7\5\6\12\4\0\0"
+      "gridx.auth.v1.UserProfile"
+      "user_id"
+      "email"
+      "status"
+      "created_at"
+      "name"
+    }},
+  };
+}
+
+
+inline constexpr UserProfile::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        email_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        status_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        created_at_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        name_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        created_at_time_{nullptr} {}
+
+template <typename>
+constexpr UserProfile::UserProfile(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL UserProfile::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) UserProfile(arena);
+}
+constexpr auto UserProfile::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(UserProfile), alignof(UserProfile));
+}
+constexpr auto UserProfile::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &UserProfile::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<UserProfile>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &UserProfile::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<UserProfile>(), &UserProfile::ByteSizeLong,
+              &UserProfile::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(UserProfile, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[10],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct UserProfileGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr UserProfileGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 UserProfile_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(UserProfile::InternalGenerateClassData_(
+            _default, &UserProfile_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<UserProfile>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~UserProfileGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) UserProfile _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<UserProfile>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(UserProfileGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST UserProfileGlobalsTypeInternal UserProfile_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* UserProfile_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return UserProfile_globals_.GetClassData();
+#else
+  return UserProfile_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class SubmitKycRequest::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<SubmitKycRequest>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_._has_bits_);
+};
+
+constexpr SubmitKycRequest::ParseTableT_ SubmitKycRequest::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_._has_bits_),
+      0, // no _extensions_
+      4, 24,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967280,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      4,  // num_field_entries
+      1,  // num_aux_entries
+      offsetof(ParseTableT_, aux_entries),
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::auth::v1::SubmitKycRequest>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // string document_path = 4 [json_name = "documentPath"];
+      {::_pbi::TcParser::FastUS1,
+       {34, 2, 0,
+        PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.document_path_)}},
+      // string full_name = 1 [json_name = "fullName"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.full_name_)}},
+      // .google.type.Date date_of_birth = 2 [json_name = "dateOfBirth"];
+      {::_pbi::TcParser::FastMtS1,
+       {18, 3, 0,
+        PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.date_of_birth_)}},
+      // string dubai_id = 3 [json_name = "dubaiId"];
+      {::_pbi::TcParser::FastUS1,
+       {26, 1, 0,
+        PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.dubai_id_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string full_name = 1 [json_name = "fullName"];
+      {PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.full_name_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // .google.type.Date date_of_birth = 2 [json_name = "dateOfBirth"];
+      {PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.date_of_birth_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+      // string dubai_id = 3 [json_name = "dubaiId"];
+      {PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.dubai_id_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string document_path = 4 [json_name = "documentPath"];
+      {PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.document_path_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    {{
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::google::type::Date>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::google::type::Date_globals_},
+        #endif
+    }},
+    {{
+      "\36\11\0\10\15\0\0\0"
+      "gridx.auth.v1.SubmitKycRequest"
+      "full_name"
+      "dubai_id"
+      "document_path"
+    }},
+  };
+}
+
+
+inline constexpr SubmitKycRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        full_name_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        dubai_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        document_path_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        date_of_birth_{nullptr} {}
+
+template <typename>
+constexpr SubmitKycRequest::SubmitKycRequest(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL SubmitKycRequest::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) SubmitKycRequest(arena);
+}
+constexpr auto SubmitKycRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(SubmitKycRequest), alignof(SubmitKycRequest));
+}
+constexpr auto SubmitKycRequest::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &SubmitKycRequest::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<SubmitKycRequest>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &SubmitKycRequest::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<SubmitKycRequest>(), &SubmitKycRequest::ByteSizeLong,
+              &SubmitKycRequest::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[33],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct SubmitKycRequestGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr SubmitKycRequestGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 SubmitKycRequest_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(SubmitKycRequest::InternalGenerateClassData_(
+            _default, &SubmitKycRequest_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<SubmitKycRequest>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~SubmitKycRequestGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) SubmitKycRequest _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<SubmitKycRequest>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(SubmitKycRequestGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST SubmitKycRequestGlobalsTypeInternal SubmitKycRequest_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* SubmitKycRequest_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return SubmitKycRequest_globals_.GetClassData();
+#else
+  return SubmitKycRequest_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class RegisterResponse::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<RegisterResponse>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_._has_bits_);
+};
+
+constexpr RegisterResponse::ParseTableT_ RegisterResponse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_._has_bits_),
+      0, // no _extensions_
+      6, 56,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967232,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      6,  // num_field_entries
+      1,  // num_aux_entries
+      offsetof(ParseTableT_, aux_entries),
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::auth::v1::RegisterResponse>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      {::_pbi::TcParser::MiniParse, {}},
+      // string user_id = 1 [json_name = "userId"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.user_id_)}},
+      // string email = 2 [json_name = "email"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.email_)}},
+      // string status = 3 [json_name = "status"];
+      {::_pbi::TcParser::FastUS1,
+       {26, 2, 0,
+        PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.status_)}},
+      // string created_at = 4 [json_name = "createdAt", deprecated = true];
+      {::_pbi::TcParser::FastUS1,
+       {34, 3, 0,
+        PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.created_at_)}},
+      // string name = 5 [json_name = "name"];
+      {::_pbi::TcParser::FastUS1,
+       {42, 4, 0,
+        PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.name_)}},
+      // .google.protobuf.Timestamp created_at_time = 6 [json_name = "createdAtTime"];
+      {::_pbi::TcParser::FastMtS1,
+       {50, 5, 0,
+        PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.created_at_time_)}},
+      {::_pbi::TcParser::MiniParse, {}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string user_id = 1 [json_name = "userId"];
+      {PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.user_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string email = 2 [json_name = "email"];
+      {PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.email_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string status = 3 [json_name = "status"];
+      {PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.status_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string created_at = 4 [json_name = "createdAt", deprecated = true];
+      {PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.created_at_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string name = 5 [json_name = "name"];
+      {PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.name_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // .google.protobuf.Timestamp created_at_time = 6 [json_name = "createdAtTime"];
+      {PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_.created_at_time_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+    }},
+    {{
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::google::protobuf::Timestamp>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::google::protobuf::Timestamp_globals_},
+        #endif
+    }},
+    {{
+      "\36\7\5\6\12\4\0\0"
+      "gridx.auth.v1.RegisterResponse"
+      "user_id"
+      "email"
+      "status"
+      "created_at"
+      "name"
+    }},
+  };
+}
+
+
+inline constexpr RegisterResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        email_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        status_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        created_at_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        name_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        created_at_time_{nullptr} {}
+
+template <typename>
+constexpr RegisterResponse::RegisterResponse(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL RegisterResponse::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) RegisterResponse(arena);
+}
+constexpr auto RegisterResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(RegisterResponse), alignof(RegisterResponse));
+}
+constexpr auto RegisterResponse::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &RegisterResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<RegisterResponse>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &RegisterResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<RegisterResponse>(), &RegisterResponse::ByteSizeLong,
+              &RegisterResponse::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(RegisterResponse, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[1],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct RegisterResponseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr RegisterResponseGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 RegisterResponse_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(RegisterResponse::InternalGenerateClassData_(
+            _default, &RegisterResponse_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<RegisterResponse>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~RegisterResponseGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) RegisterResponse _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<RegisterResponse>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(RegisterResponseGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST RegisterResponseGlobalsTypeInternal RegisterResponse_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* RegisterResponse_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return RegisterResponse_globals_.GetClassData();
+#else
+  return RegisterResponse_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class KycSubmission::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<KycSubmission>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_._has_bits_);
+};
+
+constexpr KycSubmission::ParseTableT_ KycSubmission::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_._has_bits_),
+      0, // no _extensions_
+      11, 120,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294965248,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      11,  // num_field_entries
+      4,  // num_aux_entries
+      offsetof(ParseTableT_, aux_entries),
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::auth::v1::KycSubmission>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      {::_pbi::TcParser::MiniParse, {}},
+      // string id = 1 [json_name = "id"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.id_)}},
+      // string user_id = 2 [json_name = "userId"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.user_id_)}},
+      // string full_name = 3 [json_name = "fullName"];
+      {::_pbi::TcParser::FastUS1,
+       {26, 2, 0,
+        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.full_name_)}},
+      // .google.type.Date date_of_birth = 4 [json_name = "dateOfBirth"];
+      {::_pbi::TcParser::FastMtS1,
+       {34, 6, 0,
+        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.date_of_birth_)}},
+      // string dubai_id = 5 [json_name = "dubaiId"];
+      {::_pbi::TcParser::FastUS1,
+       {42, 3, 0,
+        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.dubai_id_)}},
+      // string document_path = 6 [json_name = "documentPath"];
+      {::_pbi::TcParser::FastUS1,
+       {50, 4, 0,
+        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.document_path_)}},
+      // .gridx.auth.v1.KycState state = 7 [json_name = "state"];
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(KycSubmission, _impl_.state_), 10>(),
+       {56, 10, 0,
+        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.state_)}},
+      // string rejection_reason = 8 [json_name = "rejectionReason"];
+      {::_pbi::TcParser::FastUS1,
+       {66, 5, 0,
+        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.rejection_reason_)}},
+      // .google.protobuf.Timestamp verified_at = 9 [json_name = "verifiedAt"];
+      {::_pbi::TcParser::FastMtS1,
+       {74, 7, 1,
+        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.verified_at_)}},
+      // .google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];
+      {::_pbi::TcParser::FastMtS1,
+       {82, 8, 2,
+        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.created_at_)}},
+      // .google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];
+      {::_pbi::TcParser::FastMtS1,
+       {90, 9, 3,
+        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.updated_at_)}},
+      {::_pbi::TcParser::MiniParse, {}},
+      {::_pbi::TcParser::MiniParse, {}},
+      {::_pbi::TcParser::MiniParse, {}},
+      {::_pbi::TcParser::MiniParse, {}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string id = 1 [json_name = "id"];
+      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string user_id = 2 [json_name = "userId"];
+      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.user_id_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string full_name = 3 [json_name = "fullName"];
+      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.full_name_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // .google.type.Date date_of_birth = 4 [json_name = "dateOfBirth"];
+      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.date_of_birth_), _Internal::kHasBitsOffset + 6, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+      // string dubai_id = 5 [json_name = "dubaiId"];
+      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.dubai_id_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string document_path = 6 [json_name = "documentPath"];
+      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.document_path_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // .gridx.auth.v1.KycState state = 7 [json_name = "state"];
+      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.state_), _Internal::kHasBitsOffset + 10, 0, (0 | ::_fl::kFcOptional | ::_fl::kOpenEnum)},
+      // string rejection_reason = 8 [json_name = "rejectionReason"];
+      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.rejection_reason_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // .google.protobuf.Timestamp verified_at = 9 [json_name = "verifiedAt"];
+      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.verified_at_), _Internal::kHasBitsOffset + 7, 1, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+      // .google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];
+      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.created_at_), _Internal::kHasBitsOffset + 8, 2, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+      // .google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];
+      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.updated_at_), _Internal::kHasBitsOffset + 9, 3, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+    }},
+    {{
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::google::type::Date>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::google::type::Date_globals_},
+        #endif
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::google::protobuf::Timestamp>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::google::protobuf::Timestamp_globals_},
+        #endif
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::google::protobuf::Timestamp>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::google::protobuf::Timestamp_globals_},
+        #endif
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::google::protobuf::Timestamp>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::google::protobuf::Timestamp_globals_},
+        #endif
+    }},
+    {{
+      "\33\2\7\11\0\10\15\0\20\0\0\0\0\0\0\0"
+      "gridx.auth.v1.KycSubmission"
+      "id"
+      "user_id"
+      "full_name"
+      "dubai_id"
+      "document_path"
+      "rejection_reason"
+    }},
+  };
+}
+
+
+inline constexpr KycSubmission::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        full_name_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        dubai_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        document_path_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        rejection_reason_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        date_of_birth_{nullptr},
+        verified_at_{nullptr},
+        created_at_{nullptr},
+        updated_at_{nullptr},
+        state_{static_cast< ::gridx::auth::v1::KycState >(0)} {}
+
+template <typename>
+constexpr KycSubmission::KycSubmission(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL KycSubmission::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) KycSubmission(arena);
+}
+constexpr auto KycSubmission::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(KycSubmission), alignof(KycSubmission));
+}
+constexpr auto KycSubmission::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &KycSubmission::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<KycSubmission>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &KycSubmission::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<KycSubmission>(), &KycSubmission::ByteSizeLong,
+              &KycSubmission::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[35],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct KycSubmissionGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr KycSubmissionGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 KycSubmission_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(KycSubmission::InternalGenerateClassData_(
+            _default, &KycSubmission_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<KycSubmission>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~KycSubmissionGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) KycSubmission _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<KycSubmission>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(KycSubmissionGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST KycSubmissionGlobalsTypeInternal KycSubmission_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* KycSubmission_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return KycSubmission_globals_.GetClassData();
+#else
+  return KycSubmission_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
 class VerifyEmailChangeResponse::_Internal {
  public:
   using HasBits = decltype(::std::declval<VerifyEmailChangeResponse>()._impl_._has_bits_);
@@ -4951,95 +5411,63 @@ const ::_pbi::ClassData* UpdateProfileResponse_get_class_data() {
 }
 }  // namespace
 #endif  // PROTOBUF_CUSTOM_VTABLE
-class SubmitKycRequest::_Internal {
+class SubmitKycResponse::_Internal {
  public:
-  using HasBits = decltype(::std::declval<SubmitKycRequest>()._impl_._has_bits_);
+  using HasBits = decltype(::std::declval<SubmitKycResponse>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(SubmitKycResponse, _impl_._has_bits_);
 };
 
-constexpr SubmitKycRequest::ParseTableT_ SubmitKycRequest::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+constexpr SubmitKycResponse::ParseTableT_ SubmitKycResponse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
   return ParseTableT_{
     {
-      PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_._has_bits_),
+      PROTOBUF_FIELD_OFFSET(SubmitKycResponse, _impl_._has_bits_),
       0, // no _extensions_
-      4, 24,  // max_field_number, fast_idx_mask
+      1, 0,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967280,  // skipmap
+      4294967294,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      4,  // num_field_entries
+      1,  // num_field_entries
       1,  // num_aux_entries
       offsetof(ParseTableT_, aux_entries),
       class_data,
       nullptr,  // post_loop_handler
       ::_pbi::TcParser::GenericFallback,  // fallback
       #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-      ::_pbi::TcParser::GetTable<::gridx::auth::v1::SubmitKycRequest>(),  // to_prefetch
+      ::_pbi::TcParser::GetTable<::gridx::auth::v1::SubmitKycResponse>(),  // to_prefetch
       #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
     }, {{
-      // string document_path = 4 [json_name = "documentPath"];
-      {::_pbi::TcParser::FastUS1,
-       {34, 2, 0,
-        PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.document_path_)}},
-      // string full_name = 1 [json_name = "fullName"];
-      {::_pbi::TcParser::FastUS1,
-       {10, 0, 0,
-        PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.full_name_)}},
-      // .google.type.Date date_of_birth = 2 [json_name = "dateOfBirth"];
+      // .gridx.auth.v1.KycSubmission submission = 1 [json_name = "submission"];
       {::_pbi::TcParser::FastMtS1,
-       {18, 3, 0,
-        PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.date_of_birth_)}},
-      // string dubai_id = 3 [json_name = "dubaiId"];
-      {::_pbi::TcParser::FastUS1,
-       {26, 1, 0,
-        PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.dubai_id_)}},
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(SubmitKycResponse, _impl_.submission_)}},
     }}, {{
       65535, 65535
     }}, {{
-      // string full_name = 1 [json_name = "fullName"];
-      {PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.full_name_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // .google.type.Date date_of_birth = 2 [json_name = "dateOfBirth"];
-      {PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.date_of_birth_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-      // string dubai_id = 3 [json_name = "dubaiId"];
-      {PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.dubai_id_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string document_path = 4 [json_name = "documentPath"];
-      {PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.document_path_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // .gridx.auth.v1.KycSubmission submission = 1 [json_name = "submission"];
+      {PROTOBUF_FIELD_OFFSET(SubmitKycResponse, _impl_.submission_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
     }},
     {{
         #ifndef PROTOBUF_MESSAGE_GLOBALS
-        {::_pbi::TcParser::GetTable<::google::type::Date>()},
+        {::_pbi::TcParser::GetTable<::gridx::auth::v1::KycSubmission>()},
         #else
-        {::_pbi::FieldAuxMessageGlobals(), &::google::type::Date_globals_},
+        {::_pbi::FieldAuxMessageGlobals(), &::gridx::auth::v1::KycSubmission_globals_},
         #endif
     }},
     {{
-      "\36\11\0\10\15\0\0\0"
-      "gridx.auth.v1.SubmitKycRequest"
-      "full_name"
-      "dubai_id"
-      "document_path"
     }},
   };
 }
 
 
-inline constexpr SubmitKycRequest::Impl_::Impl_(
+inline constexpr SubmitKycResponse::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
-        full_name_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        dubai_id_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        document_path_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        date_of_birth_{nullptr} {}
+        submission_{nullptr} {}
 
 template <typename>
-constexpr SubmitKycRequest::SubmitKycRequest(::_pbi::ConstantInitialized,
+constexpr SubmitKycResponse::SubmitKycResponse(::_pbi::ConstantInitialized,
                        const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
     : ::google::protobuf::Message(
 #if defined(PROTOBUF_CUSTOM_VTABLE)
@@ -5048,15 +5476,15 @@ constexpr SubmitKycRequest::SubmitKycRequest(::_pbi::ConstantInitialized,
           ),
       _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
 }
-inline void* PROTOBUF_NONNULL SubmitKycRequest::PlacementNew_(
+inline void* PROTOBUF_NONNULL SubmitKycResponse::PlacementNew_(
     const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
-  return ::new (mem) SubmitKycRequest(arena);
+  return ::new (mem) SubmitKycResponse(arena);
 }
-constexpr auto SubmitKycRequest::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(SubmitKycRequest), alignof(SubmitKycRequest));
+constexpr auto SubmitKycResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(SubmitKycResponse), alignof(SubmitKycResponse));
 }
-constexpr auto SubmitKycRequest::InternalGenerateClassData_(
+constexpr auto SubmitKycResponse::InternalGenerateClassData_(
     const MessageLite& prototype,
     const ::google::protobuf::internal::TcParseTableBase* tc_table) {
   return ::google::protobuf::internal::ClassDataFull{
@@ -5068,18 +5496,18 @@ constexpr auto SubmitKycRequest::InternalGenerateClassData_(
           tc_table,
 #endif
           nullptr,  // IsInitialized
-          &SubmitKycRequest::MergeImpl,
-          ::google::protobuf::Message::GetNewImpl<SubmitKycRequest>(),
+          &SubmitKycResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<SubmitKycResponse>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-          &SubmitKycRequest::SharedDtor,
-          ::google::protobuf::Message::GetClearImpl<SubmitKycRequest>(), &SubmitKycRequest::ByteSizeLong,
-              &SubmitKycRequest::_InternalSerialize,
+          &SubmitKycResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<SubmitKycResponse>(), &SubmitKycResponse::ByteSizeLong,
+              &SubmitKycResponse::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_._cached_size_),
+          PROTOBUF_FIELD_OFFSET(SubmitKycResponse, _impl_._cached_size_),
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[33],
+      &file_reflection_data[34],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -5087,302 +5515,45 @@ constexpr auto SubmitKycRequest::InternalGenerateClassData_(
 #endif  // PROTOBUF_MESSAGE_GLOBALS
   };
 }
-struct SubmitKycRequestGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
-  constexpr SubmitKycRequestGlobalsTypeInternal()
+struct SubmitKycResponseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr SubmitKycResponseGlobalsTypeInternal()
       :
 #ifndef PROTOBUF_MESSAGE_GLOBALS
         _default(::_pbi::ConstantInitialized{},
-                 SubmitKycRequest_class_data_.base())
+                 SubmitKycResponse_class_data_.base())
 #else   // !PROTOBUF_MESSAGE_GLOBALS
-        MessageGlobalsBase(SubmitKycRequest::InternalGenerateClassData_(
-            _default, &SubmitKycRequest_globals_._table.header)),
+        MessageGlobalsBase(SubmitKycResponse::InternalGenerateClassData_(
+            _default, &SubmitKycResponse_globals_._table.header)),
         _default(::_pbi::ConstantInitialized{}, GetClassData()),
-        _table(::_pbi::PrivateAccess::GenerateParseTable<SubmitKycRequest>(
+        _table(::_pbi::PrivateAccess::GenerateParseTable<SubmitKycResponse>(
             GetClassData()))
 #endif  // PROTOBUF_MESSAGE_GLOBALS
   {
   }
-  ~SubmitKycRequestGlobalsTypeInternal() {}
+  ~SubmitKycResponseGlobalsTypeInternal() {}
   union {
-    alignas(::_pbi::kMaxMessageAlignment) SubmitKycRequest _default;
+    alignas(::_pbi::kMaxMessageAlignment) SubmitKycResponse _default;
   };
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-  decltype(::_pbi::PrivateAccess::GenerateParseTable<SubmitKycRequest>(
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<SubmitKycResponse>(
       ::std::declval<const ::_pbi::ClassData*>())) _table;
 #endif
 };
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-static_assert(PROTOBUF_FIELD_OFFSET(SubmitKycRequestGlobalsTypeInternal, _default) ==
+static_assert(PROTOBUF_FIELD_OFFSET(SubmitKycResponseGlobalsTypeInternal, _default) ==
               ::_pbi::MessageGlobalsBase::OffsetToDefault());
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST SubmitKycRequestGlobalsTypeInternal SubmitKycRequest_globals_
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST SubmitKycResponseGlobalsTypeInternal SubmitKycResponse_globals_
         PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
 #if defined(PROTOBUF_CUSTOM_VTABLE)
 namespace {
-const ::_pbi::ClassData* SubmitKycRequest_get_class_data() {
+const ::_pbi::ClassData* SubmitKycResponse_get_class_data() {
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-  return SubmitKycRequest_globals_.GetClassData();
+  return SubmitKycResponse_globals_.GetClassData();
 #else
-  return SubmitKycRequest_class_data_.base();
-#endif  // PROTOBUF_MESSAGE_GLOBALS
-}
-}  // namespace
-#endif  // PROTOBUF_CUSTOM_VTABLE
-class KycSubmission::_Internal {
- public:
-  using HasBits = decltype(::std::declval<KycSubmission>()._impl_._has_bits_);
-  static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_._has_bits_);
-};
-
-constexpr KycSubmission::ParseTableT_ KycSubmission::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
-  return ParseTableT_{
-    {
-      PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_._has_bits_),
-      0, // no _extensions_
-      11, 120,  // max_field_number, fast_idx_mask
-      offsetof(ParseTableT_, field_lookup_table),
-      4294965248,  // skipmap
-      offsetof(ParseTableT_, field_entries),
-      11,  // num_field_entries
-      4,  // num_aux_entries
-      offsetof(ParseTableT_, aux_entries),
-      class_data,
-      nullptr,  // post_loop_handler
-      ::_pbi::TcParser::GenericFallback,  // fallback
-      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-      ::_pbi::TcParser::GetTable<::gridx::auth::v1::KycSubmission>(),  // to_prefetch
-      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
-    }, {{
-      {::_pbi::TcParser::MiniParse, {}},
-      // string id = 1 [json_name = "id"];
-      {::_pbi::TcParser::FastUS1,
-       {10, 0, 0,
-        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.id_)}},
-      // string user_id = 2 [json_name = "userId"];
-      {::_pbi::TcParser::FastUS1,
-       {18, 1, 0,
-        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.user_id_)}},
-      // string full_name = 3 [json_name = "fullName"];
-      {::_pbi::TcParser::FastUS1,
-       {26, 2, 0,
-        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.full_name_)}},
-      // .google.type.Date date_of_birth = 4 [json_name = "dateOfBirth"];
-      {::_pbi::TcParser::FastMtS1,
-       {34, 6, 0,
-        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.date_of_birth_)}},
-      // string dubai_id = 5 [json_name = "dubaiId"];
-      {::_pbi::TcParser::FastUS1,
-       {42, 3, 0,
-        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.dubai_id_)}},
-      // string document_path = 6 [json_name = "documentPath"];
-      {::_pbi::TcParser::FastUS1,
-       {50, 4, 0,
-        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.document_path_)}},
-      // .gridx.auth.v1.KycState state = 7 [json_name = "state"];
-      {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(KycSubmission, _impl_.state_), 10>(),
-       {56, 10, 0,
-        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.state_)}},
-      // string rejection_reason = 8 [json_name = "rejectionReason"];
-      {::_pbi::TcParser::FastUS1,
-       {66, 5, 0,
-        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.rejection_reason_)}},
-      // .google.protobuf.Timestamp verified_at = 9 [json_name = "verifiedAt"];
-      {::_pbi::TcParser::FastMtS1,
-       {74, 7, 1,
-        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.verified_at_)}},
-      // .google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];
-      {::_pbi::TcParser::FastMtS1,
-       {82, 8, 2,
-        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.created_at_)}},
-      // .google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];
-      {::_pbi::TcParser::FastMtS1,
-       {90, 9, 3,
-        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.updated_at_)}},
-      {::_pbi::TcParser::MiniParse, {}},
-      {::_pbi::TcParser::MiniParse, {}},
-      {::_pbi::TcParser::MiniParse, {}},
-      {::_pbi::TcParser::MiniParse, {}},
-    }}, {{
-      65535, 65535
-    }}, {{
-      // string id = 1 [json_name = "id"];
-      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string user_id = 2 [json_name = "userId"];
-      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.user_id_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string full_name = 3 [json_name = "fullName"];
-      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.full_name_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // .google.type.Date date_of_birth = 4 [json_name = "dateOfBirth"];
-      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.date_of_birth_), _Internal::kHasBitsOffset + 6, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-      // string dubai_id = 5 [json_name = "dubaiId"];
-      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.dubai_id_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string document_path = 6 [json_name = "documentPath"];
-      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.document_path_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // .gridx.auth.v1.KycState state = 7 [json_name = "state"];
-      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.state_), _Internal::kHasBitsOffset + 10, 0, (0 | ::_fl::kFcOptional | ::_fl::kOpenEnum)},
-      // string rejection_reason = 8 [json_name = "rejectionReason"];
-      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.rejection_reason_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // .google.protobuf.Timestamp verified_at = 9 [json_name = "verifiedAt"];
-      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.verified_at_), _Internal::kHasBitsOffset + 7, 1, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-      // .google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];
-      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.created_at_), _Internal::kHasBitsOffset + 8, 2, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-      // .google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];
-      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.updated_at_), _Internal::kHasBitsOffset + 9, 3, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    }},
-    {{
-        #ifndef PROTOBUF_MESSAGE_GLOBALS
-        {::_pbi::TcParser::GetTable<::google::type::Date>()},
-        #else
-        {::_pbi::FieldAuxMessageGlobals(), &::google::type::Date_globals_},
-        #endif
-        #ifndef PROTOBUF_MESSAGE_GLOBALS
-        {::_pbi::TcParser::GetTable<::google::protobuf::Timestamp>()},
-        #else
-        {::_pbi::FieldAuxMessageGlobals(), &::google::protobuf::Timestamp_globals_},
-        #endif
-        #ifndef PROTOBUF_MESSAGE_GLOBALS
-        {::_pbi::TcParser::GetTable<::google::protobuf::Timestamp>()},
-        #else
-        {::_pbi::FieldAuxMessageGlobals(), &::google::protobuf::Timestamp_globals_},
-        #endif
-        #ifndef PROTOBUF_MESSAGE_GLOBALS
-        {::_pbi::TcParser::GetTable<::google::protobuf::Timestamp>()},
-        #else
-        {::_pbi::FieldAuxMessageGlobals(), &::google::protobuf::Timestamp_globals_},
-        #endif
-    }},
-    {{
-      "\33\2\7\11\0\10\15\0\20\0\0\0\0\0\0\0"
-      "gridx.auth.v1.KycSubmission"
-      "id"
-      "user_id"
-      "full_name"
-      "dubai_id"
-      "document_path"
-      "rejection_reason"
-    }},
-  };
-}
-
-
-inline constexpr KycSubmission::Impl_::Impl_(
-    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
-    ::_pbi::ConstantInitialized) noexcept
-      : _cached_size_{0},
-        id_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        user_id_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        full_name_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        dubai_id_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        document_path_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        rejection_reason_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        date_of_birth_{nullptr},
-        verified_at_{nullptr},
-        created_at_{nullptr},
-        updated_at_{nullptr},
-        state_{static_cast< ::gridx::auth::v1::KycState >(0)} {}
-
-template <typename>
-constexpr KycSubmission::KycSubmission(::_pbi::ConstantInitialized,
-                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
-    : ::google::protobuf::Message(
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-          class_data
-#endif  // PROTOBUF_CUSTOM_VTABLE
-          ),
-      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
-}
-inline void* PROTOBUF_NONNULL KycSubmission::PlacementNew_(
-    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
-    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
-  return ::new (mem) KycSubmission(arena);
-}
-constexpr auto KycSubmission::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(KycSubmission), alignof(KycSubmission));
-}
-constexpr auto KycSubmission::InternalGenerateClassData_(
-    const MessageLite& prototype,
-    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
-  return ::google::protobuf::internal::ClassDataFull{
-      ::google::protobuf::internal::ClassData{
-          &prototype,
-#ifndef PROTOBUF_MESSAGE_GLOBALS
-          &_table_.header,
-#else
-          tc_table,
-#endif
-          nullptr,  // IsInitialized
-          &KycSubmission::MergeImpl,
-          ::google::protobuf::Message::GetNewImpl<KycSubmission>(),
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-          &KycSubmission::SharedDtor,
-          ::google::protobuf::Message::GetClearImpl<KycSubmission>(), &KycSubmission::ByteSizeLong,
-              &KycSubmission::_InternalSerialize,
-#endif  // PROTOBUF_CUSTOM_VTABLE
-          PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_._cached_size_),
-          false,
-      },
-#ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[35],
-#else   // !PROTOBUF_MESSAGE_GLOBALS
-      &::_pbi::kDescriptorMethods,
-      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
-      nullptr,  // tracker
-#endif  // PROTOBUF_MESSAGE_GLOBALS
-  };
-}
-struct KycSubmissionGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
-  constexpr KycSubmissionGlobalsTypeInternal()
-      :
-#ifndef PROTOBUF_MESSAGE_GLOBALS
-        _default(::_pbi::ConstantInitialized{},
-                 KycSubmission_class_data_.base())
-#else   // !PROTOBUF_MESSAGE_GLOBALS
-        MessageGlobalsBase(KycSubmission::InternalGenerateClassData_(
-            _default, &KycSubmission_globals_._table.header)),
-        _default(::_pbi::ConstantInitialized{}, GetClassData()),
-        _table(::_pbi::PrivateAccess::GenerateParseTable<KycSubmission>(
-            GetClassData()))
-#endif  // PROTOBUF_MESSAGE_GLOBALS
-  {
-  }
-  ~KycSubmissionGlobalsTypeInternal() {}
-  union {
-    alignas(::_pbi::kMaxMessageAlignment) KycSubmission _default;
-  };
-#ifdef PROTOBUF_MESSAGE_GLOBALS
-  decltype(::_pbi::PrivateAccess::GenerateParseTable<KycSubmission>(
-      ::std::declval<const ::_pbi::ClassData*>())) _table;
-#endif
-};
-#ifdef PROTOBUF_MESSAGE_GLOBALS
-static_assert(PROTOBUF_FIELD_OFFSET(KycSubmissionGlobalsTypeInternal, _default) ==
-              ::_pbi::MessageGlobalsBase::OffsetToDefault());
-#endif  // PROTOBUF_MESSAGE_GLOBALS
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST KycSubmissionGlobalsTypeInternal KycSubmission_globals_
-        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-namespace {
-const ::_pbi::ClassData* KycSubmission_get_class_data() {
-#ifdef PROTOBUF_MESSAGE_GLOBALS
-  return KycSubmission_globals_.GetClassData();
-#else
-  return KycSubmission_class_data_.base();
+  return SubmitKycResponse_class_data_.base();
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 }
 }  // namespace
@@ -5534,153 +5705,6 @@ const ::_pbi::ClassData* GetProfileResponse_get_class_data() {
 }
 }  // namespace
 #endif  // PROTOBUF_CUSTOM_VTABLE
-class SubmitKycResponse::_Internal {
- public:
-  using HasBits = decltype(::std::declval<SubmitKycResponse>()._impl_._has_bits_);
-  static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(SubmitKycResponse, _impl_._has_bits_);
-};
-
-constexpr SubmitKycResponse::ParseTableT_ SubmitKycResponse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
-  return ParseTableT_{
-    {
-      PROTOBUF_FIELD_OFFSET(SubmitKycResponse, _impl_._has_bits_),
-      0, // no _extensions_
-      1, 0,  // max_field_number, fast_idx_mask
-      offsetof(ParseTableT_, field_lookup_table),
-      4294967294,  // skipmap
-      offsetof(ParseTableT_, field_entries),
-      1,  // num_field_entries
-      1,  // num_aux_entries
-      offsetof(ParseTableT_, aux_entries),
-      class_data,
-      nullptr,  // post_loop_handler
-      ::_pbi::TcParser::GenericFallback,  // fallback
-      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-      ::_pbi::TcParser::GetTable<::gridx::auth::v1::SubmitKycResponse>(),  // to_prefetch
-      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
-    }, {{
-      // .gridx.auth.v1.KycSubmission submission = 1 [json_name = "submission"];
-      {::_pbi::TcParser::FastMtS1,
-       {10, 0, 0,
-        PROTOBUF_FIELD_OFFSET(SubmitKycResponse, _impl_.submission_)}},
-    }}, {{
-      65535, 65535
-    }}, {{
-      // .gridx.auth.v1.KycSubmission submission = 1 [json_name = "submission"];
-      {PROTOBUF_FIELD_OFFSET(SubmitKycResponse, _impl_.submission_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    }},
-    {{
-        #ifndef PROTOBUF_MESSAGE_GLOBALS
-        {::_pbi::TcParser::GetTable<::gridx::auth::v1::KycSubmission>()},
-        #else
-        {::_pbi::FieldAuxMessageGlobals(), &::gridx::auth::v1::KycSubmission_globals_},
-        #endif
-    }},
-    {{
-    }},
-  };
-}
-
-
-inline constexpr SubmitKycResponse::Impl_::Impl_(
-    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
-    ::_pbi::ConstantInitialized) noexcept
-      : _cached_size_{0},
-        submission_{nullptr} {}
-
-template <typename>
-constexpr SubmitKycResponse::SubmitKycResponse(::_pbi::ConstantInitialized,
-                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
-    : ::google::protobuf::Message(
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-          class_data
-#endif  // PROTOBUF_CUSTOM_VTABLE
-          ),
-      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
-}
-inline void* PROTOBUF_NONNULL SubmitKycResponse::PlacementNew_(
-    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
-    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
-  return ::new (mem) SubmitKycResponse(arena);
-}
-constexpr auto SubmitKycResponse::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(SubmitKycResponse), alignof(SubmitKycResponse));
-}
-constexpr auto SubmitKycResponse::InternalGenerateClassData_(
-    const MessageLite& prototype,
-    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
-  return ::google::protobuf::internal::ClassDataFull{
-      ::google::protobuf::internal::ClassData{
-          &prototype,
-#ifndef PROTOBUF_MESSAGE_GLOBALS
-          &_table_.header,
-#else
-          tc_table,
-#endif
-          nullptr,  // IsInitialized
-          &SubmitKycResponse::MergeImpl,
-          ::google::protobuf::Message::GetNewImpl<SubmitKycResponse>(),
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-          &SubmitKycResponse::SharedDtor,
-          ::google::protobuf::Message::GetClearImpl<SubmitKycResponse>(), &SubmitKycResponse::ByteSizeLong,
-              &SubmitKycResponse::_InternalSerialize,
-#endif  // PROTOBUF_CUSTOM_VTABLE
-          PROTOBUF_FIELD_OFFSET(SubmitKycResponse, _impl_._cached_size_),
-          false,
-      },
-#ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[34],
-#else   // !PROTOBUF_MESSAGE_GLOBALS
-      &::_pbi::kDescriptorMethods,
-      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
-      nullptr,  // tracker
-#endif  // PROTOBUF_MESSAGE_GLOBALS
-  };
-}
-struct SubmitKycResponseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
-  constexpr SubmitKycResponseGlobalsTypeInternal()
-      :
-#ifndef PROTOBUF_MESSAGE_GLOBALS
-        _default(::_pbi::ConstantInitialized{},
-                 SubmitKycResponse_class_data_.base())
-#else   // !PROTOBUF_MESSAGE_GLOBALS
-        MessageGlobalsBase(SubmitKycResponse::InternalGenerateClassData_(
-            _default, &SubmitKycResponse_globals_._table.header)),
-        _default(::_pbi::ConstantInitialized{}, GetClassData()),
-        _table(::_pbi::PrivateAccess::GenerateParseTable<SubmitKycResponse>(
-            GetClassData()))
-#endif  // PROTOBUF_MESSAGE_GLOBALS
-  {
-  }
-  ~SubmitKycResponseGlobalsTypeInternal() {}
-  union {
-    alignas(::_pbi::kMaxMessageAlignment) SubmitKycResponse _default;
-  };
-#ifdef PROTOBUF_MESSAGE_GLOBALS
-  decltype(::_pbi::PrivateAccess::GenerateParseTable<SubmitKycResponse>(
-      ::std::declval<const ::_pbi::ClassData*>())) _table;
-#endif
-};
-#ifdef PROTOBUF_MESSAGE_GLOBALS
-static_assert(PROTOBUF_FIELD_OFFSET(SubmitKycResponseGlobalsTypeInternal, _default) ==
-              ::_pbi::MessageGlobalsBase::OffsetToDefault());
-#endif  // PROTOBUF_MESSAGE_GLOBALS
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST SubmitKycResponseGlobalsTypeInternal SubmitKycResponse_globals_
-        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-namespace {
-const ::_pbi::ClassData* SubmitKycResponse_get_class_data() {
-#ifdef PROTOBUF_MESSAGE_GLOBALS
-  return SubmitKycResponse_globals_.GetClassData();
-#else
-  return SubmitKycResponse_class_data_.base();
-#endif  // PROTOBUF_MESSAGE_GLOBALS
-}
-}  // namespace
-#endif  // PROTOBUF_CUSTOM_VTABLE
 }  // namespace v1
 }  // namespace auth
 }  // namespace gridx
@@ -5700,17 +5724,19 @@ const ::uint32_t
         1,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterResponse, _impl_._has_bits_),
-        8, // hasbit index offset
+        9, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterResponse, _impl_.user_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterResponse, _impl_.email_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterResponse, _impl_.status_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterResponse, _impl_.created_at_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterResponse, _impl_.name_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterResponse, _impl_.created_at_time_),
         0,
         1,
         2,
         3,
         4,
+        5,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::LoginRequest, _impl_._has_bits_),
         5, // hasbit index offset
@@ -5763,17 +5789,19 @@ const ::uint32_t
         0,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UserProfile, _impl_._has_bits_),
-        8, // hasbit index offset
+        9, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UserProfile, _impl_.user_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UserProfile, _impl_.email_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UserProfile, _impl_.status_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UserProfile, _impl_.created_at_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UserProfile, _impl_.name_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UserProfile, _impl_.created_at_time_),
         0,
         1,
         2,
         3,
         4,
+        5,
         0x000, // bitmap
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::GetProfileResponse, _impl_._has_bits_),
@@ -5945,40 +5973,40 @@ static const ::_pbi::MigrationSchema
     schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
         {0, sizeof(::gridx::auth::v1::RegisterRequest)},
         {7, sizeof(::gridx::auth::v1::RegisterResponse)},
-        {20, sizeof(::gridx::auth::v1::LoginRequest)},
-        {27, sizeof(::gridx::auth::v1::LoginResponse)},
-        {40, sizeof(::gridx::auth::v1::RefreshTokenRequest)},
-        {45, sizeof(::gridx::auth::v1::RefreshTokenResponse)},
-        {54, sizeof(::gridx::auth::v1::LogoutRequest)},
-        {59, sizeof(::gridx::auth::v1::LogoutResponse)},
-        {64, sizeof(::gridx::auth::v1::LogoutAllRequest)},
-        {65, sizeof(::gridx::auth::v1::LogoutAllResponse)},
-        {70, sizeof(::gridx::auth::v1::UserProfile)},
-        {83, sizeof(::gridx::auth::v1::GetProfileRequest)},
-        {84, sizeof(::gridx::auth::v1::GetProfileResponse)},
-        {89, sizeof(::gridx::auth::v1::UpdateProfileRequest)},
-        {94, sizeof(::gridx::auth::v1::UpdateProfileResponse)},
-        {99, sizeof(::gridx::auth::v1::ChangePasswordRequest)},
-        {106, sizeof(::gridx::auth::v1::ChangePasswordResponse)},
-        {111, sizeof(::gridx::auth::v1::RequestPasswordResetRequest)},
-        {116, sizeof(::gridx::auth::v1::RequestPasswordResetResponse)},
-        {121, sizeof(::gridx::auth::v1::ResetPasswordRequest)},
-        {128, sizeof(::gridx::auth::v1::ResetPasswordResponse)},
-        {133, sizeof(::gridx::auth::v1::RequestEmailChangeRequest)},
-        {138, sizeof(::gridx::auth::v1::RequestEmailChangeResponse)},
-        {143, sizeof(::gridx::auth::v1::VerifyEmailChangeRequest)},
-        {148, sizeof(::gridx::auth::v1::VerifyEmailChangeResponse)},
-        {153, sizeof(::gridx::auth::v1::VerifyEmailRequest)},
-        {160, sizeof(::gridx::auth::v1::VerifyEmailResponse)},
-        {167, sizeof(::gridx::auth::v1::ResendOtpRequest)},
-        {172, sizeof(::gridx::auth::v1::ResendOtpResponse)},
-        {177, sizeof(::gridx::auth::v1::GetUserRequest)},
-        {182, sizeof(::gridx::auth::v1::GetUserResponse)},
-        {195, sizeof(::gridx::auth::v1::CheckPermissionRequest)},
-        {202, sizeof(::gridx::auth::v1::CheckPermissionResponse)},
-        {207, sizeof(::gridx::auth::v1::SubmitKycRequest)},
-        {218, sizeof(::gridx::auth::v1::SubmitKycResponse)},
-        {223, sizeof(::gridx::auth::v1::KycSubmission)},
+        {22, sizeof(::gridx::auth::v1::LoginRequest)},
+        {29, sizeof(::gridx::auth::v1::LoginResponse)},
+        {42, sizeof(::gridx::auth::v1::RefreshTokenRequest)},
+        {47, sizeof(::gridx::auth::v1::RefreshTokenResponse)},
+        {56, sizeof(::gridx::auth::v1::LogoutRequest)},
+        {61, sizeof(::gridx::auth::v1::LogoutResponse)},
+        {66, sizeof(::gridx::auth::v1::LogoutAllRequest)},
+        {67, sizeof(::gridx::auth::v1::LogoutAllResponse)},
+        {72, sizeof(::gridx::auth::v1::UserProfile)},
+        {87, sizeof(::gridx::auth::v1::GetProfileRequest)},
+        {88, sizeof(::gridx::auth::v1::GetProfileResponse)},
+        {93, sizeof(::gridx::auth::v1::UpdateProfileRequest)},
+        {98, sizeof(::gridx::auth::v1::UpdateProfileResponse)},
+        {103, sizeof(::gridx::auth::v1::ChangePasswordRequest)},
+        {110, sizeof(::gridx::auth::v1::ChangePasswordResponse)},
+        {115, sizeof(::gridx::auth::v1::RequestPasswordResetRequest)},
+        {120, sizeof(::gridx::auth::v1::RequestPasswordResetResponse)},
+        {125, sizeof(::gridx::auth::v1::ResetPasswordRequest)},
+        {132, sizeof(::gridx::auth::v1::ResetPasswordResponse)},
+        {137, sizeof(::gridx::auth::v1::RequestEmailChangeRequest)},
+        {142, sizeof(::gridx::auth::v1::RequestEmailChangeResponse)},
+        {147, sizeof(::gridx::auth::v1::VerifyEmailChangeRequest)},
+        {152, sizeof(::gridx::auth::v1::VerifyEmailChangeResponse)},
+        {157, sizeof(::gridx::auth::v1::VerifyEmailRequest)},
+        {164, sizeof(::gridx::auth::v1::VerifyEmailResponse)},
+        {171, sizeof(::gridx::auth::v1::ResendOtpRequest)},
+        {176, sizeof(::gridx::auth::v1::ResendOtpResponse)},
+        {181, sizeof(::gridx::auth::v1::GetUserRequest)},
+        {186, sizeof(::gridx::auth::v1::GetUserResponse)},
+        {199, sizeof(::gridx::auth::v1::CheckPermissionRequest)},
+        {206, sizeof(::gridx::auth::v1::CheckPermissionResponse)},
+        {211, sizeof(::gridx::auth::v1::SubmitKycRequest)},
+        {222, sizeof(::gridx::auth::v1::SubmitKycResponse)},
+        {227, sizeof(::gridx::auth::v1::KycSubmission)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
     file_message_globals[] = {
@@ -6025,126 +6053,130 @@ const char descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto[] ABSL_ATT
     "1\032\037google/protobuf/timestamp.proto\032\026goog"
     "le/type/date.proto\"C\n\017RegisterRequest\022\024\n"
     "\005email\030\001 \001(\tR\005email\022\032\n\010password\030\002 \001(\tR\010p"
-    "assword\"\214\001\n\020RegisterResponse\022\027\n\007user_id\030"
+    "assword\"\324\001\n\020RegisterResponse\022\027\n\007user_id\030"
     "\001 \001(\tR\006userId\022\024\n\005email\030\002 \001(\tR\005email\022\026\n\006s"
-    "tatus\030\003 \001(\tR\006status\022\035\n\ncreated_at\030\004 \001(\tR"
-    "\tcreatedAt\022\022\n\004name\030\005 \001(\tR\004name\"@\n\014LoginR"
-    "equest\022\024\n\005email\030\001 \001(\tR\005email\022\032\n\010password"
-    "\030\002 \001(\tR\010password\"\245\001\n\rLoginResponse\022\027\n\007us"
-    "er_id\030\001 \001(\tR\006userId\022\024\n\005email\030\002 \001(\tR\005emai"
-    "l\022!\n\014access_token\030\003 \001(\tR\013accessToken\022#\n\r"
-    "refresh_token\030\004 \001(\tR\014refreshToken\022\035\n\nexp"
-    "ires_in\030\005 \001(\003R\texpiresIn\":\n\023RefreshToken"
-    "Request\022#\n\rrefresh_token\030\001 \001(\tR\014refreshT"
-    "oken\"}\n\024RefreshTokenResponse\022!\n\014access_t"
-    "oken\030\001 \001(\tR\013accessToken\022#\n\rrefresh_token"
-    "\030\002 \001(\tR\014refreshToken\022\035\n\nexpires_in\030\003 \001(\005"
-    "R\texpiresIn\"4\n\rLogoutRequest\022#\n\rrefresh_"
-    "token\030\001 \001(\tR\014refreshToken\"*\n\016LogoutRespo"
-    "nse\022\030\n\007success\030\001 \001(\010R\007success\"\022\n\020LogoutA"
-    "llRequest\"-\n\021LogoutAllResponse\022\030\n\007succes"
-    "s\030\001 \001(\010R\007success\"\252\001\n\013UserProfile\022\027\n\007user"
-    "_id\030\001 \001(\tR\006userId\022\024\n\005email\030\002 \001(\tR\005email\022"
-    "\026\n\006status\030\005 \001(\tR\006status\022\035\n\ncreated_at\030\006 "
-    "\001(\tR\tcreatedAt\022\022\n\004name\030\007 \001(\tR\004nameJ\004\010\003\020\004"
-    "J\004\010\004\020\005R\nfirst_nameR\tlast_name\"\023\n\021GetProf"
-    "ileRequest\"J\n\022GetProfileResponse\0224\n\007prof"
-    "ile\030\001 \001(\0132\032.gridx.auth.v1.UserProfileR\007p"
-    "rofile\"M\n\024UpdateProfileRequest\022\022\n\004name\030\003"
-    " \001(\tR\004nameJ\004\010\001\020\002J\004\010\002\020\003R\nfirst_nameR\tlast"
-    "_name\"M\n\025UpdateProfileResponse\0224\n\007profil"
-    "e\030\001 \001(\0132\032.gridx.auth.v1.UserProfileR\007pro"
-    "file\"e\n\025ChangePasswordRequest\022)\n\020current"
-    "_password\030\001 \001(\tR\017currentPassword\022!\n\014new_"
-    "password\030\002 \001(\tR\013newPassword\"2\n\026ChangePas"
-    "swordResponse\022\030\n\007success\030\001 \001(\010R\007success\""
-    "3\n\033RequestPasswordResetRequest\022\024\n\005email\030"
-    "\001 \001(\tR\005email\"8\n\034RequestPasswordResetResp"
-    "onse\022\030\n\007success\030\001 \001(\010R\007success\"O\n\024ResetP"
-    "asswordRequest\022\024\n\005token\030\001 \001(\tR\005token\022!\n\014"
-    "new_password\030\002 \001(\tR\013newPassword\"1\n\025Reset"
-    "PasswordResponse\022\030\n\007success\030\001 \001(\010R\007succe"
-    "ss\"8\n\031RequestEmailChangeRequest\022\033\n\tnew_e"
-    "mail\030\001 \001(\tR\010newEmail\"6\n\032RequestEmailChan"
-    "geResponse\022\030\n\007success\030\001 \001(\010R\007success\"0\n\030"
-    "VerifyEmailChangeRequest\022\024\n\005token\030\001 \001(\tR"
-    "\005token\"Q\n\031VerifyEmailChangeResponse\0224\n\007p"
-    "rofile\030\001 \001(\0132\032.gridx.auth.v1.UserProfile"
-    "R\007profile\"<\n\022VerifyEmailRequest\022\024\n\005email"
-    "\030\001 \001(\tR\005email\022\020\n\003otp\030\002 \001(\tR\003otp\"I\n\023Verif"
-    "yEmailResponse\022\030\n\007success\030\001 \001(\010R\007success"
-    "\022\030\n\007message\030\002 \001(\tR\007message\"(\n\020ResendOtpR"
-    "equest\022\024\n\005email\030\001 \001(\tR\005email\"-\n\021ResendOt"
-    "pResponse\022\030\n\007success\030\001 \001(\010R\007success\")\n\016G"
-    "etUserRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"\200"
-    "\001\n\017GetUserResponse\022\027\n\007user_id\030\001 \001(\tR\006use"
-    "rId\022\024\n\005email\030\002 \001(\tR\005email\022\026\n\006status\030\003 \001("
-    "\tR\006status\022\022\n\004role\030\004 \001(\tR\004role\022\022\n\004name\030\005 "
-    "\001(\tR\004name\"Z\n\026CheckPermissionRequest\022\027\n\007u"
-    "ser_id\030\001 \001(\tR\006userId\022\'\n\017permission_name\030"
-    "\002 \001(\tR\016permissionName\"3\n\027CheckPermission"
-    "Response\022\030\n\007allowed\030\001 \001(\010R\007allowed\"\246\001\n\020S"
-    "ubmitKycRequest\022\033\n\tfull_name\030\001 \001(\tR\010full"
-    "Name\0225\n\rdate_of_birth\030\002 \001(\0132\021.google.typ"
-    "e.DateR\013dateOfBirth\022\031\n\010dubai_id\030\003 \001(\tR\007d"
-    "ubaiId\022#\n\rdocument_path\030\004 \001(\tR\014documentP"
-    "ath\"Q\n\021SubmitKycResponse\022<\n\nsubmission\030\001"
-    " \001(\0132\034.gridx.auth.v1.KycSubmissionR\nsubm"
-    "ission\"\331\003\n\rKycSubmission\022\016\n\002id\030\001 \001(\tR\002id"
-    "\022\027\n\007user_id\030\002 \001(\tR\006userId\022\033\n\tfull_name\030\003"
-    " \001(\tR\010fullName\0225\n\rdate_of_birth\030\004 \001(\0132\021."
-    "google.type.DateR\013dateOfBirth\022\031\n\010dubai_i"
-    "d\030\005 \001(\tR\007dubaiId\022#\n\rdocument_path\030\006 \001(\tR"
-    "\014documentPath\022-\n\005state\030\007 \001(\0162\027.gridx.aut"
-    "h.v1.KycStateR\005state\022)\n\020rejection_reason"
-    "\030\010 \001(\tR\017rejectionReason\022;\n\013verified_at\030\t"
-    " \001(\0132\032.google.protobuf.TimestampR\nverifi"
-    "edAt\0229\n\ncreated_at\030\n \001(\0132\032.google.protob"
-    "uf.TimestampR\tcreatedAt\0229\n\nupdated_at\030\013 "
-    "\001(\0132\032.google.protobuf.TimestampR\tupdated"
-    "At*l\n\010KycState\022\031\n\025KYC_STATE_UNSPECIFIED\020"
-    "\000\022\025\n\021KYC_STATE_PENDING\020\001\022\026\n\022KYC_STATE_VE"
-    "RIFIED\020\002\022\026\n\022KYC_STATE_REJECTED\020\0032\336\013\n\013Aut"
-    "hService\022K\n\010Register\022\036.gridx.auth.v1.Reg"
-    "isterRequest\032\037.gridx.auth.v1.RegisterRes"
-    "ponse\022B\n\005Login\022\033.gridx.auth.v1.LoginRequ"
-    "est\032\034.gridx.auth.v1.LoginResponse\022E\n\006Log"
-    "out\022\034.gridx.auth.v1.LogoutRequest\032\035.grid"
-    "x.auth.v1.LogoutResponse\022N\n\tLogoutAll\022\037."
-    "gridx.auth.v1.LogoutAllRequest\032 .gridx.a"
-    "uth.v1.LogoutAllResponse\022Q\n\nGetProfile\022 "
-    ".gridx.auth.v1.GetProfileRequest\032!.gridx"
-    ".auth.v1.GetProfileResponse\022Z\n\rUpdatePro"
-    "file\022#.gridx.auth.v1.UpdateProfileReques"
-    "t\032$.gridx.auth.v1.UpdateProfileResponse\022"
-    "]\n\016ChangePassword\022$.gridx.auth.v1.Change"
-    "PasswordRequest\032%.gridx.auth.v1.ChangePa"
-    "sswordResponse\022o\n\024RequestPasswordReset\022*"
-    ".gridx.auth.v1.RequestPasswordResetReque"
-    "st\032+.gridx.auth.v1.RequestPasswordResetR"
-    "esponse\022Z\n\rResetPassword\022#.gridx.auth.v1"
-    ".ResetPasswordRequest\032$.gridx.auth.v1.Re"
-    "setPasswordResponse\022i\n\022RequestEmailChang"
-    "e\022(.gridx.auth.v1.RequestEmailChangeRequ"
-    "est\032).gridx.auth.v1.RequestEmailChangeRe"
-    "sponse\022f\n\021VerifyEmailChange\022\'.gridx.auth"
-    ".v1.VerifyEmailChangeRequest\032(.gridx.aut"
-    "h.v1.VerifyEmailChangeResponse\022H\n\007GetUse"
-    "r\022\035.gridx.auth.v1.GetUserRequest\032\036.gridx"
-    ".auth.v1.GetUserResponse\022`\n\017CheckPermiss"
-    "ion\022%.gridx.auth.v1.CheckPermissionReque"
-    "st\032&.gridx.auth.v1.CheckPermissionRespon"
-    "se\022T\n\013VerifyEmail\022!.gridx.auth.v1.Verify"
-    "EmailRequest\032\".gridx.auth.v1.VerifyEmail"
-    "Response\022N\n\tResendOtp\022\037.gridx.auth.v1.Re"
-    "sendOtpRequest\032 .gridx.auth.v1.ResendOtp"
-    "Response\022N\n\tSubmitKyc\022\037.gridx.auth.v1.Su"
-    "bmitKycRequest\032 .gridx.auth.v1.SubmitKyc"
-    "Response\022W\n\014RefreshToken\022\".gridx.auth.v1"
-    ".RefreshTokenRequest\032#.gridx.auth.v1.Ref"
-    "reshTokenResponseBHZFgithub.com/p2p-ener"
-    "gy-trading-platform/go-sdk/gen/gridx/aut"
-    "h/v1;authv1b\006proto3"
+    "tatus\030\003 \001(\tR\006status\022!\n\ncreated_at\030\004 \001(\tB"
+    "\002\030\001R\tcreatedAt\022\022\n\004name\030\005 \001(\tR\004name\022B\n\017cr"
+    "eated_at_time\030\006 \001(\0132\032.google.protobuf.Ti"
+    "mestampR\rcreatedAtTime\"@\n\014LoginRequest\022\024"
+    "\n\005email\030\001 \001(\tR\005email\022\032\n\010password\030\002 \001(\tR\010"
+    "password\"\245\001\n\rLoginResponse\022\027\n\007user_id\030\001 "
+    "\001(\tR\006userId\022\024\n\005email\030\002 \001(\tR\005email\022!\n\014acc"
+    "ess_token\030\003 \001(\tR\013accessToken\022#\n\rrefresh_"
+    "token\030\004 \001(\tR\014refreshToken\022\035\n\nexpires_in\030"
+    "\005 \001(\003R\texpiresIn\":\n\023RefreshTokenRequest\022"
+    "#\n\rrefresh_token\030\001 \001(\tR\014refreshToken\"}\n\024"
+    "RefreshTokenResponse\022!\n\014access_token\030\001 \001"
+    "(\tR\013accessToken\022#\n\rrefresh_token\030\002 \001(\tR\014"
+    "refreshToken\022\035\n\nexpires_in\030\003 \001(\005R\texpire"
+    "sIn\"4\n\rLogoutRequest\022#\n\rrefresh_token\030\001 "
+    "\001(\tR\014refreshToken\"*\n\016LogoutResponse\022\030\n\007s"
+    "uccess\030\001 \001(\010R\007success\"\022\n\020LogoutAllReques"
+    "t\"-\n\021LogoutAllResponse\022\030\n\007success\030\001 \001(\010R"
+    "\007success\"\362\001\n\013UserProfile\022\027\n\007user_id\030\001 \001("
+    "\tR\006userId\022\024\n\005email\030\002 \001(\tR\005email\022\026\n\006statu"
+    "s\030\005 \001(\tR\006status\022!\n\ncreated_at\030\006 \001(\tB\002\030\001R"
+    "\tcreatedAt\022\022\n\004name\030\007 \001(\tR\004name\022B\n\017create"
+    "d_at_time\030\010 \001(\0132\032.google.protobuf.Timest"
+    "ampR\rcreatedAtTimeJ\004\010\003\020\004J\004\010\004\020\005R\nfirst_na"
+    "meR\tlast_name\"\023\n\021GetProfileRequest\"J\n\022Ge"
+    "tProfileResponse\0224\n\007profile\030\001 \001(\0132\032.grid"
+    "x.auth.v1.UserProfileR\007profile\"M\n\024Update"
+    "ProfileRequest\022\022\n\004name\030\003 \001(\tR\004nameJ\004\010\001\020\002"
+    "J\004\010\002\020\003R\nfirst_nameR\tlast_name\"M\n\025UpdateP"
+    "rofileResponse\0224\n\007profile\030\001 \001(\0132\032.gridx."
+    "auth.v1.UserProfileR\007profile\"e\n\025ChangePa"
+    "sswordRequest\022)\n\020current_password\030\001 \001(\tR"
+    "\017currentPassword\022!\n\014new_password\030\002 \001(\tR\013"
+    "newPassword\"2\n\026ChangePasswordResponse\022\030\n"
+    "\007success\030\001 \001(\010R\007success\"3\n\033RequestPasswo"
+    "rdResetRequest\022\024\n\005email\030\001 \001(\tR\005email\"8\n\034"
+    "RequestPasswordResetResponse\022\030\n\007success\030"
+    "\001 \001(\010R\007success\"O\n\024ResetPasswordRequest\022\024"
+    "\n\005token\030\001 \001(\tR\005token\022!\n\014new_password\030\002 \001"
+    "(\tR\013newPassword\"1\n\025ResetPasswordResponse"
+    "\022\030\n\007success\030\001 \001(\010R\007success\"8\n\031RequestEma"
+    "ilChangeRequest\022\033\n\tnew_email\030\001 \001(\tR\010newE"
+    "mail\"6\n\032RequestEmailChangeResponse\022\030\n\007su"
+    "ccess\030\001 \001(\010R\007success\"0\n\030VerifyEmailChang"
+    "eRequest\022\024\n\005token\030\001 \001(\tR\005token\"Q\n\031Verify"
+    "EmailChangeResponse\0224\n\007profile\030\001 \001(\0132\032.g"
+    "ridx.auth.v1.UserProfileR\007profile\"<\n\022Ver"
+    "ifyEmailRequest\022\024\n\005email\030\001 \001(\tR\005email\022\020\n"
+    "\003otp\030\002 \001(\tR\003otp\"I\n\023VerifyEmailResponse\022\030"
+    "\n\007success\030\001 \001(\010R\007success\022\030\n\007message\030\002 \001("
+    "\tR\007message\"(\n\020ResendOtpRequest\022\024\n\005email\030"
+    "\001 \001(\tR\005email\"-\n\021ResendOtpResponse\022\030\n\007suc"
+    "cess\030\001 \001(\010R\007success\")\n\016GetUserRequest\022\027\n"
+    "\007user_id\030\001 \001(\tR\006userId\"\200\001\n\017GetUserRespon"
+    "se\022\027\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005email\030\002 \001"
+    "(\tR\005email\022\026\n\006status\030\003 \001(\tR\006status\022\022\n\004rol"
+    "e\030\004 \001(\tR\004role\022\022\n\004name\030\005 \001(\tR\004name\"Z\n\026Che"
+    "ckPermissionRequest\022\027\n\007user_id\030\001 \001(\tR\006us"
+    "erId\022\'\n\017permission_name\030\002 \001(\tR\016permissio"
+    "nName\"3\n\027CheckPermissionResponse\022\030\n\007allo"
+    "wed\030\001 \001(\010R\007allowed\"\246\001\n\020SubmitKycRequest\022"
+    "\033\n\tfull_name\030\001 \001(\tR\010fullName\0225\n\rdate_of_"
+    "birth\030\002 \001(\0132\021.google.type.DateR\013dateOfBi"
+    "rth\022\031\n\010dubai_id\030\003 \001(\tR\007dubaiId\022#\n\rdocume"
+    "nt_path\030\004 \001(\tR\014documentPath\"Q\n\021SubmitKyc"
+    "Response\022<\n\nsubmission\030\001 \001(\0132\034.gridx.aut"
+    "h.v1.KycSubmissionR\nsubmission\"\331\003\n\rKycSu"
+    "bmission\022\016\n\002id\030\001 \001(\tR\002id\022\027\n\007user_id\030\002 \001("
+    "\tR\006userId\022\033\n\tfull_name\030\003 \001(\tR\010fullName\0225"
+    "\n\rdate_of_birth\030\004 \001(\0132\021.google.type.Date"
+    "R\013dateOfBirth\022\031\n\010dubai_id\030\005 \001(\tR\007dubaiId"
+    "\022#\n\rdocument_path\030\006 \001(\tR\014documentPath\022-\n"
+    "\005state\030\007 \001(\0162\027.gridx.auth.v1.KycStateR\005s"
+    "tate\022)\n\020rejection_reason\030\010 \001(\tR\017rejectio"
+    "nReason\022;\n\013verified_at\030\t \001(\0132\032.google.pr"
+    "otobuf.TimestampR\nverifiedAt\0229\n\ncreated_"
+    "at\030\n \001(\0132\032.google.protobuf.TimestampR\tcr"
+    "eatedAt\0229\n\nupdated_at\030\013 \001(\0132\032.google.pro"
+    "tobuf.TimestampR\tupdatedAt*l\n\010KycState\022\031"
+    "\n\025KYC_STATE_UNSPECIFIED\020\000\022\025\n\021KYC_STATE_P"
+    "ENDING\020\001\022\026\n\022KYC_STATE_VERIFIED\020\002\022\026\n\022KYC_"
+    "STATE_REJECTED\020\0032\336\013\n\013AuthService\022K\n\010Regi"
+    "ster\022\036.gridx.auth.v1.RegisterRequest\032\037.g"
+    "ridx.auth.v1.RegisterResponse\022B\n\005Login\022\033"
+    ".gridx.auth.v1.LoginRequest\032\034.gridx.auth"
+    ".v1.LoginResponse\022E\n\006Logout\022\034.gridx.auth"
+    ".v1.LogoutRequest\032\035.gridx.auth.v1.Logout"
+    "Response\022N\n\tLogoutAll\022\037.gridx.auth.v1.Lo"
+    "goutAllRequest\032 .gridx.auth.v1.LogoutAll"
+    "Response\022Q\n\nGetProfile\022 .gridx.auth.v1.G"
+    "etProfileRequest\032!.gridx.auth.v1.GetProf"
+    "ileResponse\022Z\n\rUpdateProfile\022#.gridx.aut"
+    "h.v1.UpdateProfileRequest\032$.gridx.auth.v"
+    "1.UpdateProfileResponse\022]\n\016ChangePasswor"
+    "d\022$.gridx.auth.v1.ChangePasswordRequest\032"
+    "%.gridx.auth.v1.ChangePasswordResponse\022o"
+    "\n\024RequestPasswordReset\022*.gridx.auth.v1.R"
+    "equestPasswordResetRequest\032+.gridx.auth."
+    "v1.RequestPasswordResetResponse\022Z\n\rReset"
+    "Password\022#.gridx.auth.v1.ResetPasswordRe"
+    "quest\032$.gridx.auth.v1.ResetPasswordRespo"
+    "nse\022i\n\022RequestEmailChange\022(.gridx.auth.v"
+    "1.RequestEmailChangeRequest\032).gridx.auth"
+    ".v1.RequestEmailChangeResponse\022f\n\021Verify"
+    "EmailChange\022\'.gridx.auth.v1.VerifyEmailC"
+    "hangeRequest\032(.gridx.auth.v1.VerifyEmail"
+    "ChangeResponse\022H\n\007GetUser\022\035.gridx.auth.v"
+    "1.GetUserRequest\032\036.gridx.auth.v1.GetUser"
+    "Response\022`\n\017CheckPermission\022%.gridx.auth"
+    ".v1.CheckPermissionRequest\032&.gridx.auth."
+    "v1.CheckPermissionResponse\022T\n\013VerifyEmai"
+    "l\022!.gridx.auth.v1.VerifyEmailRequest\032\".g"
+    "ridx.auth.v1.VerifyEmailResponse\022N\n\tRese"
+    "ndOtp\022\037.gridx.auth.v1.ResendOtpRequest\032 "
+    ".gridx.auth.v1.ResendOtpResponse\022N\n\tSubm"
+    "itKyc\022\037.gridx.auth.v1.SubmitKycRequest\032 "
+    ".gridx.auth.v1.SubmitKycResponse\022W\n\014Refr"
+    "eshToken\022\".gridx.auth.v1.RefreshTokenReq"
+    "uest\032#.gridx.auth.v1.RefreshTokenRespons"
+    "eBHZFgithub.com/p2p-energy-trading-platf"
+    "orm/go-sdk/gen/gridx/auth/v1;authv1b\006pro"
+    "to3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_deps[2] = {
@@ -6155,7 +6187,7 @@ static ::absl::once_flag descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto = {
     false,
     false,
-    4939,
+    5083,
     descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto,
     "gridx/auth/v1/auth.proto",
     &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_once,
@@ -6432,6 +6464,11 @@ void RegisterRequest::InternalSwap(RegisterRequest* PROTOBUF_RESTRICT PROTOBUF_N
 }
 // ===================================================================
 
+void RegisterResponse::clear_created_at_time() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.created_at_time_ != nullptr) _impl_.created_at_time_->Clear();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+}
 RegisterResponse::RegisterResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, RegisterResponse_get_class_data()) {
@@ -6467,6 +6504,10 @@ RegisterResponse::RegisterResponse(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.created_at_time_ = (CheckHasBit(cached_has_bits, 0x00000020U))
+                ? ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.created_at_time_)
+                : nullptr;
 
   // @@protoc_insertion_point(copy_constructor:gridx.auth.v1.RegisterResponse)
 }
@@ -6482,6 +6523,7 @@ PROTOBUF_NDEBUG_INLINE RegisterResponse::Impl_::Impl_(
 
 inline void RegisterResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.created_at_time_ = {};
 }
 RegisterResponse::~RegisterResponse() {
   // @@protoc_insertion_point(destructor:gridx.auth.v1.RegisterResponse)
@@ -6499,6 +6541,7 @@ inline void RegisterResponse::SharedDtor(MessageLite& self) {
   this_._impl_.status_.Destroy();
   this_._impl_.created_at_.Destroy();
   this_._impl_.name_.Destroy();
+  delete this_._impl_.created_at_time_;
   this_._impl_.~Impl_();
 }
 
@@ -6536,7 +6579,7 @@ PROTOBUF_NOINLINE void RegisterResponse::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000001fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       _impl_.user_id_.ClearNonDefaultToEmpty();
     }
@@ -6551,6 +6594,10 @@ PROTOBUF_NOINLINE void RegisterResponse::Clear() {
     }
     if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       _impl_.name_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      ABSL_DCHECK(_impl_.created_at_time_ != nullptr);
+      _impl_.created_at_time_->Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -6606,7 +6653,7 @@ PROTOBUF_NOINLINE void RegisterResponse::Clear() {
     }
   }
 
-  // string created_at = 4 [json_name = "createdAt"];
+  // string created_at = 4 [json_name = "createdAt", deprecated = true];
   if (CheckHasBit(cached_has_bits, 0x00000008U)) {
     if (!this_._internal_created_at().empty()) {
       const ::std::string& _s = this_._internal_created_at();
@@ -6624,6 +6671,13 @@ PROTOBUF_NOINLINE void RegisterResponse::Clear() {
           _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.RegisterResponse.name");
       target = stream->WriteStringMaybeAliased(5, _s, target);
     }
+  }
+
+  // .google.protobuf.Timestamp created_at_time = 6 [json_name = "createdAtTime"];
+  if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        6, *this_._impl_.created_at_time_, this_._impl_.created_at_time_->GetCachedSize(), target,
+        stream);
   }
 
   if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
@@ -6651,7 +6705,7 @@ PROTOBUF_NOINLINE void RegisterResponse::Clear() {
 
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000001fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
     // string user_id = 1 [json_name = "userId"];
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!this_._internal_user_id().empty()) {
@@ -6673,7 +6727,7 @@ PROTOBUF_NOINLINE void RegisterResponse::Clear() {
                                         this_._internal_status());
       }
     }
-    // string created_at = 4 [json_name = "createdAt"];
+    // string created_at = 4 [json_name = "createdAt", deprecated = true];
     if (CheckHasBit(cached_has_bits, 0x00000008U)) {
       if (!this_._internal_created_at().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -6687,6 +6741,11 @@ PROTOBUF_NOINLINE void RegisterResponse::Clear() {
                                         this_._internal_name());
       }
     }
+    // .google.protobuf.Timestamp created_at_time = 6 [json_name = "createdAtTime"];
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.created_at_time_);
+    }
   }
   return this_.MaybeComputeUnknownFieldsSize(total_size,
                                              &this_._impl_._cached_size_);
@@ -6699,13 +6758,14 @@ void RegisterResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
   if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
     from.CheckHasBitConsistency();
   }
+  ::google::protobuf::Arena* arena = _this->GetArena();
   // @@protoc_insertion_point(class_specific_merge_from_start:gridx.auth.v1.RegisterResponse)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000001fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!from._internal_user_id().empty()) {
         _this->_internal_set_user_id(from._internal_user_id());
@@ -6751,6 +6811,14 @@ void RegisterResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
         }
       }
     }
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      ABSL_DCHECK(from._impl_.created_at_time_ != nullptr);
+      if (_this->_impl_.created_at_time_ == nullptr) {
+        _this->_impl_.created_at_time_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.created_at_time_);
+      } else {
+        _this->_impl_.created_at_time_->MergeFrom(*from._impl_.created_at_time_);
+      }
+    }
   }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
@@ -6776,6 +6844,7 @@ void RegisterResponse::InternalSwap(RegisterResponse* PROTOBUF_RESTRICT PROTOBUF
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.status_, &other->_impl_.status_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.created_at_, &other->_impl_.created_at_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, &other->_impl_.name_, arena);
+  swap(_impl_.created_at_time_, other->_impl_.created_at_time_);
 }
 
 ::google::protobuf::Metadata RegisterResponse::GetMetadata() const {
@@ -8522,6 +8591,11 @@ void LogoutAllResponse::InternalSwap(LogoutAllResponse* PROTOBUF_RESTRICT PROTOB
 }
 // ===================================================================
 
+void UserProfile::clear_created_at_time() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.created_at_time_ != nullptr) _impl_.created_at_time_->Clear();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+}
 UserProfile::UserProfile(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, UserProfile_get_class_data()) {
@@ -8557,6 +8631,10 @@ UserProfile::UserProfile(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.created_at_time_ = (CheckHasBit(cached_has_bits, 0x00000020U))
+                ? ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.created_at_time_)
+                : nullptr;
 
   // @@protoc_insertion_point(copy_constructor:gridx.auth.v1.UserProfile)
 }
@@ -8572,6 +8650,7 @@ PROTOBUF_NDEBUG_INLINE UserProfile::Impl_::Impl_(
 
 inline void UserProfile::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.created_at_time_ = {};
 }
 UserProfile::~UserProfile() {
   // @@protoc_insertion_point(destructor:gridx.auth.v1.UserProfile)
@@ -8589,6 +8668,7 @@ inline void UserProfile::SharedDtor(MessageLite& self) {
   this_._impl_.status_.Destroy();
   this_._impl_.created_at_.Destroy();
   this_._impl_.name_.Destroy();
+  delete this_._impl_.created_at_time_;
   this_._impl_.~Impl_();
 }
 
@@ -8626,7 +8706,7 @@ PROTOBUF_NOINLINE void UserProfile::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000001fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       _impl_.user_id_.ClearNonDefaultToEmpty();
     }
@@ -8641,6 +8721,10 @@ PROTOBUF_NOINLINE void UserProfile::Clear() {
     }
     if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       _impl_.name_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      ABSL_DCHECK(_impl_.created_at_time_ != nullptr);
+      _impl_.created_at_time_->Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -8696,7 +8780,7 @@ PROTOBUF_NOINLINE void UserProfile::Clear() {
     }
   }
 
-  // string created_at = 6 [json_name = "createdAt"];
+  // string created_at = 6 [json_name = "createdAt", deprecated = true];
   if (CheckHasBit(cached_has_bits, 0x00000008U)) {
     if (!this_._internal_created_at().empty()) {
       const ::std::string& _s = this_._internal_created_at();
@@ -8714,6 +8798,13 @@ PROTOBUF_NOINLINE void UserProfile::Clear() {
           _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.UserProfile.name");
       target = stream->WriteStringMaybeAliased(7, _s, target);
     }
+  }
+
+  // .google.protobuf.Timestamp created_at_time = 8 [json_name = "createdAtTime"];
+  if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        8, *this_._impl_.created_at_time_, this_._impl_.created_at_time_->GetCachedSize(), target,
+        stream);
   }
 
   if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
@@ -8741,7 +8832,7 @@ PROTOBUF_NOINLINE void UserProfile::Clear() {
 
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000001fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
     // string user_id = 1 [json_name = "userId"];
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!this_._internal_user_id().empty()) {
@@ -8763,7 +8854,7 @@ PROTOBUF_NOINLINE void UserProfile::Clear() {
                                         this_._internal_status());
       }
     }
-    // string created_at = 6 [json_name = "createdAt"];
+    // string created_at = 6 [json_name = "createdAt", deprecated = true];
     if (CheckHasBit(cached_has_bits, 0x00000008U)) {
       if (!this_._internal_created_at().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -8777,6 +8868,11 @@ PROTOBUF_NOINLINE void UserProfile::Clear() {
                                         this_._internal_name());
       }
     }
+    // .google.protobuf.Timestamp created_at_time = 8 [json_name = "createdAtTime"];
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.created_at_time_);
+    }
   }
   return this_.MaybeComputeUnknownFieldsSize(total_size,
                                              &this_._impl_._cached_size_);
@@ -8789,13 +8885,14 @@ void UserProfile::MergeImpl(::google::protobuf::MessageLite& to_msg,
   if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
     from.CheckHasBitConsistency();
   }
+  ::google::protobuf::Arena* arena = _this->GetArena();
   // @@protoc_insertion_point(class_specific_merge_from_start:gridx.auth.v1.UserProfile)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000001fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!from._internal_user_id().empty()) {
         _this->_internal_set_user_id(from._internal_user_id());
@@ -8841,6 +8938,14 @@ void UserProfile::MergeImpl(::google::protobuf::MessageLite& to_msg,
         }
       }
     }
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      ABSL_DCHECK(from._impl_.created_at_time_ != nullptr);
+      if (_this->_impl_.created_at_time_ == nullptr) {
+        _this->_impl_.created_at_time_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.created_at_time_);
+      } else {
+        _this->_impl_.created_at_time_->MergeFrom(*from._impl_.created_at_time_);
+      }
+    }
   }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
@@ -8866,6 +8971,7 @@ void UserProfile::InternalSwap(UserProfile* PROTOBUF_RESTRICT PROTOBUF_NONNULL o
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.status_, &other->_impl_.status_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.created_at_, &other->_impl_.created_at_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, &other->_impl_.name_, arena);
+  swap(_impl_.created_at_time_, other->_impl_.created_at_time_);
 }
 
 ::google::protobuf::Metadata UserProfile::GetMetadata() const {
