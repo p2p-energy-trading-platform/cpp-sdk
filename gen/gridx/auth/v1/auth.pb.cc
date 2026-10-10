@@ -1878,11 +1878,11 @@ constexpr RegisterRequest::ParseTableT_ RegisterRequest::InternalGenerateParseTa
     {
       PROTOBUF_FIELD_OFFSET(RegisterRequest, _impl_._has_bits_),
       0, // no _extensions_
-      2, 8,  // max_field_number, fast_idx_mask
+      3, 24,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967292,  // skipmap
+      4294967288,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      2,  // num_field_entries
+      3,  // num_field_entries
       0,  // num_aux_entries
       offsetof(ParseTableT_, field_names),  // no aux_entries
       class_data,
@@ -1892,14 +1892,19 @@ constexpr RegisterRequest::ParseTableT_ RegisterRequest::InternalGenerateParseTa
       ::_pbi::TcParser::GetTable<::gridx::auth::v1::RegisterRequest>(),  // to_prefetch
       #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
     }, {{
-      // string password = 2 [json_name = "password"];
-      {::_pbi::TcParser::FastUS1,
-       {18, 1, 0,
-        PROTOBUF_FIELD_OFFSET(RegisterRequest, _impl_.password_)}},
+      {::_pbi::TcParser::MiniParse, {}},
       // string email = 1 [json_name = "email"];
       {::_pbi::TcParser::FastUS1,
        {10, 0, 0,
         PROTOBUF_FIELD_OFFSET(RegisterRequest, _impl_.email_)}},
+      // string password = 2 [json_name = "password"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(RegisterRequest, _impl_.password_)}},
+      // string name = 3 [json_name = "name"];
+      {::_pbi::TcParser::FastUS1,
+       {26, 2, 0,
+        PROTOBUF_FIELD_OFFSET(RegisterRequest, _impl_.name_)}},
     }}, {{
       65535, 65535
     }}, {{
@@ -1907,13 +1912,16 @@ constexpr RegisterRequest::ParseTableT_ RegisterRequest::InternalGenerateParseTa
       {PROTOBUF_FIELD_OFFSET(RegisterRequest, _impl_.email_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // string password = 2 [json_name = "password"];
       {PROTOBUF_FIELD_OFFSET(RegisterRequest, _impl_.password_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string name = 3 [json_name = "name"];
+      {PROTOBUF_FIELD_OFFSET(RegisterRequest, _impl_.name_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     }},
     // no aux_entries
     {{
-      "\35\5\10\0\0\0\0\0"
+      "\35\5\10\4\0\0\0\0"
       "gridx.auth.v1.RegisterRequest"
       "email"
       "password"
+      "name"
     }},
   };
 }
@@ -1927,6 +1935,9 @@ inline constexpr RegisterRequest::Impl_::Impl_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         password_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        name_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()) {}
 
@@ -5749,11 +5760,13 @@ const ::uint32_t
         protodesc_cold) = {
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterRequest, _impl_._has_bits_),
-        5, // hasbit index offset
+        6, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterRequest, _impl_.email_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterRequest, _impl_.password_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterRequest, _impl_.name_),
         0,
         1,
+        2,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::RegisterResponse, _impl_._has_bits_),
         12, // hasbit index offset
@@ -6010,41 +6023,41 @@ const ::uint32_t
 static const ::_pbi::MigrationSchema
     schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
         {0, sizeof(::gridx::auth::v1::RegisterRequest)},
-        {7, sizeof(::gridx::auth::v1::RegisterResponse)},
-        {28, sizeof(::gridx::auth::v1::LoginRequest)},
-        {35, sizeof(::gridx::auth::v1::LoginResponse)},
-        {48, sizeof(::gridx::auth::v1::RefreshTokenRequest)},
-        {53, sizeof(::gridx::auth::v1::RefreshTokenResponse)},
-        {62, sizeof(::gridx::auth::v1::LogoutRequest)},
-        {67, sizeof(::gridx::auth::v1::LogoutResponse)},
-        {72, sizeof(::gridx::auth::v1::LogoutAllRequest)},
-        {73, sizeof(::gridx::auth::v1::LogoutAllResponse)},
-        {78, sizeof(::gridx::auth::v1::UserProfile)},
-        {93, sizeof(::gridx::auth::v1::GetProfileRequest)},
-        {94, sizeof(::gridx::auth::v1::GetProfileResponse)},
-        {99, sizeof(::gridx::auth::v1::UpdateProfileRequest)},
-        {104, sizeof(::gridx::auth::v1::UpdateProfileResponse)},
-        {109, sizeof(::gridx::auth::v1::ChangePasswordRequest)},
-        {116, sizeof(::gridx::auth::v1::ChangePasswordResponse)},
-        {121, sizeof(::gridx::auth::v1::RequestPasswordResetRequest)},
-        {126, sizeof(::gridx::auth::v1::RequestPasswordResetResponse)},
-        {131, sizeof(::gridx::auth::v1::ResetPasswordRequest)},
-        {138, sizeof(::gridx::auth::v1::ResetPasswordResponse)},
-        {143, sizeof(::gridx::auth::v1::RequestEmailChangeRequest)},
-        {148, sizeof(::gridx::auth::v1::RequestEmailChangeResponse)},
-        {153, sizeof(::gridx::auth::v1::VerifyEmailChangeRequest)},
-        {158, sizeof(::gridx::auth::v1::VerifyEmailChangeResponse)},
-        {163, sizeof(::gridx::auth::v1::VerifyEmailRequest)},
-        {170, sizeof(::gridx::auth::v1::VerifyEmailResponse)},
-        {177, sizeof(::gridx::auth::v1::ResendOtpRequest)},
-        {182, sizeof(::gridx::auth::v1::ResendOtpResponse)},
-        {187, sizeof(::gridx::auth::v1::GetUserRequest)},
-        {192, sizeof(::gridx::auth::v1::GetUserResponse)},
-        {205, sizeof(::gridx::auth::v1::CheckPermissionRequest)},
-        {212, sizeof(::gridx::auth::v1::CheckPermissionResponse)},
-        {217, sizeof(::gridx::auth::v1::SubmitKycRequest)},
-        {228, sizeof(::gridx::auth::v1::SubmitKycResponse)},
-        {233, sizeof(::gridx::auth::v1::KycSubmission)},
+        {9, sizeof(::gridx::auth::v1::RegisterResponse)},
+        {30, sizeof(::gridx::auth::v1::LoginRequest)},
+        {37, sizeof(::gridx::auth::v1::LoginResponse)},
+        {50, sizeof(::gridx::auth::v1::RefreshTokenRequest)},
+        {55, sizeof(::gridx::auth::v1::RefreshTokenResponse)},
+        {64, sizeof(::gridx::auth::v1::LogoutRequest)},
+        {69, sizeof(::gridx::auth::v1::LogoutResponse)},
+        {74, sizeof(::gridx::auth::v1::LogoutAllRequest)},
+        {75, sizeof(::gridx::auth::v1::LogoutAllResponse)},
+        {80, sizeof(::gridx::auth::v1::UserProfile)},
+        {95, sizeof(::gridx::auth::v1::GetProfileRequest)},
+        {96, sizeof(::gridx::auth::v1::GetProfileResponse)},
+        {101, sizeof(::gridx::auth::v1::UpdateProfileRequest)},
+        {106, sizeof(::gridx::auth::v1::UpdateProfileResponse)},
+        {111, sizeof(::gridx::auth::v1::ChangePasswordRequest)},
+        {118, sizeof(::gridx::auth::v1::ChangePasswordResponse)},
+        {123, sizeof(::gridx::auth::v1::RequestPasswordResetRequest)},
+        {128, sizeof(::gridx::auth::v1::RequestPasswordResetResponse)},
+        {133, sizeof(::gridx::auth::v1::ResetPasswordRequest)},
+        {140, sizeof(::gridx::auth::v1::ResetPasswordResponse)},
+        {145, sizeof(::gridx::auth::v1::RequestEmailChangeRequest)},
+        {150, sizeof(::gridx::auth::v1::RequestEmailChangeResponse)},
+        {155, sizeof(::gridx::auth::v1::VerifyEmailChangeRequest)},
+        {160, sizeof(::gridx::auth::v1::VerifyEmailChangeResponse)},
+        {165, sizeof(::gridx::auth::v1::VerifyEmailRequest)},
+        {172, sizeof(::gridx::auth::v1::VerifyEmailResponse)},
+        {179, sizeof(::gridx::auth::v1::ResendOtpRequest)},
+        {184, sizeof(::gridx::auth::v1::ResendOtpResponse)},
+        {189, sizeof(::gridx::auth::v1::GetUserRequest)},
+        {194, sizeof(::gridx::auth::v1::GetUserResponse)},
+        {207, sizeof(::gridx::auth::v1::CheckPermissionRequest)},
+        {214, sizeof(::gridx::auth::v1::CheckPermissionResponse)},
+        {219, sizeof(::gridx::auth::v1::SubmitKycRequest)},
+        {230, sizeof(::gridx::auth::v1::SubmitKycResponse)},
+        {235, sizeof(::gridx::auth::v1::KycSubmission)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
     file_message_globals[] = {
@@ -6089,134 +6102,135 @@ const char descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto[] ABSL_ATT
     protodesc_cold) = {
     "\n\030gridx/auth/v1/auth.proto\022\rgridx.auth.v"
     "1\032\037google/protobuf/timestamp.proto\032\026goog"
-    "le/type/date.proto\"C\n\017RegisterRequest\022\024\n"
+    "le/type/date.proto\"W\n\017RegisterRequest\022\024\n"
     "\005email\030\001 \001(\tR\005email\022\032\n\010password\030\002 \001(\tR\010p"
-    "assword\"\273\002\n\020RegisterResponse\022\027\n\007user_id\030"
-    "\001 \001(\tR\006userId\022\024\n\005email\030\002 \001(\tR\005email\022\026\n\006s"
-    "tatus\030\003 \001(\tR\006status\022!\n\ncreated_at\030\004 \001(\tB"
-    "\002\030\001R\tcreatedAt\022\022\n\004name\030\005 \001(\tR\004name\022B\n\017cr"
-    "eated_at_time\030\006 \001(\0132\032.google.protobuf.Ti"
-    "mestampR\rcreatedAtTime\022!\n\014access_token\030\007"
-    " \001(\tR\013accessToken\022#\n\rrefresh_token\030\010 \001(\t"
-    "R\014refreshToken\022\035\n\nexpires_in\030\t \001(\003R\texpi"
-    "resIn\"@\n\014LoginRequest\022\024\n\005email\030\001 \001(\tR\005em"
-    "ail\022\032\n\010password\030\002 \001(\tR\010password\"\245\001\n\rLogi"
-    "nResponse\022\027\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005em"
-    "ail\030\002 \001(\tR\005email\022!\n\014access_token\030\003 \001(\tR\013"
-    "accessToken\022#\n\rrefresh_token\030\004 \001(\tR\014refr"
-    "eshToken\022\035\n\nexpires_in\030\005 \001(\003R\texpiresIn\""
-    ":\n\023RefreshTokenRequest\022#\n\rrefresh_token\030"
-    "\001 \001(\tR\014refreshToken\"}\n\024RefreshTokenRespo"
-    "nse\022!\n\014access_token\030\001 \001(\tR\013accessToken\022#"
-    "\n\rrefresh_token\030\002 \001(\tR\014refreshToken\022\035\n\ne"
-    "xpires_in\030\003 \001(\005R\texpiresIn\"4\n\rLogoutRequ"
-    "est\022#\n\rrefresh_token\030\001 \001(\tR\014refreshToken"
-    "\"*\n\016LogoutResponse\022\030\n\007success\030\001 \001(\010R\007suc"
-    "cess\"\022\n\020LogoutAllRequest\"-\n\021LogoutAllRes"
-    "ponse\022\030\n\007success\030\001 \001(\010R\007success\"\362\001\n\013User"
-    "Profile\022\027\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005emai"
-    "l\030\002 \001(\tR\005email\022\026\n\006status\030\005 \001(\tR\006status\022!"
-    "\n\ncreated_at\030\006 \001(\tB\002\030\001R\tcreatedAt\022\022\n\004nam"
-    "e\030\007 \001(\tR\004name\022B\n\017created_at_time\030\010 \001(\0132\032"
-    ".google.protobuf.TimestampR\rcreatedAtTim"
-    "eJ\004\010\003\020\004J\004\010\004\020\005R\nfirst_nameR\tlast_name\"\023\n\021"
-    "GetProfileRequest\"J\n\022GetProfileResponse\022"
-    "4\n\007profile\030\001 \001(\0132\032.gridx.auth.v1.UserPro"
-    "fileR\007profile\"M\n\024UpdateProfileRequest\022\022\n"
-    "\004name\030\003 \001(\tR\004nameJ\004\010\001\020\002J\004\010\002\020\003R\nfirst_nam"
-    "eR\tlast_name\"M\n\025UpdateProfileResponse\0224\n"
-    "\007profile\030\001 \001(\0132\032.gridx.auth.v1.UserProfi"
-    "leR\007profile\"e\n\025ChangePasswordRequest\022)\n\020"
-    "current_password\030\001 \001(\tR\017currentPassword\022"
-    "!\n\014new_password\030\002 \001(\tR\013newPassword\"2\n\026Ch"
-    "angePasswordResponse\022\030\n\007success\030\001 \001(\010R\007s"
-    "uccess\"3\n\033RequestPasswordResetRequest\022\024\n"
-    "\005email\030\001 \001(\tR\005email\"8\n\034RequestPasswordRe"
-    "setResponse\022\030\n\007success\030\001 \001(\010R\007success\"O\n"
-    "\024ResetPasswordRequest\022\024\n\005token\030\001 \001(\tR\005to"
-    "ken\022!\n\014new_password\030\002 \001(\tR\013newPassword\"1"
-    "\n\025ResetPasswordResponse\022\030\n\007success\030\001 \001(\010"
-    "R\007success\"8\n\031RequestEmailChangeRequest\022\033"
-    "\n\tnew_email\030\001 \001(\tR\010newEmail\"6\n\032RequestEm"
-    "ailChangeResponse\022\030\n\007success\030\001 \001(\010R\007succ"
-    "ess\"0\n\030VerifyEmailChangeRequest\022\024\n\005token"
-    "\030\001 \001(\tR\005token\"Q\n\031VerifyEmailChangeRespon"
-    "se\0224\n\007profile\030\001 \001(\0132\032.gridx.auth.v1.User"
-    "ProfileR\007profile\"<\n\022VerifyEmailRequest\022\024"
-    "\n\005email\030\001 \001(\tR\005email\022\020\n\003otp\030\002 \001(\tR\003otp\"I"
-    "\n\023VerifyEmailResponse\022\030\n\007success\030\001 \001(\010R\007"
-    "success\022\030\n\007message\030\002 \001(\tR\007message\"(\n\020Res"
-    "endOtpRequest\022\024\n\005email\030\001 \001(\tR\005email\"-\n\021R"
-    "esendOtpResponse\022\030\n\007success\030\001 \001(\010R\007succe"
-    "ss\")\n\016GetUserRequest\022\027\n\007user_id\030\001 \001(\tR\006u"
-    "serId\"\200\001\n\017GetUserResponse\022\027\n\007user_id\030\001 \001"
-    "(\tR\006userId\022\024\n\005email\030\002 \001(\tR\005email\022\026\n\006stat"
-    "us\030\003 \001(\tR\006status\022\022\n\004role\030\004 \001(\tR\004role\022\022\n\004"
-    "name\030\005 \001(\tR\004name\"Z\n\026CheckPermissionReque"
-    "st\022\027\n\007user_id\030\001 \001(\tR\006userId\022\'\n\017permissio"
-    "n_name\030\002 \001(\tR\016permissionName\"3\n\027CheckPer"
-    "missionResponse\022\030\n\007allowed\030\001 \001(\010R\007allowe"
-    "d\"\246\001\n\020SubmitKycRequest\022\033\n\tfull_name\030\001 \001("
-    "\tR\010fullName\0225\n\rdate_of_birth\030\002 \001(\0132\021.goo"
-    "gle.type.DateR\013dateOfBirth\022\031\n\010dubai_id\030\003"
-    " \001(\tR\007dubaiId\022#\n\rdocument_path\030\004 \001(\tR\014do"
-    "cumentPath\"Q\n\021SubmitKycResponse\022<\n\nsubmi"
-    "ssion\030\001 \001(\0132\034.gridx.auth.v1.KycSubmissio"
-    "nR\nsubmission\"\331\003\n\rKycSubmission\022\016\n\002id\030\001 "
-    "\001(\tR\002id\022\027\n\007user_id\030\002 \001(\tR\006userId\022\033\n\tfull"
-    "_name\030\003 \001(\tR\010fullName\0225\n\rdate_of_birth\030\004"
-    " \001(\0132\021.google.type.DateR\013dateOfBirth\022\031\n\010"
-    "dubai_id\030\005 \001(\tR\007dubaiId\022#\n\rdocument_path"
-    "\030\006 \001(\tR\014documentPath\022-\n\005state\030\007 \001(\0162\027.gr"
-    "idx.auth.v1.KycStateR\005state\022)\n\020rejection"
-    "_reason\030\010 \001(\tR\017rejectionReason\022;\n\013verifi"
-    "ed_at\030\t \001(\0132\032.google.protobuf.TimestampR"
-    "\nverifiedAt\0229\n\ncreated_at\030\n \001(\0132\032.google"
-    ".protobuf.TimestampR\tcreatedAt\0229\n\nupdate"
-    "d_at\030\013 \001(\0132\032.google.protobuf.TimestampR\t"
-    "updatedAt*l\n\010KycState\022\031\n\025KYC_STATE_UNSPE"
-    "CIFIED\020\000\022\025\n\021KYC_STATE_PENDING\020\001\022\026\n\022KYC_S"
-    "TATE_VERIFIED\020\002\022\026\n\022KYC_STATE_REJECTED\020\0032"
-    "\336\013\n\013AuthService\022K\n\010Register\022\036.gridx.auth"
-    ".v1.RegisterRequest\032\037.gridx.auth.v1.Regi"
-    "sterResponse\022B\n\005Login\022\033.gridx.auth.v1.Lo"
-    "ginRequest\032\034.gridx.auth.v1.LoginResponse"
-    "\022E\n\006Logout\022\034.gridx.auth.v1.LogoutRequest"
-    "\032\035.gridx.auth.v1.LogoutResponse\022N\n\tLogou"
-    "tAll\022\037.gridx.auth.v1.LogoutAllRequest\032 ."
-    "gridx.auth.v1.LogoutAllResponse\022Q\n\nGetPr"
-    "ofile\022 .gridx.auth.v1.GetProfileRequest\032"
-    "!.gridx.auth.v1.GetProfileResponse\022Z\n\rUp"
-    "dateProfile\022#.gridx.auth.v1.UpdateProfil"
-    "eRequest\032$.gridx.auth.v1.UpdateProfileRe"
-    "sponse\022]\n\016ChangePassword\022$.gridx.auth.v1"
-    ".ChangePasswordRequest\032%.gridx.auth.v1.C"
-    "hangePasswordResponse\022o\n\024RequestPassword"
-    "Reset\022*.gridx.auth.v1.RequestPasswordRes"
-    "etRequest\032+.gridx.auth.v1.RequestPasswor"
-    "dResetResponse\022Z\n\rResetPassword\022#.gridx."
-    "auth.v1.ResetPasswordRequest\032$.gridx.aut"
-    "h.v1.ResetPasswordResponse\022i\n\022RequestEma"
-    "ilChange\022(.gridx.auth.v1.RequestEmailCha"
-    "ngeRequest\032).gridx.auth.v1.RequestEmailC"
-    "hangeResponse\022f\n\021VerifyEmailChange\022\'.gri"
-    "dx.auth.v1.VerifyEmailChangeRequest\032(.gr"
-    "idx.auth.v1.VerifyEmailChangeResponse\022H\n"
-    "\007GetUser\022\035.gridx.auth.v1.GetUserRequest\032"
-    "\036.gridx.auth.v1.GetUserResponse\022`\n\017Check"
-    "Permission\022%.gridx.auth.v1.CheckPermissi"
-    "onRequest\032&.gridx.auth.v1.CheckPermissio"
-    "nResponse\022T\n\013VerifyEmail\022!.gridx.auth.v1"
-    ".VerifyEmailRequest\032\".gridx.auth.v1.Veri"
-    "fyEmailResponse\022N\n\tResendOtp\022\037.gridx.aut"
-    "h.v1.ResendOtpRequest\032 .gridx.auth.v1.Re"
-    "sendOtpResponse\022N\n\tSubmitKyc\022\037.gridx.aut"
-    "h.v1.SubmitKycRequest\032 .gridx.auth.v1.Su"
-    "bmitKycResponse\022W\n\014RefreshToken\022\".gridx."
-    "auth.v1.RefreshTokenRequest\032#.gridx.auth"
-    ".v1.RefreshTokenResponseBHZFgithub.com/p"
-    "2p-energy-trading-platform/go-sdk/gen/gr"
-    "idx/auth/v1;authv1b\006proto3"
+    "assword\022\022\n\004name\030\003 \001(\tR\004name\"\273\002\n\020Register"
+    "Response\022\027\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005ema"
+    "il\030\002 \001(\tR\005email\022\026\n\006status\030\003 \001(\tR\006status\022"
+    "!\n\ncreated_at\030\004 \001(\tB\002\030\001R\tcreatedAt\022\022\n\004na"
+    "me\030\005 \001(\tR\004name\022B\n\017created_at_time\030\006 \001(\0132"
+    "\032.google.protobuf.TimestampR\rcreatedAtTi"
+    "me\022!\n\014access_token\030\007 \001(\tR\013accessToken\022#\n"
+    "\rrefresh_token\030\010 \001(\tR\014refreshToken\022\035\n\nex"
+    "pires_in\030\t \001(\003R\texpiresIn\"@\n\014LoginReques"
+    "t\022\024\n\005email\030\001 \001(\tR\005email\022\032\n\010password\030\002 \001("
+    "\tR\010password\"\245\001\n\rLoginResponse\022\027\n\007user_id"
+    "\030\001 \001(\tR\006userId\022\024\n\005email\030\002 \001(\tR\005email\022!\n\014"
+    "access_token\030\003 \001(\tR\013accessToken\022#\n\rrefre"
+    "sh_token\030\004 \001(\tR\014refreshToken\022\035\n\nexpires_"
+    "in\030\005 \001(\003R\texpiresIn\":\n\023RefreshTokenReque"
+    "st\022#\n\rrefresh_token\030\001 \001(\tR\014refreshToken\""
+    "}\n\024RefreshTokenResponse\022!\n\014access_token\030"
+    "\001 \001(\tR\013accessToken\022#\n\rrefresh_token\030\002 \001("
+    "\tR\014refreshToken\022\035\n\nexpires_in\030\003 \001(\005R\texp"
+    "iresIn\"4\n\rLogoutRequest\022#\n\rrefresh_token"
+    "\030\001 \001(\tR\014refreshToken\"*\n\016LogoutResponse\022\030"
+    "\n\007success\030\001 \001(\010R\007success\"\022\n\020LogoutAllReq"
+    "uest\"-\n\021LogoutAllResponse\022\030\n\007success\030\001 \001"
+    "(\010R\007success\"\362\001\n\013UserProfile\022\027\n\007user_id\030\001"
+    " \001(\tR\006userId\022\024\n\005email\030\002 \001(\tR\005email\022\026\n\006st"
+    "atus\030\005 \001(\tR\006status\022!\n\ncreated_at\030\006 \001(\tB\002"
+    "\030\001R\tcreatedAt\022\022\n\004name\030\007 \001(\tR\004name\022B\n\017cre"
+    "ated_at_time\030\010 \001(\0132\032.google.protobuf.Tim"
+    "estampR\rcreatedAtTimeJ\004\010\003\020\004J\004\010\004\020\005R\nfirst"
+    "_nameR\tlast_name\"\023\n\021GetProfileRequest\"J\n"
+    "\022GetProfileResponse\0224\n\007profile\030\001 \001(\0132\032.g"
+    "ridx.auth.v1.UserProfileR\007profile\"M\n\024Upd"
+    "ateProfileRequest\022\022\n\004name\030\003 \001(\tR\004nameJ\004\010"
+    "\001\020\002J\004\010\002\020\003R\nfirst_nameR\tlast_name\"M\n\025Upda"
+    "teProfileResponse\0224\n\007profile\030\001 \001(\0132\032.gri"
+    "dx.auth.v1.UserProfileR\007profile\"e\n\025Chang"
+    "ePasswordRequest\022)\n\020current_password\030\001 \001"
+    "(\tR\017currentPassword\022!\n\014new_password\030\002 \001("
+    "\tR\013newPassword\"2\n\026ChangePasswordResponse"
+    "\022\030\n\007success\030\001 \001(\010R\007success\"3\n\033RequestPas"
+    "swordResetRequest\022\024\n\005email\030\001 \001(\tR\005email\""
+    "8\n\034RequestPasswordResetResponse\022\030\n\007succe"
+    "ss\030\001 \001(\010R\007success\"O\n\024ResetPasswordReques"
+    "t\022\024\n\005token\030\001 \001(\tR\005token\022!\n\014new_password\030"
+    "\002 \001(\tR\013newPassword\"1\n\025ResetPasswordRespo"
+    "nse\022\030\n\007success\030\001 \001(\010R\007success\"8\n\031Request"
+    "EmailChangeRequest\022\033\n\tnew_email\030\001 \001(\tR\010n"
+    "ewEmail\"6\n\032RequestEmailChangeResponse\022\030\n"
+    "\007success\030\001 \001(\010R\007success\"0\n\030VerifyEmailCh"
+    "angeRequest\022\024\n\005token\030\001 \001(\tR\005token\"Q\n\031Ver"
+    "ifyEmailChangeResponse\0224\n\007profile\030\001 \001(\0132"
+    "\032.gridx.auth.v1.UserProfileR\007profile\"<\n\022"
+    "VerifyEmailRequest\022\024\n\005email\030\001 \001(\tR\005email"
+    "\022\020\n\003otp\030\002 \001(\tR\003otp\"I\n\023VerifyEmailRespons"
+    "e\022\030\n\007success\030\001 \001(\010R\007success\022\030\n\007message\030\002"
+    " \001(\tR\007message\"(\n\020ResendOtpRequest\022\024\n\005ema"
+    "il\030\001 \001(\tR\005email\"-\n\021ResendOtpResponse\022\030\n\007"
+    "success\030\001 \001(\010R\007success\")\n\016GetUserRequest"
+    "\022\027\n\007user_id\030\001 \001(\tR\006userId\"\200\001\n\017GetUserRes"
+    "ponse\022\027\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005email\030"
+    "\002 \001(\tR\005email\022\026\n\006status\030\003 \001(\tR\006status\022\022\n\004"
+    "role\030\004 \001(\tR\004role\022\022\n\004name\030\005 \001(\tR\004name\"Z\n\026"
+    "CheckPermissionRequest\022\027\n\007user_id\030\001 \001(\tR"
+    "\006userId\022\'\n\017permission_name\030\002 \001(\tR\016permis"
+    "sionName\"3\n\027CheckPermissionResponse\022\030\n\007a"
+    "llowed\030\001 \001(\010R\007allowed\"\246\001\n\020SubmitKycReque"
+    "st\022\033\n\tfull_name\030\001 \001(\tR\010fullName\0225\n\rdate_"
+    "of_birth\030\002 \001(\0132\021.google.type.DateR\013dateO"
+    "fBirth\022\031\n\010dubai_id\030\003 \001(\tR\007dubaiId\022#\n\rdoc"
+    "ument_path\030\004 \001(\tR\014documentPath\"Q\n\021Submit"
+    "KycResponse\022<\n\nsubmission\030\001 \001(\0132\034.gridx."
+    "auth.v1.KycSubmissionR\nsubmission\"\331\003\n\rKy"
+    "cSubmission\022\016\n\002id\030\001 \001(\tR\002id\022\027\n\007user_id\030\002"
+    " \001(\tR\006userId\022\033\n\tfull_name\030\003 \001(\tR\010fullNam"
+    "e\0225\n\rdate_of_birth\030\004 \001(\0132\021.google.type.D"
+    "ateR\013dateOfBirth\022\031\n\010dubai_id\030\005 \001(\tR\007duba"
+    "iId\022#\n\rdocument_path\030\006 \001(\tR\014documentPath"
+    "\022-\n\005state\030\007 \001(\0162\027.gridx.auth.v1.KycState"
+    "R\005state\022)\n\020rejection_reason\030\010 \001(\tR\017rejec"
+    "tionReason\022;\n\013verified_at\030\t \001(\0132\032.google"
+    ".protobuf.TimestampR\nverifiedAt\0229\n\ncreat"
+    "ed_at\030\n \001(\0132\032.google.protobuf.TimestampR"
+    "\tcreatedAt\0229\n\nupdated_at\030\013 \001(\0132\032.google."
+    "protobuf.TimestampR\tupdatedAt*l\n\010KycStat"
+    "e\022\031\n\025KYC_STATE_UNSPECIFIED\020\000\022\025\n\021KYC_STAT"
+    "E_PENDING\020\001\022\026\n\022KYC_STATE_VERIFIED\020\002\022\026\n\022K"
+    "YC_STATE_REJECTED\020\0032\336\013\n\013AuthService\022K\n\010R"
+    "egister\022\036.gridx.auth.v1.RegisterRequest\032"
+    "\037.gridx.auth.v1.RegisterResponse\022B\n\005Logi"
+    "n\022\033.gridx.auth.v1.LoginRequest\032\034.gridx.a"
+    "uth.v1.LoginResponse\022E\n\006Logout\022\034.gridx.a"
+    "uth.v1.LogoutRequest\032\035.gridx.auth.v1.Log"
+    "outResponse\022N\n\tLogoutAll\022\037.gridx.auth.v1"
+    ".LogoutAllRequest\032 .gridx.auth.v1.Logout"
+    "AllResponse\022Q\n\nGetProfile\022 .gridx.auth.v"
+    "1.GetProfileRequest\032!.gridx.auth.v1.GetP"
+    "rofileResponse\022Z\n\rUpdateProfile\022#.gridx."
+    "auth.v1.UpdateProfileRequest\032$.gridx.aut"
+    "h.v1.UpdateProfileResponse\022]\n\016ChangePass"
+    "word\022$.gridx.auth.v1.ChangePasswordReque"
+    "st\032%.gridx.auth.v1.ChangePasswordRespons"
+    "e\022o\n\024RequestPasswordReset\022*.gridx.auth.v"
+    "1.RequestPasswordResetRequest\032+.gridx.au"
+    "th.v1.RequestPasswordResetResponse\022Z\n\rRe"
+    "setPassword\022#.gridx.auth.v1.ResetPasswor"
+    "dRequest\032$.gridx.auth.v1.ResetPasswordRe"
+    "sponse\022i\n\022RequestEmailChange\022(.gridx.aut"
+    "h.v1.RequestEmailChangeRequest\032).gridx.a"
+    "uth.v1.RequestEmailChangeResponse\022f\n\021Ver"
+    "ifyEmailChange\022\'.gridx.auth.v1.VerifyEma"
+    "ilChangeRequest\032(.gridx.auth.v1.VerifyEm"
+    "ailChangeResponse\022H\n\007GetUser\022\035.gridx.aut"
+    "h.v1.GetUserRequest\032\036.gridx.auth.v1.GetU"
+    "serResponse\022`\n\017CheckPermission\022%.gridx.a"
+    "uth.v1.CheckPermissionRequest\032&.gridx.au"
+    "th.v1.CheckPermissionResponse\022T\n\013VerifyE"
+    "mail\022!.gridx.auth.v1.VerifyEmailRequest\032"
+    "\".gridx.auth.v1.VerifyEmailResponse\022N\n\tR"
+    "esendOtp\022\037.gridx.auth.v1.ResendOtpReques"
+    "t\032 .gridx.auth.v1.ResendOtpResponse\022N\n\tS"
+    "ubmitKyc\022\037.gridx.auth.v1.SubmitKycReques"
+    "t\032 .gridx.auth.v1.SubmitKycResponse\022W\n\014R"
+    "efreshToken\022\".gridx.auth.v1.RefreshToken"
+    "Request\032#.gridx.auth.v1.RefreshTokenResp"
+    "onseBHZFgithub.com/p2p-energy-trading-pl"
+    "atform/go-sdk/gen/gridx/auth/v1;authv1b\006"
+    "proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_deps[2] = {
@@ -6227,7 +6241,7 @@ static ::absl::once_flag descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto = {
     false,
     false,
-    5186,
+    5206,
     descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto,
     "gridx/auth/v1/auth.proto",
     &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_once,
@@ -6268,7 +6282,8 @@ PROTOBUF_NDEBUG_INLINE RegisterRequest::Impl_::Impl_(
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         email_(arena, from.email_),
-        password_(arena, from.password_) {}
+        password_(arena, from.password_),
+        name_(arena, from.name_) {}
 
 RegisterRequest::RegisterRequest(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
@@ -6292,7 +6307,8 @@ PROTOBUF_NDEBUG_INLINE RegisterRequest::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : _cached_size_{0},
         email_(arena),
-        password_(arena) {}
+        password_(arena),
+        name_(arena) {}
 
 inline void RegisterRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
@@ -6310,6 +6326,7 @@ inline void RegisterRequest::SharedDtor(MessageLite& self) {
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.email_.Destroy();
   this_._impl_.password_.Destroy();
+  this_._impl_.name_.Destroy();
   this_._impl_.~Impl_();
 }
 
@@ -6347,12 +6364,15 @@ PROTOBUF_NOINLINE void RegisterRequest::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       _impl_.email_.ClearNonDefaultToEmpty();
     }
     if (CheckHasBit(cached_has_bits, 0x00000002U)) {
       _impl_.password_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      _impl_.name_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -6398,6 +6418,16 @@ PROTOBUF_NOINLINE void RegisterRequest::Clear() {
     }
   }
 
+  // string name = 3 [json_name = "name"];
+  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (!this_._internal_name().empty()) {
+      const ::std::string& _s = this_._internal_name();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.RegisterRequest.name");
+      target = stream->WriteStringMaybeAliased(3, _s, target);
+    }
+  }
+
   if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
     target =
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
@@ -6423,7 +6453,7 @@ PROTOBUF_NOINLINE void RegisterRequest::Clear() {
 
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
     // string email = 1 [json_name = "email"];
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!this_._internal_email().empty()) {
@@ -6436,6 +6466,13 @@ PROTOBUF_NOINLINE void RegisterRequest::Clear() {
       if (!this_._internal_password().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_password());
+      }
+    }
+    // string name = 3 [json_name = "name"];
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!this_._internal_name().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_name());
       }
     }
   }
@@ -6456,7 +6493,7 @@ void RegisterRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
   (void)cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!from._internal_email().empty()) {
         _this->_internal_set_email(from._internal_email());
@@ -6472,6 +6509,15 @@ void RegisterRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
       } else {
         if (_this->_impl_.password_.IsDefault()) {
           _this->_internal_set_password("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!from._internal_name().empty()) {
+        _this->_internal_set_name(from._internal_name());
+      } else {
+        if (_this->_impl_.name_.IsDefault()) {
+          _this->_internal_set_name("");
         }
       }
     }
@@ -6497,6 +6543,7 @@ void RegisterRequest::InternalSwap(RegisterRequest* PROTOBUF_RESTRICT PROTOBUF_N
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.email_, &other->_impl_.email_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.password_, &other->_impl_.password_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, &other->_impl_.name_, arena);
 }
 
 ::google::protobuf::Metadata RegisterRequest::GetMetadata() const {
