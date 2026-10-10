@@ -6983,7 +6983,10 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED RegisterResponse final : public ::g
     kStatusFieldNumber = 3,
     kCreatedAtFieldNumber = 4,
     kNameFieldNumber = 5,
+    kAccessTokenFieldNumber = 7,
+    kRefreshTokenFieldNumber = 8,
     kCreatedAtTimeFieldNumber = 6,
+    kExpiresInFieldNumber = 9,
   };
   // string user_id = 1 [json_name = "userId"];
   void clear_user_id() ;
@@ -7060,6 +7063,36 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED RegisterResponse final : public ::g
   ::std::string* PROTOBUF_NONNULL _internal_mutable_name();
 
   public:
+  // string access_token = 7 [json_name = "accessToken"];
+  void clear_access_token() ;
+  [[nodiscard]] const ::std::string& access_token() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_access_token(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_access_token();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_access_token();
+  void set_allocated_access_token(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_access_token() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_access_token(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_access_token();
+
+  public:
+  // string refresh_token = 8 [json_name = "refreshToken"];
+  void clear_refresh_token() ;
+  [[nodiscard]] const ::std::string& refresh_token() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_refresh_token(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_refresh_token();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_refresh_token();
+  void set_allocated_refresh_token(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_refresh_token() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_refresh_token(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_refresh_token();
+
+  public:
   // .google.protobuf.Timestamp created_at_time = 6 [json_name = "createdAtTime"];
   [[nodiscard]] bool has_created_at_time()
       const;
@@ -7076,12 +7109,22 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED RegisterResponse final : public ::g
   ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_created_at_time();
 
   public:
+  // int64 expires_in = 9 [json_name = "expiresIn"];
+  void clear_expires_in() ;
+  [[nodiscard]] ::int64_t expires_in() const;
+  void set_expires_in(::int64_t value);
+
+  private:
+  ::int64_t _internal_expires_in() const;
+  void _internal_set_expires_in(::int64_t value);
+
+  public:
   // @@protoc_insertion_point(class_scope:gridx.auth.v1.RegisterResponse)
  private:
   class _Internal;
   using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<3, 6,
-                          1, 71,
+      ::google::protobuf::internal::TcParseTable<4, 9,
+                          1, 104,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
       const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
@@ -7114,7 +7157,10 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED RegisterResponse final : public ::g
     ::google::protobuf::internal::ArenaStringPtr status_;
     ::google::protobuf::internal::ArenaStringPtr created_at_;
     ::google::protobuf::internal::ArenaStringPtr name_;
+    ::google::protobuf::internal::ArenaStringPtr access_token_;
+    ::google::protobuf::internal::ArenaStringPtr refresh_token_;
     ::google::protobuf::Timestamp* PROTOBUF_NULLABLE created_at_time_;
+    ::int64_t expires_in_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -8794,7 +8840,7 @@ inline void RegisterResponse::set_allocated_name(::std::string* PROTOBUF_NULLABL
 
 // .google.protobuf.Timestamp created_at_time = 6 [json_name = "createdAtTime"];
 inline bool RegisterResponse::has_created_at_time() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000020U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000080U);
   PROTOBUF_ASSUME(!value || _impl_.created_at_time_ != nullptr);
   return value;
 }
@@ -8815,16 +8861,16 @@ inline void RegisterResponse::unsafe_arena_set_allocated_created_at_time(
   }
   _impl_.created_at_time_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000080U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000080U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.auth.v1.RegisterResponse.created_at_time)
 }
 inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE RegisterResponse::release_created_at_time() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000080U);
   ::google::protobuf::Timestamp* released = _impl_.created_at_time_;
   _impl_.created_at_time_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -8844,7 +8890,7 @@ inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE RegisterResponse::unsafe
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:gridx.auth.v1.RegisterResponse.created_at_time)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000080U);
   ::google::protobuf::Timestamp* temp = _impl_.created_at_time_;
   _impl_.created_at_time_ = nullptr;
   return temp;
@@ -8859,7 +8905,7 @@ inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL RegisterResponse::_intern
 }
 inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL RegisterResponse::mutable_created_at_time()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000080U);
   ::google::protobuf::Timestamp* _msg = _internal_mutable_created_at_time();
   // @@protoc_insertion_point(field_mutable:gridx.auth.v1.RegisterResponse.created_at_time)
   return _msg;
@@ -8876,13 +8922,165 @@ inline void RegisterResponse::set_allocated_created_at_time(::google::protobuf::
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000080U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000080U);
   }
 
   _impl_.created_at_time_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
   // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.RegisterResponse.created_at_time)
+}
+
+// string access_token = 7 [json_name = "accessToken"];
+inline void RegisterResponse::clear_access_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.access_token_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+}
+inline const ::std::string& RegisterResponse::access_token() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.RegisterResponse.access_token)
+  return _internal_access_token();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void RegisterResponse::set_access_token(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  _impl_.access_token_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.RegisterResponse.access_token)
+}
+inline ::std::string* PROTOBUF_NONNULL RegisterResponse::mutable_access_token()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ::std::string* _s = _internal_mutable_access_token();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.RegisterResponse.access_token)
+  return _s;
+}
+inline const ::std::string& RegisterResponse::_internal_access_token() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.access_token_.Get();
+}
+inline void RegisterResponse::_internal_set_access_token(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.access_token_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL RegisterResponse::_internal_mutable_access_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.access_token_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE RegisterResponse::release_access_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.RegisterResponse.access_token)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000020U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  auto* released = _impl_.access_token_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.access_token_.Set("", GetArena());
+  }
+  return released;
+}
+inline void RegisterResponse::set_allocated_access_token(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  }
+  _impl_.access_token_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.access_token_.IsDefault()) {
+    _impl_.access_token_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.RegisterResponse.access_token)
+}
+
+// string refresh_token = 8 [json_name = "refreshToken"];
+inline void RegisterResponse::clear_refresh_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.refresh_token_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000040U);
+}
+inline const ::std::string& RegisterResponse::refresh_token() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.RegisterResponse.refresh_token)
+  return _internal_refresh_token();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void RegisterResponse::set_refresh_token(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000040U);
+  _impl_.refresh_token_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.RegisterResponse.refresh_token)
+}
+inline ::std::string* PROTOBUF_NONNULL RegisterResponse::mutable_refresh_token()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000040U);
+  ::std::string* _s = _internal_mutable_refresh_token();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.RegisterResponse.refresh_token)
+  return _s;
+}
+inline const ::std::string& RegisterResponse::_internal_refresh_token() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.refresh_token_.Get();
+}
+inline void RegisterResponse::_internal_set_refresh_token(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.refresh_token_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL RegisterResponse::_internal_mutable_refresh_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.refresh_token_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE RegisterResponse::release_refresh_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.RegisterResponse.refresh_token)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000040U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000040U);
+  auto* released = _impl_.refresh_token_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.refresh_token_.Set("", GetArena());
+  }
+  return released;
+}
+inline void RegisterResponse::set_allocated_refresh_token(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000040U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000040U);
+  }
+  _impl_.refresh_token_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.refresh_token_.IsDefault()) {
+    _impl_.refresh_token_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.RegisterResponse.refresh_token)
+}
+
+// int64 expires_in = 9 [json_name = "expiresIn"];
+inline void RegisterResponse::clear_expires_in() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.expires_in_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000100U);
+}
+inline ::int64_t RegisterResponse::expires_in() const {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.RegisterResponse.expires_in)
+  return _internal_expires_in();
+}
+inline void RegisterResponse::set_expires_in(::int64_t value) {
+  _internal_set_expires_in(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000100U);
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.RegisterResponse.expires_in)
+}
+inline ::int64_t RegisterResponse::_internal_expires_in() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.expires_in_;
+}
+inline void RegisterResponse::_internal_set_expires_in(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.expires_in_ = value;
 }
 
 // -------------------------------------------------------------------
