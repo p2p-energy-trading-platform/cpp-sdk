@@ -49,6 +49,10 @@ PROTOBUF_CONSTINIT ::google::protobuf::internal::ReflectionData
         {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
         // ::gridx::auth::v1::LogoutAllResponse
         {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::auth::v1::CreateKycUploadUrlRequest
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::auth::v1::CreateKycUploadUrlResponse
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
         // ::gridx::auth::v1::UserProfile
         {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
         // ::gridx::auth::v1::GetProfileRequest
@@ -213,7 +217,7 @@ constexpr auto VerifyEmailResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[26],
+      &file_reflection_data[28],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -369,7 +373,7 @@ constexpr auto VerifyEmailRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[25],
+      &file_reflection_data[27],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -515,7 +519,7 @@ constexpr auto VerifyEmailChangeRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[23],
+      &file_reflection_data[25],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -661,7 +665,7 @@ constexpr auto UpdateProfileRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[13],
+      &file_reflection_data[15],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -802,7 +806,7 @@ constexpr auto ResetPasswordResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[20],
+      &file_reflection_data[22],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -958,7 +962,7 @@ constexpr auto ResetPasswordRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[19],
+      &file_reflection_data[21],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -1099,7 +1103,7 @@ constexpr auto ResendOtpResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[28],
+      &file_reflection_data[30],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -1245,7 +1249,7 @@ constexpr auto ResendOtpRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[27],
+      &file_reflection_data[29],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -1386,7 +1390,7 @@ constexpr auto RequestPasswordResetResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[18],
+      &file_reflection_data[20],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -1532,7 +1536,7 @@ constexpr auto RequestPasswordResetRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[17],
+      &file_reflection_data[19],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -1673,7 +1677,7 @@ constexpr auto RequestEmailChangeResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[22],
+      &file_reflection_data[24],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -1819,7 +1823,7 @@ constexpr auto RequestEmailChangeRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[21],
+      &file_reflection_data[23],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -3040,7 +3044,7 @@ constexpr auto LoginWithGoogleResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[37],
+      &file_reflection_data[39],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -3216,7 +3220,7 @@ constexpr auto LoginWithGoogleRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[36],
+      &file_reflection_data[38],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -3747,7 +3751,7 @@ constexpr auto GetUserResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[30],
+      &file_reflection_data[32],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -3893,7 +3897,7 @@ constexpr auto GetUserRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[29],
+      &file_reflection_data[31],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -4017,7 +4021,7 @@ constexpr auto GetProfileRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[11],
+      &file_reflection_data[13],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -4064,6 +4068,323 @@ const ::_pbi::ClassData* GetProfileRequest_get_class_data() {
   return GetProfileRequest_globals_.GetClassData();
 #else
   return GetProfileRequest_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class CreateKycUploadUrlResponse::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<CreateKycUploadUrlResponse>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlResponse, _impl_._has_bits_);
+};
+
+constexpr CreateKycUploadUrlResponse::ParseTableT_ CreateKycUploadUrlResponse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlResponse, _impl_._has_bits_),
+      0, // no _extensions_
+      3, 24,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967288,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      3,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::auth::v1::CreateKycUploadUrlResponse>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      {::_pbi::TcParser::MiniParse, {}},
+      // string upload_url = 1 [json_name = "uploadUrl"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlResponse, _impl_.upload_url_)}},
+      // string object_key = 2 [json_name = "objectKey"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlResponse, _impl_.object_key_)}},
+      // int64 expires_in = 3 [json_name = "expiresIn"];
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(CreateKycUploadUrlResponse, _impl_.expires_in_), 2>(),
+       {24, 2, 0,
+        PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlResponse, _impl_.expires_in_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string upload_url = 1 [json_name = "uploadUrl"];
+      {PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlResponse, _impl_.upload_url_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string object_key = 2 [json_name = "objectKey"];
+      {PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlResponse, _impl_.object_key_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // int64 expires_in = 3 [json_name = "expiresIn"];
+      {PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlResponse, _impl_.expires_in_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kInt64)},
+    }},
+    // no aux_entries
+    {{
+      "\50\12\12\0\0\0\0\0"
+      "gridx.auth.v1.CreateKycUploadUrlResponse"
+      "upload_url"
+      "object_key"
+    }},
+  };
+}
+
+
+inline constexpr CreateKycUploadUrlResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        upload_url_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        object_key_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        expires_in_{::int64_t{0}} {}
+
+template <typename>
+constexpr CreateKycUploadUrlResponse::CreateKycUploadUrlResponse(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL CreateKycUploadUrlResponse::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) CreateKycUploadUrlResponse(arena);
+}
+constexpr auto CreateKycUploadUrlResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(CreateKycUploadUrlResponse), alignof(CreateKycUploadUrlResponse));
+}
+constexpr auto CreateKycUploadUrlResponse::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &CreateKycUploadUrlResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<CreateKycUploadUrlResponse>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &CreateKycUploadUrlResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<CreateKycUploadUrlResponse>(), &CreateKycUploadUrlResponse::ByteSizeLong,
+              &CreateKycUploadUrlResponse::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlResponse, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[11],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct CreateKycUploadUrlResponseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr CreateKycUploadUrlResponseGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 CreateKycUploadUrlResponse_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(CreateKycUploadUrlResponse::InternalGenerateClassData_(
+            _default, &CreateKycUploadUrlResponse_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<CreateKycUploadUrlResponse>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~CreateKycUploadUrlResponseGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) CreateKycUploadUrlResponse _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<CreateKycUploadUrlResponse>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlResponseGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST CreateKycUploadUrlResponseGlobalsTypeInternal CreateKycUploadUrlResponse_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* CreateKycUploadUrlResponse_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return CreateKycUploadUrlResponse_globals_.GetClassData();
+#else
+  return CreateKycUploadUrlResponse_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class CreateKycUploadUrlRequest::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<CreateKycUploadUrlRequest>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlRequest, _impl_._has_bits_);
+};
+
+constexpr CreateKycUploadUrlRequest::ParseTableT_ CreateKycUploadUrlRequest::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlRequest, _impl_._has_bits_),
+      0, // no _extensions_
+      2, 8,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967292,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      2,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::auth::v1::CreateKycUploadUrlRequest>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // int64 size_bytes = 2 [json_name = "sizeBytes"];
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(CreateKycUploadUrlRequest, _impl_.size_bytes_), 1>(),
+       {16, 1, 0,
+        PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlRequest, _impl_.size_bytes_)}},
+      // string content_type = 1 [json_name = "contentType"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlRequest, _impl_.content_type_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string content_type = 1 [json_name = "contentType"];
+      {PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlRequest, _impl_.content_type_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // int64 size_bytes = 2 [json_name = "sizeBytes"];
+      {PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlRequest, _impl_.size_bytes_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kInt64)},
+    }},
+    // no aux_entries
+    {{
+      "\47\14\0\0\0\0\0\0"
+      "gridx.auth.v1.CreateKycUploadUrlRequest"
+      "content_type"
+    }},
+  };
+}
+
+
+inline constexpr CreateKycUploadUrlRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        content_type_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        size_bytes_{::int64_t{0}} {}
+
+template <typename>
+constexpr CreateKycUploadUrlRequest::CreateKycUploadUrlRequest(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL CreateKycUploadUrlRequest::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) CreateKycUploadUrlRequest(arena);
+}
+constexpr auto CreateKycUploadUrlRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(CreateKycUploadUrlRequest), alignof(CreateKycUploadUrlRequest));
+}
+constexpr auto CreateKycUploadUrlRequest::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &CreateKycUploadUrlRequest::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<CreateKycUploadUrlRequest>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &CreateKycUploadUrlRequest::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<CreateKycUploadUrlRequest>(), &CreateKycUploadUrlRequest::ByteSizeLong,
+              &CreateKycUploadUrlRequest::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlRequest, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[10],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct CreateKycUploadUrlRequestGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr CreateKycUploadUrlRequestGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 CreateKycUploadUrlRequest_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(CreateKycUploadUrlRequest::InternalGenerateClassData_(
+            _default, &CreateKycUploadUrlRequest_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<CreateKycUploadUrlRequest>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~CreateKycUploadUrlRequestGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) CreateKycUploadUrlRequest _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<CreateKycUploadUrlRequest>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(CreateKycUploadUrlRequestGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST CreateKycUploadUrlRequestGlobalsTypeInternal CreateKycUploadUrlRequest_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* CreateKycUploadUrlRequest_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return CreateKycUploadUrlRequest_globals_.GetClassData();
+#else
+  return CreateKycUploadUrlRequest_class_data_.base();
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 }
 }  // namespace
@@ -4158,7 +4479,7 @@ constexpr auto CheckPermissionResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[32],
+      &file_reflection_data[34],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -4314,7 +4635,7 @@ constexpr auto CheckPermissionRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[31],
+      &file_reflection_data[33],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -4455,7 +4776,7 @@ constexpr auto ChangePasswordResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[16],
+      &file_reflection_data[18],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -4611,7 +4932,7 @@ constexpr auto ChangePasswordRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[15],
+      &file_reflection_data[17],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -4812,7 +5133,7 @@ constexpr auto UserProfile::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[10],
+      &file_reflection_data[12],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -4991,7 +5312,7 @@ constexpr auto SubmitKycRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[33],
+      &file_reflection_data[35],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -5481,7 +5802,7 @@ constexpr auto KycSubmission::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[35],
+      &file_reflection_data[37],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -5628,7 +5949,7 @@ constexpr auto VerifyEmailChangeResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[24],
+      &file_reflection_data[26],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -5775,7 +6096,7 @@ constexpr auto UpdateProfileResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[14],
+      &file_reflection_data[16],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -5922,7 +6243,7 @@ constexpr auto SubmitKycResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[34],
+      &file_reflection_data[36],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -6069,7 +6390,7 @@ constexpr auto GetProfileResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[12],
+      &file_reflection_data[14],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -6210,6 +6531,22 @@ const ::uint32_t
         4, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::LogoutAllResponse, _impl_.success_),
         0,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::CreateKycUploadUrlRequest, _impl_._has_bits_),
+        5, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::CreateKycUploadUrlRequest, _impl_.content_type_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::CreateKycUploadUrlRequest, _impl_.size_bytes_),
+        0,
+        1,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::CreateKycUploadUrlResponse, _impl_._has_bits_),
+        6, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::CreateKycUploadUrlResponse, _impl_.upload_url_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::CreateKycUploadUrlResponse, _impl_.object_key_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::CreateKycUploadUrlResponse, _impl_.expires_in_),
+        0,
+        1,
+        2,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::UserProfile, _impl_._has_bits_),
         9, // hasbit index offset
@@ -6430,34 +6767,36 @@ static const ::_pbi::MigrationSchema
         {69, sizeof(::gridx::auth::v1::LogoutResponse)},
         {74, sizeof(::gridx::auth::v1::LogoutAllRequest)},
         {75, sizeof(::gridx::auth::v1::LogoutAllResponse)},
-        {80, sizeof(::gridx::auth::v1::UserProfile)},
-        {95, sizeof(::gridx::auth::v1::GetProfileRequest)},
-        {96, sizeof(::gridx::auth::v1::GetProfileResponse)},
-        {101, sizeof(::gridx::auth::v1::UpdateProfileRequest)},
-        {106, sizeof(::gridx::auth::v1::UpdateProfileResponse)},
-        {111, sizeof(::gridx::auth::v1::ChangePasswordRequest)},
-        {118, sizeof(::gridx::auth::v1::ChangePasswordResponse)},
-        {123, sizeof(::gridx::auth::v1::RequestPasswordResetRequest)},
-        {128, sizeof(::gridx::auth::v1::RequestPasswordResetResponse)},
-        {133, sizeof(::gridx::auth::v1::ResetPasswordRequest)},
-        {140, sizeof(::gridx::auth::v1::ResetPasswordResponse)},
-        {145, sizeof(::gridx::auth::v1::RequestEmailChangeRequest)},
-        {150, sizeof(::gridx::auth::v1::RequestEmailChangeResponse)},
-        {155, sizeof(::gridx::auth::v1::VerifyEmailChangeRequest)},
-        {160, sizeof(::gridx::auth::v1::VerifyEmailChangeResponse)},
-        {165, sizeof(::gridx::auth::v1::VerifyEmailRequest)},
-        {172, sizeof(::gridx::auth::v1::VerifyEmailResponse)},
-        {179, sizeof(::gridx::auth::v1::ResendOtpRequest)},
-        {184, sizeof(::gridx::auth::v1::ResendOtpResponse)},
-        {189, sizeof(::gridx::auth::v1::GetUserRequest)},
-        {194, sizeof(::gridx::auth::v1::GetUserResponse)},
-        {207, sizeof(::gridx::auth::v1::CheckPermissionRequest)},
-        {214, sizeof(::gridx::auth::v1::CheckPermissionResponse)},
-        {219, sizeof(::gridx::auth::v1::SubmitKycRequest)},
-        {230, sizeof(::gridx::auth::v1::SubmitKycResponse)},
-        {235, sizeof(::gridx::auth::v1::KycSubmission)},
-        {260, sizeof(::gridx::auth::v1::LoginWithGoogleRequest)},
-        {271, sizeof(::gridx::auth::v1::LoginWithGoogleResponse)},
+        {80, sizeof(::gridx::auth::v1::CreateKycUploadUrlRequest)},
+        {87, sizeof(::gridx::auth::v1::CreateKycUploadUrlResponse)},
+        {96, sizeof(::gridx::auth::v1::UserProfile)},
+        {111, sizeof(::gridx::auth::v1::GetProfileRequest)},
+        {112, sizeof(::gridx::auth::v1::GetProfileResponse)},
+        {117, sizeof(::gridx::auth::v1::UpdateProfileRequest)},
+        {122, sizeof(::gridx::auth::v1::UpdateProfileResponse)},
+        {127, sizeof(::gridx::auth::v1::ChangePasswordRequest)},
+        {134, sizeof(::gridx::auth::v1::ChangePasswordResponse)},
+        {139, sizeof(::gridx::auth::v1::RequestPasswordResetRequest)},
+        {144, sizeof(::gridx::auth::v1::RequestPasswordResetResponse)},
+        {149, sizeof(::gridx::auth::v1::ResetPasswordRequest)},
+        {156, sizeof(::gridx::auth::v1::ResetPasswordResponse)},
+        {161, sizeof(::gridx::auth::v1::RequestEmailChangeRequest)},
+        {166, sizeof(::gridx::auth::v1::RequestEmailChangeResponse)},
+        {171, sizeof(::gridx::auth::v1::VerifyEmailChangeRequest)},
+        {176, sizeof(::gridx::auth::v1::VerifyEmailChangeResponse)},
+        {181, sizeof(::gridx::auth::v1::VerifyEmailRequest)},
+        {188, sizeof(::gridx::auth::v1::VerifyEmailResponse)},
+        {195, sizeof(::gridx::auth::v1::ResendOtpRequest)},
+        {200, sizeof(::gridx::auth::v1::ResendOtpResponse)},
+        {205, sizeof(::gridx::auth::v1::GetUserRequest)},
+        {210, sizeof(::gridx::auth::v1::GetUserResponse)},
+        {223, sizeof(::gridx::auth::v1::CheckPermissionRequest)},
+        {230, sizeof(::gridx::auth::v1::CheckPermissionResponse)},
+        {235, sizeof(::gridx::auth::v1::SubmitKycRequest)},
+        {246, sizeof(::gridx::auth::v1::SubmitKycResponse)},
+        {251, sizeof(::gridx::auth::v1::KycSubmission)},
+        {276, sizeof(::gridx::auth::v1::LoginWithGoogleRequest)},
+        {287, sizeof(::gridx::auth::v1::LoginWithGoogleResponse)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
     file_message_globals[] = {
@@ -6471,6 +6810,8 @@ static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
         &::gridx::auth::v1::LogoutResponse_globals_,
         &::gridx::auth::v1::LogoutAllRequest_globals_,
         &::gridx::auth::v1::LogoutAllResponse_globals_,
+        &::gridx::auth::v1::CreateKycUploadUrlRequest_globals_,
+        &::gridx::auth::v1::CreateKycUploadUrlResponse_globals_,
         &::gridx::auth::v1::UserProfile_globals_,
         &::gridx::auth::v1::GetProfileRequest_globals_,
         &::gridx::auth::v1::GetProfileResponse_globals_,
@@ -6529,121 +6870,129 @@ const char descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto[] ABSL_ATT
     "\030\001 \001(\tR\014refreshToken\"*\n\016LogoutResponse\022\030"
     "\n\007success\030\001 \001(\010R\007success\"\022\n\020LogoutAllReq"
     "uest\"-\n\021LogoutAllResponse\022\030\n\007success\030\001 \001"
-    "(\010R\007success\"\362\001\n\013UserProfile\022\027\n\007user_id\030\001"
-    " \001(\tR\006userId\022\024\n\005email\030\002 \001(\tR\005email\022\026\n\006st"
-    "atus\030\005 \001(\tR\006status\022!\n\ncreated_at\030\006 \001(\tB\002"
-    "\030\001R\tcreatedAt\022\022\n\004name\030\007 \001(\tR\004name\022B\n\017cre"
-    "ated_at_time\030\010 \001(\0132\032.google.protobuf.Tim"
-    "estampR\rcreatedAtTimeJ\004\010\003\020\004J\004\010\004\020\005R\nfirst"
-    "_nameR\tlast_name\"\023\n\021GetProfileRequest\"J\n"
-    "\022GetProfileResponse\0224\n\007profile\030\001 \001(\0132\032.g"
-    "ridx.auth.v1.UserProfileR\007profile\"M\n\024Upd"
-    "ateProfileRequest\022\022\n\004name\030\003 \001(\tR\004nameJ\004\010"
-    "\001\020\002J\004\010\002\020\003R\nfirst_nameR\tlast_name\"M\n\025Upda"
-    "teProfileResponse\0224\n\007profile\030\001 \001(\0132\032.gri"
-    "dx.auth.v1.UserProfileR\007profile\"e\n\025Chang"
-    "ePasswordRequest\022)\n\020current_password\030\001 \001"
-    "(\tR\017currentPassword\022!\n\014new_password\030\002 \001("
-    "\tR\013newPassword\"2\n\026ChangePasswordResponse"
-    "\022\030\n\007success\030\001 \001(\010R\007success\"3\n\033RequestPas"
-    "swordResetRequest\022\024\n\005email\030\001 \001(\tR\005email\""
-    "8\n\034RequestPasswordResetResponse\022\030\n\007succe"
-    "ss\030\001 \001(\010R\007success\"O\n\024ResetPasswordReques"
-    "t\022\024\n\005token\030\001 \001(\tR\005token\022!\n\014new_password\030"
-    "\002 \001(\tR\013newPassword\"1\n\025ResetPasswordRespo"
-    "nse\022\030\n\007success\030\001 \001(\010R\007success\"8\n\031Request"
-    "EmailChangeRequest\022\033\n\tnew_email\030\001 \001(\tR\010n"
-    "ewEmail\"6\n\032RequestEmailChangeResponse\022\030\n"
-    "\007success\030\001 \001(\010R\007success\"0\n\030VerifyEmailCh"
-    "angeRequest\022\024\n\005token\030\001 \001(\tR\005token\"Q\n\031Ver"
-    "ifyEmailChangeResponse\0224\n\007profile\030\001 \001(\0132"
-    "\032.gridx.auth.v1.UserProfileR\007profile\"<\n\022"
-    "VerifyEmailRequest\022\024\n\005email\030\001 \001(\tR\005email"
-    "\022\020\n\003otp\030\002 \001(\tR\003otp\"I\n\023VerifyEmailRespons"
-    "e\022\030\n\007success\030\001 \001(\010R\007success\022\030\n\007message\030\002"
-    " \001(\tR\007message\"(\n\020ResendOtpRequest\022\024\n\005ema"
-    "il\030\001 \001(\tR\005email\"-\n\021ResendOtpResponse\022\030\n\007"
-    "success\030\001 \001(\010R\007success\")\n\016GetUserRequest"
-    "\022\027\n\007user_id\030\001 \001(\tR\006userId\"\200\001\n\017GetUserRes"
-    "ponse\022\027\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005email\030"
-    "\002 \001(\tR\005email\022\026\n\006status\030\003 \001(\tR\006status\022\022\n\004"
-    "role\030\004 \001(\tR\004role\022\022\n\004name\030\005 \001(\tR\004name\"Z\n\026"
-    "CheckPermissionRequest\022\027\n\007user_id\030\001 \001(\tR"
-    "\006userId\022\'\n\017permission_name\030\002 \001(\tR\016permis"
-    "sionName\"3\n\027CheckPermissionResponse\022\030\n\007a"
-    "llowed\030\001 \001(\010R\007allowed\"\246\001\n\020SubmitKycReque"
-    "st\022\033\n\tfull_name\030\001 \001(\tR\010fullName\0225\n\rdate_"
-    "of_birth\030\002 \001(\0132\021.google.type.DateR\013dateO"
-    "fBirth\022\031\n\010dubai_id\030\003 \001(\tR\007dubaiId\022#\n\rdoc"
-    "ument_path\030\004 \001(\tR\014documentPath\"Q\n\021Submit"
-    "KycResponse\022<\n\nsubmission\030\001 \001(\0132\034.gridx."
-    "auth.v1.KycSubmissionR\nsubmission\"\331\003\n\rKy"
-    "cSubmission\022\016\n\002id\030\001 \001(\tR\002id\022\027\n\007user_id\030\002"
-    " \001(\tR\006userId\022\033\n\tfull_name\030\003 \001(\tR\010fullNam"
-    "e\0225\n\rdate_of_birth\030\004 \001(\0132\021.google.type.D"
-    "ateR\013dateOfBirth\022\031\n\010dubai_id\030\005 \001(\tR\007duba"
-    "iId\022#\n\rdocument_path\030\006 \001(\tR\014documentPath"
-    "\022-\n\005state\030\007 \001(\0162\027.gridx.auth.v1.KycState"
-    "R\005state\022)\n\020rejection_reason\030\010 \001(\tR\017rejec"
-    "tionReason\022;\n\013verified_at\030\t \001(\0132\032.google"
-    ".protobuf.TimestampR\nverifiedAt\0229\n\ncreat"
-    "ed_at\030\n \001(\0132\032.google.protobuf.TimestampR"
-    "\tcreatedAt\0229\n\nupdated_at\030\013 \001(\0132\032.google."
-    "protobuf.TimestampR\tupdatedAt\"\212\001\n\026LoginW"
-    "ithGoogleRequest\022\022\n\004code\030\001 \001(\tR\004code\022#\n\r"
-    "code_verifier\030\002 \001(\tR\014codeVerifier\022!\n\014red"
-    "irect_uri\030\003 \001(\tR\013redirectUri\022\024\n\005nonce\030\004 "
-    "\001(\tR\005nonce\"\317\001\n\027LoginWithGoogleResponse\022\027"
-    "\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005email\030\002 \001(\tR\005"
-    "email\022!\n\014access_token\030\003 \001(\tR\013accessToken"
-    "\022#\n\rrefresh_token\030\004 \001(\tR\014refreshToken\022\035\n"
-    "\nexpires_in\030\005 \001(\003R\texpiresIn\022\036\n\013is_new_u"
-    "ser\030\006 \001(\010R\tisNewUser*l\n\010KycState\022\031\n\025KYC_"
-    "STATE_UNSPECIFIED\020\000\022\025\n\021KYC_STATE_PENDING"
-    "\020\001\022\026\n\022KYC_STATE_VERIFIED\020\002\022\026\n\022KYC_STATE_"
-    "REJECTED\020\0032\300\014\n\013AuthService\022K\n\010Register\022\036"
-    ".gridx.auth.v1.RegisterRequest\032\037.gridx.a"
-    "uth.v1.RegisterResponse\022B\n\005Login\022\033.gridx"
-    ".auth.v1.LoginRequest\032\034.gridx.auth.v1.Lo"
-    "ginResponse\022E\n\006Logout\022\034.gridx.auth.v1.Lo"
-    "goutRequest\032\035.gridx.auth.v1.LogoutRespon"
-    "se\022N\n\tLogoutAll\022\037.gridx.auth.v1.LogoutAl"
-    "lRequest\032 .gridx.auth.v1.LogoutAllRespon"
-    "se\022Q\n\nGetProfile\022 .gridx.auth.v1.GetProf"
-    "ileRequest\032!.gridx.auth.v1.GetProfileRes"
-    "ponse\022Z\n\rUpdateProfile\022#.gridx.auth.v1.U"
-    "pdateProfileRequest\032$.gridx.auth.v1.Upda"
-    "teProfileResponse\022]\n\016ChangePassword\022$.gr"
-    "idx.auth.v1.ChangePasswordRequest\032%.grid"
-    "x.auth.v1.ChangePasswordResponse\022o\n\024Requ"
-    "estPasswordReset\022*.gridx.auth.v1.Request"
-    "PasswordResetRequest\032+.gridx.auth.v1.Req"
-    "uestPasswordResetResponse\022Z\n\rResetPasswo"
-    "rd\022#.gridx.auth.v1.ResetPasswordRequest\032"
-    "$.gridx.auth.v1.ResetPasswordResponse\022i\n"
-    "\022RequestEmailChange\022(.gridx.auth.v1.Requ"
-    "estEmailChangeRequest\032).gridx.auth.v1.Re"
-    "questEmailChangeResponse\022f\n\021VerifyEmailC"
-    "hange\022\'.gridx.auth.v1.VerifyEmailChangeR"
-    "equest\032(.gridx.auth.v1.VerifyEmailChange"
-    "Response\022H\n\007GetUser\022\035.gridx.auth.v1.GetU"
-    "serRequest\032\036.gridx.auth.v1.GetUserRespon"
-    "se\022`\n\017CheckPermission\022%.gridx.auth.v1.Ch"
-    "eckPermissionRequest\032&.gridx.auth.v1.Che"
-    "ckPermissionResponse\022T\n\013VerifyEmail\022!.gr"
-    "idx.auth.v1.VerifyEmailRequest\032\".gridx.a"
-    "uth.v1.VerifyEmailResponse\022N\n\tResendOtp\022"
-    "\037.gridx.auth.v1.ResendOtpRequest\032 .gridx"
-    ".auth.v1.ResendOtpResponse\022N\n\tSubmitKyc\022"
-    "\037.gridx.auth.v1.SubmitKycRequest\032 .gridx"
-    ".auth.v1.SubmitKycResponse\022W\n\014RefreshTok"
-    "en\022\".gridx.auth.v1.RefreshTokenRequest\032#"
-    ".gridx.auth.v1.RefreshTokenResponse\022`\n\017L"
-    "oginWithGoogle\022%.gridx.auth.v1.LoginWith"
-    "GoogleRequest\032&.gridx.auth.v1.LoginWithG"
-    "oogleResponseBHZFgithub.com/p2p-energy-t"
-    "rading-platform/go-sdk/gen/gridx/auth/v1"
-    ";authv1b\006proto3"
+    "(\010R\007success\"]\n\031CreateKycUploadUrlRequest"
+    "\022!\n\014content_type\030\001 \001(\tR\013contentType\022\035\n\ns"
+    "ize_bytes\030\002 \001(\003R\tsizeBytes\"y\n\032CreateKycU"
+    "ploadUrlResponse\022\035\n\nupload_url\030\001 \001(\tR\tup"
+    "loadUrl\022\035\n\nobject_key\030\002 \001(\tR\tobjectKey\022\035"
+    "\n\nexpires_in\030\003 \001(\003R\texpiresIn\"\362\001\n\013UserPr"
+    "ofile\022\027\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005email\030"
+    "\002 \001(\tR\005email\022\026\n\006status\030\005 \001(\tR\006status\022!\n\n"
+    "created_at\030\006 \001(\tB\002\030\001R\tcreatedAt\022\022\n\004name\030"
+    "\007 \001(\tR\004name\022B\n\017created_at_time\030\010 \001(\0132\032.g"
+    "oogle.protobuf.TimestampR\rcreatedAtTimeJ"
+    "\004\010\003\020\004J\004\010\004\020\005R\nfirst_nameR\tlast_name\"\023\n\021Ge"
+    "tProfileRequest\"J\n\022GetProfileResponse\0224\n"
+    "\007profile\030\001 \001(\0132\032.gridx.auth.v1.UserProfi"
+    "leR\007profile\"M\n\024UpdateProfileRequest\022\022\n\004n"
+    "ame\030\003 \001(\tR\004nameJ\004\010\001\020\002J\004\010\002\020\003R\nfirst_nameR"
+    "\tlast_name\"M\n\025UpdateProfileResponse\0224\n\007p"
+    "rofile\030\001 \001(\0132\032.gridx.auth.v1.UserProfile"
+    "R\007profile\"e\n\025ChangePasswordRequest\022)\n\020cu"
+    "rrent_password\030\001 \001(\tR\017currentPassword\022!\n"
+    "\014new_password\030\002 \001(\tR\013newPassword\"2\n\026Chan"
+    "gePasswordResponse\022\030\n\007success\030\001 \001(\010R\007suc"
+    "cess\"3\n\033RequestPasswordResetRequest\022\024\n\005e"
+    "mail\030\001 \001(\tR\005email\"8\n\034RequestPasswordRese"
+    "tResponse\022\030\n\007success\030\001 \001(\010R\007success\"O\n\024R"
+    "esetPasswordRequest\022\024\n\005token\030\001 \001(\tR\005toke"
+    "n\022!\n\014new_password\030\002 \001(\tR\013newPassword\"1\n\025"
+    "ResetPasswordResponse\022\030\n\007success\030\001 \001(\010R\007"
+    "success\"8\n\031RequestEmailChangeRequest\022\033\n\t"
+    "new_email\030\001 \001(\tR\010newEmail\"6\n\032RequestEmai"
+    "lChangeResponse\022\030\n\007success\030\001 \001(\010R\007succes"
+    "s\"0\n\030VerifyEmailChangeRequest\022\024\n\005token\030\001"
+    " \001(\tR\005token\"Q\n\031VerifyEmailChangeResponse"
+    "\0224\n\007profile\030\001 \001(\0132\032.gridx.auth.v1.UserPr"
+    "ofileR\007profile\"<\n\022VerifyEmailRequest\022\024\n\005"
+    "email\030\001 \001(\tR\005email\022\020\n\003otp\030\002 \001(\tR\003otp\"I\n\023"
+    "VerifyEmailResponse\022\030\n\007success\030\001 \001(\010R\007su"
+    "ccess\022\030\n\007message\030\002 \001(\tR\007message\"(\n\020Resen"
+    "dOtpRequest\022\024\n\005email\030\001 \001(\tR\005email\"-\n\021Res"
+    "endOtpResponse\022\030\n\007success\030\001 \001(\010R\007success"
+    "\")\n\016GetUserRequest\022\027\n\007user_id\030\001 \001(\tR\006use"
+    "rId\"\200\001\n\017GetUserResponse\022\027\n\007user_id\030\001 \001(\t"
+    "R\006userId\022\024\n\005email\030\002 \001(\tR\005email\022\026\n\006status"
+    "\030\003 \001(\tR\006status\022\022\n\004role\030\004 \001(\tR\004role\022\022\n\004na"
+    "me\030\005 \001(\tR\004name\"Z\n\026CheckPermissionRequest"
+    "\022\027\n\007user_id\030\001 \001(\tR\006userId\022\'\n\017permission_"
+    "name\030\002 \001(\tR\016permissionName\"3\n\027CheckPermi"
+    "ssionResponse\022\030\n\007allowed\030\001 \001(\010R\007allowed\""
+    "\246\001\n\020SubmitKycRequest\022\033\n\tfull_name\030\001 \001(\tR"
+    "\010fullName\0225\n\rdate_of_birth\030\002 \001(\0132\021.googl"
+    "e.type.DateR\013dateOfBirth\022\031\n\010dubai_id\030\003 \001"
+    "(\tR\007dubaiId\022#\n\rdocument_path\030\004 \001(\tR\014docu"
+    "mentPath\"Q\n\021SubmitKycResponse\022<\n\nsubmiss"
+    "ion\030\001 \001(\0132\034.gridx.auth.v1.KycSubmissionR"
+    "\nsubmission\"\331\003\n\rKycSubmission\022\016\n\002id\030\001 \001("
+    "\tR\002id\022\027\n\007user_id\030\002 \001(\tR\006userId\022\033\n\tfull_n"
+    "ame\030\003 \001(\tR\010fullName\0225\n\rdate_of_birth\030\004 \001"
+    "(\0132\021.google.type.DateR\013dateOfBirth\022\031\n\010du"
+    "bai_id\030\005 \001(\tR\007dubaiId\022#\n\rdocument_path\030\006"
+    " \001(\tR\014documentPath\022-\n\005state\030\007 \001(\0162\027.grid"
+    "x.auth.v1.KycStateR\005state\022)\n\020rejection_r"
+    "eason\030\010 \001(\tR\017rejectionReason\022;\n\013verified"
+    "_at\030\t \001(\0132\032.google.protobuf.TimestampR\nv"
+    "erifiedAt\0229\n\ncreated_at\030\n \001(\0132\032.google.p"
+    "rotobuf.TimestampR\tcreatedAt\0229\n\nupdated_"
+    "at\030\013 \001(\0132\032.google.protobuf.TimestampR\tup"
+    "datedAt\"\212\001\n\026LoginWithGoogleRequest\022\022\n\004co"
+    "de\030\001 \001(\tR\004code\022#\n\rcode_verifier\030\002 \001(\tR\014c"
+    "odeVerifier\022!\n\014redirect_uri\030\003 \001(\tR\013redir"
+    "ectUri\022\024\n\005nonce\030\004 \001(\tR\005nonce\"\317\001\n\027LoginWi"
+    "thGoogleResponse\022\027\n\007user_id\030\001 \001(\tR\006userI"
+    "d\022\024\n\005email\030\002 \001(\tR\005email\022!\n\014access_token\030"
+    "\003 \001(\tR\013accessToken\022#\n\rrefresh_token\030\004 \001("
+    "\tR\014refreshToken\022\035\n\nexpires_in\030\005 \001(\003R\texp"
+    "iresIn\022\036\n\013is_new_user\030\006 \001(\010R\tisNewUser*l"
+    "\n\010KycState\022\031\n\025KYC_STATE_UNSPECIFIED\020\000\022\025\n"
+    "\021KYC_STATE_PENDING\020\001\022\026\n\022KYC_STATE_VERIFI"
+    "ED\020\002\022\026\n\022KYC_STATE_REJECTED\020\0032\253\r\n\013AuthSer"
+    "vice\022K\n\010Register\022\036.gridx.auth.v1.Registe"
+    "rRequest\032\037.gridx.auth.v1.RegisterRespons"
+    "e\022B\n\005Login\022\033.gridx.auth.v1.LoginRequest\032"
+    "\034.gridx.auth.v1.LoginResponse\022E\n\006Logout\022"
+    "\034.gridx.auth.v1.LogoutRequest\032\035.gridx.au"
+    "th.v1.LogoutResponse\022N\n\tLogoutAll\022\037.grid"
+    "x.auth.v1.LogoutAllRequest\032 .gridx.auth."
+    "v1.LogoutAllResponse\022i\n\022CreateKycUploadU"
+    "rl\022(.gridx.auth.v1.CreateKycUploadUrlReq"
+    "uest\032).gridx.auth.v1.CreateKycUploadUrlR"
+    "esponse\022Q\n\nGetProfile\022 .gridx.auth.v1.Ge"
+    "tProfileRequest\032!.gridx.auth.v1.GetProfi"
+    "leResponse\022Z\n\rUpdateProfile\022#.gridx.auth"
+    ".v1.UpdateProfileRequest\032$.gridx.auth.v1"
+    ".UpdateProfileResponse\022]\n\016ChangePassword"
+    "\022$.gridx.auth.v1.ChangePasswordRequest\032%"
+    ".gridx.auth.v1.ChangePasswordResponse\022o\n"
+    "\024RequestPasswordReset\022*.gridx.auth.v1.Re"
+    "questPasswordResetRequest\032+.gridx.auth.v"
+    "1.RequestPasswordResetResponse\022Z\n\rResetP"
+    "assword\022#.gridx.auth.v1.ResetPasswordReq"
+    "uest\032$.gridx.auth.v1.ResetPasswordRespon"
+    "se\022i\n\022RequestEmailChange\022(.gridx.auth.v1"
+    ".RequestEmailChangeRequest\032).gridx.auth."
+    "v1.RequestEmailChangeResponse\022f\n\021VerifyE"
+    "mailChange\022\'.gridx.auth.v1.VerifyEmailCh"
+    "angeRequest\032(.gridx.auth.v1.VerifyEmailC"
+    "hangeResponse\022H\n\007GetUser\022\035.gridx.auth.v1"
+    ".GetUserRequest\032\036.gridx.auth.v1.GetUserR"
+    "esponse\022`\n\017CheckPermission\022%.gridx.auth."
+    "v1.CheckPermissionRequest\032&.gridx.auth.v"
+    "1.CheckPermissionResponse\022T\n\013VerifyEmail"
+    "\022!.gridx.auth.v1.VerifyEmailRequest\032\".gr"
+    "idx.auth.v1.VerifyEmailResponse\022N\n\tResen"
+    "dOtp\022\037.gridx.auth.v1.ResendOtpRequest\032 ."
+    "gridx.auth.v1.ResendOtpResponse\022N\n\tSubmi"
+    "tKyc\022\037.gridx.auth.v1.SubmitKycRequest\032 ."
+    "gridx.auth.v1.SubmitKycResponse\022W\n\014Refre"
+    "shToken\022\".gridx.auth.v1.RefreshTokenRequ"
+    "est\032#.gridx.auth.v1.RefreshTokenResponse"
+    "\022`\n\017LoginWithGoogle\022%.gridx.auth.v1.Logi"
+    "nWithGoogleRequest\032&.gridx.auth.v1.Login"
+    "WithGoogleResponseBHZFgithub.com/p2p-ene"
+    "rgy-trading-platform/go-sdk/gen/gridx/au"
+    "th/v1;authv1b\006proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_deps[2] = {
@@ -6654,13 +7003,13 @@ static ::absl::once_flag descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto = {
     false,
     false,
-    5655,
+    5980,
     descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto,
     "gridx/auth/v1/auth.proto",
     &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_once,
     descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_deps,
     2,
-    38,
+    40,
     schemas,
     file_message_globals,
     TableStruct_gridx_2fauth_2fv1_2fauth_2eproto::offsets,
@@ -9188,6 +9537,525 @@ void LogoutAllResponse::InternalSwap(LogoutAllResponse* PROTOBUF_RESTRICT PROTOB
 }
 
 ::google::protobuf::Metadata LogoutAllResponse::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+CreateKycUploadUrlRequest::CreateKycUploadUrlRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, CreateKycUploadUrlRequest_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.auth.v1.CreateKycUploadUrlRequest)
+}
+PROTOBUF_NDEBUG_INLINE CreateKycUploadUrlRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::auth::v1::CreateKycUploadUrlRequest& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        content_type_(arena, from.content_type_) {}
+
+CreateKycUploadUrlRequest::CreateKycUploadUrlRequest(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const CreateKycUploadUrlRequest& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, CreateKycUploadUrlRequest_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  CreateKycUploadUrlRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  _impl_.size_bytes_ = from._impl_.size_bytes_;
+
+  // @@protoc_insertion_point(copy_constructor:gridx.auth.v1.CreateKycUploadUrlRequest)
+}
+PROTOBUF_NDEBUG_INLINE CreateKycUploadUrlRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        content_type_(arena) {}
+
+inline void CreateKycUploadUrlRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.size_bytes_ = {};
+}
+CreateKycUploadUrlRequest::~CreateKycUploadUrlRequest() {
+  // @@protoc_insertion_point(destructor:gridx.auth.v1.CreateKycUploadUrlRequest)
+  SharedDtor(*this);
+}
+inline void CreateKycUploadUrlRequest::SharedDtor(MessageLite& self) {
+  CreateKycUploadUrlRequest& this_ = static_cast<CreateKycUploadUrlRequest&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.content_type_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull CreateKycUploadUrlRequest_class_data_ =
+        CreateKycUploadUrlRequest::InternalGenerateClassData_(CreateKycUploadUrlRequest_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+CreateKycUploadUrlRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&CreateKycUploadUrlRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(CreateKycUploadUrlRequest_class_data_.tc_table);
+  return CreateKycUploadUrlRequest_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+CreateKycUploadUrlRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&CreateKycUploadUrlRequest_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&CreateKycUploadUrlRequest_globals_));
+  return CreateKycUploadUrlRequest_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const CreateKycUploadUrlRequest::ParseTableT_
+    CreateKycUploadUrlRequest::_table_ =
+        CreateKycUploadUrlRequest::InternalGenerateParseTable_(CreateKycUploadUrlRequest_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void CreateKycUploadUrlRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.auth.v1.CreateKycUploadUrlRequest)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    _impl_.content_type_.ClearNonDefaultToEmpty();
+  }
+  _impl_.size_bytes_ = ::int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL CreateKycUploadUrlRequest::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const CreateKycUploadUrlRequest& this_ = static_cast<const CreateKycUploadUrlRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL CreateKycUploadUrlRequest::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const CreateKycUploadUrlRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.auth.v1.CreateKycUploadUrlRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string content_type = 1 [json_name = "contentType"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_content_type().empty()) {
+      const ::std::string& _s = this_._internal_content_type();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.CreateKycUploadUrlRequest.content_type");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  // int64 size_bytes = 2 [json_name = "sizeBytes"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (this_._internal_size_bytes() != 0) {
+      target =
+          ::google::protobuf::internal::WireFormatLite::WriteInt64ToArrayWithField<2>(
+              stream, this_._internal_size_bytes(), target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.auth.v1.CreateKycUploadUrlRequest)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t CreateKycUploadUrlRequest::ByteSizeLong(const MessageLite& base) {
+  const CreateKycUploadUrlRequest& this_ = static_cast<const CreateKycUploadUrlRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t CreateKycUploadUrlRequest::ByteSizeLong() const {
+  const CreateKycUploadUrlRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.auth.v1.CreateKycUploadUrlRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    // string content_type = 1 [json_name = "contentType"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_content_type().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_content_type());
+      }
+    }
+    // int64 size_bytes = 2 [json_name = "sizeBytes"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (this_._internal_size_bytes() != 0) {
+        total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+            this_._internal_size_bytes());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void CreateKycUploadUrlRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<CreateKycUploadUrlRequest*>(&to_msg);
+  auto& from = static_cast<const CreateKycUploadUrlRequest&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.auth.v1.CreateKycUploadUrlRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_content_type().empty()) {
+        _this->_internal_set_content_type(from._internal_content_type());
+      } else {
+        if (_this->_impl_.content_type_.IsDefault()) {
+          _this->_internal_set_content_type("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (from._internal_size_bytes() != 0) {
+        _this->_impl_.size_bytes_ = from._impl_.size_bytes_;
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void CreateKycUploadUrlRequest::CopyFrom(const CreateKycUploadUrlRequest& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.auth.v1.CreateKycUploadUrlRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void CreateKycUploadUrlRequest::InternalSwap(CreateKycUploadUrlRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.content_type_, &other->_impl_.content_type_, arena);
+  swap(_impl_.size_bytes_, other->_impl_.size_bytes_);
+}
+
+::google::protobuf::Metadata CreateKycUploadUrlRequest::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+CreateKycUploadUrlResponse::CreateKycUploadUrlResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, CreateKycUploadUrlResponse_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.auth.v1.CreateKycUploadUrlResponse)
+}
+PROTOBUF_NDEBUG_INLINE CreateKycUploadUrlResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::auth::v1::CreateKycUploadUrlResponse& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        upload_url_(arena, from.upload_url_),
+        object_key_(arena, from.object_key_) {}
+
+CreateKycUploadUrlResponse::CreateKycUploadUrlResponse(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const CreateKycUploadUrlResponse& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, CreateKycUploadUrlResponse_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  CreateKycUploadUrlResponse* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  _impl_.expires_in_ = from._impl_.expires_in_;
+
+  // @@protoc_insertion_point(copy_constructor:gridx.auth.v1.CreateKycUploadUrlResponse)
+}
+PROTOBUF_NDEBUG_INLINE CreateKycUploadUrlResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        upload_url_(arena),
+        object_key_(arena) {}
+
+inline void CreateKycUploadUrlResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.expires_in_ = {};
+}
+CreateKycUploadUrlResponse::~CreateKycUploadUrlResponse() {
+  // @@protoc_insertion_point(destructor:gridx.auth.v1.CreateKycUploadUrlResponse)
+  SharedDtor(*this);
+}
+inline void CreateKycUploadUrlResponse::SharedDtor(MessageLite& self) {
+  CreateKycUploadUrlResponse& this_ = static_cast<CreateKycUploadUrlResponse&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.upload_url_.Destroy();
+  this_._impl_.object_key_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull CreateKycUploadUrlResponse_class_data_ =
+        CreateKycUploadUrlResponse::InternalGenerateClassData_(CreateKycUploadUrlResponse_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+CreateKycUploadUrlResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&CreateKycUploadUrlResponse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(CreateKycUploadUrlResponse_class_data_.tc_table);
+  return CreateKycUploadUrlResponse_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+CreateKycUploadUrlResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&CreateKycUploadUrlResponse_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&CreateKycUploadUrlResponse_globals_));
+  return CreateKycUploadUrlResponse_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const CreateKycUploadUrlResponse::ParseTableT_
+    CreateKycUploadUrlResponse::_table_ =
+        CreateKycUploadUrlResponse::InternalGenerateParseTable_(CreateKycUploadUrlResponse_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void CreateKycUploadUrlResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.auth.v1.CreateKycUploadUrlResponse)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      _impl_.upload_url_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      _impl_.object_key_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_.expires_in_ = ::int64_t{0};
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL CreateKycUploadUrlResponse::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const CreateKycUploadUrlResponse& this_ = static_cast<const CreateKycUploadUrlResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL CreateKycUploadUrlResponse::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const CreateKycUploadUrlResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.auth.v1.CreateKycUploadUrlResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string upload_url = 1 [json_name = "uploadUrl"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_upload_url().empty()) {
+      const ::std::string& _s = this_._internal_upload_url();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.CreateKycUploadUrlResponse.upload_url");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  // string object_key = 2 [json_name = "objectKey"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (!this_._internal_object_key().empty()) {
+      const ::std::string& _s = this_._internal_object_key();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.CreateKycUploadUrlResponse.object_key");
+      target = stream->WriteStringMaybeAliased(2, _s, target);
+    }
+  }
+
+  // int64 expires_in = 3 [json_name = "expiresIn"];
+  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (this_._internal_expires_in() != 0) {
+      target =
+          ::google::protobuf::internal::WireFormatLite::WriteInt64ToArrayWithField<3>(
+              stream, this_._internal_expires_in(), target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.auth.v1.CreateKycUploadUrlResponse)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t CreateKycUploadUrlResponse::ByteSizeLong(const MessageLite& base) {
+  const CreateKycUploadUrlResponse& this_ = static_cast<const CreateKycUploadUrlResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t CreateKycUploadUrlResponse::ByteSizeLong() const {
+  const CreateKycUploadUrlResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.auth.v1.CreateKycUploadUrlResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    // string upload_url = 1 [json_name = "uploadUrl"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_upload_url().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_upload_url());
+      }
+    }
+    // string object_key = 2 [json_name = "objectKey"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!this_._internal_object_key().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_object_key());
+      }
+    }
+    // int64 expires_in = 3 [json_name = "expiresIn"];
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (this_._internal_expires_in() != 0) {
+        total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+            this_._internal_expires_in());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void CreateKycUploadUrlResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<CreateKycUploadUrlResponse*>(&to_msg);
+  auto& from = static_cast<const CreateKycUploadUrlResponse&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.auth.v1.CreateKycUploadUrlResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_upload_url().empty()) {
+        _this->_internal_set_upload_url(from._internal_upload_url());
+      } else {
+        if (_this->_impl_.upload_url_.IsDefault()) {
+          _this->_internal_set_upload_url("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!from._internal_object_key().empty()) {
+        _this->_internal_set_object_key(from._internal_object_key());
+      } else {
+        if (_this->_impl_.object_key_.IsDefault()) {
+          _this->_internal_set_object_key("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (from._internal_expires_in() != 0) {
+        _this->_impl_.expires_in_ = from._impl_.expires_in_;
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void CreateKycUploadUrlResponse::CopyFrom(const CreateKycUploadUrlResponse& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.auth.v1.CreateKycUploadUrlResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void CreateKycUploadUrlResponse::InternalSwap(CreateKycUploadUrlResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.upload_url_, &other->_impl_.upload_url_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.object_key_, &other->_impl_.object_key_, arena);
+  swap(_impl_.expires_in_, other->_impl_.expires_in_);
+}
+
+::google::protobuf::Metadata CreateKycUploadUrlResponse::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================

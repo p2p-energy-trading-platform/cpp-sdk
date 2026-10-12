@@ -94,6 +94,22 @@ extern const ::google::protobuf::internal::ClassDataFull CheckPermissionResponse
 #else
 extern const CheckPermissionResponseGlobalsTypeInternal CheckPermissionResponse_globals_;
 #endif  // PROTOBUF_MESSAGE_GLOBALS
+class CreateKycUploadUrlRequest;
+struct CreateKycUploadUrlRequestGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern CreateKycUploadUrlRequestGlobalsTypeInternal CreateKycUploadUrlRequest_globals_;
+extern const ::google::protobuf::internal::ClassDataFull CreateKycUploadUrlRequest_class_data_;
+#else
+extern const CreateKycUploadUrlRequestGlobalsTypeInternal CreateKycUploadUrlRequest_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class CreateKycUploadUrlResponse;
+struct CreateKycUploadUrlResponseGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern CreateKycUploadUrlResponseGlobalsTypeInternal CreateKycUploadUrlResponse_globals_;
+extern const ::google::protobuf::internal::ClassDataFull CreateKycUploadUrlResponse_class_data_;
+#else
+extern const CreateKycUploadUrlResponseGlobalsTypeInternal CreateKycUploadUrlResponse_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
 class GetProfileRequest;
 struct GetProfileRequestGlobalsTypeInternal;
 #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -486,7 +502,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED VerifyEmailResponse final : public 
   [[nodiscard]] static const VerifyEmailResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<VerifyEmailResponse>(&VerifyEmailResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 26;
+  static constexpr int kIndexInFileMessages = 28;
   friend void swap(VerifyEmailResponse& a, VerifyEmailResponse& b) { a.Swap(&b); }
   inline void Swap(VerifyEmailResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -704,7 +720,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED VerifyEmailRequest final : public :
   [[nodiscard]] static const VerifyEmailRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<VerifyEmailRequest>(&VerifyEmailRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 25;
+  static constexpr int kIndexInFileMessages = 27;
   friend void swap(VerifyEmailRequest& a, VerifyEmailRequest& b) { a.Swap(&b); }
   inline void Swap(VerifyEmailRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -927,7 +943,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED VerifyEmailChangeRequest final : pu
   [[nodiscard]] static const VerifyEmailChangeRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<VerifyEmailChangeRequest>(&VerifyEmailChangeRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 23;
+  static constexpr int kIndexInFileMessages = 25;
   friend void swap(VerifyEmailChangeRequest& a, VerifyEmailChangeRequest& b) { a.Swap(&b); }
   inline void Swap(VerifyEmailChangeRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -1133,7 +1149,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UpdateProfileRequest final : public
   [[nodiscard]] static const UpdateProfileRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<UpdateProfileRequest>(&UpdateProfileRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 13;
+  static constexpr int kIndexInFileMessages = 15;
   friend void swap(UpdateProfileRequest& a, UpdateProfileRequest& b) { a.Swap(&b); }
   inline void Swap(UpdateProfileRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -1339,7 +1355,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ResetPasswordResponse final : publi
   [[nodiscard]] static const ResetPasswordResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ResetPasswordResponse>(&ResetPasswordResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 20;
+  static constexpr int kIndexInFileMessages = 22;
   friend void swap(ResetPasswordResponse& a, ResetPasswordResponse& b) { a.Swap(&b); }
   inline void Swap(ResetPasswordResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -1540,7 +1556,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ResetPasswordRequest final : public
   [[nodiscard]] static const ResetPasswordRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ResetPasswordRequest>(&ResetPasswordRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 19;
+  static constexpr int kIndexInFileMessages = 21;
   friend void swap(ResetPasswordRequest& a, ResetPasswordRequest& b) { a.Swap(&b); }
   inline void Swap(ResetPasswordRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -1763,7 +1779,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ResendOtpResponse final : public ::
   [[nodiscard]] static const ResendOtpResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ResendOtpResponse>(&ResendOtpResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 28;
+  static constexpr int kIndexInFileMessages = 30;
   friend void swap(ResendOtpResponse& a, ResendOtpResponse& b) { a.Swap(&b); }
   inline void Swap(ResendOtpResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -1964,7 +1980,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ResendOtpRequest final : public ::g
   [[nodiscard]] static const ResendOtpRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ResendOtpRequest>(&ResendOtpRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 27;
+  static constexpr int kIndexInFileMessages = 29;
   friend void swap(ResendOtpRequest& a, ResendOtpRequest& b) { a.Swap(&b); }
   inline void Swap(ResendOtpRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -2170,7 +2186,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED RequestPasswordResetResponse final 
   [[nodiscard]] static const RequestPasswordResetResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<RequestPasswordResetResponse>(&RequestPasswordResetResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 18;
+  static constexpr int kIndexInFileMessages = 20;
   friend void swap(RequestPasswordResetResponse& a, RequestPasswordResetResponse& b) { a.Swap(&b); }
   inline void Swap(RequestPasswordResetResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -2371,7 +2387,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED RequestPasswordResetRequest final :
   [[nodiscard]] static const RequestPasswordResetRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<RequestPasswordResetRequest>(&RequestPasswordResetRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 17;
+  static constexpr int kIndexInFileMessages = 19;
   friend void swap(RequestPasswordResetRequest& a, RequestPasswordResetRequest& b) { a.Swap(&b); }
   inline void Swap(RequestPasswordResetRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -2577,7 +2593,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED RequestEmailChangeResponse final : 
   [[nodiscard]] static const RequestEmailChangeResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<RequestEmailChangeResponse>(&RequestEmailChangeResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 22;
+  static constexpr int kIndexInFileMessages = 24;
   friend void swap(RequestEmailChangeResponse& a, RequestEmailChangeResponse& b) { a.Swap(&b); }
   inline void Swap(RequestEmailChangeResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -2778,7 +2794,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED RequestEmailChangeRequest final : p
   [[nodiscard]] static const RequestEmailChangeRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<RequestEmailChangeRequest>(&RequestEmailChangeRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 21;
+  static constexpr int kIndexInFileMessages = 23;
   friend void swap(RequestEmailChangeRequest& a, RequestEmailChangeRequest& b) { a.Swap(&b); }
   inline void Swap(RequestEmailChangeRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -4411,7 +4427,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LoginWithGoogleResponse final : pub
   [[nodiscard]] static const LoginWithGoogleResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LoginWithGoogleResponse>(&LoginWithGoogleResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 37;
+  static constexpr int kIndexInFileMessages = 39;
   friend void swap(LoginWithGoogleResponse& a, LoginWithGoogleResponse& b) { a.Swap(&b); }
   inline void Swap(LoginWithGoogleResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -4692,7 +4708,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LoginWithGoogleRequest final : publ
   [[nodiscard]] static const LoginWithGoogleRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LoginWithGoogleRequest>(&LoginWithGoogleRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 36;
+  static constexpr int kIndexInFileMessages = 38;
   friend void swap(LoginWithGoogleRequest& a, LoginWithGoogleRequest& b) { a.Swap(&b); }
   inline void Swap(LoginWithGoogleRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -5441,7 +5457,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetUserResponse final : public ::go
   [[nodiscard]] static const GetUserResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<GetUserResponse>(&GetUserResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 30;
+  static constexpr int kIndexInFileMessages = 32;
   friend void swap(GetUserResponse& a, GetUserResponse& b) { a.Swap(&b); }
   inline void Swap(GetUserResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -5715,7 +5731,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetUserRequest final : public ::goo
   [[nodiscard]] static const GetUserRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<GetUserRequest>(&GetUserRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 29;
+  static constexpr int kIndexInFileMessages = 31;
   friend void swap(GetUserRequest& a, GetUserRequest& b) { a.Swap(&b); }
   inline void Swap(GetUserRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -5920,7 +5936,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetProfileRequest final : public ::
   [[nodiscard]] static const GetProfileRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<GetProfileRequest>(&GetProfileRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 11;
+  static constexpr int kIndexInFileMessages = 13;
   friend void swap(GetProfileRequest& a, GetProfileRequest& b) { a.Swap(&b); }
   inline void Swap(GetProfileRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -6003,6 +6019,459 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetProfileRequest final : public ::
 };
 // -------------------------------------------------------------------
 
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CreateKycUploadUrlResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.auth.v1.CreateKycUploadUrlResponse) */ {
+ public:
+  inline CreateKycUploadUrlResponse() : CreateKycUploadUrlResponse(nullptr) {}
+  ~CreateKycUploadUrlResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(CreateKycUploadUrlResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(CreateKycUploadUrlResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr CreateKycUploadUrlResponse(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline CreateKycUploadUrlResponse(const CreateKycUploadUrlResponse& from) : CreateKycUploadUrlResponse(nullptr, from) {}
+  inline CreateKycUploadUrlResponse(CreateKycUploadUrlResponse&& from) noexcept : CreateKycUploadUrlResponse(nullptr, ::std::move(from)) {}
+  inline CreateKycUploadUrlResponse& operator=(const CreateKycUploadUrlResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CreateKycUploadUrlResponse& operator=(CreateKycUploadUrlResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const CreateKycUploadUrlResponse& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CreateKycUploadUrlResponse>(&CreateKycUploadUrlResponse_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 11;
+  friend void swap(CreateKycUploadUrlResponse& a, CreateKycUploadUrlResponse& b) { a.Swap(&b); }
+  inline void Swap(CreateKycUploadUrlResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CreateKycUploadUrlResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] CreateKycUploadUrlResponse* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<CreateKycUploadUrlResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const CreateKycUploadUrlResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const CreateKycUploadUrlResponse& from) { CreateKycUploadUrlResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(CreateKycUploadUrlResponse* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.CreateKycUploadUrlResponse"; }
+
+  explicit CreateKycUploadUrlResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  CreateKycUploadUrlResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const CreateKycUploadUrlResponse& from);
+  CreateKycUploadUrlResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, CreateKycUploadUrlResponse&& from) noexcept
+      : CreateKycUploadUrlResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kUploadUrlFieldNumber = 1,
+    kObjectKeyFieldNumber = 2,
+    kExpiresInFieldNumber = 3,
+  };
+  // string upload_url = 1 [json_name = "uploadUrl"];
+  void clear_upload_url() ;
+  [[nodiscard]] const ::std::string& upload_url() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_upload_url(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_upload_url();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_upload_url();
+  void set_allocated_upload_url(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_upload_url() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_upload_url(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_upload_url();
+
+  public:
+  // string object_key = 2 [json_name = "objectKey"];
+  void clear_object_key() ;
+  [[nodiscard]] const ::std::string& object_key() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_object_key(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_object_key();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_object_key();
+  void set_allocated_object_key(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_object_key() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_object_key(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_object_key();
+
+  public:
+  // int64 expires_in = 3 [json_name = "expiresIn"];
+  void clear_expires_in() ;
+  [[nodiscard]] ::int64_t expires_in() const;
+  void set_expires_in(::int64_t value);
+
+  private:
+  ::int64_t _internal_expires_in() const;
+  void _internal_set_expires_in(::int64_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.auth.v1.CreateKycUploadUrlResponse)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<2, 3,
+                          0, 69,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const CreateKycUploadUrlResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr upload_url_;
+    ::google::protobuf::internal::ArenaStringPtr object_key_;
+    ::int64_t expires_in_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CreateKycUploadUrlRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.auth.v1.CreateKycUploadUrlRequest) */ {
+ public:
+  inline CreateKycUploadUrlRequest() : CreateKycUploadUrlRequest(nullptr) {}
+  ~CreateKycUploadUrlRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(CreateKycUploadUrlRequest* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(CreateKycUploadUrlRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr CreateKycUploadUrlRequest(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline CreateKycUploadUrlRequest(const CreateKycUploadUrlRequest& from) : CreateKycUploadUrlRequest(nullptr, from) {}
+  inline CreateKycUploadUrlRequest(CreateKycUploadUrlRequest&& from) noexcept : CreateKycUploadUrlRequest(nullptr, ::std::move(from)) {}
+  inline CreateKycUploadUrlRequest& operator=(const CreateKycUploadUrlRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CreateKycUploadUrlRequest& operator=(CreateKycUploadUrlRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const CreateKycUploadUrlRequest& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CreateKycUploadUrlRequest>(&CreateKycUploadUrlRequest_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 10;
+  friend void swap(CreateKycUploadUrlRequest& a, CreateKycUploadUrlRequest& b) { a.Swap(&b); }
+  inline void Swap(CreateKycUploadUrlRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CreateKycUploadUrlRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] CreateKycUploadUrlRequest* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<CreateKycUploadUrlRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const CreateKycUploadUrlRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const CreateKycUploadUrlRequest& from) { CreateKycUploadUrlRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(CreateKycUploadUrlRequest* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.CreateKycUploadUrlRequest"; }
+
+  explicit CreateKycUploadUrlRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  CreateKycUploadUrlRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const CreateKycUploadUrlRequest& from);
+  CreateKycUploadUrlRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, CreateKycUploadUrlRequest&& from) noexcept
+      : CreateKycUploadUrlRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kContentTypeFieldNumber = 1,
+    kSizeBytesFieldNumber = 2,
+  };
+  // string content_type = 1 [json_name = "contentType"];
+  void clear_content_type() ;
+  [[nodiscard]] const ::std::string& content_type() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_content_type(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_content_type();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_content_type();
+  void set_allocated_content_type(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_content_type() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_content_type(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_content_type();
+
+  public:
+  // int64 size_bytes = 2 [json_name = "sizeBytes"];
+  void clear_size_bytes() ;
+  [[nodiscard]] ::int64_t size_bytes() const;
+  void set_size_bytes(::int64_t value);
+
+  private:
+  ::int64_t _internal_size_bytes() const;
+  void _internal_set_size_bytes(::int64_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.auth.v1.CreateKycUploadUrlRequest)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<1, 2,
+                          0, 60,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const CreateKycUploadUrlRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr content_type_;
+    ::int64_t size_bytes_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
+};
+// -------------------------------------------------------------------
+
 class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CheckPermissionResponse final : public ::google::protobuf::Message
 /* @@protoc_insertion_point(class_definition:gridx.auth.v1.CheckPermissionResponse) */ {
  public:
@@ -6059,7 +6528,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CheckPermissionResponse final : pub
   [[nodiscard]] static const CheckPermissionResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CheckPermissionResponse>(&CheckPermissionResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 32;
+  static constexpr int kIndexInFileMessages = 34;
   friend void swap(CheckPermissionResponse& a, CheckPermissionResponse& b) { a.Swap(&b); }
   inline void Swap(CheckPermissionResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -6260,7 +6729,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CheckPermissionRequest final : publ
   [[nodiscard]] static const CheckPermissionRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CheckPermissionRequest>(&CheckPermissionRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 31;
+  static constexpr int kIndexInFileMessages = 33;
   friend void swap(CheckPermissionRequest& a, CheckPermissionRequest& b) { a.Swap(&b); }
   inline void Swap(CheckPermissionRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -6483,7 +6952,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ChangePasswordResponse final : publ
   [[nodiscard]] static const ChangePasswordResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ChangePasswordResponse>(&ChangePasswordResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 16;
+  static constexpr int kIndexInFileMessages = 18;
   friend void swap(ChangePasswordResponse& a, ChangePasswordResponse& b) { a.Swap(&b); }
   inline void Swap(ChangePasswordResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -6684,7 +7153,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ChangePasswordRequest final : publi
   [[nodiscard]] static const ChangePasswordRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ChangePasswordRequest>(&ChangePasswordRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 15;
+  static constexpr int kIndexInFileMessages = 17;
   friend void swap(ChangePasswordRequest& a, ChangePasswordRequest& b) { a.Swap(&b); }
   inline void Swap(ChangePasswordRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -6907,7 +7376,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserProfile final : public ::google
   [[nodiscard]] static const UserProfile& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<UserProfile>(&UserProfile_globals_);
   }
-  static constexpr int kIndexInFileMessages = 10;
+  static constexpr int kIndexInFileMessages = 12;
   friend void swap(UserProfile& a, UserProfile& b) { a.Swap(&b); }
   inline void Swap(UserProfile* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -7199,7 +7668,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycRequest final : public ::g
   [[nodiscard]] static const SubmitKycRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<SubmitKycRequest>(&SubmitKycRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 33;
+  static constexpr int kIndexInFileMessages = 35;
   friend void swap(SubmitKycRequest& a, SubmitKycRequest& b) { a.Swap(&b); }
   inline void Swap(SubmitKycRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -7795,7 +8264,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED KycSubmission final : public ::goog
   [[nodiscard]] static const KycSubmission& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<KycSubmission>(&KycSubmission_globals_);
   }
-  static constexpr int kIndexInFileMessages = 35;
+  static constexpr int kIndexInFileMessages = 37;
   friend void swap(KycSubmission& a, KycSubmission& b) { a.Swap(&b); }
   inline void Swap(KycSubmission* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -8170,7 +8639,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED VerifyEmailChangeResponse final : p
   [[nodiscard]] static const VerifyEmailChangeResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<VerifyEmailChangeResponse>(&VerifyEmailChangeResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 24;
+  static constexpr int kIndexInFileMessages = 26;
   friend void swap(VerifyEmailChangeResponse& a, VerifyEmailChangeResponse& b) { a.Swap(&b); }
   inline void Swap(VerifyEmailChangeResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -8377,7 +8846,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UpdateProfileResponse final : publi
   [[nodiscard]] static const UpdateProfileResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<UpdateProfileResponse>(&UpdateProfileResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 14;
+  static constexpr int kIndexInFileMessages = 16;
   friend void swap(UpdateProfileResponse& a, UpdateProfileResponse& b) { a.Swap(&b); }
   inline void Swap(UpdateProfileResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -8584,7 +9053,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycResponse final : public ::
   [[nodiscard]] static const SubmitKycResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<SubmitKycResponse>(&SubmitKycResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 34;
+  static constexpr int kIndexInFileMessages = 36;
   friend void swap(SubmitKycResponse& a, SubmitKycResponse& b) { a.Swap(&b); }
   inline void Swap(SubmitKycResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -8791,7 +9260,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetProfileResponse final : public :
   [[nodiscard]] static const GetProfileResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<GetProfileResponse>(&GetProfileResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 12;
+  static constexpr int kIndexInFileMessages = 14;
   friend void swap(GetProfileResponse& a, GetProfileResponse& b) { a.Swap(&b); }
   inline void Swap(GetProfileResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -10484,6 +10953,254 @@ inline bool LogoutAllResponse::_internal_success() const {
 inline void LogoutAllResponse::_internal_set_success(bool value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.success_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// CreateKycUploadUrlRequest
+
+// string content_type = 1 [json_name = "contentType"];
+inline void CreateKycUploadUrlRequest::clear_content_type() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.content_type_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& CreateKycUploadUrlRequest::content_type() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.CreateKycUploadUrlRequest.content_type)
+  return _internal_content_type();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void CreateKycUploadUrlRequest::set_content_type(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.content_type_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.CreateKycUploadUrlRequest.content_type)
+}
+inline ::std::string* PROTOBUF_NONNULL CreateKycUploadUrlRequest::mutable_content_type()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_content_type();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.CreateKycUploadUrlRequest.content_type)
+  return _s;
+}
+inline const ::std::string& CreateKycUploadUrlRequest::_internal_content_type() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.content_type_.Get();
+}
+inline void CreateKycUploadUrlRequest::_internal_set_content_type(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.content_type_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL CreateKycUploadUrlRequest::_internal_mutable_content_type() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.content_type_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE CreateKycUploadUrlRequest::release_content_type() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.CreateKycUploadUrlRequest.content_type)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.content_type_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.content_type_.Set("", GetArena());
+  }
+  return released;
+}
+inline void CreateKycUploadUrlRequest::set_allocated_content_type(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.content_type_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.content_type_.IsDefault()) {
+    _impl_.content_type_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.CreateKycUploadUrlRequest.content_type)
+}
+
+// int64 size_bytes = 2 [json_name = "sizeBytes"];
+inline void CreateKycUploadUrlRequest::clear_size_bytes() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.size_bytes_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline ::int64_t CreateKycUploadUrlRequest::size_bytes() const {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.CreateKycUploadUrlRequest.size_bytes)
+  return _internal_size_bytes();
+}
+inline void CreateKycUploadUrlRequest::set_size_bytes(::int64_t value) {
+  _internal_set_size_bytes(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.CreateKycUploadUrlRequest.size_bytes)
+}
+inline ::int64_t CreateKycUploadUrlRequest::_internal_size_bytes() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.size_bytes_;
+}
+inline void CreateKycUploadUrlRequest::_internal_set_size_bytes(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.size_bytes_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// CreateKycUploadUrlResponse
+
+// string upload_url = 1 [json_name = "uploadUrl"];
+inline void CreateKycUploadUrlResponse::clear_upload_url() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.upload_url_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& CreateKycUploadUrlResponse::upload_url() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.CreateKycUploadUrlResponse.upload_url)
+  return _internal_upload_url();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void CreateKycUploadUrlResponse::set_upload_url(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.upload_url_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.CreateKycUploadUrlResponse.upload_url)
+}
+inline ::std::string* PROTOBUF_NONNULL CreateKycUploadUrlResponse::mutable_upload_url()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_upload_url();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.CreateKycUploadUrlResponse.upload_url)
+  return _s;
+}
+inline const ::std::string& CreateKycUploadUrlResponse::_internal_upload_url() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.upload_url_.Get();
+}
+inline void CreateKycUploadUrlResponse::_internal_set_upload_url(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.upload_url_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL CreateKycUploadUrlResponse::_internal_mutable_upload_url() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.upload_url_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE CreateKycUploadUrlResponse::release_upload_url() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.CreateKycUploadUrlResponse.upload_url)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.upload_url_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.upload_url_.Set("", GetArena());
+  }
+  return released;
+}
+inline void CreateKycUploadUrlResponse::set_allocated_upload_url(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.upload_url_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.upload_url_.IsDefault()) {
+    _impl_.upload_url_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.CreateKycUploadUrlResponse.upload_url)
+}
+
+// string object_key = 2 [json_name = "objectKey"];
+inline void CreateKycUploadUrlResponse::clear_object_key() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.object_key_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline const ::std::string& CreateKycUploadUrlResponse::object_key() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.CreateKycUploadUrlResponse.object_key)
+  return _internal_object_key();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void CreateKycUploadUrlResponse::set_object_key(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.object_key_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.CreateKycUploadUrlResponse.object_key)
+}
+inline ::std::string* PROTOBUF_NONNULL CreateKycUploadUrlResponse::mutable_object_key()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_object_key();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.CreateKycUploadUrlResponse.object_key)
+  return _s;
+}
+inline const ::std::string& CreateKycUploadUrlResponse::_internal_object_key() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.object_key_.Get();
+}
+inline void CreateKycUploadUrlResponse::_internal_set_object_key(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.object_key_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL CreateKycUploadUrlResponse::_internal_mutable_object_key() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.object_key_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE CreateKycUploadUrlResponse::release_object_key() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.CreateKycUploadUrlResponse.object_key)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.object_key_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.object_key_.Set("", GetArena());
+  }
+  return released;
+}
+inline void CreateKycUploadUrlResponse::set_allocated_object_key(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.object_key_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.object_key_.IsDefault()) {
+    _impl_.object_key_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.CreateKycUploadUrlResponse.object_key)
+}
+
+// int64 expires_in = 3 [json_name = "expiresIn"];
+inline void CreateKycUploadUrlResponse::clear_expires_in() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.expires_in_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+}
+inline ::int64_t CreateKycUploadUrlResponse::expires_in() const {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.CreateKycUploadUrlResponse.expires_in)
+  return _internal_expires_in();
+}
+inline void CreateKycUploadUrlResponse::set_expires_in(::int64_t value) {
+  _internal_set_expires_in(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.CreateKycUploadUrlResponse.expires_in)
+}
+inline ::int64_t CreateKycUploadUrlResponse::_internal_expires_in() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.expires_in_;
+}
+inline void CreateKycUploadUrlResponse::_internal_set_expires_in(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.expires_in_ = value;
 }
 
 // -------------------------------------------------------------------
