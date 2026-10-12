@@ -150,6 +150,22 @@ extern const ::google::protobuf::internal::ClassDataFull LoginResponse_class_dat
 #else
 extern const LoginResponseGlobalsTypeInternal LoginResponse_globals_;
 #endif  // PROTOBUF_MESSAGE_GLOBALS
+class LoginWithGoogleRequest;
+struct LoginWithGoogleRequestGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern LoginWithGoogleRequestGlobalsTypeInternal LoginWithGoogleRequest_globals_;
+extern const ::google::protobuf::internal::ClassDataFull LoginWithGoogleRequest_class_data_;
+#else
+extern const LoginWithGoogleRequestGlobalsTypeInternal LoginWithGoogleRequest_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class LoginWithGoogleResponse;
+struct LoginWithGoogleResponseGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern LoginWithGoogleResponseGlobalsTypeInternal LoginWithGoogleResponse_globals_;
+extern const ::google::protobuf::internal::ClassDataFull LoginWithGoogleResponse_class_data_;
+#else
+extern const LoginWithGoogleResponseGlobalsTypeInternal LoginWithGoogleResponse_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
 class LogoutAllRequest;
 struct LogoutAllRequestGlobalsTypeInternal;
 #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -4335,6 +4351,544 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LogoutAllRequest final : public ::g
   friend class ::google::protobuf::Arena::InternalHelper;
   using InternalArenaConstructable_ = void;
   using DestructorSkippable_ = void;
+  friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LoginWithGoogleResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.auth.v1.LoginWithGoogleResponse) */ {
+ public:
+  inline LoginWithGoogleResponse() : LoginWithGoogleResponse(nullptr) {}
+  ~LoginWithGoogleResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(LoginWithGoogleResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(LoginWithGoogleResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr LoginWithGoogleResponse(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline LoginWithGoogleResponse(const LoginWithGoogleResponse& from) : LoginWithGoogleResponse(nullptr, from) {}
+  inline LoginWithGoogleResponse(LoginWithGoogleResponse&& from) noexcept : LoginWithGoogleResponse(nullptr, ::std::move(from)) {}
+  inline LoginWithGoogleResponse& operator=(const LoginWithGoogleResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LoginWithGoogleResponse& operator=(LoginWithGoogleResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const LoginWithGoogleResponse& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LoginWithGoogleResponse>(&LoginWithGoogleResponse_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 37;
+  friend void swap(LoginWithGoogleResponse& a, LoginWithGoogleResponse& b) { a.Swap(&b); }
+  inline void Swap(LoginWithGoogleResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(LoginWithGoogleResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] LoginWithGoogleResponse* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<LoginWithGoogleResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const LoginWithGoogleResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const LoginWithGoogleResponse& from) { LoginWithGoogleResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(LoginWithGoogleResponse* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.LoginWithGoogleResponse"; }
+
+  explicit LoginWithGoogleResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  LoginWithGoogleResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const LoginWithGoogleResponse& from);
+  LoginWithGoogleResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, LoginWithGoogleResponse&& from) noexcept
+      : LoginWithGoogleResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kEmailFieldNumber = 2,
+    kAccessTokenFieldNumber = 3,
+    kRefreshTokenFieldNumber = 4,
+    kExpiresInFieldNumber = 5,
+    kIsNewUserFieldNumber = 6,
+  };
+  // string user_id = 1 [json_name = "userId"];
+  void clear_user_id() ;
+  [[nodiscard]] const ::std::string& user_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_user_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_user_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_user_id();
+  void set_allocated_user_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_user_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_user_id();
+
+  public:
+  // string email = 2 [json_name = "email"];
+  void clear_email() ;
+  [[nodiscard]] const ::std::string& email() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_email(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_email();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_email();
+  void set_allocated_email(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_email() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_email(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_email();
+
+  public:
+  // string access_token = 3 [json_name = "accessToken"];
+  void clear_access_token() ;
+  [[nodiscard]] const ::std::string& access_token() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_access_token(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_access_token();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_access_token();
+  void set_allocated_access_token(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_access_token() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_access_token(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_access_token();
+
+  public:
+  // string refresh_token = 4 [json_name = "refreshToken"];
+  void clear_refresh_token() ;
+  [[nodiscard]] const ::std::string& refresh_token() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_refresh_token(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_refresh_token();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_refresh_token();
+  void set_allocated_refresh_token(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_refresh_token() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_refresh_token(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_refresh_token();
+
+  public:
+  // int64 expires_in = 5 [json_name = "expiresIn"];
+  void clear_expires_in() ;
+  [[nodiscard]] ::int64_t expires_in() const;
+  void set_expires_in(::int64_t value);
+
+  private:
+  ::int64_t _internal_expires_in() const;
+  void _internal_set_expires_in(::int64_t value);
+
+  public:
+  // bool is_new_user = 6 [json_name = "isNewUser"];
+  void clear_is_new_user() ;
+  [[nodiscard]] bool is_new_user() const;
+  void set_is_new_user(bool value);
+
+  private:
+  bool _internal_is_new_user() const;
+  void _internal_set_is_new_user(bool value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.auth.v1.LoginWithGoogleResponse)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<3, 6,
+                          0, 83,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const LoginWithGoogleResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr user_id_;
+    ::google::protobuf::internal::ArenaStringPtr email_;
+    ::google::protobuf::internal::ArenaStringPtr access_token_;
+    ::google::protobuf::internal::ArenaStringPtr refresh_token_;
+    ::int64_t expires_in_;
+    bool is_new_user_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LoginWithGoogleRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.auth.v1.LoginWithGoogleRequest) */ {
+ public:
+  inline LoginWithGoogleRequest() : LoginWithGoogleRequest(nullptr) {}
+  ~LoginWithGoogleRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(LoginWithGoogleRequest* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(LoginWithGoogleRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr LoginWithGoogleRequest(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline LoginWithGoogleRequest(const LoginWithGoogleRequest& from) : LoginWithGoogleRequest(nullptr, from) {}
+  inline LoginWithGoogleRequest(LoginWithGoogleRequest&& from) noexcept : LoginWithGoogleRequest(nullptr, ::std::move(from)) {}
+  inline LoginWithGoogleRequest& operator=(const LoginWithGoogleRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LoginWithGoogleRequest& operator=(LoginWithGoogleRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const LoginWithGoogleRequest& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LoginWithGoogleRequest>(&LoginWithGoogleRequest_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 36;
+  friend void swap(LoginWithGoogleRequest& a, LoginWithGoogleRequest& b) { a.Swap(&b); }
+  inline void Swap(LoginWithGoogleRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(LoginWithGoogleRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] LoginWithGoogleRequest* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<LoginWithGoogleRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const LoginWithGoogleRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const LoginWithGoogleRequest& from) { LoginWithGoogleRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(LoginWithGoogleRequest* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.LoginWithGoogleRequest"; }
+
+  explicit LoginWithGoogleRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  LoginWithGoogleRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const LoginWithGoogleRequest& from);
+  LoginWithGoogleRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, LoginWithGoogleRequest&& from) noexcept
+      : LoginWithGoogleRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kCodeFieldNumber = 1,
+    kCodeVerifierFieldNumber = 2,
+    kRedirectUriFieldNumber = 3,
+    kNonceFieldNumber = 4,
+  };
+  // string code = 1 [json_name = "code"];
+  void clear_code() ;
+  [[nodiscard]] const ::std::string& code() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_code(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_code();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_code();
+  void set_allocated_code(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_code() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_code(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_code();
+
+  public:
+  // string code_verifier = 2 [json_name = "codeVerifier"];
+  void clear_code_verifier() ;
+  [[nodiscard]] const ::std::string& code_verifier() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_code_verifier(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_code_verifier();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_code_verifier();
+  void set_allocated_code_verifier(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_code_verifier() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_code_verifier(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_code_verifier();
+
+  public:
+  // string redirect_uri = 3 [json_name = "redirectUri"];
+  void clear_redirect_uri() ;
+  [[nodiscard]] const ::std::string& redirect_uri() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_redirect_uri(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_redirect_uri();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_redirect_uri();
+  void set_allocated_redirect_uri(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_redirect_uri() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_redirect_uri(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_redirect_uri();
+
+  public:
+  // string nonce = 4 [json_name = "nonce"];
+  void clear_nonce() ;
+  [[nodiscard]] const ::std::string& nonce() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_nonce(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_nonce();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_nonce();
+  void set_allocated_nonce(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_nonce() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_nonce(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_nonce();
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.auth.v1.LoginWithGoogleRequest)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<2, 4,
+                          0, 79,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const LoginWithGoogleRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr code_;
+    ::google::protobuf::internal::ArenaStringPtr code_verifier_;
+    ::google::protobuf::internal::ArenaStringPtr redirect_uri_;
+    ::google::protobuf::internal::ArenaStringPtr nonce_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
   friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
 };
 // -------------------------------------------------------------------
@@ -13352,6 +13906,574 @@ inline void KycSubmission::set_allocated_updated_at(::google::protobuf::Timestam
 
   _impl_.updated_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
   // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.KycSubmission.updated_at)
+}
+
+// -------------------------------------------------------------------
+
+// LoginWithGoogleRequest
+
+// string code = 1 [json_name = "code"];
+inline void LoginWithGoogleRequest::clear_code() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.code_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& LoginWithGoogleRequest::code() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.LoginWithGoogleRequest.code)
+  return _internal_code();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void LoginWithGoogleRequest::set_code(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.code_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.LoginWithGoogleRequest.code)
+}
+inline ::std::string* PROTOBUF_NONNULL LoginWithGoogleRequest::mutable_code()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_code();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.LoginWithGoogleRequest.code)
+  return _s;
+}
+inline const ::std::string& LoginWithGoogleRequest::_internal_code() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.code_.Get();
+}
+inline void LoginWithGoogleRequest::_internal_set_code(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.code_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL LoginWithGoogleRequest::_internal_mutable_code() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.code_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE LoginWithGoogleRequest::release_code() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.LoginWithGoogleRequest.code)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.code_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.code_.Set("", GetArena());
+  }
+  return released;
+}
+inline void LoginWithGoogleRequest::set_allocated_code(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.code_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.code_.IsDefault()) {
+    _impl_.code_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.LoginWithGoogleRequest.code)
+}
+
+// string code_verifier = 2 [json_name = "codeVerifier"];
+inline void LoginWithGoogleRequest::clear_code_verifier() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.code_verifier_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline const ::std::string& LoginWithGoogleRequest::code_verifier() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.LoginWithGoogleRequest.code_verifier)
+  return _internal_code_verifier();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void LoginWithGoogleRequest::set_code_verifier(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.code_verifier_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.LoginWithGoogleRequest.code_verifier)
+}
+inline ::std::string* PROTOBUF_NONNULL LoginWithGoogleRequest::mutable_code_verifier()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_code_verifier();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.LoginWithGoogleRequest.code_verifier)
+  return _s;
+}
+inline const ::std::string& LoginWithGoogleRequest::_internal_code_verifier() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.code_verifier_.Get();
+}
+inline void LoginWithGoogleRequest::_internal_set_code_verifier(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.code_verifier_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL LoginWithGoogleRequest::_internal_mutable_code_verifier() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.code_verifier_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE LoginWithGoogleRequest::release_code_verifier() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.LoginWithGoogleRequest.code_verifier)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.code_verifier_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.code_verifier_.Set("", GetArena());
+  }
+  return released;
+}
+inline void LoginWithGoogleRequest::set_allocated_code_verifier(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.code_verifier_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.code_verifier_.IsDefault()) {
+    _impl_.code_verifier_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.LoginWithGoogleRequest.code_verifier)
+}
+
+// string redirect_uri = 3 [json_name = "redirectUri"];
+inline void LoginWithGoogleRequest::clear_redirect_uri() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.redirect_uri_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+}
+inline const ::std::string& LoginWithGoogleRequest::redirect_uri() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.LoginWithGoogleRequest.redirect_uri)
+  return _internal_redirect_uri();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void LoginWithGoogleRequest::set_redirect_uri(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  _impl_.redirect_uri_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.LoginWithGoogleRequest.redirect_uri)
+}
+inline ::std::string* PROTOBUF_NONNULL LoginWithGoogleRequest::mutable_redirect_uri()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::std::string* _s = _internal_mutable_redirect_uri();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.LoginWithGoogleRequest.redirect_uri)
+  return _s;
+}
+inline const ::std::string& LoginWithGoogleRequest::_internal_redirect_uri() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.redirect_uri_.Get();
+}
+inline void LoginWithGoogleRequest::_internal_set_redirect_uri(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.redirect_uri_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL LoginWithGoogleRequest::_internal_mutable_redirect_uri() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.redirect_uri_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE LoginWithGoogleRequest::release_redirect_uri() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.LoginWithGoogleRequest.redirect_uri)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000004U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  auto* released = _impl_.redirect_uri_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.redirect_uri_.Set("", GetArena());
+  }
+  return released;
+}
+inline void LoginWithGoogleRequest::set_allocated_redirect_uri(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  }
+  _impl_.redirect_uri_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.redirect_uri_.IsDefault()) {
+    _impl_.redirect_uri_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.LoginWithGoogleRequest.redirect_uri)
+}
+
+// string nonce = 4 [json_name = "nonce"];
+inline void LoginWithGoogleRequest::clear_nonce() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.nonce_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+}
+inline const ::std::string& LoginWithGoogleRequest::nonce() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.LoginWithGoogleRequest.nonce)
+  return _internal_nonce();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void LoginWithGoogleRequest::set_nonce(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  _impl_.nonce_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.LoginWithGoogleRequest.nonce)
+}
+inline ::std::string* PROTOBUF_NONNULL LoginWithGoogleRequest::mutable_nonce()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  ::std::string* _s = _internal_mutable_nonce();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.LoginWithGoogleRequest.nonce)
+  return _s;
+}
+inline const ::std::string& LoginWithGoogleRequest::_internal_nonce() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.nonce_.Get();
+}
+inline void LoginWithGoogleRequest::_internal_set_nonce(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.nonce_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL LoginWithGoogleRequest::_internal_mutable_nonce() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.nonce_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE LoginWithGoogleRequest::release_nonce() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.LoginWithGoogleRequest.nonce)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000008U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  auto* released = _impl_.nonce_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.nonce_.Set("", GetArena());
+  }
+  return released;
+}
+inline void LoginWithGoogleRequest::set_allocated_nonce(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  }
+  _impl_.nonce_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.nonce_.IsDefault()) {
+    _impl_.nonce_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.LoginWithGoogleRequest.nonce)
+}
+
+// -------------------------------------------------------------------
+
+// LoginWithGoogleResponse
+
+// string user_id = 1 [json_name = "userId"];
+inline void LoginWithGoogleResponse::clear_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& LoginWithGoogleResponse::user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.LoginWithGoogleResponse.user_id)
+  return _internal_user_id();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void LoginWithGoogleResponse::set_user_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.LoginWithGoogleResponse.user_id)
+}
+inline ::std::string* PROTOBUF_NONNULL LoginWithGoogleResponse::mutable_user_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.LoginWithGoogleResponse.user_id)
+  return _s;
+}
+inline const ::std::string& LoginWithGoogleResponse::_internal_user_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.user_id_.Get();
+}
+inline void LoginWithGoogleResponse::_internal_set_user_id(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL LoginWithGoogleResponse::_internal_mutable_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.user_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE LoginWithGoogleResponse::release_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.LoginWithGoogleResponse.user_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.user_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.user_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void LoginWithGoogleResponse::set_allocated_user_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.user_id_.IsDefault()) {
+    _impl_.user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.LoginWithGoogleResponse.user_id)
+}
+
+// string email = 2 [json_name = "email"];
+inline void LoginWithGoogleResponse::clear_email() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.email_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline const ::std::string& LoginWithGoogleResponse::email() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.LoginWithGoogleResponse.email)
+  return _internal_email();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void LoginWithGoogleResponse::set_email(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.email_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.LoginWithGoogleResponse.email)
+}
+inline ::std::string* PROTOBUF_NONNULL LoginWithGoogleResponse::mutable_email()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_email();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.LoginWithGoogleResponse.email)
+  return _s;
+}
+inline const ::std::string& LoginWithGoogleResponse::_internal_email() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.email_.Get();
+}
+inline void LoginWithGoogleResponse::_internal_set_email(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.email_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL LoginWithGoogleResponse::_internal_mutable_email() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.email_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE LoginWithGoogleResponse::release_email() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.LoginWithGoogleResponse.email)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.email_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.email_.Set("", GetArena());
+  }
+  return released;
+}
+inline void LoginWithGoogleResponse::set_allocated_email(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.email_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.email_.IsDefault()) {
+    _impl_.email_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.LoginWithGoogleResponse.email)
+}
+
+// string access_token = 3 [json_name = "accessToken"];
+inline void LoginWithGoogleResponse::clear_access_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.access_token_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+}
+inline const ::std::string& LoginWithGoogleResponse::access_token() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.LoginWithGoogleResponse.access_token)
+  return _internal_access_token();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void LoginWithGoogleResponse::set_access_token(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  _impl_.access_token_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.LoginWithGoogleResponse.access_token)
+}
+inline ::std::string* PROTOBUF_NONNULL LoginWithGoogleResponse::mutable_access_token()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::std::string* _s = _internal_mutable_access_token();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.LoginWithGoogleResponse.access_token)
+  return _s;
+}
+inline const ::std::string& LoginWithGoogleResponse::_internal_access_token() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.access_token_.Get();
+}
+inline void LoginWithGoogleResponse::_internal_set_access_token(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.access_token_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL LoginWithGoogleResponse::_internal_mutable_access_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.access_token_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE LoginWithGoogleResponse::release_access_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.LoginWithGoogleResponse.access_token)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000004U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  auto* released = _impl_.access_token_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.access_token_.Set("", GetArena());
+  }
+  return released;
+}
+inline void LoginWithGoogleResponse::set_allocated_access_token(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  }
+  _impl_.access_token_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.access_token_.IsDefault()) {
+    _impl_.access_token_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.LoginWithGoogleResponse.access_token)
+}
+
+// string refresh_token = 4 [json_name = "refreshToken"];
+inline void LoginWithGoogleResponse::clear_refresh_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.refresh_token_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+}
+inline const ::std::string& LoginWithGoogleResponse::refresh_token() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.LoginWithGoogleResponse.refresh_token)
+  return _internal_refresh_token();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void LoginWithGoogleResponse::set_refresh_token(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  _impl_.refresh_token_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.LoginWithGoogleResponse.refresh_token)
+}
+inline ::std::string* PROTOBUF_NONNULL LoginWithGoogleResponse::mutable_refresh_token()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  ::std::string* _s = _internal_mutable_refresh_token();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.LoginWithGoogleResponse.refresh_token)
+  return _s;
+}
+inline const ::std::string& LoginWithGoogleResponse::_internal_refresh_token() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.refresh_token_.Get();
+}
+inline void LoginWithGoogleResponse::_internal_set_refresh_token(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.refresh_token_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL LoginWithGoogleResponse::_internal_mutable_refresh_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.refresh_token_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE LoginWithGoogleResponse::release_refresh_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.LoginWithGoogleResponse.refresh_token)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000008U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  auto* released = _impl_.refresh_token_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.refresh_token_.Set("", GetArena());
+  }
+  return released;
+}
+inline void LoginWithGoogleResponse::set_allocated_refresh_token(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  }
+  _impl_.refresh_token_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.refresh_token_.IsDefault()) {
+    _impl_.refresh_token_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.LoginWithGoogleResponse.refresh_token)
+}
+
+// int64 expires_in = 5 [json_name = "expiresIn"];
+inline void LoginWithGoogleResponse::clear_expires_in() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.expires_in_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+}
+inline ::int64_t LoginWithGoogleResponse::expires_in() const {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.LoginWithGoogleResponse.expires_in)
+  return _internal_expires_in();
+}
+inline void LoginWithGoogleResponse::set_expires_in(::int64_t value) {
+  _internal_set_expires_in(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.LoginWithGoogleResponse.expires_in)
+}
+inline ::int64_t LoginWithGoogleResponse::_internal_expires_in() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.expires_in_;
+}
+inline void LoginWithGoogleResponse::_internal_set_expires_in(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.expires_in_ = value;
+}
+
+// bool is_new_user = 6 [json_name = "isNewUser"];
+inline void LoginWithGoogleResponse::clear_is_new_user() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.is_new_user_ = false;
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+}
+inline bool LoginWithGoogleResponse::is_new_user() const {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.LoginWithGoogleResponse.is_new_user)
+  return _internal_is_new_user();
+}
+inline void LoginWithGoogleResponse::set_is_new_user(bool value) {
+  _internal_set_is_new_user(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.LoginWithGoogleResponse.is_new_user)
+}
+inline bool LoginWithGoogleResponse::_internal_is_new_user() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.is_new_user_;
+}
+inline void LoginWithGoogleResponse::_internal_set_is_new_user(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.is_new_user_ = value;
 }
 
 #ifdef __GNUC__

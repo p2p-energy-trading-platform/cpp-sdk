@@ -101,6 +101,10 @@ PROTOBUF_CONSTINIT ::google::protobuf::internal::ReflectionData
         {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
         // ::gridx::auth::v1::KycSubmission
         {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::auth::v1::LoginWithGoogleRequest
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::auth::v1::LoginWithGoogleResponse
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
 };
 }  // namespace
 #endif
@@ -2891,6 +2895,374 @@ const ::_pbi::ClassData* LogoutAllRequest_get_class_data() {
   return LogoutAllRequest_globals_.GetClassData();
 #else
   return LogoutAllRequest_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class LoginWithGoogleResponse::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<LoginWithGoogleResponse>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_._has_bits_);
+};
+
+constexpr LoginWithGoogleResponse::ParseTableT_ LoginWithGoogleResponse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_._has_bits_),
+      0, // no _extensions_
+      6, 56,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967232,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      6,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::auth::v1::LoginWithGoogleResponse>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      {::_pbi::TcParser::MiniParse, {}},
+      // string user_id = 1 [json_name = "userId"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_.user_id_)}},
+      // string email = 2 [json_name = "email"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_.email_)}},
+      // string access_token = 3 [json_name = "accessToken"];
+      {::_pbi::TcParser::FastUS1,
+       {26, 2, 0,
+        PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_.access_token_)}},
+      // string refresh_token = 4 [json_name = "refreshToken"];
+      {::_pbi::TcParser::FastUS1,
+       {34, 3, 0,
+        PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_.refresh_token_)}},
+      // int64 expires_in = 5 [json_name = "expiresIn"];
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(LoginWithGoogleResponse, _impl_.expires_in_), 4>(),
+       {40, 4, 0,
+        PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_.expires_in_)}},
+      // bool is_new_user = 6 [json_name = "isNewUser"];
+      {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(LoginWithGoogleResponse, _impl_.is_new_user_), 5>(),
+       {48, 5, 0,
+        PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_.is_new_user_)}},
+      {::_pbi::TcParser::MiniParse, {}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string user_id = 1 [json_name = "userId"];
+      {PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_.user_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string email = 2 [json_name = "email"];
+      {PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_.email_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string access_token = 3 [json_name = "accessToken"];
+      {PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_.access_token_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string refresh_token = 4 [json_name = "refreshToken"];
+      {PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_.refresh_token_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // int64 expires_in = 5 [json_name = "expiresIn"];
+      {PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_.expires_in_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kInt64)},
+      // bool is_new_user = 6 [json_name = "isNewUser"];
+      {PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_.is_new_user_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kBool)},
+    }},
+    // no aux_entries
+    {{
+      "\45\7\5\14\15\0\0\0"
+      "gridx.auth.v1.LoginWithGoogleResponse"
+      "user_id"
+      "email"
+      "access_token"
+      "refresh_token"
+    }},
+  };
+}
+
+
+inline constexpr LoginWithGoogleResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        email_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        access_token_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        refresh_token_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        expires_in_{::int64_t{0}},
+        is_new_user_{false} {}
+
+template <typename>
+constexpr LoginWithGoogleResponse::LoginWithGoogleResponse(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL LoginWithGoogleResponse::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) LoginWithGoogleResponse(arena);
+}
+constexpr auto LoginWithGoogleResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(LoginWithGoogleResponse), alignof(LoginWithGoogleResponse));
+}
+constexpr auto LoginWithGoogleResponse::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &LoginWithGoogleResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<LoginWithGoogleResponse>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &LoginWithGoogleResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<LoginWithGoogleResponse>(), &LoginWithGoogleResponse::ByteSizeLong,
+              &LoginWithGoogleResponse::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[37],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct LoginWithGoogleResponseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr LoginWithGoogleResponseGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 LoginWithGoogleResponse_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(LoginWithGoogleResponse::InternalGenerateClassData_(
+            _default, &LoginWithGoogleResponse_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<LoginWithGoogleResponse>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~LoginWithGoogleResponseGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) LoginWithGoogleResponse _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<LoginWithGoogleResponse>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponseGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST LoginWithGoogleResponseGlobalsTypeInternal LoginWithGoogleResponse_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* LoginWithGoogleResponse_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return LoginWithGoogleResponse_globals_.GetClassData();
+#else
+  return LoginWithGoogleResponse_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class LoginWithGoogleRequest::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<LoginWithGoogleRequest>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(LoginWithGoogleRequest, _impl_._has_bits_);
+};
+
+constexpr LoginWithGoogleRequest::ParseTableT_ LoginWithGoogleRequest::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(LoginWithGoogleRequest, _impl_._has_bits_),
+      0, // no _extensions_
+      4, 24,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967280,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      4,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::auth::v1::LoginWithGoogleRequest>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // string nonce = 4 [json_name = "nonce"];
+      {::_pbi::TcParser::FastUS1,
+       {34, 3, 0,
+        PROTOBUF_FIELD_OFFSET(LoginWithGoogleRequest, _impl_.nonce_)}},
+      // string code = 1 [json_name = "code"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(LoginWithGoogleRequest, _impl_.code_)}},
+      // string code_verifier = 2 [json_name = "codeVerifier"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(LoginWithGoogleRequest, _impl_.code_verifier_)}},
+      // string redirect_uri = 3 [json_name = "redirectUri"];
+      {::_pbi::TcParser::FastUS1,
+       {26, 2, 0,
+        PROTOBUF_FIELD_OFFSET(LoginWithGoogleRequest, _impl_.redirect_uri_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string code = 1 [json_name = "code"];
+      {PROTOBUF_FIELD_OFFSET(LoginWithGoogleRequest, _impl_.code_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string code_verifier = 2 [json_name = "codeVerifier"];
+      {PROTOBUF_FIELD_OFFSET(LoginWithGoogleRequest, _impl_.code_verifier_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string redirect_uri = 3 [json_name = "redirectUri"];
+      {PROTOBUF_FIELD_OFFSET(LoginWithGoogleRequest, _impl_.redirect_uri_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string nonce = 4 [json_name = "nonce"];
+      {PROTOBUF_FIELD_OFFSET(LoginWithGoogleRequest, _impl_.nonce_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\44\4\15\14\5\0\0\0"
+      "gridx.auth.v1.LoginWithGoogleRequest"
+      "code"
+      "code_verifier"
+      "redirect_uri"
+      "nonce"
+    }},
+  };
+}
+
+
+inline constexpr LoginWithGoogleRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        code_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        code_verifier_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        redirect_uri_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        nonce_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+constexpr LoginWithGoogleRequest::LoginWithGoogleRequest(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL LoginWithGoogleRequest::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) LoginWithGoogleRequest(arena);
+}
+constexpr auto LoginWithGoogleRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(LoginWithGoogleRequest), alignof(LoginWithGoogleRequest));
+}
+constexpr auto LoginWithGoogleRequest::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &LoginWithGoogleRequest::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<LoginWithGoogleRequest>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &LoginWithGoogleRequest::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<LoginWithGoogleRequest>(), &LoginWithGoogleRequest::ByteSizeLong,
+              &LoginWithGoogleRequest::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(LoginWithGoogleRequest, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[36],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct LoginWithGoogleRequestGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr LoginWithGoogleRequestGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 LoginWithGoogleRequest_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(LoginWithGoogleRequest::InternalGenerateClassData_(
+            _default, &LoginWithGoogleRequest_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<LoginWithGoogleRequest>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~LoginWithGoogleRequestGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) LoginWithGoogleRequest _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<LoginWithGoogleRequest>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(LoginWithGoogleRequestGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST LoginWithGoogleRequestGlobalsTypeInternal LoginWithGoogleRequest_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* LoginWithGoogleRequest_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return LoginWithGoogleRequest_globals_.GetClassData();
+#else
+  return LoginWithGoogleRequest_class_data_.base();
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 }
 }  // namespace
@@ -6018,6 +6390,32 @@ const ::uint32_t
         7,
         8,
         9,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::LoginWithGoogleRequest, _impl_._has_bits_),
+        7, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::LoginWithGoogleRequest, _impl_.code_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::LoginWithGoogleRequest, _impl_.code_verifier_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::LoginWithGoogleRequest, _impl_.redirect_uri_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::LoginWithGoogleRequest, _impl_.nonce_),
+        0,
+        1,
+        2,
+        3,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::LoginWithGoogleResponse, _impl_._has_bits_),
+        9, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::LoginWithGoogleResponse, _impl_.user_id_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::LoginWithGoogleResponse, _impl_.email_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::LoginWithGoogleResponse, _impl_.access_token_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::LoginWithGoogleResponse, _impl_.refresh_token_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::LoginWithGoogleResponse, _impl_.expires_in_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::LoginWithGoogleResponse, _impl_.is_new_user_),
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
 };
 
 static const ::_pbi::MigrationSchema
@@ -6058,6 +6456,8 @@ static const ::_pbi::MigrationSchema
         {219, sizeof(::gridx::auth::v1::SubmitKycRequest)},
         {230, sizeof(::gridx::auth::v1::SubmitKycResponse)},
         {235, sizeof(::gridx::auth::v1::KycSubmission)},
+        {260, sizeof(::gridx::auth::v1::LoginWithGoogleRequest)},
+        {271, sizeof(::gridx::auth::v1::LoginWithGoogleResponse)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
     file_message_globals[] = {
@@ -6097,6 +6497,8 @@ static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
         &::gridx::auth::v1::SubmitKycRequest_globals_,
         &::gridx::auth::v1::SubmitKycResponse_globals_,
         &::gridx::auth::v1::KycSubmission_globals_,
+        &::gridx::auth::v1::LoginWithGoogleRequest_globals_,
+        &::gridx::auth::v1::LoginWithGoogleResponse_globals_,
 };
 const char descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
@@ -6187,50 +6589,61 @@ const char descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto[] ABSL_ATT
     ".protobuf.TimestampR\nverifiedAt\0229\n\ncreat"
     "ed_at\030\n \001(\0132\032.google.protobuf.TimestampR"
     "\tcreatedAt\0229\n\nupdated_at\030\013 \001(\0132\032.google."
-    "protobuf.TimestampR\tupdatedAt*l\n\010KycStat"
-    "e\022\031\n\025KYC_STATE_UNSPECIFIED\020\000\022\025\n\021KYC_STAT"
-    "E_PENDING\020\001\022\026\n\022KYC_STATE_VERIFIED\020\002\022\026\n\022K"
-    "YC_STATE_REJECTED\020\0032\336\013\n\013AuthService\022K\n\010R"
-    "egister\022\036.gridx.auth.v1.RegisterRequest\032"
-    "\037.gridx.auth.v1.RegisterResponse\022B\n\005Logi"
-    "n\022\033.gridx.auth.v1.LoginRequest\032\034.gridx.a"
-    "uth.v1.LoginResponse\022E\n\006Logout\022\034.gridx.a"
-    "uth.v1.LogoutRequest\032\035.gridx.auth.v1.Log"
-    "outResponse\022N\n\tLogoutAll\022\037.gridx.auth.v1"
-    ".LogoutAllRequest\032 .gridx.auth.v1.Logout"
-    "AllResponse\022Q\n\nGetProfile\022 .gridx.auth.v"
-    "1.GetProfileRequest\032!.gridx.auth.v1.GetP"
-    "rofileResponse\022Z\n\rUpdateProfile\022#.gridx."
-    "auth.v1.UpdateProfileRequest\032$.gridx.aut"
-    "h.v1.UpdateProfileResponse\022]\n\016ChangePass"
-    "word\022$.gridx.auth.v1.ChangePasswordReque"
-    "st\032%.gridx.auth.v1.ChangePasswordRespons"
-    "e\022o\n\024RequestPasswordReset\022*.gridx.auth.v"
-    "1.RequestPasswordResetRequest\032+.gridx.au"
-    "th.v1.RequestPasswordResetResponse\022Z\n\rRe"
-    "setPassword\022#.gridx.auth.v1.ResetPasswor"
-    "dRequest\032$.gridx.auth.v1.ResetPasswordRe"
-    "sponse\022i\n\022RequestEmailChange\022(.gridx.aut"
-    "h.v1.RequestEmailChangeRequest\032).gridx.a"
-    "uth.v1.RequestEmailChangeResponse\022f\n\021Ver"
-    "ifyEmailChange\022\'.gridx.auth.v1.VerifyEma"
-    "ilChangeRequest\032(.gridx.auth.v1.VerifyEm"
-    "ailChangeResponse\022H\n\007GetUser\022\035.gridx.aut"
-    "h.v1.GetUserRequest\032\036.gridx.auth.v1.GetU"
-    "serResponse\022`\n\017CheckPermission\022%.gridx.a"
-    "uth.v1.CheckPermissionRequest\032&.gridx.au"
-    "th.v1.CheckPermissionResponse\022T\n\013VerifyE"
-    "mail\022!.gridx.auth.v1.VerifyEmailRequest\032"
-    "\".gridx.auth.v1.VerifyEmailResponse\022N\n\tR"
-    "esendOtp\022\037.gridx.auth.v1.ResendOtpReques"
-    "t\032 .gridx.auth.v1.ResendOtpResponse\022N\n\tS"
-    "ubmitKyc\022\037.gridx.auth.v1.SubmitKycReques"
-    "t\032 .gridx.auth.v1.SubmitKycResponse\022W\n\014R"
-    "efreshToken\022\".gridx.auth.v1.RefreshToken"
-    "Request\032#.gridx.auth.v1.RefreshTokenResp"
-    "onseBHZFgithub.com/p2p-energy-trading-pl"
-    "atform/go-sdk/gen/gridx/auth/v1;authv1b\006"
-    "proto3"
+    "protobuf.TimestampR\tupdatedAt\"\212\001\n\026LoginW"
+    "ithGoogleRequest\022\022\n\004code\030\001 \001(\tR\004code\022#\n\r"
+    "code_verifier\030\002 \001(\tR\014codeVerifier\022!\n\014red"
+    "irect_uri\030\003 \001(\tR\013redirectUri\022\024\n\005nonce\030\004 "
+    "\001(\tR\005nonce\"\317\001\n\027LoginWithGoogleResponse\022\027"
+    "\n\007user_id\030\001 \001(\tR\006userId\022\024\n\005email\030\002 \001(\tR\005"
+    "email\022!\n\014access_token\030\003 \001(\tR\013accessToken"
+    "\022#\n\rrefresh_token\030\004 \001(\tR\014refreshToken\022\035\n"
+    "\nexpires_in\030\005 \001(\003R\texpiresIn\022\036\n\013is_new_u"
+    "ser\030\006 \001(\010R\tisNewUser*l\n\010KycState\022\031\n\025KYC_"
+    "STATE_UNSPECIFIED\020\000\022\025\n\021KYC_STATE_PENDING"
+    "\020\001\022\026\n\022KYC_STATE_VERIFIED\020\002\022\026\n\022KYC_STATE_"
+    "REJECTED\020\0032\300\014\n\013AuthService\022K\n\010Register\022\036"
+    ".gridx.auth.v1.RegisterRequest\032\037.gridx.a"
+    "uth.v1.RegisterResponse\022B\n\005Login\022\033.gridx"
+    ".auth.v1.LoginRequest\032\034.gridx.auth.v1.Lo"
+    "ginResponse\022E\n\006Logout\022\034.gridx.auth.v1.Lo"
+    "goutRequest\032\035.gridx.auth.v1.LogoutRespon"
+    "se\022N\n\tLogoutAll\022\037.gridx.auth.v1.LogoutAl"
+    "lRequest\032 .gridx.auth.v1.LogoutAllRespon"
+    "se\022Q\n\nGetProfile\022 .gridx.auth.v1.GetProf"
+    "ileRequest\032!.gridx.auth.v1.GetProfileRes"
+    "ponse\022Z\n\rUpdateProfile\022#.gridx.auth.v1.U"
+    "pdateProfileRequest\032$.gridx.auth.v1.Upda"
+    "teProfileResponse\022]\n\016ChangePassword\022$.gr"
+    "idx.auth.v1.ChangePasswordRequest\032%.grid"
+    "x.auth.v1.ChangePasswordResponse\022o\n\024Requ"
+    "estPasswordReset\022*.gridx.auth.v1.Request"
+    "PasswordResetRequest\032+.gridx.auth.v1.Req"
+    "uestPasswordResetResponse\022Z\n\rResetPasswo"
+    "rd\022#.gridx.auth.v1.ResetPasswordRequest\032"
+    "$.gridx.auth.v1.ResetPasswordResponse\022i\n"
+    "\022RequestEmailChange\022(.gridx.auth.v1.Requ"
+    "estEmailChangeRequest\032).gridx.auth.v1.Re"
+    "questEmailChangeResponse\022f\n\021VerifyEmailC"
+    "hange\022\'.gridx.auth.v1.VerifyEmailChangeR"
+    "equest\032(.gridx.auth.v1.VerifyEmailChange"
+    "Response\022H\n\007GetUser\022\035.gridx.auth.v1.GetU"
+    "serRequest\032\036.gridx.auth.v1.GetUserRespon"
+    "se\022`\n\017CheckPermission\022%.gridx.auth.v1.Ch"
+    "eckPermissionRequest\032&.gridx.auth.v1.Che"
+    "ckPermissionResponse\022T\n\013VerifyEmail\022!.gr"
+    "idx.auth.v1.VerifyEmailRequest\032\".gridx.a"
+    "uth.v1.VerifyEmailResponse\022N\n\tResendOtp\022"
+    "\037.gridx.auth.v1.ResendOtpRequest\032 .gridx"
+    ".auth.v1.ResendOtpResponse\022N\n\tSubmitKyc\022"
+    "\037.gridx.auth.v1.SubmitKycRequest\032 .gridx"
+    ".auth.v1.SubmitKycResponse\022W\n\014RefreshTok"
+    "en\022\".gridx.auth.v1.RefreshTokenRequest\032#"
+    ".gridx.auth.v1.RefreshTokenResponse\022`\n\017L"
+    "oginWithGoogle\022%.gridx.auth.v1.LoginWith"
+    "GoogleRequest\032&.gridx.auth.v1.LoginWithG"
+    "oogleResponseBHZFgithub.com/p2p-energy-t"
+    "rading-platform/go-sdk/gen/gridx/auth/v1"
+    ";authv1b\006proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_deps[2] = {
@@ -6241,13 +6654,13 @@ static ::absl::once_flag descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto = {
     false,
     false,
-    5206,
+    5655,
     descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto,
     "gridx/auth/v1/auth.proto",
     &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_once,
     descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_deps,
     2,
-    36,
+    38,
     schemas,
     file_message_globals,
     TableStruct_gridx_2fauth_2fv1_2fauth_2eproto::offsets,
@@ -14963,6 +15376,707 @@ void KycSubmission::InternalSwap(KycSubmission* PROTOBUF_RESTRICT PROTOBUF_NONNU
 }
 
 ::google::protobuf::Metadata KycSubmission::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+LoginWithGoogleRequest::LoginWithGoogleRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, LoginWithGoogleRequest_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.auth.v1.LoginWithGoogleRequest)
+}
+PROTOBUF_NDEBUG_INLINE LoginWithGoogleRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::auth::v1::LoginWithGoogleRequest& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        code_(arena, from.code_),
+        code_verifier_(arena, from.code_verifier_),
+        redirect_uri_(arena, from.redirect_uri_),
+        nonce_(arena, from.nonce_) {}
+
+LoginWithGoogleRequest::LoginWithGoogleRequest(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const LoginWithGoogleRequest& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, LoginWithGoogleRequest_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  LoginWithGoogleRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:gridx.auth.v1.LoginWithGoogleRequest)
+}
+PROTOBUF_NDEBUG_INLINE LoginWithGoogleRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        code_(arena),
+        code_verifier_(arena),
+        redirect_uri_(arena),
+        nonce_(arena) {}
+
+inline void LoginWithGoogleRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+LoginWithGoogleRequest::~LoginWithGoogleRequest() {
+  // @@protoc_insertion_point(destructor:gridx.auth.v1.LoginWithGoogleRequest)
+  SharedDtor(*this);
+}
+inline void LoginWithGoogleRequest::SharedDtor(MessageLite& self) {
+  LoginWithGoogleRequest& this_ = static_cast<LoginWithGoogleRequest&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.code_.Destroy();
+  this_._impl_.code_verifier_.Destroy();
+  this_._impl_.redirect_uri_.Destroy();
+  this_._impl_.nonce_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull LoginWithGoogleRequest_class_data_ =
+        LoginWithGoogleRequest::InternalGenerateClassData_(LoginWithGoogleRequest_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+LoginWithGoogleRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&LoginWithGoogleRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(LoginWithGoogleRequest_class_data_.tc_table);
+  return LoginWithGoogleRequest_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+LoginWithGoogleRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&LoginWithGoogleRequest_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&LoginWithGoogleRequest_globals_));
+  return LoginWithGoogleRequest_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const LoginWithGoogleRequest::ParseTableT_
+    LoginWithGoogleRequest::_table_ =
+        LoginWithGoogleRequest::InternalGenerateParseTable_(LoginWithGoogleRequest_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void LoginWithGoogleRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.auth.v1.LoginWithGoogleRequest)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      _impl_.code_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      _impl_.code_verifier_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      _impl_.redirect_uri_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      _impl_.nonce_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL LoginWithGoogleRequest::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const LoginWithGoogleRequest& this_ = static_cast<const LoginWithGoogleRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL LoginWithGoogleRequest::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const LoginWithGoogleRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.auth.v1.LoginWithGoogleRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string code = 1 [json_name = "code"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_code().empty()) {
+      const ::std::string& _s = this_._internal_code();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.LoginWithGoogleRequest.code");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  // string code_verifier = 2 [json_name = "codeVerifier"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (!this_._internal_code_verifier().empty()) {
+      const ::std::string& _s = this_._internal_code_verifier();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.LoginWithGoogleRequest.code_verifier");
+      target = stream->WriteStringMaybeAliased(2, _s, target);
+    }
+  }
+
+  // string redirect_uri = 3 [json_name = "redirectUri"];
+  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (!this_._internal_redirect_uri().empty()) {
+      const ::std::string& _s = this_._internal_redirect_uri();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.LoginWithGoogleRequest.redirect_uri");
+      target = stream->WriteStringMaybeAliased(3, _s, target);
+    }
+  }
+
+  // string nonce = 4 [json_name = "nonce"];
+  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+    if (!this_._internal_nonce().empty()) {
+      const ::std::string& _s = this_._internal_nonce();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.LoginWithGoogleRequest.nonce");
+      target = stream->WriteStringMaybeAliased(4, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.auth.v1.LoginWithGoogleRequest)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t LoginWithGoogleRequest::ByteSizeLong(const MessageLite& base) {
+  const LoginWithGoogleRequest& this_ = static_cast<const LoginWithGoogleRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t LoginWithGoogleRequest::ByteSizeLong() const {
+  const LoginWithGoogleRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.auth.v1.LoginWithGoogleRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
+    // string code = 1 [json_name = "code"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_code().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_code());
+      }
+    }
+    // string code_verifier = 2 [json_name = "codeVerifier"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!this_._internal_code_verifier().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_code_verifier());
+      }
+    }
+    // string redirect_uri = 3 [json_name = "redirectUri"];
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!this_._internal_redirect_uri().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_redirect_uri());
+      }
+    }
+    // string nonce = 4 [json_name = "nonce"];
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      if (!this_._internal_nonce().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_nonce());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void LoginWithGoogleRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<LoginWithGoogleRequest*>(&to_msg);
+  auto& from = static_cast<const LoginWithGoogleRequest&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.auth.v1.LoginWithGoogleRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_code().empty()) {
+        _this->_internal_set_code(from._internal_code());
+      } else {
+        if (_this->_impl_.code_.IsDefault()) {
+          _this->_internal_set_code("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!from._internal_code_verifier().empty()) {
+        _this->_internal_set_code_verifier(from._internal_code_verifier());
+      } else {
+        if (_this->_impl_.code_verifier_.IsDefault()) {
+          _this->_internal_set_code_verifier("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!from._internal_redirect_uri().empty()) {
+        _this->_internal_set_redirect_uri(from._internal_redirect_uri());
+      } else {
+        if (_this->_impl_.redirect_uri_.IsDefault()) {
+          _this->_internal_set_redirect_uri("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      if (!from._internal_nonce().empty()) {
+        _this->_internal_set_nonce(from._internal_nonce());
+      } else {
+        if (_this->_impl_.nonce_.IsDefault()) {
+          _this->_internal_set_nonce("");
+        }
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void LoginWithGoogleRequest::CopyFrom(const LoginWithGoogleRequest& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.auth.v1.LoginWithGoogleRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void LoginWithGoogleRequest::InternalSwap(LoginWithGoogleRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.code_, &other->_impl_.code_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.code_verifier_, &other->_impl_.code_verifier_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.redirect_uri_, &other->_impl_.redirect_uri_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.nonce_, &other->_impl_.nonce_, arena);
+}
+
+::google::protobuf::Metadata LoginWithGoogleRequest::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+LoginWithGoogleResponse::LoginWithGoogleResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, LoginWithGoogleResponse_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.auth.v1.LoginWithGoogleResponse)
+}
+PROTOBUF_NDEBUG_INLINE LoginWithGoogleResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::auth::v1::LoginWithGoogleResponse& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        user_id_(arena, from.user_id_),
+        email_(arena, from.email_),
+        access_token_(arena, from.access_token_),
+        refresh_token_(arena, from.refresh_token_) {}
+
+LoginWithGoogleResponse::LoginWithGoogleResponse(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const LoginWithGoogleResponse& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, LoginWithGoogleResponse_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  LoginWithGoogleResponse* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::memcpy(reinterpret_cast<char*>(&_impl_) +
+               offsetof(Impl_, expires_in_),
+           reinterpret_cast<const char*>(&from._impl_) +
+               offsetof(Impl_, expires_in_),
+           offsetof(Impl_, is_new_user_) -
+               offsetof(Impl_, expires_in_) +
+               sizeof(Impl_::is_new_user_));
+
+  // @@protoc_insertion_point(copy_constructor:gridx.auth.v1.LoginWithGoogleResponse)
+}
+PROTOBUF_NDEBUG_INLINE LoginWithGoogleResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        user_id_(arena),
+        email_(arena),
+        access_token_(arena),
+        refresh_token_(arena) {}
+
+inline void LoginWithGoogleResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char*>(&_impl_) +
+               offsetof(Impl_, expires_in_),
+           0,
+           offsetof(Impl_, is_new_user_) -
+               offsetof(Impl_, expires_in_) +
+               sizeof(Impl_::is_new_user_));
+}
+LoginWithGoogleResponse::~LoginWithGoogleResponse() {
+  // @@protoc_insertion_point(destructor:gridx.auth.v1.LoginWithGoogleResponse)
+  SharedDtor(*this);
+}
+inline void LoginWithGoogleResponse::SharedDtor(MessageLite& self) {
+  LoginWithGoogleResponse& this_ = static_cast<LoginWithGoogleResponse&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.user_id_.Destroy();
+  this_._impl_.email_.Destroy();
+  this_._impl_.access_token_.Destroy();
+  this_._impl_.refresh_token_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull LoginWithGoogleResponse_class_data_ =
+        LoginWithGoogleResponse::InternalGenerateClassData_(LoginWithGoogleResponse_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+LoginWithGoogleResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&LoginWithGoogleResponse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(LoginWithGoogleResponse_class_data_.tc_table);
+  return LoginWithGoogleResponse_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+LoginWithGoogleResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&LoginWithGoogleResponse_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&LoginWithGoogleResponse_globals_));
+  return LoginWithGoogleResponse_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const LoginWithGoogleResponse::ParseTableT_
+    LoginWithGoogleResponse::_table_ =
+        LoginWithGoogleResponse::InternalGenerateParseTable_(LoginWithGoogleResponse_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void LoginWithGoogleResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.auth.v1.LoginWithGoogleResponse)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      _impl_.user_id_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      _impl_.email_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      _impl_.access_token_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      _impl_.refresh_token_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (BatchCheckHasBit(cached_has_bits, 0x00000030U)) {
+    ::memset(&_impl_.expires_in_, 0, static_cast<::size_t>(
+        reinterpret_cast<char*>(&_impl_.is_new_user_) -
+        reinterpret_cast<char*>(&_impl_.expires_in_)) + sizeof(_impl_.is_new_user_));
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL LoginWithGoogleResponse::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const LoginWithGoogleResponse& this_ = static_cast<const LoginWithGoogleResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL LoginWithGoogleResponse::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const LoginWithGoogleResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.auth.v1.LoginWithGoogleResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string user_id = 1 [json_name = "userId"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_user_id().empty()) {
+      const ::std::string& _s = this_._internal_user_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.LoginWithGoogleResponse.user_id");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  // string email = 2 [json_name = "email"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (!this_._internal_email().empty()) {
+      const ::std::string& _s = this_._internal_email();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.LoginWithGoogleResponse.email");
+      target = stream->WriteStringMaybeAliased(2, _s, target);
+    }
+  }
+
+  // string access_token = 3 [json_name = "accessToken"];
+  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (!this_._internal_access_token().empty()) {
+      const ::std::string& _s = this_._internal_access_token();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.LoginWithGoogleResponse.access_token");
+      target = stream->WriteStringMaybeAliased(3, _s, target);
+    }
+  }
+
+  // string refresh_token = 4 [json_name = "refreshToken"];
+  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+    if (!this_._internal_refresh_token().empty()) {
+      const ::std::string& _s = this_._internal_refresh_token();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.LoginWithGoogleResponse.refresh_token");
+      target = stream->WriteStringMaybeAliased(4, _s, target);
+    }
+  }
+
+  // int64 expires_in = 5 [json_name = "expiresIn"];
+  if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+    if (this_._internal_expires_in() != 0) {
+      target =
+          ::google::protobuf::internal::WireFormatLite::WriteInt64ToArrayWithField<5>(
+              stream, this_._internal_expires_in(), target);
+    }
+  }
+
+  // bool is_new_user = 6 [json_name = "isNewUser"];
+  if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+    if (this_._internal_is_new_user() != 0) {
+      target = stream->EnsureSpace(target);
+      target = ::_pbi::WireFormatLite::WriteBoolToArray(
+          6, this_._internal_is_new_user(), target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.auth.v1.LoginWithGoogleResponse)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t LoginWithGoogleResponse::ByteSizeLong(const MessageLite& base) {
+  const LoginWithGoogleResponse& this_ = static_cast<const LoginWithGoogleResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t LoginWithGoogleResponse::ByteSizeLong() const {
+  const LoginWithGoogleResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.auth.v1.LoginWithGoogleResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
+    // string user_id = 1 [json_name = "userId"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_user_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_user_id());
+      }
+    }
+    // string email = 2 [json_name = "email"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!this_._internal_email().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_email());
+      }
+    }
+    // string access_token = 3 [json_name = "accessToken"];
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!this_._internal_access_token().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_access_token());
+      }
+    }
+    // string refresh_token = 4 [json_name = "refreshToken"];
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      if (!this_._internal_refresh_token().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_refresh_token());
+      }
+    }
+    // int64 expires_in = 5 [json_name = "expiresIn"];
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+      if (this_._internal_expires_in() != 0) {
+        total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+            this_._internal_expires_in());
+      }
+    }
+    // bool is_new_user = 6 [json_name = "isNewUser"];
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      if (this_._internal_is_new_user() != 0) {
+        total_size += 2;
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void LoginWithGoogleResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<LoginWithGoogleResponse*>(&to_msg);
+  auto& from = static_cast<const LoginWithGoogleResponse&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.auth.v1.LoginWithGoogleResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_user_id().empty()) {
+        _this->_internal_set_user_id(from._internal_user_id());
+      } else {
+        if (_this->_impl_.user_id_.IsDefault()) {
+          _this->_internal_set_user_id("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!from._internal_email().empty()) {
+        _this->_internal_set_email(from._internal_email());
+      } else {
+        if (_this->_impl_.email_.IsDefault()) {
+          _this->_internal_set_email("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!from._internal_access_token().empty()) {
+        _this->_internal_set_access_token(from._internal_access_token());
+      } else {
+        if (_this->_impl_.access_token_.IsDefault()) {
+          _this->_internal_set_access_token("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      if (!from._internal_refresh_token().empty()) {
+        _this->_internal_set_refresh_token(from._internal_refresh_token());
+      } else {
+        if (_this->_impl_.refresh_token_.IsDefault()) {
+          _this->_internal_set_refresh_token("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+      if (from._internal_expires_in() != 0) {
+        _this->_impl_.expires_in_ = from._impl_.expires_in_;
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      if (from._internal_is_new_user() != 0) {
+        _this->_impl_.is_new_user_ = from._impl_.is_new_user_;
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void LoginWithGoogleResponse::CopyFrom(const LoginWithGoogleResponse& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.auth.v1.LoginWithGoogleResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void LoginWithGoogleResponse::InternalSwap(LoginWithGoogleResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.email_, &other->_impl_.email_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.access_token_, &other->_impl_.access_token_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.refresh_token_, &other->_impl_.refresh_token_, arena);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_.is_new_user_)
+      + sizeof(LoginWithGoogleResponse::_impl_.is_new_user_)
+      - PROTOBUF_FIELD_OFFSET(LoginWithGoogleResponse, _impl_.expires_in_)>(
+          reinterpret_cast<char*>(&_impl_.expires_in_),
+          reinterpret_cast<char*>(&other->_impl_.expires_in_));
+}
+
+::google::protobuf::Metadata LoginWithGoogleResponse::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // @@protoc_insertion_point(namespace_scope)
