@@ -105,6 +105,10 @@ PROTOBUF_CONSTINIT ::google::protobuf::internal::ReflectionData
         {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
         // ::gridx::auth::v1::KycSubmission
         {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::auth::v1::ExtractKycNicOcrRequest
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::auth::v1::ExtractKycNicOcrResponse
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
         // ::gridx::auth::v1::LoginWithGoogleRequest
         {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto, /* tracker*/ nullptr,},
         // ::gridx::auth::v1::LoginWithGoogleResponse
@@ -3044,7 +3048,7 @@ constexpr auto LoginWithGoogleResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[39],
+      &file_reflection_data[41],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -3220,7 +3224,7 @@ constexpr auto LoginWithGoogleRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[38],
+      &file_reflection_data[40],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
@@ -4068,6 +4072,152 @@ const ::_pbi::ClassData* GetProfileRequest_get_class_data() {
   return GetProfileRequest_globals_.GetClassData();
 #else
   return GetProfileRequest_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class ExtractKycNicOcrRequest::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<ExtractKycNicOcrRequest>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(ExtractKycNicOcrRequest, _impl_._has_bits_);
+};
+
+constexpr ExtractKycNicOcrRequest::ParseTableT_ ExtractKycNicOcrRequest::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(ExtractKycNicOcrRequest, _impl_._has_bits_),
+      0, // no _extensions_
+      1, 0,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967294,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      1,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::auth::v1::ExtractKycNicOcrRequest>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // string object_key = 1 [json_name = "objectKey"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(ExtractKycNicOcrRequest, _impl_.object_key_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string object_key = 1 [json_name = "objectKey"];
+      {PROTOBUF_FIELD_OFFSET(ExtractKycNicOcrRequest, _impl_.object_key_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\45\12\0\0\0\0\0\0"
+      "gridx.auth.v1.ExtractKycNicOcrRequest"
+      "object_key"
+    }},
+  };
+}
+
+
+inline constexpr ExtractKycNicOcrRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        object_key_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+constexpr ExtractKycNicOcrRequest::ExtractKycNicOcrRequest(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL ExtractKycNicOcrRequest::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) ExtractKycNicOcrRequest(arena);
+}
+constexpr auto ExtractKycNicOcrRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(ExtractKycNicOcrRequest), alignof(ExtractKycNicOcrRequest));
+}
+constexpr auto ExtractKycNicOcrRequest::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &ExtractKycNicOcrRequest::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<ExtractKycNicOcrRequest>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &ExtractKycNicOcrRequest::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<ExtractKycNicOcrRequest>(), &ExtractKycNicOcrRequest::ByteSizeLong,
+              &ExtractKycNicOcrRequest::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(ExtractKycNicOcrRequest, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[38],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct ExtractKycNicOcrRequestGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr ExtractKycNicOcrRequestGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 ExtractKycNicOcrRequest_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(ExtractKycNicOcrRequest::InternalGenerateClassData_(
+            _default, &ExtractKycNicOcrRequest_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<ExtractKycNicOcrRequest>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~ExtractKycNicOcrRequestGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) ExtractKycNicOcrRequest _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<ExtractKycNicOcrRequest>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(ExtractKycNicOcrRequestGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST ExtractKycNicOcrRequestGlobalsTypeInternal ExtractKycNicOcrRequest_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* ExtractKycNicOcrRequest_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return ExtractKycNicOcrRequest_globals_.GetClassData();
+#else
+  return ExtractKycNicOcrRequest_class_data_.base();
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 }
 }  // namespace
@@ -5196,9 +5346,9 @@ constexpr SubmitKycRequest::ParseTableT_ SubmitKycRequest::InternalGenerateParse
     {
       PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_._has_bits_),
       0, // no _extensions_
-      4, 24,  // max_field_number, fast_idx_mask
+      5, 56,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967280,  // skipmap
+      4294967268,  // skipmap
       offsetof(ParseTableT_, field_entries),
       4,  // num_field_entries
       1,  // num_aux_entries
@@ -5210,10 +5360,7 @@ constexpr SubmitKycRequest::ParseTableT_ SubmitKycRequest::InternalGenerateParse
       ::_pbi::TcParser::GetTable<::gridx::auth::v1::SubmitKycRequest>(),  // to_prefetch
       #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
     }, {{
-      // string document_path = 4 [json_name = "documentPath"];
-      {::_pbi::TcParser::FastUS1,
-       {34, 2, 0,
-        PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.document_path_)}},
+      {::_pbi::TcParser::MiniParse, {}},
       // string full_name = 1 [json_name = "fullName"];
       {::_pbi::TcParser::FastUS1,
        {10, 0, 0,
@@ -5222,10 +5369,17 @@ constexpr SubmitKycRequest::ParseTableT_ SubmitKycRequest::InternalGenerateParse
       {::_pbi::TcParser::FastMtS1,
        {18, 3, 0,
         PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.date_of_birth_)}},
-      // string dubai_id = 3 [json_name = "dubaiId"];
+      {::_pbi::TcParser::MiniParse, {}},
+      // string document_path = 4 [json_name = "documentPath"];
       {::_pbi::TcParser::FastUS1,
-       {26, 1, 0,
-        PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.dubai_id_)}},
+       {34, 1, 0,
+        PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.document_path_)}},
+      // string nic_number = 5 [json_name = "nicNumber"];
+      {::_pbi::TcParser::FastUS1,
+       {42, 2, 0,
+        PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.nic_number_)}},
+      {::_pbi::TcParser::MiniParse, {}},
+      {::_pbi::TcParser::MiniParse, {}},
     }}, {{
       65535, 65535
     }}, {{
@@ -5233,10 +5387,10 @@ constexpr SubmitKycRequest::ParseTableT_ SubmitKycRequest::InternalGenerateParse
       {PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.full_name_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // .google.type.Date date_of_birth = 2 [json_name = "dateOfBirth"];
       {PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.date_of_birth_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-      // string dubai_id = 3 [json_name = "dubaiId"];
-      {PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.dubai_id_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // string document_path = 4 [json_name = "documentPath"];
-      {PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.document_path_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      {PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.document_path_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string nic_number = 5 [json_name = "nicNumber"];
+      {PROTOBUF_FIELD_OFFSET(SubmitKycRequest, _impl_.nic_number_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     }},
     {{
         #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -5246,11 +5400,11 @@ constexpr SubmitKycRequest::ParseTableT_ SubmitKycRequest::InternalGenerateParse
         #endif
     }},
     {{
-      "\36\11\0\10\15\0\0\0"
+      "\36\11\0\15\12\0\0\0"
       "gridx.auth.v1.SubmitKycRequest"
       "full_name"
-      "dubai_id"
       "document_path"
+      "nic_number"
     }},
   };
 }
@@ -5263,10 +5417,10 @@ inline constexpr SubmitKycRequest::Impl_::Impl_(
         full_name_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        dubai_id_(
+        document_path_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        document_path_(
+        nic_number_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         date_of_birth_{nullptr} {}
@@ -5608,9 +5762,9 @@ constexpr KycSubmission::ParseTableT_ KycSubmission::InternalGenerateParseTable_
     {
       PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_._has_bits_),
       0, // no _extensions_
-      11, 120,  // max_field_number, fast_idx_mask
+      12, 120,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294965248,  // skipmap
+      4294963216,  // skipmap
       offsetof(ParseTableT_, field_entries),
       11,  // num_field_entries
       4,  // num_aux_entries
@@ -5639,13 +5793,10 @@ constexpr KycSubmission::ParseTableT_ KycSubmission::InternalGenerateParseTable_
       {::_pbi::TcParser::FastMtS1,
        {34, 6, 0,
         PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.date_of_birth_)}},
-      // string dubai_id = 5 [json_name = "dubaiId"];
-      {::_pbi::TcParser::FastUS1,
-       {42, 3, 0,
-        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.dubai_id_)}},
+      {::_pbi::TcParser::MiniParse, {}},
       // string document_path = 6 [json_name = "documentPath"];
       {::_pbi::TcParser::FastUS1,
-       {50, 4, 0,
+       {50, 3, 0,
         PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.document_path_)}},
       // .gridx.auth.v1.KycState state = 7 [json_name = "state"];
       {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(KycSubmission, _impl_.state_), 10>(),
@@ -5653,7 +5804,7 @@ constexpr KycSubmission::ParseTableT_ KycSubmission::InternalGenerateParseTable_
         PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.state_)}},
       // string rejection_reason = 8 [json_name = "rejectionReason"];
       {::_pbi::TcParser::FastUS1,
-       {66, 5, 0,
+       {66, 4, 0,
         PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.rejection_reason_)}},
       // .google.protobuf.Timestamp verified_at = 9 [json_name = "verifiedAt"];
       {::_pbi::TcParser::FastMtS1,
@@ -5667,7 +5818,10 @@ constexpr KycSubmission::ParseTableT_ KycSubmission::InternalGenerateParseTable_
       {::_pbi::TcParser::FastMtS1,
        {90, 9, 3,
         PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.updated_at_)}},
-      {::_pbi::TcParser::MiniParse, {}},
+      // string nic_number = 12 [json_name = "nicNumber"];
+      {::_pbi::TcParser::FastUS1,
+       {98, 5, 0,
+        PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.nic_number_)}},
       {::_pbi::TcParser::MiniParse, {}},
       {::_pbi::TcParser::MiniParse, {}},
       {::_pbi::TcParser::MiniParse, {}},
@@ -5682,20 +5836,20 @@ constexpr KycSubmission::ParseTableT_ KycSubmission::InternalGenerateParseTable_
       {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.full_name_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // .google.type.Date date_of_birth = 4 [json_name = "dateOfBirth"];
       {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.date_of_birth_), _Internal::kHasBitsOffset + 6, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-      // string dubai_id = 5 [json_name = "dubaiId"];
-      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.dubai_id_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // string document_path = 6 [json_name = "documentPath"];
-      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.document_path_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.document_path_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // .gridx.auth.v1.KycState state = 7 [json_name = "state"];
       {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.state_), _Internal::kHasBitsOffset + 10, 0, (0 | ::_fl::kFcOptional | ::_fl::kOpenEnum)},
       // string rejection_reason = 8 [json_name = "rejectionReason"];
-      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.rejection_reason_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.rejection_reason_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // .google.protobuf.Timestamp verified_at = 9 [json_name = "verifiedAt"];
       {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.verified_at_), _Internal::kHasBitsOffset + 7, 1, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
       // .google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];
       {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.created_at_), _Internal::kHasBitsOffset + 8, 2, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
       // .google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];
       {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.updated_at_), _Internal::kHasBitsOffset + 9, 3, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+      // string nic_number = 12 [json_name = "nicNumber"];
+      {PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.nic_number_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     }},
     {{
         #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -5720,14 +5874,14 @@ constexpr KycSubmission::ParseTableT_ KycSubmission::InternalGenerateParseTable_
         #endif
     }},
     {{
-      "\33\2\7\11\0\10\15\0\20\0\0\0\0\0\0\0"
+      "\33\2\7\11\0\15\0\20\0\0\0\12\0\0\0\0"
       "gridx.auth.v1.KycSubmission"
       "id"
       "user_id"
       "full_name"
-      "dubai_id"
       "document_path"
       "rejection_reason"
+      "nic_number"
     }},
   };
 }
@@ -5746,13 +5900,13 @@ inline constexpr KycSubmission::Impl_::Impl_(
         full_name_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        dubai_id_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
         document_path_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         rejection_reason_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        nic_number_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         date_of_birth_{nullptr},
@@ -5849,6 +6003,176 @@ const ::_pbi::ClassData* KycSubmission_get_class_data() {
   return KycSubmission_globals_.GetClassData();
 #else
   return KycSubmission_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class ExtractKycNicOcrResponse::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<ExtractKycNicOcrResponse>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(ExtractKycNicOcrResponse, _impl_._has_bits_);
+};
+
+constexpr ExtractKycNicOcrResponse::ParseTableT_ ExtractKycNicOcrResponse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(ExtractKycNicOcrResponse, _impl_._has_bits_),
+      0, // no _extensions_
+      3, 24,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967288,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      3,  // num_field_entries
+      1,  // num_aux_entries
+      offsetof(ParseTableT_, aux_entries),
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::auth::v1::ExtractKycNicOcrResponse>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      {::_pbi::TcParser::MiniParse, {}},
+      // string full_name = 1 [json_name = "fullName"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(ExtractKycNicOcrResponse, _impl_.full_name_)}},
+      // .google.type.Date date_of_birth = 2 [json_name = "dateOfBirth"];
+      {::_pbi::TcParser::FastMtS1,
+       {18, 2, 0,
+        PROTOBUF_FIELD_OFFSET(ExtractKycNicOcrResponse, _impl_.date_of_birth_)}},
+      // string nic_number = 3 [json_name = "nicNumber"];
+      {::_pbi::TcParser::FastUS1,
+       {26, 1, 0,
+        PROTOBUF_FIELD_OFFSET(ExtractKycNicOcrResponse, _impl_.nic_number_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string full_name = 1 [json_name = "fullName"];
+      {PROTOBUF_FIELD_OFFSET(ExtractKycNicOcrResponse, _impl_.full_name_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // .google.type.Date date_of_birth = 2 [json_name = "dateOfBirth"];
+      {PROTOBUF_FIELD_OFFSET(ExtractKycNicOcrResponse, _impl_.date_of_birth_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+      // string nic_number = 3 [json_name = "nicNumber"];
+      {PROTOBUF_FIELD_OFFSET(ExtractKycNicOcrResponse, _impl_.nic_number_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    {{
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::google::type::Date>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::google::type::Date_globals_},
+        #endif
+    }},
+    {{
+      "\46\11\0\12\0\0\0\0"
+      "gridx.auth.v1.ExtractKycNicOcrResponse"
+      "full_name"
+      "nic_number"
+    }},
+  };
+}
+
+
+inline constexpr ExtractKycNicOcrResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        full_name_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        nic_number_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        date_of_birth_{nullptr} {}
+
+template <typename>
+constexpr ExtractKycNicOcrResponse::ExtractKycNicOcrResponse(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL ExtractKycNicOcrResponse::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) ExtractKycNicOcrResponse(arena);
+}
+constexpr auto ExtractKycNicOcrResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(ExtractKycNicOcrResponse), alignof(ExtractKycNicOcrResponse));
+}
+constexpr auto ExtractKycNicOcrResponse::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &ExtractKycNicOcrResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<ExtractKycNicOcrResponse>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &ExtractKycNicOcrResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<ExtractKycNicOcrResponse>(), &ExtractKycNicOcrResponse::ByteSizeLong,
+              &ExtractKycNicOcrResponse::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(ExtractKycNicOcrResponse, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[39],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct ExtractKycNicOcrResponseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr ExtractKycNicOcrResponseGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 ExtractKycNicOcrResponse_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(ExtractKycNicOcrResponse::InternalGenerateClassData_(
+            _default, &ExtractKycNicOcrResponse_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<ExtractKycNicOcrResponse>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~ExtractKycNicOcrResponseGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) ExtractKycNicOcrResponse _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<ExtractKycNicOcrResponse>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(ExtractKycNicOcrResponseGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST ExtractKycNicOcrResponseGlobalsTypeInternal ExtractKycNicOcrResponse_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* ExtractKycNicOcrResponse_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return ExtractKycNicOcrResponse_globals_.GetClassData();
+#else
+  return ExtractKycNicOcrResponse_class_data_.base();
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 }
 }  // namespace
@@ -6691,8 +7015,8 @@ const ::uint32_t
         7, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::SubmitKycRequest, _impl_.full_name_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::SubmitKycRequest, _impl_.date_of_birth_),
-        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::SubmitKycRequest, _impl_.dubai_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::SubmitKycRequest, _impl_.document_path_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::SubmitKycRequest, _impl_.nic_number_),
         0,
         3,
         1,
@@ -6709,24 +7033,38 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::KycSubmission, _impl_.user_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::KycSubmission, _impl_.full_name_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::KycSubmission, _impl_.date_of_birth_),
-        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::KycSubmission, _impl_.dubai_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::KycSubmission, _impl_.document_path_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::KycSubmission, _impl_.state_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::KycSubmission, _impl_.rejection_reason_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::KycSubmission, _impl_.verified_at_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::KycSubmission, _impl_.created_at_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::KycSubmission, _impl_.updated_at_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::KycSubmission, _impl_.nic_number_),
         0,
         1,
         2,
         6,
         3,
-        4,
         10,
-        5,
+        4,
         7,
         8,
         9,
+        5,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::ExtractKycNicOcrRequest, _impl_._has_bits_),
+        4, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::ExtractKycNicOcrRequest, _impl_.object_key_),
+        0,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::ExtractKycNicOcrResponse, _impl_._has_bits_),
+        6, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::ExtractKycNicOcrResponse, _impl_.full_name_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::ExtractKycNicOcrResponse, _impl_.date_of_birth_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::ExtractKycNicOcrResponse, _impl_.nic_number_),
+        0,
+        2,
+        1,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::LoginWithGoogleRequest, _impl_._has_bits_),
         7, // hasbit index offset
@@ -6795,8 +7133,10 @@ static const ::_pbi::MigrationSchema
         {235, sizeof(::gridx::auth::v1::SubmitKycRequest)},
         {246, sizeof(::gridx::auth::v1::SubmitKycResponse)},
         {251, sizeof(::gridx::auth::v1::KycSubmission)},
-        {276, sizeof(::gridx::auth::v1::LoginWithGoogleRequest)},
-        {287, sizeof(::gridx::auth::v1::LoginWithGoogleResponse)},
+        {276, sizeof(::gridx::auth::v1::ExtractKycNicOcrRequest)},
+        {281, sizeof(::gridx::auth::v1::ExtractKycNicOcrResponse)},
+        {290, sizeof(::gridx::auth::v1::LoginWithGoogleRequest)},
+        {301, sizeof(::gridx::auth::v1::LoginWithGoogleResponse)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
     file_message_globals[] = {
@@ -6838,6 +7178,8 @@ static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
         &::gridx::auth::v1::SubmitKycRequest_globals_,
         &::gridx::auth::v1::SubmitKycResponse_globals_,
         &::gridx::auth::v1::KycSubmission_globals_,
+        &::gridx::auth::v1::ExtractKycNicOcrRequest_globals_,
+        &::gridx::auth::v1::ExtractKycNicOcrResponse_globals_,
         &::gridx::auth::v1::LoginWithGoogleRequest_globals_,
         &::gridx::auth::v1::LoginWithGoogleResponse_globals_,
 };
@@ -6918,81 +7260,90 @@ const char descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto[] ABSL_ATT
     "\022\027\n\007user_id\030\001 \001(\tR\006userId\022\'\n\017permission_"
     "name\030\002 \001(\tR\016permissionName\"3\n\027CheckPermi"
     "ssionResponse\022\030\n\007allowed\030\001 \001(\010R\007allowed\""
-    "\246\001\n\020SubmitKycRequest\022\033\n\tfull_name\030\001 \001(\tR"
+    "\272\001\n\020SubmitKycRequest\022\033\n\tfull_name\030\001 \001(\tR"
     "\010fullName\0225\n\rdate_of_birth\030\002 \001(\0132\021.googl"
-    "e.type.DateR\013dateOfBirth\022\031\n\010dubai_id\030\003 \001"
-    "(\tR\007dubaiId\022#\n\rdocument_path\030\004 \001(\tR\014docu"
-    "mentPath\"Q\n\021SubmitKycResponse\022<\n\nsubmiss"
-    "ion\030\001 \001(\0132\034.gridx.auth.v1.KycSubmissionR"
-    "\nsubmission\"\331\003\n\rKycSubmission\022\016\n\002id\030\001 \001("
-    "\tR\002id\022\027\n\007user_id\030\002 \001(\tR\006userId\022\033\n\tfull_n"
-    "ame\030\003 \001(\tR\010fullName\0225\n\rdate_of_birth\030\004 \001"
-    "(\0132\021.google.type.DateR\013dateOfBirth\022\031\n\010du"
-    "bai_id\030\005 \001(\tR\007dubaiId\022#\n\rdocument_path\030\006"
-    " \001(\tR\014documentPath\022-\n\005state\030\007 \001(\0162\027.grid"
-    "x.auth.v1.KycStateR\005state\022)\n\020rejection_r"
-    "eason\030\010 \001(\tR\017rejectionReason\022;\n\013verified"
-    "_at\030\t \001(\0132\032.google.protobuf.TimestampR\nv"
-    "erifiedAt\0229\n\ncreated_at\030\n \001(\0132\032.google.p"
-    "rotobuf.TimestampR\tcreatedAt\0229\n\nupdated_"
-    "at\030\013 \001(\0132\032.google.protobuf.TimestampR\tup"
-    "datedAt\"\212\001\n\026LoginWithGoogleRequest\022\022\n\004co"
-    "de\030\001 \001(\tR\004code\022#\n\rcode_verifier\030\002 \001(\tR\014c"
-    "odeVerifier\022!\n\014redirect_uri\030\003 \001(\tR\013redir"
-    "ectUri\022\024\n\005nonce\030\004 \001(\tR\005nonce\"\317\001\n\027LoginWi"
-    "thGoogleResponse\022\027\n\007user_id\030\001 \001(\tR\006userI"
-    "d\022\024\n\005email\030\002 \001(\tR\005email\022!\n\014access_token\030"
-    "\003 \001(\tR\013accessToken\022#\n\rrefresh_token\030\004 \001("
-    "\tR\014refreshToken\022\035\n\nexpires_in\030\005 \001(\003R\texp"
-    "iresIn\022\036\n\013is_new_user\030\006 \001(\010R\tisNewUser*l"
-    "\n\010KycState\022\031\n\025KYC_STATE_UNSPECIFIED\020\000\022\025\n"
-    "\021KYC_STATE_PENDING\020\001\022\026\n\022KYC_STATE_VERIFI"
-    "ED\020\002\022\026\n\022KYC_STATE_REJECTED\020\0032\253\r\n\013AuthSer"
-    "vice\022K\n\010Register\022\036.gridx.auth.v1.Registe"
-    "rRequest\032\037.gridx.auth.v1.RegisterRespons"
-    "e\022B\n\005Login\022\033.gridx.auth.v1.LoginRequest\032"
-    "\034.gridx.auth.v1.LoginResponse\022E\n\006Logout\022"
-    "\034.gridx.auth.v1.LogoutRequest\032\035.gridx.au"
-    "th.v1.LogoutResponse\022N\n\tLogoutAll\022\037.grid"
-    "x.auth.v1.LogoutAllRequest\032 .gridx.auth."
-    "v1.LogoutAllResponse\022i\n\022CreateKycUploadU"
-    "rl\022(.gridx.auth.v1.CreateKycUploadUrlReq"
-    "uest\032).gridx.auth.v1.CreateKycUploadUrlR"
-    "esponse\022Q\n\nGetProfile\022 .gridx.auth.v1.Ge"
-    "tProfileRequest\032!.gridx.auth.v1.GetProfi"
-    "leResponse\022Z\n\rUpdateProfile\022#.gridx.auth"
-    ".v1.UpdateProfileRequest\032$.gridx.auth.v1"
-    ".UpdateProfileResponse\022]\n\016ChangePassword"
-    "\022$.gridx.auth.v1.ChangePasswordRequest\032%"
-    ".gridx.auth.v1.ChangePasswordResponse\022o\n"
-    "\024RequestPasswordReset\022*.gridx.auth.v1.Re"
-    "questPasswordResetRequest\032+.gridx.auth.v"
-    "1.RequestPasswordResetResponse\022Z\n\rResetP"
-    "assword\022#.gridx.auth.v1.ResetPasswordReq"
-    "uest\032$.gridx.auth.v1.ResetPasswordRespon"
-    "se\022i\n\022RequestEmailChange\022(.gridx.auth.v1"
-    ".RequestEmailChangeRequest\032).gridx.auth."
-    "v1.RequestEmailChangeResponse\022f\n\021VerifyE"
-    "mailChange\022\'.gridx.auth.v1.VerifyEmailCh"
-    "angeRequest\032(.gridx.auth.v1.VerifyEmailC"
-    "hangeResponse\022H\n\007GetUser\022\035.gridx.auth.v1"
-    ".GetUserRequest\032\036.gridx.auth.v1.GetUserR"
-    "esponse\022`\n\017CheckPermission\022%.gridx.auth."
-    "v1.CheckPermissionRequest\032&.gridx.auth.v"
-    "1.CheckPermissionResponse\022T\n\013VerifyEmail"
-    "\022!.gridx.auth.v1.VerifyEmailRequest\032\".gr"
-    "idx.auth.v1.VerifyEmailResponse\022N\n\tResen"
-    "dOtp\022\037.gridx.auth.v1.ResendOtpRequest\032 ."
-    "gridx.auth.v1.ResendOtpResponse\022N\n\tSubmi"
-    "tKyc\022\037.gridx.auth.v1.SubmitKycRequest\032 ."
-    "gridx.auth.v1.SubmitKycResponse\022W\n\014Refre"
-    "shToken\022\".gridx.auth.v1.RefreshTokenRequ"
-    "est\032#.gridx.auth.v1.RefreshTokenResponse"
-    "\022`\n\017LoginWithGoogle\022%.gridx.auth.v1.Logi"
-    "nWithGoogleRequest\032&.gridx.auth.v1.Login"
-    "WithGoogleResponseBHZFgithub.com/p2p-ene"
-    "rgy-trading-platform/go-sdk/gen/gridx/au"
-    "th/v1;authv1b\006proto3"
+    "e.type.DateR\013dateOfBirth\022#\n\rdocument_pat"
+    "h\030\004 \001(\tR\014documentPath\022\035\n\nnic_number\030\005 \001("
+    "\tR\tnicNumberJ\004\010\003\020\004R\010dubai_id\"Q\n\021SubmitKy"
+    "cResponse\022<\n\nsubmission\030\001 \001(\0132\034.gridx.au"
+    "th.v1.KycSubmissionR\nsubmission\"\355\003\n\rKycS"
+    "ubmission\022\016\n\002id\030\001 \001(\tR\002id\022\027\n\007user_id\030\002 \001"
+    "(\tR\006userId\022\033\n\tfull_name\030\003 \001(\tR\010fullName\022"
+    "5\n\rdate_of_birth\030\004 \001(\0132\021.google.type.Dat"
+    "eR\013dateOfBirth\022#\n\rdocument_path\030\006 \001(\tR\014d"
+    "ocumentPath\022-\n\005state\030\007 \001(\0162\027.gridx.auth."
+    "v1.KycStateR\005state\022)\n\020rejection_reason\030\010"
+    " \001(\tR\017rejectionReason\022;\n\013verified_at\030\t \001"
+    "(\0132\032.google.protobuf.TimestampR\nverified"
+    "At\0229\n\ncreated_at\030\n \001(\0132\032.google.protobuf"
+    ".TimestampR\tcreatedAt\0229\n\nupdated_at\030\013 \001("
+    "\0132\032.google.protobuf.TimestampR\tupdatedAt"
+    "\022\035\n\nnic_number\030\014 \001(\tR\tnicNumberJ\004\010\005\020\006R\010d"
+    "ubai_id\"8\n\027ExtractKycNicOcrRequest\022\035\n\nob"
+    "ject_key\030\001 \001(\tR\tobjectKey\"\215\001\n\030ExtractKyc"
+    "NicOcrResponse\022\033\n\tfull_name\030\001 \001(\tR\010fullN"
+    "ame\0225\n\rdate_of_birth\030\002 \001(\0132\021.google.type"
+    ".DateR\013dateOfBirth\022\035\n\nnic_number\030\003 \001(\tR\t"
+    "nicNumber\"\212\001\n\026LoginWithGoogleRequest\022\022\n\004"
+    "code\030\001 \001(\tR\004code\022#\n\rcode_verifier\030\002 \001(\tR"
+    "\014codeVerifier\022!\n\014redirect_uri\030\003 \001(\tR\013red"
+    "irectUri\022\024\n\005nonce\030\004 \001(\tR\005nonce\"\317\001\n\027Login"
+    "WithGoogleResponse\022\027\n\007user_id\030\001 \001(\tR\006use"
+    "rId\022\024\n\005email\030\002 \001(\tR\005email\022!\n\014access_toke"
+    "n\030\003 \001(\tR\013accessToken\022#\n\rrefresh_token\030\004 "
+    "\001(\tR\014refreshToken\022\035\n\nexpires_in\030\005 \001(\003R\te"
+    "xpiresIn\022\036\n\013is_new_user\030\006 \001(\010R\tisNewUser"
+    "*l\n\010KycState\022\031\n\025KYC_STATE_UNSPECIFIED\020\000\022"
+    "\025\n\021KYC_STATE_PENDING\020\001\022\026\n\022KYC_STATE_VERI"
+    "FIED\020\002\022\026\n\022KYC_STATE_REJECTED\020\0032\220\016\n\013AuthS"
+    "ervice\022K\n\010Register\022\036.gridx.auth.v1.Regis"
+    "terRequest\032\037.gridx.auth.v1.RegisterRespo"
+    "nse\022B\n\005Login\022\033.gridx.auth.v1.LoginReques"
+    "t\032\034.gridx.auth.v1.LoginResponse\022E\n\006Logou"
+    "t\022\034.gridx.auth.v1.LogoutRequest\032\035.gridx."
+    "auth.v1.LogoutResponse\022N\n\tLogoutAll\022\037.gr"
+    "idx.auth.v1.LogoutAllRequest\032 .gridx.aut"
+    "h.v1.LogoutAllResponse\022i\n\022CreateKycUploa"
+    "dUrl\022(.gridx.auth.v1.CreateKycUploadUrlR"
+    "equest\032).gridx.auth.v1.CreateKycUploadUr"
+    "lResponse\022Q\n\nGetProfile\022 .gridx.auth.v1."
+    "GetProfileRequest\032!.gridx.auth.v1.GetPro"
+    "fileResponse\022Z\n\rUpdateProfile\022#.gridx.au"
+    "th.v1.UpdateProfileRequest\032$.gridx.auth."
+    "v1.UpdateProfileResponse\022]\n\016ChangePasswo"
+    "rd\022$.gridx.auth.v1.ChangePasswordRequest"
+    "\032%.gridx.auth.v1.ChangePasswordResponse\022"
+    "o\n\024RequestPasswordReset\022*.gridx.auth.v1."
+    "RequestPasswordResetRequest\032+.gridx.auth"
+    ".v1.RequestPasswordResetResponse\022Z\n\rRese"
+    "tPassword\022#.gridx.auth.v1.ResetPasswordR"
+    "equest\032$.gridx.auth.v1.ResetPasswordResp"
+    "onse\022i\n\022RequestEmailChange\022(.gridx.auth."
+    "v1.RequestEmailChangeRequest\032).gridx.aut"
+    "h.v1.RequestEmailChangeResponse\022f\n\021Verif"
+    "yEmailChange\022\'.gridx.auth.v1.VerifyEmail"
+    "ChangeRequest\032(.gridx.auth.v1.VerifyEmai"
+    "lChangeResponse\022H\n\007GetUser\022\035.gridx.auth."
+    "v1.GetUserRequest\032\036.gridx.auth.v1.GetUse"
+    "rResponse\022`\n\017CheckPermission\022%.gridx.aut"
+    "h.v1.CheckPermissionRequest\032&.gridx.auth"
+    ".v1.CheckPermissionResponse\022T\n\013VerifyEma"
+    "il\022!.gridx.auth.v1.VerifyEmailRequest\032\"."
+    "gridx.auth.v1.VerifyEmailResponse\022N\n\tRes"
+    "endOtp\022\037.gridx.auth.v1.ResendOtpRequest\032"
+    " .gridx.auth.v1.ResendOtpResponse\022N\n\tSub"
+    "mitKyc\022\037.gridx.auth.v1.SubmitKycRequest\032"
+    " .gridx.auth.v1.SubmitKycResponse\022c\n\020Ext"
+    "ractKycNicOcr\022&.gridx.auth.v1.ExtractKyc"
+    "NicOcrRequest\032\'.gridx.auth.v1.ExtractKyc"
+    "NicOcrResponse\022W\n\014RefreshToken\022\".gridx.a"
+    "uth.v1.RefreshTokenRequest\032#.gridx.auth."
+    "v1.RefreshTokenResponse\022`\n\017LoginWithGoog"
+    "le\022%.gridx.auth.v1.LoginWithGoogleReques"
+    "t\032&.gridx.auth.v1.LoginWithGoogleRespons"
+    "eBHZFgithub.com/p2p-energy-trading-platf"
+    "orm/go-sdk/gen/gridx/auth/v1;authv1b\006pro"
+    "to3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_deps[2] = {
@@ -7003,13 +7354,13 @@ static ::absl::once_flag descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto = {
     false,
     false,
-    5980,
+    6323,
     descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto,
     "gridx/auth/v1/auth.proto",
     &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_once,
     descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_deps,
     2,
-    40,
+    42,
     schemas,
     file_message_globals,
     TableStruct_gridx_2fauth_2fv1_2fauth_2eproto::offsets,
@@ -15177,8 +15528,8 @@ PROTOBUF_NDEBUG_INLINE SubmitKycRequest::Impl_::Impl_(
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         full_name_(arena, from.full_name_),
-        dubai_id_(arena, from.dubai_id_),
-        document_path_(arena, from.document_path_) {}
+        document_path_(arena, from.document_path_),
+        nic_number_(arena, from.nic_number_) {}
 
 SubmitKycRequest::SubmitKycRequest(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
@@ -15206,8 +15557,8 @@ PROTOBUF_NDEBUG_INLINE SubmitKycRequest::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : _cached_size_{0},
         full_name_(arena),
-        dubai_id_(arena),
-        document_path_(arena) {}
+        document_path_(arena),
+        nic_number_(arena) {}
 
 inline void SubmitKycRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
@@ -15225,8 +15576,8 @@ inline void SubmitKycRequest::SharedDtor(MessageLite& self) {
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.full_name_.Destroy();
-  this_._impl_.dubai_id_.Destroy();
   this_._impl_.document_path_.Destroy();
+  this_._impl_.nic_number_.Destroy();
   delete this_._impl_.date_of_birth_;
   this_._impl_.~Impl_();
 }
@@ -15270,10 +15621,10 @@ PROTOBUF_NOINLINE void SubmitKycRequest::Clear() {
       _impl_.full_name_.ClearNonDefaultToEmpty();
     }
     if (CheckHasBit(cached_has_bits, 0x00000002U)) {
-      _impl_.dubai_id_.ClearNonDefaultToEmpty();
+      _impl_.document_path_.ClearNonDefaultToEmpty();
     }
     if (CheckHasBit(cached_has_bits, 0x00000004U)) {
-      _impl_.document_path_.ClearNonDefaultToEmpty();
+      _impl_.nic_number_.ClearNonDefaultToEmpty();
     }
     if (CheckHasBit(cached_has_bits, 0x00000008U)) {
       ABSL_DCHECK(_impl_.date_of_birth_ != nullptr);
@@ -15320,23 +15671,23 @@ PROTOBUF_NOINLINE void SubmitKycRequest::Clear() {
         stream);
   }
 
-  // string dubai_id = 3 [json_name = "dubaiId"];
-  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
-    if (!this_._internal_dubai_id().empty()) {
-      const ::std::string& _s = this_._internal_dubai_id();
-      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.SubmitKycRequest.dubai_id");
-      target = stream->WriteStringMaybeAliased(3, _s, target);
-    }
-  }
-
   // string document_path = 4 [json_name = "documentPath"];
-  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
     if (!this_._internal_document_path().empty()) {
       const ::std::string& _s = this_._internal_document_path();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
           _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.SubmitKycRequest.document_path");
       target = stream->WriteStringMaybeAliased(4, _s, target);
+    }
+  }
+
+  // string nic_number = 5 [json_name = "nicNumber"];
+  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (!this_._internal_nic_number().empty()) {
+      const ::std::string& _s = this_._internal_nic_number();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.SubmitKycRequest.nic_number");
+      target = stream->WriteStringMaybeAliased(5, _s, target);
     }
   }
 
@@ -15373,18 +15724,18 @@ PROTOBUF_NOINLINE void SubmitKycRequest::Clear() {
                                         this_._internal_full_name());
       }
     }
-    // string dubai_id = 3 [json_name = "dubaiId"];
-    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
-      if (!this_._internal_dubai_id().empty()) {
-        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                        this_._internal_dubai_id());
-      }
-    }
     // string document_path = 4 [json_name = "documentPath"];
-    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
       if (!this_._internal_document_path().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_document_path());
+      }
+    }
+    // string nic_number = 5 [json_name = "nicNumber"];
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!this_._internal_nic_number().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_nic_number());
       }
     }
     // .google.type.Date date_of_birth = 2 [json_name = "dateOfBirth"];
@@ -15422,20 +15773,20 @@ void SubmitKycRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
       }
     }
     if (CheckHasBit(cached_has_bits, 0x00000002U)) {
-      if (!from._internal_dubai_id().empty()) {
-        _this->_internal_set_dubai_id(from._internal_dubai_id());
-      } else {
-        if (_this->_impl_.dubai_id_.IsDefault()) {
-          _this->_internal_set_dubai_id("");
-        }
-      }
-    }
-    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
       if (!from._internal_document_path().empty()) {
         _this->_internal_set_document_path(from._internal_document_path());
       } else {
         if (_this->_impl_.document_path_.IsDefault()) {
           _this->_internal_set_document_path("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!from._internal_nic_number().empty()) {
+        _this->_internal_set_nic_number(from._internal_nic_number());
+      } else {
+        if (_this->_impl_.nic_number_.IsDefault()) {
+          _this->_internal_set_nic_number("");
         }
       }
     }
@@ -15468,8 +15819,8 @@ void SubmitKycRequest::InternalSwap(SubmitKycRequest* PROTOBUF_RESTRICT PROTOBUF
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.full_name_, &other->_impl_.full_name_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.dubai_id_, &other->_impl_.dubai_id_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.document_path_, &other->_impl_.document_path_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.nic_number_, &other->_impl_.nic_number_, arena);
   swap(_impl_.date_of_birth_, other->_impl_.date_of_birth_);
 }
 
@@ -15727,9 +16078,9 @@ PROTOBUF_NDEBUG_INLINE KycSubmission::Impl_::Impl_(
         id_(arena, from.id_),
         user_id_(arena, from.user_id_),
         full_name_(arena, from.full_name_),
-        dubai_id_(arena, from.dubai_id_),
         document_path_(arena, from.document_path_),
-        rejection_reason_(arena, from.rejection_reason_) {}
+        rejection_reason_(arena, from.rejection_reason_),
+        nic_number_(arena, from.nic_number_) {}
 
 KycSubmission::KycSubmission(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
@@ -15769,9 +16120,9 @@ PROTOBUF_NDEBUG_INLINE KycSubmission::Impl_::Impl_(
         id_(arena),
         user_id_(arena),
         full_name_(arena),
-        dubai_id_(arena),
         document_path_(arena),
-        rejection_reason_(arena) {}
+        rejection_reason_(arena),
+        nic_number_(arena) {}
 
 inline void KycSubmission::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
@@ -15796,9 +16147,9 @@ inline void KycSubmission::SharedDtor(MessageLite& self) {
   this_._impl_.id_.Destroy();
   this_._impl_.user_id_.Destroy();
   this_._impl_.full_name_.Destroy();
-  this_._impl_.dubai_id_.Destroy();
   this_._impl_.document_path_.Destroy();
   this_._impl_.rejection_reason_.Destroy();
+  this_._impl_.nic_number_.Destroy();
   delete this_._impl_.date_of_birth_;
   delete this_._impl_.verified_at_;
   delete this_._impl_.created_at_;
@@ -15851,13 +16202,13 @@ PROTOBUF_NOINLINE void KycSubmission::Clear() {
       _impl_.full_name_.ClearNonDefaultToEmpty();
     }
     if (CheckHasBit(cached_has_bits, 0x00000008U)) {
-      _impl_.dubai_id_.ClearNonDefaultToEmpty();
-    }
-    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       _impl_.document_path_.ClearNonDefaultToEmpty();
     }
-    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       _impl_.rejection_reason_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      _impl_.nic_number_.ClearNonDefaultToEmpty();
     }
     if (CheckHasBit(cached_has_bits, 0x00000040U)) {
       ABSL_DCHECK(_impl_.date_of_birth_ != nullptr);
@@ -15939,18 +16290,8 @@ PROTOBUF_NOINLINE void KycSubmission::Clear() {
         stream);
   }
 
-  // string dubai_id = 5 [json_name = "dubaiId"];
-  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
-    if (!this_._internal_dubai_id().empty()) {
-      const ::std::string& _s = this_._internal_dubai_id();
-      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.KycSubmission.dubai_id");
-      target = stream->WriteStringMaybeAliased(5, _s, target);
-    }
-  }
-
   // string document_path = 6 [json_name = "documentPath"];
-  if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
     if (!this_._internal_document_path().empty()) {
       const ::std::string& _s = this_._internal_document_path();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -15969,7 +16310,7 @@ PROTOBUF_NOINLINE void KycSubmission::Clear() {
   }
 
   // string rejection_reason = 8 [json_name = "rejectionReason"];
-  if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+  if (CheckHasBit(cached_has_bits, 0x00000010U)) {
     if (!this_._internal_rejection_reason().empty()) {
       const ::std::string& _s = this_._internal_rejection_reason();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -15997,6 +16338,16 @@ PROTOBUF_NOINLINE void KycSubmission::Clear() {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         11, *this_._impl_.updated_at_, this_._impl_.updated_at_->GetCachedSize(), target,
         stream);
+  }
+
+  // string nic_number = 12 [json_name = "nicNumber"];
+  if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+    if (!this_._internal_nic_number().empty()) {
+      const ::std::string& _s = this_._internal_nic_number();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.KycSubmission.nic_number");
+      target = stream->WriteStringMaybeAliased(12, _s, target);
+    }
   }
 
   if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
@@ -16046,25 +16397,25 @@ PROTOBUF_NOINLINE void KycSubmission::Clear() {
                                         this_._internal_full_name());
       }
     }
-    // string dubai_id = 5 [json_name = "dubaiId"];
-    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
-      if (!this_._internal_dubai_id().empty()) {
-        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                        this_._internal_dubai_id());
-      }
-    }
     // string document_path = 6 [json_name = "documentPath"];
-    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
       if (!this_._internal_document_path().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_document_path());
       }
     }
     // string rejection_reason = 8 [json_name = "rejectionReason"];
-    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       if (!this_._internal_rejection_reason().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_rejection_reason());
+      }
+    }
+    // string nic_number = 12 [json_name = "nicNumber"];
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      if (!this_._internal_nic_number().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_nic_number());
       }
     }
     // .google.type.Date date_of_birth = 4 [json_name = "dateOfBirth"];
@@ -16144,15 +16495,6 @@ void KycSubmission::MergeImpl(::google::protobuf::MessageLite& to_msg,
       }
     }
     if (CheckHasBit(cached_has_bits, 0x00000008U)) {
-      if (!from._internal_dubai_id().empty()) {
-        _this->_internal_set_dubai_id(from._internal_dubai_id());
-      } else {
-        if (_this->_impl_.dubai_id_.IsDefault()) {
-          _this->_internal_set_dubai_id("");
-        }
-      }
-    }
-    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       if (!from._internal_document_path().empty()) {
         _this->_internal_set_document_path(from._internal_document_path());
       } else {
@@ -16161,12 +16503,21 @@ void KycSubmission::MergeImpl(::google::protobuf::MessageLite& to_msg,
         }
       }
     }
-    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       if (!from._internal_rejection_reason().empty()) {
         _this->_internal_set_rejection_reason(from._internal_rejection_reason());
       } else {
         if (_this->_impl_.rejection_reason_.IsDefault()) {
           _this->_internal_set_rejection_reason("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      if (!from._internal_nic_number().empty()) {
+        _this->_internal_set_nic_number(from._internal_nic_number());
+      } else {
+        if (_this->_impl_.nic_number_.IsDefault()) {
+          _this->_internal_set_nic_number("");
         }
       }
     }
@@ -16232,9 +16583,9 @@ void KycSubmission::InternalSwap(KycSubmission* PROTOBUF_RESTRICT PROTOBUF_NONNU
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.id_, &other->_impl_.id_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.full_name_, &other->_impl_.full_name_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.dubai_id_, &other->_impl_.dubai_id_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.document_path_, &other->_impl_.document_path_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.rejection_reason_, &other->_impl_.rejection_reason_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.nic_number_, &other->_impl_.nic_number_, arena);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(KycSubmission, _impl_.state_)
       + sizeof(KycSubmission::_impl_.state_)
@@ -16244,6 +16595,509 @@ void KycSubmission::InternalSwap(KycSubmission* PROTOBUF_RESTRICT PROTOBUF_NONNU
 }
 
 ::google::protobuf::Metadata KycSubmission::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+ExtractKycNicOcrRequest::ExtractKycNicOcrRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ExtractKycNicOcrRequest_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.auth.v1.ExtractKycNicOcrRequest)
+}
+PROTOBUF_NDEBUG_INLINE ExtractKycNicOcrRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::auth::v1::ExtractKycNicOcrRequest& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        object_key_(arena, from.object_key_) {}
+
+ExtractKycNicOcrRequest::ExtractKycNicOcrRequest(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const ExtractKycNicOcrRequest& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ExtractKycNicOcrRequest_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  ExtractKycNicOcrRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:gridx.auth.v1.ExtractKycNicOcrRequest)
+}
+PROTOBUF_NDEBUG_INLINE ExtractKycNicOcrRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        object_key_(arena) {}
+
+inline void ExtractKycNicOcrRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+ExtractKycNicOcrRequest::~ExtractKycNicOcrRequest() {
+  // @@protoc_insertion_point(destructor:gridx.auth.v1.ExtractKycNicOcrRequest)
+  SharedDtor(*this);
+}
+inline void ExtractKycNicOcrRequest::SharedDtor(MessageLite& self) {
+  ExtractKycNicOcrRequest& this_ = static_cast<ExtractKycNicOcrRequest&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.object_key_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull ExtractKycNicOcrRequest_class_data_ =
+        ExtractKycNicOcrRequest::InternalGenerateClassData_(ExtractKycNicOcrRequest_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ExtractKycNicOcrRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ExtractKycNicOcrRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(ExtractKycNicOcrRequest_class_data_.tc_table);
+  return ExtractKycNicOcrRequest_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ExtractKycNicOcrRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ExtractKycNicOcrRequest_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&ExtractKycNicOcrRequest_globals_));
+  return ExtractKycNicOcrRequest_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const ExtractKycNicOcrRequest::ParseTableT_
+    ExtractKycNicOcrRequest::_table_ =
+        ExtractKycNicOcrRequest::InternalGenerateParseTable_(ExtractKycNicOcrRequest_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void ExtractKycNicOcrRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.auth.v1.ExtractKycNicOcrRequest)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    _impl_.object_key_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL ExtractKycNicOcrRequest::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const ExtractKycNicOcrRequest& this_ = static_cast<const ExtractKycNicOcrRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL ExtractKycNicOcrRequest::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const ExtractKycNicOcrRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.auth.v1.ExtractKycNicOcrRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string object_key = 1 [json_name = "objectKey"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_object_key().empty()) {
+      const ::std::string& _s = this_._internal_object_key();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.ExtractKycNicOcrRequest.object_key");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.auth.v1.ExtractKycNicOcrRequest)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t ExtractKycNicOcrRequest::ByteSizeLong(const MessageLite& base) {
+  const ExtractKycNicOcrRequest& this_ = static_cast<const ExtractKycNicOcrRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t ExtractKycNicOcrRequest::ByteSizeLong() const {
+  const ExtractKycNicOcrRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.auth.v1.ExtractKycNicOcrRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+   {
+    // string object_key = 1 [json_name = "objectKey"];
+    cached_has_bits = this_._impl_._has_bits_[0];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_object_key().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_object_key());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void ExtractKycNicOcrRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<ExtractKycNicOcrRequest*>(&to_msg);
+  auto& from = static_cast<const ExtractKycNicOcrRequest&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.auth.v1.ExtractKycNicOcrRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!from._internal_object_key().empty()) {
+      _this->_internal_set_object_key(from._internal_object_key());
+    } else {
+      if (_this->_impl_.object_key_.IsDefault()) {
+        _this->_internal_set_object_key("");
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void ExtractKycNicOcrRequest::CopyFrom(const ExtractKycNicOcrRequest& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.auth.v1.ExtractKycNicOcrRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void ExtractKycNicOcrRequest::InternalSwap(ExtractKycNicOcrRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.object_key_, &other->_impl_.object_key_, arena);
+}
+
+::google::protobuf::Metadata ExtractKycNicOcrRequest::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+void ExtractKycNicOcrResponse::clear_date_of_birth() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.date_of_birth_ != nullptr) _impl_.date_of_birth_->Clear();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+}
+ExtractKycNicOcrResponse::ExtractKycNicOcrResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ExtractKycNicOcrResponse_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.auth.v1.ExtractKycNicOcrResponse)
+}
+PROTOBUF_NDEBUG_INLINE ExtractKycNicOcrResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::auth::v1::ExtractKycNicOcrResponse& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        full_name_(arena, from.full_name_),
+        nic_number_(arena, from.nic_number_) {}
+
+ExtractKycNicOcrResponse::ExtractKycNicOcrResponse(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const ExtractKycNicOcrResponse& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ExtractKycNicOcrResponse_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  ExtractKycNicOcrResponse* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.date_of_birth_ = (CheckHasBit(cached_has_bits, 0x00000004U))
+                ? ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.date_of_birth_)
+                : nullptr;
+
+  // @@protoc_insertion_point(copy_constructor:gridx.auth.v1.ExtractKycNicOcrResponse)
+}
+PROTOBUF_NDEBUG_INLINE ExtractKycNicOcrResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        full_name_(arena),
+        nic_number_(arena) {}
+
+inline void ExtractKycNicOcrResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.date_of_birth_ = {};
+}
+ExtractKycNicOcrResponse::~ExtractKycNicOcrResponse() {
+  // @@protoc_insertion_point(destructor:gridx.auth.v1.ExtractKycNicOcrResponse)
+  SharedDtor(*this);
+}
+inline void ExtractKycNicOcrResponse::SharedDtor(MessageLite& self) {
+  ExtractKycNicOcrResponse& this_ = static_cast<ExtractKycNicOcrResponse&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.full_name_.Destroy();
+  this_._impl_.nic_number_.Destroy();
+  delete this_._impl_.date_of_birth_;
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull ExtractKycNicOcrResponse_class_data_ =
+        ExtractKycNicOcrResponse::InternalGenerateClassData_(ExtractKycNicOcrResponse_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ExtractKycNicOcrResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ExtractKycNicOcrResponse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(ExtractKycNicOcrResponse_class_data_.tc_table);
+  return ExtractKycNicOcrResponse_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ExtractKycNicOcrResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ExtractKycNicOcrResponse_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&ExtractKycNicOcrResponse_globals_));
+  return ExtractKycNicOcrResponse_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const ExtractKycNicOcrResponse::ParseTableT_
+    ExtractKycNicOcrResponse::_table_ =
+        ExtractKycNicOcrResponse::InternalGenerateParseTable_(ExtractKycNicOcrResponse_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void ExtractKycNicOcrResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.auth.v1.ExtractKycNicOcrResponse)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      _impl_.full_name_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      _impl_.nic_number_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      ABSL_DCHECK(_impl_.date_of_birth_ != nullptr);
+      _impl_.date_of_birth_->Clear();
+    }
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL ExtractKycNicOcrResponse::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const ExtractKycNicOcrResponse& this_ = static_cast<const ExtractKycNicOcrResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL ExtractKycNicOcrResponse::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const ExtractKycNicOcrResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.auth.v1.ExtractKycNicOcrResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string full_name = 1 [json_name = "fullName"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_full_name().empty()) {
+      const ::std::string& _s = this_._internal_full_name();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.ExtractKycNicOcrResponse.full_name");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  // .google.type.Date date_of_birth = 2 [json_name = "dateOfBirth"];
+  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        2, *this_._impl_.date_of_birth_, this_._impl_.date_of_birth_->GetCachedSize(), target,
+        stream);
+  }
+
+  // string nic_number = 3 [json_name = "nicNumber"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (!this_._internal_nic_number().empty()) {
+      const ::std::string& _s = this_._internal_nic_number();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.auth.v1.ExtractKycNicOcrResponse.nic_number");
+      target = stream->WriteStringMaybeAliased(3, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.auth.v1.ExtractKycNicOcrResponse)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t ExtractKycNicOcrResponse::ByteSizeLong(const MessageLite& base) {
+  const ExtractKycNicOcrResponse& this_ = static_cast<const ExtractKycNicOcrResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t ExtractKycNicOcrResponse::ByteSizeLong() const {
+  const ExtractKycNicOcrResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.auth.v1.ExtractKycNicOcrResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    // string full_name = 1 [json_name = "fullName"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_full_name().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_full_name());
+      }
+    }
+    // string nic_number = 3 [json_name = "nicNumber"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!this_._internal_nic_number().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_nic_number());
+      }
+    }
+    // .google.type.Date date_of_birth = 2 [json_name = "dateOfBirth"];
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.date_of_birth_);
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void ExtractKycNicOcrResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<ExtractKycNicOcrResponse*>(&to_msg);
+  auto& from = static_cast<const ExtractKycNicOcrResponse&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  ::google::protobuf::Arena* arena = _this->GetArena();
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.auth.v1.ExtractKycNicOcrResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_full_name().empty()) {
+        _this->_internal_set_full_name(from._internal_full_name());
+      } else {
+        if (_this->_impl_.full_name_.IsDefault()) {
+          _this->_internal_set_full_name("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!from._internal_nic_number().empty()) {
+        _this->_internal_set_nic_number(from._internal_nic_number());
+      } else {
+        if (_this->_impl_.nic_number_.IsDefault()) {
+          _this->_internal_set_nic_number("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      ABSL_DCHECK(from._impl_.date_of_birth_ != nullptr);
+      if (_this->_impl_.date_of_birth_ == nullptr) {
+        _this->_impl_.date_of_birth_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.date_of_birth_);
+      } else {
+        _this->_impl_.date_of_birth_->MergeFrom(*from._impl_.date_of_birth_);
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void ExtractKycNicOcrResponse::CopyFrom(const ExtractKycNicOcrResponse& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.auth.v1.ExtractKycNicOcrResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void ExtractKycNicOcrResponse::InternalSwap(ExtractKycNicOcrResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.full_name_, &other->_impl_.full_name_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.nic_number_, &other->_impl_.nic_number_, arena);
+  swap(_impl_.date_of_birth_, other->_impl_.date_of_birth_);
+}
+
+::google::protobuf::Metadata ExtractKycNicOcrResponse::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================

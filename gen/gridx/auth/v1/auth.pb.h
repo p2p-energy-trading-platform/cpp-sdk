@@ -110,6 +110,22 @@ extern const ::google::protobuf::internal::ClassDataFull CreateKycUploadUrlRespo
 #else
 extern const CreateKycUploadUrlResponseGlobalsTypeInternal CreateKycUploadUrlResponse_globals_;
 #endif  // PROTOBUF_MESSAGE_GLOBALS
+class ExtractKycNicOcrRequest;
+struct ExtractKycNicOcrRequestGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern ExtractKycNicOcrRequestGlobalsTypeInternal ExtractKycNicOcrRequest_globals_;
+extern const ::google::protobuf::internal::ClassDataFull ExtractKycNicOcrRequest_class_data_;
+#else
+extern const ExtractKycNicOcrRequestGlobalsTypeInternal ExtractKycNicOcrRequest_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class ExtractKycNicOcrResponse;
+struct ExtractKycNicOcrResponseGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern ExtractKycNicOcrResponseGlobalsTypeInternal ExtractKycNicOcrResponse_globals_;
+extern const ::google::protobuf::internal::ClassDataFull ExtractKycNicOcrResponse_class_data_;
+#else
+extern const ExtractKycNicOcrResponseGlobalsTypeInternal ExtractKycNicOcrResponse_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
 class GetProfileRequest;
 struct GetProfileRequestGlobalsTypeInternal;
 #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -4427,7 +4443,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LoginWithGoogleResponse final : pub
   [[nodiscard]] static const LoginWithGoogleResponse& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LoginWithGoogleResponse>(&LoginWithGoogleResponse_globals_);
   }
-  static constexpr int kIndexInFileMessages = 39;
+  static constexpr int kIndexInFileMessages = 41;
   friend void swap(LoginWithGoogleResponse& a, LoginWithGoogleResponse& b) { a.Swap(&b); }
   inline void Swap(LoginWithGoogleResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -4708,7 +4724,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LoginWithGoogleRequest final : publ
   [[nodiscard]] static const LoginWithGoogleRequest& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<LoginWithGoogleRequest>(&LoginWithGoogleRequest_globals_);
   }
-  static constexpr int kIndexInFileMessages = 38;
+  static constexpr int kIndexInFileMessages = 40;
   friend void swap(LoginWithGoogleRequest& a, LoginWithGoogleRequest& b) { a.Swap(&b); }
   inline void Swap(LoginWithGoogleRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -6015,6 +6031,212 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetProfileRequest final : public ::
   friend class ::google::protobuf::Arena::InternalHelper;
   using InternalArenaConstructable_ = void;
   using DestructorSkippable_ = void;
+  friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ExtractKycNicOcrRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.auth.v1.ExtractKycNicOcrRequest) */ {
+ public:
+  inline ExtractKycNicOcrRequest() : ExtractKycNicOcrRequest(nullptr) {}
+  ~ExtractKycNicOcrRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(ExtractKycNicOcrRequest* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(ExtractKycNicOcrRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr ExtractKycNicOcrRequest(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline ExtractKycNicOcrRequest(const ExtractKycNicOcrRequest& from) : ExtractKycNicOcrRequest(nullptr, from) {}
+  inline ExtractKycNicOcrRequest(ExtractKycNicOcrRequest&& from) noexcept : ExtractKycNicOcrRequest(nullptr, ::std::move(from)) {}
+  inline ExtractKycNicOcrRequest& operator=(const ExtractKycNicOcrRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ExtractKycNicOcrRequest& operator=(ExtractKycNicOcrRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const ExtractKycNicOcrRequest& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ExtractKycNicOcrRequest>(&ExtractKycNicOcrRequest_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 38;
+  friend void swap(ExtractKycNicOcrRequest& a, ExtractKycNicOcrRequest& b) { a.Swap(&b); }
+  inline void Swap(ExtractKycNicOcrRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ExtractKycNicOcrRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] ExtractKycNicOcrRequest* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<ExtractKycNicOcrRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const ExtractKycNicOcrRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const ExtractKycNicOcrRequest& from) { ExtractKycNicOcrRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(ExtractKycNicOcrRequest* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.ExtractKycNicOcrRequest"; }
+
+  explicit ExtractKycNicOcrRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  ExtractKycNicOcrRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const ExtractKycNicOcrRequest& from);
+  ExtractKycNicOcrRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, ExtractKycNicOcrRequest&& from) noexcept
+      : ExtractKycNicOcrRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kObjectKeyFieldNumber = 1,
+  };
+  // string object_key = 1 [json_name = "objectKey"];
+  void clear_object_key() ;
+  [[nodiscard]] const ::std::string& object_key() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_object_key(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_object_key();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_object_key();
+  void set_allocated_object_key(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_object_key() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_object_key(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_object_key();
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.auth.v1.ExtractKycNicOcrRequest)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<0, 1,
+                          0, 56,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const ExtractKycNicOcrRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr object_key_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
   friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
 };
 // -------------------------------------------------------------------
@@ -7761,8 +7983,8 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycRequest final : public ::g
   // accessors -------------------------------------------------------
   enum : int {
     kFullNameFieldNumber = 1,
-    kDubaiIdFieldNumber = 3,
     kDocumentPathFieldNumber = 4,
+    kNicNumberFieldNumber = 5,
     kDateOfBirthFieldNumber = 2,
   };
   // string full_name = 1 [json_name = "fullName"];
@@ -7780,21 +8002,6 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycRequest final : public ::g
   ::std::string* PROTOBUF_NONNULL _internal_mutable_full_name();
 
   public:
-  // string dubai_id = 3 [json_name = "dubaiId"];
-  void clear_dubai_id() ;
-  [[nodiscard]] const ::std::string& dubai_id() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_dubai_id(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_dubai_id();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_dubai_id();
-  void set_allocated_dubai_id(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_dubai_id() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_dubai_id(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_dubai_id();
-
-  public:
   // string document_path = 4 [json_name = "documentPath"];
   void clear_document_path() ;
   [[nodiscard]] const ::std::string& document_path() const;
@@ -7808,6 +8015,21 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycRequest final : public ::g
   const ::std::string& _internal_document_path() const;
   PROTOBUF_ALWAYS_INLINE void _internal_set_document_path(const ::std::string& value);
   ::std::string* PROTOBUF_NONNULL _internal_mutable_document_path();
+
+  public:
+  // string nic_number = 5 [json_name = "nicNumber"];
+  void clear_nic_number() ;
+  [[nodiscard]] const ::std::string& nic_number() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_nic_number(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_nic_number();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_nic_number();
+  void set_allocated_nic_number(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_nic_number() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_nic_number(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_nic_number();
 
   public:
   // .google.type.Date date_of_birth = 2 [json_name = "dateOfBirth"];
@@ -7830,8 +8052,8 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycRequest final : public ::g
  private:
   class _Internal;
   using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<2, 4,
-                          1, 69,
+      ::google::protobuf::internal::TcParseTable<3, 4,
+                          1, 71,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
       const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
@@ -7860,8 +8082,8 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SubmitKycRequest final : public ::g
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr full_name_;
-    ::google::protobuf::internal::ArenaStringPtr dubai_id_;
     ::google::protobuf::internal::ArenaStringPtr document_path_;
+    ::google::protobuf::internal::ArenaStringPtr nic_number_;
     ::google::type::Date* PROTOBUF_NULLABLE date_of_birth_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -8359,9 +8581,9 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED KycSubmission final : public ::goog
     kIdFieldNumber = 1,
     kUserIdFieldNumber = 2,
     kFullNameFieldNumber = 3,
-    kDubaiIdFieldNumber = 5,
     kDocumentPathFieldNumber = 6,
     kRejectionReasonFieldNumber = 8,
+    kNicNumberFieldNumber = 12,
     kDateOfBirthFieldNumber = 4,
     kVerifiedAtFieldNumber = 9,
     kCreatedAtFieldNumber = 10,
@@ -8413,21 +8635,6 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED KycSubmission final : public ::goog
   ::std::string* PROTOBUF_NONNULL _internal_mutable_full_name();
 
   public:
-  // string dubai_id = 5 [json_name = "dubaiId"];
-  void clear_dubai_id() ;
-  [[nodiscard]] const ::std::string& dubai_id() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_dubai_id(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_dubai_id();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_dubai_id();
-  void set_allocated_dubai_id(::std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const ::std::string& _internal_dubai_id() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_dubai_id(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_dubai_id();
-
-  public:
   // string document_path = 6 [json_name = "documentPath"];
   void clear_document_path() ;
   [[nodiscard]] const ::std::string& document_path() const;
@@ -8456,6 +8663,21 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED KycSubmission final : public ::goog
   const ::std::string& _internal_rejection_reason() const;
   PROTOBUF_ALWAYS_INLINE void _internal_set_rejection_reason(const ::std::string& value);
   ::std::string* PROTOBUF_NONNULL _internal_mutable_rejection_reason();
+
+  public:
+  // string nic_number = 12 [json_name = "nicNumber"];
+  void clear_nic_number() ;
+  [[nodiscard]] const ::std::string& nic_number() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_nic_number(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_nic_number();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_nic_number();
+  void set_allocated_nic_number(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_nic_number() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_nic_number(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_nic_number();
 
   public:
   // .google.type.Date date_of_birth = 4 [json_name = "dateOfBirth"];
@@ -8537,7 +8759,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED KycSubmission final : public ::goog
   class _Internal;
   using ParseTableT_ =
       ::google::protobuf::internal::TcParseTable<4, 11,
-                          4, 99,
+                          4, 101,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
       const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
@@ -8568,14 +8790,255 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED KycSubmission final : public ::goog
     ::google::protobuf::internal::ArenaStringPtr id_;
     ::google::protobuf::internal::ArenaStringPtr user_id_;
     ::google::protobuf::internal::ArenaStringPtr full_name_;
-    ::google::protobuf::internal::ArenaStringPtr dubai_id_;
     ::google::protobuf::internal::ArenaStringPtr document_path_;
     ::google::protobuf::internal::ArenaStringPtr rejection_reason_;
+    ::google::protobuf::internal::ArenaStringPtr nic_number_;
     ::google::type::Date* PROTOBUF_NULLABLE date_of_birth_;
     ::google::protobuf::Timestamp* PROTOBUF_NULLABLE verified_at_;
     ::google::protobuf::Timestamp* PROTOBUF_NULLABLE created_at_;
     ::google::protobuf::Timestamp* PROTOBUF_NULLABLE updated_at_;
     int state_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fauth_2fv1_2fauth_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ExtractKycNicOcrResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.auth.v1.ExtractKycNicOcrResponse) */ {
+ public:
+  inline ExtractKycNicOcrResponse() : ExtractKycNicOcrResponse(nullptr) {}
+  ~ExtractKycNicOcrResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(ExtractKycNicOcrResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(ExtractKycNicOcrResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr ExtractKycNicOcrResponse(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline ExtractKycNicOcrResponse(const ExtractKycNicOcrResponse& from) : ExtractKycNicOcrResponse(nullptr, from) {}
+  inline ExtractKycNicOcrResponse(ExtractKycNicOcrResponse&& from) noexcept : ExtractKycNicOcrResponse(nullptr, ::std::move(from)) {}
+  inline ExtractKycNicOcrResponse& operator=(const ExtractKycNicOcrResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ExtractKycNicOcrResponse& operator=(ExtractKycNicOcrResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const ExtractKycNicOcrResponse& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ExtractKycNicOcrResponse>(&ExtractKycNicOcrResponse_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 39;
+  friend void swap(ExtractKycNicOcrResponse& a, ExtractKycNicOcrResponse& b) { a.Swap(&b); }
+  inline void Swap(ExtractKycNicOcrResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ExtractKycNicOcrResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] ExtractKycNicOcrResponse* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<ExtractKycNicOcrResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const ExtractKycNicOcrResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const ExtractKycNicOcrResponse& from) { ExtractKycNicOcrResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(ExtractKycNicOcrResponse* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.auth.v1.ExtractKycNicOcrResponse"; }
+
+  explicit ExtractKycNicOcrResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  ExtractKycNicOcrResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const ExtractKycNicOcrResponse& from);
+  ExtractKycNicOcrResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, ExtractKycNicOcrResponse&& from) noexcept
+      : ExtractKycNicOcrResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kFullNameFieldNumber = 1,
+    kNicNumberFieldNumber = 3,
+    kDateOfBirthFieldNumber = 2,
+  };
+  // string full_name = 1 [json_name = "fullName"];
+  void clear_full_name() ;
+  [[nodiscard]] const ::std::string& full_name() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_full_name(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_full_name();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_full_name();
+  void set_allocated_full_name(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_full_name() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_full_name(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_full_name();
+
+  public:
+  // string nic_number = 3 [json_name = "nicNumber"];
+  void clear_nic_number() ;
+  [[nodiscard]] const ::std::string& nic_number() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_nic_number(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_nic_number();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_nic_number();
+  void set_allocated_nic_number(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_nic_number() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_nic_number(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_nic_number();
+
+  public:
+  // .google.type.Date date_of_birth = 2 [json_name = "dateOfBirth"];
+  [[nodiscard]] bool has_date_of_birth()
+      const;
+  void clear_date_of_birth() ;
+  [[nodiscard]] const ::google::type::Date& date_of_birth() const;
+  [[nodiscard]] ::google::type::Date* PROTOBUF_NULLABLE release_date_of_birth();
+  ::google::type::Date* PROTOBUF_NONNULL mutable_date_of_birth();
+  void set_allocated_date_of_birth(::google::type::Date* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_date_of_birth(::google::type::Date* PROTOBUF_NULLABLE value);
+  ::google::type::Date* PROTOBUF_NULLABLE unsafe_arena_release_date_of_birth();
+
+  private:
+  const ::google::type::Date& _internal_date_of_birth() const;
+  ::google::type::Date* PROTOBUF_NONNULL _internal_mutable_date_of_birth();
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.auth.v1.ExtractKycNicOcrResponse)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<2, 3,
+                          1, 66,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const ExtractKycNicOcrResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr full_name_;
+    ::google::protobuf::internal::ArenaStringPtr nic_number_;
+    ::google::type::Date* PROTOBUF_NULLABLE date_of_birth_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -13611,75 +14074,11 @@ inline void SubmitKycRequest::set_allocated_date_of_birth(::google::type::Date* 
   // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.SubmitKycRequest.date_of_birth)
 }
 
-// string dubai_id = 3 [json_name = "dubaiId"];
-inline void SubmitKycRequest::clear_dubai_id() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.dubai_id_.ClearToEmpty();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
-}
-inline const ::std::string& SubmitKycRequest::dubai_id() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:gridx.auth.v1.SubmitKycRequest.dubai_id)
-  return _internal_dubai_id();
-}
-template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void SubmitKycRequest::set_dubai_id(Arg_&& arg, Args_... args) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
-  _impl_.dubai_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:gridx.auth.v1.SubmitKycRequest.dubai_id)
-}
-inline ::std::string* PROTOBUF_NONNULL SubmitKycRequest::mutable_dubai_id()
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
-  ::std::string* _s = _internal_mutable_dubai_id();
-  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.SubmitKycRequest.dubai_id)
-  return _s;
-}
-inline const ::std::string& SubmitKycRequest::_internal_dubai_id() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.dubai_id_.Get();
-}
-inline void SubmitKycRequest::_internal_set_dubai_id(const ::std::string& value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.dubai_id_.Set(value, GetArena());
-}
-inline ::std::string* PROTOBUF_NONNULL SubmitKycRequest::_internal_mutable_dubai_id() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  return _impl_.dubai_id_.Mutable( GetArena());
-}
-inline ::std::string* PROTOBUF_NULLABLE SubmitKycRequest::release_dubai_id() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:gridx.auth.v1.SubmitKycRequest.dubai_id)
-  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
-    return nullptr;
-  }
-  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
-  auto* released = _impl_.dubai_id_.Release();
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
-    _impl_.dubai_id_.Set("", GetArena());
-  }
-  return released;
-}
-inline void SubmitKycRequest::set_allocated_dubai_id(::std::string* PROTOBUF_NULLABLE value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
-  } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
-  }
-  _impl_.dubai_id_.SetAllocated(value, GetArena());
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.dubai_id_.IsDefault()) {
-    _impl_.dubai_id_.Set("", GetArena());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.SubmitKycRequest.dubai_id)
-}
-
 // string document_path = 4 [json_name = "documentPath"];
 inline void SubmitKycRequest::clear_document_path() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.document_path_.ClearToEmpty();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
 }
 inline const ::std::string& SubmitKycRequest::document_path() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
@@ -13689,13 +14088,13 @@ inline const ::std::string& SubmitKycRequest::document_path() const
 template <typename Arg_, typename... Args_>
 PROTOBUF_ALWAYS_INLINE void SubmitKycRequest::set_document_path(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
   _impl_.document_path_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
   // @@protoc_insertion_point(field_set:gridx.auth.v1.SubmitKycRequest.document_path)
 }
 inline ::std::string* PROTOBUF_NONNULL SubmitKycRequest::mutable_document_path()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
   ::std::string* _s = _internal_mutable_document_path();
   // @@protoc_insertion_point(field_mutable:gridx.auth.v1.SubmitKycRequest.document_path)
   return _s;
@@ -13715,10 +14114,10 @@ inline ::std::string* PROTOBUF_NONNULL SubmitKycRequest::_internal_mutable_docum
 inline ::std::string* PROTOBUF_NULLABLE SubmitKycRequest::release_document_path() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:gridx.auth.v1.SubmitKycRequest.document_path)
-  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000004U)) {
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
     return nullptr;
   }
-  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
   auto* released = _impl_.document_path_.Release();
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
     _impl_.document_path_.Set("", GetArena());
@@ -13728,15 +14127,79 @@ inline ::std::string* PROTOBUF_NULLABLE SubmitKycRequest::release_document_path(
 inline void SubmitKycRequest::set_allocated_document_path(::std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
   }
   _impl_.document_path_.SetAllocated(value, GetArena());
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.document_path_.IsDefault()) {
     _impl_.document_path_.Set("", GetArena());
   }
   // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.SubmitKycRequest.document_path)
+}
+
+// string nic_number = 5 [json_name = "nicNumber"];
+inline void SubmitKycRequest::clear_nic_number() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.nic_number_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+}
+inline const ::std::string& SubmitKycRequest::nic_number() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.SubmitKycRequest.nic_number)
+  return _internal_nic_number();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void SubmitKycRequest::set_nic_number(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  _impl_.nic_number_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.SubmitKycRequest.nic_number)
+}
+inline ::std::string* PROTOBUF_NONNULL SubmitKycRequest::mutable_nic_number()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::std::string* _s = _internal_mutable_nic_number();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.SubmitKycRequest.nic_number)
+  return _s;
+}
+inline const ::std::string& SubmitKycRequest::_internal_nic_number() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.nic_number_.Get();
+}
+inline void SubmitKycRequest::_internal_set_nic_number(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.nic_number_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL SubmitKycRequest::_internal_mutable_nic_number() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.nic_number_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE SubmitKycRequest::release_nic_number() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.SubmitKycRequest.nic_number)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000004U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  auto* released = _impl_.nic_number_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.nic_number_.Set("", GetArena());
+  }
+  return released;
+}
+inline void SubmitKycRequest::set_allocated_nic_number(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  }
+  _impl_.nic_number_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.nic_number_.IsDefault()) {
+    _impl_.nic_number_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.SubmitKycRequest.nic_number)
 }
 
 // -------------------------------------------------------------------
@@ -14130,75 +14593,11 @@ inline void KycSubmission::set_allocated_date_of_birth(::google::type::Date* PRO
   // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.KycSubmission.date_of_birth)
 }
 
-// string dubai_id = 5 [json_name = "dubaiId"];
-inline void KycSubmission::clear_dubai_id() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.dubai_id_.ClearToEmpty();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
-}
-inline const ::std::string& KycSubmission::dubai_id() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:gridx.auth.v1.KycSubmission.dubai_id)
-  return _internal_dubai_id();
-}
-template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void KycSubmission::set_dubai_id(Arg_&& arg, Args_... args) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
-  _impl_.dubai_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:gridx.auth.v1.KycSubmission.dubai_id)
-}
-inline ::std::string* PROTOBUF_NONNULL KycSubmission::mutable_dubai_id()
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
-  ::std::string* _s = _internal_mutable_dubai_id();
-  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.KycSubmission.dubai_id)
-  return _s;
-}
-inline const ::std::string& KycSubmission::_internal_dubai_id() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.dubai_id_.Get();
-}
-inline void KycSubmission::_internal_set_dubai_id(const ::std::string& value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.dubai_id_.Set(value, GetArena());
-}
-inline ::std::string* PROTOBUF_NONNULL KycSubmission::_internal_mutable_dubai_id() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  return _impl_.dubai_id_.Mutable( GetArena());
-}
-inline ::std::string* PROTOBUF_NULLABLE KycSubmission::release_dubai_id() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:gridx.auth.v1.KycSubmission.dubai_id)
-  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000008U)) {
-    return nullptr;
-  }
-  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
-  auto* released = _impl_.dubai_id_.Release();
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
-    _impl_.dubai_id_.Set("", GetArena());
-  }
-  return released;
-}
-inline void KycSubmission::set_allocated_dubai_id(::std::string* PROTOBUF_NULLABLE value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
-  } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
-  }
-  _impl_.dubai_id_.SetAllocated(value, GetArena());
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.dubai_id_.IsDefault()) {
-    _impl_.dubai_id_.Set("", GetArena());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.KycSubmission.dubai_id)
-}
-
 // string document_path = 6 [json_name = "documentPath"];
 inline void KycSubmission::clear_document_path() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.document_path_.ClearToEmpty();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
 }
 inline const ::std::string& KycSubmission::document_path() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
@@ -14208,13 +14607,13 @@ inline const ::std::string& KycSubmission::document_path() const
 template <typename Arg_, typename... Args_>
 PROTOBUF_ALWAYS_INLINE void KycSubmission::set_document_path(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
   _impl_.document_path_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
   // @@protoc_insertion_point(field_set:gridx.auth.v1.KycSubmission.document_path)
 }
 inline ::std::string* PROTOBUF_NONNULL KycSubmission::mutable_document_path()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
   ::std::string* _s = _internal_mutable_document_path();
   // @@protoc_insertion_point(field_mutable:gridx.auth.v1.KycSubmission.document_path)
   return _s;
@@ -14234,10 +14633,10 @@ inline ::std::string* PROTOBUF_NONNULL KycSubmission::_internal_mutable_document
 inline ::std::string* PROTOBUF_NULLABLE KycSubmission::release_document_path() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:gridx.auth.v1.KycSubmission.document_path)
-  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000010U)) {
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000008U)) {
     return nullptr;
   }
-  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
   auto* released = _impl_.document_path_.Release();
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
     _impl_.document_path_.Set("", GetArena());
@@ -14247,9 +14646,9 @@ inline ::std::string* PROTOBUF_NULLABLE KycSubmission::release_document_path() {
 inline void KycSubmission::set_allocated_document_path(::std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
   }
   _impl_.document_path_.SetAllocated(value, GetArena());
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.document_path_.IsDefault()) {
@@ -14286,7 +14685,7 @@ inline void KycSubmission::_internal_set_state(::gridx::auth::v1::KycState value
 inline void KycSubmission::clear_rejection_reason() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.rejection_reason_.ClearToEmpty();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
 }
 inline const ::std::string& KycSubmission::rejection_reason() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
@@ -14296,13 +14695,13 @@ inline const ::std::string& KycSubmission::rejection_reason() const
 template <typename Arg_, typename... Args_>
 PROTOBUF_ALWAYS_INLINE void KycSubmission::set_rejection_reason(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
   _impl_.rejection_reason_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
   // @@protoc_insertion_point(field_set:gridx.auth.v1.KycSubmission.rejection_reason)
 }
 inline ::std::string* PROTOBUF_NONNULL KycSubmission::mutable_rejection_reason()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
   ::std::string* _s = _internal_mutable_rejection_reason();
   // @@protoc_insertion_point(field_mutable:gridx.auth.v1.KycSubmission.rejection_reason)
   return _s;
@@ -14322,10 +14721,10 @@ inline ::std::string* PROTOBUF_NONNULL KycSubmission::_internal_mutable_rejectio
 inline ::std::string* PROTOBUF_NULLABLE KycSubmission::release_rejection_reason() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:gridx.auth.v1.KycSubmission.rejection_reason)
-  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000020U)) {
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000010U)) {
     return nullptr;
   }
-  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
   auto* released = _impl_.rejection_reason_.Release();
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
     _impl_.rejection_reason_.Set("", GetArena());
@@ -14335,9 +14734,9 @@ inline ::std::string* PROTOBUF_NULLABLE KycSubmission::release_rejection_reason(
 inline void KycSubmission::set_allocated_rejection_reason(::std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000010U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
   }
   _impl_.rejection_reason_.SetAllocated(value, GetArena());
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.rejection_reason_.IsDefault()) {
@@ -14623,6 +15022,363 @@ inline void KycSubmission::set_allocated_updated_at(::google::protobuf::Timestam
 
   _impl_.updated_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
   // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.KycSubmission.updated_at)
+}
+
+// string nic_number = 12 [json_name = "nicNumber"];
+inline void KycSubmission::clear_nic_number() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.nic_number_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+}
+inline const ::std::string& KycSubmission::nic_number() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.KycSubmission.nic_number)
+  return _internal_nic_number();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void KycSubmission::set_nic_number(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  _impl_.nic_number_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.KycSubmission.nic_number)
+}
+inline ::std::string* PROTOBUF_NONNULL KycSubmission::mutable_nic_number()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ::std::string* _s = _internal_mutable_nic_number();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.KycSubmission.nic_number)
+  return _s;
+}
+inline const ::std::string& KycSubmission::_internal_nic_number() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.nic_number_.Get();
+}
+inline void KycSubmission::_internal_set_nic_number(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.nic_number_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL KycSubmission::_internal_mutable_nic_number() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.nic_number_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE KycSubmission::release_nic_number() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.KycSubmission.nic_number)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000020U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  auto* released = _impl_.nic_number_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.nic_number_.Set("", GetArena());
+  }
+  return released;
+}
+inline void KycSubmission::set_allocated_nic_number(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  }
+  _impl_.nic_number_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.nic_number_.IsDefault()) {
+    _impl_.nic_number_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.KycSubmission.nic_number)
+}
+
+// -------------------------------------------------------------------
+
+// ExtractKycNicOcrRequest
+
+// string object_key = 1 [json_name = "objectKey"];
+inline void ExtractKycNicOcrRequest::clear_object_key() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.object_key_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& ExtractKycNicOcrRequest::object_key() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.ExtractKycNicOcrRequest.object_key)
+  return _internal_object_key();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void ExtractKycNicOcrRequest::set_object_key(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.object_key_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.ExtractKycNicOcrRequest.object_key)
+}
+inline ::std::string* PROTOBUF_NONNULL ExtractKycNicOcrRequest::mutable_object_key()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_object_key();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.ExtractKycNicOcrRequest.object_key)
+  return _s;
+}
+inline const ::std::string& ExtractKycNicOcrRequest::_internal_object_key() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.object_key_.Get();
+}
+inline void ExtractKycNicOcrRequest::_internal_set_object_key(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.object_key_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL ExtractKycNicOcrRequest::_internal_mutable_object_key() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.object_key_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE ExtractKycNicOcrRequest::release_object_key() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.ExtractKycNicOcrRequest.object_key)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.object_key_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.object_key_.Set("", GetArena());
+  }
+  return released;
+}
+inline void ExtractKycNicOcrRequest::set_allocated_object_key(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.object_key_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.object_key_.IsDefault()) {
+    _impl_.object_key_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.ExtractKycNicOcrRequest.object_key)
+}
+
+// -------------------------------------------------------------------
+
+// ExtractKycNicOcrResponse
+
+// string full_name = 1 [json_name = "fullName"];
+inline void ExtractKycNicOcrResponse::clear_full_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.full_name_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& ExtractKycNicOcrResponse::full_name() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.ExtractKycNicOcrResponse.full_name)
+  return _internal_full_name();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void ExtractKycNicOcrResponse::set_full_name(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.full_name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.ExtractKycNicOcrResponse.full_name)
+}
+inline ::std::string* PROTOBUF_NONNULL ExtractKycNicOcrResponse::mutable_full_name()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_full_name();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.ExtractKycNicOcrResponse.full_name)
+  return _s;
+}
+inline const ::std::string& ExtractKycNicOcrResponse::_internal_full_name() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.full_name_.Get();
+}
+inline void ExtractKycNicOcrResponse::_internal_set_full_name(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.full_name_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL ExtractKycNicOcrResponse::_internal_mutable_full_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.full_name_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE ExtractKycNicOcrResponse::release_full_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.ExtractKycNicOcrResponse.full_name)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.full_name_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.full_name_.Set("", GetArena());
+  }
+  return released;
+}
+inline void ExtractKycNicOcrResponse::set_allocated_full_name(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.full_name_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.full_name_.IsDefault()) {
+    _impl_.full_name_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.ExtractKycNicOcrResponse.full_name)
+}
+
+// .google.type.Date date_of_birth = 2 [json_name = "dateOfBirth"];
+inline bool ExtractKycNicOcrResponse::has_date_of_birth() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000004U);
+  PROTOBUF_ASSUME(!value || _impl_.date_of_birth_ != nullptr);
+  return value;
+}
+inline const ::google::type::Date& ExtractKycNicOcrResponse::_internal_date_of_birth() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  const ::google::type::Date* p = _impl_.date_of_birth_;
+  return p != nullptr ? *p : *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<::google::type::Date>(&::google::type::Date_globals_);
+}
+inline const ::google::type::Date& ExtractKycNicOcrResponse::date_of_birth() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.ExtractKycNicOcrResponse.date_of_birth)
+  return _internal_date_of_birth();
+}
+inline void ExtractKycNicOcrResponse::unsafe_arena_set_allocated_date_of_birth(
+    ::google::type::Date* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.date_of_birth_);
+  }
+  _impl_.date_of_birth_ = reinterpret_cast<::google::type::Date*>(value);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.auth.v1.ExtractKycNicOcrResponse.date_of_birth)
+}
+inline ::google::type::Date* PROTOBUF_NULLABLE ExtractKycNicOcrResponse::release_date_of_birth() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::google::type::Date* released = _impl_.date_of_birth_;
+  _impl_.date_of_birth_ = nullptr;
+  if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
+    auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    if (GetArena() == nullptr) {
+      delete old;
+    }
+  } else {
+    if (GetArena() != nullptr) {
+      released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    }
+  }
+  return released;
+}
+inline ::google::type::Date* PROTOBUF_NULLABLE ExtractKycNicOcrResponse::unsafe_arena_release_date_of_birth() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.ExtractKycNicOcrResponse.date_of_birth)
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::google::type::Date* temp = _impl_.date_of_birth_;
+  _impl_.date_of_birth_ = nullptr;
+  return temp;
+}
+inline ::google::type::Date* PROTOBUF_NONNULL ExtractKycNicOcrResponse::_internal_mutable_date_of_birth() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.date_of_birth_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::google::type::Date>(GetArena());
+    _impl_.date_of_birth_ = reinterpret_cast<::google::type::Date*>(p);
+  }
+  return _impl_.date_of_birth_;
+}
+inline ::google::type::Date* PROTOBUF_NONNULL ExtractKycNicOcrResponse::mutable_date_of_birth()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::google::type::Date* _msg = _internal_mutable_date_of_birth();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.ExtractKycNicOcrResponse.date_of_birth)
+  return _msg;
+}
+inline void ExtractKycNicOcrResponse::set_allocated_date_of_birth(::google::type::Date* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (message_arena == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.date_of_birth_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::Message*>(value)->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  }
+
+  _impl_.date_of_birth_ = reinterpret_cast<::google::type::Date*>(value);
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.ExtractKycNicOcrResponse.date_of_birth)
+}
+
+// string nic_number = 3 [json_name = "nicNumber"];
+inline void ExtractKycNicOcrResponse::clear_nic_number() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.nic_number_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline const ::std::string& ExtractKycNicOcrResponse::nic_number() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.ExtractKycNicOcrResponse.nic_number)
+  return _internal_nic_number();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void ExtractKycNicOcrResponse::set_nic_number(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.nic_number_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.ExtractKycNicOcrResponse.nic_number)
+}
+inline ::std::string* PROTOBUF_NONNULL ExtractKycNicOcrResponse::mutable_nic_number()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_nic_number();
+  // @@protoc_insertion_point(field_mutable:gridx.auth.v1.ExtractKycNicOcrResponse.nic_number)
+  return _s;
+}
+inline const ::std::string& ExtractKycNicOcrResponse::_internal_nic_number() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.nic_number_.Get();
+}
+inline void ExtractKycNicOcrResponse::_internal_set_nic_number(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.nic_number_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL ExtractKycNicOcrResponse::_internal_mutable_nic_number() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.nic_number_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE ExtractKycNicOcrResponse::release_nic_number() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.auth.v1.ExtractKycNicOcrResponse.nic_number)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.nic_number_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.nic_number_.Set("", GetArena());
+  }
+  return released;
+}
+inline void ExtractKycNicOcrResponse::set_allocated_nic_number(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.nic_number_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.nic_number_.IsDefault()) {
+    _impl_.nic_number_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.ExtractKycNicOcrResponse.nic_number)
 }
 
 // -------------------------------------------------------------------

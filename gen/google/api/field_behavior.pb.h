@@ -126,7 +126,7 @@ using ::google::protobuf::internal::generated_enum::AbslUnparseFlag;
 
 inline constexpr int kFieldBehaviorFieldNumber = 1052;
 extern ::google::protobuf::internal::ExtensionIdentifier<
-    ::google::protobuf::FieldOptions, ::google::protobuf::internal::RepeatedEnumTypeTraits< ::google::api::FieldBehavior>, 14, false>(field_behavior);
+    ::google::protobuf::FieldOptions, ::google::protobuf::internal::RepeatedEnumTypeTraits< ::google::api::FieldBehavior>, 14, true>(field_behavior);
 
 // ===================================================================
 

@@ -45,13 +45,13 @@ const char descriptor_table_protodef_google_2fapi_2ffield_5fbehavior_2eproto[] A
     "ECIFIED\020\000\022\014\n\010OPTIONAL\020\001\022\014\n\010REQUIRED\020\002\022\017\n"
     "\013OUTPUT_ONLY\020\003\022\016\n\nINPUT_ONLY\020\004\022\r\n\tIMMUTA"
     "BLE\020\005\022\022\n\016UNORDERED_LIST\020\006\022\025\n\021NON_EMPTY_D"
-    "EFAULT\020\007\022\016\n\nIDENTIFIER\020\010:d\n\016field_behavi"
+    "EFAULT\020\007\022\016\n\nIDENTIFIER\020\010:`\n\016field_behavi"
     "or\022\035.google.protobuf.FieldOptions\030\234\010 \003(\016"
-    "2\031.google.api.FieldBehaviorB\002\020\000R\rfieldBe"
-    "haviorBp\n\016com.google.apiB\022FieldBehaviorP"
-    "rotoP\001ZAgoogle.golang.org/genproto/googl"
-    "eapis/api/annotations;annotations\242\002\004GAPI"
-    "b\006proto3"
+    "2\031.google.api.FieldBehaviorR\rfieldBehavi"
+    "orBp\n\016com.google.apiB\022FieldBehaviorProto"
+    "P\001ZAgoogle.golang.org/genproto/googleapi"
+    "s/api/annotations;annotations\242\002\004GAPIb\006pr"
+    "oto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto_deps[1] = {
@@ -61,7 +61,7 @@ static ::absl::once_flag descriptor_table_google_2fapi_2ffield_5fbehavior_2eprot
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto = {
     false,
     false,
-    488,
+    484,
     descriptor_table_protodef_google_2fapi_2ffield_5fbehavior_2eproto,
     "google/api/field_behavior.proto",
     &descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto_once,
@@ -85,7 +85,7 @@ PROTOBUF_CONSTINIT const uint32_t FieldBehavior_internal_data_[] = {
     589824u, 0u, };
 PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::_pbi::ExtensionIdentifier<
-        ::google::protobuf::FieldOptions, ::_pbi::RepeatedEnumTypeTraits< ::google::api::FieldBehavior>, 14, false>
+        ::google::protobuf::FieldOptions, ::_pbi::RepeatedEnumTypeTraits< ::google::api::FieldBehavior>, 14, true>
         field_behavior(kFieldBehaviorFieldNumber, static_cast< ::google::api::FieldBehavior >(0));
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace api
@@ -100,6 +100,6 @@ PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::std::false_type
         (::_pbi::AddDescriptors(&descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto),
         ::_pbi::ExtensionSet::RegisterEnumExtension(
             &::google::protobuf::FieldOptions::default_instance(), 1052, 14,
-            true, false, ::google::api::FieldBehavior_internal_data_),
+            true, true, ::google::api::FieldBehavior_internal_data_),
          ::std::false_type{});
 #include "google/protobuf/port_undef.inc"
