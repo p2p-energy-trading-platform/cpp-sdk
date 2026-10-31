@@ -589,11 +589,11 @@ constexpr ReverifyRegistrationResponse::ParseTableT_ ReverifyRegistrationRespons
     {
       PROTOBUF_FIELD_OFFSET(ReverifyRegistrationResponse, _impl_._has_bits_),
       0, // no _extensions_
-      3, 24,  // max_field_number, fast_idx_mask
+      4, 24,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967288,  // skipmap
+      4294967280,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      3,  // num_field_entries
+      4,  // num_field_entries
       0,  // num_aux_entries
       offsetof(ParseTableT_, field_names),  // no aux_entries
       class_data,
@@ -603,7 +603,10 @@ constexpr ReverifyRegistrationResponse::ParseTableT_ ReverifyRegistrationRespons
       ::_pbi::TcParser::GetTable<::gridx::iot::v1::ReverifyRegistrationResponse>(),  // to_prefetch
       #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
     }, {{
-      {::_pbi::TcParser::MiniParse, {}},
+      // string status = 4 [json_name = "status"];
+      {::_pbi::TcParser::FastUS1,
+       {34, 3, 0,
+        PROTOBUF_FIELD_OFFSET(ReverifyRegistrationResponse, _impl_.status_)}},
       // string registration_id = 1 [json_name = "registrationId"];
       {::_pbi::TcParser::FastUS1,
        {10, 0, 0,
@@ -625,14 +628,17 @@ constexpr ReverifyRegistrationResponse::ParseTableT_ ReverifyRegistrationRespons
       {PROTOBUF_FIELD_OFFSET(ReverifyRegistrationResponse, _impl_.meter_id_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // string message = 3 [json_name = "message"];
       {PROTOBUF_FIELD_OFFSET(ReverifyRegistrationResponse, _impl_.message_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string status = 4 [json_name = "status"];
+      {PROTOBUF_FIELD_OFFSET(ReverifyRegistrationResponse, _impl_.status_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     }},
     // no aux_entries
     {{
-      "\51\17\10\7\0\0\0\0"
+      "\51\17\10\7\6\0\0\0"
       "gridx.iot.v1.ReverifyRegistrationResponse"
       "registration_id"
       "meter_id"
       "message"
+      "status"
     }},
   };
 }
@@ -649,6 +655,9 @@ inline constexpr ReverifyRegistrationResponse::Impl_::Impl_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         message_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        status_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()) {}
 
@@ -756,11 +765,11 @@ constexpr ReverifyRegistrationRequest::ParseTableT_ ReverifyRegistrationRequest:
     {
       PROTOBUF_FIELD_OFFSET(ReverifyRegistrationRequest, _impl_._has_bits_),
       0, // no _extensions_
-      2, 8,  // max_field_number, fast_idx_mask
+      3, 24,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967292,  // skipmap
+      4294967288,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      2,  // num_field_entries
+      3,  // num_field_entries
       0,  // num_aux_entries
       offsetof(ParseTableT_, field_names),  // no aux_entries
       class_data,
@@ -770,14 +779,19 @@ constexpr ReverifyRegistrationRequest::ParseTableT_ ReverifyRegistrationRequest:
       ::_pbi::TcParser::GetTable<::gridx::iot::v1::ReverifyRegistrationRequest>(),  // to_prefetch
       #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
     }, {{
-      // string user_reference = 2 [json_name = "userReference"];
-      {::_pbi::TcParser::FastUS1,
-       {18, 1, 0,
-        PROTOBUF_FIELD_OFFSET(ReverifyRegistrationRequest, _impl_.user_reference_)}},
+      {::_pbi::TcParser::MiniParse, {}},
       // string registration_id = 1 [json_name = "registrationId"];
       {::_pbi::TcParser::FastUS1,
        {10, 0, 0,
         PROTOBUF_FIELD_OFFSET(ReverifyRegistrationRequest, _impl_.registration_id_)}},
+      // string user_reference = 2 [json_name = "userReference"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(ReverifyRegistrationRequest, _impl_.user_reference_)}},
+      // string meter_id = 3 [json_name = "meterId"];
+      {::_pbi::TcParser::FastUS1,
+       {26, 2, 0,
+        PROTOBUF_FIELD_OFFSET(ReverifyRegistrationRequest, _impl_.meter_id_)}},
     }}, {{
       65535, 65535
     }}, {{
@@ -785,13 +799,16 @@ constexpr ReverifyRegistrationRequest::ParseTableT_ ReverifyRegistrationRequest:
       {PROTOBUF_FIELD_OFFSET(ReverifyRegistrationRequest, _impl_.registration_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // string user_reference = 2 [json_name = "userReference"];
       {PROTOBUF_FIELD_OFFSET(ReverifyRegistrationRequest, _impl_.user_reference_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string meter_id = 3 [json_name = "meterId"];
+      {PROTOBUF_FIELD_OFFSET(ReverifyRegistrationRequest, _impl_.meter_id_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     }},
     // no aux_entries
     {{
-      "\50\17\16\0\0\0\0\0"
+      "\50\17\16\10\0\0\0\0"
       "gridx.iot.v1.ReverifyRegistrationRequest"
       "registration_id"
       "user_reference"
+      "meter_id"
     }},
   };
 }
@@ -805,6 +822,9 @@ inline constexpr ReverifyRegistrationRequest::Impl_::Impl_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         user_reference_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        meter_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()) {}
 
@@ -5394,20 +5414,24 @@ const ::uint32_t
         0,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationRequest, _impl_._has_bits_),
-        5, // hasbit index offset
+        6, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationRequest, _impl_.registration_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationRequest, _impl_.user_reference_),
-        0,
-        1,
-        0x081, // bitmap
-        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationResponse, _impl_._has_bits_),
-        6, // hasbit index offset
-        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationResponse, _impl_.registration_id_),
-        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationResponse, _impl_.meter_id_),
-        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationResponse, _impl_.message_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationRequest, _impl_.meter_id_),
         0,
         1,
         2,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationResponse, _impl_._has_bits_),
+        7, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationResponse, _impl_.registration_id_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationResponse, _impl_.meter_id_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationResponse, _impl_.message_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationResponse, _impl_.status_),
+        0,
+        1,
+        2,
+        3,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::GetRegistrationByUserRequest, _impl_._has_bits_),
         4, // hasbit index offset
@@ -5455,9 +5479,9 @@ static const ::_pbi::MigrationSchema
         {246, sizeof(::gridx::iot::v1::ValidateDeviceAssociationRequest)},
         {251, sizeof(::gridx::iot::v1::ValidateDeviceAssociationResponse)},
         {258, sizeof(::gridx::iot::v1::ReverifyRegistrationRequest)},
-        {265, sizeof(::gridx::iot::v1::ReverifyRegistrationResponse)},
-        {274, sizeof(::gridx::iot::v1::GetRegistrationByUserRequest)},
-        {279, sizeof(::gridx::iot::v1::GetRegistrationByUserResponse)},
+        {267, sizeof(::gridx::iot::v1::ReverifyRegistrationResponse)},
+        {278, sizeof(::gridx::iot::v1::GetRegistrationByUserRequest)},
+        {283, sizeof(::gridx::iot::v1::GetRegistrationByUserResponse)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
     file_message_globals[] = {
@@ -5605,56 +5629,57 @@ const char descriptor_table_protodef_gridx_2fiot_2fv1_2fiot_2eproto[] ABSL_ATTRI
     "nRequest\022\031\n\010meter_id\030\001 \001(\tR\007meterId\"p\n!V"
     "alidateDeviceAssociationResponse\022#\n\ris_r"
     "egistered\030\002 \001(\010R\014isRegistered\022&\n\017primary"
-    "_user_id\030\003 \001(\tR\rprimaryUserId\"m\n\033Reverif"
-    "yRegistrationRequest\022\'\n\017registration_id\030"
-    "\001 \001(\tR\016registrationId\022%\n\016user_reference\030"
-    "\002 \001(\tR\ruserReference\"|\n\034ReverifyRegistra"
-    "tionResponse\022\'\n\017registration_id\030\001 \001(\tR\016r"
-    "egistrationId\022\031\n\010meter_id\030\002 \001(\tR\007meterId"
-    "\022\030\n\007message\030\003 \001(\tR\007message\"E\n\034GetRegistr"
-    "ationByUserRequest\022%\n\016user_reference\030\001 \001"
-    "(\tR\ruserReference\"\251\001\n\035GetRegistrationByU"
-    "serResponse\022\033\n\thas_meter\030\001 \001(\010R\010hasMeter"
-    "\022\'\n\017registration_id\030\002 \001(\tR\016registrationI"
-    "d\022\031\n\010meter_id\030\003 \001(\tR\007meterId\022\'\n\017approval"
-    "_status\030\004 \001(\tR\016approvalStatus*\212\001\n\013Device"
-    "Class\022\034\n\030DEVICE_CLASS_UNSPECIFIED\020\000\022\031\n\025D"
-    "EVICE_CLASS_CONSUMER\020\001\022%\n!DEVICE_CLASS_R"
-    "ESIDENTIAL_PROSUMER\020\002\022\033\n\027DEVICE_CLASS_CO"
-    "MMERCIAL\020\003*O\n\tAssetType\022\032\n\026ASSET_TYPE_UN"
-    "SPECIFIED\020\000\022\023\n\017ASSET_TYPE_BESS\020\001\022\021\n\rASSE"
-    "T_TYPE_EV\020\002*^\n\013MeterStatus\022\034\n\030METER_STAT"
-    "US_UNSPECIFIED\020\000\022\027\n\023METER_STATUS_ONLINE\020"
-    "\001\022\030\n\024METER_STATUS_OFFLINE\020\0022\316\003\n\nIotServi"
-    "ce\022O\n\nListHouses\022\037.gridx.iot.v1.ListHous"
-    "esRequest\032 .gridx.iot.v1.ListHousesRespo"
-    "nse\022I\n\010GetHouse\022\035.gridx.iot.v1.GetHouseR"
-    "equest\032\036.gridx.iot.v1.GetHouseResponse\022a"
-    "\n\020GetLatestReading\022%.gridx.iot.v1.GetLat"
-    "estReadingRequest\032&.gridx.iot.v1.GetLate"
-    "stReadingResponse\022^\n\017GetEnergySeries\022$.g"
-    "ridx.iot.v1.GetEnergySeriesRequest\032%.gri"
-    "dx.iot.v1.GetEnergySeriesResponse\022a\n\020Get"
-    "EnergySummary\022%.gridx.iot.v1.GetEnergySu"
-    "mmaryRequest\032&.gridx.iot.v1.GetEnergySum"
-    "maryResponse2\325\004\n\031DeviceRegistrationServi"
-    "ce\022g\n\022InitiateMeterClaim\022\'.gridx.iot.v1."
-    "InitiateMeterClaimRequest\032(.gridx.iot.v1"
-    ".InitiateMeterClaimResponse\022p\n\025GetRegist"
-    "rationStatus\022*.gridx.iot.v1.GetRegistrat"
-    "ionStatusRequest\032+.gridx.iot.v1.GetRegis"
-    "trationStatusResponse\022|\n\031ValidateDeviceA"
-    "ssociation\022..gridx.iot.v1.ValidateDevice"
-    "AssociationRequest\032/.gridx.iot.v1.Valida"
-    "teDeviceAssociationResponse\022m\n\024ReverifyR"
-    "egistration\022).gridx.iot.v1.ReverifyRegis"
-    "trationRequest\032*.gridx.iot.v1.ReverifyRe"
-    "gistrationResponse\022p\n\025GetRegistrationByU"
-    "ser\022*.gridx.iot.v1.GetRegistrationByUser"
-    "Request\032+.gridx.iot.v1.GetRegistrationBy"
-    "UserResponseBFZDgithub.com/p2p-energy-tr"
-    "ading-platform/go-sdk/gen/gridx/iot/v1;i"
-    "otv1b\006proto3"
+    "_user_id\030\003 \001(\tR\rprimaryUserId\"\210\001\n\033Reveri"
+    "fyRegistrationRequest\022\'\n\017registration_id"
+    "\030\001 \001(\tR\016registrationId\022%\n\016user_reference"
+    "\030\002 \001(\tR\ruserReference\022\031\n\010meter_id\030\003 \001(\tR"
+    "\007meterId\"\224\001\n\034ReverifyRegistrationRespons"
+    "e\022\'\n\017registration_id\030\001 \001(\tR\016registration"
+    "Id\022\031\n\010meter_id\030\002 \001(\tR\007meterId\022\030\n\007message"
+    "\030\003 \001(\tR\007message\022\026\n\006status\030\004 \001(\tR\006status\""
+    "E\n\034GetRegistrationByUserRequest\022%\n\016user_"
+    "reference\030\001 \001(\tR\ruserReference\"\251\001\n\035GetRe"
+    "gistrationByUserResponse\022\033\n\thas_meter\030\001 "
+    "\001(\010R\010hasMeter\022\'\n\017registration_id\030\002 \001(\tR\016"
+    "registrationId\022\031\n\010meter_id\030\003 \001(\tR\007meterI"
+    "d\022\'\n\017approval_status\030\004 \001(\tR\016approvalStat"
+    "us*\212\001\n\013DeviceClass\022\034\n\030DEVICE_CLASS_UNSPE"
+    "CIFIED\020\000\022\031\n\025DEVICE_CLASS_CONSUMER\020\001\022%\n!D"
+    "EVICE_CLASS_RESIDENTIAL_PROSUMER\020\002\022\033\n\027DE"
+    "VICE_CLASS_COMMERCIAL\020\003*O\n\tAssetType\022\032\n\026"
+    "ASSET_TYPE_UNSPECIFIED\020\000\022\023\n\017ASSET_TYPE_B"
+    "ESS\020\001\022\021\n\rASSET_TYPE_EV\020\002*^\n\013MeterStatus\022"
+    "\034\n\030METER_STATUS_UNSPECIFIED\020\000\022\027\n\023METER_S"
+    "TATUS_ONLINE\020\001\022\030\n\024METER_STATUS_OFFLINE\020\002"
+    "2\316\003\n\nIotService\022O\n\nListHouses\022\037.gridx.io"
+    "t.v1.ListHousesRequest\032 .gridx.iot.v1.Li"
+    "stHousesResponse\022I\n\010GetHouse\022\035.gridx.iot"
+    ".v1.GetHouseRequest\032\036.gridx.iot.v1.GetHo"
+    "useResponse\022a\n\020GetLatestReading\022%.gridx."
+    "iot.v1.GetLatestReadingRequest\032&.gridx.i"
+    "ot.v1.GetLatestReadingResponse\022^\n\017GetEne"
+    "rgySeries\022$.gridx.iot.v1.GetEnergySeries"
+    "Request\032%.gridx.iot.v1.GetEnergySeriesRe"
+    "sponse\022a\n\020GetEnergySummary\022%.gridx.iot.v"
+    "1.GetEnergySummaryRequest\032&.gridx.iot.v1"
+    ".GetEnergySummaryResponse2\325\004\n\031DeviceRegi"
+    "strationService\022g\n\022InitiateMeterClaim\022\'."
+    "gridx.iot.v1.InitiateMeterClaimRequest\032("
+    ".gridx.iot.v1.InitiateMeterClaimResponse"
+    "\022p\n\025GetRegistrationStatus\022*.gridx.iot.v1"
+    ".GetRegistrationStatusRequest\032+.gridx.io"
+    "t.v1.GetRegistrationStatusResponse\022|\n\031Va"
+    "lidateDeviceAssociation\022..gridx.iot.v1.V"
+    "alidateDeviceAssociationRequest\032/.gridx."
+    "iot.v1.ValidateDeviceAssociationResponse"
+    "\022m\n\024ReverifyRegistration\022).gridx.iot.v1."
+    "ReverifyRegistrationRequest\032*.gridx.iot."
+    "v1.ReverifyRegistrationResponse\022p\n\025GetRe"
+    "gistrationByUser\022*.gridx.iot.v1.GetRegis"
+    "trationByUserRequest\032+.gridx.iot.v1.GetR"
+    "egistrationByUserResponseBFZDgithub.com/"
+    "p2p-energy-trading-platform/go-sdk/gen/g"
+    "ridx/iot/v1;iotv1b\006proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto_deps[2] = {
@@ -5665,7 +5690,7 @@ static ::absl::once_flag descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto = {
     false,
     false,
-    6412,
+    6465,
     descriptor_table_protodef_gridx_2fiot_2fv1_2fiot_2eproto,
     "gridx/iot/v1/iot.proto",
     &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto_once,
@@ -13147,7 +13172,8 @@ PROTOBUF_NDEBUG_INLINE ReverifyRegistrationRequest::Impl_::Impl_(
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         registration_id_(arena, from.registration_id_),
-        user_reference_(arena, from.user_reference_) {}
+        user_reference_(arena, from.user_reference_),
+        meter_id_(arena, from.meter_id_) {}
 
 ReverifyRegistrationRequest::ReverifyRegistrationRequest(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
@@ -13171,7 +13197,8 @@ PROTOBUF_NDEBUG_INLINE ReverifyRegistrationRequest::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : _cached_size_{0},
         registration_id_(arena),
-        user_reference_(arena) {}
+        user_reference_(arena),
+        meter_id_(arena) {}
 
 inline void ReverifyRegistrationRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
@@ -13189,6 +13216,7 @@ inline void ReverifyRegistrationRequest::SharedDtor(MessageLite& self) {
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.registration_id_.Destroy();
   this_._impl_.user_reference_.Destroy();
+  this_._impl_.meter_id_.Destroy();
   this_._impl_.~Impl_();
 }
 
@@ -13226,12 +13254,15 @@ PROTOBUF_NOINLINE void ReverifyRegistrationRequest::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       _impl_.registration_id_.ClearNonDefaultToEmpty();
     }
     if (CheckHasBit(cached_has_bits, 0x00000002U)) {
       _impl_.user_reference_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      _impl_.meter_id_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -13277,6 +13308,16 @@ PROTOBUF_NOINLINE void ReverifyRegistrationRequest::Clear() {
     }
   }
 
+  // string meter_id = 3 [json_name = "meterId"];
+  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (!this_._internal_meter_id().empty()) {
+      const ::std::string& _s = this_._internal_meter_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.ReverifyRegistrationRequest.meter_id");
+      target = stream->WriteStringMaybeAliased(3, _s, target);
+    }
+  }
+
   if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
     target =
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
@@ -13302,7 +13343,7 @@ PROTOBUF_NOINLINE void ReverifyRegistrationRequest::Clear() {
 
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
     // string registration_id = 1 [json_name = "registrationId"];
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!this_._internal_registration_id().empty()) {
@@ -13315,6 +13356,13 @@ PROTOBUF_NOINLINE void ReverifyRegistrationRequest::Clear() {
       if (!this_._internal_user_reference().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_user_reference());
+      }
+    }
+    // string meter_id = 3 [json_name = "meterId"];
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!this_._internal_meter_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_meter_id());
       }
     }
   }
@@ -13335,7 +13383,7 @@ void ReverifyRegistrationRequest::MergeImpl(::google::protobuf::MessageLite& to_
   (void)cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!from._internal_registration_id().empty()) {
         _this->_internal_set_registration_id(from._internal_registration_id());
@@ -13351,6 +13399,15 @@ void ReverifyRegistrationRequest::MergeImpl(::google::protobuf::MessageLite& to_
       } else {
         if (_this->_impl_.user_reference_.IsDefault()) {
           _this->_internal_set_user_reference("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!from._internal_meter_id().empty()) {
+        _this->_internal_set_meter_id(from._internal_meter_id());
+      } else {
+        if (_this->_impl_.meter_id_.IsDefault()) {
+          _this->_internal_set_meter_id("");
         }
       }
     }
@@ -13376,6 +13433,7 @@ void ReverifyRegistrationRequest::InternalSwap(ReverifyRegistrationRequest* PROT
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.registration_id_, &other->_impl_.registration_id_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_reference_, &other->_impl_.user_reference_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.meter_id_, &other->_impl_.meter_id_, arena);
 }
 
 ::google::protobuf::Metadata ReverifyRegistrationRequest::GetMetadata() const {
@@ -13400,7 +13458,8 @@ PROTOBUF_NDEBUG_INLINE ReverifyRegistrationResponse::Impl_::Impl_(
         _cached_size_{0},
         registration_id_(arena, from.registration_id_),
         meter_id_(arena, from.meter_id_),
-        message_(arena, from.message_) {}
+        message_(arena, from.message_),
+        status_(arena, from.status_) {}
 
 ReverifyRegistrationResponse::ReverifyRegistrationResponse(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
@@ -13425,7 +13484,8 @@ PROTOBUF_NDEBUG_INLINE ReverifyRegistrationResponse::Impl_::Impl_(
       : _cached_size_{0},
         registration_id_(arena),
         meter_id_(arena),
-        message_(arena) {}
+        message_(arena),
+        status_(arena) {}
 
 inline void ReverifyRegistrationResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
@@ -13444,6 +13504,7 @@ inline void ReverifyRegistrationResponse::SharedDtor(MessageLite& self) {
   this_._impl_.registration_id_.Destroy();
   this_._impl_.meter_id_.Destroy();
   this_._impl_.message_.Destroy();
+  this_._impl_.status_.Destroy();
   this_._impl_.~Impl_();
 }
 
@@ -13481,7 +13542,7 @@ PROTOBUF_NOINLINE void ReverifyRegistrationResponse::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       _impl_.registration_id_.ClearNonDefaultToEmpty();
     }
@@ -13490,6 +13551,9 @@ PROTOBUF_NOINLINE void ReverifyRegistrationResponse::Clear() {
     }
     if (CheckHasBit(cached_has_bits, 0x00000004U)) {
       _impl_.message_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      _impl_.status_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -13545,6 +13609,16 @@ PROTOBUF_NOINLINE void ReverifyRegistrationResponse::Clear() {
     }
   }
 
+  // string status = 4 [json_name = "status"];
+  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+    if (!this_._internal_status().empty()) {
+      const ::std::string& _s = this_._internal_status();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.ReverifyRegistrationResponse.status");
+      target = stream->WriteStringMaybeAliased(4, _s, target);
+    }
+  }
+
   if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
     target =
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
@@ -13570,7 +13644,7 @@ PROTOBUF_NOINLINE void ReverifyRegistrationResponse::Clear() {
 
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
     // string registration_id = 1 [json_name = "registrationId"];
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!this_._internal_registration_id().empty()) {
@@ -13592,6 +13666,13 @@ PROTOBUF_NOINLINE void ReverifyRegistrationResponse::Clear() {
                                         this_._internal_message());
       }
     }
+    // string status = 4 [json_name = "status"];
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      if (!this_._internal_status().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_status());
+      }
+    }
   }
   return this_.MaybeComputeUnknownFieldsSize(total_size,
                                              &this_._impl_._cached_size_);
@@ -13610,7 +13691,7 @@ void ReverifyRegistrationResponse::MergeImpl(::google::protobuf::MessageLite& to
   (void)cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!from._internal_registration_id().empty()) {
         _this->_internal_set_registration_id(from._internal_registration_id());
@@ -13638,6 +13719,15 @@ void ReverifyRegistrationResponse::MergeImpl(::google::protobuf::MessageLite& to
         }
       }
     }
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      if (!from._internal_status().empty()) {
+        _this->_internal_set_status(from._internal_status());
+      } else {
+        if (_this->_impl_.status_.IsDefault()) {
+          _this->_internal_set_status("");
+        }
+      }
+    }
   }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
@@ -13661,6 +13751,7 @@ void ReverifyRegistrationResponse::InternalSwap(ReverifyRegistrationResponse* PR
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.registration_id_, &other->_impl_.registration_id_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.meter_id_, &other->_impl_.meter_id_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.message_, &other->_impl_.message_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.status_, &other->_impl_.status_, arena);
 }
 
 ::google::protobuf::Metadata ReverifyRegistrationResponse::GetMetadata() const {
