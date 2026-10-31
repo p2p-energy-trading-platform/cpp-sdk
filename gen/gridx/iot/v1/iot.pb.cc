@@ -69,12 +69,331 @@ PROTOBUF_CONSTINIT ::google::protobuf::internal::ReflectionData
         {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
         // ::gridx::iot::v1::GetEnergySummaryResponse
         {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::iot::v1::InitiateMeterClaimRequest
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::iot::v1::InitiateMeterClaimResponse
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::iot::v1::GetRegistrationStatusRequest
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::iot::v1::GetRegistrationStatusResponse
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::iot::v1::ValidateDeviceAssociationRequest
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::iot::v1::ValidateDeviceAssociationResponse
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::iot::v1::ReverifyRegistrationRequest
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::iot::v1::ReverifyRegistrationResponse
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::iot::v1::GetRegistrationByUserRequest
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::iot::v1::GetRegistrationByUserResponse
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
 };
 }  // namespace
 #endif
 namespace gridx {
 namespace iot {
 namespace v1 {
+class ValidateDeviceAssociationResponse::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<ValidateDeviceAssociationResponse>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(ValidateDeviceAssociationResponse, _impl_._has_bits_);
+};
+
+constexpr ValidateDeviceAssociationResponse::ParseTableT_ ValidateDeviceAssociationResponse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(ValidateDeviceAssociationResponse, _impl_._has_bits_),
+      0, // no _extensions_
+      3, 8,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967289,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      2,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::iot::v1::ValidateDeviceAssociationResponse>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // bool is_registered = 2 [json_name = "isRegistered"];
+      {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ValidateDeviceAssociationResponse, _impl_.is_registered_), 1>(),
+       {16, 1, 0,
+        PROTOBUF_FIELD_OFFSET(ValidateDeviceAssociationResponse, _impl_.is_registered_)}},
+      // string primary_user_id = 3 [json_name = "primaryUserId"];
+      {::_pbi::TcParser::FastUS1,
+       {26, 0, 0,
+        PROTOBUF_FIELD_OFFSET(ValidateDeviceAssociationResponse, _impl_.primary_user_id_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // bool is_registered = 2 [json_name = "isRegistered"];
+      {PROTOBUF_FIELD_OFFSET(ValidateDeviceAssociationResponse, _impl_.is_registered_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kBool)},
+      // string primary_user_id = 3 [json_name = "primaryUserId"];
+      {PROTOBUF_FIELD_OFFSET(ValidateDeviceAssociationResponse, _impl_.primary_user_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\56\0\17\0\0\0\0\0"
+      "gridx.iot.v1.ValidateDeviceAssociationResponse"
+      "primary_user_id"
+    }},
+  };
+}
+
+
+inline constexpr ValidateDeviceAssociationResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        primary_user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        is_registered_{false} {}
+
+template <typename>
+constexpr ValidateDeviceAssociationResponse::ValidateDeviceAssociationResponse(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL ValidateDeviceAssociationResponse::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) ValidateDeviceAssociationResponse(arena);
+}
+constexpr auto ValidateDeviceAssociationResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(ValidateDeviceAssociationResponse), alignof(ValidateDeviceAssociationResponse));
+}
+constexpr auto ValidateDeviceAssociationResponse::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &ValidateDeviceAssociationResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<ValidateDeviceAssociationResponse>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &ValidateDeviceAssociationResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<ValidateDeviceAssociationResponse>(), &ValidateDeviceAssociationResponse::ByteSizeLong,
+              &ValidateDeviceAssociationResponse::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(ValidateDeviceAssociationResponse, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[25],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct ValidateDeviceAssociationResponseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr ValidateDeviceAssociationResponseGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 ValidateDeviceAssociationResponse_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(ValidateDeviceAssociationResponse::InternalGenerateClassData_(
+            _default, &ValidateDeviceAssociationResponse_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<ValidateDeviceAssociationResponse>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~ValidateDeviceAssociationResponseGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) ValidateDeviceAssociationResponse _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<ValidateDeviceAssociationResponse>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(ValidateDeviceAssociationResponseGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST ValidateDeviceAssociationResponseGlobalsTypeInternal ValidateDeviceAssociationResponse_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* ValidateDeviceAssociationResponse_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return ValidateDeviceAssociationResponse_globals_.GetClassData();
+#else
+  return ValidateDeviceAssociationResponse_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class ValidateDeviceAssociationRequest::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<ValidateDeviceAssociationRequest>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(ValidateDeviceAssociationRequest, _impl_._has_bits_);
+};
+
+constexpr ValidateDeviceAssociationRequest::ParseTableT_ ValidateDeviceAssociationRequest::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(ValidateDeviceAssociationRequest, _impl_._has_bits_),
+      0, // no _extensions_
+      1, 0,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967294,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      1,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::iot::v1::ValidateDeviceAssociationRequest>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // string meter_id = 1 [json_name = "meterId"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(ValidateDeviceAssociationRequest, _impl_.meter_id_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string meter_id = 1 [json_name = "meterId"];
+      {PROTOBUF_FIELD_OFFSET(ValidateDeviceAssociationRequest, _impl_.meter_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\55\10\0\0\0\0\0\0"
+      "gridx.iot.v1.ValidateDeviceAssociationRequest"
+      "meter_id"
+    }},
+  };
+}
+
+
+inline constexpr ValidateDeviceAssociationRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        meter_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+constexpr ValidateDeviceAssociationRequest::ValidateDeviceAssociationRequest(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL ValidateDeviceAssociationRequest::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) ValidateDeviceAssociationRequest(arena);
+}
+constexpr auto ValidateDeviceAssociationRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(ValidateDeviceAssociationRequest), alignof(ValidateDeviceAssociationRequest));
+}
+constexpr auto ValidateDeviceAssociationRequest::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &ValidateDeviceAssociationRequest::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<ValidateDeviceAssociationRequest>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &ValidateDeviceAssociationRequest::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<ValidateDeviceAssociationRequest>(), &ValidateDeviceAssociationRequest::ByteSizeLong,
+              &ValidateDeviceAssociationRequest::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(ValidateDeviceAssociationRequest, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[24],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct ValidateDeviceAssociationRequestGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr ValidateDeviceAssociationRequestGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 ValidateDeviceAssociationRequest_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(ValidateDeviceAssociationRequest::InternalGenerateClassData_(
+            _default, &ValidateDeviceAssociationRequest_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<ValidateDeviceAssociationRequest>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~ValidateDeviceAssociationRequestGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) ValidateDeviceAssociationRequest _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<ValidateDeviceAssociationRequest>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(ValidateDeviceAssociationRequestGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST ValidateDeviceAssociationRequestGlobalsTypeInternal ValidateDeviceAssociationRequest_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* ValidateDeviceAssociationRequest_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return ValidateDeviceAssociationRequest_globals_.GetClassData();
+#else
+  return ValidateDeviceAssociationRequest_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
 class StorageAssetReading::_Internal {
  public:
   using HasBits = decltype(::std::declval<StorageAssetReading>()._impl_._has_bits_);
@@ -258,6 +577,329 @@ const ::_pbi::ClassData* StorageAssetReading_get_class_data() {
 }
 }  // namespace
 #endif  // PROTOBUF_CUSTOM_VTABLE
+class ReverifyRegistrationResponse::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<ReverifyRegistrationResponse>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(ReverifyRegistrationResponse, _impl_._has_bits_);
+};
+
+constexpr ReverifyRegistrationResponse::ParseTableT_ ReverifyRegistrationResponse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(ReverifyRegistrationResponse, _impl_._has_bits_),
+      0, // no _extensions_
+      3, 24,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967288,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      3,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::iot::v1::ReverifyRegistrationResponse>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      {::_pbi::TcParser::MiniParse, {}},
+      // string registration_id = 1 [json_name = "registrationId"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(ReverifyRegistrationResponse, _impl_.registration_id_)}},
+      // string meter_id = 2 [json_name = "meterId"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(ReverifyRegistrationResponse, _impl_.meter_id_)}},
+      // string message = 3 [json_name = "message"];
+      {::_pbi::TcParser::FastUS1,
+       {26, 2, 0,
+        PROTOBUF_FIELD_OFFSET(ReverifyRegistrationResponse, _impl_.message_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string registration_id = 1 [json_name = "registrationId"];
+      {PROTOBUF_FIELD_OFFSET(ReverifyRegistrationResponse, _impl_.registration_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string meter_id = 2 [json_name = "meterId"];
+      {PROTOBUF_FIELD_OFFSET(ReverifyRegistrationResponse, _impl_.meter_id_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string message = 3 [json_name = "message"];
+      {PROTOBUF_FIELD_OFFSET(ReverifyRegistrationResponse, _impl_.message_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\51\17\10\7\0\0\0\0"
+      "gridx.iot.v1.ReverifyRegistrationResponse"
+      "registration_id"
+      "meter_id"
+      "message"
+    }},
+  };
+}
+
+
+inline constexpr ReverifyRegistrationResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        registration_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        meter_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        message_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+constexpr ReverifyRegistrationResponse::ReverifyRegistrationResponse(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL ReverifyRegistrationResponse::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) ReverifyRegistrationResponse(arena);
+}
+constexpr auto ReverifyRegistrationResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(ReverifyRegistrationResponse), alignof(ReverifyRegistrationResponse));
+}
+constexpr auto ReverifyRegistrationResponse::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &ReverifyRegistrationResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<ReverifyRegistrationResponse>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &ReverifyRegistrationResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<ReverifyRegistrationResponse>(), &ReverifyRegistrationResponse::ByteSizeLong,
+              &ReverifyRegistrationResponse::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(ReverifyRegistrationResponse, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[27],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct ReverifyRegistrationResponseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr ReverifyRegistrationResponseGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 ReverifyRegistrationResponse_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(ReverifyRegistrationResponse::InternalGenerateClassData_(
+            _default, &ReverifyRegistrationResponse_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<ReverifyRegistrationResponse>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~ReverifyRegistrationResponseGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) ReverifyRegistrationResponse _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<ReverifyRegistrationResponse>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(ReverifyRegistrationResponseGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST ReverifyRegistrationResponseGlobalsTypeInternal ReverifyRegistrationResponse_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* ReverifyRegistrationResponse_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return ReverifyRegistrationResponse_globals_.GetClassData();
+#else
+  return ReverifyRegistrationResponse_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class ReverifyRegistrationRequest::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<ReverifyRegistrationRequest>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(ReverifyRegistrationRequest, _impl_._has_bits_);
+};
+
+constexpr ReverifyRegistrationRequest::ParseTableT_ ReverifyRegistrationRequest::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(ReverifyRegistrationRequest, _impl_._has_bits_),
+      0, // no _extensions_
+      2, 8,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967292,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      2,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::iot::v1::ReverifyRegistrationRequest>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // string user_reference = 2 [json_name = "userReference"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(ReverifyRegistrationRequest, _impl_.user_reference_)}},
+      // string registration_id = 1 [json_name = "registrationId"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(ReverifyRegistrationRequest, _impl_.registration_id_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string registration_id = 1 [json_name = "registrationId"];
+      {PROTOBUF_FIELD_OFFSET(ReverifyRegistrationRequest, _impl_.registration_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string user_reference = 2 [json_name = "userReference"];
+      {PROTOBUF_FIELD_OFFSET(ReverifyRegistrationRequest, _impl_.user_reference_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\50\17\16\0\0\0\0\0"
+      "gridx.iot.v1.ReverifyRegistrationRequest"
+      "registration_id"
+      "user_reference"
+    }},
+  };
+}
+
+
+inline constexpr ReverifyRegistrationRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        registration_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        user_reference_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+constexpr ReverifyRegistrationRequest::ReverifyRegistrationRequest(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL ReverifyRegistrationRequest::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) ReverifyRegistrationRequest(arena);
+}
+constexpr auto ReverifyRegistrationRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(ReverifyRegistrationRequest), alignof(ReverifyRegistrationRequest));
+}
+constexpr auto ReverifyRegistrationRequest::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &ReverifyRegistrationRequest::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<ReverifyRegistrationRequest>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &ReverifyRegistrationRequest::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<ReverifyRegistrationRequest>(), &ReverifyRegistrationRequest::ByteSizeLong,
+              &ReverifyRegistrationRequest::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(ReverifyRegistrationRequest, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[26],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct ReverifyRegistrationRequestGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr ReverifyRegistrationRequestGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 ReverifyRegistrationRequest_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(ReverifyRegistrationRequest::InternalGenerateClassData_(
+            _default, &ReverifyRegistrationRequest_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<ReverifyRegistrationRequest>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~ReverifyRegistrationRequestGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) ReverifyRegistrationRequest _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<ReverifyRegistrationRequest>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(ReverifyRegistrationRequestGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST ReverifyRegistrationRequestGlobalsTypeInternal ReverifyRegistrationRequest_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* ReverifyRegistrationRequest_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return ReverifyRegistrationRequest_globals_.GetClassData();
+#else
+  return ReverifyRegistrationRequest_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
 class ListHousesRequest::_Internal {
  public:
   using HasBits = decltype(::std::declval<ListHousesRequest>()._impl_._has_bits_);
@@ -431,6 +1073,329 @@ const ::_pbi::ClassData* ListHousesRequest_get_class_data() {
 }
 }  // namespace
 #endif  // PROTOBUF_CUSTOM_VTABLE
+class InitiateMeterClaimResponse::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<InitiateMeterClaimResponse>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(InitiateMeterClaimResponse, _impl_._has_bits_);
+};
+
+constexpr InitiateMeterClaimResponse::ParseTableT_ InitiateMeterClaimResponse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(InitiateMeterClaimResponse, _impl_._has_bits_),
+      0, // no _extensions_
+      3, 24,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967288,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      3,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::iot::v1::InitiateMeterClaimResponse>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      {::_pbi::TcParser::MiniParse, {}},
+      // string registration_id = 1 [json_name = "registrationId"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(InitiateMeterClaimResponse, _impl_.registration_id_)}},
+      // string status = 2 [json_name = "status"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(InitiateMeterClaimResponse, _impl_.status_)}},
+      // string message = 3 [json_name = "message"];
+      {::_pbi::TcParser::FastUS1,
+       {26, 2, 0,
+        PROTOBUF_FIELD_OFFSET(InitiateMeterClaimResponse, _impl_.message_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string registration_id = 1 [json_name = "registrationId"];
+      {PROTOBUF_FIELD_OFFSET(InitiateMeterClaimResponse, _impl_.registration_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string status = 2 [json_name = "status"];
+      {PROTOBUF_FIELD_OFFSET(InitiateMeterClaimResponse, _impl_.status_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string message = 3 [json_name = "message"];
+      {PROTOBUF_FIELD_OFFSET(InitiateMeterClaimResponse, _impl_.message_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\47\17\6\7\0\0\0\0"
+      "gridx.iot.v1.InitiateMeterClaimResponse"
+      "registration_id"
+      "status"
+      "message"
+    }},
+  };
+}
+
+
+inline constexpr InitiateMeterClaimResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        registration_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        status_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        message_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+constexpr InitiateMeterClaimResponse::InitiateMeterClaimResponse(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL InitiateMeterClaimResponse::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) InitiateMeterClaimResponse(arena);
+}
+constexpr auto InitiateMeterClaimResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(InitiateMeterClaimResponse), alignof(InitiateMeterClaimResponse));
+}
+constexpr auto InitiateMeterClaimResponse::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &InitiateMeterClaimResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<InitiateMeterClaimResponse>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &InitiateMeterClaimResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<InitiateMeterClaimResponse>(), &InitiateMeterClaimResponse::ByteSizeLong,
+              &InitiateMeterClaimResponse::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(InitiateMeterClaimResponse, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[21],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct InitiateMeterClaimResponseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr InitiateMeterClaimResponseGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 InitiateMeterClaimResponse_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(InitiateMeterClaimResponse::InternalGenerateClassData_(
+            _default, &InitiateMeterClaimResponse_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<InitiateMeterClaimResponse>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~InitiateMeterClaimResponseGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) InitiateMeterClaimResponse _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<InitiateMeterClaimResponse>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(InitiateMeterClaimResponseGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST InitiateMeterClaimResponseGlobalsTypeInternal InitiateMeterClaimResponse_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* InitiateMeterClaimResponse_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return InitiateMeterClaimResponse_globals_.GetClassData();
+#else
+  return InitiateMeterClaimResponse_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class InitiateMeterClaimRequest::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<InitiateMeterClaimRequest>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(InitiateMeterClaimRequest, _impl_._has_bits_);
+};
+
+constexpr InitiateMeterClaimRequest::ParseTableT_ InitiateMeterClaimRequest::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(InitiateMeterClaimRequest, _impl_._has_bits_),
+      0, // no _extensions_
+      2, 8,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967292,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      2,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::iot::v1::InitiateMeterClaimRequest>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // string meter_id = 2 [json_name = "meterId"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(InitiateMeterClaimRequest, _impl_.meter_id_)}},
+      // string user_reference = 1 [json_name = "userReference"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(InitiateMeterClaimRequest, _impl_.user_reference_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string user_reference = 1 [json_name = "userReference"];
+      {PROTOBUF_FIELD_OFFSET(InitiateMeterClaimRequest, _impl_.user_reference_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string meter_id = 2 [json_name = "meterId"];
+      {PROTOBUF_FIELD_OFFSET(InitiateMeterClaimRequest, _impl_.meter_id_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\46\16\10\0\0\0\0\0"
+      "gridx.iot.v1.InitiateMeterClaimRequest"
+      "user_reference"
+      "meter_id"
+    }},
+  };
+}
+
+
+inline constexpr InitiateMeterClaimRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        user_reference_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        meter_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+constexpr InitiateMeterClaimRequest::InitiateMeterClaimRequest(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL InitiateMeterClaimRequest::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) InitiateMeterClaimRequest(arena);
+}
+constexpr auto InitiateMeterClaimRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(InitiateMeterClaimRequest), alignof(InitiateMeterClaimRequest));
+}
+constexpr auto InitiateMeterClaimRequest::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &InitiateMeterClaimRequest::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<InitiateMeterClaimRequest>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &InitiateMeterClaimRequest::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<InitiateMeterClaimRequest>(), &InitiateMeterClaimRequest::ByteSizeLong,
+              &InitiateMeterClaimRequest::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(InitiateMeterClaimRequest, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[20],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct InitiateMeterClaimRequestGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr InitiateMeterClaimRequestGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 InitiateMeterClaimRequest_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(InitiateMeterClaimRequest::InternalGenerateClassData_(
+            _default, &InitiateMeterClaimRequest_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<InitiateMeterClaimRequest>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~InitiateMeterClaimRequestGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) InitiateMeterClaimRequest _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<InitiateMeterClaimRequest>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(InitiateMeterClaimRequestGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST InitiateMeterClaimRequestGlobalsTypeInternal InitiateMeterClaimRequest_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* InitiateMeterClaimRequest_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return InitiateMeterClaimRequest_globals_.GetClassData();
+#else
+  return InitiateMeterClaimRequest_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
 class Grid::_Internal {
  public:
   using HasBits = decltype(::std::declval<Grid>()._impl_._has_bits_);
@@ -583,6 +1548,638 @@ const ::_pbi::ClassData* Grid_get_class_data() {
   return Grid_globals_.GetClassData();
 #else
   return Grid_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class GetRegistrationStatusResponse::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<GetRegistrationStatusResponse>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(GetRegistrationStatusResponse, _impl_._has_bits_);
+};
+
+constexpr GetRegistrationStatusResponse::ParseTableT_ GetRegistrationStatusResponse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(GetRegistrationStatusResponse, _impl_._has_bits_),
+      0, // no _extensions_
+      3, 24,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967288,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      3,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::iot::v1::GetRegistrationStatusResponse>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      {::_pbi::TcParser::MiniParse, {}},
+      // string registration_id = 1 [json_name = "registrationId"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(GetRegistrationStatusResponse, _impl_.registration_id_)}},
+      // string meter_id = 2 [json_name = "meterId"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(GetRegistrationStatusResponse, _impl_.meter_id_)}},
+      // string approval_status = 3 [json_name = "approvalStatus"];
+      {::_pbi::TcParser::FastUS1,
+       {26, 2, 0,
+        PROTOBUF_FIELD_OFFSET(GetRegistrationStatusResponse, _impl_.approval_status_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string registration_id = 1 [json_name = "registrationId"];
+      {PROTOBUF_FIELD_OFFSET(GetRegistrationStatusResponse, _impl_.registration_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string meter_id = 2 [json_name = "meterId"];
+      {PROTOBUF_FIELD_OFFSET(GetRegistrationStatusResponse, _impl_.meter_id_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string approval_status = 3 [json_name = "approvalStatus"];
+      {PROTOBUF_FIELD_OFFSET(GetRegistrationStatusResponse, _impl_.approval_status_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\52\17\10\17\0\0\0\0"
+      "gridx.iot.v1.GetRegistrationStatusResponse"
+      "registration_id"
+      "meter_id"
+      "approval_status"
+    }},
+  };
+}
+
+
+inline constexpr GetRegistrationStatusResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        registration_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        meter_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        approval_status_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+constexpr GetRegistrationStatusResponse::GetRegistrationStatusResponse(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL GetRegistrationStatusResponse::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) GetRegistrationStatusResponse(arena);
+}
+constexpr auto GetRegistrationStatusResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(GetRegistrationStatusResponse), alignof(GetRegistrationStatusResponse));
+}
+constexpr auto GetRegistrationStatusResponse::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &GetRegistrationStatusResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<GetRegistrationStatusResponse>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &GetRegistrationStatusResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<GetRegistrationStatusResponse>(), &GetRegistrationStatusResponse::ByteSizeLong,
+              &GetRegistrationStatusResponse::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(GetRegistrationStatusResponse, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[23],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct GetRegistrationStatusResponseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr GetRegistrationStatusResponseGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 GetRegistrationStatusResponse_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(GetRegistrationStatusResponse::InternalGenerateClassData_(
+            _default, &GetRegistrationStatusResponse_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<GetRegistrationStatusResponse>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~GetRegistrationStatusResponseGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) GetRegistrationStatusResponse _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<GetRegistrationStatusResponse>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(GetRegistrationStatusResponseGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST GetRegistrationStatusResponseGlobalsTypeInternal GetRegistrationStatusResponse_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* GetRegistrationStatusResponse_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return GetRegistrationStatusResponse_globals_.GetClassData();
+#else
+  return GetRegistrationStatusResponse_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class GetRegistrationStatusRequest::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<GetRegistrationStatusRequest>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(GetRegistrationStatusRequest, _impl_._has_bits_);
+};
+
+constexpr GetRegistrationStatusRequest::ParseTableT_ GetRegistrationStatusRequest::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(GetRegistrationStatusRequest, _impl_._has_bits_),
+      0, // no _extensions_
+      1, 0,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967294,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      1,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::iot::v1::GetRegistrationStatusRequest>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // string registration_id = 1 [json_name = "registrationId"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(GetRegistrationStatusRequest, _impl_.registration_id_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string registration_id = 1 [json_name = "registrationId"];
+      {PROTOBUF_FIELD_OFFSET(GetRegistrationStatusRequest, _impl_.registration_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\51\17\0\0\0\0\0\0"
+      "gridx.iot.v1.GetRegistrationStatusRequest"
+      "registration_id"
+    }},
+  };
+}
+
+
+inline constexpr GetRegistrationStatusRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        registration_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+constexpr GetRegistrationStatusRequest::GetRegistrationStatusRequest(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL GetRegistrationStatusRequest::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) GetRegistrationStatusRequest(arena);
+}
+constexpr auto GetRegistrationStatusRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(GetRegistrationStatusRequest), alignof(GetRegistrationStatusRequest));
+}
+constexpr auto GetRegistrationStatusRequest::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &GetRegistrationStatusRequest::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<GetRegistrationStatusRequest>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &GetRegistrationStatusRequest::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<GetRegistrationStatusRequest>(), &GetRegistrationStatusRequest::ByteSizeLong,
+              &GetRegistrationStatusRequest::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(GetRegistrationStatusRequest, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[22],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct GetRegistrationStatusRequestGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr GetRegistrationStatusRequestGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 GetRegistrationStatusRequest_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(GetRegistrationStatusRequest::InternalGenerateClassData_(
+            _default, &GetRegistrationStatusRequest_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<GetRegistrationStatusRequest>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~GetRegistrationStatusRequestGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) GetRegistrationStatusRequest _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<GetRegistrationStatusRequest>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(GetRegistrationStatusRequestGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST GetRegistrationStatusRequestGlobalsTypeInternal GetRegistrationStatusRequest_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* GetRegistrationStatusRequest_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return GetRegistrationStatusRequest_globals_.GetClassData();
+#else
+  return GetRegistrationStatusRequest_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class GetRegistrationByUserResponse::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<GetRegistrationByUserResponse>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(GetRegistrationByUserResponse, _impl_._has_bits_);
+};
+
+constexpr GetRegistrationByUserResponse::ParseTableT_ GetRegistrationByUserResponse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(GetRegistrationByUserResponse, _impl_._has_bits_),
+      0, // no _extensions_
+      4, 24,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967280,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      4,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::iot::v1::GetRegistrationByUserResponse>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // string approval_status = 4 [json_name = "approvalStatus"];
+      {::_pbi::TcParser::FastUS1,
+       {34, 2, 0,
+        PROTOBUF_FIELD_OFFSET(GetRegistrationByUserResponse, _impl_.approval_status_)}},
+      // bool has_meter = 1 [json_name = "hasMeter"];
+      {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(GetRegistrationByUserResponse, _impl_.has_meter_), 3>(),
+       {8, 3, 0,
+        PROTOBUF_FIELD_OFFSET(GetRegistrationByUserResponse, _impl_.has_meter_)}},
+      // string registration_id = 2 [json_name = "registrationId"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 0, 0,
+        PROTOBUF_FIELD_OFFSET(GetRegistrationByUserResponse, _impl_.registration_id_)}},
+      // string meter_id = 3 [json_name = "meterId"];
+      {::_pbi::TcParser::FastUS1,
+       {26, 1, 0,
+        PROTOBUF_FIELD_OFFSET(GetRegistrationByUserResponse, _impl_.meter_id_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // bool has_meter = 1 [json_name = "hasMeter"];
+      {PROTOBUF_FIELD_OFFSET(GetRegistrationByUserResponse, _impl_.has_meter_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kBool)},
+      // string registration_id = 2 [json_name = "registrationId"];
+      {PROTOBUF_FIELD_OFFSET(GetRegistrationByUserResponse, _impl_.registration_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string meter_id = 3 [json_name = "meterId"];
+      {PROTOBUF_FIELD_OFFSET(GetRegistrationByUserResponse, _impl_.meter_id_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string approval_status = 4 [json_name = "approvalStatus"];
+      {PROTOBUF_FIELD_OFFSET(GetRegistrationByUserResponse, _impl_.approval_status_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\52\0\17\10\17\0\0\0"
+      "gridx.iot.v1.GetRegistrationByUserResponse"
+      "registration_id"
+      "meter_id"
+      "approval_status"
+    }},
+  };
+}
+
+
+inline constexpr GetRegistrationByUserResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        registration_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        meter_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        approval_status_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        has_meter_{false} {}
+
+template <typename>
+constexpr GetRegistrationByUserResponse::GetRegistrationByUserResponse(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL GetRegistrationByUserResponse::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) GetRegistrationByUserResponse(arena);
+}
+constexpr auto GetRegistrationByUserResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(GetRegistrationByUserResponse), alignof(GetRegistrationByUserResponse));
+}
+constexpr auto GetRegistrationByUserResponse::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &GetRegistrationByUserResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<GetRegistrationByUserResponse>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &GetRegistrationByUserResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<GetRegistrationByUserResponse>(), &GetRegistrationByUserResponse::ByteSizeLong,
+              &GetRegistrationByUserResponse::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(GetRegistrationByUserResponse, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[29],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct GetRegistrationByUserResponseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr GetRegistrationByUserResponseGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 GetRegistrationByUserResponse_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(GetRegistrationByUserResponse::InternalGenerateClassData_(
+            _default, &GetRegistrationByUserResponse_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<GetRegistrationByUserResponse>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~GetRegistrationByUserResponseGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) GetRegistrationByUserResponse _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<GetRegistrationByUserResponse>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(GetRegistrationByUserResponseGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST GetRegistrationByUserResponseGlobalsTypeInternal GetRegistrationByUserResponse_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* GetRegistrationByUserResponse_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return GetRegistrationByUserResponse_globals_.GetClassData();
+#else
+  return GetRegistrationByUserResponse_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class GetRegistrationByUserRequest::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<GetRegistrationByUserRequest>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(GetRegistrationByUserRequest, _impl_._has_bits_);
+};
+
+constexpr GetRegistrationByUserRequest::ParseTableT_ GetRegistrationByUserRequest::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(GetRegistrationByUserRequest, _impl_._has_bits_),
+      0, // no _extensions_
+      1, 0,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967294,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      1,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::iot::v1::GetRegistrationByUserRequest>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // string user_reference = 1 [json_name = "userReference"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(GetRegistrationByUserRequest, _impl_.user_reference_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string user_reference = 1 [json_name = "userReference"];
+      {PROTOBUF_FIELD_OFFSET(GetRegistrationByUserRequest, _impl_.user_reference_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\51\16\0\0\0\0\0\0"
+      "gridx.iot.v1.GetRegistrationByUserRequest"
+      "user_reference"
+    }},
+  };
+}
+
+
+inline constexpr GetRegistrationByUserRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        user_reference_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+constexpr GetRegistrationByUserRequest::GetRegistrationByUserRequest(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL GetRegistrationByUserRequest::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) GetRegistrationByUserRequest(arena);
+}
+constexpr auto GetRegistrationByUserRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(GetRegistrationByUserRequest), alignof(GetRegistrationByUserRequest));
+}
+constexpr auto GetRegistrationByUserRequest::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &GetRegistrationByUserRequest::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<GetRegistrationByUserRequest>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &GetRegistrationByUserRequest::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<GetRegistrationByUserRequest>(), &GetRegistrationByUserRequest::ByteSizeLong,
+              &GetRegistrationByUserRequest::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(GetRegistrationByUserRequest, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[28],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct GetRegistrationByUserRequestGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr GetRegistrationByUserRequestGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 GetRegistrationByUserRequest_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(GetRegistrationByUserRequest::InternalGenerateClassData_(
+            _default, &GetRegistrationByUserRequest_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<GetRegistrationByUserRequest>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~GetRegistrationByUserRequestGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) GetRegistrationByUserRequest _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<GetRegistrationByUserRequest>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(GetRegistrationByUserRequestGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST GetRegistrationByUserRequestGlobalsTypeInternal GetRegistrationByUserRequest_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* GetRegistrationByUserRequest_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return GetRegistrationByUserRequest_globals_.GetClassData();
+#else
+  return GetRegistrationByUserRequest_class_data_.base();
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 }
 }  // namespace
@@ -3753,6 +5350,80 @@ const ::uint32_t
         1,
         3,
         2,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::InitiateMeterClaimRequest, _impl_._has_bits_),
+        5, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::InitiateMeterClaimRequest, _impl_.user_reference_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::InitiateMeterClaimRequest, _impl_.meter_id_),
+        0,
+        1,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::InitiateMeterClaimResponse, _impl_._has_bits_),
+        6, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::InitiateMeterClaimResponse, _impl_.registration_id_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::InitiateMeterClaimResponse, _impl_.status_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::InitiateMeterClaimResponse, _impl_.message_),
+        0,
+        1,
+        2,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::GetRegistrationStatusRequest, _impl_._has_bits_),
+        4, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::GetRegistrationStatusRequest, _impl_.registration_id_),
+        0,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::GetRegistrationStatusResponse, _impl_._has_bits_),
+        6, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::GetRegistrationStatusResponse, _impl_.registration_id_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::GetRegistrationStatusResponse, _impl_.meter_id_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::GetRegistrationStatusResponse, _impl_.approval_status_),
+        0,
+        1,
+        2,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ValidateDeviceAssociationRequest, _impl_._has_bits_),
+        4, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ValidateDeviceAssociationRequest, _impl_.meter_id_),
+        0,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ValidateDeviceAssociationResponse, _impl_._has_bits_),
+        5, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ValidateDeviceAssociationResponse, _impl_.is_registered_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ValidateDeviceAssociationResponse, _impl_.primary_user_id_),
+        1,
+        0,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationRequest, _impl_._has_bits_),
+        5, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationRequest, _impl_.registration_id_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationRequest, _impl_.user_reference_),
+        0,
+        1,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationResponse, _impl_._has_bits_),
+        6, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationResponse, _impl_.registration_id_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationResponse, _impl_.meter_id_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::ReverifyRegistrationResponse, _impl_.message_),
+        0,
+        1,
+        2,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::GetRegistrationByUserRequest, _impl_._has_bits_),
+        4, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::GetRegistrationByUserRequest, _impl_.user_reference_),
+        0,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::GetRegistrationByUserResponse, _impl_._has_bits_),
+        7, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::GetRegistrationByUserResponse, _impl_.has_meter_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::GetRegistrationByUserResponse, _impl_.registration_id_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::GetRegistrationByUserResponse, _impl_.meter_id_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::GetRegistrationByUserResponse, _impl_.approval_status_),
+        3,
+        0,
+        1,
+        2,
 };
 
 static const ::_pbi::MigrationSchema
@@ -3777,6 +5448,16 @@ static const ::_pbi::MigrationSchema
         {189, sizeof(::gridx::iot::v1::GetEnergySeriesResponse)},
         {194, sizeof(::gridx::iot::v1::GetEnergySummaryRequest)},
         {205, sizeof(::gridx::iot::v1::GetEnergySummaryResponse)},
+        {216, sizeof(::gridx::iot::v1::InitiateMeterClaimRequest)},
+        {223, sizeof(::gridx::iot::v1::InitiateMeterClaimResponse)},
+        {232, sizeof(::gridx::iot::v1::GetRegistrationStatusRequest)},
+        {237, sizeof(::gridx::iot::v1::GetRegistrationStatusResponse)},
+        {246, sizeof(::gridx::iot::v1::ValidateDeviceAssociationRequest)},
+        {251, sizeof(::gridx::iot::v1::ValidateDeviceAssociationResponse)},
+        {258, sizeof(::gridx::iot::v1::ReverifyRegistrationRequest)},
+        {265, sizeof(::gridx::iot::v1::ReverifyRegistrationResponse)},
+        {274, sizeof(::gridx::iot::v1::GetRegistrationByUserRequest)},
+        {279, sizeof(::gridx::iot::v1::GetRegistrationByUserResponse)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
     file_message_globals[] = {
@@ -3800,6 +5481,16 @@ static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
         &::gridx::iot::v1::GetEnergySeriesResponse_globals_,
         &::gridx::iot::v1::GetEnergySummaryRequest_globals_,
         &::gridx::iot::v1::GetEnergySummaryResponse_globals_,
+        &::gridx::iot::v1::InitiateMeterClaimRequest_globals_,
+        &::gridx::iot::v1::InitiateMeterClaimResponse_globals_,
+        &::gridx::iot::v1::GetRegistrationStatusRequest_globals_,
+        &::gridx::iot::v1::GetRegistrationStatusResponse_globals_,
+        &::gridx::iot::v1::ValidateDeviceAssociationRequest_globals_,
+        &::gridx::iot::v1::ValidateDeviceAssociationResponse_globals_,
+        &::gridx::iot::v1::ReverifyRegistrationRequest_globals_,
+        &::gridx::iot::v1::ReverifyRegistrationResponse_globals_,
+        &::gridx::iot::v1::GetRegistrationByUserRequest_globals_,
+        &::gridx::iot::v1::GetRegistrationByUserResponse_globals_,
 };
 const char descriptor_table_protodef_gridx_2fiot_2fv1_2fiot_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
@@ -3899,29 +5590,71 @@ const char descriptor_table_protodef_gridx_2fiot_2fv1_2fiot_2eproto[] ABSL_ATTRI
     "s\0225\n\024self_consumption_pct\030\003 \001(\001H\000R\022selfC"
     "onsumptionPct\210\001\001\0229\n\013peak_demand\030\004 \001(\0132\030."
     "gridx.iot.v1.PeakDemandR\npeakDemandB\027\n\025_"
-    "self_consumption_pct*\212\001\n\013DeviceClass\022\034\n\030"
-    "DEVICE_CLASS_UNSPECIFIED\020\000\022\031\n\025DEVICE_CLA"
-    "SS_CONSUMER\020\001\022%\n!DEVICE_CLASS_RESIDENTIA"
-    "L_PROSUMER\020\002\022\033\n\027DEVICE_CLASS_COMMERCIAL\020"
-    "\003*O\n\tAssetType\022\032\n\026ASSET_TYPE_UNSPECIFIED"
-    "\020\000\022\023\n\017ASSET_TYPE_BESS\020\001\022\021\n\rASSET_TYPE_EV"
-    "\020\002*^\n\013MeterStatus\022\034\n\030METER_STATUS_UNSPEC"
-    "IFIED\020\000\022\027\n\023METER_STATUS_ONLINE\020\001\022\030\n\024METE"
-    "R_STATUS_OFFLINE\020\0022\316\003\n\nIotService\022O\n\nLis"
-    "tHouses\022\037.gridx.iot.v1.ListHousesRequest"
-    "\032 .gridx.iot.v1.ListHousesResponse\022I\n\010Ge"
-    "tHouse\022\035.gridx.iot.v1.GetHouseRequest\032\036."
-    "gridx.iot.v1.GetHouseResponse\022a\n\020GetLate"
-    "stReading\022%.gridx.iot.v1.GetLatestReadin"
-    "gRequest\032&.gridx.iot.v1.GetLatestReading"
-    "Response\022^\n\017GetEnergySeries\022$.gridx.iot."
-    "v1.GetEnergySeriesRequest\032%.gridx.iot.v1"
-    ".GetEnergySeriesResponse\022a\n\020GetEnergySum"
-    "mary\022%.gridx.iot.v1.GetEnergySummaryRequ"
-    "est\032&.gridx.iot.v1.GetEnergySummaryRespo"
-    "nseBFZDgithub.com/p2p-energy-trading-pla"
-    "tform/go-sdk/gen/gridx/iot/v1;iotv1b\006pro"
-    "to3"
+    "self_consumption_pct\"]\n\031InitiateMeterCla"
+    "imRequest\022%\n\016user_reference\030\001 \001(\tR\ruserR"
+    "eference\022\031\n\010meter_id\030\002 \001(\tR\007meterId\"w\n\032I"
+    "nitiateMeterClaimResponse\022\'\n\017registratio"
+    "n_id\030\001 \001(\tR\016registrationId\022\026\n\006status\030\002 \001"
+    "(\tR\006status\022\030\n\007message\030\003 \001(\tR\007message\"G\n\034"
+    "GetRegistrationStatusRequest\022\'\n\017registra"
+    "tion_id\030\001 \001(\tR\016registrationId\"\214\001\n\035GetReg"
+    "istrationStatusResponse\022\'\n\017registration_"
+    "id\030\001 \001(\tR\016registrationId\022\031\n\010meter_id\030\002 \001"
+    "(\tR\007meterId\022\'\n\017approval_status\030\003 \001(\tR\016ap"
+    "provalStatus\"=\n ValidateDeviceAssociatio"
+    "nRequest\022\031\n\010meter_id\030\001 \001(\tR\007meterId\"p\n!V"
+    "alidateDeviceAssociationResponse\022#\n\ris_r"
+    "egistered\030\002 \001(\010R\014isRegistered\022&\n\017primary"
+    "_user_id\030\003 \001(\tR\rprimaryUserId\"m\n\033Reverif"
+    "yRegistrationRequest\022\'\n\017registration_id\030"
+    "\001 \001(\tR\016registrationId\022%\n\016user_reference\030"
+    "\002 \001(\tR\ruserReference\"|\n\034ReverifyRegistra"
+    "tionResponse\022\'\n\017registration_id\030\001 \001(\tR\016r"
+    "egistrationId\022\031\n\010meter_id\030\002 \001(\tR\007meterId"
+    "\022\030\n\007message\030\003 \001(\tR\007message\"E\n\034GetRegistr"
+    "ationByUserRequest\022%\n\016user_reference\030\001 \001"
+    "(\tR\ruserReference\"\251\001\n\035GetRegistrationByU"
+    "serResponse\022\033\n\thas_meter\030\001 \001(\010R\010hasMeter"
+    "\022\'\n\017registration_id\030\002 \001(\tR\016registrationI"
+    "d\022\031\n\010meter_id\030\003 \001(\tR\007meterId\022\'\n\017approval"
+    "_status\030\004 \001(\tR\016approvalStatus*\212\001\n\013Device"
+    "Class\022\034\n\030DEVICE_CLASS_UNSPECIFIED\020\000\022\031\n\025D"
+    "EVICE_CLASS_CONSUMER\020\001\022%\n!DEVICE_CLASS_R"
+    "ESIDENTIAL_PROSUMER\020\002\022\033\n\027DEVICE_CLASS_CO"
+    "MMERCIAL\020\003*O\n\tAssetType\022\032\n\026ASSET_TYPE_UN"
+    "SPECIFIED\020\000\022\023\n\017ASSET_TYPE_BESS\020\001\022\021\n\rASSE"
+    "T_TYPE_EV\020\002*^\n\013MeterStatus\022\034\n\030METER_STAT"
+    "US_UNSPECIFIED\020\000\022\027\n\023METER_STATUS_ONLINE\020"
+    "\001\022\030\n\024METER_STATUS_OFFLINE\020\0022\316\003\n\nIotServi"
+    "ce\022O\n\nListHouses\022\037.gridx.iot.v1.ListHous"
+    "esRequest\032 .gridx.iot.v1.ListHousesRespo"
+    "nse\022I\n\010GetHouse\022\035.gridx.iot.v1.GetHouseR"
+    "equest\032\036.gridx.iot.v1.GetHouseResponse\022a"
+    "\n\020GetLatestReading\022%.gridx.iot.v1.GetLat"
+    "estReadingRequest\032&.gridx.iot.v1.GetLate"
+    "stReadingResponse\022^\n\017GetEnergySeries\022$.g"
+    "ridx.iot.v1.GetEnergySeriesRequest\032%.gri"
+    "dx.iot.v1.GetEnergySeriesResponse\022a\n\020Get"
+    "EnergySummary\022%.gridx.iot.v1.GetEnergySu"
+    "mmaryRequest\032&.gridx.iot.v1.GetEnergySum"
+    "maryResponse2\325\004\n\031DeviceRegistrationServi"
+    "ce\022g\n\022InitiateMeterClaim\022\'.gridx.iot.v1."
+    "InitiateMeterClaimRequest\032(.gridx.iot.v1"
+    ".InitiateMeterClaimResponse\022p\n\025GetRegist"
+    "rationStatus\022*.gridx.iot.v1.GetRegistrat"
+    "ionStatusRequest\032+.gridx.iot.v1.GetRegis"
+    "trationStatusResponse\022|\n\031ValidateDeviceA"
+    "ssociation\022..gridx.iot.v1.ValidateDevice"
+    "AssociationRequest\032/.gridx.iot.v1.Valida"
+    "teDeviceAssociationResponse\022m\n\024ReverifyR"
+    "egistration\022).gridx.iot.v1.ReverifyRegis"
+    "trationRequest\032*.gridx.iot.v1.ReverifyRe"
+    "gistrationResponse\022p\n\025GetRegistrationByU"
+    "ser\022*.gridx.iot.v1.GetRegistrationByUser"
+    "Request\032+.gridx.iot.v1.GetRegistrationBy"
+    "UserResponseBFZDgithub.com/p2p-energy-tr"
+    "ading-platform/go-sdk/gen/gridx/iot/v1;i"
+    "otv1b\006proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto_deps[2] = {
@@ -3932,13 +5665,13 @@ static ::absl::once_flag descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto = {
     false,
     false,
-    4723,
+    6412,
     descriptor_table_protodef_gridx_2fiot_2fv1_2fiot_2eproto,
     "gridx/iot/v1/iot.proto",
     &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto_once,
     descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto_deps,
     2,
-    20,
+    30,
     schemas,
     file_message_globals,
     TableStruct_gridx_2fiot_2fv1_2fiot_2eproto::offsets,
@@ -9903,6 +11636,2557 @@ void GetEnergySummaryResponse::InternalSwap(GetEnergySummaryResponse* PROTOBUF_R
 }
 
 ::google::protobuf::Metadata GetEnergySummaryResponse::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+InitiateMeterClaimRequest::InitiateMeterClaimRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, InitiateMeterClaimRequest_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.iot.v1.InitiateMeterClaimRequest)
+}
+PROTOBUF_NDEBUG_INLINE InitiateMeterClaimRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::iot::v1::InitiateMeterClaimRequest& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        user_reference_(arena, from.user_reference_),
+        meter_id_(arena, from.meter_id_) {}
+
+InitiateMeterClaimRequest::InitiateMeterClaimRequest(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const InitiateMeterClaimRequest& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, InitiateMeterClaimRequest_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  InitiateMeterClaimRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:gridx.iot.v1.InitiateMeterClaimRequest)
+}
+PROTOBUF_NDEBUG_INLINE InitiateMeterClaimRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        user_reference_(arena),
+        meter_id_(arena) {}
+
+inline void InitiateMeterClaimRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+InitiateMeterClaimRequest::~InitiateMeterClaimRequest() {
+  // @@protoc_insertion_point(destructor:gridx.iot.v1.InitiateMeterClaimRequest)
+  SharedDtor(*this);
+}
+inline void InitiateMeterClaimRequest::SharedDtor(MessageLite& self) {
+  InitiateMeterClaimRequest& this_ = static_cast<InitiateMeterClaimRequest&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.user_reference_.Destroy();
+  this_._impl_.meter_id_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull InitiateMeterClaimRequest_class_data_ =
+        InitiateMeterClaimRequest::InternalGenerateClassData_(InitiateMeterClaimRequest_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+InitiateMeterClaimRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&InitiateMeterClaimRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(InitiateMeterClaimRequest_class_data_.tc_table);
+  return InitiateMeterClaimRequest_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+InitiateMeterClaimRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&InitiateMeterClaimRequest_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&InitiateMeterClaimRequest_globals_));
+  return InitiateMeterClaimRequest_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const InitiateMeterClaimRequest::ParseTableT_
+    InitiateMeterClaimRequest::_table_ =
+        InitiateMeterClaimRequest::InternalGenerateParseTable_(InitiateMeterClaimRequest_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void InitiateMeterClaimRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.iot.v1.InitiateMeterClaimRequest)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      _impl_.user_reference_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      _impl_.meter_id_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL InitiateMeterClaimRequest::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const InitiateMeterClaimRequest& this_ = static_cast<const InitiateMeterClaimRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL InitiateMeterClaimRequest::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const InitiateMeterClaimRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.iot.v1.InitiateMeterClaimRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string user_reference = 1 [json_name = "userReference"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_user_reference().empty()) {
+      const ::std::string& _s = this_._internal_user_reference();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.InitiateMeterClaimRequest.user_reference");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  // string meter_id = 2 [json_name = "meterId"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (!this_._internal_meter_id().empty()) {
+      const ::std::string& _s = this_._internal_meter_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.InitiateMeterClaimRequest.meter_id");
+      target = stream->WriteStringMaybeAliased(2, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.iot.v1.InitiateMeterClaimRequest)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t InitiateMeterClaimRequest::ByteSizeLong(const MessageLite& base) {
+  const InitiateMeterClaimRequest& this_ = static_cast<const InitiateMeterClaimRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t InitiateMeterClaimRequest::ByteSizeLong() const {
+  const InitiateMeterClaimRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.iot.v1.InitiateMeterClaimRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    // string user_reference = 1 [json_name = "userReference"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_user_reference().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_user_reference());
+      }
+    }
+    // string meter_id = 2 [json_name = "meterId"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!this_._internal_meter_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_meter_id());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void InitiateMeterClaimRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<InitiateMeterClaimRequest*>(&to_msg);
+  auto& from = static_cast<const InitiateMeterClaimRequest&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.iot.v1.InitiateMeterClaimRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_user_reference().empty()) {
+        _this->_internal_set_user_reference(from._internal_user_reference());
+      } else {
+        if (_this->_impl_.user_reference_.IsDefault()) {
+          _this->_internal_set_user_reference("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!from._internal_meter_id().empty()) {
+        _this->_internal_set_meter_id(from._internal_meter_id());
+      } else {
+        if (_this->_impl_.meter_id_.IsDefault()) {
+          _this->_internal_set_meter_id("");
+        }
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void InitiateMeterClaimRequest::CopyFrom(const InitiateMeterClaimRequest& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.iot.v1.InitiateMeterClaimRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void InitiateMeterClaimRequest::InternalSwap(InitiateMeterClaimRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_reference_, &other->_impl_.user_reference_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.meter_id_, &other->_impl_.meter_id_, arena);
+}
+
+::google::protobuf::Metadata InitiateMeterClaimRequest::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+InitiateMeterClaimResponse::InitiateMeterClaimResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, InitiateMeterClaimResponse_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.iot.v1.InitiateMeterClaimResponse)
+}
+PROTOBUF_NDEBUG_INLINE InitiateMeterClaimResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::iot::v1::InitiateMeterClaimResponse& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        registration_id_(arena, from.registration_id_),
+        status_(arena, from.status_),
+        message_(arena, from.message_) {}
+
+InitiateMeterClaimResponse::InitiateMeterClaimResponse(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const InitiateMeterClaimResponse& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, InitiateMeterClaimResponse_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  InitiateMeterClaimResponse* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:gridx.iot.v1.InitiateMeterClaimResponse)
+}
+PROTOBUF_NDEBUG_INLINE InitiateMeterClaimResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        registration_id_(arena),
+        status_(arena),
+        message_(arena) {}
+
+inline void InitiateMeterClaimResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+InitiateMeterClaimResponse::~InitiateMeterClaimResponse() {
+  // @@protoc_insertion_point(destructor:gridx.iot.v1.InitiateMeterClaimResponse)
+  SharedDtor(*this);
+}
+inline void InitiateMeterClaimResponse::SharedDtor(MessageLite& self) {
+  InitiateMeterClaimResponse& this_ = static_cast<InitiateMeterClaimResponse&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.registration_id_.Destroy();
+  this_._impl_.status_.Destroy();
+  this_._impl_.message_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull InitiateMeterClaimResponse_class_data_ =
+        InitiateMeterClaimResponse::InternalGenerateClassData_(InitiateMeterClaimResponse_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+InitiateMeterClaimResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&InitiateMeterClaimResponse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(InitiateMeterClaimResponse_class_data_.tc_table);
+  return InitiateMeterClaimResponse_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+InitiateMeterClaimResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&InitiateMeterClaimResponse_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&InitiateMeterClaimResponse_globals_));
+  return InitiateMeterClaimResponse_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const InitiateMeterClaimResponse::ParseTableT_
+    InitiateMeterClaimResponse::_table_ =
+        InitiateMeterClaimResponse::InternalGenerateParseTable_(InitiateMeterClaimResponse_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void InitiateMeterClaimResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.iot.v1.InitiateMeterClaimResponse)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      _impl_.registration_id_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      _impl_.status_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      _impl_.message_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL InitiateMeterClaimResponse::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const InitiateMeterClaimResponse& this_ = static_cast<const InitiateMeterClaimResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL InitiateMeterClaimResponse::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const InitiateMeterClaimResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.iot.v1.InitiateMeterClaimResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string registration_id = 1 [json_name = "registrationId"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_registration_id().empty()) {
+      const ::std::string& _s = this_._internal_registration_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.InitiateMeterClaimResponse.registration_id");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  // string status = 2 [json_name = "status"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (!this_._internal_status().empty()) {
+      const ::std::string& _s = this_._internal_status();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.InitiateMeterClaimResponse.status");
+      target = stream->WriteStringMaybeAliased(2, _s, target);
+    }
+  }
+
+  // string message = 3 [json_name = "message"];
+  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (!this_._internal_message().empty()) {
+      const ::std::string& _s = this_._internal_message();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.InitiateMeterClaimResponse.message");
+      target = stream->WriteStringMaybeAliased(3, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.iot.v1.InitiateMeterClaimResponse)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t InitiateMeterClaimResponse::ByteSizeLong(const MessageLite& base) {
+  const InitiateMeterClaimResponse& this_ = static_cast<const InitiateMeterClaimResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t InitiateMeterClaimResponse::ByteSizeLong() const {
+  const InitiateMeterClaimResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.iot.v1.InitiateMeterClaimResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    // string registration_id = 1 [json_name = "registrationId"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_registration_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_registration_id());
+      }
+    }
+    // string status = 2 [json_name = "status"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!this_._internal_status().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_status());
+      }
+    }
+    // string message = 3 [json_name = "message"];
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!this_._internal_message().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_message());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void InitiateMeterClaimResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<InitiateMeterClaimResponse*>(&to_msg);
+  auto& from = static_cast<const InitiateMeterClaimResponse&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.iot.v1.InitiateMeterClaimResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_registration_id().empty()) {
+        _this->_internal_set_registration_id(from._internal_registration_id());
+      } else {
+        if (_this->_impl_.registration_id_.IsDefault()) {
+          _this->_internal_set_registration_id("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!from._internal_status().empty()) {
+        _this->_internal_set_status(from._internal_status());
+      } else {
+        if (_this->_impl_.status_.IsDefault()) {
+          _this->_internal_set_status("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!from._internal_message().empty()) {
+        _this->_internal_set_message(from._internal_message());
+      } else {
+        if (_this->_impl_.message_.IsDefault()) {
+          _this->_internal_set_message("");
+        }
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void InitiateMeterClaimResponse::CopyFrom(const InitiateMeterClaimResponse& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.iot.v1.InitiateMeterClaimResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void InitiateMeterClaimResponse::InternalSwap(InitiateMeterClaimResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.registration_id_, &other->_impl_.registration_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.status_, &other->_impl_.status_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.message_, &other->_impl_.message_, arena);
+}
+
+::google::protobuf::Metadata InitiateMeterClaimResponse::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+GetRegistrationStatusRequest::GetRegistrationStatusRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, GetRegistrationStatusRequest_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.iot.v1.GetRegistrationStatusRequest)
+}
+PROTOBUF_NDEBUG_INLINE GetRegistrationStatusRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::iot::v1::GetRegistrationStatusRequest& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        registration_id_(arena, from.registration_id_) {}
+
+GetRegistrationStatusRequest::GetRegistrationStatusRequest(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const GetRegistrationStatusRequest& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, GetRegistrationStatusRequest_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  GetRegistrationStatusRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:gridx.iot.v1.GetRegistrationStatusRequest)
+}
+PROTOBUF_NDEBUG_INLINE GetRegistrationStatusRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        registration_id_(arena) {}
+
+inline void GetRegistrationStatusRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+GetRegistrationStatusRequest::~GetRegistrationStatusRequest() {
+  // @@protoc_insertion_point(destructor:gridx.iot.v1.GetRegistrationStatusRequest)
+  SharedDtor(*this);
+}
+inline void GetRegistrationStatusRequest::SharedDtor(MessageLite& self) {
+  GetRegistrationStatusRequest& this_ = static_cast<GetRegistrationStatusRequest&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.registration_id_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull GetRegistrationStatusRequest_class_data_ =
+        GetRegistrationStatusRequest::InternalGenerateClassData_(GetRegistrationStatusRequest_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+GetRegistrationStatusRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&GetRegistrationStatusRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(GetRegistrationStatusRequest_class_data_.tc_table);
+  return GetRegistrationStatusRequest_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+GetRegistrationStatusRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&GetRegistrationStatusRequest_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&GetRegistrationStatusRequest_globals_));
+  return GetRegistrationStatusRequest_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const GetRegistrationStatusRequest::ParseTableT_
+    GetRegistrationStatusRequest::_table_ =
+        GetRegistrationStatusRequest::InternalGenerateParseTable_(GetRegistrationStatusRequest_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void GetRegistrationStatusRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.iot.v1.GetRegistrationStatusRequest)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    _impl_.registration_id_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL GetRegistrationStatusRequest::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const GetRegistrationStatusRequest& this_ = static_cast<const GetRegistrationStatusRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL GetRegistrationStatusRequest::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const GetRegistrationStatusRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.iot.v1.GetRegistrationStatusRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string registration_id = 1 [json_name = "registrationId"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_registration_id().empty()) {
+      const ::std::string& _s = this_._internal_registration_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.GetRegistrationStatusRequest.registration_id");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.iot.v1.GetRegistrationStatusRequest)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t GetRegistrationStatusRequest::ByteSizeLong(const MessageLite& base) {
+  const GetRegistrationStatusRequest& this_ = static_cast<const GetRegistrationStatusRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t GetRegistrationStatusRequest::ByteSizeLong() const {
+  const GetRegistrationStatusRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.iot.v1.GetRegistrationStatusRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+   {
+    // string registration_id = 1 [json_name = "registrationId"];
+    cached_has_bits = this_._impl_._has_bits_[0];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_registration_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_registration_id());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void GetRegistrationStatusRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<GetRegistrationStatusRequest*>(&to_msg);
+  auto& from = static_cast<const GetRegistrationStatusRequest&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.iot.v1.GetRegistrationStatusRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!from._internal_registration_id().empty()) {
+      _this->_internal_set_registration_id(from._internal_registration_id());
+    } else {
+      if (_this->_impl_.registration_id_.IsDefault()) {
+        _this->_internal_set_registration_id("");
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void GetRegistrationStatusRequest::CopyFrom(const GetRegistrationStatusRequest& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.iot.v1.GetRegistrationStatusRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void GetRegistrationStatusRequest::InternalSwap(GetRegistrationStatusRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.registration_id_, &other->_impl_.registration_id_, arena);
+}
+
+::google::protobuf::Metadata GetRegistrationStatusRequest::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+GetRegistrationStatusResponse::GetRegistrationStatusResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, GetRegistrationStatusResponse_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.iot.v1.GetRegistrationStatusResponse)
+}
+PROTOBUF_NDEBUG_INLINE GetRegistrationStatusResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::iot::v1::GetRegistrationStatusResponse& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        registration_id_(arena, from.registration_id_),
+        meter_id_(arena, from.meter_id_),
+        approval_status_(arena, from.approval_status_) {}
+
+GetRegistrationStatusResponse::GetRegistrationStatusResponse(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const GetRegistrationStatusResponse& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, GetRegistrationStatusResponse_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  GetRegistrationStatusResponse* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:gridx.iot.v1.GetRegistrationStatusResponse)
+}
+PROTOBUF_NDEBUG_INLINE GetRegistrationStatusResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        registration_id_(arena),
+        meter_id_(arena),
+        approval_status_(arena) {}
+
+inline void GetRegistrationStatusResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+GetRegistrationStatusResponse::~GetRegistrationStatusResponse() {
+  // @@protoc_insertion_point(destructor:gridx.iot.v1.GetRegistrationStatusResponse)
+  SharedDtor(*this);
+}
+inline void GetRegistrationStatusResponse::SharedDtor(MessageLite& self) {
+  GetRegistrationStatusResponse& this_ = static_cast<GetRegistrationStatusResponse&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.registration_id_.Destroy();
+  this_._impl_.meter_id_.Destroy();
+  this_._impl_.approval_status_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull GetRegistrationStatusResponse_class_data_ =
+        GetRegistrationStatusResponse::InternalGenerateClassData_(GetRegistrationStatusResponse_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+GetRegistrationStatusResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&GetRegistrationStatusResponse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(GetRegistrationStatusResponse_class_data_.tc_table);
+  return GetRegistrationStatusResponse_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+GetRegistrationStatusResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&GetRegistrationStatusResponse_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&GetRegistrationStatusResponse_globals_));
+  return GetRegistrationStatusResponse_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const GetRegistrationStatusResponse::ParseTableT_
+    GetRegistrationStatusResponse::_table_ =
+        GetRegistrationStatusResponse::InternalGenerateParseTable_(GetRegistrationStatusResponse_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void GetRegistrationStatusResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.iot.v1.GetRegistrationStatusResponse)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      _impl_.registration_id_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      _impl_.meter_id_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      _impl_.approval_status_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL GetRegistrationStatusResponse::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const GetRegistrationStatusResponse& this_ = static_cast<const GetRegistrationStatusResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL GetRegistrationStatusResponse::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const GetRegistrationStatusResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.iot.v1.GetRegistrationStatusResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string registration_id = 1 [json_name = "registrationId"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_registration_id().empty()) {
+      const ::std::string& _s = this_._internal_registration_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.GetRegistrationStatusResponse.registration_id");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  // string meter_id = 2 [json_name = "meterId"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (!this_._internal_meter_id().empty()) {
+      const ::std::string& _s = this_._internal_meter_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.GetRegistrationStatusResponse.meter_id");
+      target = stream->WriteStringMaybeAliased(2, _s, target);
+    }
+  }
+
+  // string approval_status = 3 [json_name = "approvalStatus"];
+  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (!this_._internal_approval_status().empty()) {
+      const ::std::string& _s = this_._internal_approval_status();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.GetRegistrationStatusResponse.approval_status");
+      target = stream->WriteStringMaybeAliased(3, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.iot.v1.GetRegistrationStatusResponse)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t GetRegistrationStatusResponse::ByteSizeLong(const MessageLite& base) {
+  const GetRegistrationStatusResponse& this_ = static_cast<const GetRegistrationStatusResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t GetRegistrationStatusResponse::ByteSizeLong() const {
+  const GetRegistrationStatusResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.iot.v1.GetRegistrationStatusResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    // string registration_id = 1 [json_name = "registrationId"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_registration_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_registration_id());
+      }
+    }
+    // string meter_id = 2 [json_name = "meterId"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!this_._internal_meter_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_meter_id());
+      }
+    }
+    // string approval_status = 3 [json_name = "approvalStatus"];
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!this_._internal_approval_status().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_approval_status());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void GetRegistrationStatusResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<GetRegistrationStatusResponse*>(&to_msg);
+  auto& from = static_cast<const GetRegistrationStatusResponse&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.iot.v1.GetRegistrationStatusResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_registration_id().empty()) {
+        _this->_internal_set_registration_id(from._internal_registration_id());
+      } else {
+        if (_this->_impl_.registration_id_.IsDefault()) {
+          _this->_internal_set_registration_id("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!from._internal_meter_id().empty()) {
+        _this->_internal_set_meter_id(from._internal_meter_id());
+      } else {
+        if (_this->_impl_.meter_id_.IsDefault()) {
+          _this->_internal_set_meter_id("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!from._internal_approval_status().empty()) {
+        _this->_internal_set_approval_status(from._internal_approval_status());
+      } else {
+        if (_this->_impl_.approval_status_.IsDefault()) {
+          _this->_internal_set_approval_status("");
+        }
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void GetRegistrationStatusResponse::CopyFrom(const GetRegistrationStatusResponse& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.iot.v1.GetRegistrationStatusResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void GetRegistrationStatusResponse::InternalSwap(GetRegistrationStatusResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.registration_id_, &other->_impl_.registration_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.meter_id_, &other->_impl_.meter_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.approval_status_, &other->_impl_.approval_status_, arena);
+}
+
+::google::protobuf::Metadata GetRegistrationStatusResponse::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+ValidateDeviceAssociationRequest::ValidateDeviceAssociationRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ValidateDeviceAssociationRequest_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.iot.v1.ValidateDeviceAssociationRequest)
+}
+PROTOBUF_NDEBUG_INLINE ValidateDeviceAssociationRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::iot::v1::ValidateDeviceAssociationRequest& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        meter_id_(arena, from.meter_id_) {}
+
+ValidateDeviceAssociationRequest::ValidateDeviceAssociationRequest(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const ValidateDeviceAssociationRequest& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ValidateDeviceAssociationRequest_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  ValidateDeviceAssociationRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:gridx.iot.v1.ValidateDeviceAssociationRequest)
+}
+PROTOBUF_NDEBUG_INLINE ValidateDeviceAssociationRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        meter_id_(arena) {}
+
+inline void ValidateDeviceAssociationRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+ValidateDeviceAssociationRequest::~ValidateDeviceAssociationRequest() {
+  // @@protoc_insertion_point(destructor:gridx.iot.v1.ValidateDeviceAssociationRequest)
+  SharedDtor(*this);
+}
+inline void ValidateDeviceAssociationRequest::SharedDtor(MessageLite& self) {
+  ValidateDeviceAssociationRequest& this_ = static_cast<ValidateDeviceAssociationRequest&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.meter_id_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull ValidateDeviceAssociationRequest_class_data_ =
+        ValidateDeviceAssociationRequest::InternalGenerateClassData_(ValidateDeviceAssociationRequest_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ValidateDeviceAssociationRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ValidateDeviceAssociationRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(ValidateDeviceAssociationRequest_class_data_.tc_table);
+  return ValidateDeviceAssociationRequest_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ValidateDeviceAssociationRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ValidateDeviceAssociationRequest_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&ValidateDeviceAssociationRequest_globals_));
+  return ValidateDeviceAssociationRequest_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const ValidateDeviceAssociationRequest::ParseTableT_
+    ValidateDeviceAssociationRequest::_table_ =
+        ValidateDeviceAssociationRequest::InternalGenerateParseTable_(ValidateDeviceAssociationRequest_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void ValidateDeviceAssociationRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.iot.v1.ValidateDeviceAssociationRequest)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    _impl_.meter_id_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL ValidateDeviceAssociationRequest::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const ValidateDeviceAssociationRequest& this_ = static_cast<const ValidateDeviceAssociationRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL ValidateDeviceAssociationRequest::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const ValidateDeviceAssociationRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.iot.v1.ValidateDeviceAssociationRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string meter_id = 1 [json_name = "meterId"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_meter_id().empty()) {
+      const ::std::string& _s = this_._internal_meter_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.ValidateDeviceAssociationRequest.meter_id");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.iot.v1.ValidateDeviceAssociationRequest)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t ValidateDeviceAssociationRequest::ByteSizeLong(const MessageLite& base) {
+  const ValidateDeviceAssociationRequest& this_ = static_cast<const ValidateDeviceAssociationRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t ValidateDeviceAssociationRequest::ByteSizeLong() const {
+  const ValidateDeviceAssociationRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.iot.v1.ValidateDeviceAssociationRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+   {
+    // string meter_id = 1 [json_name = "meterId"];
+    cached_has_bits = this_._impl_._has_bits_[0];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_meter_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_meter_id());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void ValidateDeviceAssociationRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<ValidateDeviceAssociationRequest*>(&to_msg);
+  auto& from = static_cast<const ValidateDeviceAssociationRequest&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.iot.v1.ValidateDeviceAssociationRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!from._internal_meter_id().empty()) {
+      _this->_internal_set_meter_id(from._internal_meter_id());
+    } else {
+      if (_this->_impl_.meter_id_.IsDefault()) {
+        _this->_internal_set_meter_id("");
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void ValidateDeviceAssociationRequest::CopyFrom(const ValidateDeviceAssociationRequest& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.iot.v1.ValidateDeviceAssociationRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void ValidateDeviceAssociationRequest::InternalSwap(ValidateDeviceAssociationRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.meter_id_, &other->_impl_.meter_id_, arena);
+}
+
+::google::protobuf::Metadata ValidateDeviceAssociationRequest::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+ValidateDeviceAssociationResponse::ValidateDeviceAssociationResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ValidateDeviceAssociationResponse_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.iot.v1.ValidateDeviceAssociationResponse)
+}
+PROTOBUF_NDEBUG_INLINE ValidateDeviceAssociationResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::iot::v1::ValidateDeviceAssociationResponse& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        primary_user_id_(arena, from.primary_user_id_) {}
+
+ValidateDeviceAssociationResponse::ValidateDeviceAssociationResponse(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const ValidateDeviceAssociationResponse& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ValidateDeviceAssociationResponse_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  ValidateDeviceAssociationResponse* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  _impl_.is_registered_ = from._impl_.is_registered_;
+
+  // @@protoc_insertion_point(copy_constructor:gridx.iot.v1.ValidateDeviceAssociationResponse)
+}
+PROTOBUF_NDEBUG_INLINE ValidateDeviceAssociationResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        primary_user_id_(arena) {}
+
+inline void ValidateDeviceAssociationResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.is_registered_ = {};
+}
+ValidateDeviceAssociationResponse::~ValidateDeviceAssociationResponse() {
+  // @@protoc_insertion_point(destructor:gridx.iot.v1.ValidateDeviceAssociationResponse)
+  SharedDtor(*this);
+}
+inline void ValidateDeviceAssociationResponse::SharedDtor(MessageLite& self) {
+  ValidateDeviceAssociationResponse& this_ = static_cast<ValidateDeviceAssociationResponse&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.primary_user_id_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull ValidateDeviceAssociationResponse_class_data_ =
+        ValidateDeviceAssociationResponse::InternalGenerateClassData_(ValidateDeviceAssociationResponse_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ValidateDeviceAssociationResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ValidateDeviceAssociationResponse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(ValidateDeviceAssociationResponse_class_data_.tc_table);
+  return ValidateDeviceAssociationResponse_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ValidateDeviceAssociationResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ValidateDeviceAssociationResponse_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&ValidateDeviceAssociationResponse_globals_));
+  return ValidateDeviceAssociationResponse_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const ValidateDeviceAssociationResponse::ParseTableT_
+    ValidateDeviceAssociationResponse::_table_ =
+        ValidateDeviceAssociationResponse::InternalGenerateParseTable_(ValidateDeviceAssociationResponse_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void ValidateDeviceAssociationResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.iot.v1.ValidateDeviceAssociationResponse)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    _impl_.primary_user_id_.ClearNonDefaultToEmpty();
+  }
+  _impl_.is_registered_ = false;
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL ValidateDeviceAssociationResponse::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const ValidateDeviceAssociationResponse& this_ = static_cast<const ValidateDeviceAssociationResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL ValidateDeviceAssociationResponse::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const ValidateDeviceAssociationResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.iot.v1.ValidateDeviceAssociationResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // bool is_registered = 2 [json_name = "isRegistered"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (this_._internal_is_registered() != 0) {
+      target = stream->EnsureSpace(target);
+      target = ::_pbi::WireFormatLite::WriteBoolToArray(
+          2, this_._internal_is_registered(), target);
+    }
+  }
+
+  // string primary_user_id = 3 [json_name = "primaryUserId"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_primary_user_id().empty()) {
+      const ::std::string& _s = this_._internal_primary_user_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.ValidateDeviceAssociationResponse.primary_user_id");
+      target = stream->WriteStringMaybeAliased(3, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.iot.v1.ValidateDeviceAssociationResponse)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t ValidateDeviceAssociationResponse::ByteSizeLong(const MessageLite& base) {
+  const ValidateDeviceAssociationResponse& this_ = static_cast<const ValidateDeviceAssociationResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t ValidateDeviceAssociationResponse::ByteSizeLong() const {
+  const ValidateDeviceAssociationResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.iot.v1.ValidateDeviceAssociationResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    // string primary_user_id = 3 [json_name = "primaryUserId"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_primary_user_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_primary_user_id());
+      }
+    }
+    // bool is_registered = 2 [json_name = "isRegistered"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (this_._internal_is_registered() != 0) {
+        total_size += 2;
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void ValidateDeviceAssociationResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<ValidateDeviceAssociationResponse*>(&to_msg);
+  auto& from = static_cast<const ValidateDeviceAssociationResponse&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.iot.v1.ValidateDeviceAssociationResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_primary_user_id().empty()) {
+        _this->_internal_set_primary_user_id(from._internal_primary_user_id());
+      } else {
+        if (_this->_impl_.primary_user_id_.IsDefault()) {
+          _this->_internal_set_primary_user_id("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (from._internal_is_registered() != 0) {
+        _this->_impl_.is_registered_ = from._impl_.is_registered_;
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void ValidateDeviceAssociationResponse::CopyFrom(const ValidateDeviceAssociationResponse& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.iot.v1.ValidateDeviceAssociationResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void ValidateDeviceAssociationResponse::InternalSwap(ValidateDeviceAssociationResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.primary_user_id_, &other->_impl_.primary_user_id_, arena);
+  swap(_impl_.is_registered_, other->_impl_.is_registered_);
+}
+
+::google::protobuf::Metadata ValidateDeviceAssociationResponse::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+ReverifyRegistrationRequest::ReverifyRegistrationRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ReverifyRegistrationRequest_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.iot.v1.ReverifyRegistrationRequest)
+}
+PROTOBUF_NDEBUG_INLINE ReverifyRegistrationRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::iot::v1::ReverifyRegistrationRequest& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        registration_id_(arena, from.registration_id_),
+        user_reference_(arena, from.user_reference_) {}
+
+ReverifyRegistrationRequest::ReverifyRegistrationRequest(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const ReverifyRegistrationRequest& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ReverifyRegistrationRequest_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  ReverifyRegistrationRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:gridx.iot.v1.ReverifyRegistrationRequest)
+}
+PROTOBUF_NDEBUG_INLINE ReverifyRegistrationRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        registration_id_(arena),
+        user_reference_(arena) {}
+
+inline void ReverifyRegistrationRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+ReverifyRegistrationRequest::~ReverifyRegistrationRequest() {
+  // @@protoc_insertion_point(destructor:gridx.iot.v1.ReverifyRegistrationRequest)
+  SharedDtor(*this);
+}
+inline void ReverifyRegistrationRequest::SharedDtor(MessageLite& self) {
+  ReverifyRegistrationRequest& this_ = static_cast<ReverifyRegistrationRequest&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.registration_id_.Destroy();
+  this_._impl_.user_reference_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull ReverifyRegistrationRequest_class_data_ =
+        ReverifyRegistrationRequest::InternalGenerateClassData_(ReverifyRegistrationRequest_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ReverifyRegistrationRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ReverifyRegistrationRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(ReverifyRegistrationRequest_class_data_.tc_table);
+  return ReverifyRegistrationRequest_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ReverifyRegistrationRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ReverifyRegistrationRequest_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&ReverifyRegistrationRequest_globals_));
+  return ReverifyRegistrationRequest_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const ReverifyRegistrationRequest::ParseTableT_
+    ReverifyRegistrationRequest::_table_ =
+        ReverifyRegistrationRequest::InternalGenerateParseTable_(ReverifyRegistrationRequest_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void ReverifyRegistrationRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.iot.v1.ReverifyRegistrationRequest)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      _impl_.registration_id_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      _impl_.user_reference_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL ReverifyRegistrationRequest::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const ReverifyRegistrationRequest& this_ = static_cast<const ReverifyRegistrationRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL ReverifyRegistrationRequest::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const ReverifyRegistrationRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.iot.v1.ReverifyRegistrationRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string registration_id = 1 [json_name = "registrationId"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_registration_id().empty()) {
+      const ::std::string& _s = this_._internal_registration_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.ReverifyRegistrationRequest.registration_id");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  // string user_reference = 2 [json_name = "userReference"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (!this_._internal_user_reference().empty()) {
+      const ::std::string& _s = this_._internal_user_reference();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.ReverifyRegistrationRequest.user_reference");
+      target = stream->WriteStringMaybeAliased(2, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.iot.v1.ReverifyRegistrationRequest)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t ReverifyRegistrationRequest::ByteSizeLong(const MessageLite& base) {
+  const ReverifyRegistrationRequest& this_ = static_cast<const ReverifyRegistrationRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t ReverifyRegistrationRequest::ByteSizeLong() const {
+  const ReverifyRegistrationRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.iot.v1.ReverifyRegistrationRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    // string registration_id = 1 [json_name = "registrationId"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_registration_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_registration_id());
+      }
+    }
+    // string user_reference = 2 [json_name = "userReference"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!this_._internal_user_reference().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_user_reference());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void ReverifyRegistrationRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<ReverifyRegistrationRequest*>(&to_msg);
+  auto& from = static_cast<const ReverifyRegistrationRequest&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.iot.v1.ReverifyRegistrationRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_registration_id().empty()) {
+        _this->_internal_set_registration_id(from._internal_registration_id());
+      } else {
+        if (_this->_impl_.registration_id_.IsDefault()) {
+          _this->_internal_set_registration_id("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!from._internal_user_reference().empty()) {
+        _this->_internal_set_user_reference(from._internal_user_reference());
+      } else {
+        if (_this->_impl_.user_reference_.IsDefault()) {
+          _this->_internal_set_user_reference("");
+        }
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void ReverifyRegistrationRequest::CopyFrom(const ReverifyRegistrationRequest& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.iot.v1.ReverifyRegistrationRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void ReverifyRegistrationRequest::InternalSwap(ReverifyRegistrationRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.registration_id_, &other->_impl_.registration_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_reference_, &other->_impl_.user_reference_, arena);
+}
+
+::google::protobuf::Metadata ReverifyRegistrationRequest::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+ReverifyRegistrationResponse::ReverifyRegistrationResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ReverifyRegistrationResponse_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.iot.v1.ReverifyRegistrationResponse)
+}
+PROTOBUF_NDEBUG_INLINE ReverifyRegistrationResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::iot::v1::ReverifyRegistrationResponse& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        registration_id_(arena, from.registration_id_),
+        meter_id_(arena, from.meter_id_),
+        message_(arena, from.message_) {}
+
+ReverifyRegistrationResponse::ReverifyRegistrationResponse(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const ReverifyRegistrationResponse& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ReverifyRegistrationResponse_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  ReverifyRegistrationResponse* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:gridx.iot.v1.ReverifyRegistrationResponse)
+}
+PROTOBUF_NDEBUG_INLINE ReverifyRegistrationResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        registration_id_(arena),
+        meter_id_(arena),
+        message_(arena) {}
+
+inline void ReverifyRegistrationResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+ReverifyRegistrationResponse::~ReverifyRegistrationResponse() {
+  // @@protoc_insertion_point(destructor:gridx.iot.v1.ReverifyRegistrationResponse)
+  SharedDtor(*this);
+}
+inline void ReverifyRegistrationResponse::SharedDtor(MessageLite& self) {
+  ReverifyRegistrationResponse& this_ = static_cast<ReverifyRegistrationResponse&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.registration_id_.Destroy();
+  this_._impl_.meter_id_.Destroy();
+  this_._impl_.message_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull ReverifyRegistrationResponse_class_data_ =
+        ReverifyRegistrationResponse::InternalGenerateClassData_(ReverifyRegistrationResponse_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ReverifyRegistrationResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ReverifyRegistrationResponse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(ReverifyRegistrationResponse_class_data_.tc_table);
+  return ReverifyRegistrationResponse_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ReverifyRegistrationResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ReverifyRegistrationResponse_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&ReverifyRegistrationResponse_globals_));
+  return ReverifyRegistrationResponse_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const ReverifyRegistrationResponse::ParseTableT_
+    ReverifyRegistrationResponse::_table_ =
+        ReverifyRegistrationResponse::InternalGenerateParseTable_(ReverifyRegistrationResponse_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void ReverifyRegistrationResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.iot.v1.ReverifyRegistrationResponse)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      _impl_.registration_id_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      _impl_.meter_id_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      _impl_.message_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL ReverifyRegistrationResponse::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const ReverifyRegistrationResponse& this_ = static_cast<const ReverifyRegistrationResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL ReverifyRegistrationResponse::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const ReverifyRegistrationResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.iot.v1.ReverifyRegistrationResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string registration_id = 1 [json_name = "registrationId"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_registration_id().empty()) {
+      const ::std::string& _s = this_._internal_registration_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.ReverifyRegistrationResponse.registration_id");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  // string meter_id = 2 [json_name = "meterId"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (!this_._internal_meter_id().empty()) {
+      const ::std::string& _s = this_._internal_meter_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.ReverifyRegistrationResponse.meter_id");
+      target = stream->WriteStringMaybeAliased(2, _s, target);
+    }
+  }
+
+  // string message = 3 [json_name = "message"];
+  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (!this_._internal_message().empty()) {
+      const ::std::string& _s = this_._internal_message();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.ReverifyRegistrationResponse.message");
+      target = stream->WriteStringMaybeAliased(3, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.iot.v1.ReverifyRegistrationResponse)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t ReverifyRegistrationResponse::ByteSizeLong(const MessageLite& base) {
+  const ReverifyRegistrationResponse& this_ = static_cast<const ReverifyRegistrationResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t ReverifyRegistrationResponse::ByteSizeLong() const {
+  const ReverifyRegistrationResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.iot.v1.ReverifyRegistrationResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    // string registration_id = 1 [json_name = "registrationId"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_registration_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_registration_id());
+      }
+    }
+    // string meter_id = 2 [json_name = "meterId"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!this_._internal_meter_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_meter_id());
+      }
+    }
+    // string message = 3 [json_name = "message"];
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!this_._internal_message().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_message());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void ReverifyRegistrationResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<ReverifyRegistrationResponse*>(&to_msg);
+  auto& from = static_cast<const ReverifyRegistrationResponse&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.iot.v1.ReverifyRegistrationResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_registration_id().empty()) {
+        _this->_internal_set_registration_id(from._internal_registration_id());
+      } else {
+        if (_this->_impl_.registration_id_.IsDefault()) {
+          _this->_internal_set_registration_id("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!from._internal_meter_id().empty()) {
+        _this->_internal_set_meter_id(from._internal_meter_id());
+      } else {
+        if (_this->_impl_.meter_id_.IsDefault()) {
+          _this->_internal_set_meter_id("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!from._internal_message().empty()) {
+        _this->_internal_set_message(from._internal_message());
+      } else {
+        if (_this->_impl_.message_.IsDefault()) {
+          _this->_internal_set_message("");
+        }
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void ReverifyRegistrationResponse::CopyFrom(const ReverifyRegistrationResponse& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.iot.v1.ReverifyRegistrationResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void ReverifyRegistrationResponse::InternalSwap(ReverifyRegistrationResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.registration_id_, &other->_impl_.registration_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.meter_id_, &other->_impl_.meter_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.message_, &other->_impl_.message_, arena);
+}
+
+::google::protobuf::Metadata ReverifyRegistrationResponse::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+GetRegistrationByUserRequest::GetRegistrationByUserRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, GetRegistrationByUserRequest_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.iot.v1.GetRegistrationByUserRequest)
+}
+PROTOBUF_NDEBUG_INLINE GetRegistrationByUserRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::iot::v1::GetRegistrationByUserRequest& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        user_reference_(arena, from.user_reference_) {}
+
+GetRegistrationByUserRequest::GetRegistrationByUserRequest(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const GetRegistrationByUserRequest& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, GetRegistrationByUserRequest_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  GetRegistrationByUserRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:gridx.iot.v1.GetRegistrationByUserRequest)
+}
+PROTOBUF_NDEBUG_INLINE GetRegistrationByUserRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        user_reference_(arena) {}
+
+inline void GetRegistrationByUserRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+GetRegistrationByUserRequest::~GetRegistrationByUserRequest() {
+  // @@protoc_insertion_point(destructor:gridx.iot.v1.GetRegistrationByUserRequest)
+  SharedDtor(*this);
+}
+inline void GetRegistrationByUserRequest::SharedDtor(MessageLite& self) {
+  GetRegistrationByUserRequest& this_ = static_cast<GetRegistrationByUserRequest&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.user_reference_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull GetRegistrationByUserRequest_class_data_ =
+        GetRegistrationByUserRequest::InternalGenerateClassData_(GetRegistrationByUserRequest_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+GetRegistrationByUserRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&GetRegistrationByUserRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(GetRegistrationByUserRequest_class_data_.tc_table);
+  return GetRegistrationByUserRequest_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+GetRegistrationByUserRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&GetRegistrationByUserRequest_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&GetRegistrationByUserRequest_globals_));
+  return GetRegistrationByUserRequest_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const GetRegistrationByUserRequest::ParseTableT_
+    GetRegistrationByUserRequest::_table_ =
+        GetRegistrationByUserRequest::InternalGenerateParseTable_(GetRegistrationByUserRequest_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void GetRegistrationByUserRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.iot.v1.GetRegistrationByUserRequest)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    _impl_.user_reference_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL GetRegistrationByUserRequest::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const GetRegistrationByUserRequest& this_ = static_cast<const GetRegistrationByUserRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL GetRegistrationByUserRequest::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const GetRegistrationByUserRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.iot.v1.GetRegistrationByUserRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string user_reference = 1 [json_name = "userReference"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_user_reference().empty()) {
+      const ::std::string& _s = this_._internal_user_reference();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.GetRegistrationByUserRequest.user_reference");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.iot.v1.GetRegistrationByUserRequest)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t GetRegistrationByUserRequest::ByteSizeLong(const MessageLite& base) {
+  const GetRegistrationByUserRequest& this_ = static_cast<const GetRegistrationByUserRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t GetRegistrationByUserRequest::ByteSizeLong() const {
+  const GetRegistrationByUserRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.iot.v1.GetRegistrationByUserRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+   {
+    // string user_reference = 1 [json_name = "userReference"];
+    cached_has_bits = this_._impl_._has_bits_[0];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_user_reference().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_user_reference());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void GetRegistrationByUserRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<GetRegistrationByUserRequest*>(&to_msg);
+  auto& from = static_cast<const GetRegistrationByUserRequest&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.iot.v1.GetRegistrationByUserRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!from._internal_user_reference().empty()) {
+      _this->_internal_set_user_reference(from._internal_user_reference());
+    } else {
+      if (_this->_impl_.user_reference_.IsDefault()) {
+        _this->_internal_set_user_reference("");
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void GetRegistrationByUserRequest::CopyFrom(const GetRegistrationByUserRequest& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.iot.v1.GetRegistrationByUserRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void GetRegistrationByUserRequest::InternalSwap(GetRegistrationByUserRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_reference_, &other->_impl_.user_reference_, arena);
+}
+
+::google::protobuf::Metadata GetRegistrationByUserRequest::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+GetRegistrationByUserResponse::GetRegistrationByUserResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, GetRegistrationByUserResponse_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.iot.v1.GetRegistrationByUserResponse)
+}
+PROTOBUF_NDEBUG_INLINE GetRegistrationByUserResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::iot::v1::GetRegistrationByUserResponse& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        registration_id_(arena, from.registration_id_),
+        meter_id_(arena, from.meter_id_),
+        approval_status_(arena, from.approval_status_) {}
+
+GetRegistrationByUserResponse::GetRegistrationByUserResponse(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const GetRegistrationByUserResponse& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, GetRegistrationByUserResponse_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  GetRegistrationByUserResponse* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  _impl_.has_meter_ = from._impl_.has_meter_;
+
+  // @@protoc_insertion_point(copy_constructor:gridx.iot.v1.GetRegistrationByUserResponse)
+}
+PROTOBUF_NDEBUG_INLINE GetRegistrationByUserResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        registration_id_(arena),
+        meter_id_(arena),
+        approval_status_(arena) {}
+
+inline void GetRegistrationByUserResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.has_meter_ = {};
+}
+GetRegistrationByUserResponse::~GetRegistrationByUserResponse() {
+  // @@protoc_insertion_point(destructor:gridx.iot.v1.GetRegistrationByUserResponse)
+  SharedDtor(*this);
+}
+inline void GetRegistrationByUserResponse::SharedDtor(MessageLite& self) {
+  GetRegistrationByUserResponse& this_ = static_cast<GetRegistrationByUserResponse&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.registration_id_.Destroy();
+  this_._impl_.meter_id_.Destroy();
+  this_._impl_.approval_status_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull GetRegistrationByUserResponse_class_data_ =
+        GetRegistrationByUserResponse::InternalGenerateClassData_(GetRegistrationByUserResponse_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+GetRegistrationByUserResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&GetRegistrationByUserResponse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(GetRegistrationByUserResponse_class_data_.tc_table);
+  return GetRegistrationByUserResponse_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+GetRegistrationByUserResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&GetRegistrationByUserResponse_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&GetRegistrationByUserResponse_globals_));
+  return GetRegistrationByUserResponse_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const GetRegistrationByUserResponse::ParseTableT_
+    GetRegistrationByUserResponse::_table_ =
+        GetRegistrationByUserResponse::InternalGenerateParseTable_(GetRegistrationByUserResponse_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void GetRegistrationByUserResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.iot.v1.GetRegistrationByUserResponse)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      _impl_.registration_id_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      _impl_.meter_id_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      _impl_.approval_status_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_.has_meter_ = false;
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL GetRegistrationByUserResponse::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const GetRegistrationByUserResponse& this_ = static_cast<const GetRegistrationByUserResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL GetRegistrationByUserResponse::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const GetRegistrationByUserResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.iot.v1.GetRegistrationByUserResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // bool has_meter = 1 [json_name = "hasMeter"];
+  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+    if (this_._internal_has_meter() != 0) {
+      target = stream->EnsureSpace(target);
+      target = ::_pbi::WireFormatLite::WriteBoolToArray(
+          1, this_._internal_has_meter(), target);
+    }
+  }
+
+  // string registration_id = 2 [json_name = "registrationId"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_registration_id().empty()) {
+      const ::std::string& _s = this_._internal_registration_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.GetRegistrationByUserResponse.registration_id");
+      target = stream->WriteStringMaybeAliased(2, _s, target);
+    }
+  }
+
+  // string meter_id = 3 [json_name = "meterId"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (!this_._internal_meter_id().empty()) {
+      const ::std::string& _s = this_._internal_meter_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.GetRegistrationByUserResponse.meter_id");
+      target = stream->WriteStringMaybeAliased(3, _s, target);
+    }
+  }
+
+  // string approval_status = 4 [json_name = "approvalStatus"];
+  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (!this_._internal_approval_status().empty()) {
+      const ::std::string& _s = this_._internal_approval_status();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.GetRegistrationByUserResponse.approval_status");
+      target = stream->WriteStringMaybeAliased(4, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.iot.v1.GetRegistrationByUserResponse)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t GetRegistrationByUserResponse::ByteSizeLong(const MessageLite& base) {
+  const GetRegistrationByUserResponse& this_ = static_cast<const GetRegistrationByUserResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t GetRegistrationByUserResponse::ByteSizeLong() const {
+  const GetRegistrationByUserResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.iot.v1.GetRegistrationByUserResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
+    // string registration_id = 2 [json_name = "registrationId"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_registration_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_registration_id());
+      }
+    }
+    // string meter_id = 3 [json_name = "meterId"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!this_._internal_meter_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_meter_id());
+      }
+    }
+    // string approval_status = 4 [json_name = "approvalStatus"];
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!this_._internal_approval_status().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_approval_status());
+      }
+    }
+    // bool has_meter = 1 [json_name = "hasMeter"];
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      if (this_._internal_has_meter() != 0) {
+        total_size += 2;
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void GetRegistrationByUserResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<GetRegistrationByUserResponse*>(&to_msg);
+  auto& from = static_cast<const GetRegistrationByUserResponse&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.iot.v1.GetRegistrationByUserResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_registration_id().empty()) {
+        _this->_internal_set_registration_id(from._internal_registration_id());
+      } else {
+        if (_this->_impl_.registration_id_.IsDefault()) {
+          _this->_internal_set_registration_id("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!from._internal_meter_id().empty()) {
+        _this->_internal_set_meter_id(from._internal_meter_id());
+      } else {
+        if (_this->_impl_.meter_id_.IsDefault()) {
+          _this->_internal_set_meter_id("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!from._internal_approval_status().empty()) {
+        _this->_internal_set_approval_status(from._internal_approval_status());
+      } else {
+        if (_this->_impl_.approval_status_.IsDefault()) {
+          _this->_internal_set_approval_status("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      if (from._internal_has_meter() != 0) {
+        _this->_impl_.has_meter_ = from._impl_.has_meter_;
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void GetRegistrationByUserResponse::CopyFrom(const GetRegistrationByUserResponse& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.iot.v1.GetRegistrationByUserResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void GetRegistrationByUserResponse::InternalSwap(GetRegistrationByUserResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.registration_id_, &other->_impl_.registration_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.meter_id_, &other->_impl_.meter_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.approval_status_, &other->_impl_.approval_status_, arena);
+  swap(_impl_.has_meter_, other->_impl_.has_meter_);
+}
+
+::google::protobuf::Metadata GetRegistrationByUserResponse::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // @@protoc_insertion_point(namespace_scope)
