@@ -5570,6 +5570,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetUserResponse final : public ::go
     kStatusFieldNumber = 3,
     kRoleFieldNumber = 4,
     kNameFieldNumber = 5,
+    kKycStateFieldNumber = 6,
   };
   // string user_id = 1 [json_name = "userId"];
   void clear_user_id() ;
@@ -5646,11 +5647,21 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetUserResponse final : public ::go
   ::std::string* PROTOBUF_NONNULL _internal_mutable_name();
 
   public:
+  // .gridx.auth.v1.KycState kyc_state = 6 [json_name = "kycState"];
+  void clear_kyc_state() ;
+  [[nodiscard]] ::gridx::auth::v1::KycState kyc_state() const;
+  void set_kyc_state(::gridx::auth::v1::KycState value);
+
+  private:
+  ::gridx::auth::v1::KycState _internal_kyc_state() const;
+  void _internal_set_kyc_state(::gridx::auth::v1::KycState value);
+
+  public:
   // @@protoc_insertion_point(class_scope:gridx.auth.v1.GetUserResponse)
  private:
   class _Internal;
   using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<3, 5,
+      ::google::protobuf::internal::TcParseTable<3, 6,
                           0, 64,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
@@ -5684,6 +5695,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetUserResponse final : public ::go
     ::google::protobuf::internal::ArenaStringPtr status_;
     ::google::protobuf::internal::ArenaStringPtr role_;
     ::google::protobuf::internal::ArenaStringPtr name_;
+    int kyc_state_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -13751,6 +13763,30 @@ inline void GetUserResponse::set_allocated_name(::std::string* PROTOBUF_NULLABLE
     _impl_.name_.Set("", GetArena());
   }
   // @@protoc_insertion_point(field_set_allocated:gridx.auth.v1.GetUserResponse.name)
+}
+
+// .gridx.auth.v1.KycState kyc_state = 6 [json_name = "kycState"];
+inline void GetUserResponse::clear_kyc_state() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.kyc_state_ = 0;
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+}
+inline ::gridx::auth::v1::KycState GetUserResponse::kyc_state() const {
+  // @@protoc_insertion_point(field_get:gridx.auth.v1.GetUserResponse.kyc_state)
+  return _internal_kyc_state();
+}
+inline void GetUserResponse::set_kyc_state(::gridx::auth::v1::KycState value) {
+  _internal_set_kyc_state(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  // @@protoc_insertion_point(field_set:gridx.auth.v1.GetUserResponse.kyc_state)
+}
+inline ::gridx::auth::v1::KycState GetUserResponse::_internal_kyc_state() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return static_cast<::gridx::auth::v1::KycState>(_impl_.kyc_state_);
+}
+inline void GetUserResponse::_internal_set_kyc_state(::gridx::auth::v1::KycState value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.kyc_state_ = value;
 }
 
 // -------------------------------------------------------------------

@@ -3629,11 +3629,11 @@ constexpr GetUserResponse::ParseTableT_ GetUserResponse::InternalGenerateParseTa
     {
       PROTOBUF_FIELD_OFFSET(GetUserResponse, _impl_._has_bits_),
       0, // no _extensions_
-      5, 56,  // max_field_number, fast_idx_mask
+      6, 56,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967264,  // skipmap
+      4294967232,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      5,  // num_field_entries
+      6,  // num_field_entries
       0,  // num_aux_entries
       offsetof(ParseTableT_, field_names),  // no aux_entries
       class_data,
@@ -3664,7 +3664,10 @@ constexpr GetUserResponse::ParseTableT_ GetUserResponse::InternalGenerateParseTa
       {::_pbi::TcParser::FastUS1,
        {42, 4, 0,
         PROTOBUF_FIELD_OFFSET(GetUserResponse, _impl_.name_)}},
-      {::_pbi::TcParser::MiniParse, {}},
+      // .gridx.auth.v1.KycState kyc_state = 6 [json_name = "kycState"];
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GetUserResponse, _impl_.kyc_state_), 5>(),
+       {48, 5, 0,
+        PROTOBUF_FIELD_OFFSET(GetUserResponse, _impl_.kyc_state_)}},
       {::_pbi::TcParser::MiniParse, {}},
     }}, {{
       65535, 65535
@@ -3679,6 +3682,8 @@ constexpr GetUserResponse::ParseTableT_ GetUserResponse::InternalGenerateParseTa
       {PROTOBUF_FIELD_OFFSET(GetUserResponse, _impl_.role_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // string name = 5 [json_name = "name"];
       {PROTOBUF_FIELD_OFFSET(GetUserResponse, _impl_.name_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // .gridx.auth.v1.KycState kyc_state = 6 [json_name = "kycState"];
+      {PROTOBUF_FIELD_OFFSET(GetUserResponse, _impl_.kyc_state_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kOpenEnum)},
     }},
     // no aux_entries
     {{
@@ -3712,7 +3717,8 @@ inline constexpr GetUserResponse::Impl_::Impl_(
             ::_pbi::ConstantInitialized()),
         name_(
             &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()) {}
+            ::_pbi::ConstantInitialized()),
+        kyc_state_{static_cast< ::gridx::auth::v1::KycState >(0)} {}
 
 template <typename>
 constexpr GetUserResponse::GetUserResponse(::_pbi::ConstantInitialized,
@@ -6987,17 +6993,19 @@ const ::uint32_t
         0,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::GetUserResponse, _impl_._has_bits_),
-        8, // hasbit index offset
+        9, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::GetUserResponse, _impl_.user_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::GetUserResponse, _impl_.email_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::GetUserResponse, _impl_.status_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::GetUserResponse, _impl_.role_),
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::GetUserResponse, _impl_.name_),
+        PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::GetUserResponse, _impl_.kyc_state_),
         0,
         1,
         2,
         3,
         4,
+        5,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::auth::v1::CheckPermissionRequest, _impl_._has_bits_),
         5, // hasbit index offset
@@ -7128,15 +7136,15 @@ static const ::_pbi::MigrationSchema
         {200, sizeof(::gridx::auth::v1::ResendOtpResponse)},
         {205, sizeof(::gridx::auth::v1::GetUserRequest)},
         {210, sizeof(::gridx::auth::v1::GetUserResponse)},
-        {223, sizeof(::gridx::auth::v1::CheckPermissionRequest)},
-        {230, sizeof(::gridx::auth::v1::CheckPermissionResponse)},
-        {235, sizeof(::gridx::auth::v1::SubmitKycRequest)},
-        {246, sizeof(::gridx::auth::v1::SubmitKycResponse)},
-        {251, sizeof(::gridx::auth::v1::KycSubmission)},
-        {276, sizeof(::gridx::auth::v1::ExtractKycNicOcrRequest)},
-        {281, sizeof(::gridx::auth::v1::ExtractKycNicOcrResponse)},
-        {290, sizeof(::gridx::auth::v1::LoginWithGoogleRequest)},
-        {301, sizeof(::gridx::auth::v1::LoginWithGoogleResponse)},
+        {225, sizeof(::gridx::auth::v1::CheckPermissionRequest)},
+        {232, sizeof(::gridx::auth::v1::CheckPermissionResponse)},
+        {237, sizeof(::gridx::auth::v1::SubmitKycRequest)},
+        {248, sizeof(::gridx::auth::v1::SubmitKycResponse)},
+        {253, sizeof(::gridx::auth::v1::KycSubmission)},
+        {278, sizeof(::gridx::auth::v1::ExtractKycNicOcrRequest)},
+        {283, sizeof(::gridx::auth::v1::ExtractKycNicOcrResponse)},
+        {292, sizeof(::gridx::auth::v1::LoginWithGoogleRequest)},
+        {303, sizeof(::gridx::auth::v1::LoginWithGoogleResponse)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
     file_message_globals[] = {
@@ -7253,97 +7261,98 @@ const char descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto[] ABSL_ATT
     "dOtpRequest\022\024\n\005email\030\001 \001(\tR\005email\"-\n\021Res"
     "endOtpResponse\022\030\n\007success\030\001 \001(\010R\007success"
     "\")\n\016GetUserRequest\022\027\n\007user_id\030\001 \001(\tR\006use"
-    "rId\"\200\001\n\017GetUserResponse\022\027\n\007user_id\030\001 \001(\t"
+    "rId\"\266\001\n\017GetUserResponse\022\027\n\007user_id\030\001 \001(\t"
     "R\006userId\022\024\n\005email\030\002 \001(\tR\005email\022\026\n\006status"
     "\030\003 \001(\tR\006status\022\022\n\004role\030\004 \001(\tR\004role\022\022\n\004na"
-    "me\030\005 \001(\tR\004name\"Z\n\026CheckPermissionRequest"
-    "\022\027\n\007user_id\030\001 \001(\tR\006userId\022\'\n\017permission_"
-    "name\030\002 \001(\tR\016permissionName\"3\n\027CheckPermi"
-    "ssionResponse\022\030\n\007allowed\030\001 \001(\010R\007allowed\""
-    "\272\001\n\020SubmitKycRequest\022\033\n\tfull_name\030\001 \001(\tR"
-    "\010fullName\0225\n\rdate_of_birth\030\002 \001(\0132\021.googl"
-    "e.type.DateR\013dateOfBirth\022#\n\rdocument_pat"
-    "h\030\004 \001(\tR\014documentPath\022\035\n\nnic_number\030\005 \001("
-    "\tR\tnicNumberJ\004\010\003\020\004R\010dubai_id\"Q\n\021SubmitKy"
-    "cResponse\022<\n\nsubmission\030\001 \001(\0132\034.gridx.au"
-    "th.v1.KycSubmissionR\nsubmission\"\355\003\n\rKycS"
-    "ubmission\022\016\n\002id\030\001 \001(\tR\002id\022\027\n\007user_id\030\002 \001"
-    "(\tR\006userId\022\033\n\tfull_name\030\003 \001(\tR\010fullName\022"
-    "5\n\rdate_of_birth\030\004 \001(\0132\021.google.type.Dat"
-    "eR\013dateOfBirth\022#\n\rdocument_path\030\006 \001(\tR\014d"
-    "ocumentPath\022-\n\005state\030\007 \001(\0162\027.gridx.auth."
-    "v1.KycStateR\005state\022)\n\020rejection_reason\030\010"
-    " \001(\tR\017rejectionReason\022;\n\013verified_at\030\t \001"
-    "(\0132\032.google.protobuf.TimestampR\nverified"
-    "At\0229\n\ncreated_at\030\n \001(\0132\032.google.protobuf"
-    ".TimestampR\tcreatedAt\0229\n\nupdated_at\030\013 \001("
-    "\0132\032.google.protobuf.TimestampR\tupdatedAt"
-    "\022\035\n\nnic_number\030\014 \001(\tR\tnicNumberJ\004\010\005\020\006R\010d"
-    "ubai_id\"8\n\027ExtractKycNicOcrRequest\022\035\n\nob"
-    "ject_key\030\001 \001(\tR\tobjectKey\"\215\001\n\030ExtractKyc"
-    "NicOcrResponse\022\033\n\tfull_name\030\001 \001(\tR\010fullN"
-    "ame\0225\n\rdate_of_birth\030\002 \001(\0132\021.google.type"
-    ".DateR\013dateOfBirth\022\035\n\nnic_number\030\003 \001(\tR\t"
-    "nicNumber\"\212\001\n\026LoginWithGoogleRequest\022\022\n\004"
-    "code\030\001 \001(\tR\004code\022#\n\rcode_verifier\030\002 \001(\tR"
-    "\014codeVerifier\022!\n\014redirect_uri\030\003 \001(\tR\013red"
-    "irectUri\022\024\n\005nonce\030\004 \001(\tR\005nonce\"\317\001\n\027Login"
-    "WithGoogleResponse\022\027\n\007user_id\030\001 \001(\tR\006use"
-    "rId\022\024\n\005email\030\002 \001(\tR\005email\022!\n\014access_toke"
-    "n\030\003 \001(\tR\013accessToken\022#\n\rrefresh_token\030\004 "
-    "\001(\tR\014refreshToken\022\035\n\nexpires_in\030\005 \001(\003R\te"
-    "xpiresIn\022\036\n\013is_new_user\030\006 \001(\010R\tisNewUser"
-    "*l\n\010KycState\022\031\n\025KYC_STATE_UNSPECIFIED\020\000\022"
-    "\025\n\021KYC_STATE_PENDING\020\001\022\026\n\022KYC_STATE_VERI"
-    "FIED\020\002\022\026\n\022KYC_STATE_REJECTED\020\0032\220\016\n\013AuthS"
-    "ervice\022K\n\010Register\022\036.gridx.auth.v1.Regis"
-    "terRequest\032\037.gridx.auth.v1.RegisterRespo"
-    "nse\022B\n\005Login\022\033.gridx.auth.v1.LoginReques"
-    "t\032\034.gridx.auth.v1.LoginResponse\022E\n\006Logou"
-    "t\022\034.gridx.auth.v1.LogoutRequest\032\035.gridx."
-    "auth.v1.LogoutResponse\022N\n\tLogoutAll\022\037.gr"
-    "idx.auth.v1.LogoutAllRequest\032 .gridx.aut"
-    "h.v1.LogoutAllResponse\022i\n\022CreateKycUploa"
-    "dUrl\022(.gridx.auth.v1.CreateKycUploadUrlR"
-    "equest\032).gridx.auth.v1.CreateKycUploadUr"
-    "lResponse\022Q\n\nGetProfile\022 .gridx.auth.v1."
-    "GetProfileRequest\032!.gridx.auth.v1.GetPro"
-    "fileResponse\022Z\n\rUpdateProfile\022#.gridx.au"
-    "th.v1.UpdateProfileRequest\032$.gridx.auth."
-    "v1.UpdateProfileResponse\022]\n\016ChangePasswo"
-    "rd\022$.gridx.auth.v1.ChangePasswordRequest"
-    "\032%.gridx.auth.v1.ChangePasswordResponse\022"
-    "o\n\024RequestPasswordReset\022*.gridx.auth.v1."
-    "RequestPasswordResetRequest\032+.gridx.auth"
-    ".v1.RequestPasswordResetResponse\022Z\n\rRese"
-    "tPassword\022#.gridx.auth.v1.ResetPasswordR"
-    "equest\032$.gridx.auth.v1.ResetPasswordResp"
-    "onse\022i\n\022RequestEmailChange\022(.gridx.auth."
-    "v1.RequestEmailChangeRequest\032).gridx.aut"
-    "h.v1.RequestEmailChangeResponse\022f\n\021Verif"
-    "yEmailChange\022\'.gridx.auth.v1.VerifyEmail"
-    "ChangeRequest\032(.gridx.auth.v1.VerifyEmai"
-    "lChangeResponse\022H\n\007GetUser\022\035.gridx.auth."
-    "v1.GetUserRequest\032\036.gridx.auth.v1.GetUse"
-    "rResponse\022`\n\017CheckPermission\022%.gridx.aut"
-    "h.v1.CheckPermissionRequest\032&.gridx.auth"
-    ".v1.CheckPermissionResponse\022T\n\013VerifyEma"
-    "il\022!.gridx.auth.v1.VerifyEmailRequest\032\"."
-    "gridx.auth.v1.VerifyEmailResponse\022N\n\tRes"
-    "endOtp\022\037.gridx.auth.v1.ResendOtpRequest\032"
-    " .gridx.auth.v1.ResendOtpResponse\022N\n\tSub"
-    "mitKyc\022\037.gridx.auth.v1.SubmitKycRequest\032"
-    " .gridx.auth.v1.SubmitKycResponse\022c\n\020Ext"
-    "ractKycNicOcr\022&.gridx.auth.v1.ExtractKyc"
-    "NicOcrRequest\032\'.gridx.auth.v1.ExtractKyc"
-    "NicOcrResponse\022W\n\014RefreshToken\022\".gridx.a"
-    "uth.v1.RefreshTokenRequest\032#.gridx.auth."
-    "v1.RefreshTokenResponse\022`\n\017LoginWithGoog"
-    "le\022%.gridx.auth.v1.LoginWithGoogleReques"
-    "t\032&.gridx.auth.v1.LoginWithGoogleRespons"
-    "eBHZFgithub.com/p2p-energy-trading-platf"
-    "orm/go-sdk/gen/gridx/auth/v1;authv1b\006pro"
-    "to3"
+    "me\030\005 \001(\tR\004name\0224\n\tkyc_state\030\006 \001(\0162\027.grid"
+    "x.auth.v1.KycStateR\010kycState\"Z\n\026CheckPer"
+    "missionRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022"
+    "\'\n\017permission_name\030\002 \001(\tR\016permissionName"
+    "\"3\n\027CheckPermissionResponse\022\030\n\007allowed\030\001"
+    " \001(\010R\007allowed\"\272\001\n\020SubmitKycRequest\022\033\n\tfu"
+    "ll_name\030\001 \001(\tR\010fullName\0225\n\rdate_of_birth"
+    "\030\002 \001(\0132\021.google.type.DateR\013dateOfBirth\022#"
+    "\n\rdocument_path\030\004 \001(\tR\014documentPath\022\035\n\nn"
+    "ic_number\030\005 \001(\tR\tnicNumberJ\004\010\003\020\004R\010dubai_"
+    "id\"Q\n\021SubmitKycResponse\022<\n\nsubmission\030\001 "
+    "\001(\0132\034.gridx.auth.v1.KycSubmissionR\nsubmi"
+    "ssion\"\355\003\n\rKycSubmission\022\016\n\002id\030\001 \001(\tR\002id\022"
+    "\027\n\007user_id\030\002 \001(\tR\006userId\022\033\n\tfull_name\030\003 "
+    "\001(\tR\010fullName\0225\n\rdate_of_birth\030\004 \001(\0132\021.g"
+    "oogle.type.DateR\013dateOfBirth\022#\n\rdocument"
+    "_path\030\006 \001(\tR\014documentPath\022-\n\005state\030\007 \001(\016"
+    "2\027.gridx.auth.v1.KycStateR\005state\022)\n\020reje"
+    "ction_reason\030\010 \001(\tR\017rejectionReason\022;\n\013v"
+    "erified_at\030\t \001(\0132\032.google.protobuf.Times"
+    "tampR\nverifiedAt\0229\n\ncreated_at\030\n \001(\0132\032.g"
+    "oogle.protobuf.TimestampR\tcreatedAt\0229\n\nu"
+    "pdated_at\030\013 \001(\0132\032.google.protobuf.Timest"
+    "ampR\tupdatedAt\022\035\n\nnic_number\030\014 \001(\tR\tnicN"
+    "umberJ\004\010\005\020\006R\010dubai_id\"8\n\027ExtractKycNicOc"
+    "rRequest\022\035\n\nobject_key\030\001 \001(\tR\tobjectKey\""
+    "\215\001\n\030ExtractKycNicOcrResponse\022\033\n\tfull_nam"
+    "e\030\001 \001(\tR\010fullName\0225\n\rdate_of_birth\030\002 \001(\013"
+    "2\021.google.type.DateR\013dateOfBirth\022\035\n\nnic_"
+    "number\030\003 \001(\tR\tnicNumber\"\212\001\n\026LoginWithGoo"
+    "gleRequest\022\022\n\004code\030\001 \001(\tR\004code\022#\n\rcode_v"
+    "erifier\030\002 \001(\tR\014codeVerifier\022!\n\014redirect_"
+    "uri\030\003 \001(\tR\013redirectUri\022\024\n\005nonce\030\004 \001(\tR\005n"
+    "once\"\317\001\n\027LoginWithGoogleResponse\022\027\n\007user"
+    "_id\030\001 \001(\tR\006userId\022\024\n\005email\030\002 \001(\tR\005email\022"
+    "!\n\014access_token\030\003 \001(\tR\013accessToken\022#\n\rre"
+    "fresh_token\030\004 \001(\tR\014refreshToken\022\035\n\nexpir"
+    "es_in\030\005 \001(\003R\texpiresIn\022\036\n\013is_new_user\030\006 "
+    "\001(\010R\tisNewUser*l\n\010KycState\022\031\n\025KYC_STATE_"
+    "UNSPECIFIED\020\000\022\025\n\021KYC_STATE_PENDING\020\001\022\026\n\022"
+    "KYC_STATE_VERIFIED\020\002\022\026\n\022KYC_STATE_REJECT"
+    "ED\020\0032\220\016\n\013AuthService\022K\n\010Register\022\036.gridx"
+    ".auth.v1.RegisterRequest\032\037.gridx.auth.v1"
+    ".RegisterResponse\022B\n\005Login\022\033.gridx.auth."
+    "v1.LoginRequest\032\034.gridx.auth.v1.LoginRes"
+    "ponse\022E\n\006Logout\022\034.gridx.auth.v1.LogoutRe"
+    "quest\032\035.gridx.auth.v1.LogoutResponse\022N\n\t"
+    "LogoutAll\022\037.gridx.auth.v1.LogoutAllReque"
+    "st\032 .gridx.auth.v1.LogoutAllResponse\022i\n\022"
+    "CreateKycUploadUrl\022(.gridx.auth.v1.Creat"
+    "eKycUploadUrlRequest\032).gridx.auth.v1.Cre"
+    "ateKycUploadUrlResponse\022Q\n\nGetProfile\022 ."
+    "gridx.auth.v1.GetProfileRequest\032!.gridx."
+    "auth.v1.GetProfileResponse\022Z\n\rUpdateProf"
+    "ile\022#.gridx.auth.v1.UpdateProfileRequest"
+    "\032$.gridx.auth.v1.UpdateProfileResponse\022]"
+    "\n\016ChangePassword\022$.gridx.auth.v1.ChangeP"
+    "asswordRequest\032%.gridx.auth.v1.ChangePas"
+    "swordResponse\022o\n\024RequestPasswordReset\022*."
+    "gridx.auth.v1.RequestPasswordResetReques"
+    "t\032+.gridx.auth.v1.RequestPasswordResetRe"
+    "sponse\022Z\n\rResetPassword\022#.gridx.auth.v1."
+    "ResetPasswordRequest\032$.gridx.auth.v1.Res"
+    "etPasswordResponse\022i\n\022RequestEmailChange"
+    "\022(.gridx.auth.v1.RequestEmailChangeReque"
+    "st\032).gridx.auth.v1.RequestEmailChangeRes"
+    "ponse\022f\n\021VerifyEmailChange\022\'.gridx.auth."
+    "v1.VerifyEmailChangeRequest\032(.gridx.auth"
+    ".v1.VerifyEmailChangeResponse\022H\n\007GetUser"
+    "\022\035.gridx.auth.v1.GetUserRequest\032\036.gridx."
+    "auth.v1.GetUserResponse\022`\n\017CheckPermissi"
+    "on\022%.gridx.auth.v1.CheckPermissionReques"
+    "t\032&.gridx.auth.v1.CheckPermissionRespons"
+    "e\022T\n\013VerifyEmail\022!.gridx.auth.v1.VerifyE"
+    "mailRequest\032\".gridx.auth.v1.VerifyEmailR"
+    "esponse\022N\n\tResendOtp\022\037.gridx.auth.v1.Res"
+    "endOtpRequest\032 .gridx.auth.v1.ResendOtpR"
+    "esponse\022N\n\tSubmitKyc\022\037.gridx.auth.v1.Sub"
+    "mitKycRequest\032 .gridx.auth.v1.SubmitKycR"
+    "esponse\022c\n\020ExtractKycNicOcr\022&.gridx.auth"
+    ".v1.ExtractKycNicOcrRequest\032\'.gridx.auth"
+    ".v1.ExtractKycNicOcrResponse\022W\n\014RefreshT"
+    "oken\022\".gridx.auth.v1.RefreshTokenRequest"
+    "\032#.gridx.auth.v1.RefreshTokenResponse\022`\n"
+    "\017LoginWithGoogle\022%.gridx.auth.v1.LoginWi"
+    "thGoogleRequest\032&.gridx.auth.v1.LoginWit"
+    "hGoogleResponseBHZFgithub.com/p2p-energy"
+    "-trading-platform/go-sdk/gen/gridx/auth/"
+    "v1;authv1b\006proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_deps[2] = {
@@ -7354,7 +7363,7 @@ static ::absl::once_flag descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto = {
     false,
     false,
-    6323,
+    6377,
     descriptor_table_protodef_gridx_2fauth_2fv1_2fauth_2eproto,
     "gridx/auth/v1/auth.proto",
     &descriptor_table_gridx_2fauth_2fv1_2fauth_2eproto_once,
@@ -14751,6 +14760,7 @@ GetUserResponse::GetUserResponse(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  _impl_.kyc_state_ = from._impl_.kyc_state_;
 
   // @@protoc_insertion_point(copy_constructor:gridx.auth.v1.GetUserResponse)
 }
@@ -14766,6 +14776,7 @@ PROTOBUF_NDEBUG_INLINE GetUserResponse::Impl_::Impl_(
 
 inline void GetUserResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.kyc_state_ = {};
 }
 GetUserResponse::~GetUserResponse() {
   // @@protoc_insertion_point(destructor:gridx.auth.v1.GetUserResponse)
@@ -14837,6 +14848,7 @@ PROTOBUF_NOINLINE void GetUserResponse::Clear() {
       _impl_.name_.ClearNonDefaultToEmpty();
     }
   }
+  _impl_.kyc_state_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -14910,6 +14922,15 @@ PROTOBUF_NOINLINE void GetUserResponse::Clear() {
     }
   }
 
+  // .gridx.auth.v1.KycState kyc_state = 6 [json_name = "kycState"];
+  if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+    if (this_._internal_kyc_state() != 0) {
+      target = stream->EnsureSpace(target);
+      target = ::_pbi::WireFormatLite::WriteEnumToArray(
+          6, this_._internal_kyc_state(), target);
+    }
+  }
+
   if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
     target =
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
@@ -14935,7 +14956,7 @@ PROTOBUF_NOINLINE void GetUserResponse::Clear() {
 
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000001fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
     // string user_id = 1 [json_name = "userId"];
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!this_._internal_user_id().empty()) {
@@ -14971,6 +14992,13 @@ PROTOBUF_NOINLINE void GetUserResponse::Clear() {
                                         this_._internal_name());
       }
     }
+    // .gridx.auth.v1.KycState kyc_state = 6 [json_name = "kycState"];
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      if (this_._internal_kyc_state() != 0) {
+        total_size += 1 +
+                      ::_pbi::WireFormatLite::EnumSize(this_._internal_kyc_state());
+      }
+    }
   }
   return this_.MaybeComputeUnknownFieldsSize(total_size,
                                              &this_._impl_._cached_size_);
@@ -14989,7 +15017,7 @@ void GetUserResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
   (void)cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000001fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!from._internal_user_id().empty()) {
         _this->_internal_set_user_id(from._internal_user_id());
@@ -15035,6 +15063,11 @@ void GetUserResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
         }
       }
     }
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      if (from._internal_kyc_state() != 0) {
+        _this->_impl_.kyc_state_ = from._impl_.kyc_state_;
+      }
+    }
   }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
@@ -15060,6 +15093,7 @@ void GetUserResponse::InternalSwap(GetUserResponse* PROTOBUF_RESTRICT PROTOBUF_N
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.status_, &other->_impl_.status_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.role_, &other->_impl_.role_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, &other->_impl_.name_, arena);
+  swap(_impl_.kyc_state_, other->_impl_.kyc_state_);
 }
 
 ::google::protobuf::Metadata GetUserResponse::GetMetadata() const {
