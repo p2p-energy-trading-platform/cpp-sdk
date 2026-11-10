@@ -94,6 +94,22 @@ extern const ::google::protobuf::internal::ClassDataFull ReserveCreditsResponse_
 #else
 extern const ReserveCreditsResponseGlobalsTypeInternal ReserveCreditsResponse_globals_;
 #endif  // PROTOBUF_MESSAGE_GLOBALS
+class SettleTradeRequest;
+struct SettleTradeRequestGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern SettleTradeRequestGlobalsTypeInternal SettleTradeRequest_globals_;
+extern const ::google::protobuf::internal::ClassDataFull SettleTradeRequest_class_data_;
+#else
+extern const SettleTradeRequestGlobalsTypeInternal SettleTradeRequest_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class SettleTradeResponse;
+struct SettleTradeResponseGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern SettleTradeResponseGlobalsTypeInternal SettleTradeResponse_globals_;
+extern const ::google::protobuf::internal::ClassDataFull SettleTradeResponse_class_data_;
+#else
+extern const SettleTradeResponseGlobalsTypeInternal SettleTradeResponse_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
 }  // namespace v1
 }  // namespace billing
 }  // namespace gridx
@@ -201,6 +217,272 @@ using ::google::protobuf::internal::generated_enum::AbslUnparseFlag;
 // ===================================================================
 
 
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SettleTradeResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.SettleTradeResponse) */ {
+ public:
+  inline SettleTradeResponse() : SettleTradeResponse(nullptr) {}
+  ~SettleTradeResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(SettleTradeResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(SettleTradeResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr SettleTradeResponse(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline SettleTradeResponse(const SettleTradeResponse& from) : SettleTradeResponse(nullptr, from) {}
+  inline SettleTradeResponse(SettleTradeResponse&& from) noexcept : SettleTradeResponse(nullptr, ::std::move(from)) {}
+  inline SettleTradeResponse& operator=(const SettleTradeResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline SettleTradeResponse& operator=(SettleTradeResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const SettleTradeResponse& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<SettleTradeResponse>(&SettleTradeResponse_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 5;
+  friend void swap(SettleTradeResponse& a, SettleTradeResponse& b) { a.Swap(&b); }
+  inline void Swap(SettleTradeResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(SettleTradeResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] SettleTradeResponse* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<SettleTradeResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const SettleTradeResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const SettleTradeResponse& from) { SettleTradeResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(SettleTradeResponse* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.SettleTradeResponse"; }
+
+  explicit SettleTradeResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  SettleTradeResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const SettleTradeResponse& from);
+  SettleTradeResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, SettleTradeResponse&& from) noexcept
+      : SettleTradeResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kSettlementIdFieldNumber = 1,
+    kTradeValueFieldNumber = 2,
+    kBuyerFeeFieldNumber = 3,
+    kSellerFeeFieldNumber = 4,
+    kBuyerReleasedRemainderFieldNumber = 5,
+    kAlreadySettledFieldNumber = 6,
+  };
+  // string settlement_id = 1 [json_name = "settlementId"];
+  void clear_settlement_id() ;
+  [[nodiscard]] const ::std::string& settlement_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_settlement_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_settlement_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_settlement_id();
+  void set_allocated_settlement_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_settlement_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_settlement_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_settlement_id();
+
+  public:
+  // int64 trade_value = 2 [json_name = "tradeValue"];
+  void clear_trade_value() ;
+  [[nodiscard]] ::int64_t trade_value() const;
+  void set_trade_value(::int64_t value);
+
+  private:
+  ::int64_t _internal_trade_value() const;
+  void _internal_set_trade_value(::int64_t value);
+
+  public:
+  // int64 buyer_fee = 3 [json_name = "buyerFee"];
+  void clear_buyer_fee() ;
+  [[nodiscard]] ::int64_t buyer_fee() const;
+  void set_buyer_fee(::int64_t value);
+
+  private:
+  ::int64_t _internal_buyer_fee() const;
+  void _internal_set_buyer_fee(::int64_t value);
+
+  public:
+  // int64 seller_fee = 4 [json_name = "sellerFee"];
+  void clear_seller_fee() ;
+  [[nodiscard]] ::int64_t seller_fee() const;
+  void set_seller_fee(::int64_t value);
+
+  private:
+  ::int64_t _internal_seller_fee() const;
+  void _internal_set_seller_fee(::int64_t value);
+
+  public:
+  // int64 buyer_released_remainder = 5 [json_name = "buyerReleasedRemainder"];
+  void clear_buyer_released_remainder() ;
+  [[nodiscard]] ::int64_t buyer_released_remainder() const;
+  void set_buyer_released_remainder(::int64_t value);
+
+  private:
+  ::int64_t _internal_buyer_released_remainder() const;
+  void _internal_set_buyer_released_remainder(::int64_t value);
+
+  public:
+  // bool already_settled = 6 [json_name = "alreadySettled"];
+  void clear_already_settled() ;
+  [[nodiscard]] bool already_settled() const;
+  void set_already_settled(bool value);
+
+  private:
+  bool _internal_already_settled() const;
+  void _internal_set_already_settled(bool value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.SettleTradeResponse)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<3, 6,
+                          0, 58,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const SettleTradeResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr settlement_id_;
+    ::int64_t trade_value_;
+    ::int64_t buyer_fee_;
+    ::int64_t seller_fee_;
+    ::int64_t buyer_released_remainder_;
+    bool already_settled_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2forder_5fbilling_2eproto;
+};
 // -------------------------------------------------------------------
 
 class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ReserveCreditsResponse final : public ::google::protobuf::Message
@@ -845,6 +1127,334 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ReleaseReservationRequest final : p
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr order_id_;
     int reason_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2forder_5fbilling_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED SettleTradeRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.SettleTradeRequest) */ {
+ public:
+  inline SettleTradeRequest() : SettleTradeRequest(nullptr) {}
+  ~SettleTradeRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(SettleTradeRequest* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(SettleTradeRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr SettleTradeRequest(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline SettleTradeRequest(const SettleTradeRequest& from) : SettleTradeRequest(nullptr, from) {}
+  inline SettleTradeRequest(SettleTradeRequest&& from) noexcept : SettleTradeRequest(nullptr, ::std::move(from)) {}
+  inline SettleTradeRequest& operator=(const SettleTradeRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline SettleTradeRequest& operator=(SettleTradeRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const SettleTradeRequest& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<SettleTradeRequest>(&SettleTradeRequest_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 4;
+  friend void swap(SettleTradeRequest& a, SettleTradeRequest& b) { a.Swap(&b); }
+  inline void Swap(SettleTradeRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(SettleTradeRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] SettleTradeRequest* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<SettleTradeRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const SettleTradeRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const SettleTradeRequest& from) { SettleTradeRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(SettleTradeRequest* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.SettleTradeRequest"; }
+
+  explicit SettleTradeRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  SettleTradeRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const SettleTradeRequest& from);
+  SettleTradeRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, SettleTradeRequest&& from) noexcept
+      : SettleTradeRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kTradeIdFieldNumber = 1,
+    kBuyOrderIdFieldNumber = 2,
+    kSellOrderIdFieldNumber = 3,
+    kBuyerUserIdFieldNumber = 4,
+    kSellerUserIdFieldNumber = 5,
+    kExecutedAtFieldNumber = 9,
+    kQtyWhFieldNumber = 6,
+    kPricePerKwhFieldNumber = 7,
+    kBuyOrderFinalFieldNumber = 8,
+  };
+  // string trade_id = 1 [json_name = "tradeId"];
+  void clear_trade_id() ;
+  [[nodiscard]] const ::std::string& trade_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_trade_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_trade_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_trade_id();
+  void set_allocated_trade_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_trade_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_trade_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_trade_id();
+
+  public:
+  // string buy_order_id = 2 [json_name = "buyOrderId"];
+  void clear_buy_order_id() ;
+  [[nodiscard]] const ::std::string& buy_order_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_buy_order_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_buy_order_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_buy_order_id();
+  void set_allocated_buy_order_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_buy_order_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_buy_order_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_buy_order_id();
+
+  public:
+  // string sell_order_id = 3 [json_name = "sellOrderId"];
+  void clear_sell_order_id() ;
+  [[nodiscard]] const ::std::string& sell_order_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_sell_order_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_sell_order_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_sell_order_id();
+  void set_allocated_sell_order_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_sell_order_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_sell_order_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_sell_order_id();
+
+  public:
+  // string buyer_user_id = 4 [json_name = "buyerUserId"];
+  void clear_buyer_user_id() ;
+  [[nodiscard]] const ::std::string& buyer_user_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_buyer_user_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_buyer_user_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_buyer_user_id();
+  void set_allocated_buyer_user_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_buyer_user_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_buyer_user_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_buyer_user_id();
+
+  public:
+  // string seller_user_id = 5 [json_name = "sellerUserId"];
+  void clear_seller_user_id() ;
+  [[nodiscard]] const ::std::string& seller_user_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_seller_user_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_seller_user_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_seller_user_id();
+  void set_allocated_seller_user_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_seller_user_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_seller_user_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_seller_user_id();
+
+  public:
+  // .google.protobuf.Timestamp executed_at = 9 [json_name = "executedAt"];
+  [[nodiscard]] bool has_executed_at()
+      const;
+  void clear_executed_at() ;
+  [[nodiscard]] const ::google::protobuf::Timestamp& executed_at() const;
+  [[nodiscard]] ::google::protobuf::Timestamp* PROTOBUF_NULLABLE release_executed_at();
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL mutable_executed_at();
+  void set_allocated_executed_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_executed_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  ::google::protobuf::Timestamp* PROTOBUF_NULLABLE unsafe_arena_release_executed_at();
+
+  private:
+  const ::google::protobuf::Timestamp& _internal_executed_at() const;
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_executed_at();
+
+  public:
+  // int64 qty_wh = 6 [json_name = "qtyWh"];
+  void clear_qty_wh() ;
+  [[nodiscard]] ::int64_t qty_wh() const;
+  void set_qty_wh(::int64_t value);
+
+  private:
+  ::int64_t _internal_qty_wh() const;
+  void _internal_set_qty_wh(::int64_t value);
+
+  public:
+  // int64 price_per_kwh = 7 [json_name = "pricePerKwh"];
+  void clear_price_per_kwh() ;
+  [[nodiscard]] ::int64_t price_per_kwh() const;
+  void set_price_per_kwh(::int64_t value);
+
+  private:
+  ::int64_t _internal_price_per_kwh() const;
+  void _internal_set_price_per_kwh(::int64_t value);
+
+  public:
+  // bool buy_order_final = 8 [json_name = "buyOrderFinal"];
+  void clear_buy_order_final() ;
+  [[nodiscard]] bool buy_order_final() const;
+  void set_buy_order_final(bool value);
+
+  private:
+  bool _internal_buy_order_final() const;
+  void _internal_set_buy_order_final(bool value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.SettleTradeRequest)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<4, 9,
+                          1, 112,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const SettleTradeRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr trade_id_;
+    ::google::protobuf::internal::ArenaStringPtr buy_order_id_;
+    ::google::protobuf::internal::ArenaStringPtr sell_order_id_;
+    ::google::protobuf::internal::ArenaStringPtr buyer_user_id_;
+    ::google::protobuf::internal::ArenaStringPtr seller_user_id_;
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE executed_at_;
+    ::int64_t qty_wh_;
+    ::int64_t price_per_kwh_;
+    bool buy_order_final_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -1671,6 +2281,683 @@ inline ::int64_t ReleaseReservationResponse::_internal_released_amount() const {
 inline void ReleaseReservationResponse::_internal_set_released_amount(::int64_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.released_amount_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// SettleTradeRequest
+
+// string trade_id = 1 [json_name = "tradeId"];
+inline void SettleTradeRequest::clear_trade_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.trade_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& SettleTradeRequest::trade_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.SettleTradeRequest.trade_id)
+  return _internal_trade_id();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void SettleTradeRequest::set_trade_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.trade_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.SettleTradeRequest.trade_id)
+}
+inline ::std::string* PROTOBUF_NONNULL SettleTradeRequest::mutable_trade_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_trade_id();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.SettleTradeRequest.trade_id)
+  return _s;
+}
+inline const ::std::string& SettleTradeRequest::_internal_trade_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.trade_id_.Get();
+}
+inline void SettleTradeRequest::_internal_set_trade_id(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.trade_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL SettleTradeRequest::_internal_mutable_trade_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.trade_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE SettleTradeRequest::release_trade_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.SettleTradeRequest.trade_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.trade_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.trade_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void SettleTradeRequest::set_allocated_trade_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.trade_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.trade_id_.IsDefault()) {
+    _impl_.trade_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.SettleTradeRequest.trade_id)
+}
+
+// string buy_order_id = 2 [json_name = "buyOrderId"];
+inline void SettleTradeRequest::clear_buy_order_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.buy_order_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline const ::std::string& SettleTradeRequest::buy_order_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.SettleTradeRequest.buy_order_id)
+  return _internal_buy_order_id();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void SettleTradeRequest::set_buy_order_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.buy_order_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.SettleTradeRequest.buy_order_id)
+}
+inline ::std::string* PROTOBUF_NONNULL SettleTradeRequest::mutable_buy_order_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_buy_order_id();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.SettleTradeRequest.buy_order_id)
+  return _s;
+}
+inline const ::std::string& SettleTradeRequest::_internal_buy_order_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.buy_order_id_.Get();
+}
+inline void SettleTradeRequest::_internal_set_buy_order_id(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.buy_order_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL SettleTradeRequest::_internal_mutable_buy_order_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.buy_order_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE SettleTradeRequest::release_buy_order_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.SettleTradeRequest.buy_order_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.buy_order_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.buy_order_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void SettleTradeRequest::set_allocated_buy_order_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.buy_order_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.buy_order_id_.IsDefault()) {
+    _impl_.buy_order_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.SettleTradeRequest.buy_order_id)
+}
+
+// string sell_order_id = 3 [json_name = "sellOrderId"];
+inline void SettleTradeRequest::clear_sell_order_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.sell_order_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+}
+inline const ::std::string& SettleTradeRequest::sell_order_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.SettleTradeRequest.sell_order_id)
+  return _internal_sell_order_id();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void SettleTradeRequest::set_sell_order_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  _impl_.sell_order_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.SettleTradeRequest.sell_order_id)
+}
+inline ::std::string* PROTOBUF_NONNULL SettleTradeRequest::mutable_sell_order_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::std::string* _s = _internal_mutable_sell_order_id();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.SettleTradeRequest.sell_order_id)
+  return _s;
+}
+inline const ::std::string& SettleTradeRequest::_internal_sell_order_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.sell_order_id_.Get();
+}
+inline void SettleTradeRequest::_internal_set_sell_order_id(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.sell_order_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL SettleTradeRequest::_internal_mutable_sell_order_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.sell_order_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE SettleTradeRequest::release_sell_order_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.SettleTradeRequest.sell_order_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000004U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  auto* released = _impl_.sell_order_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.sell_order_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void SettleTradeRequest::set_allocated_sell_order_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  }
+  _impl_.sell_order_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.sell_order_id_.IsDefault()) {
+    _impl_.sell_order_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.SettleTradeRequest.sell_order_id)
+}
+
+// string buyer_user_id = 4 [json_name = "buyerUserId"];
+inline void SettleTradeRequest::clear_buyer_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.buyer_user_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+}
+inline const ::std::string& SettleTradeRequest::buyer_user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.SettleTradeRequest.buyer_user_id)
+  return _internal_buyer_user_id();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void SettleTradeRequest::set_buyer_user_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  _impl_.buyer_user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.SettleTradeRequest.buyer_user_id)
+}
+inline ::std::string* PROTOBUF_NONNULL SettleTradeRequest::mutable_buyer_user_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  ::std::string* _s = _internal_mutable_buyer_user_id();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.SettleTradeRequest.buyer_user_id)
+  return _s;
+}
+inline const ::std::string& SettleTradeRequest::_internal_buyer_user_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.buyer_user_id_.Get();
+}
+inline void SettleTradeRequest::_internal_set_buyer_user_id(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.buyer_user_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL SettleTradeRequest::_internal_mutable_buyer_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.buyer_user_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE SettleTradeRequest::release_buyer_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.SettleTradeRequest.buyer_user_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000008U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  auto* released = _impl_.buyer_user_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.buyer_user_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void SettleTradeRequest::set_allocated_buyer_user_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  }
+  _impl_.buyer_user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.buyer_user_id_.IsDefault()) {
+    _impl_.buyer_user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.SettleTradeRequest.buyer_user_id)
+}
+
+// string seller_user_id = 5 [json_name = "sellerUserId"];
+inline void SettleTradeRequest::clear_seller_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.seller_user_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+}
+inline const ::std::string& SettleTradeRequest::seller_user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.SettleTradeRequest.seller_user_id)
+  return _internal_seller_user_id();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void SettleTradeRequest::set_seller_user_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  _impl_.seller_user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.SettleTradeRequest.seller_user_id)
+}
+inline ::std::string* PROTOBUF_NONNULL SettleTradeRequest::mutable_seller_user_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  ::std::string* _s = _internal_mutable_seller_user_id();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.SettleTradeRequest.seller_user_id)
+  return _s;
+}
+inline const ::std::string& SettleTradeRequest::_internal_seller_user_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.seller_user_id_.Get();
+}
+inline void SettleTradeRequest::_internal_set_seller_user_id(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.seller_user_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL SettleTradeRequest::_internal_mutable_seller_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.seller_user_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE SettleTradeRequest::release_seller_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.SettleTradeRequest.seller_user_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000010U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  auto* released = _impl_.seller_user_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.seller_user_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void SettleTradeRequest::set_allocated_seller_user_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  }
+  _impl_.seller_user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.seller_user_id_.IsDefault()) {
+    _impl_.seller_user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.SettleTradeRequest.seller_user_id)
+}
+
+// int64 qty_wh = 6 [json_name = "qtyWh"];
+inline void SettleTradeRequest::clear_qty_wh() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.qty_wh_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000040U);
+}
+inline ::int64_t SettleTradeRequest::qty_wh() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.SettleTradeRequest.qty_wh)
+  return _internal_qty_wh();
+}
+inline void SettleTradeRequest::set_qty_wh(::int64_t value) {
+  _internal_set_qty_wh(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000040U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.SettleTradeRequest.qty_wh)
+}
+inline ::int64_t SettleTradeRequest::_internal_qty_wh() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.qty_wh_;
+}
+inline void SettleTradeRequest::_internal_set_qty_wh(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.qty_wh_ = value;
+}
+
+// int64 price_per_kwh = 7 [json_name = "pricePerKwh"];
+inline void SettleTradeRequest::clear_price_per_kwh() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.price_per_kwh_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000080U);
+}
+inline ::int64_t SettleTradeRequest::price_per_kwh() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.SettleTradeRequest.price_per_kwh)
+  return _internal_price_per_kwh();
+}
+inline void SettleTradeRequest::set_price_per_kwh(::int64_t value) {
+  _internal_set_price_per_kwh(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000080U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.SettleTradeRequest.price_per_kwh)
+}
+inline ::int64_t SettleTradeRequest::_internal_price_per_kwh() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.price_per_kwh_;
+}
+inline void SettleTradeRequest::_internal_set_price_per_kwh(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.price_per_kwh_ = value;
+}
+
+// bool buy_order_final = 8 [json_name = "buyOrderFinal"];
+inline void SettleTradeRequest::clear_buy_order_final() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.buy_order_final_ = false;
+  ClearHasBit(_impl_._has_bits_[0], 0x00000100U);
+}
+inline bool SettleTradeRequest::buy_order_final() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.SettleTradeRequest.buy_order_final)
+  return _internal_buy_order_final();
+}
+inline void SettleTradeRequest::set_buy_order_final(bool value) {
+  _internal_set_buy_order_final(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000100U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.SettleTradeRequest.buy_order_final)
+}
+inline bool SettleTradeRequest::_internal_buy_order_final() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.buy_order_final_;
+}
+inline void SettleTradeRequest::_internal_set_buy_order_final(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.buy_order_final_ = value;
+}
+
+// .google.protobuf.Timestamp executed_at = 9 [json_name = "executedAt"];
+inline bool SettleTradeRequest::has_executed_at() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000020U);
+  PROTOBUF_ASSUME(!value || _impl_.executed_at_ != nullptr);
+  return value;
+}
+inline const ::google::protobuf::Timestamp& SettleTradeRequest::_internal_executed_at() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  const ::google::protobuf::Timestamp* p = _impl_.executed_at_;
+  return p != nullptr ? *p : *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<::google::protobuf::Timestamp>(&::google::protobuf::Timestamp_globals_);
+}
+inline const ::google::protobuf::Timestamp& SettleTradeRequest::executed_at() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.SettleTradeRequest.executed_at)
+  return _internal_executed_at();
+}
+inline void SettleTradeRequest::unsafe_arena_set_allocated_executed_at(
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.executed_at_);
+  }
+  _impl_.executed_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.billing.v1.SettleTradeRequest.executed_at)
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE SettleTradeRequest::release_executed_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ::google::protobuf::Timestamp* released = _impl_.executed_at_;
+  _impl_.executed_at_ = nullptr;
+  if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
+    auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    if (GetArena() == nullptr) {
+      delete old;
+    }
+  } else {
+    if (GetArena() != nullptr) {
+      released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    }
+  }
+  return released;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE SettleTradeRequest::unsafe_arena_release_executed_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.SettleTradeRequest.executed_at)
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ::google::protobuf::Timestamp* temp = _impl_.executed_at_;
+  _impl_.executed_at_ = nullptr;
+  return temp;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL SettleTradeRequest::_internal_mutable_executed_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.executed_at_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::google::protobuf::Timestamp>(GetArena());
+    _impl_.executed_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(p);
+  }
+  return _impl_.executed_at_;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL SettleTradeRequest::mutable_executed_at()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ::google::protobuf::Timestamp* _msg = _internal_mutable_executed_at();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.SettleTradeRequest.executed_at)
+  return _msg;
+}
+inline void SettleTradeRequest::set_allocated_executed_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (message_arena == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.executed_at_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::Message*>(value)->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  }
+
+  _impl_.executed_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.SettleTradeRequest.executed_at)
+}
+
+// -------------------------------------------------------------------
+
+// SettleTradeResponse
+
+// string settlement_id = 1 [json_name = "settlementId"];
+inline void SettleTradeResponse::clear_settlement_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.settlement_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& SettleTradeResponse::settlement_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.SettleTradeResponse.settlement_id)
+  return _internal_settlement_id();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void SettleTradeResponse::set_settlement_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.settlement_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.SettleTradeResponse.settlement_id)
+}
+inline ::std::string* PROTOBUF_NONNULL SettleTradeResponse::mutable_settlement_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_settlement_id();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.SettleTradeResponse.settlement_id)
+  return _s;
+}
+inline const ::std::string& SettleTradeResponse::_internal_settlement_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.settlement_id_.Get();
+}
+inline void SettleTradeResponse::_internal_set_settlement_id(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.settlement_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL SettleTradeResponse::_internal_mutable_settlement_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.settlement_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE SettleTradeResponse::release_settlement_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.SettleTradeResponse.settlement_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.settlement_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.settlement_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void SettleTradeResponse::set_allocated_settlement_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.settlement_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.settlement_id_.IsDefault()) {
+    _impl_.settlement_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.SettleTradeResponse.settlement_id)
+}
+
+// int64 trade_value = 2 [json_name = "tradeValue"];
+inline void SettleTradeResponse::clear_trade_value() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.trade_value_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline ::int64_t SettleTradeResponse::trade_value() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.SettleTradeResponse.trade_value)
+  return _internal_trade_value();
+}
+inline void SettleTradeResponse::set_trade_value(::int64_t value) {
+  _internal_set_trade_value(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.SettleTradeResponse.trade_value)
+}
+inline ::int64_t SettleTradeResponse::_internal_trade_value() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.trade_value_;
+}
+inline void SettleTradeResponse::_internal_set_trade_value(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.trade_value_ = value;
+}
+
+// int64 buyer_fee = 3 [json_name = "buyerFee"];
+inline void SettleTradeResponse::clear_buyer_fee() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.buyer_fee_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+}
+inline ::int64_t SettleTradeResponse::buyer_fee() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.SettleTradeResponse.buyer_fee)
+  return _internal_buyer_fee();
+}
+inline void SettleTradeResponse::set_buyer_fee(::int64_t value) {
+  _internal_set_buyer_fee(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.SettleTradeResponse.buyer_fee)
+}
+inline ::int64_t SettleTradeResponse::_internal_buyer_fee() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.buyer_fee_;
+}
+inline void SettleTradeResponse::_internal_set_buyer_fee(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.buyer_fee_ = value;
+}
+
+// int64 seller_fee = 4 [json_name = "sellerFee"];
+inline void SettleTradeResponse::clear_seller_fee() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.seller_fee_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+}
+inline ::int64_t SettleTradeResponse::seller_fee() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.SettleTradeResponse.seller_fee)
+  return _internal_seller_fee();
+}
+inline void SettleTradeResponse::set_seller_fee(::int64_t value) {
+  _internal_set_seller_fee(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.SettleTradeResponse.seller_fee)
+}
+inline ::int64_t SettleTradeResponse::_internal_seller_fee() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.seller_fee_;
+}
+inline void SettleTradeResponse::_internal_set_seller_fee(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.seller_fee_ = value;
+}
+
+// int64 buyer_released_remainder = 5 [json_name = "buyerReleasedRemainder"];
+inline void SettleTradeResponse::clear_buyer_released_remainder() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.buyer_released_remainder_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+}
+inline ::int64_t SettleTradeResponse::buyer_released_remainder() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.SettleTradeResponse.buyer_released_remainder)
+  return _internal_buyer_released_remainder();
+}
+inline void SettleTradeResponse::set_buyer_released_remainder(::int64_t value) {
+  _internal_set_buyer_released_remainder(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.SettleTradeResponse.buyer_released_remainder)
+}
+inline ::int64_t SettleTradeResponse::_internal_buyer_released_remainder() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.buyer_released_remainder_;
+}
+inline void SettleTradeResponse::_internal_set_buyer_released_remainder(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.buyer_released_remainder_ = value;
+}
+
+// bool already_settled = 6 [json_name = "alreadySettled"];
+inline void SettleTradeResponse::clear_already_settled() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.already_settled_ = false;
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+}
+inline bool SettleTradeResponse::already_settled() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.SettleTradeResponse.already_settled)
+  return _internal_already_settled();
+}
+inline void SettleTradeResponse::set_already_settled(bool value) {
+  _internal_set_already_settled(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.SettleTradeResponse.already_settled)
+}
+inline bool SettleTradeResponse::_internal_already_settled() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.already_settled_;
+}
+inline void SettleTradeResponse::_internal_set_already_settled(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.already_settled_ = value;
 }
 
 #ifdef __GNUC__
