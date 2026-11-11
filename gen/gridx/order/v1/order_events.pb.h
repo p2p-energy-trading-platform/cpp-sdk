@@ -589,11 +589,11 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED OrderAccepted final : public ::goog
   // accessors -------------------------------------------------------
   enum : int {
     kEventIdFieldNumber = 1,
+    kUserIdFieldNumber = 14,
     kMarketIdFieldNumber = 4,
     kExpiresAtFieldNumber = 12,
     kCreatedAtFieldNumber = 13,
     kOrderIdFieldNumber = 2,
-    kUserIdFieldNumber = 3,
     kGridZoneIdFieldNumber = 5,
     kSideFieldNumber = 6,
     kOrderTypeFieldNumber = 7,
@@ -615,6 +615,21 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED OrderAccepted final : public ::goog
   const ::std::string& _internal_event_id() const;
   PROTOBUF_ALWAYS_INLINE void _internal_set_event_id(const ::std::string& value);
   ::std::string* PROTOBUF_NONNULL _internal_mutable_event_id();
+
+  public:
+  // string user_id = 14 [json_name = "userId"];
+  void clear_user_id() ;
+  [[nodiscard]] const ::std::string& user_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_user_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_user_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_user_id();
+  void set_allocated_user_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_user_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_user_id();
 
   public:
   // .gridx.order.v1.MarketId market_id = 4 [json_name = "marketId"];
@@ -673,16 +688,6 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED OrderAccepted final : public ::goog
   private:
   ::uint64_t _internal_order_id() const;
   void _internal_set_order_id(::uint64_t value);
-
-  public:
-  // uint64 user_id = 3 [json_name = "userId"];
-  void clear_user_id() ;
-  [[nodiscard]] ::uint64_t user_id() const;
-  void set_user_id(::uint64_t value);
-
-  private:
-  ::uint64_t _internal_user_id() const;
-  void _internal_set_user_id(::uint64_t value);
 
   public:
   // uint32 grid_zone_id = 5 [json_name = "gridZoneId"];
@@ -760,7 +765,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED OrderAccepted final : public ::goog
   class _Internal;
   using ParseTableT_ =
       ::google::protobuf::internal::TcParseTable<4, 13,
-                          3, 53,
+                          3, 60,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
       const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
@@ -789,11 +794,11 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED OrderAccepted final : public ::goog
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr event_id_;
+    ::google::protobuf::internal::ArenaStringPtr user_id_;
     ::gridx::order::v1::MarketId* PROTOBUF_NULLABLE market_id_;
     ::google::protobuf::Timestamp* PROTOBUF_NULLABLE expires_at_;
     ::google::protobuf::Timestamp* PROTOBUF_NULLABLE created_at_;
     ::uint64_t order_id_;
-    ::uint64_t user_id_;
     ::uint32_t grid_zone_id_;
     int side_;
     int order_type_;
@@ -988,7 +993,7 @@ inline void OrderAccepted::set_allocated_event_id(::std::string* PROTOBUF_NULLAB
 inline void OrderAccepted::clear_order_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.order_id_ = ::uint64_t{0u};
-  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
 }
 inline ::uint64_t OrderAccepted::order_id() const {
   // @@protoc_insertion_point(field_get:gridx.order.v1.OrderAccepted.order_id)
@@ -996,7 +1001,7 @@ inline ::uint64_t OrderAccepted::order_id() const {
 }
 inline void OrderAccepted::set_order_id(::uint64_t value) {
   _internal_set_order_id(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
   // @@protoc_insertion_point(field_set:gridx.order.v1.OrderAccepted.order_id)
 }
 inline ::uint64_t OrderAccepted::_internal_order_id() const {
@@ -1008,40 +1013,80 @@ inline void OrderAccepted::_internal_set_order_id(::uint64_t value) {
   _impl_.order_id_ = value;
 }
 
-// uint64 user_id = 3 [json_name = "userId"];
+// string user_id = 14 [json_name = "userId"];
 inline void OrderAccepted::clear_user_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.user_id_ = ::uint64_t{0u};
-  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  _impl_.user_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
 }
-inline ::uint64_t OrderAccepted::user_id() const {
+inline const ::std::string& OrderAccepted::user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:gridx.order.v1.OrderAccepted.user_id)
   return _internal_user_id();
 }
-inline void OrderAccepted::set_user_id(::uint64_t value) {
-  _internal_set_user_id(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void OrderAccepted::set_user_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
   // @@protoc_insertion_point(field_set:gridx.order.v1.OrderAccepted.user_id)
 }
-inline ::uint64_t OrderAccepted::_internal_user_id() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.user_id_;
+inline ::std::string* PROTOBUF_NONNULL OrderAccepted::mutable_user_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:gridx.order.v1.OrderAccepted.user_id)
+  return _s;
 }
-inline void OrderAccepted::_internal_set_user_id(::uint64_t value) {
+inline const ::std::string& OrderAccepted::_internal_user_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.user_id_.Get();
+}
+inline void OrderAccepted::_internal_set_user_id(const ::std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.user_id_ = value;
+  _impl_.user_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL OrderAccepted::_internal_mutable_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.user_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE OrderAccepted::release_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.order.v1.OrderAccepted.user_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.user_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.user_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void OrderAccepted::set_allocated_user_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.user_id_.IsDefault()) {
+    _impl_.user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.order.v1.OrderAccepted.user_id)
 }
 
 // .gridx.order.v1.MarketId market_id = 4 [json_name = "marketId"];
 inline bool OrderAccepted::has_market_id() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000002U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000004U);
   PROTOBUF_ASSUME(!value || _impl_.market_id_ != nullptr);
   return value;
 }
 inline void OrderAccepted::clear_market_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.market_id_ != nullptr) _impl_.market_id_->Clear();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
 }
 inline const ::gridx::order::v1::MarketId& OrderAccepted::_internal_market_id() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -1060,16 +1105,16 @@ inline void OrderAccepted::unsafe_arena_set_allocated_market_id(
   }
   _impl_.market_id_ = reinterpret_cast<::gridx::order::v1::MarketId*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.order.v1.OrderAccepted.market_id)
 }
 inline ::gridx::order::v1::MarketId* PROTOBUF_NULLABLE OrderAccepted::release_market_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
   ::gridx::order::v1::MarketId* released = _impl_.market_id_;
   _impl_.market_id_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -1089,7 +1134,7 @@ inline ::gridx::order::v1::MarketId* PROTOBUF_NULLABLE OrderAccepted::unsafe_are
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:gridx.order.v1.OrderAccepted.market_id)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
   ::gridx::order::v1::MarketId* temp = _impl_.market_id_;
   _impl_.market_id_ = nullptr;
   return temp;
@@ -1104,7 +1149,7 @@ inline ::gridx::order::v1::MarketId* PROTOBUF_NONNULL OrderAccepted::_internal_m
 }
 inline ::gridx::order::v1::MarketId* PROTOBUF_NONNULL OrderAccepted::mutable_market_id()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
   ::gridx::order::v1::MarketId* _msg = _internal_mutable_market_id();
   // @@protoc_insertion_point(field_mutable:gridx.order.v1.OrderAccepted.market_id)
   return _msg;
@@ -1121,9 +1166,9 @@ inline void OrderAccepted::set_allocated_market_id(::gridx::order::v1::MarketId*
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
   }
 
   _impl_.market_id_ = reinterpret_cast<::gridx::order::v1::MarketId*>(value);
@@ -1300,7 +1345,7 @@ inline void OrderAccepted::_internal_set_remaining_quantity(double value) {
 
 // .google.protobuf.Timestamp expires_at = 12 [json_name = "expiresAt"];
 inline bool OrderAccepted::has_expires_at() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000004U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000008U);
   PROTOBUF_ASSUME(!value || _impl_.expires_at_ != nullptr);
   return value;
 }
@@ -1321,16 +1366,16 @@ inline void OrderAccepted::unsafe_arena_set_allocated_expires_at(
   }
   _impl_.expires_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.order.v1.OrderAccepted.expires_at)
 }
 inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE OrderAccepted::release_expires_at() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
   ::google::protobuf::Timestamp* released = _impl_.expires_at_;
   _impl_.expires_at_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -1350,7 +1395,7 @@ inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE OrderAccepted::unsafe_ar
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:gridx.order.v1.OrderAccepted.expires_at)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
   ::google::protobuf::Timestamp* temp = _impl_.expires_at_;
   _impl_.expires_at_ = nullptr;
   return temp;
@@ -1365,7 +1410,7 @@ inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL OrderAccepted::_internal_
 }
 inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL OrderAccepted::mutable_expires_at()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
   ::google::protobuf::Timestamp* _msg = _internal_mutable_expires_at();
   // @@protoc_insertion_point(field_mutable:gridx.order.v1.OrderAccepted.expires_at)
   return _msg;
@@ -1382,9 +1427,9 @@ inline void OrderAccepted::set_allocated_expires_at(::google::protobuf::Timestam
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
   }
 
   _impl_.expires_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
@@ -1393,7 +1438,7 @@ inline void OrderAccepted::set_allocated_expires_at(::google::protobuf::Timestam
 
 // .google.protobuf.Timestamp created_at = 13 [json_name = "createdAt"];
 inline bool OrderAccepted::has_created_at() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000008U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000010U);
   PROTOBUF_ASSUME(!value || _impl_.created_at_ != nullptr);
   return value;
 }
@@ -1414,16 +1459,16 @@ inline void OrderAccepted::unsafe_arena_set_allocated_created_at(
   }
   _impl_.created_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000010U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.order.v1.OrderAccepted.created_at)
 }
 inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE OrderAccepted::release_created_at() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
   ::google::protobuf::Timestamp* released = _impl_.created_at_;
   _impl_.created_at_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -1443,7 +1488,7 @@ inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE OrderAccepted::unsafe_ar
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:gridx.order.v1.OrderAccepted.created_at)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
   ::google::protobuf::Timestamp* temp = _impl_.created_at_;
   _impl_.created_at_ = nullptr;
   return temp;
@@ -1458,7 +1503,7 @@ inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL OrderAccepted::_internal_
 }
 inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL OrderAccepted::mutable_created_at()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
   ::google::protobuf::Timestamp* _msg = _internal_mutable_created_at();
   // @@protoc_insertion_point(field_mutable:gridx.order.v1.OrderAccepted.created_at)
   return _msg;
@@ -1475,9 +1520,9 @@ inline void OrderAccepted::set_allocated_created_at(::google::protobuf::Timestam
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000010U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
   }
 
   _impl_.created_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);

@@ -231,12 +231,12 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TradeExecuted final : public ::goog
   // accessors -------------------------------------------------------
   enum : int {
     kEventIdFieldNumber = 1,
+    kBuyerUserIdFieldNumber = 14,
+    kSellerUserIdFieldNumber = 15,
     kExecutedAtFieldNumber = 13,
     kTradeIdFieldNumber = 2,
     kBuyOrderIdFieldNumber = 3,
     kSellOrderIdFieldNumber = 4,
-    kBuyerIdFieldNumber = 5,
-    kSellerIdFieldNumber = 6,
     kBuyerGridZoneIdFieldNumber = 7,
     kSellerGridZoneIdFieldNumber = 8,
     kExecutionPriceFieldNumber = 9,
@@ -257,6 +257,36 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TradeExecuted final : public ::goog
   const ::std::string& _internal_event_id() const;
   PROTOBUF_ALWAYS_INLINE void _internal_set_event_id(const ::std::string& value);
   ::std::string* PROTOBUF_NONNULL _internal_mutable_event_id();
+
+  public:
+  // string buyer_user_id = 14 [json_name = "buyerUserId"];
+  void clear_buyer_user_id() ;
+  [[nodiscard]] const ::std::string& buyer_user_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_buyer_user_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_buyer_user_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_buyer_user_id();
+  void set_allocated_buyer_user_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_buyer_user_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_buyer_user_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_buyer_user_id();
+
+  public:
+  // string seller_user_id = 15 [json_name = "sellerUserId"];
+  void clear_seller_user_id() ;
+  [[nodiscard]] const ::std::string& seller_user_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_seller_user_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_seller_user_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_seller_user_id();
+  void set_allocated_seller_user_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_seller_user_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_seller_user_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_seller_user_id();
 
   public:
   // .google.protobuf.Timestamp executed_at = 13 [json_name = "executedAt"];
@@ -303,26 +333,6 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TradeExecuted final : public ::goog
   private:
   ::uint64_t _internal_sell_order_id() const;
   void _internal_set_sell_order_id(::uint64_t value);
-
-  public:
-  // uint64 buyer_id = 5 [json_name = "buyerId"];
-  void clear_buyer_id() ;
-  [[nodiscard]] ::uint64_t buyer_id() const;
-  void set_buyer_id(::uint64_t value);
-
-  private:
-  ::uint64_t _internal_buyer_id() const;
-  void _internal_set_buyer_id(::uint64_t value);
-
-  public:
-  // uint64 seller_id = 6 [json_name = "sellerId"];
-  void clear_seller_id() ;
-  [[nodiscard]] ::uint64_t seller_id() const;
-  void set_seller_id(::uint64_t value);
-
-  private:
-  ::uint64_t _internal_seller_id() const;
-  void _internal_set_seller_id(::uint64_t value);
 
   public:
   // uint32 buyer_grid_zone_id = 7 [json_name = "buyerGridZoneId"];
@@ -390,7 +400,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TradeExecuted final : public ::goog
   class _Internal;
   using ParseTableT_ =
       ::google::protobuf::internal::TcParseTable<4, 13,
-                          1, 53,
+                          1, 80,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
       const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
@@ -419,12 +429,12 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TradeExecuted final : public ::goog
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr event_id_;
+    ::google::protobuf::internal::ArenaStringPtr buyer_user_id_;
+    ::google::protobuf::internal::ArenaStringPtr seller_user_id_;
     ::google::protobuf::Timestamp* PROTOBUF_NULLABLE executed_at_;
     ::uint64_t trade_id_;
     ::uint64_t buy_order_id_;
     ::uint64_t sell_order_id_;
-    ::uint64_t buyer_id_;
-    ::uint64_t seller_id_;
     ::uint32_t buyer_grid_zone_id_;
     ::uint32_t seller_grid_zone_id_;
     ::int64_t execution_price_;
@@ -521,7 +531,7 @@ inline void TradeExecuted::set_allocated_event_id(::std::string* PROTOBUF_NULLAB
 inline void TradeExecuted::clear_trade_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.trade_id_ = ::uint64_t{0u};
-  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
 }
 inline ::uint64_t TradeExecuted::trade_id() const {
   // @@protoc_insertion_point(field_get:gridx.trade.v1.TradeExecuted.trade_id)
@@ -529,7 +539,7 @@ inline ::uint64_t TradeExecuted::trade_id() const {
 }
 inline void TradeExecuted::set_trade_id(::uint64_t value) {
   _internal_set_trade_id(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
   // @@protoc_insertion_point(field_set:gridx.trade.v1.TradeExecuted.trade_id)
 }
 inline ::uint64_t TradeExecuted::_internal_trade_id() const {
@@ -545,7 +555,7 @@ inline void TradeExecuted::_internal_set_trade_id(::uint64_t value) {
 inline void TradeExecuted::clear_buy_order_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.buy_order_id_ = ::uint64_t{0u};
-  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
 }
 inline ::uint64_t TradeExecuted::buy_order_id() const {
   // @@protoc_insertion_point(field_get:gridx.trade.v1.TradeExecuted.buy_order_id)
@@ -553,7 +563,7 @@ inline ::uint64_t TradeExecuted::buy_order_id() const {
 }
 inline void TradeExecuted::set_buy_order_id(::uint64_t value) {
   _internal_set_buy_order_id(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
   // @@protoc_insertion_point(field_set:gridx.trade.v1.TradeExecuted.buy_order_id)
 }
 inline ::uint64_t TradeExecuted::_internal_buy_order_id() const {
@@ -569,7 +579,7 @@ inline void TradeExecuted::_internal_set_buy_order_id(::uint64_t value) {
 inline void TradeExecuted::clear_sell_order_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.sell_order_id_ = ::uint64_t{0u};
-  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000040U);
 }
 inline ::uint64_t TradeExecuted::sell_order_id() const {
   // @@protoc_insertion_point(field_get:gridx.trade.v1.TradeExecuted.sell_order_id)
@@ -577,7 +587,7 @@ inline ::uint64_t TradeExecuted::sell_order_id() const {
 }
 inline void TradeExecuted::set_sell_order_id(::uint64_t value) {
   _internal_set_sell_order_id(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000040U);
   // @@protoc_insertion_point(field_set:gridx.trade.v1.TradeExecuted.sell_order_id)
 }
 inline ::uint64_t TradeExecuted::_internal_sell_order_id() const {
@@ -589,52 +599,132 @@ inline void TradeExecuted::_internal_set_sell_order_id(::uint64_t value) {
   _impl_.sell_order_id_ = value;
 }
 
-// uint64 buyer_id = 5 [json_name = "buyerId"];
-inline void TradeExecuted::clear_buyer_id() {
+// string buyer_user_id = 14 [json_name = "buyerUserId"];
+inline void TradeExecuted::clear_buyer_user_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.buyer_id_ = ::uint64_t{0u};
-  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  _impl_.buyer_user_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
 }
-inline ::uint64_t TradeExecuted::buyer_id() const {
-  // @@protoc_insertion_point(field_get:gridx.trade.v1.TradeExecuted.buyer_id)
-  return _internal_buyer_id();
+inline const ::std::string& TradeExecuted::buyer_user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.trade.v1.TradeExecuted.buyer_user_id)
+  return _internal_buyer_user_id();
 }
-inline void TradeExecuted::set_buyer_id(::uint64_t value) {
-  _internal_set_buyer_id(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
-  // @@protoc_insertion_point(field_set:gridx.trade.v1.TradeExecuted.buyer_id)
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void TradeExecuted::set_buyer_user_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.buyer_user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.trade.v1.TradeExecuted.buyer_user_id)
 }
-inline ::uint64_t TradeExecuted::_internal_buyer_id() const {
+inline ::std::string* PROTOBUF_NONNULL TradeExecuted::mutable_buyer_user_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_buyer_user_id();
+  // @@protoc_insertion_point(field_mutable:gridx.trade.v1.TradeExecuted.buyer_user_id)
+  return _s;
+}
+inline const ::std::string& TradeExecuted::_internal_buyer_user_id() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.buyer_id_;
+  return _impl_.buyer_user_id_.Get();
 }
-inline void TradeExecuted::_internal_set_buyer_id(::uint64_t value) {
+inline void TradeExecuted::_internal_set_buyer_user_id(const ::std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.buyer_id_ = value;
+  _impl_.buyer_user_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL TradeExecuted::_internal_mutable_buyer_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.buyer_user_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE TradeExecuted::release_buyer_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.trade.v1.TradeExecuted.buyer_user_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.buyer_user_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.buyer_user_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void TradeExecuted::set_allocated_buyer_user_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.buyer_user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.buyer_user_id_.IsDefault()) {
+    _impl_.buyer_user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.trade.v1.TradeExecuted.buyer_user_id)
 }
 
-// uint64 seller_id = 6 [json_name = "sellerId"];
-inline void TradeExecuted::clear_seller_id() {
+// string seller_user_id = 15 [json_name = "sellerUserId"];
+inline void TradeExecuted::clear_seller_user_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.seller_id_ = ::uint64_t{0u};
-  ClearHasBit(_impl_._has_bits_[0], 0x00000040U);
+  _impl_.seller_user_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
 }
-inline ::uint64_t TradeExecuted::seller_id() const {
-  // @@protoc_insertion_point(field_get:gridx.trade.v1.TradeExecuted.seller_id)
-  return _internal_seller_id();
+inline const ::std::string& TradeExecuted::seller_user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.trade.v1.TradeExecuted.seller_user_id)
+  return _internal_seller_user_id();
 }
-inline void TradeExecuted::set_seller_id(::uint64_t value) {
-  _internal_set_seller_id(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000040U);
-  // @@protoc_insertion_point(field_set:gridx.trade.v1.TradeExecuted.seller_id)
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void TradeExecuted::set_seller_user_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  _impl_.seller_user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.trade.v1.TradeExecuted.seller_user_id)
 }
-inline ::uint64_t TradeExecuted::_internal_seller_id() const {
+inline ::std::string* PROTOBUF_NONNULL TradeExecuted::mutable_seller_user_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::std::string* _s = _internal_mutable_seller_user_id();
+  // @@protoc_insertion_point(field_mutable:gridx.trade.v1.TradeExecuted.seller_user_id)
+  return _s;
+}
+inline const ::std::string& TradeExecuted::_internal_seller_user_id() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.seller_id_;
+  return _impl_.seller_user_id_.Get();
 }
-inline void TradeExecuted::_internal_set_seller_id(::uint64_t value) {
+inline void TradeExecuted::_internal_set_seller_user_id(const ::std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.seller_id_ = value;
+  _impl_.seller_user_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL TradeExecuted::_internal_mutable_seller_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.seller_user_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE TradeExecuted::release_seller_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.trade.v1.TradeExecuted.seller_user_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000004U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  auto* released = _impl_.seller_user_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.seller_user_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void TradeExecuted::set_allocated_seller_user_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  }
+  _impl_.seller_user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.seller_user_id_.IsDefault()) {
+    _impl_.seller_user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.trade.v1.TradeExecuted.seller_user_id)
 }
 
 // uint32 buyer_grid_zone_id = 7 [json_name = "buyerGridZoneId"];
@@ -783,7 +873,7 @@ inline void TradeExecuted::_internal_set_grid_rule_version(::uint32_t value) {
 
 // .google.protobuf.Timestamp executed_at = 13 [json_name = "executedAt"];
 inline bool TradeExecuted::has_executed_at() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000002U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000008U);
   PROTOBUF_ASSUME(!value || _impl_.executed_at_ != nullptr);
   return value;
 }
@@ -804,16 +894,16 @@ inline void TradeExecuted::unsafe_arena_set_allocated_executed_at(
   }
   _impl_.executed_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.trade.v1.TradeExecuted.executed_at)
 }
 inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE TradeExecuted::release_executed_at() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
   ::google::protobuf::Timestamp* released = _impl_.executed_at_;
   _impl_.executed_at_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -833,7 +923,7 @@ inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE TradeExecuted::unsafe_ar
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:gridx.trade.v1.TradeExecuted.executed_at)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
   ::google::protobuf::Timestamp* temp = _impl_.executed_at_;
   _impl_.executed_at_ = nullptr;
   return temp;
@@ -848,7 +938,7 @@ inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL TradeExecuted::_internal_
 }
 inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL TradeExecuted::mutable_executed_at()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
   ::google::protobuf::Timestamp* _msg = _internal_mutable_executed_at();
   // @@protoc_insertion_point(field_mutable:gridx.trade.v1.TradeExecuted.executed_at)
   return _msg;
@@ -865,9 +955,9 @@ inline void TradeExecuted::set_allocated_executed_at(::google::protobuf::Timesta
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
   }
 
   _impl_.executed_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);

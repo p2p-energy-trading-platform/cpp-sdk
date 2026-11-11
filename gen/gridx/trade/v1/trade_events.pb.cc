@@ -49,9 +49,9 @@ constexpr TradeExecuted::ParseTableT_ TradeExecuted::InternalGenerateParseTable_
     {
       PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_._has_bits_),
       0, // no _extensions_
-      13, 120,  // max_field_number, fast_idx_mask
+      15, 120,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294959104,  // skipmap
+      4294934576,  // skipmap
       offsetof(ParseTableT_, field_entries),
       13,  // num_field_entries
       1,  // num_aux_entries
@@ -69,25 +69,19 @@ constexpr TradeExecuted::ParseTableT_ TradeExecuted::InternalGenerateParseTable_
        {10, 0, 0,
         PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.event_id_)}},
       // uint64 trade_id = 2 [json_name = "tradeId"];
-      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(TradeExecuted, _impl_.trade_id_), 2>(),
-       {16, 2, 0,
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(TradeExecuted, _impl_.trade_id_), 4>(),
+       {16, 4, 0,
         PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.trade_id_)}},
       // uint64 buy_order_id = 3 [json_name = "buyOrderId"];
-      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(TradeExecuted, _impl_.buy_order_id_), 3>(),
-       {24, 3, 0,
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(TradeExecuted, _impl_.buy_order_id_), 5>(),
+       {24, 5, 0,
         PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.buy_order_id_)}},
       // uint64 sell_order_id = 4 [json_name = "sellOrderId"];
-      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(TradeExecuted, _impl_.sell_order_id_), 4>(),
-       {32, 4, 0,
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(TradeExecuted, _impl_.sell_order_id_), 6>(),
+       {32, 6, 0,
         PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.sell_order_id_)}},
-      // uint64 buyer_id = 5 [json_name = "buyerId"];
-      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(TradeExecuted, _impl_.buyer_id_), 5>(),
-       {40, 5, 0,
-        PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.buyer_id_)}},
-      // uint64 seller_id = 6 [json_name = "sellerId"];
-      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(TradeExecuted, _impl_.seller_id_), 6>(),
-       {48, 6, 0,
-        PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.seller_id_)}},
+      {::_pbi::TcParser::MiniParse, {}},
+      {::_pbi::TcParser::MiniParse, {}},
       // uint32 buyer_grid_zone_id = 7 [json_name = "buyerGridZoneId"];
       {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(TradeExecuted, _impl_.buyer_grid_zone_id_), 7>(),
        {56, 7, 0,
@@ -114,25 +108,27 @@ constexpr TradeExecuted::ParseTableT_ TradeExecuted::InternalGenerateParseTable_
         PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.grid_rule_version_)}},
       // .google.protobuf.Timestamp executed_at = 13 [json_name = "executedAt"];
       {::_pbi::TcParser::FastMtS1,
-       {106, 1, 0,
+       {106, 3, 0,
         PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.executed_at_)}},
-      {::_pbi::TcParser::MiniParse, {}},
-      {::_pbi::TcParser::MiniParse, {}},
+      // string buyer_user_id = 14 [json_name = "buyerUserId"];
+      {::_pbi::TcParser::FastUS1,
+       {114, 1, 0,
+        PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.buyer_user_id_)}},
+      // string seller_user_id = 15 [json_name = "sellerUserId"];
+      {::_pbi::TcParser::FastUS1,
+       {122, 2, 0,
+        PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.seller_user_id_)}},
     }}, {{
       65535, 65535
     }}, {{
       // string event_id = 1 [json_name = "eventId"];
       {PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.event_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // uint64 trade_id = 2 [json_name = "tradeId"];
-      {PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.trade_id_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
+      {PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.trade_id_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
       // uint64 buy_order_id = 3 [json_name = "buyOrderId"];
-      {PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.buy_order_id_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
+      {PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.buy_order_id_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
       // uint64 sell_order_id = 4 [json_name = "sellOrderId"];
-      {PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.sell_order_id_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
-      // uint64 buyer_id = 5 [json_name = "buyerId"];
-      {PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.buyer_id_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
-      // uint64 seller_id = 6 [json_name = "sellerId"];
-      {PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.seller_id_), _Internal::kHasBitsOffset + 6, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
+      {PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.sell_order_id_), _Internal::kHasBitsOffset + 6, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
       // uint32 buyer_grid_zone_id = 7 [json_name = "buyerGridZoneId"];
       {PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.buyer_grid_zone_id_), _Internal::kHasBitsOffset + 7, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt32)},
       // uint32 seller_grid_zone_id = 8 [json_name = "sellerGridZoneId"];
@@ -146,7 +142,11 @@ constexpr TradeExecuted::ParseTableT_ TradeExecuted::InternalGenerateParseTable_
       // uint32 grid_rule_version = 12 [json_name = "gridRuleVersion"];
       {PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.grid_rule_version_), _Internal::kHasBitsOffset + 12, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt32)},
       // .google.protobuf.Timestamp executed_at = 13 [json_name = "executedAt"];
-      {PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.executed_at_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+      {PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.executed_at_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+      // string buyer_user_id = 14 [json_name = "buyerUserId"];
+      {PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.buyer_user_id_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string seller_user_id = 15 [json_name = "sellerUserId"];
+      {PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.seller_user_id_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     }},
     {{
         #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -156,9 +156,11 @@ constexpr TradeExecuted::ParseTableT_ TradeExecuted::InternalGenerateParseTable_
         #endif
     }},
     {{
-      "\34\10\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
+      "\34\10\0\0\0\0\0\0\0\0\0\0\15\16\0\0"
       "gridx.trade.v1.TradeExecuted"
       "event_id"
+      "buyer_user_id"
+      "seller_user_id"
     }},
   };
 }
@@ -171,12 +173,16 @@ inline constexpr TradeExecuted::Impl_::Impl_(
         event_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
+        buyer_user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        seller_user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
         executed_at_{nullptr},
         trade_id_{::uint64_t{0u}},
         buy_order_id_{::uint64_t{0u}},
         sell_order_id_{::uint64_t{0u}},
-        buyer_id_{::uint64_t{0u}},
-        seller_id_{::uint64_t{0u}},
         buyer_grid_zone_id_{0u},
         seller_grid_zone_id_{0u},
         execution_price_{::int64_t{0}},
@@ -293,8 +299,8 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::gridx::trade::v1::TradeExecuted, _impl_.trade_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::trade::v1::TradeExecuted, _impl_.buy_order_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::trade::v1::TradeExecuted, _impl_.sell_order_id_),
-        PROTOBUF_FIELD_OFFSET(::gridx::trade::v1::TradeExecuted, _impl_.buyer_id_),
-        PROTOBUF_FIELD_OFFSET(::gridx::trade::v1::TradeExecuted, _impl_.seller_id_),
+        PROTOBUF_FIELD_OFFSET(::gridx::trade::v1::TradeExecuted, _impl_.buyer_user_id_),
+        PROTOBUF_FIELD_OFFSET(::gridx::trade::v1::TradeExecuted, _impl_.seller_user_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::trade::v1::TradeExecuted, _impl_.buyer_grid_zone_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::trade::v1::TradeExecuted, _impl_.seller_grid_zone_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::trade::v1::TradeExecuted, _impl_.execution_price_),
@@ -303,18 +309,18 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::gridx::trade::v1::TradeExecuted, _impl_.grid_rule_version_),
         PROTOBUF_FIELD_OFFSET(::gridx::trade::v1::TradeExecuted, _impl_.executed_at_),
         0,
-        2,
-        3,
         4,
         5,
         6,
+        1,
+        2,
         7,
         8,
         9,
         10,
         11,
         12,
-        1,
+        3,
 };
 
 static const ::_pbi::MigrationSchema
@@ -329,21 +335,23 @@ const char descriptor_table_protodef_gridx_2ftrade_2fv1_2ftrade_5fevents_2eproto
     protodesc_cold) = {
     "\n!gridx/trade/v1/trade_events.proto\022\016gri"
     "dx.trade.v1\032\037google/protobuf/timestamp.p"
-    "roto\"\366\003\n\rTradeExecuted\022\031\n\010event_id\030\001 \001(\t"
+    "roto\"\251\004\n\rTradeExecuted\022\031\n\010event_id\030\001 \001(\t"
     "R\007eventId\022\031\n\010trade_id\030\002 \001(\004R\007tradeId\022 \n\014"
     "buy_order_id\030\003 \001(\004R\nbuyOrderId\022\"\n\rsell_o"
-    "rder_id\030\004 \001(\004R\013sellOrderId\022\031\n\010buyer_id\030\005"
-    " \001(\004R\007buyerId\022\033\n\tseller_id\030\006 \001(\004R\010seller"
-    "Id\022+\n\022buyer_grid_zone_id\030\007 \001(\rR\017buyerGri"
-    "dZoneId\022-\n\023seller_grid_zone_id\030\010 \001(\rR\020se"
-    "llerGridZoneId\022\'\n\017execution_price\030\t \001(\003R"
-    "\016executionPrice\022\'\n\020grid_fee_per_kwh\030\n \001("
-    "\003R\rgridFeePerKwh\022\032\n\010quantity\030\013 \001(\003R\010quan"
-    "tity\022*\n\021grid_rule_version\030\014 \001(\rR\017gridRul"
-    "eVersion\022;\n\013executed_at\030\r \001(\0132\032.google.p"
-    "rotobuf.TimestampR\nexecutedAtBJZHgithub."
-    "com/p2p-energy-trading-platform/go-sdk/g"
-    "en/gridx/trade/v1;tradev1b\006proto3"
+    "rder_id\030\004 \001(\004R\013sellOrderId\022\"\n\rbuyer_user"
+    "_id\030\016 \001(\tR\013buyerUserId\022$\n\016seller_user_id"
+    "\030\017 \001(\tR\014sellerUserId\022+\n\022buyer_grid_zone_"
+    "id\030\007 \001(\rR\017buyerGridZoneId\022-\n\023seller_grid"
+    "_zone_id\030\010 \001(\rR\020sellerGridZoneId\022\'\n\017exec"
+    "ution_price\030\t \001(\003R\016executionPrice\022\'\n\020gri"
+    "d_fee_per_kwh\030\n \001(\003R\rgridFeePerKwh\022\032\n\010qu"
+    "antity\030\013 \001(\003R\010quantity\022*\n\021grid_rule_vers"
+    "ion\030\014 \001(\rR\017gridRuleVersion\022;\n\013executed_a"
+    "t\030\r \001(\0132\032.google.protobuf.TimestampR\nexe"
+    "cutedAtJ\004\010\005\020\006J\004\010\006\020\007R\010buyer_idR\tseller_id"
+    "BJZHgithub.com/p2p-energy-trading-platfo"
+    "rm/go-sdk/gen/gridx/trade/v1;tradev1b\006pr"
+    "oto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_gridx_2ftrade_2fv1_2ftrade_5fevents_2eproto_deps[1] = {
@@ -353,7 +361,7 @@ static ::absl::once_flag descriptor_table_gridx_2ftrade_2fv1_2ftrade_5fevents_2e
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_gridx_2ftrade_2fv1_2ftrade_5fevents_2eproto = {
     false,
     false,
-    673,
+    724,
     descriptor_table_protodef_gridx_2ftrade_2fv1_2ftrade_5fevents_2eproto,
     "gridx/trade/v1/trade_events.proto",
     &descriptor_table_gridx_2ftrade_2fv1_2ftrade_5fevents_2eproto_once,
@@ -374,7 +382,7 @@ namespace v1 {
 void TradeExecuted::clear_executed_at() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.executed_at_ != nullptr) _impl_.executed_at_->Clear();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
 }
 TradeExecuted::TradeExecuted(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
@@ -391,7 +399,9 @@ PROTOBUF_NDEBUG_INLINE TradeExecuted::Impl_::Impl_(
     [[maybe_unused]] const ::gridx::trade::v1::TradeExecuted& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
-        event_id_(arena, from.event_id_) {}
+        event_id_(arena, from.event_id_),
+        buyer_user_id_(arena, from.buyer_user_id_),
+        seller_user_id_(arena, from.seller_user_id_) {}
 
 TradeExecuted::TradeExecuted(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
@@ -408,7 +418,7 @@ TradeExecuted::TradeExecuted(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
   ::uint32_t cached_has_bits = _impl_._has_bits_[0];
-  _impl_.executed_at_ = (CheckHasBit(cached_has_bits, 0x00000002U))
+  _impl_.executed_at_ = (CheckHasBit(cached_has_bits, 0x00000008U))
                 ? ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.executed_at_)
                 : nullptr;
   ::memcpy(reinterpret_cast<char*>(&_impl_) +
@@ -425,7 +435,9 @@ PROTOBUF_NDEBUG_INLINE TradeExecuted::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
     [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : _cached_size_{0},
-        event_id_(arena) {}
+        event_id_(arena),
+        buyer_user_id_(arena),
+        seller_user_id_(arena) {}
 
 inline void TradeExecuted::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
@@ -448,6 +460,8 @@ inline void TradeExecuted::SharedDtor(MessageLite& self) {
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.event_id_.Destroy();
+  this_._impl_.buyer_user_id_.Destroy();
+  this_._impl_.seller_user_id_.Destroy();
   delete this_._impl_.executed_at_;
   this_._impl_.~Impl_();
 }
@@ -486,16 +500,22 @@ PROTOBUF_NOINLINE void TradeExecuted::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       _impl_.event_id_.ClearNonDefaultToEmpty();
     }
     if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      _impl_.buyer_user_id_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      _impl_.seller_user_id_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
       ABSL_DCHECK(_impl_.executed_at_ != nullptr);
       _impl_.executed_at_->Clear();
     }
   }
-  if (BatchCheckHasBit(cached_has_bits, 0x000000fcU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x000000f0U)) {
     ::memset(&_impl_.trade_id_, 0, static_cast<::size_t>(
         reinterpret_cast<char*>(&_impl_.buyer_grid_zone_id_) -
         reinterpret_cast<char*>(&_impl_.trade_id_)) + sizeof(_impl_.buyer_grid_zone_id_));
@@ -539,7 +559,7 @@ PROTOBUF_NOINLINE void TradeExecuted::Clear() {
   }
 
   // uint64 trade_id = 2 [json_name = "tradeId"];
-  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+  if (CheckHasBit(cached_has_bits, 0x00000010U)) {
     if (this_._internal_trade_id() != 0) {
       target = stream->EnsureSpace(target);
       target = ::_pbi::WireFormatLite::WriteUInt64ToArray(
@@ -548,7 +568,7 @@ PROTOBUF_NOINLINE void TradeExecuted::Clear() {
   }
 
   // uint64 buy_order_id = 3 [json_name = "buyOrderId"];
-  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+  if (CheckHasBit(cached_has_bits, 0x00000020U)) {
     if (this_._internal_buy_order_id() != 0) {
       target = stream->EnsureSpace(target);
       target = ::_pbi::WireFormatLite::WriteUInt64ToArray(
@@ -557,29 +577,11 @@ PROTOBUF_NOINLINE void TradeExecuted::Clear() {
   }
 
   // uint64 sell_order_id = 4 [json_name = "sellOrderId"];
-  if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+  if (CheckHasBit(cached_has_bits, 0x00000040U)) {
     if (this_._internal_sell_order_id() != 0) {
       target = stream->EnsureSpace(target);
       target = ::_pbi::WireFormatLite::WriteUInt64ToArray(
           4, this_._internal_sell_order_id(), target);
-    }
-  }
-
-  // uint64 buyer_id = 5 [json_name = "buyerId"];
-  if (CheckHasBit(cached_has_bits, 0x00000020U)) {
-    if (this_._internal_buyer_id() != 0) {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteUInt64ToArray(
-          5, this_._internal_buyer_id(), target);
-    }
-  }
-
-  // uint64 seller_id = 6 [json_name = "sellerId"];
-  if (CheckHasBit(cached_has_bits, 0x00000040U)) {
-    if (this_._internal_seller_id() != 0) {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteUInt64ToArray(
-          6, this_._internal_seller_id(), target);
     }
   }
 
@@ -638,10 +640,30 @@ PROTOBUF_NOINLINE void TradeExecuted::Clear() {
   }
 
   // .google.protobuf.Timestamp executed_at = 13 [json_name = "executedAt"];
-  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         13, *this_._impl_.executed_at_, this_._impl_.executed_at_->GetCachedSize(), target,
         stream);
+  }
+
+  // string buyer_user_id = 14 [json_name = "buyerUserId"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (!this_._internal_buyer_user_id().empty()) {
+      const ::std::string& _s = this_._internal_buyer_user_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.trade.v1.TradeExecuted.buyer_user_id");
+      target = stream->WriteStringMaybeAliased(14, _s, target);
+    }
+  }
+
+  // string seller_user_id = 15 [json_name = "sellerUserId"];
+  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (!this_._internal_seller_user_id().empty()) {
+      const ::std::string& _s = this_._internal_seller_user_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.trade.v1.TradeExecuted.seller_user_id");
+      target = stream->WriteStringMaybeAliased(15, _s, target);
+    }
   }
 
   if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
@@ -677,44 +699,44 @@ PROTOBUF_NOINLINE void TradeExecuted::Clear() {
                                         this_._internal_event_id());
       }
     }
-    // .google.protobuf.Timestamp executed_at = 13 [json_name = "executedAt"];
+    // string buyer_user_id = 14 [json_name = "buyerUserId"];
     if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!this_._internal_buyer_user_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_buyer_user_id());
+      }
+    }
+    // string seller_user_id = 15 [json_name = "sellerUserId"];
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!this_._internal_seller_user_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_seller_user_id());
+      }
+    }
+    // .google.protobuf.Timestamp executed_at = 13 [json_name = "executedAt"];
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
       total_size += 1 +
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.executed_at_);
     }
     // uint64 trade_id = 2 [json_name = "tradeId"];
-    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       if (this_._internal_trade_id() != 0) {
         total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(
             this_._internal_trade_id());
       }
     }
     // uint64 buy_order_id = 3 [json_name = "buyOrderId"];
-    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
       if (this_._internal_buy_order_id() != 0) {
         total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(
             this_._internal_buy_order_id());
       }
     }
     // uint64 sell_order_id = 4 [json_name = "sellOrderId"];
-    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000040U)) {
       if (this_._internal_sell_order_id() != 0) {
         total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(
             this_._internal_sell_order_id());
-      }
-    }
-    // uint64 buyer_id = 5 [json_name = "buyerId"];
-    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
-      if (this_._internal_buyer_id() != 0) {
-        total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(
-            this_._internal_buyer_id());
-      }
-    }
-    // uint64 seller_id = 6 [json_name = "sellerId"];
-    if (CheckHasBit(cached_has_bits, 0x00000040U)) {
-      if (this_._internal_seller_id() != 0) {
-        total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(
-            this_._internal_seller_id());
       }
     }
     // uint32 buyer_grid_zone_id = 7 [json_name = "buyerGridZoneId"];
@@ -791,6 +813,24 @@ void TradeExecuted::MergeImpl(::google::protobuf::MessageLite& to_msg,
       }
     }
     if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!from._internal_buyer_user_id().empty()) {
+        _this->_internal_set_buyer_user_id(from._internal_buyer_user_id());
+      } else {
+        if (_this->_impl_.buyer_user_id_.IsDefault()) {
+          _this->_internal_set_buyer_user_id("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!from._internal_seller_user_id().empty()) {
+        _this->_internal_set_seller_user_id(from._internal_seller_user_id());
+      } else {
+        if (_this->_impl_.seller_user_id_.IsDefault()) {
+          _this->_internal_set_seller_user_id("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
       ABSL_DCHECK(from._impl_.executed_at_ != nullptr);
       if (_this->_impl_.executed_at_ == nullptr) {
         _this->_impl_.executed_at_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.executed_at_);
@@ -798,29 +838,19 @@ void TradeExecuted::MergeImpl(::google::protobuf::MessageLite& to_msg,
         _this->_impl_.executed_at_->MergeFrom(*from._impl_.executed_at_);
       }
     }
-    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       if (from._internal_trade_id() != 0) {
         _this->_impl_.trade_id_ = from._impl_.trade_id_;
       }
     }
-    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
       if (from._internal_buy_order_id() != 0) {
         _this->_impl_.buy_order_id_ = from._impl_.buy_order_id_;
       }
     }
-    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000040U)) {
       if (from._internal_sell_order_id() != 0) {
         _this->_impl_.sell_order_id_ = from._impl_.sell_order_id_;
-      }
-    }
-    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
-      if (from._internal_buyer_id() != 0) {
-        _this->_impl_.buyer_id_ = from._impl_.buyer_id_;
-      }
-    }
-    if (CheckHasBit(cached_has_bits, 0x00000040U)) {
-      if (from._internal_seller_id() != 0) {
-        _this->_impl_.seller_id_ = from._impl_.seller_id_;
       }
     }
     if (CheckHasBit(cached_has_bits, 0x00000080U)) {
@@ -876,6 +906,8 @@ void TradeExecuted::InternalSwap(TradeExecuted* PROTOBUF_RESTRICT PROTOBUF_NONNU
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.event_id_, &other->_impl_.event_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.buyer_user_id_, &other->_impl_.buyer_user_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.seller_user_id_, &other->_impl_.seller_user_id_, arena);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(TradeExecuted, _impl_.grid_rule_version_)
       + sizeof(TradeExecuted::_impl_.grid_rule_version_)
