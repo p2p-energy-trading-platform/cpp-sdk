@@ -284,11 +284,13 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED OrderUpdated final : public ::googl
   // accessors -------------------------------------------------------
   enum : int {
     kEventIdFieldNumber = 1,
+    kUserIdFieldNumber = 7,
     kUpdatedAtFieldNumber = 6,
     kOrderIdFieldNumber = 3,
     kEventTypeFieldNumber = 2,
     kStatusFieldNumber = 4,
     kRemainingQuantityFieldNumber = 5,
+    kOriginalQuantityFieldNumber = 8,
   };
   // string event_id = 1 [json_name = "eventId"];
   void clear_event_id() ;
@@ -303,6 +305,21 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED OrderUpdated final : public ::googl
   const ::std::string& _internal_event_id() const;
   PROTOBUF_ALWAYS_INLINE void _internal_set_event_id(const ::std::string& value);
   ::std::string* PROTOBUF_NONNULL _internal_mutable_event_id();
+
+  public:
+  // string user_id = 7 [json_name = "userId"];
+  void clear_user_id() ;
+  [[nodiscard]] const ::std::string& user_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_user_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_user_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_user_id();
+  void set_allocated_user_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_user_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_user_id();
 
   public:
   // .google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];
@@ -361,12 +378,22 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED OrderUpdated final : public ::googl
   void _internal_set_remaining_quantity(::int64_t value);
 
   public:
+  // int64 original_quantity = 8 [json_name = "originalQuantity"];
+  void clear_original_quantity() ;
+  [[nodiscard]] ::int64_t original_quantity() const;
+  void set_original_quantity(::int64_t value);
+
+  private:
+  ::int64_t _internal_original_quantity() const;
+  void _internal_set_original_quantity(::int64_t value);
+
+  public:
   // @@protoc_insertion_point(class_scope:gridx.order.v1.OrderUpdated)
  private:
   class _Internal;
   using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<3, 6,
-                          1, 44,
+      ::google::protobuf::internal::TcParseTable<3, 8,
+                          1, 59,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
       const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
@@ -395,11 +422,13 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED OrderUpdated final : public ::googl
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr event_id_;
+    ::google::protobuf::internal::ArenaStringPtr user_id_;
     ::google::protobuf::Timestamp* PROTOBUF_NULLABLE updated_at_;
     ::uint64_t order_id_;
     int event_type_;
     int status_;
     ::int64_t remaining_quantity_;
+    ::int64_t original_quantity_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -490,7 +519,7 @@ inline void OrderUpdated::set_allocated_event_id(::std::string* PROTOBUF_NULLABL
 inline void OrderUpdated::clear_event_type() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.event_type_ = 0;
-  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
 }
 inline ::gridx::order::v1::OrderUpdateType OrderUpdated::event_type() const {
   // @@protoc_insertion_point(field_get:gridx.order.v1.OrderUpdated.event_type)
@@ -498,7 +527,7 @@ inline ::gridx::order::v1::OrderUpdateType OrderUpdated::event_type() const {
 }
 inline void OrderUpdated::set_event_type(::gridx::order::v1::OrderUpdateType value) {
   _internal_set_event_type(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
   // @@protoc_insertion_point(field_set:gridx.order.v1.OrderUpdated.event_type)
 }
 inline ::gridx::order::v1::OrderUpdateType OrderUpdated::_internal_event_type() const {
@@ -514,7 +543,7 @@ inline void OrderUpdated::_internal_set_event_type(::gridx::order::v1::OrderUpda
 inline void OrderUpdated::clear_order_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.order_id_ = ::uint64_t{0u};
-  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
 }
 inline ::uint64_t OrderUpdated::order_id() const {
   // @@protoc_insertion_point(field_get:gridx.order.v1.OrderUpdated.order_id)
@@ -522,7 +551,7 @@ inline ::uint64_t OrderUpdated::order_id() const {
 }
 inline void OrderUpdated::set_order_id(::uint64_t value) {
   _internal_set_order_id(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
   // @@protoc_insertion_point(field_set:gridx.order.v1.OrderUpdated.order_id)
 }
 inline ::uint64_t OrderUpdated::_internal_order_id() const {
@@ -538,7 +567,7 @@ inline void OrderUpdated::_internal_set_order_id(::uint64_t value) {
 inline void OrderUpdated::clear_status() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.status_ = 0;
-  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
 }
 inline ::gridx::order::v1::OrderStatus OrderUpdated::status() const {
   // @@protoc_insertion_point(field_get:gridx.order.v1.OrderUpdated.status)
@@ -546,7 +575,7 @@ inline ::gridx::order::v1::OrderStatus OrderUpdated::status() const {
 }
 inline void OrderUpdated::set_status(::gridx::order::v1::OrderStatus value) {
   _internal_set_status(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
   // @@protoc_insertion_point(field_set:gridx.order.v1.OrderUpdated.status)
 }
 inline ::gridx::order::v1::OrderStatus OrderUpdated::_internal_status() const {
@@ -562,7 +591,7 @@ inline void OrderUpdated::_internal_set_status(::gridx::order::v1::OrderStatus v
 inline void OrderUpdated::clear_remaining_quantity() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.remaining_quantity_ = ::int64_t{0};
-  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000040U);
 }
 inline ::int64_t OrderUpdated::remaining_quantity() const {
   // @@protoc_insertion_point(field_get:gridx.order.v1.OrderUpdated.remaining_quantity)
@@ -570,7 +599,7 @@ inline ::int64_t OrderUpdated::remaining_quantity() const {
 }
 inline void OrderUpdated::set_remaining_quantity(::int64_t value) {
   _internal_set_remaining_quantity(value);
-  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000040U);
   // @@protoc_insertion_point(field_set:gridx.order.v1.OrderUpdated.remaining_quantity)
 }
 inline ::int64_t OrderUpdated::_internal_remaining_quantity() const {
@@ -584,7 +613,7 @@ inline void OrderUpdated::_internal_set_remaining_quantity(::int64_t value) {
 
 // .google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];
 inline bool OrderUpdated::has_updated_at() const {
-  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000002U);
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000004U);
   PROTOBUF_ASSUME(!value || _impl_.updated_at_ != nullptr);
   return value;
 }
@@ -605,16 +634,16 @@ inline void OrderUpdated::unsafe_arena_set_allocated_updated_at(
   }
   _impl_.updated_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
   if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.order.v1.OrderUpdated.updated_at)
 }
 inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE OrderUpdated::release_updated_at() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
   ::google::protobuf::Timestamp* released = _impl_.updated_at_;
   _impl_.updated_at_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
@@ -634,7 +663,7 @@ inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE OrderUpdated::unsafe_are
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:gridx.order.v1.OrderUpdated.updated_at)
 
-  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
   ::google::protobuf::Timestamp* temp = _impl_.updated_at_;
   _impl_.updated_at_ = nullptr;
   return temp;
@@ -649,7 +678,7 @@ inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL OrderUpdated::_internal_m
 }
 inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL OrderUpdated::mutable_updated_at()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
   ::google::protobuf::Timestamp* _msg = _internal_mutable_updated_at();
   // @@protoc_insertion_point(field_mutable:gridx.order.v1.OrderUpdated.updated_at)
   return _msg;
@@ -666,13 +695,101 @@ inline void OrderUpdated::set_allocated_updated_at(::google::protobuf::Timestamp
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
   } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
   }
 
   _impl_.updated_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
   // @@protoc_insertion_point(field_set_allocated:gridx.order.v1.OrderUpdated.updated_at)
+}
+
+// string user_id = 7 [json_name = "userId"];
+inline void OrderUpdated::clear_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline const ::std::string& OrderUpdated::user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.order.v1.OrderUpdated.user_id)
+  return _internal_user_id();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void OrderUpdated::set_user_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.order.v1.OrderUpdated.user_id)
+}
+inline ::std::string* PROTOBUF_NONNULL OrderUpdated::mutable_user_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:gridx.order.v1.OrderUpdated.user_id)
+  return _s;
+}
+inline const ::std::string& OrderUpdated::_internal_user_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.user_id_.Get();
+}
+inline void OrderUpdated::_internal_set_user_id(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL OrderUpdated::_internal_mutable_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.user_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE OrderUpdated::release_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.order.v1.OrderUpdated.user_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.user_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.user_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void OrderUpdated::set_allocated_user_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.user_id_.IsDefault()) {
+    _impl_.user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.order.v1.OrderUpdated.user_id)
+}
+
+// int64 original_quantity = 8 [json_name = "originalQuantity"];
+inline void OrderUpdated::clear_original_quantity() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.original_quantity_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000080U);
+}
+inline ::int64_t OrderUpdated::original_quantity() const {
+  // @@protoc_insertion_point(field_get:gridx.order.v1.OrderUpdated.original_quantity)
+  return _internal_original_quantity();
+}
+inline void OrderUpdated::set_original_quantity(::int64_t value) {
+  _internal_set_original_quantity(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000080U);
+  // @@protoc_insertion_point(field_set:gridx.order.v1.OrderUpdated.original_quantity)
+}
+inline ::int64_t OrderUpdated::_internal_original_quantity() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.original_quantity_;
+}
+inline void OrderUpdated::_internal_set_original_quantity(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.original_quantity_ = value;
 }
 
 #ifdef __GNUC__

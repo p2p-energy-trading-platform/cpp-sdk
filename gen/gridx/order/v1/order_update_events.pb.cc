@@ -49,11 +49,11 @@ constexpr OrderUpdated::ParseTableT_ OrderUpdated::InternalGenerateParseTable_(c
     {
       PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_._has_bits_),
       0, // no _extensions_
-      6, 56,  // max_field_number, fast_idx_mask
+      8, 56,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967232,  // skipmap
+      4294967040,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      6,  // num_field_entries
+      8,  // num_field_entries
       1,  // num_aux_entries
       offsetof(ParseTableT_, aux_entries),
       class_data,
@@ -63,47 +63,57 @@ constexpr OrderUpdated::ParseTableT_ OrderUpdated::InternalGenerateParseTable_(c
       ::_pbi::TcParser::GetTable<::gridx::order::v1::OrderUpdated>(),  // to_prefetch
       #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
     }, {{
-      {::_pbi::TcParser::MiniParse, {}},
+      // int64 original_quantity = 8 [json_name = "originalQuantity"];
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(OrderUpdated, _impl_.original_quantity_), 7>(),
+       {64, 7, 0,
+        PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.original_quantity_)}},
       // string event_id = 1 [json_name = "eventId"];
       {::_pbi::TcParser::FastUS1,
        {10, 0, 0,
         PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.event_id_)}},
       // .gridx.order.v1.OrderUpdateType event_type = 2 [json_name = "eventType"];
-      {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(OrderUpdated, _impl_.event_type_), 3>(),
-       {16, 3, 0,
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(OrderUpdated, _impl_.event_type_), 4>(),
+       {16, 4, 0,
         PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.event_type_)}},
       // uint64 order_id = 3 [json_name = "orderId"];
-      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(OrderUpdated, _impl_.order_id_), 2>(),
-       {24, 2, 0,
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(OrderUpdated, _impl_.order_id_), 3>(),
+       {24, 3, 0,
         PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.order_id_)}},
       // .gridx.order.v1.OrderStatus status = 4 [json_name = "status"];
-      {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(OrderUpdated, _impl_.status_), 4>(),
-       {32, 4, 0,
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(OrderUpdated, _impl_.status_), 5>(),
+       {32, 5, 0,
         PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.status_)}},
       // int64 remaining_quantity = 5 [json_name = "remainingQuantity"];
-      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(OrderUpdated, _impl_.remaining_quantity_), 5>(),
-       {40, 5, 0,
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(OrderUpdated, _impl_.remaining_quantity_), 6>(),
+       {40, 6, 0,
         PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.remaining_quantity_)}},
       // .google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];
       {::_pbi::TcParser::FastMtS1,
-       {50, 1, 0,
+       {50, 2, 0,
         PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.updated_at_)}},
-      {::_pbi::TcParser::MiniParse, {}},
+      // string user_id = 7 [json_name = "userId"];
+      {::_pbi::TcParser::FastUS1,
+       {58, 1, 0,
+        PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.user_id_)}},
     }}, {{
       65535, 65535
     }}, {{
       // string event_id = 1 [json_name = "eventId"];
       {PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.event_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // .gridx.order.v1.OrderUpdateType event_type = 2 [json_name = "eventType"];
-      {PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.event_type_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kOpenEnum)},
+      {PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.event_type_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kOpenEnum)},
       // uint64 order_id = 3 [json_name = "orderId"];
-      {PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.order_id_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
+      {PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.order_id_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
       // .gridx.order.v1.OrderStatus status = 4 [json_name = "status"];
-      {PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.status_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kOpenEnum)},
+      {PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.status_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kOpenEnum)},
       // int64 remaining_quantity = 5 [json_name = "remainingQuantity"];
-      {PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.remaining_quantity_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kInt64)},
+      {PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.remaining_quantity_), _Internal::kHasBitsOffset + 6, 0, (0 | ::_fl::kFcOptional | ::_fl::kInt64)},
       // .google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];
-      {PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.updated_at_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+      {PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.updated_at_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+      // string user_id = 7 [json_name = "userId"];
+      {PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.user_id_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // int64 original_quantity = 8 [json_name = "originalQuantity"];
+      {PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.original_quantity_), _Internal::kHasBitsOffset + 7, 0, (0 | ::_fl::kFcOptional | ::_fl::kInt64)},
     }},
     {{
         #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -113,9 +123,10 @@ constexpr OrderUpdated::ParseTableT_ OrderUpdated::InternalGenerateParseTable_(c
         #endif
     }},
     {{
-      "\33\10\0\0\0\0\0\0"
+      "\33\10\0\0\0\0\0\7\0\0\0\0\0\0\0\0"
       "gridx.order.v1.OrderUpdated"
       "event_id"
+      "user_id"
     }},
   };
 }
@@ -128,11 +139,15 @@ inline constexpr OrderUpdated::Impl_::Impl_(
         event_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
+        user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
         updated_at_{nullptr},
         order_id_{::uint64_t{0u}},
         event_type_{static_cast< ::gridx::order::v1::OrderUpdateType >(0)},
         status_{static_cast< ::gridx::order::v1::OrderStatus >(0)},
-        remaining_quantity_{::int64_t{0}} {}
+        remaining_quantity_{::int64_t{0}},
+        original_quantity_{::int64_t{0}} {}
 
 template <typename>
 constexpr OrderUpdated::OrderUpdated(::_pbi::ConstantInitialized,
@@ -238,19 +253,23 @@ const ::uint32_t
         protodesc_cold) = {
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::order::v1::OrderUpdated, _impl_._has_bits_),
-        9, // hasbit index offset
+        11, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::gridx::order::v1::OrderUpdated, _impl_.event_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::order::v1::OrderUpdated, _impl_.event_type_),
         PROTOBUF_FIELD_OFFSET(::gridx::order::v1::OrderUpdated, _impl_.order_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::order::v1::OrderUpdated, _impl_.status_),
         PROTOBUF_FIELD_OFFSET(::gridx::order::v1::OrderUpdated, _impl_.remaining_quantity_),
         PROTOBUF_FIELD_OFFSET(::gridx::order::v1::OrderUpdated, _impl_.updated_at_),
+        PROTOBUF_FIELD_OFFSET(::gridx::order::v1::OrderUpdated, _impl_.user_id_),
+        PROTOBUF_FIELD_OFFSET(::gridx::order::v1::OrderUpdated, _impl_.original_quantity_),
         0,
-        3,
-        2,
         4,
+        3,
         5,
+        6,
+        2,
         1,
+        7,
 };
 
 static const ::_pbi::MigrationSchema
@@ -266,22 +285,23 @@ const char descriptor_table_protodef_gridx_2forder_2fv1_2forder_5fupdate_5fevent
     "\n(gridx/order/v1/order_update_events.pro"
     "to\022\016gridx.order.v1\032\037google/protobuf/time"
     "stamp.proto\032!gridx/order/v1/order_events"
-    ".proto\"\243\002\n\014OrderUpdated\022\031\n\010event_id\030\001 \001("
+    ".proto\"\351\002\n\014OrderUpdated\022\031\n\010event_id\030\001 \001("
     "\tR\007eventId\022>\n\nevent_type\030\002 \001(\0162\037.gridx.o"
     "rder.v1.OrderUpdateTypeR\teventType\022\031\n\010or"
     "der_id\030\003 \001(\004R\007orderId\0223\n\006status\030\004 \001(\0162\033."
     "gridx.order.v1.OrderStatusR\006status\022-\n\022re"
     "maining_quantity\030\005 \001(\003R\021remainingQuantit"
     "y\0229\n\nupdated_at\030\006 \001(\0132\032.google.protobuf."
-    "TimestampR\tupdatedAt*\331\001\n\017OrderUpdateType"
-    "\022!\n\035ORDER_UPDATE_TYPE_UNSPECIFIED\020\000\022\035\n\031O"
-    "RDER_UPDATE_TYPE_UPDATED\020\001\022&\n\"ORDER_UPDA"
-    "TE_TYPE_PARTIALLY_FILLED\020\002\022\034\n\030ORDER_UPDA"
-    "TE_TYPE_FILLED\020\003\022\037\n\033ORDER_UPDATE_TYPE_CA"
-    "NCELLED\020\004\022\035\n\031ORDER_UPDATE_TYPE_EXPIRED\020\005"
-    "BJZHgithub.com/p2p-energy-trading-platfo"
-    "rm/go-sdk/gen/gridx/order/v1;orderv1b\006pr"
-    "oto3"
+    "TimestampR\tupdatedAt\022\027\n\007user_id\030\007 \001(\tR\006u"
+    "serId\022+\n\021original_quantity\030\010 \001(\003R\020origin"
+    "alQuantity*\331\001\n\017OrderUpdateType\022!\n\035ORDER_"
+    "UPDATE_TYPE_UNSPECIFIED\020\000\022\035\n\031ORDER_UPDAT"
+    "E_TYPE_UPDATED\020\001\022&\n\"ORDER_UPDATE_TYPE_PA"
+    "RTIALLY_FILLED\020\002\022\034\n\030ORDER_UPDATE_TYPE_FI"
+    "LLED\020\003\022\037\n\033ORDER_UPDATE_TYPE_CANCELLED\020\004\022"
+    "\035\n\031ORDER_UPDATE_TYPE_EXPIRED\020\005BJZHgithub"
+    ".com/p2p-energy-trading-platform/go-sdk/"
+    "gen/gridx/order/v1;orderv1b\006proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_gridx_2forder_2fv1_2forder_5fupdate_5fevents_2eproto_deps[2] = {
@@ -292,7 +312,7 @@ static ::absl::once_flag descriptor_table_gridx_2forder_2fv1_2forder_5fupdate_5f
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_gridx_2forder_2fv1_2forder_5fupdate_5fevents_2eproto = {
     false,
     false,
-    724,
+    794,
     descriptor_table_protodef_gridx_2forder_2fv1_2forder_5fupdate_5fevents_2eproto,
     "gridx/order/v1/order_update_events.proto",
     &descriptor_table_gridx_2forder_2fv1_2forder_5fupdate_5fevents_2eproto_once,
@@ -320,7 +340,7 @@ PROTOBUF_CONSTINIT const uint32_t OrderUpdateType_internal_data_[] = {
 void OrderUpdated::clear_updated_at() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.updated_at_ != nullptr) _impl_.updated_at_->Clear();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
 }
 OrderUpdated::OrderUpdated(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
@@ -337,7 +357,8 @@ PROTOBUF_NDEBUG_INLINE OrderUpdated::Impl_::Impl_(
     [[maybe_unused]] const ::gridx::order::v1::OrderUpdated& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
-        event_id_(arena, from.event_id_) {}
+        event_id_(arena, from.event_id_),
+        user_id_(arena, from.user_id_) {}
 
 OrderUpdated::OrderUpdated(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
@@ -354,16 +375,16 @@ OrderUpdated::OrderUpdated(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
   ::uint32_t cached_has_bits = _impl_._has_bits_[0];
-  _impl_.updated_at_ = (CheckHasBit(cached_has_bits, 0x00000002U))
+  _impl_.updated_at_ = (CheckHasBit(cached_has_bits, 0x00000004U))
                 ? ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.updated_at_)
                 : nullptr;
   ::memcpy(reinterpret_cast<char*>(&_impl_) +
                offsetof(Impl_, order_id_),
            reinterpret_cast<const char*>(&from._impl_) +
                offsetof(Impl_, order_id_),
-           offsetof(Impl_, remaining_quantity_) -
+           offsetof(Impl_, original_quantity_) -
                offsetof(Impl_, order_id_) +
-               sizeof(Impl_::remaining_quantity_));
+               sizeof(Impl_::original_quantity_));
 
   // @@protoc_insertion_point(copy_constructor:gridx.order.v1.OrderUpdated)
 }
@@ -371,16 +392,17 @@ PROTOBUF_NDEBUG_INLINE OrderUpdated::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
     [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : _cached_size_{0},
-        event_id_(arena) {}
+        event_id_(arena),
+        user_id_(arena) {}
 
 inline void OrderUpdated::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char*>(&_impl_) +
                offsetof(Impl_, updated_at_),
            0,
-           offsetof(Impl_, remaining_quantity_) -
+           offsetof(Impl_, original_quantity_) -
                offsetof(Impl_, updated_at_) +
-               sizeof(Impl_::remaining_quantity_));
+               sizeof(Impl_::original_quantity_));
 }
 OrderUpdated::~OrderUpdated() {
   // @@protoc_insertion_point(destructor:gridx.order.v1.OrderUpdated)
@@ -394,6 +416,7 @@ inline void OrderUpdated::SharedDtor(MessageLite& self) {
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.event_id_.Destroy();
+  this_._impl_.user_id_.Destroy();
   delete this_._impl_.updated_at_;
   this_._impl_.~Impl_();
 }
@@ -432,19 +455,22 @@ PROTOBUF_NOINLINE void OrderUpdated::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       _impl_.event_id_.ClearNonDefaultToEmpty();
     }
     if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      _impl_.user_id_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
       ABSL_DCHECK(_impl_.updated_at_ != nullptr);
       _impl_.updated_at_->Clear();
     }
   }
-  if (BatchCheckHasBit(cached_has_bits, 0x0000003cU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x000000f8U)) {
     ::memset(&_impl_.order_id_, 0, static_cast<::size_t>(
-        reinterpret_cast<char*>(&_impl_.remaining_quantity_) -
-        reinterpret_cast<char*>(&_impl_.order_id_)) + sizeof(_impl_.remaining_quantity_));
+        reinterpret_cast<char*>(&_impl_.original_quantity_) -
+        reinterpret_cast<char*>(&_impl_.order_id_)) + sizeof(_impl_.original_quantity_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
@@ -480,7 +506,7 @@ PROTOBUF_NOINLINE void OrderUpdated::Clear() {
   }
 
   // .gridx.order.v1.OrderUpdateType event_type = 2 [json_name = "eventType"];
-  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+  if (CheckHasBit(cached_has_bits, 0x00000010U)) {
     if (this_._internal_event_type() != 0) {
       target = stream->EnsureSpace(target);
       target = ::_pbi::WireFormatLite::WriteEnumToArray(
@@ -489,7 +515,7 @@ PROTOBUF_NOINLINE void OrderUpdated::Clear() {
   }
 
   // uint64 order_id = 3 [json_name = "orderId"];
-  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
     if (this_._internal_order_id() != 0) {
       target = stream->EnsureSpace(target);
       target = ::_pbi::WireFormatLite::WriteUInt64ToArray(
@@ -498,7 +524,7 @@ PROTOBUF_NOINLINE void OrderUpdated::Clear() {
   }
 
   // .gridx.order.v1.OrderStatus status = 4 [json_name = "status"];
-  if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+  if (CheckHasBit(cached_has_bits, 0x00000020U)) {
     if (this_._internal_status() != 0) {
       target = stream->EnsureSpace(target);
       target = ::_pbi::WireFormatLite::WriteEnumToArray(
@@ -507,7 +533,7 @@ PROTOBUF_NOINLINE void OrderUpdated::Clear() {
   }
 
   // int64 remaining_quantity = 5 [json_name = "remainingQuantity"];
-  if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+  if (CheckHasBit(cached_has_bits, 0x00000040U)) {
     if (this_._internal_remaining_quantity() != 0) {
       target =
           ::google::protobuf::internal::WireFormatLite::WriteInt64ToArrayWithField<5>(
@@ -516,10 +542,29 @@ PROTOBUF_NOINLINE void OrderUpdated::Clear() {
   }
 
   // .google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];
-  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         6, *this_._impl_.updated_at_, this_._impl_.updated_at_->GetCachedSize(), target,
         stream);
+  }
+
+  // string user_id = 7 [json_name = "userId"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (!this_._internal_user_id().empty()) {
+      const ::std::string& _s = this_._internal_user_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.order.v1.OrderUpdated.user_id");
+      target = stream->WriteStringMaybeAliased(7, _s, target);
+    }
+  }
+
+  // int64 original_quantity = 8 [json_name = "originalQuantity"];
+  if (CheckHasBit(cached_has_bits, 0x00000080U)) {
+    if (this_._internal_original_quantity() != 0) {
+      target =
+          ::google::protobuf::internal::WireFormatLite::WriteInt64ToArrayWithField<8>(
+              stream, this_._internal_original_quantity(), target);
+    }
   }
 
   if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
@@ -547,7 +592,7 @@ PROTOBUF_NOINLINE void OrderUpdated::Clear() {
 
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x000000ffU)) {
     // string event_id = 1 [json_name = "eventId"];
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!this_._internal_event_id().empty()) {
@@ -555,37 +600,51 @@ PROTOBUF_NOINLINE void OrderUpdated::Clear() {
                                         this_._internal_event_id());
       }
     }
-    // .google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];
+    // string user_id = 7 [json_name = "userId"];
     if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!this_._internal_user_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_user_id());
+      }
+    }
+    // .google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
       total_size += 1 +
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.updated_at_);
     }
     // uint64 order_id = 3 [json_name = "orderId"];
-    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
       if (this_._internal_order_id() != 0) {
         total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(
             this_._internal_order_id());
       }
     }
     // .gridx.order.v1.OrderUpdateType event_type = 2 [json_name = "eventType"];
-    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       if (this_._internal_event_type() != 0) {
         total_size += 1 +
                       ::_pbi::WireFormatLite::EnumSize(this_._internal_event_type());
       }
     }
     // .gridx.order.v1.OrderStatus status = 4 [json_name = "status"];
-    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
       if (this_._internal_status() != 0) {
         total_size += 1 +
                       ::_pbi::WireFormatLite::EnumSize(this_._internal_status());
       }
     }
     // int64 remaining_quantity = 5 [json_name = "remainingQuantity"];
-    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000040U)) {
       if (this_._internal_remaining_quantity() != 0) {
         total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
             this_._internal_remaining_quantity());
+      }
+    }
+    // int64 original_quantity = 8 [json_name = "originalQuantity"];
+    if (CheckHasBit(cached_has_bits, 0x00000080U)) {
+      if (this_._internal_original_quantity() != 0) {
+        total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+            this_._internal_original_quantity());
       }
     }
   }
@@ -607,7 +666,7 @@ void OrderUpdated::MergeImpl(::google::protobuf::MessageLite& to_msg,
   (void)cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x000000ffU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       if (!from._internal_event_id().empty()) {
         _this->_internal_set_event_id(from._internal_event_id());
@@ -618,6 +677,15 @@ void OrderUpdated::MergeImpl(::google::protobuf::MessageLite& to_msg,
       }
     }
     if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!from._internal_user_id().empty()) {
+        _this->_internal_set_user_id(from._internal_user_id());
+      } else {
+        if (_this->_impl_.user_id_.IsDefault()) {
+          _this->_internal_set_user_id("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
       ABSL_DCHECK(from._impl_.updated_at_ != nullptr);
       if (_this->_impl_.updated_at_ == nullptr) {
         _this->_impl_.updated_at_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.updated_at_);
@@ -625,24 +693,29 @@ void OrderUpdated::MergeImpl(::google::protobuf::MessageLite& to_msg,
         _this->_impl_.updated_at_->MergeFrom(*from._impl_.updated_at_);
       }
     }
-    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
       if (from._internal_order_id() != 0) {
         _this->_impl_.order_id_ = from._impl_.order_id_;
       }
     }
-    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       if (from._internal_event_type() != 0) {
         _this->_impl_.event_type_ = from._impl_.event_type_;
       }
     }
-    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
       if (from._internal_status() != 0) {
         _this->_impl_.status_ = from._impl_.status_;
       }
     }
-    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000040U)) {
       if (from._internal_remaining_quantity() != 0) {
         _this->_impl_.remaining_quantity_ = from._impl_.remaining_quantity_;
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000080U)) {
+      if (from._internal_original_quantity() != 0) {
+        _this->_impl_.original_quantity_ = from._impl_.original_quantity_;
       }
     }
   }
@@ -666,9 +739,10 @@ void OrderUpdated::InternalSwap(OrderUpdated* PROTOBUF_RESTRICT PROTOBUF_NONNULL
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.event_id_, &other->_impl_.event_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.remaining_quantity_)
-      + sizeof(OrderUpdated::_impl_.remaining_quantity_)
+      PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.original_quantity_)
+      + sizeof(OrderUpdated::_impl_.original_quantity_)
       - PROTOBUF_FIELD_OFFSET(OrderUpdated, _impl_.updated_at_)>(
           reinterpret_cast<char*>(&_impl_.updated_at_),
           reinterpret_cast<char*>(&other->_impl_.updated_at_));
