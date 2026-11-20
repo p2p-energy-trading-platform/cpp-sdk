@@ -69,6 +69,12 @@ PROTOBUF_CONSTINIT ::google::protobuf::internal::ReflectionData
         {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
         // ::gridx::iot::v1::GetEnergySummaryResponse
         {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::iot::v1::StreamHouseLiveRequest
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::iot::v1::StreamHouseLiveResponse
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
+        // ::gridx::iot::v1::MeterStatusUpdate
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
         // ::gridx::iot::v1::InitiateMeterClaimRequest
         {&::_pbi::kDescriptorMethods, &::descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto, /* tracker*/ nullptr,},
         // ::gridx::iot::v1::InitiateMeterClaimResponse
@@ -197,7 +203,7 @@ constexpr auto ValidateDeviceAssociationResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[25],
+      &file_reflection_data[28],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
@@ -343,7 +349,7 @@ constexpr auto ValidateDeviceAssociationRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[24],
+      &file_reflection_data[27],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
@@ -390,6 +396,162 @@ const ::_pbi::ClassData* ValidateDeviceAssociationRequest_get_class_data() {
   return ValidateDeviceAssociationRequest_globals_.GetClassData();
 #else
   return ValidateDeviceAssociationRequest_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class StreamHouseLiveRequest::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<StreamHouseLiveRequest>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(StreamHouseLiveRequest, _impl_._has_bits_);
+};
+
+constexpr StreamHouseLiveRequest::ParseTableT_ StreamHouseLiveRequest::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(StreamHouseLiveRequest, _impl_._has_bits_),
+      0, // no _extensions_
+      2, 8,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967292,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      2,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::iot::v1::StreamHouseLiveRequest>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // string owner_user_id = 2 [json_name = "ownerUserId"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(StreamHouseLiveRequest, _impl_.owner_user_id_)}},
+      // string house_id = 1 [json_name = "houseId"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(StreamHouseLiveRequest, _impl_.house_id_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string house_id = 1 [json_name = "houseId"];
+      {PROTOBUF_FIELD_OFFSET(StreamHouseLiveRequest, _impl_.house_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string owner_user_id = 2 [json_name = "ownerUserId"];
+      {PROTOBUF_FIELD_OFFSET(StreamHouseLiveRequest, _impl_.owner_user_id_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\43\10\15\0\0\0\0\0"
+      "gridx.iot.v1.StreamHouseLiveRequest"
+      "house_id"
+      "owner_user_id"
+    }},
+  };
+}
+
+
+inline constexpr StreamHouseLiveRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        house_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        owner_user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+constexpr StreamHouseLiveRequest::StreamHouseLiveRequest(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL StreamHouseLiveRequest::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) StreamHouseLiveRequest(arena);
+}
+constexpr auto StreamHouseLiveRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(StreamHouseLiveRequest), alignof(StreamHouseLiveRequest));
+}
+constexpr auto StreamHouseLiveRequest::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &StreamHouseLiveRequest::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<StreamHouseLiveRequest>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &StreamHouseLiveRequest::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<StreamHouseLiveRequest>(), &StreamHouseLiveRequest::ByteSizeLong,
+              &StreamHouseLiveRequest::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(StreamHouseLiveRequest, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[20],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct StreamHouseLiveRequestGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr StreamHouseLiveRequestGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 StreamHouseLiveRequest_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(StreamHouseLiveRequest::InternalGenerateClassData_(
+            _default, &StreamHouseLiveRequest_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<StreamHouseLiveRequest>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~StreamHouseLiveRequestGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) StreamHouseLiveRequest _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<StreamHouseLiveRequest>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(StreamHouseLiveRequestGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST StreamHouseLiveRequestGlobalsTypeInternal StreamHouseLiveRequest_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* StreamHouseLiveRequest_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return StreamHouseLiveRequest_globals_.GetClassData();
+#else
+  return StreamHouseLiveRequest_class_data_.base();
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 }
 }  // namespace
@@ -702,7 +864,7 @@ constexpr auto ReverifyRegistrationResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[27],
+      &file_reflection_data[30],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
@@ -869,7 +1031,7 @@ constexpr auto ReverifyRegistrationRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[26],
+      &file_reflection_data[29],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
@@ -1209,7 +1371,7 @@ constexpr auto InitiateMeterClaimResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[21],
+      &file_reflection_data[24],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
@@ -1365,7 +1527,7 @@ constexpr auto InitiateMeterClaimRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[20],
+      &file_reflection_data[23],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
@@ -1688,7 +1850,7 @@ constexpr auto GetRegistrationStatusResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[23],
+      &file_reflection_data[26],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
@@ -1834,7 +1996,7 @@ constexpr auto GetRegistrationStatusRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[22],
+      &file_reflection_data[25],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
@@ -2007,7 +2169,7 @@ constexpr auto GetRegistrationByUserResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[29],
+      &file_reflection_data[32],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
@@ -2153,7 +2315,7 @@ constexpr auto GetRegistrationByUserRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[28],
+      &file_reflection_data[31],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
@@ -3377,6 +3539,160 @@ const ::_pbi::ClassData* PeakDemand_get_class_data() {
 }
 }  // namespace
 #endif  // PROTOBUF_CUSTOM_VTABLE
+class MeterStatusUpdate::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<MeterStatusUpdate>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(MeterStatusUpdate, _impl_._has_bits_);
+};
+
+constexpr MeterStatusUpdate::ParseTableT_ MeterStatusUpdate::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(MeterStatusUpdate, _impl_._has_bits_),
+      0, // no _extensions_
+      2, 8,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967292,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      2,  // num_field_entries
+      1,  // num_aux_entries
+      offsetof(ParseTableT_, aux_entries),
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::iot::v1::MeterStatusUpdate>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // .google.protobuf.Timestamp last_heartbeat_at = 2 [json_name = "lastHeartbeatAt"];
+      {::_pbi::TcParser::FastMtS1,
+       {18, 0, 0,
+        PROTOBUF_FIELD_OFFSET(MeterStatusUpdate, _impl_.last_heartbeat_at_)}},
+      // .gridx.iot.v1.MeterStatus meter_status = 1 [json_name = "meterStatus"];
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(MeterStatusUpdate, _impl_.meter_status_), 1>(),
+       {8, 1, 0,
+        PROTOBUF_FIELD_OFFSET(MeterStatusUpdate, _impl_.meter_status_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // .gridx.iot.v1.MeterStatus meter_status = 1 [json_name = "meterStatus"];
+      {PROTOBUF_FIELD_OFFSET(MeterStatusUpdate, _impl_.meter_status_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kOpenEnum)},
+      // .google.protobuf.Timestamp last_heartbeat_at = 2 [json_name = "lastHeartbeatAt"];
+      {PROTOBUF_FIELD_OFFSET(MeterStatusUpdate, _impl_.last_heartbeat_at_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+    }},
+    {{
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::google::protobuf::Timestamp>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::google::protobuf::Timestamp_globals_},
+        #endif
+    }},
+    {{
+    }},
+  };
+}
+
+
+inline constexpr MeterStatusUpdate::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        last_heartbeat_at_{nullptr},
+        meter_status_{static_cast< ::gridx::iot::v1::MeterStatus >(0)} {}
+
+template <typename>
+constexpr MeterStatusUpdate::MeterStatusUpdate(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL MeterStatusUpdate::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) MeterStatusUpdate(arena);
+}
+constexpr auto MeterStatusUpdate::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(MeterStatusUpdate), alignof(MeterStatusUpdate));
+}
+constexpr auto MeterStatusUpdate::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &MeterStatusUpdate::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<MeterStatusUpdate>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &MeterStatusUpdate::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<MeterStatusUpdate>(), &MeterStatusUpdate::ByteSizeLong,
+              &MeterStatusUpdate::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(MeterStatusUpdate, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[22],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct MeterStatusUpdateGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr MeterStatusUpdateGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 MeterStatusUpdate_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(MeterStatusUpdate::InternalGenerateClassData_(
+            _default, &MeterStatusUpdate_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<MeterStatusUpdate>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~MeterStatusUpdateGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) MeterStatusUpdate _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<MeterStatusUpdate>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(MeterStatusUpdateGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST MeterStatusUpdateGlobalsTypeInternal MeterStatusUpdate_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* MeterStatusUpdate_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return MeterStatusUpdate_globals_.GetClassData();
+#else
+  return MeterStatusUpdate_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
 class MeterReading::_Internal {
  public:
   using HasBits = decltype(::std::declval<MeterReading>()._impl_._has_bits_);
@@ -4338,6 +4654,158 @@ const ::_pbi::ClassData* EnergyBucket_get_class_data() {
   return EnergyBucket_globals_.GetClassData();
 #else
   return EnergyBucket_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class StreamHouseLiveResponse::_Internal {
+ public:
+  static constexpr ::int32_t kOneofCaseOffset =
+      PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::StreamHouseLiveResponse, _impl_._oneof_case_);
+};
+
+constexpr StreamHouseLiveResponse::ParseTableT_ StreamHouseLiveResponse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(StreamHouseLiveResponse,
+                            _impl_._cached_size_),  // no hasbits
+      0, // no _extensions_
+      2, 0,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967292,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      2,  // num_field_entries
+      2,  // num_aux_entries
+      offsetof(ParseTableT_, aux_entries),
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::gridx::iot::v1::StreamHouseLiveResponse>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      {::_pbi::TcParser::MiniParse, {}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // .gridx.iot.v1.MeterReading reading = 1 [json_name = "reading"];
+      {PROTOBUF_FIELD_OFFSET(StreamHouseLiveResponse, _impl_.event_.reading_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+      // .gridx.iot.v1.MeterStatusUpdate status = 2 [json_name = "status"];
+      {PROTOBUF_FIELD_OFFSET(StreamHouseLiveResponse, _impl_.event_.status_), _Internal::kOneofCaseOffset + 0, 1, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    }},
+    {{
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::gridx::iot::v1::MeterReading>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::gridx::iot::v1::MeterReading_globals_},
+        #endif
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::gridx::iot::v1::MeterStatusUpdate>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::gridx::iot::v1::MeterStatusUpdate_globals_},
+        #endif
+    }},
+    {{
+    }},
+  };
+}
+
+
+inline constexpr StreamHouseLiveResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : event_{},
+        _cached_size_{0},
+        _oneof_case_{} {}
+
+template <typename>
+constexpr StreamHouseLiveResponse::StreamHouseLiveResponse(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL StreamHouseLiveResponse::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) StreamHouseLiveResponse(arena);
+}
+constexpr auto StreamHouseLiveResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(StreamHouseLiveResponse), alignof(StreamHouseLiveResponse));
+}
+constexpr auto StreamHouseLiveResponse::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &StreamHouseLiveResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<StreamHouseLiveResponse>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &StreamHouseLiveResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<StreamHouseLiveResponse>(), &StreamHouseLiveResponse::ByteSizeLong,
+              &StreamHouseLiveResponse::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(StreamHouseLiveResponse, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[21],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct StreamHouseLiveResponseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr StreamHouseLiveResponseGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 StreamHouseLiveResponse_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(StreamHouseLiveResponse::InternalGenerateClassData_(
+            _default, &StreamHouseLiveResponse_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<StreamHouseLiveResponse>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~StreamHouseLiveResponseGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) StreamHouseLiveResponse _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<StreamHouseLiveResponse>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(StreamHouseLiveResponseGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST StreamHouseLiveResponseGlobalsTypeInternal StreamHouseLiveResponse_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* StreamHouseLiveResponse_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return StreamHouseLiveResponse_globals_.GetClassData();
+#else
+  return StreamHouseLiveResponse_class_data_.base();
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 }
 }  // namespace
@@ -5371,6 +5839,25 @@ const ::uint32_t
         3,
         2,
         0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::StreamHouseLiveRequest, _impl_._has_bits_),
+        5, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::StreamHouseLiveRequest, _impl_.house_id_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::StreamHouseLiveRequest, _impl_.owner_user_id_),
+        0,
+        1,
+        0x004, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::StreamHouseLiveResponse, _impl_._oneof_case_[0]),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::StreamHouseLiveResponse, _impl_.event_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::StreamHouseLiveResponse, _impl_.event_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::StreamHouseLiveResponse, _impl_.event_),
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::MeterStatusUpdate, _impl_._has_bits_),
+        5, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::MeterStatusUpdate, _impl_.meter_status_),
+        PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::MeterStatusUpdate, _impl_.last_heartbeat_at_),
+        1,
+        0,
+        0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::InitiateMeterClaimRequest, _impl_._has_bits_),
         5, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::gridx::iot::v1::InitiateMeterClaimRequest, _impl_.user_reference_),
@@ -5472,16 +5959,19 @@ static const ::_pbi::MigrationSchema
         {189, sizeof(::gridx::iot::v1::GetEnergySeriesResponse)},
         {194, sizeof(::gridx::iot::v1::GetEnergySummaryRequest)},
         {205, sizeof(::gridx::iot::v1::GetEnergySummaryResponse)},
-        {216, sizeof(::gridx::iot::v1::InitiateMeterClaimRequest)},
-        {223, sizeof(::gridx::iot::v1::InitiateMeterClaimResponse)},
-        {232, sizeof(::gridx::iot::v1::GetRegistrationStatusRequest)},
-        {237, sizeof(::gridx::iot::v1::GetRegistrationStatusResponse)},
-        {246, sizeof(::gridx::iot::v1::ValidateDeviceAssociationRequest)},
-        {251, sizeof(::gridx::iot::v1::ValidateDeviceAssociationResponse)},
-        {258, sizeof(::gridx::iot::v1::ReverifyRegistrationRequest)},
-        {267, sizeof(::gridx::iot::v1::ReverifyRegistrationResponse)},
-        {278, sizeof(::gridx::iot::v1::GetRegistrationByUserRequest)},
-        {283, sizeof(::gridx::iot::v1::GetRegistrationByUserResponse)},
+        {216, sizeof(::gridx::iot::v1::StreamHouseLiveRequest)},
+        {223, sizeof(::gridx::iot::v1::StreamHouseLiveResponse)},
+        {228, sizeof(::gridx::iot::v1::MeterStatusUpdate)},
+        {235, sizeof(::gridx::iot::v1::InitiateMeterClaimRequest)},
+        {242, sizeof(::gridx::iot::v1::InitiateMeterClaimResponse)},
+        {251, sizeof(::gridx::iot::v1::GetRegistrationStatusRequest)},
+        {256, sizeof(::gridx::iot::v1::GetRegistrationStatusResponse)},
+        {265, sizeof(::gridx::iot::v1::ValidateDeviceAssociationRequest)},
+        {270, sizeof(::gridx::iot::v1::ValidateDeviceAssociationResponse)},
+        {277, sizeof(::gridx::iot::v1::ReverifyRegistrationRequest)},
+        {286, sizeof(::gridx::iot::v1::ReverifyRegistrationResponse)},
+        {297, sizeof(::gridx::iot::v1::GetRegistrationByUserRequest)},
+        {302, sizeof(::gridx::iot::v1::GetRegistrationByUserResponse)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
     file_message_globals[] = {
@@ -5505,6 +5995,9 @@ static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
         &::gridx::iot::v1::GetEnergySeriesResponse_globals_,
         &::gridx::iot::v1::GetEnergySummaryRequest_globals_,
         &::gridx::iot::v1::GetEnergySummaryResponse_globals_,
+        &::gridx::iot::v1::StreamHouseLiveRequest_globals_,
+        &::gridx::iot::v1::StreamHouseLiveResponse_globals_,
+        &::gridx::iot::v1::MeterStatusUpdate_globals_,
         &::gridx::iot::v1::InitiateMeterClaimRequest_globals_,
         &::gridx::iot::v1::InitiateMeterClaimResponse_globals_,
         &::gridx::iot::v1::GetRegistrationStatusRequest_globals_,
@@ -5614,72 +6107,84 @@ const char descriptor_table_protodef_gridx_2fiot_2fv1_2fiot_2eproto[] ABSL_ATTRI
     "s\0225\n\024self_consumption_pct\030\003 \001(\001H\000R\022selfC"
     "onsumptionPct\210\001\001\0229\n\013peak_demand\030\004 \001(\0132\030."
     "gridx.iot.v1.PeakDemandR\npeakDemandB\027\n\025_"
-    "self_consumption_pct\"]\n\031InitiateMeterCla"
-    "imRequest\022%\n\016user_reference\030\001 \001(\tR\ruserR"
-    "eference\022\031\n\010meter_id\030\002 \001(\tR\007meterId\"w\n\032I"
-    "nitiateMeterClaimResponse\022\'\n\017registratio"
-    "n_id\030\001 \001(\tR\016registrationId\022\026\n\006status\030\002 \001"
-    "(\tR\006status\022\030\n\007message\030\003 \001(\tR\007message\"G\n\034"
-    "GetRegistrationStatusRequest\022\'\n\017registra"
-    "tion_id\030\001 \001(\tR\016registrationId\"\214\001\n\035GetReg"
-    "istrationStatusResponse\022\'\n\017registration_"
-    "id\030\001 \001(\tR\016registrationId\022\031\n\010meter_id\030\002 \001"
-    "(\tR\007meterId\022\'\n\017approval_status\030\003 \001(\tR\016ap"
-    "provalStatus\"=\n ValidateDeviceAssociatio"
-    "nRequest\022\031\n\010meter_id\030\001 \001(\tR\007meterId\"p\n!V"
-    "alidateDeviceAssociationResponse\022#\n\ris_r"
-    "egistered\030\002 \001(\010R\014isRegistered\022&\n\017primary"
-    "_user_id\030\003 \001(\tR\rprimaryUserId\"\210\001\n\033Reveri"
-    "fyRegistrationRequest\022\'\n\017registration_id"
-    "\030\001 \001(\tR\016registrationId\022%\n\016user_reference"
-    "\030\002 \001(\tR\ruserReference\022\031\n\010meter_id\030\003 \001(\tR"
-    "\007meterId\"\224\001\n\034ReverifyRegistrationRespons"
-    "e\022\'\n\017registration_id\030\001 \001(\tR\016registration"
-    "Id\022\031\n\010meter_id\030\002 \001(\tR\007meterId\022\030\n\007message"
-    "\030\003 \001(\tR\007message\022\026\n\006status\030\004 \001(\tR\006status\""
-    "E\n\034GetRegistrationByUserRequest\022%\n\016user_"
-    "reference\030\001 \001(\tR\ruserReference\"\251\001\n\035GetRe"
-    "gistrationByUserResponse\022\033\n\thas_meter\030\001 "
-    "\001(\010R\010hasMeter\022\'\n\017registration_id\030\002 \001(\tR\016"
-    "registrationId\022\031\n\010meter_id\030\003 \001(\tR\007meterI"
-    "d\022\'\n\017approval_status\030\004 \001(\tR\016approvalStat"
-    "us*\212\001\n\013DeviceClass\022\034\n\030DEVICE_CLASS_UNSPE"
-    "CIFIED\020\000\022\031\n\025DEVICE_CLASS_CONSUMER\020\001\022%\n!D"
-    "EVICE_CLASS_RESIDENTIAL_PROSUMER\020\002\022\033\n\027DE"
-    "VICE_CLASS_COMMERCIAL\020\003*O\n\tAssetType\022\032\n\026"
-    "ASSET_TYPE_UNSPECIFIED\020\000\022\023\n\017ASSET_TYPE_B"
-    "ESS\020\001\022\021\n\rASSET_TYPE_EV\020\002*^\n\013MeterStatus\022"
-    "\034\n\030METER_STATUS_UNSPECIFIED\020\000\022\027\n\023METER_S"
-    "TATUS_ONLINE\020\001\022\030\n\024METER_STATUS_OFFLINE\020\002"
-    "2\316\003\n\nIotService\022O\n\nListHouses\022\037.gridx.io"
-    "t.v1.ListHousesRequest\032 .gridx.iot.v1.Li"
-    "stHousesResponse\022I\n\010GetHouse\022\035.gridx.iot"
-    ".v1.GetHouseRequest\032\036.gridx.iot.v1.GetHo"
-    "useResponse\022a\n\020GetLatestReading\022%.gridx."
-    "iot.v1.GetLatestReadingRequest\032&.gridx.i"
-    "ot.v1.GetLatestReadingResponse\022^\n\017GetEne"
-    "rgySeries\022$.gridx.iot.v1.GetEnergySeries"
-    "Request\032%.gridx.iot.v1.GetEnergySeriesRe"
-    "sponse\022a\n\020GetEnergySummary\022%.gridx.iot.v"
-    "1.GetEnergySummaryRequest\032&.gridx.iot.v1"
-    ".GetEnergySummaryResponse2\325\004\n\031DeviceRegi"
-    "strationService\022g\n\022InitiateMeterClaim\022\'."
-    "gridx.iot.v1.InitiateMeterClaimRequest\032("
-    ".gridx.iot.v1.InitiateMeterClaimResponse"
-    "\022p\n\025GetRegistrationStatus\022*.gridx.iot.v1"
-    ".GetRegistrationStatusRequest\032+.gridx.io"
-    "t.v1.GetRegistrationStatusResponse\022|\n\031Va"
-    "lidateDeviceAssociation\022..gridx.iot.v1.V"
-    "alidateDeviceAssociationRequest\032/.gridx."
-    "iot.v1.ValidateDeviceAssociationResponse"
-    "\022m\n\024ReverifyRegistration\022).gridx.iot.v1."
-    "ReverifyRegistrationRequest\032*.gridx.iot."
-    "v1.ReverifyRegistrationResponse\022p\n\025GetRe"
-    "gistrationByUser\022*.gridx.iot.v1.GetRegis"
-    "trationByUserRequest\032+.gridx.iot.v1.GetR"
-    "egistrationByUserResponseBFZDgithub.com/"
-    "p2p-energy-trading-platform/go-sdk/gen/g"
-    "ridx/iot/v1;iotv1b\006proto3"
+    "self_consumption_pct\"W\n\026StreamHouseLiveR"
+    "equest\022\031\n\010house_id\030\001 \001(\tR\007houseId\022\"\n\rown"
+    "er_user_id\030\002 \001(\tR\013ownerUserId\"\225\001\n\027Stream"
+    "HouseLiveResponse\0226\n\007reading\030\001 \001(\0132\032.gri"
+    "dx.iot.v1.MeterReadingH\000R\007reading\0229\n\006sta"
+    "tus\030\002 \001(\0132\037.gridx.iot.v1.MeterStatusUpda"
+    "teH\000R\006statusB\007\n\005event\"\231\001\n\021MeterStatusUpd"
+    "ate\022<\n\014meter_status\030\001 \001(\0162\031.gridx.iot.v1"
+    ".MeterStatusR\013meterStatus\022F\n\021last_heartb"
+    "eat_at\030\002 \001(\0132\032.google.protobuf.Timestamp"
+    "R\017lastHeartbeatAt\"]\n\031InitiateMeterClaimR"
+    "equest\022%\n\016user_reference\030\001 \001(\tR\ruserRefe"
+    "rence\022\031\n\010meter_id\030\002 \001(\tR\007meterId\"w\n\032Init"
+    "iateMeterClaimResponse\022\'\n\017registration_i"
+    "d\030\001 \001(\tR\016registrationId\022\026\n\006status\030\002 \001(\tR"
+    "\006status\022\030\n\007message\030\003 \001(\tR\007message\"G\n\034Get"
+    "RegistrationStatusRequest\022\'\n\017registratio"
+    "n_id\030\001 \001(\tR\016registrationId\"\214\001\n\035GetRegist"
+    "rationStatusResponse\022\'\n\017registration_id\030"
+    "\001 \001(\tR\016registrationId\022\031\n\010meter_id\030\002 \001(\tR"
+    "\007meterId\022\'\n\017approval_status\030\003 \001(\tR\016appro"
+    "valStatus\"=\n ValidateDeviceAssociationRe"
+    "quest\022\031\n\010meter_id\030\001 \001(\tR\007meterId\"p\n!Vali"
+    "dateDeviceAssociationResponse\022#\n\ris_regi"
+    "stered\030\002 \001(\010R\014isRegistered\022&\n\017primary_us"
+    "er_id\030\003 \001(\tR\rprimaryUserId\"\210\001\n\033ReverifyR"
+    "egistrationRequest\022\'\n\017registration_id\030\001 "
+    "\001(\tR\016registrationId\022%\n\016user_reference\030\002 "
+    "\001(\tR\ruserReference\022\031\n\010meter_id\030\003 \001(\tR\007me"
+    "terId\"\224\001\n\034ReverifyRegistrationResponse\022\'"
+    "\n\017registration_id\030\001 \001(\tR\016registrationId\022"
+    "\031\n\010meter_id\030\002 \001(\tR\007meterId\022\030\n\007message\030\003 "
+    "\001(\tR\007message\022\026\n\006status\030\004 \001(\tR\006status\"E\n\034"
+    "GetRegistrationByUserRequest\022%\n\016user_ref"
+    "erence\030\001 \001(\tR\ruserReference\"\251\001\n\035GetRegis"
+    "trationByUserResponse\022\033\n\thas_meter\030\001 \001(\010"
+    "R\010hasMeter\022\'\n\017registration_id\030\002 \001(\tR\016reg"
+    "istrationId\022\031\n\010meter_id\030\003 \001(\tR\007meterId\022\'"
+    "\n\017approval_status\030\004 \001(\tR\016approvalStatus*"
+    "\212\001\n\013DeviceClass\022\034\n\030DEVICE_CLASS_UNSPECIF"
+    "IED\020\000\022\031\n\025DEVICE_CLASS_CONSUMER\020\001\022%\n!DEVI"
+    "CE_CLASS_RESIDENTIAL_PROSUMER\020\002\022\033\n\027DEVIC"
+    "E_CLASS_COMMERCIAL\020\003*O\n\tAssetType\022\032\n\026ASS"
+    "ET_TYPE_UNSPECIFIED\020\000\022\023\n\017ASSET_TYPE_BESS"
+    "\020\001\022\021\n\rASSET_TYPE_EV\020\002*^\n\013MeterStatus\022\034\n\030"
+    "METER_STATUS_UNSPECIFIED\020\000\022\027\n\023METER_STAT"
+    "US_ONLINE\020\001\022\030\n\024METER_STATUS_OFFLINE\020\0022\260\004"
+    "\n\nIotService\022O\n\nListHouses\022\037.gridx.iot.v"
+    "1.ListHousesRequest\032 .gridx.iot.v1.ListH"
+    "ousesResponse\022I\n\010GetHouse\022\035.gridx.iot.v1"
+    ".GetHouseRequest\032\036.gridx.iot.v1.GetHouse"
+    "Response\022a\n\020GetLatestReading\022%.gridx.iot"
+    ".v1.GetLatestReadingRequest\032&.gridx.iot."
+    "v1.GetLatestReadingResponse\022^\n\017GetEnergy"
+    "Series\022$.gridx.iot.v1.GetEnergySeriesReq"
+    "uest\032%.gridx.iot.v1.GetEnergySeriesRespo"
+    "nse\022a\n\020GetEnergySummary\022%.gridx.iot.v1.G"
+    "etEnergySummaryRequest\032&.gridx.iot.v1.Ge"
+    "tEnergySummaryResponse\022`\n\017StreamHouseLiv"
+    "e\022$.gridx.iot.v1.StreamHouseLiveRequest\032"
+    "%.gridx.iot.v1.StreamHouseLiveResponse0\001"
+    "2\325\004\n\031DeviceRegistrationService\022g\n\022Initia"
+    "teMeterClaim\022\'.gridx.iot.v1.InitiateMete"
+    "rClaimRequest\032(.gridx.iot.v1.InitiateMet"
+    "erClaimResponse\022p\n\025GetRegistrationStatus"
+    "\022*.gridx.iot.v1.GetRegistrationStatusReq"
+    "uest\032+.gridx.iot.v1.GetRegistrationStatu"
+    "sResponse\022|\n\031ValidateDeviceAssociation\022."
+    ".gridx.iot.v1.ValidateDeviceAssociationR"
+    "equest\032/.gridx.iot.v1.ValidateDeviceAsso"
+    "ciationResponse\022m\n\024ReverifyRegistration\022"
+    ").gridx.iot.v1.ReverifyRegistrationReque"
+    "st\032*.gridx.iot.v1.ReverifyRegistrationRe"
+    "sponse\022p\n\025GetRegistrationByUser\022*.gridx."
+    "iot.v1.GetRegistrationByUserRequest\032+.gr"
+    "idx.iot.v1.GetRegistrationByUserResponse"
+    "BFZDgithub.com/p2p-energy-trading-platfo"
+    "rm/go-sdk/gen/gridx/iot/v1;iotv1b\006proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto_deps[2] = {
@@ -5690,13 +6195,13 @@ static ::absl::once_flag descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto = {
     false,
     false,
-    6465,
+    6960,
     descriptor_table_protodef_gridx_2fiot_2fv1_2fiot_2eproto,
     "gridx/iot/v1/iot.proto",
     &descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto_once,
     descriptor_table_gridx_2fiot_2fv1_2fiot_2eproto_deps,
     2,
-    30,
+    33,
     schemas,
     file_message_globals,
     TableStruct_gridx_2fiot_2fv1_2fiot_2eproto::offsets,
@@ -11661,6 +12166,819 @@ void GetEnergySummaryResponse::InternalSwap(GetEnergySummaryResponse* PROTOBUF_R
 }
 
 ::google::protobuf::Metadata GetEnergySummaryResponse::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+StreamHouseLiveRequest::StreamHouseLiveRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, StreamHouseLiveRequest_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.iot.v1.StreamHouseLiveRequest)
+}
+PROTOBUF_NDEBUG_INLINE StreamHouseLiveRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::iot::v1::StreamHouseLiveRequest& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        house_id_(arena, from.house_id_),
+        owner_user_id_(arena, from.owner_user_id_) {}
+
+StreamHouseLiveRequest::StreamHouseLiveRequest(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const StreamHouseLiveRequest& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, StreamHouseLiveRequest_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  StreamHouseLiveRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:gridx.iot.v1.StreamHouseLiveRequest)
+}
+PROTOBUF_NDEBUG_INLINE StreamHouseLiveRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        house_id_(arena),
+        owner_user_id_(arena) {}
+
+inline void StreamHouseLiveRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+StreamHouseLiveRequest::~StreamHouseLiveRequest() {
+  // @@protoc_insertion_point(destructor:gridx.iot.v1.StreamHouseLiveRequest)
+  SharedDtor(*this);
+}
+inline void StreamHouseLiveRequest::SharedDtor(MessageLite& self) {
+  StreamHouseLiveRequest& this_ = static_cast<StreamHouseLiveRequest&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.house_id_.Destroy();
+  this_._impl_.owner_user_id_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull StreamHouseLiveRequest_class_data_ =
+        StreamHouseLiveRequest::InternalGenerateClassData_(StreamHouseLiveRequest_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+StreamHouseLiveRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&StreamHouseLiveRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(StreamHouseLiveRequest_class_data_.tc_table);
+  return StreamHouseLiveRequest_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+StreamHouseLiveRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&StreamHouseLiveRequest_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&StreamHouseLiveRequest_globals_));
+  return StreamHouseLiveRequest_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const StreamHouseLiveRequest::ParseTableT_
+    StreamHouseLiveRequest::_table_ =
+        StreamHouseLiveRequest::InternalGenerateParseTable_(StreamHouseLiveRequest_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void StreamHouseLiveRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.iot.v1.StreamHouseLiveRequest)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      _impl_.house_id_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      _impl_.owner_user_id_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL StreamHouseLiveRequest::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const StreamHouseLiveRequest& this_ = static_cast<const StreamHouseLiveRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL StreamHouseLiveRequest::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const StreamHouseLiveRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.iot.v1.StreamHouseLiveRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string house_id = 1 [json_name = "houseId"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_house_id().empty()) {
+      const ::std::string& _s = this_._internal_house_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.StreamHouseLiveRequest.house_id");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  // string owner_user_id = 2 [json_name = "ownerUserId"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (!this_._internal_owner_user_id().empty()) {
+      const ::std::string& _s = this_._internal_owner_user_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.iot.v1.StreamHouseLiveRequest.owner_user_id");
+      target = stream->WriteStringMaybeAliased(2, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.iot.v1.StreamHouseLiveRequest)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t StreamHouseLiveRequest::ByteSizeLong(const MessageLite& base) {
+  const StreamHouseLiveRequest& this_ = static_cast<const StreamHouseLiveRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t StreamHouseLiveRequest::ByteSizeLong() const {
+  const StreamHouseLiveRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.iot.v1.StreamHouseLiveRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    // string house_id = 1 [json_name = "houseId"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_house_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_house_id());
+      }
+    }
+    // string owner_user_id = 2 [json_name = "ownerUserId"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!this_._internal_owner_user_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_owner_user_id());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void StreamHouseLiveRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<StreamHouseLiveRequest*>(&to_msg);
+  auto& from = static_cast<const StreamHouseLiveRequest&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.iot.v1.StreamHouseLiveRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_house_id().empty()) {
+        _this->_internal_set_house_id(from._internal_house_id());
+      } else {
+        if (_this->_impl_.house_id_.IsDefault()) {
+          _this->_internal_set_house_id("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!from._internal_owner_user_id().empty()) {
+        _this->_internal_set_owner_user_id(from._internal_owner_user_id());
+      } else {
+        if (_this->_impl_.owner_user_id_.IsDefault()) {
+          _this->_internal_set_owner_user_id("");
+        }
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void StreamHouseLiveRequest::CopyFrom(const StreamHouseLiveRequest& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.iot.v1.StreamHouseLiveRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void StreamHouseLiveRequest::InternalSwap(StreamHouseLiveRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.house_id_, &other->_impl_.house_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.owner_user_id_, &other->_impl_.owner_user_id_, arena);
+}
+
+::google::protobuf::Metadata StreamHouseLiveRequest::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+void StreamHouseLiveResponse::set_allocated_reading(::gridx::iot::v1::MeterReading* PROTOBUF_NULLABLE reading) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_event();
+  if (reading) {
+    ::google::protobuf::Arena* submessage_arena = reading->GetArena();
+    if (message_arena != submessage_arena) {
+      reading = ::google::protobuf::internal::GetOwnedMessage(message_arena, reading, submessage_arena);
+    }
+    set_has_reading();
+    _impl_.event_.reading_ = reading;
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.iot.v1.StreamHouseLiveResponse.reading)
+}
+void StreamHouseLiveResponse::set_allocated_status(::gridx::iot::v1::MeterStatusUpdate* PROTOBUF_NULLABLE status) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_event();
+  if (status) {
+    ::google::protobuf::Arena* submessage_arena = status->GetArena();
+    if (message_arena != submessage_arena) {
+      status = ::google::protobuf::internal::GetOwnedMessage(message_arena, status, submessage_arena);
+    }
+    set_has_status();
+    _impl_.event_.status_ = status;
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.iot.v1.StreamHouseLiveResponse.status)
+}
+StreamHouseLiveResponse::StreamHouseLiveResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, StreamHouseLiveResponse_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.iot.v1.StreamHouseLiveResponse)
+}
+PROTOBUF_NDEBUG_INLINE StreamHouseLiveResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::iot::v1::StreamHouseLiveResponse& from_msg)
+      : event_{},
+        _cached_size_{0},
+        _oneof_case_{from._oneof_case_[0]} {}
+
+StreamHouseLiveResponse::StreamHouseLiveResponse(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const StreamHouseLiveResponse& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, StreamHouseLiveResponse_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  StreamHouseLiveResponse* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  switch (event_case()) {
+    case EVENT_NOT_SET:
+      break;
+      case kReading:
+        _impl_.event_.reading_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.event_.reading_);
+        break;
+      case kStatus:
+        _impl_.event_.status_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.event_.status_);
+        break;
+  }
+
+  // @@protoc_insertion_point(copy_constructor:gridx.iot.v1.StreamHouseLiveResponse)
+}
+PROTOBUF_NDEBUG_INLINE StreamHouseLiveResponse::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : event_{},
+        _cached_size_{0},
+        _oneof_case_{} {}
+
+inline void StreamHouseLiveResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+StreamHouseLiveResponse::~StreamHouseLiveResponse() {
+  // @@protoc_insertion_point(destructor:gridx.iot.v1.StreamHouseLiveResponse)
+  SharedDtor(*this);
+}
+inline void StreamHouseLiveResponse::SharedDtor(MessageLite& self) {
+  StreamHouseLiveResponse& this_ = static_cast<StreamHouseLiveResponse&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  if (this_.has_event()) {
+    this_.clear_event();
+  }
+  this_._impl_.~Impl_();
+}
+
+void StreamHouseLiveResponse::clear_event() {
+// @@protoc_insertion_point(one_of_clear_start:gridx.iot.v1.StreamHouseLiveResponse)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  switch (event_case()) {
+    case kReading: {
+      if (GetArena() == nullptr) {
+        delete _impl_.event_.reading_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.event_.reading_);
+      }
+      break;
+    }
+    case kStatus: {
+      if (GetArena() == nullptr) {
+        delete _impl_.event_.status_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.event_.status_);
+      }
+      break;
+    }
+    case EVENT_NOT_SET: {
+      break;
+    }
+  }
+  _impl_._oneof_case_[0] = EVENT_NOT_SET;
+}
+
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull StreamHouseLiveResponse_class_data_ =
+        StreamHouseLiveResponse::InternalGenerateClassData_(StreamHouseLiveResponse_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+StreamHouseLiveResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&StreamHouseLiveResponse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(StreamHouseLiveResponse_class_data_.tc_table);
+  return StreamHouseLiveResponse_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+StreamHouseLiveResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&StreamHouseLiveResponse_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&StreamHouseLiveResponse_globals_));
+  return StreamHouseLiveResponse_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const StreamHouseLiveResponse::ParseTableT_
+    StreamHouseLiveResponse::_table_ =
+        StreamHouseLiveResponse::InternalGenerateParseTable_(StreamHouseLiveResponse_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void StreamHouseLiveResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.iot.v1.StreamHouseLiveResponse)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  clear_event();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL StreamHouseLiveResponse::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const StreamHouseLiveResponse& this_ = static_cast<const StreamHouseLiveResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL StreamHouseLiveResponse::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const StreamHouseLiveResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.iot.v1.StreamHouseLiveResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  switch (this_.event_case()) {
+    case kReading: {
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          1, *this_._impl_.event_.reading_, this_._impl_.event_.reading_->GetCachedSize(), target,
+          stream);
+      break;
+    }
+    case kStatus: {
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          2, *this_._impl_.event_.status_, this_._impl_.event_.status_->GetCachedSize(), target,
+          stream);
+      break;
+    }
+    default:
+      break;
+  }
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.iot.v1.StreamHouseLiveResponse)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t StreamHouseLiveResponse::ByteSizeLong(const MessageLite& base) {
+  const StreamHouseLiveResponse& this_ = static_cast<const StreamHouseLiveResponse&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t StreamHouseLiveResponse::ByteSizeLong() const {
+  const StreamHouseLiveResponse& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.iot.v1.StreamHouseLiveResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  switch (this_.event_case()) {
+    // .gridx.iot.v1.MeterReading reading = 1 [json_name = "reading"];
+    case kReading: {
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.event_.reading_);
+      break;
+    }
+    // .gridx.iot.v1.MeterStatusUpdate status = 2 [json_name = "status"];
+    case kStatus: {
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.event_.status_);
+      break;
+    }
+    case EVENT_NOT_SET: {
+      break;
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void StreamHouseLiveResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<StreamHouseLiveResponse*>(&to_msg);
+  auto& from = static_cast<const StreamHouseLiveResponse&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  ::google::protobuf::Arena* arena = _this->GetArena();
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.iot.v1.StreamHouseLiveResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  if (const uint32_t oneof_from_case =
+          from._impl_._oneof_case_[0]) {
+    const uint32_t oneof_to_case = _this->_impl_._oneof_case_[0];
+    const bool oneof_needs_init = oneof_to_case != oneof_from_case;
+    if (oneof_needs_init) {
+      if (oneof_to_case != 0) {
+        _this->clear_event();
+      }
+      _this->_impl_._oneof_case_[0] = oneof_from_case;
+    }
+
+    switch (oneof_from_case) {
+      case kReading: {
+        if (oneof_needs_init) {
+          _this->_impl_.event_.reading_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.event_.reading_);
+        } else {
+          _this->_impl_.event_.reading_->MergeFrom(*from._impl_.event_.reading_);
+        }
+        break;
+      }
+      case kStatus: {
+        if (oneof_needs_init) {
+          _this->_impl_.event_.status_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.event_.status_);
+        } else {
+          _this->_impl_.event_.status_->MergeFrom(*from._impl_.event_.status_);
+        }
+        break;
+      }
+      case EVENT_NOT_SET:
+        break;
+    }
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void StreamHouseLiveResponse::CopyFrom(const StreamHouseLiveResponse& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.iot.v1.StreamHouseLiveResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void StreamHouseLiveResponse::InternalSwap(StreamHouseLiveResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.event_, other->_impl_.event_);
+  swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
+}
+
+::google::protobuf::Metadata StreamHouseLiveResponse::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+void MeterStatusUpdate::clear_last_heartbeat_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.last_heartbeat_at_ != nullptr) _impl_.last_heartbeat_at_->Clear();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+MeterStatusUpdate::MeterStatusUpdate(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, MeterStatusUpdate_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:gridx.iot.v1.MeterStatusUpdate)
+}
+PROTOBUF_NDEBUG_INLINE MeterStatusUpdate::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::gridx::iot::v1::MeterStatusUpdate& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0} {}
+
+MeterStatusUpdate::MeterStatusUpdate(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const MeterStatusUpdate& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, MeterStatusUpdate_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  MeterStatusUpdate* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.last_heartbeat_at_ = (CheckHasBit(cached_has_bits, 0x00000001U))
+                ? ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.last_heartbeat_at_)
+                : nullptr;
+  _impl_.meter_status_ = from._impl_.meter_status_;
+
+  // @@protoc_insertion_point(copy_constructor:gridx.iot.v1.MeterStatusUpdate)
+}
+PROTOBUF_NDEBUG_INLINE MeterStatusUpdate::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0} {}
+
+inline void MeterStatusUpdate::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char*>(&_impl_) +
+               offsetof(Impl_, last_heartbeat_at_),
+           0,
+           offsetof(Impl_, meter_status_) -
+               offsetof(Impl_, last_heartbeat_at_) +
+               sizeof(Impl_::meter_status_));
+}
+MeterStatusUpdate::~MeterStatusUpdate() {
+  // @@protoc_insertion_point(destructor:gridx.iot.v1.MeterStatusUpdate)
+  SharedDtor(*this);
+}
+inline void MeterStatusUpdate::SharedDtor(MessageLite& self) {
+  MeterStatusUpdate& this_ = static_cast<MeterStatusUpdate&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  delete this_._impl_.last_heartbeat_at_;
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull MeterStatusUpdate_class_data_ =
+        MeterStatusUpdate::InternalGenerateClassData_(MeterStatusUpdate_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+MeterStatusUpdate::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&MeterStatusUpdate_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(MeterStatusUpdate_class_data_.tc_table);
+  return MeterStatusUpdate_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+MeterStatusUpdate::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&MeterStatusUpdate_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&MeterStatusUpdate_globals_));
+  return MeterStatusUpdate_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const MeterStatusUpdate::ParseTableT_
+    MeterStatusUpdate::_table_ =
+        MeterStatusUpdate::InternalGenerateParseTable_(MeterStatusUpdate_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void MeterStatusUpdate::Clear() {
+// @@protoc_insertion_point(message_clear_start:gridx.iot.v1.MeterStatusUpdate)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    ABSL_DCHECK(_impl_.last_heartbeat_at_ != nullptr);
+    _impl_.last_heartbeat_at_->Clear();
+  }
+  _impl_.meter_status_ = 0;
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL MeterStatusUpdate::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const MeterStatusUpdate& this_ = static_cast<const MeterStatusUpdate&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL MeterStatusUpdate::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const MeterStatusUpdate& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:gridx.iot.v1.MeterStatusUpdate)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // .gridx.iot.v1.MeterStatus meter_status = 1 [json_name = "meterStatus"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (this_._internal_meter_status() != 0) {
+      target = stream->EnsureSpace(target);
+      target = ::_pbi::WireFormatLite::WriteEnumToArray(
+          1, this_._internal_meter_status(), target);
+    }
+  }
+
+  // .google.protobuf.Timestamp last_heartbeat_at = 2 [json_name = "lastHeartbeatAt"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        2, *this_._impl_.last_heartbeat_at_, this_._impl_.last_heartbeat_at_->GetCachedSize(), target,
+        stream);
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:gridx.iot.v1.MeterStatusUpdate)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t MeterStatusUpdate::ByteSizeLong(const MessageLite& base) {
+  const MeterStatusUpdate& this_ = static_cast<const MeterStatusUpdate&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t MeterStatusUpdate::ByteSizeLong() const {
+  const MeterStatusUpdate& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:gridx.iot.v1.MeterStatusUpdate)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    // .google.protobuf.Timestamp last_heartbeat_at = 2 [json_name = "lastHeartbeatAt"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.last_heartbeat_at_);
+    }
+    // .gridx.iot.v1.MeterStatus meter_status = 1 [json_name = "meterStatus"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (this_._internal_meter_status() != 0) {
+        total_size += 1 +
+                      ::_pbi::WireFormatLite::EnumSize(this_._internal_meter_status());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void MeterStatusUpdate::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<MeterStatusUpdate*>(&to_msg);
+  auto& from = static_cast<const MeterStatusUpdate&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  ::google::protobuf::Arena* arena = _this->GetArena();
+  // @@protoc_insertion_point(class_specific_merge_from_start:gridx.iot.v1.MeterStatusUpdate)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      ABSL_DCHECK(from._impl_.last_heartbeat_at_ != nullptr);
+      if (_this->_impl_.last_heartbeat_at_ == nullptr) {
+        _this->_impl_.last_heartbeat_at_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.last_heartbeat_at_);
+      } else {
+        _this->_impl_.last_heartbeat_at_->MergeFrom(*from._impl_.last_heartbeat_at_);
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (from._internal_meter_status() != 0) {
+        _this->_impl_.meter_status_ = from._impl_.meter_status_;
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void MeterStatusUpdate::CopyFrom(const MeterStatusUpdate& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:gridx.iot.v1.MeterStatusUpdate)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void MeterStatusUpdate::InternalSwap(MeterStatusUpdate* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(MeterStatusUpdate, _impl_.meter_status_)
+      + sizeof(MeterStatusUpdate::_impl_.meter_status_)
+      - PROTOBUF_FIELD_OFFSET(MeterStatusUpdate, _impl_.last_heartbeat_at_)>(
+          reinterpret_cast<char*>(&_impl_.last_heartbeat_at_),
+          reinterpret_cast<char*>(&other->_impl_.last_heartbeat_at_));
+}
+
+::google::protobuf::Metadata MeterStatusUpdate::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
