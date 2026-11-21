@@ -1001,9 +1001,9 @@ constexpr ConfirmDepositResponse::ParseTableT_ ConfirmDepositResponse::InternalG
     {
       PROTOBUF_FIELD_OFFSET(ConfirmDepositResponse, _impl_._has_bits_),
       0, // no _extensions_
-      3, 24,  // max_field_number, fast_idx_mask
+      4, 24,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967288,  // skipmap
+      4294967282,  // skipmap
       offsetof(ParseTableT_, field_entries),
       3,  // num_field_entries
       0,  // num_aux_entries
@@ -1015,15 +1015,15 @@ constexpr ConfirmDepositResponse::ParseTableT_ ConfirmDepositResponse::InternalG
       ::_pbi::TcParser::GetTable<::gridx::billing::v1::ConfirmDepositResponse>(),  // to_prefetch
       #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
     }, {{
-      {::_pbi::TcParser::MiniParse, {}},
+      // string deposit_id = 4 [json_name = "depositId"];
+      {::_pbi::TcParser::FastUS1,
+       {34, 0, 0,
+        PROTOBUF_FIELD_OFFSET(ConfirmDepositResponse, _impl_.deposit_id_)}},
       // bool processed = 1 [json_name = "processed"];
       {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ConfirmDepositResponse, _impl_.processed_), 1>(),
        {8, 1, 0,
         PROTOBUF_FIELD_OFFSET(ConfirmDepositResponse, _impl_.processed_)}},
-      // string desposit_id = 2 [json_name = "despositId"];
-      {::_pbi::TcParser::FastUS1,
-       {18, 0, 0,
-        PROTOBUF_FIELD_OFFSET(ConfirmDepositResponse, _impl_.desposit_id_)}},
+      {::_pbi::TcParser::MiniParse, {}},
       // .gridx.billing.v1.DepositStatus status = 3 [json_name = "status"];
       {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ConfirmDepositResponse, _impl_.status_), 2>(),
        {24, 2, 0,
@@ -1033,16 +1033,16 @@ constexpr ConfirmDepositResponse::ParseTableT_ ConfirmDepositResponse::InternalG
     }}, {{
       // bool processed = 1 [json_name = "processed"];
       {PROTOBUF_FIELD_OFFSET(ConfirmDepositResponse, _impl_.processed_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kBool)},
-      // string desposit_id = 2 [json_name = "despositId"];
-      {PROTOBUF_FIELD_OFFSET(ConfirmDepositResponse, _impl_.desposit_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // .gridx.billing.v1.DepositStatus status = 3 [json_name = "status"];
       {PROTOBUF_FIELD_OFFSET(ConfirmDepositResponse, _impl_.status_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kOpenEnum)},
+      // string deposit_id = 4 [json_name = "depositId"];
+      {PROTOBUF_FIELD_OFFSET(ConfirmDepositResponse, _impl_.deposit_id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     }},
     // no aux_entries
     {{
-      "\47\0\13\0\0\0\0\0"
+      "\47\0\0\12\0\0\0\0"
       "gridx.billing.v1.ConfirmDepositResponse"
-      "desposit_id"
+      "deposit_id"
     }},
   };
 }
@@ -1052,7 +1052,7 @@ inline constexpr ConfirmDepositResponse::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
-        desposit_id_(
+        deposit_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         processed_{false},
@@ -3535,11 +3535,11 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::gridx::billing::v1::ConfirmDepositResponse, _impl_._has_bits_),
         6, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::gridx::billing::v1::ConfirmDepositResponse, _impl_.processed_),
-        PROTOBUF_FIELD_OFFSET(::gridx::billing::v1::ConfirmDepositResponse, _impl_.desposit_id_),
         PROTOBUF_FIELD_OFFSET(::gridx::billing::v1::ConfirmDepositResponse, _impl_.status_),
+        PROTOBUF_FIELD_OFFSET(::gridx::billing::v1::ConfirmDepositResponse, _impl_.deposit_id_),
         1,
-        0,
         2,
+        0,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::gridx::billing::v1::GetDepositRequest, _impl_._has_bits_),
         4, // hasbit index offset
@@ -3714,85 +3714,86 @@ const char descriptor_table_protodef_gridx_2fbilling_2fv1_2fwallet_2eproto[] ABS
     "dy\030\001 \001(\014R\007rawBody\022N\n\007headers\030\002 \003(\01324.gri"
     "dx.billing.v1.ConfirmDepositRequest.Head"
     "ersEntryR\007headers\032:\n\014HeadersEntry\022\020\n\003key"
-    "\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\220\001"
+    "\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\241\001"
     "\n\026ConfirmDepositResponse\022\034\n\tprocessed\030\001 "
-    "\001(\010R\tprocessed\022\037\n\013desposit_id\030\002 \001(\tR\ndes"
-    "positId\0227\n\006status\030\003 \001(\0162\037.gridx.billing."
-    "v1.DepositStatusR\006status\"2\n\021GetDepositRe"
-    "quest\022\035\n\ndeposit_id\030\001 \001(\tR\tdepositId\"O\n\022"
-    "GetDepositResponse\0229\n\007deposit\030\001 \001(\0132\037.gr"
-    "idx.billing.v1.DepositIntentR\007deposit\"\230\002"
-    "\n\nWithdrawal\022#\n\rwithdrawal_id\030\001 \001(\tR\014wit"
-    "hdrawalId\022\033\n\twallet_id\030\002 \001(\tR\010walletId\022\026"
-    "\n\006amount\030\003 \001(\003R\006amount\022:\n\006status\030\004 \001(\0162\""
-    ".gridx.billing.v1.WithdrawalStatusR\006stat"
-    "us\0229\n\ncreated_at\030\005 \001(\0132\032.google.protobuf"
-    ".TimestampR\tcreatedAt\0229\n\nupdated_at\030\006 \001("
-    "\0132\032.google.protobuf.TimestampR\tupdatedAt"
-    "\"\206\001\n\030RequestWithdrawalRequest\022\'\n\017idempot"
-    "ency_key\030\001 \001(\tR\016idempotencyKey\022\026\n\006amount"
-    "\030\002 \001(\003R\006amount\022)\n\020destination_json\030\003 \001(\014"
-    "R\017destinationJson\"Y\n\031RequestWithdrawalRe"
-    "sponse\022<\n\nwithdrawal\030\001 \001(\0132\034.gridx.billi"
-    "ng.v1.WithdrawalR\nwithdrawal\">\n\027CancelWi"
-    "thdrawalRequest\022#\n\rwithdrawal_id\030\001 \001(\tR\014"
-    "withdrawalId\"X\n\030CancelWithdrawalResponse"
-    "\022<\n\nwithdrawal\030\001 \001(\0132\034.gridx.billing.v1."
-    "WithdrawalR\nwithdrawal\"T\n\026ListWithdrawal"
-    "sRequest\022\033\n\tpage_size\030\001 \001(\005R\010pageSize\022\035\n"
-    "\npage_token\030\002 \001(\tR\tpageToken\"\201\001\n\027ListWit"
-    "hdrawalsResponse\022>\n\013withdrawals\030\001 \003(\0132\034."
-    "gridx.billing.v1.WithdrawalR\013withdrawals"
-    "\022&\n\017next_page_token\030\002 \001(\tR\rnextPageToken"
-    "\"U\n\027ListTransactionsRequest\022\033\n\tpage_size"
-    "\030\001 \001(\005R\010pageSize\022\035\n\npage_token\030\002 \001(\tR\tpa"
-    "geToken\"\327\001\n\017TransactionItem\022\031\n\010entry_id\030"
-    "\001 \001(\003R\007entryId\022\035\n\njournal_id\030\002 \001(\tR\tjour"
-    "nalId\022\022\n\004type\030\003 \001(\tR\004type\022\026\n\006amount\030\004 \001("
-    "\003R\006amount\022#\n\rbalance_after\030\005 \001(\003R\014balanc"
-    "eAfter\0229\n\ncreated_at\030\006 \001(\0132\032.google.prot"
-    "obuf.TimestampR\tcreatedAt\"\211\001\n\030ListTransa"
-    "ctionsResponse\022E\n\014transactions\030\001 \003(\0132!.g"
-    "ridx.billing.v1.TransactionItemR\014transac"
-    "tions\022&\n\017next_page_token\030\002 \001(\tR\rnextPage"
-    "Token*{\n\014WalletStatus\022\035\n\031WALLET_STATUS_U"
-    "NSPECIFIED\020\000\022\030\n\024WALLET_STATUS_ACTIVE\020\001\022\030"
-    "\n\024WALLET_STATUS_FROZEN\020\002\022\030\n\024WALLET_STATU"
-    "S_CLOSED\020\003*\332\001\n\rDepositStatus\022\036\n\032DEPOSIT_"
-    "STATUS_UNSPECIFIED\020\000\022\032\n\026DEPOSIT_STATUS_P"
-    "ENDING\020\001\022\034\n\030DEPOSIT_STATUS_COMPLETED\020\002\022\031"
-    "\n\025DEPOSIT_STATUS_FAILED\020\003\022\032\n\026DEPOSIT_STA"
-    "TUS_EXPIRED\020\004\022\033\n\027DEPOSIT_STATUS_REFUNDED"
-    "\020\005\022\033\n\027DEPOSIT_STATUS_DISPUTED\020\006*\357\001\n\020With"
-    "drawalStatus\022!\n\035WITHDRAWAL_STATUS_UNSPEC"
-    "IFIED\020\000\022\035\n\031WITHDRAWAL_STATUS_PENDING\020\001\022\036"
-    "\n\032WITHDRAWAL_STATUS_APPROVED\020\002\022\032\n\026WITHDR"
-    "AWAL_STATUS_PAID\020\003\022\036\n\032WITHDRAWAL_STATUS_"
-    "REJECTED\020\004\022\037\n\033WITHDRAWAL_STATUS_CANCELLE"
-    "D\020\005\022\034\n\030WITHDRAWAL_STATUS_FAILED\020\0062\303\006\n\rWa"
-    "lletService\022T\n\tGetWallet\022\".gridx.billing"
-    ".v1.GetWalletRequest\032#.gridx.billing.v1."
-    "GetWalletResponse\022i\n\020ListTransactions\022)."
-    "gridx.billing.v1.ListTransactionsRequest"
-    "\032*.gridx.billing.v1.ListTransactionsResp"
-    "onse\022r\n\023CreateDepositIntent\022,.gridx.bill"
-    "ing.v1.CreateDepositIntentRequest\032-.grid"
-    "x.billing.v1.CreateDepositIntentResponse"
-    "\022c\n\016ConfirmDeposit\022\'.gridx.billing.v1.Co"
-    "nfirmDepositRequest\032(.gridx.billing.v1.C"
-    "onfirmDepositResponse\022W\n\nGetDeposit\022#.gr"
-    "idx.billing.v1.GetDepositRequest\032$.gridx"
-    ".billing.v1.GetDepositResponse\022l\n\021Reques"
-    "tWithdrawal\022*.gridx.billing.v1.RequestWi"
-    "thdrawalRequest\032+.gridx.billing.v1.Reque"
-    "stWithdrawalResponse\022i\n\020CancelWithdrawal"
-    "\022).gridx.billing.v1.CancelWithdrawalRequ"
-    "est\032*.gridx.billing.v1.CancelWithdrawalR"
-    "esponse\022f\n\017ListWithdrawals\022(.gridx.billi"
-    "ng.v1.ListWithdrawalsRequest\032).gridx.bil"
-    "ling.v1.ListWithdrawalsResponseBNZLgithu"
-    "b.com/p2p-energy-trading-platform/go-sdk"
-    "/gen/gridx/billing/v1;billingv1b\006proto3"
+    "\001(\010R\tprocessed\0227\n\006status\030\003 \001(\0162\037.gridx.b"
+    "illing.v1.DepositStatusR\006status\022\035\n\ndepos"
+    "it_id\030\004 \001(\tR\tdepositIdJ\004\010\002\020\003R\013desposit_i"
+    "d\"2\n\021GetDepositRequest\022\035\n\ndeposit_id\030\001 \001"
+    "(\tR\tdepositId\"O\n\022GetDepositResponse\0229\n\007d"
+    "eposit\030\001 \001(\0132\037.gridx.billing.v1.DepositI"
+    "ntentR\007deposit\"\230\002\n\nWithdrawal\022#\n\rwithdra"
+    "wal_id\030\001 \001(\tR\014withdrawalId\022\033\n\twallet_id\030"
+    "\002 \001(\tR\010walletId\022\026\n\006amount\030\003 \001(\003R\006amount\022"
+    ":\n\006status\030\004 \001(\0162\".gridx.billing.v1.Withd"
+    "rawalStatusR\006status\0229\n\ncreated_at\030\005 \001(\0132"
+    "\032.google.protobuf.TimestampR\tcreatedAt\0229"
+    "\n\nupdated_at\030\006 \001(\0132\032.google.protobuf.Tim"
+    "estampR\tupdatedAt\"\206\001\n\030RequestWithdrawalR"
+    "equest\022\'\n\017idempotency_key\030\001 \001(\tR\016idempot"
+    "encyKey\022\026\n\006amount\030\002 \001(\003R\006amount\022)\n\020desti"
+    "nation_json\030\003 \001(\014R\017destinationJson\"Y\n\031Re"
+    "questWithdrawalResponse\022<\n\nwithdrawal\030\001 "
+    "\001(\0132\034.gridx.billing.v1.WithdrawalR\nwithd"
+    "rawal\">\n\027CancelWithdrawalRequest\022#\n\rwith"
+    "drawal_id\030\001 \001(\tR\014withdrawalId\"X\n\030CancelW"
+    "ithdrawalResponse\022<\n\nwithdrawal\030\001 \001(\0132\034."
+    "gridx.billing.v1.WithdrawalR\nwithdrawal\""
+    "T\n\026ListWithdrawalsRequest\022\033\n\tpage_size\030\001"
+    " \001(\005R\010pageSize\022\035\n\npage_token\030\002 \001(\tR\tpage"
+    "Token\"\201\001\n\027ListWithdrawalsResponse\022>\n\013wit"
+    "hdrawals\030\001 \003(\0132\034.gridx.billing.v1.Withdr"
+    "awalR\013withdrawals\022&\n\017next_page_token\030\002 \001"
+    "(\tR\rnextPageToken\"U\n\027ListTransactionsReq"
+    "uest\022\033\n\tpage_size\030\001 \001(\005R\010pageSize\022\035\n\npag"
+    "e_token\030\002 \001(\tR\tpageToken\"\327\001\n\017Transaction"
+    "Item\022\031\n\010entry_id\030\001 \001(\003R\007entryId\022\035\n\njourn"
+    "al_id\030\002 \001(\tR\tjournalId\022\022\n\004type\030\003 \001(\tR\004ty"
+    "pe\022\026\n\006amount\030\004 \001(\003R\006amount\022#\n\rbalance_af"
+    "ter\030\005 \001(\003R\014balanceAfter\0229\n\ncreated_at\030\006 "
+    "\001(\0132\032.google.protobuf.TimestampR\tcreated"
+    "At\"\211\001\n\030ListTransactionsResponse\022E\n\014trans"
+    "actions\030\001 \003(\0132!.gridx.billing.v1.Transac"
+    "tionItemR\014transactions\022&\n\017next_page_toke"
+    "n\030\002 \001(\tR\rnextPageToken*{\n\014WalletStatus\022\035"
+    "\n\031WALLET_STATUS_UNSPECIFIED\020\000\022\030\n\024WALLET_"
+    "STATUS_ACTIVE\020\001\022\030\n\024WALLET_STATUS_FROZEN\020"
+    "\002\022\030\n\024WALLET_STATUS_CLOSED\020\003*\332\001\n\rDepositS"
+    "tatus\022\036\n\032DEPOSIT_STATUS_UNSPECIFIED\020\000\022\032\n"
+    "\026DEPOSIT_STATUS_PENDING\020\001\022\034\n\030DEPOSIT_STA"
+    "TUS_COMPLETED\020\002\022\031\n\025DEPOSIT_STATUS_FAILED"
+    "\020\003\022\032\n\026DEPOSIT_STATUS_EXPIRED\020\004\022\033\n\027DEPOSI"
+    "T_STATUS_REFUNDED\020\005\022\033\n\027DEPOSIT_STATUS_DI"
+    "SPUTED\020\006*\357\001\n\020WithdrawalStatus\022!\n\035WITHDRA"
+    "WAL_STATUS_UNSPECIFIED\020\000\022\035\n\031WITHDRAWAL_S"
+    "TATUS_PENDING\020\001\022\036\n\032WITHDRAWAL_STATUS_APP"
+    "ROVED\020\002\022\032\n\026WITHDRAWAL_STATUS_PAID\020\003\022\036\n\032W"
+    "ITHDRAWAL_STATUS_REJECTED\020\004\022\037\n\033WITHDRAWA"
+    "L_STATUS_CANCELLED\020\005\022\034\n\030WITHDRAWAL_STATU"
+    "S_FAILED\020\0062\303\006\n\rWalletService\022T\n\tGetWalle"
+    "t\022\".gridx.billing.v1.GetWalletRequest\032#."
+    "gridx.billing.v1.GetWalletResponse\022i\n\020Li"
+    "stTransactions\022).gridx.billing.v1.ListTr"
+    "ansactionsRequest\032*.gridx.billing.v1.Lis"
+    "tTransactionsResponse\022r\n\023CreateDepositIn"
+    "tent\022,.gridx.billing.v1.CreateDepositInt"
+    "entRequest\032-.gridx.billing.v1.CreateDepo"
+    "sitIntentResponse\022c\n\016ConfirmDeposit\022\'.gr"
+    "idx.billing.v1.ConfirmDepositRequest\032(.g"
+    "ridx.billing.v1.ConfirmDepositResponse\022W"
+    "\n\nGetDeposit\022#.gridx.billing.v1.GetDepos"
+    "itRequest\032$.gridx.billing.v1.GetDepositR"
+    "esponse\022l\n\021RequestWithdrawal\022*.gridx.bil"
+    "ling.v1.RequestWithdrawalRequest\032+.gridx"
+    ".billing.v1.RequestWithdrawalResponse\022i\n"
+    "\020CancelWithdrawal\022).gridx.billing.v1.Can"
+    "celWithdrawalRequest\032*.gridx.billing.v1."
+    "CancelWithdrawalResponse\022f\n\017ListWithdraw"
+    "als\022(.gridx.billing.v1.ListWithdrawalsRe"
+    "quest\032).gridx.billing.v1.ListWithdrawals"
+    "ResponseBNZLgithub.com/p2p-energy-tradin"
+    "g-platform/go-sdk/gen/gridx/billing/v1;b"
+    "illingv1b\006proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_gridx_2fbilling_2fv1_2fwallet_2eproto_deps[1] = {
@@ -3802,7 +3803,7 @@ static ::absl::once_flag descriptor_table_gridx_2fbilling_2fv1_2fwallet_2eproto_
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_gridx_2fbilling_2fv1_2fwallet_2eproto = {
     false,
     false,
-    4359,
+    4376,
     descriptor_table_protodef_gridx_2fbilling_2fv1_2fwallet_2eproto,
     "gridx/billing/v1/wallet.proto",
     &descriptor_table_gridx_2fbilling_2fv1_2fwallet_2eproto_once,
@@ -5805,7 +5806,7 @@ PROTOBUF_NDEBUG_INLINE ConfirmDepositResponse::Impl_::Impl_(
     [[maybe_unused]] const ::gridx::billing::v1::ConfirmDepositResponse& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
-        desposit_id_(arena, from.desposit_id_) {}
+        deposit_id_(arena, from.deposit_id_) {}
 
 ConfirmDepositResponse::ConfirmDepositResponse(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
@@ -5835,7 +5836,7 @@ PROTOBUF_NDEBUG_INLINE ConfirmDepositResponse::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
     [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : _cached_size_{0},
-        desposit_id_(arena) {}
+        deposit_id_(arena) {}
 
 inline void ConfirmDepositResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
@@ -5857,7 +5858,7 @@ inline void ConfirmDepositResponse::SharedDtor(MessageLite& self) {
   }
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
-  this_._impl_.desposit_id_.Destroy();
+  this_._impl_.deposit_id_.Destroy();
   this_._impl_.~Impl_();
 }
 
@@ -5896,7 +5897,7 @@ PROTOBUF_NOINLINE void ConfirmDepositResponse::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (CheckHasBit(cached_has_bits, 0x00000001U)) {
-    _impl_.desposit_id_.ClearNonDefaultToEmpty();
+    _impl_.deposit_id_.ClearNonDefaultToEmpty();
   }
   if (BatchCheckHasBit(cached_has_bits, 0x00000006U)) {
     ::memset(&_impl_.processed_, 0, static_cast<::size_t>(
@@ -5935,22 +5936,22 @@ PROTOBUF_NOINLINE void ConfirmDepositResponse::Clear() {
     }
   }
 
-  // string desposit_id = 2 [json_name = "despositId"];
-  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
-    if (!this_._internal_desposit_id().empty()) {
-      const ::std::string& _s = this_._internal_desposit_id();
-      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.billing.v1.ConfirmDepositResponse.desposit_id");
-      target = stream->WriteStringMaybeAliased(2, _s, target);
-    }
-  }
-
   // .gridx.billing.v1.DepositStatus status = 3 [json_name = "status"];
   if (CheckHasBit(cached_has_bits, 0x00000004U)) {
     if (this_._internal_status() != 0) {
       target = stream->EnsureSpace(target);
       target = ::_pbi::WireFormatLite::WriteEnumToArray(
           3, this_._internal_status(), target);
+    }
+  }
+
+  // string deposit_id = 4 [json_name = "depositId"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_deposit_id().empty()) {
+      const ::std::string& _s = this_._internal_deposit_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "gridx.billing.v1.ConfirmDepositResponse.deposit_id");
+      target = stream->WriteStringMaybeAliased(4, _s, target);
     }
   }
 
@@ -5980,11 +5981,11 @@ PROTOBUF_NOINLINE void ConfirmDepositResponse::Clear() {
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
   if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
-    // string desposit_id = 2 [json_name = "despositId"];
+    // string deposit_id = 4 [json_name = "depositId"];
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
-      if (!this_._internal_desposit_id().empty()) {
+      if (!this_._internal_deposit_id().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                        this_._internal_desposit_id());
+                                        this_._internal_deposit_id());
       }
     }
     // bool processed = 1 [json_name = "processed"];
@@ -6020,11 +6021,11 @@ void ConfirmDepositResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
   cached_has_bits = from._impl_._has_bits_[0];
   if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
-      if (!from._internal_desposit_id().empty()) {
-        _this->_internal_set_desposit_id(from._internal_desposit_id());
+      if (!from._internal_deposit_id().empty()) {
+        _this->_internal_set_deposit_id(from._internal_deposit_id());
       } else {
-        if (_this->_impl_.desposit_id_.IsDefault()) {
-          _this->_internal_set_desposit_id("");
+        if (_this->_impl_.deposit_id_.IsDefault()) {
+          _this->_internal_set_deposit_id("");
         }
       }
     }
@@ -6058,7 +6059,7 @@ void ConfirmDepositResponse::InternalSwap(ConfirmDepositResponse* PROTOBUF_RESTR
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.desposit_id_, &other->_impl_.desposit_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.deposit_id_, &other->_impl_.deposit_id_, arena);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(ConfirmDepositResponse, _impl_.status_)
       + sizeof(ConfirmDepositResponse::_impl_.status_)

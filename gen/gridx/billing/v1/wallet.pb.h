@@ -1812,23 +1812,23 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ConfirmDepositResponse final : publ
 
   // accessors -------------------------------------------------------
   enum : int {
-    kDespositIdFieldNumber = 2,
+    kDepositIdFieldNumber = 4,
     kProcessedFieldNumber = 1,
     kStatusFieldNumber = 3,
   };
-  // string desposit_id = 2 [json_name = "despositId"];
-  void clear_desposit_id() ;
-  [[nodiscard]] const ::std::string& desposit_id() const;
+  // string deposit_id = 4 [json_name = "depositId"];
+  void clear_deposit_id() ;
+  [[nodiscard]] const ::std::string& deposit_id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_desposit_id(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_desposit_id();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_desposit_id();
-  void set_allocated_desposit_id(::std::string* PROTOBUF_NULLABLE value);
+  void set_deposit_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_deposit_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_deposit_id();
+  void set_allocated_deposit_id(::std::string* PROTOBUF_NULLABLE value);
 
   private:
-  const ::std::string& _internal_desposit_id() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_desposit_id(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_desposit_id();
+  const ::std::string& _internal_deposit_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_deposit_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_deposit_id();
 
   public:
   // bool processed = 1 [json_name = "processed"];
@@ -1856,7 +1856,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ConfirmDepositResponse final : publ
   class _Internal;
   using ParseTableT_ =
       ::google::protobuf::internal::TcParseTable<2, 3,
-                          0, 59,
+                          0, 58,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
       const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
@@ -1884,7 +1884,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ConfirmDepositResponse final : publ
         const ConfirmDepositResponse& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
-    ::google::protobuf::internal::ArenaStringPtr desposit_id_;
+    ::google::protobuf::internal::ArenaStringPtr deposit_id_;
     bool processed_;
     int status_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -6370,70 +6370,6 @@ inline void ConfirmDepositResponse::_internal_set_processed(bool value) {
   _impl_.processed_ = value;
 }
 
-// string desposit_id = 2 [json_name = "despositId"];
-inline void ConfirmDepositResponse::clear_desposit_id() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.desposit_id_.ClearToEmpty();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
-}
-inline const ::std::string& ConfirmDepositResponse::desposit_id() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:gridx.billing.v1.ConfirmDepositResponse.desposit_id)
-  return _internal_desposit_id();
-}
-template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void ConfirmDepositResponse::set_desposit_id(Arg_&& arg, Args_... args) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
-  _impl_.desposit_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:gridx.billing.v1.ConfirmDepositResponse.desposit_id)
-}
-inline ::std::string* PROTOBUF_NONNULL ConfirmDepositResponse::mutable_desposit_id()
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
-  ::std::string* _s = _internal_mutable_desposit_id();
-  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.ConfirmDepositResponse.desposit_id)
-  return _s;
-}
-inline const ::std::string& ConfirmDepositResponse::_internal_desposit_id() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.desposit_id_.Get();
-}
-inline void ConfirmDepositResponse::_internal_set_desposit_id(const ::std::string& value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.desposit_id_.Set(value, GetArena());
-}
-inline ::std::string* PROTOBUF_NONNULL ConfirmDepositResponse::_internal_mutable_desposit_id() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  return _impl_.desposit_id_.Mutable( GetArena());
-}
-inline ::std::string* PROTOBUF_NULLABLE ConfirmDepositResponse::release_desposit_id() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:gridx.billing.v1.ConfirmDepositResponse.desposit_id)
-  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
-    return nullptr;
-  }
-  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
-  auto* released = _impl_.desposit_id_.Release();
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
-    _impl_.desposit_id_.Set("", GetArena());
-  }
-  return released;
-}
-inline void ConfirmDepositResponse::set_allocated_desposit_id(::std::string* PROTOBUF_NULLABLE value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (value != nullptr) {
-    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
-  } else {
-    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
-  }
-  _impl_.desposit_id_.SetAllocated(value, GetArena());
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.desposit_id_.IsDefault()) {
-    _impl_.desposit_id_.Set("", GetArena());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.ConfirmDepositResponse.desposit_id)
-}
-
 // .gridx.billing.v1.DepositStatus status = 3 [json_name = "status"];
 inline void ConfirmDepositResponse::clear_status() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
@@ -6456,6 +6392,70 @@ inline ::gridx::billing::v1::DepositStatus ConfirmDepositResponse::_internal_sta
 inline void ConfirmDepositResponse::_internal_set_status(::gridx::billing::v1::DepositStatus value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.status_ = value;
+}
+
+// string deposit_id = 4 [json_name = "depositId"];
+inline void ConfirmDepositResponse::clear_deposit_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.deposit_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& ConfirmDepositResponse::deposit_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.ConfirmDepositResponse.deposit_id)
+  return _internal_deposit_id();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void ConfirmDepositResponse::set_deposit_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.deposit_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.ConfirmDepositResponse.deposit_id)
+}
+inline ::std::string* PROTOBUF_NONNULL ConfirmDepositResponse::mutable_deposit_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_deposit_id();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.ConfirmDepositResponse.deposit_id)
+  return _s;
+}
+inline const ::std::string& ConfirmDepositResponse::_internal_deposit_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.deposit_id_.Get();
+}
+inline void ConfirmDepositResponse::_internal_set_deposit_id(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.deposit_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL ConfirmDepositResponse::_internal_mutable_deposit_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.deposit_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE ConfirmDepositResponse::release_deposit_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.ConfirmDepositResponse.deposit_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.deposit_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.deposit_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void ConfirmDepositResponse::set_allocated_deposit_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.deposit_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.deposit_id_.IsDefault()) {
+    _impl_.deposit_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.ConfirmDepositResponse.deposit_id)
 }
 
 // -------------------------------------------------------------------
