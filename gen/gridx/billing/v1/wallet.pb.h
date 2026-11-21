@@ -30,6 +30,10 @@
 #include "google/protobuf/message_lite.h"
 #include "google/protobuf/repeated_field.h"  // IWYU pragma: export
 #include "google/protobuf/extension_set.h"  // IWYU pragma: export
+#include "google/protobuf/map.h"  // IWYU pragma: export
+#include "google/protobuf/map_type_handler.h"  // IWYU pragma: export
+#include "google/protobuf/map_entry.h"
+#include "google/protobuf/map_field.h"
 #include "google/protobuf/generated_enum_reflection.h"
 #include "google/protobuf/unknown_field_set.h"
 #include "google/protobuf/timestamp.pb.h"
@@ -59,8 +63,92 @@ extern const ::google::protobuf::internal::DescriptorTable descriptor_table_grid
 namespace gridx {
 namespace billing {
 namespace v1 {
+enum DepositStatus : int;
+extern const uint32_t DepositStatus_internal_data_[];
 enum WalletStatus : int;
 extern const uint32_t WalletStatus_internal_data_[];
+enum WithdrawalStatus : int;
+extern const uint32_t WithdrawalStatus_internal_data_[];
+class CancelWithdrawalRequest;
+struct CancelWithdrawalRequestGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern CancelWithdrawalRequestGlobalsTypeInternal CancelWithdrawalRequest_globals_;
+extern const ::google::protobuf::internal::ClassDataFull CancelWithdrawalRequest_class_data_;
+#else
+extern const CancelWithdrawalRequestGlobalsTypeInternal CancelWithdrawalRequest_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class CancelWithdrawalResponse;
+struct CancelWithdrawalResponseGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern CancelWithdrawalResponseGlobalsTypeInternal CancelWithdrawalResponse_globals_;
+extern const ::google::protobuf::internal::ClassDataFull CancelWithdrawalResponse_class_data_;
+#else
+extern const CancelWithdrawalResponseGlobalsTypeInternal CancelWithdrawalResponse_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class ConfirmDepositRequest;
+struct ConfirmDepositRequestGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern ConfirmDepositRequestGlobalsTypeInternal ConfirmDepositRequest_globals_;
+extern const ::google::protobuf::internal::ClassDataFull ConfirmDepositRequest_class_data_;
+#else
+extern const ConfirmDepositRequestGlobalsTypeInternal ConfirmDepositRequest_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class ConfirmDepositRequest_HeadersEntry_DoNotUse;
+struct ConfirmDepositRequest_HeadersEntry_DoNotUseGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern ConfirmDepositRequest_HeadersEntry_DoNotUseGlobalsTypeInternal ConfirmDepositRequest_HeadersEntry_DoNotUse_globals_;
+extern const ::google::protobuf::internal::ClassDataFull ConfirmDepositRequest_HeadersEntry_DoNotUse_class_data_;
+#else
+extern const ConfirmDepositRequest_HeadersEntry_DoNotUseGlobalsTypeInternal ConfirmDepositRequest_HeadersEntry_DoNotUse_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class ConfirmDepositResponse;
+struct ConfirmDepositResponseGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern ConfirmDepositResponseGlobalsTypeInternal ConfirmDepositResponse_globals_;
+extern const ::google::protobuf::internal::ClassDataFull ConfirmDepositResponse_class_data_;
+#else
+extern const ConfirmDepositResponseGlobalsTypeInternal ConfirmDepositResponse_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class CreateDepositIntentRequest;
+struct CreateDepositIntentRequestGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern CreateDepositIntentRequestGlobalsTypeInternal CreateDepositIntentRequest_globals_;
+extern const ::google::protobuf::internal::ClassDataFull CreateDepositIntentRequest_class_data_;
+#else
+extern const CreateDepositIntentRequestGlobalsTypeInternal CreateDepositIntentRequest_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class CreateDepositIntentResponse;
+struct CreateDepositIntentResponseGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern CreateDepositIntentResponseGlobalsTypeInternal CreateDepositIntentResponse_globals_;
+extern const ::google::protobuf::internal::ClassDataFull CreateDepositIntentResponse_class_data_;
+#else
+extern const CreateDepositIntentResponseGlobalsTypeInternal CreateDepositIntentResponse_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class DepositIntent;
+struct DepositIntentGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern DepositIntentGlobalsTypeInternal DepositIntent_globals_;
+extern const ::google::protobuf::internal::ClassDataFull DepositIntent_class_data_;
+#else
+extern const DepositIntentGlobalsTypeInternal DepositIntent_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class GetDepositRequest;
+struct GetDepositRequestGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern GetDepositRequestGlobalsTypeInternal GetDepositRequest_globals_;
+extern const ::google::protobuf::internal::ClassDataFull GetDepositRequest_class_data_;
+#else
+extern const GetDepositRequestGlobalsTypeInternal GetDepositRequest_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class GetDepositResponse;
+struct GetDepositResponseGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern GetDepositResponseGlobalsTypeInternal GetDepositResponse_globals_;
+extern const ::google::protobuf::internal::ClassDataFull GetDepositResponse_class_data_;
+#else
+extern const GetDepositResponseGlobalsTypeInternal GetDepositResponse_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
 class GetWalletRequest;
 struct GetWalletRequestGlobalsTypeInternal;
 #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -77,6 +165,62 @@ extern const ::google::protobuf::internal::ClassDataFull GetWalletResponse_class
 #else
 extern const GetWalletResponseGlobalsTypeInternal GetWalletResponse_globals_;
 #endif  // PROTOBUF_MESSAGE_GLOBALS
+class ListTransactionsRequest;
+struct ListTransactionsRequestGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern ListTransactionsRequestGlobalsTypeInternal ListTransactionsRequest_globals_;
+extern const ::google::protobuf::internal::ClassDataFull ListTransactionsRequest_class_data_;
+#else
+extern const ListTransactionsRequestGlobalsTypeInternal ListTransactionsRequest_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class ListTransactionsResponse;
+struct ListTransactionsResponseGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern ListTransactionsResponseGlobalsTypeInternal ListTransactionsResponse_globals_;
+extern const ::google::protobuf::internal::ClassDataFull ListTransactionsResponse_class_data_;
+#else
+extern const ListTransactionsResponseGlobalsTypeInternal ListTransactionsResponse_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class ListWithdrawalsRequest;
+struct ListWithdrawalsRequestGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern ListWithdrawalsRequestGlobalsTypeInternal ListWithdrawalsRequest_globals_;
+extern const ::google::protobuf::internal::ClassDataFull ListWithdrawalsRequest_class_data_;
+#else
+extern const ListWithdrawalsRequestGlobalsTypeInternal ListWithdrawalsRequest_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class ListWithdrawalsResponse;
+struct ListWithdrawalsResponseGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern ListWithdrawalsResponseGlobalsTypeInternal ListWithdrawalsResponse_globals_;
+extern const ::google::protobuf::internal::ClassDataFull ListWithdrawalsResponse_class_data_;
+#else
+extern const ListWithdrawalsResponseGlobalsTypeInternal ListWithdrawalsResponse_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class RequestWithdrawalRequest;
+struct RequestWithdrawalRequestGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern RequestWithdrawalRequestGlobalsTypeInternal RequestWithdrawalRequest_globals_;
+extern const ::google::protobuf::internal::ClassDataFull RequestWithdrawalRequest_class_data_;
+#else
+extern const RequestWithdrawalRequestGlobalsTypeInternal RequestWithdrawalRequest_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class RequestWithdrawalResponse;
+struct RequestWithdrawalResponseGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern RequestWithdrawalResponseGlobalsTypeInternal RequestWithdrawalResponse_globals_;
+extern const ::google::protobuf::internal::ClassDataFull RequestWithdrawalResponse_class_data_;
+#else
+extern const RequestWithdrawalResponseGlobalsTypeInternal RequestWithdrawalResponse_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class TransactionItem;
+struct TransactionItemGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern TransactionItemGlobalsTypeInternal TransactionItem_globals_;
+extern const ::google::protobuf::internal::ClassDataFull TransactionItem_class_data_;
+#else
+extern const TransactionItemGlobalsTypeInternal TransactionItem_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
 class Wallet;
 struct WalletGlobalsTypeInternal;
 #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -85,14 +229,28 @@ extern const ::google::protobuf::internal::ClassDataFull Wallet_class_data_;
 #else
 extern const WalletGlobalsTypeInternal Wallet_globals_;
 #endif  // PROTOBUF_MESSAGE_GLOBALS
+class Withdrawal;
+struct WithdrawalGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern WithdrawalGlobalsTypeInternal Withdrawal_globals_;
+extern const ::google::protobuf::internal::ClassDataFull Withdrawal_class_data_;
+#else
+extern const WithdrawalGlobalsTypeInternal Withdrawal_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
 }  // namespace v1
 }  // namespace billing
 }  // namespace gridx
 namespace google {
 namespace protobuf {
 template <>
+internal::EnumTraitsT<::gridx::billing::v1::DepositStatus_internal_data_>
+    internal::EnumTraitsImpl::value<::gridx::billing::v1::DepositStatus>;
+template <>
 internal::EnumTraitsT<::gridx::billing::v1::WalletStatus_internal_data_>
     internal::EnumTraitsImpl::value<::gridx::billing::v1::WalletStatus>;
+template <>
+internal::EnumTraitsT<::gridx::billing::v1::WithdrawalStatus_internal_data_>
+    internal::EnumTraitsImpl::value<::gridx::billing::v1::WithdrawalStatus>;
 }  // namespace protobuf
 }  // namespace google
 
@@ -141,12 +299,773 @@ template <>
   return ::google::protobuf::internal::ParseNamedEnum<WalletStatus>(WalletStatus_descriptor(), name,
                                            value);
 }
+enum DepositStatus : int {
+  DEPOSIT_STATUS_UNSPECIFIED = 0,
+  DEPOSIT_STATUS_PENDING = 1,
+  DEPOSIT_STATUS_COMPLETED = 2,
+  DEPOSIT_STATUS_FAILED = 3,
+  DEPOSIT_STATUS_EXPIRED = 4,
+  DEPOSIT_STATUS_REFUNDED = 5,
+  DEPOSIT_STATUS_DISPUTED = 6,
+  DepositStatus_INT_MIN_SENTINEL_DO_NOT_USE_ =
+      ::std::numeric_limits<::int32_t>::min(),
+  DepositStatus_INT_MAX_SENTINEL_DO_NOT_USE_ =
+      ::std::numeric_limits<::int32_t>::max(),
+};
+
+extern const uint32_t DepositStatus_internal_data_[];
+inline constexpr DepositStatus DepositStatus_MIN =
+    static_cast<DepositStatus>(0);
+inline constexpr DepositStatus DepositStatus_MAX =
+    static_cast<DepositStatus>(6);
+[[nodiscard]] inline bool DepositStatus_IsValid(int value) {
+  return 0 <= value && value <= 6;
+}
+inline constexpr int DepositStatus_ARRAYSIZE = 6 + 1;
+[[nodiscard]] const ::google::protobuf::EnumDescriptor* PROTOBUF_NONNULL
+DepositStatus_descriptor();
+[[nodiscard]] inline auto ProtobufInternalGetEnumDescriptor(DepositStatus) {
+  return DepositStatus_descriptor();
+}
+template <typename T>
+[[nodiscard]] const ::std::string& DepositStatus_Name(T value) {
+  static_assert(::std::is_same<T, DepositStatus>::value ||
+                    ::std::is_integral<T>::value,
+                "Incorrect type passed to DepositStatus_Name().");
+  return DepositStatus_Name(static_cast<DepositStatus>(value));
+}
+template <>
+[[nodiscard]] inline const ::std::string& DepositStatus_Name(DepositStatus value) {
+  return ::google::protobuf::internal::NameOfDenseEnum<DepositStatus_descriptor, 0, 6>(
+      static_cast<int>(value));
+}
+[[nodiscard]] inline bool DepositStatus_Parse(
+    ::absl::string_view name, DepositStatus* PROTOBUF_NONNULL value) {
+  return ::google::protobuf::internal::ParseNamedEnum<DepositStatus>(DepositStatus_descriptor(), name,
+                                           value);
+}
+enum WithdrawalStatus : int {
+  WITHDRAWAL_STATUS_UNSPECIFIED = 0,
+  WITHDRAWAL_STATUS_PENDING = 1,
+  WITHDRAWAL_STATUS_APPROVED = 2,
+  WITHDRAWAL_STATUS_PAID = 3,
+  WITHDRAWAL_STATUS_REJECTED = 4,
+  WITHDRAWAL_STATUS_CANCELLED = 5,
+  WITHDRAWAL_STATUS_FAILED = 6,
+  WithdrawalStatus_INT_MIN_SENTINEL_DO_NOT_USE_ =
+      ::std::numeric_limits<::int32_t>::min(),
+  WithdrawalStatus_INT_MAX_SENTINEL_DO_NOT_USE_ =
+      ::std::numeric_limits<::int32_t>::max(),
+};
+
+extern const uint32_t WithdrawalStatus_internal_data_[];
+inline constexpr WithdrawalStatus WithdrawalStatus_MIN =
+    static_cast<WithdrawalStatus>(0);
+inline constexpr WithdrawalStatus WithdrawalStatus_MAX =
+    static_cast<WithdrawalStatus>(6);
+[[nodiscard]] inline bool WithdrawalStatus_IsValid(int value) {
+  return 0 <= value && value <= 6;
+}
+inline constexpr int WithdrawalStatus_ARRAYSIZE = 6 + 1;
+[[nodiscard]] const ::google::protobuf::EnumDescriptor* PROTOBUF_NONNULL
+WithdrawalStatus_descriptor();
+[[nodiscard]] inline auto ProtobufInternalGetEnumDescriptor(WithdrawalStatus) {
+  return WithdrawalStatus_descriptor();
+}
+template <typename T>
+[[nodiscard]] const ::std::string& WithdrawalStatus_Name(T value) {
+  static_assert(::std::is_same<T, WithdrawalStatus>::value ||
+                    ::std::is_integral<T>::value,
+                "Incorrect type passed to WithdrawalStatus_Name().");
+  return WithdrawalStatus_Name(static_cast<WithdrawalStatus>(value));
+}
+template <>
+[[nodiscard]] inline const ::std::string& WithdrawalStatus_Name(WithdrawalStatus value) {
+  return ::google::protobuf::internal::NameOfDenseEnum<WithdrawalStatus_descriptor, 0, 6>(
+      static_cast<int>(value));
+}
+[[nodiscard]] inline bool WithdrawalStatus_Parse(
+    ::absl::string_view name, WithdrawalStatus* PROTOBUF_NONNULL value) {
+  return ::google::protobuf::internal::ParseNamedEnum<WithdrawalStatus>(WithdrawalStatus_descriptor(), name,
+                                           value);
+}
 using ::google::protobuf::internal::generated_enum::AbslParseFlag;
 using ::google::protobuf::internal::generated_enum::AbslUnparseFlag;
 
 // ===================================================================
 
 
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED RequestWithdrawalRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.RequestWithdrawalRequest) */ {
+ public:
+  inline RequestWithdrawalRequest() : RequestWithdrawalRequest(nullptr) {}
+  ~RequestWithdrawalRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(RequestWithdrawalRequest* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(RequestWithdrawalRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr RequestWithdrawalRequest(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline RequestWithdrawalRequest(const RequestWithdrawalRequest& from) : RequestWithdrawalRequest(nullptr, from) {}
+  inline RequestWithdrawalRequest(RequestWithdrawalRequest&& from) noexcept : RequestWithdrawalRequest(nullptr, ::std::move(from)) {}
+  inline RequestWithdrawalRequest& operator=(const RequestWithdrawalRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RequestWithdrawalRequest& operator=(RequestWithdrawalRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const RequestWithdrawalRequest& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<RequestWithdrawalRequest>(&RequestWithdrawalRequest_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 12;
+  friend void swap(RequestWithdrawalRequest& a, RequestWithdrawalRequest& b) { a.Swap(&b); }
+  inline void Swap(RequestWithdrawalRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(RequestWithdrawalRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] RequestWithdrawalRequest* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<RequestWithdrawalRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const RequestWithdrawalRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const RequestWithdrawalRequest& from) { RequestWithdrawalRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(RequestWithdrawalRequest* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.RequestWithdrawalRequest"; }
+
+  explicit RequestWithdrawalRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  RequestWithdrawalRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const RequestWithdrawalRequest& from);
+  RequestWithdrawalRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, RequestWithdrawalRequest&& from) noexcept
+      : RequestWithdrawalRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kIdempotencyKeyFieldNumber = 1,
+    kDestinationJsonFieldNumber = 3,
+    kAmountFieldNumber = 2,
+  };
+  // string idempotency_key = 1 [json_name = "idempotencyKey"];
+  void clear_idempotency_key() ;
+  [[nodiscard]] const ::std::string& idempotency_key() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_idempotency_key(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_idempotency_key();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_idempotency_key();
+  void set_allocated_idempotency_key(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_idempotency_key() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_idempotency_key(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_idempotency_key();
+
+  public:
+  // bytes destination_json = 3 [json_name = "destinationJson"];
+  void clear_destination_json() ;
+  [[nodiscard]] const ::std::string& destination_json() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_destination_json(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_destination_json();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_destination_json();
+  void set_allocated_destination_json(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_destination_json() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_destination_json(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_destination_json();
+
+  public:
+  // int64 amount = 2 [json_name = "amount"];
+  void clear_amount() ;
+  [[nodiscard]] ::int64_t amount() const;
+  void set_amount(::int64_t value);
+
+  private:
+  ::int64_t _internal_amount() const;
+  void _internal_set_amount(::int64_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.RequestWithdrawalRequest)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<2, 3,
+                          0, 65,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const RequestWithdrawalRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr idempotency_key_;
+    ::google::protobuf::internal::ArenaStringPtr destination_json_;
+    ::int64_t amount_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ListWithdrawalsRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.ListWithdrawalsRequest) */ {
+ public:
+  inline ListWithdrawalsRequest() : ListWithdrawalsRequest(nullptr) {}
+  ~ListWithdrawalsRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(ListWithdrawalsRequest* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(ListWithdrawalsRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr ListWithdrawalsRequest(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline ListWithdrawalsRequest(const ListWithdrawalsRequest& from) : ListWithdrawalsRequest(nullptr, from) {}
+  inline ListWithdrawalsRequest(ListWithdrawalsRequest&& from) noexcept : ListWithdrawalsRequest(nullptr, ::std::move(from)) {}
+  inline ListWithdrawalsRequest& operator=(const ListWithdrawalsRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ListWithdrawalsRequest& operator=(ListWithdrawalsRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const ListWithdrawalsRequest& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ListWithdrawalsRequest>(&ListWithdrawalsRequest_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 16;
+  friend void swap(ListWithdrawalsRequest& a, ListWithdrawalsRequest& b) { a.Swap(&b); }
+  inline void Swap(ListWithdrawalsRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ListWithdrawalsRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] ListWithdrawalsRequest* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<ListWithdrawalsRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const ListWithdrawalsRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const ListWithdrawalsRequest& from) { ListWithdrawalsRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(ListWithdrawalsRequest* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.ListWithdrawalsRequest"; }
+
+  explicit ListWithdrawalsRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  ListWithdrawalsRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const ListWithdrawalsRequest& from);
+  ListWithdrawalsRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, ListWithdrawalsRequest&& from) noexcept
+      : ListWithdrawalsRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kPageTokenFieldNumber = 2,
+    kPageSizeFieldNumber = 1,
+  };
+  // string page_token = 2 [json_name = "pageToken"];
+  void clear_page_token() ;
+  [[nodiscard]] const ::std::string& page_token() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_page_token(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_page_token();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_page_token();
+  void set_allocated_page_token(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_page_token() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_page_token(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_page_token();
+
+  public:
+  // int32 page_size = 1 [json_name = "pageSize"];
+  void clear_page_size() ;
+  [[nodiscard]] ::int32_t page_size() const;
+  void set_page_size(::int32_t value);
+
+  private:
+  ::int32_t _internal_page_size() const;
+  void _internal_set_page_size(::int32_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.ListWithdrawalsRequest)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<1, 2,
+                          0, 58,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const ListWithdrawalsRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr page_token_;
+    ::int32_t page_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ListTransactionsRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.ListTransactionsRequest) */ {
+ public:
+  inline ListTransactionsRequest() : ListTransactionsRequest(nullptr) {}
+  ~ListTransactionsRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(ListTransactionsRequest* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(ListTransactionsRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr ListTransactionsRequest(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline ListTransactionsRequest(const ListTransactionsRequest& from) : ListTransactionsRequest(nullptr, from) {}
+  inline ListTransactionsRequest(ListTransactionsRequest&& from) noexcept : ListTransactionsRequest(nullptr, ::std::move(from)) {}
+  inline ListTransactionsRequest& operator=(const ListTransactionsRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ListTransactionsRequest& operator=(ListTransactionsRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const ListTransactionsRequest& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ListTransactionsRequest>(&ListTransactionsRequest_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 18;
+  friend void swap(ListTransactionsRequest& a, ListTransactionsRequest& b) { a.Swap(&b); }
+  inline void Swap(ListTransactionsRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ListTransactionsRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] ListTransactionsRequest* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<ListTransactionsRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const ListTransactionsRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const ListTransactionsRequest& from) { ListTransactionsRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(ListTransactionsRequest* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.ListTransactionsRequest"; }
+
+  explicit ListTransactionsRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  ListTransactionsRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const ListTransactionsRequest& from);
+  ListTransactionsRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, ListTransactionsRequest&& from) noexcept
+      : ListTransactionsRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kPageTokenFieldNumber = 2,
+    kPageSizeFieldNumber = 1,
+  };
+  // string page_token = 2 [json_name = "pageToken"];
+  void clear_page_token() ;
+  [[nodiscard]] const ::std::string& page_token() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_page_token(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_page_token();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_page_token();
+  void set_allocated_page_token(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_page_token() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_page_token(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_page_token();
+
+  public:
+  // int32 page_size = 1 [json_name = "pageSize"];
+  void clear_page_size() ;
+  [[nodiscard]] ::int32_t page_size() const;
+  void set_page_size(::int32_t value);
+
+  private:
+  ::int32_t _internal_page_size() const;
+  void _internal_set_page_size(::int32_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.ListTransactionsRequest)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<1, 2,
+                          0, 59,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const ListTransactionsRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr page_token_;
+    ::int32_t page_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
 // -------------------------------------------------------------------
 
 class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetWalletRequest final : public ::google::protobuf::internal::ZeroFieldsBase
@@ -283,6 +1202,1232 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetWalletRequest final : public ::g
   friend class ::google::protobuf::Arena::InternalHelper;
   using InternalArenaConstructable_ = void;
   using DestructorSkippable_ = void;
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetDepositRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.GetDepositRequest) */ {
+ public:
+  inline GetDepositRequest() : GetDepositRequest(nullptr) {}
+  ~GetDepositRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(GetDepositRequest* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(GetDepositRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr GetDepositRequest(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline GetDepositRequest(const GetDepositRequest& from) : GetDepositRequest(nullptr, from) {}
+  inline GetDepositRequest(GetDepositRequest&& from) noexcept : GetDepositRequest(nullptr, ::std::move(from)) {}
+  inline GetDepositRequest& operator=(const GetDepositRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetDepositRequest& operator=(GetDepositRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const GetDepositRequest& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<GetDepositRequest>(&GetDepositRequest_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 9;
+  friend void swap(GetDepositRequest& a, GetDepositRequest& b) { a.Swap(&b); }
+  inline void Swap(GetDepositRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetDepositRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] GetDepositRequest* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<GetDepositRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const GetDepositRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const GetDepositRequest& from) { GetDepositRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(GetDepositRequest* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.GetDepositRequest"; }
+
+  explicit GetDepositRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  GetDepositRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const GetDepositRequest& from);
+  GetDepositRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, GetDepositRequest&& from) noexcept
+      : GetDepositRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kDepositIdFieldNumber = 1,
+  };
+  // string deposit_id = 1 [json_name = "depositId"];
+  void clear_deposit_id() ;
+  [[nodiscard]] const ::std::string& deposit_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_deposit_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_deposit_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_deposit_id();
+  void set_allocated_deposit_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_deposit_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_deposit_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_deposit_id();
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.GetDepositRequest)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<0, 1,
+                          0, 53,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const GetDepositRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr deposit_id_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CreateDepositIntentRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.CreateDepositIntentRequest) */ {
+ public:
+  inline CreateDepositIntentRequest() : CreateDepositIntentRequest(nullptr) {}
+  ~CreateDepositIntentRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(CreateDepositIntentRequest* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(CreateDepositIntentRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr CreateDepositIntentRequest(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline CreateDepositIntentRequest(const CreateDepositIntentRequest& from) : CreateDepositIntentRequest(nullptr, from) {}
+  inline CreateDepositIntentRequest(CreateDepositIntentRequest&& from) noexcept : CreateDepositIntentRequest(nullptr, ::std::move(from)) {}
+  inline CreateDepositIntentRequest& operator=(const CreateDepositIntentRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CreateDepositIntentRequest& operator=(CreateDepositIntentRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const CreateDepositIntentRequest& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CreateDepositIntentRequest>(&CreateDepositIntentRequest_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 4;
+  friend void swap(CreateDepositIntentRequest& a, CreateDepositIntentRequest& b) { a.Swap(&b); }
+  inline void Swap(CreateDepositIntentRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CreateDepositIntentRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] CreateDepositIntentRequest* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<CreateDepositIntentRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const CreateDepositIntentRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const CreateDepositIntentRequest& from) { CreateDepositIntentRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(CreateDepositIntentRequest* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.CreateDepositIntentRequest"; }
+
+  explicit CreateDepositIntentRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  CreateDepositIntentRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const CreateDepositIntentRequest& from);
+  CreateDepositIntentRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, CreateDepositIntentRequest&& from) noexcept
+      : CreateDepositIntentRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kIdempotencyKeyFieldNumber = 1,
+    kSuccessUrlFieldNumber = 3,
+    kCancelUrlFieldNumber = 4,
+    kAmountFieldNumber = 2,
+  };
+  // string idempotency_key = 1 [json_name = "idempotencyKey"];
+  void clear_idempotency_key() ;
+  [[nodiscard]] const ::std::string& idempotency_key() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_idempotency_key(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_idempotency_key();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_idempotency_key();
+  void set_allocated_idempotency_key(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_idempotency_key() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_idempotency_key(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_idempotency_key();
+
+  public:
+  // string success_url = 3 [json_name = "successUrl"];
+  void clear_success_url() ;
+  [[nodiscard]] const ::std::string& success_url() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_success_url(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_success_url();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_success_url();
+  void set_allocated_success_url(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_success_url() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_success_url(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_success_url();
+
+  public:
+  // string cancel_url = 4 [json_name = "cancelUrl"];
+  void clear_cancel_url() ;
+  [[nodiscard]] const ::std::string& cancel_url() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_cancel_url(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_cancel_url();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_cancel_url();
+  void set_allocated_cancel_url(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_cancel_url() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_cancel_url(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_cancel_url();
+
+  public:
+  // int64 amount = 2 [json_name = "amount"];
+  void clear_amount() ;
+  [[nodiscard]] ::int64_t amount() const;
+  void set_amount(::int64_t value);
+
+  private:
+  ::int64_t _internal_amount() const;
+  void _internal_set_amount(::int64_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.CreateDepositIntentRequest)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<2, 4,
+                          0, 88,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const CreateDepositIntentRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr idempotency_key_;
+    ::google::protobuf::internal::ArenaStringPtr success_url_;
+    ::google::protobuf::internal::ArenaStringPtr cancel_url_;
+    ::int64_t amount_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ConfirmDepositResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.ConfirmDepositResponse) */ {
+ public:
+  inline ConfirmDepositResponse() : ConfirmDepositResponse(nullptr) {}
+  ~ConfirmDepositResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(ConfirmDepositResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(ConfirmDepositResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr ConfirmDepositResponse(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline ConfirmDepositResponse(const ConfirmDepositResponse& from) : ConfirmDepositResponse(nullptr, from) {}
+  inline ConfirmDepositResponse(ConfirmDepositResponse&& from) noexcept : ConfirmDepositResponse(nullptr, ::std::move(from)) {}
+  inline ConfirmDepositResponse& operator=(const ConfirmDepositResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ConfirmDepositResponse& operator=(ConfirmDepositResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const ConfirmDepositResponse& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ConfirmDepositResponse>(&ConfirmDepositResponse_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 8;
+  friend void swap(ConfirmDepositResponse& a, ConfirmDepositResponse& b) { a.Swap(&b); }
+  inline void Swap(ConfirmDepositResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ConfirmDepositResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] ConfirmDepositResponse* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<ConfirmDepositResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const ConfirmDepositResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const ConfirmDepositResponse& from) { ConfirmDepositResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(ConfirmDepositResponse* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.ConfirmDepositResponse"; }
+
+  explicit ConfirmDepositResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  ConfirmDepositResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const ConfirmDepositResponse& from);
+  ConfirmDepositResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, ConfirmDepositResponse&& from) noexcept
+      : ConfirmDepositResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kDespositIdFieldNumber = 2,
+    kProcessedFieldNumber = 1,
+    kStatusFieldNumber = 3,
+  };
+  // string desposit_id = 2 [json_name = "despositId"];
+  void clear_desposit_id() ;
+  [[nodiscard]] const ::std::string& desposit_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_desposit_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_desposit_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_desposit_id();
+  void set_allocated_desposit_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_desposit_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_desposit_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_desposit_id();
+
+  public:
+  // bool processed = 1 [json_name = "processed"];
+  void clear_processed() ;
+  [[nodiscard]] bool processed() const;
+  void set_processed(bool value);
+
+  private:
+  bool _internal_processed() const;
+  void _internal_set_processed(bool value);
+
+  public:
+  // .gridx.billing.v1.DepositStatus status = 3 [json_name = "status"];
+  void clear_status() ;
+  [[nodiscard]] ::gridx::billing::v1::DepositStatus status() const;
+  void set_status(::gridx::billing::v1::DepositStatus value);
+
+  private:
+  ::gridx::billing::v1::DepositStatus _internal_status() const;
+  void _internal_set_status(::gridx::billing::v1::DepositStatus value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.ConfirmDepositResponse)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<2, 3,
+                          0, 59,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const ConfirmDepositResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr desposit_id_;
+    bool processed_;
+    int status_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ConfirmDepositRequest_HeadersEntry_DoNotUse final
+    : public ::google::protobuf::internal::MapEntry<::std::string, ::std::string,
+                             ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+                             ::google::protobuf::internal::WireFormatLite::TYPE_STRING> {
+ public:
+  using SuperType =
+      ::google::protobuf::internal::MapEntry<::std::string, ::std::string,
+                      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+                      ::google::protobuf::internal::WireFormatLite::TYPE_STRING>;
+  ConfirmDepositRequest_HeadersEntry_DoNotUse();
+  template <typename = void>
+  explicit constexpr ConfirmDepositRequest_HeadersEntry_DoNotUse(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+  explicit ConfirmDepositRequest_HeadersEntry_DoNotUse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr const void* PROTOBUF_NONNULL internal_message_globals() {
+    return &ConfirmDepositRequest_HeadersEntry_DoNotUse_globals_;
+  }
+
+
+  static constexpr auto InternalGenerateClassData_(
+      const ::google::protobuf::MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+ private:
+  friend class ::google::protobuf::MessageLite;
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+  friend ::google::protobuf::internal::PrivateAccess;
+  friend ConfirmDepositRequest_HeadersEntry_DoNotUseGlobalsTypeInternal;
+
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<1, 2,
+                          0, 68,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CancelWithdrawalRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.CancelWithdrawalRequest) */ {
+ public:
+  inline CancelWithdrawalRequest() : CancelWithdrawalRequest(nullptr) {}
+  ~CancelWithdrawalRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(CancelWithdrawalRequest* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(CancelWithdrawalRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr CancelWithdrawalRequest(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline CancelWithdrawalRequest(const CancelWithdrawalRequest& from) : CancelWithdrawalRequest(nullptr, from) {}
+  inline CancelWithdrawalRequest(CancelWithdrawalRequest&& from) noexcept : CancelWithdrawalRequest(nullptr, ::std::move(from)) {}
+  inline CancelWithdrawalRequest& operator=(const CancelWithdrawalRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CancelWithdrawalRequest& operator=(CancelWithdrawalRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const CancelWithdrawalRequest& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CancelWithdrawalRequest>(&CancelWithdrawalRequest_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 14;
+  friend void swap(CancelWithdrawalRequest& a, CancelWithdrawalRequest& b) { a.Swap(&b); }
+  inline void Swap(CancelWithdrawalRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CancelWithdrawalRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] CancelWithdrawalRequest* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<CancelWithdrawalRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const CancelWithdrawalRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const CancelWithdrawalRequest& from) { CancelWithdrawalRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(CancelWithdrawalRequest* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.CancelWithdrawalRequest"; }
+
+  explicit CancelWithdrawalRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  CancelWithdrawalRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const CancelWithdrawalRequest& from);
+  CancelWithdrawalRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, CancelWithdrawalRequest&& from) noexcept
+      : CancelWithdrawalRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kWithdrawalIdFieldNumber = 1,
+  };
+  // string withdrawal_id = 1 [json_name = "withdrawalId"];
+  void clear_withdrawal_id() ;
+  [[nodiscard]] const ::std::string& withdrawal_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_withdrawal_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_withdrawal_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_withdrawal_id();
+  void set_allocated_withdrawal_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_withdrawal_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_withdrawal_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_withdrawal_id();
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.CancelWithdrawalRequest)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<0, 1,
+                          0, 62,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const CancelWithdrawalRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr withdrawal_id_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED Withdrawal final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.Withdrawal) */ {
+ public:
+  inline Withdrawal() : Withdrawal(nullptr) {}
+  ~Withdrawal() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(Withdrawal* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(Withdrawal));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr Withdrawal(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline Withdrawal(const Withdrawal& from) : Withdrawal(nullptr, from) {}
+  inline Withdrawal(Withdrawal&& from) noexcept : Withdrawal(nullptr, ::std::move(from)) {}
+  inline Withdrawal& operator=(const Withdrawal& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Withdrawal& operator=(Withdrawal&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const Withdrawal& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<Withdrawal>(&Withdrawal_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 11;
+  friend void swap(Withdrawal& a, Withdrawal& b) { a.Swap(&b); }
+  inline void Swap(Withdrawal* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Withdrawal* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] Withdrawal* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<Withdrawal>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const Withdrawal& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const Withdrawal& from) { Withdrawal::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(Withdrawal* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.Withdrawal"; }
+
+  explicit Withdrawal(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  Withdrawal(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Withdrawal& from);
+  Withdrawal(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, Withdrawal&& from) noexcept
+      : Withdrawal(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kWithdrawalIdFieldNumber = 1,
+    kWalletIdFieldNumber = 2,
+    kCreatedAtFieldNumber = 5,
+    kUpdatedAtFieldNumber = 6,
+    kAmountFieldNumber = 3,
+    kStatusFieldNumber = 4,
+  };
+  // string withdrawal_id = 1 [json_name = "withdrawalId"];
+  void clear_withdrawal_id() ;
+  [[nodiscard]] const ::std::string& withdrawal_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_withdrawal_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_withdrawal_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_withdrawal_id();
+  void set_allocated_withdrawal_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_withdrawal_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_withdrawal_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_withdrawal_id();
+
+  public:
+  // string wallet_id = 2 [json_name = "walletId"];
+  void clear_wallet_id() ;
+  [[nodiscard]] const ::std::string& wallet_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_wallet_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_wallet_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_wallet_id();
+  void set_allocated_wallet_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_wallet_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_wallet_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_wallet_id();
+
+  public:
+  // .google.protobuf.Timestamp created_at = 5 [json_name = "createdAt"];
+  [[nodiscard]] bool has_created_at()
+      const;
+  void clear_created_at() ;
+  [[nodiscard]] const ::google::protobuf::Timestamp& created_at() const;
+  [[nodiscard]] ::google::protobuf::Timestamp* PROTOBUF_NULLABLE release_created_at();
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL mutable_created_at();
+  void set_allocated_created_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_created_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  ::google::protobuf::Timestamp* PROTOBUF_NULLABLE unsafe_arena_release_created_at();
+
+  private:
+  const ::google::protobuf::Timestamp& _internal_created_at() const;
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_created_at();
+
+  public:
+  // .google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];
+  [[nodiscard]] bool has_updated_at()
+      const;
+  void clear_updated_at() ;
+  [[nodiscard]] const ::google::protobuf::Timestamp& updated_at() const;
+  [[nodiscard]] ::google::protobuf::Timestamp* PROTOBUF_NULLABLE release_updated_at();
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL mutable_updated_at();
+  void set_allocated_updated_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_updated_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  ::google::protobuf::Timestamp* PROTOBUF_NULLABLE unsafe_arena_release_updated_at();
+
+  private:
+  const ::google::protobuf::Timestamp& _internal_updated_at() const;
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_updated_at();
+
+  public:
+  // int64 amount = 3 [json_name = "amount"];
+  void clear_amount() ;
+  [[nodiscard]] ::int64_t amount() const;
+  void set_amount(::int64_t value);
+
+  private:
+  ::int64_t _internal_amount() const;
+  void _internal_set_amount(::int64_t value);
+
+  public:
+  // .gridx.billing.v1.WithdrawalStatus status = 4 [json_name = "status"];
+  void clear_status() ;
+  [[nodiscard]] ::gridx::billing::v1::WithdrawalStatus status() const;
+  void set_status(::gridx::billing::v1::WithdrawalStatus value);
+
+  private:
+  ::gridx::billing::v1::WithdrawalStatus _internal_status() const;
+  void _internal_set_status(::gridx::billing::v1::WithdrawalStatus value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.Withdrawal)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<3, 6,
+                          2, 58,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const Withdrawal& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr withdrawal_id_;
+    ::google::protobuf::internal::ArenaStringPtr wallet_id_;
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE created_at_;
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE updated_at_;
+    ::int64_t amount_;
+    int status_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
   friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
 };
 // -------------------------------------------------------------------
@@ -576,6 +2721,1484 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED Wallet final : public ::google::pro
 };
 // -------------------------------------------------------------------
 
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED TransactionItem final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.TransactionItem) */ {
+ public:
+  inline TransactionItem() : TransactionItem(nullptr) {}
+  ~TransactionItem() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(TransactionItem* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(TransactionItem));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr TransactionItem(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline TransactionItem(const TransactionItem& from) : TransactionItem(nullptr, from) {}
+  inline TransactionItem(TransactionItem&& from) noexcept : TransactionItem(nullptr, ::std::move(from)) {}
+  inline TransactionItem& operator=(const TransactionItem& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline TransactionItem& operator=(TransactionItem&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const TransactionItem& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<TransactionItem>(&TransactionItem_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 19;
+  friend void swap(TransactionItem& a, TransactionItem& b) { a.Swap(&b); }
+  inline void Swap(TransactionItem* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(TransactionItem* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] TransactionItem* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<TransactionItem>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const TransactionItem& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const TransactionItem& from) { TransactionItem::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(TransactionItem* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.TransactionItem"; }
+
+  explicit TransactionItem(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  TransactionItem(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const TransactionItem& from);
+  TransactionItem(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, TransactionItem&& from) noexcept
+      : TransactionItem(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kJournalIdFieldNumber = 2,
+    kTypeFieldNumber = 3,
+    kCreatedAtFieldNumber = 6,
+    kEntryIdFieldNumber = 1,
+    kAmountFieldNumber = 4,
+    kBalanceAfterFieldNumber = 5,
+  };
+  // string journal_id = 2 [json_name = "journalId"];
+  void clear_journal_id() ;
+  [[nodiscard]] const ::std::string& journal_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_journal_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_journal_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_journal_id();
+  void set_allocated_journal_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_journal_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_journal_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_journal_id();
+
+  public:
+  // string type = 3 [json_name = "type"];
+  void clear_type() ;
+  [[nodiscard]] const ::std::string& type() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_type(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_type();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_type();
+  void set_allocated_type(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_type() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_type(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_type();
+
+  public:
+  // .google.protobuf.Timestamp created_at = 6 [json_name = "createdAt"];
+  [[nodiscard]] bool has_created_at()
+      const;
+  void clear_created_at() ;
+  [[nodiscard]] const ::google::protobuf::Timestamp& created_at() const;
+  [[nodiscard]] ::google::protobuf::Timestamp* PROTOBUF_NULLABLE release_created_at();
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL mutable_created_at();
+  void set_allocated_created_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_created_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  ::google::protobuf::Timestamp* PROTOBUF_NULLABLE unsafe_arena_release_created_at();
+
+  private:
+  const ::google::protobuf::Timestamp& _internal_created_at() const;
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_created_at();
+
+  public:
+  // int64 entry_id = 1 [json_name = "entryId"];
+  void clear_entry_id() ;
+  [[nodiscard]] ::int64_t entry_id() const;
+  void set_entry_id(::int64_t value);
+
+  private:
+  ::int64_t _internal_entry_id() const;
+  void _internal_set_entry_id(::int64_t value);
+
+  public:
+  // int64 amount = 4 [json_name = "amount"];
+  void clear_amount() ;
+  [[nodiscard]] ::int64_t amount() const;
+  void set_amount(::int64_t value);
+
+  private:
+  ::int64_t _internal_amount() const;
+  void _internal_set_amount(::int64_t value);
+
+  public:
+  // int64 balance_after = 5 [json_name = "balanceAfter"];
+  void clear_balance_after() ;
+  [[nodiscard]] ::int64_t balance_after() const;
+  void set_balance_after(::int64_t value);
+
+  private:
+  ::int64_t _internal_balance_after() const;
+  void _internal_set_balance_after(::int64_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.TransactionItem)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<3, 6,
+                          1, 55,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const TransactionItem& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr journal_id_;
+    ::google::protobuf::internal::ArenaStringPtr type_;
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE created_at_;
+    ::int64_t entry_id_;
+    ::int64_t amount_;
+    ::int64_t balance_after_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED DepositIntent final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.DepositIntent) */ {
+ public:
+  inline DepositIntent() : DepositIntent(nullptr) {}
+  ~DepositIntent() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(DepositIntent* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(DepositIntent));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr DepositIntent(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline DepositIntent(const DepositIntent& from) : DepositIntent(nullptr, from) {}
+  inline DepositIntent(DepositIntent&& from) noexcept : DepositIntent(nullptr, ::std::move(from)) {}
+  inline DepositIntent& operator=(const DepositIntent& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline DepositIntent& operator=(DepositIntent&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const DepositIntent& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<DepositIntent>(&DepositIntent_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 3;
+  friend void swap(DepositIntent& a, DepositIntent& b) { a.Swap(&b); }
+  inline void Swap(DepositIntent* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(DepositIntent* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] DepositIntent* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<DepositIntent>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const DepositIntent& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const DepositIntent& from) { DepositIntent::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(DepositIntent* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.DepositIntent"; }
+
+  explicit DepositIntent(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  DepositIntent(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const DepositIntent& from);
+  DepositIntent(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, DepositIntent&& from) noexcept
+      : DepositIntent(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kDepositIdFieldNumber = 1,
+    kCheckoutUrlFieldNumber = 3,
+    kChargeCurrencyFieldNumber = 5,
+    kExpiresAtFieldNumber = 7,
+    kCreatedAtFieldNumber = 8,
+    kAmountFieldNumber = 4,
+    kChargeAmountFieldNumber = 6,
+    kStatusFieldNumber = 2,
+  };
+  // string deposit_id = 1 [json_name = "depositId"];
+  void clear_deposit_id() ;
+  [[nodiscard]] const ::std::string& deposit_id() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_deposit_id(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_deposit_id();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_deposit_id();
+  void set_allocated_deposit_id(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_deposit_id() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_deposit_id(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_deposit_id();
+
+  public:
+  // string checkout_url = 3 [json_name = "checkoutUrl"];
+  void clear_checkout_url() ;
+  [[nodiscard]] const ::std::string& checkout_url() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_checkout_url(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_checkout_url();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_checkout_url();
+  void set_allocated_checkout_url(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_checkout_url() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_checkout_url(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_checkout_url();
+
+  public:
+  // string charge_currency = 5 [json_name = "chargeCurrency"];
+  void clear_charge_currency() ;
+  [[nodiscard]] const ::std::string& charge_currency() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_charge_currency(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_charge_currency();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_charge_currency();
+  void set_allocated_charge_currency(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_charge_currency() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_charge_currency(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_charge_currency();
+
+  public:
+  // .google.protobuf.Timestamp expires_at = 7 [json_name = "expiresAt"];
+  [[nodiscard]] bool has_expires_at()
+      const;
+  void clear_expires_at() ;
+  [[nodiscard]] const ::google::protobuf::Timestamp& expires_at() const;
+  [[nodiscard]] ::google::protobuf::Timestamp* PROTOBUF_NULLABLE release_expires_at();
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL mutable_expires_at();
+  void set_allocated_expires_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_expires_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  ::google::protobuf::Timestamp* PROTOBUF_NULLABLE unsafe_arena_release_expires_at();
+
+  private:
+  const ::google::protobuf::Timestamp& _internal_expires_at() const;
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_expires_at();
+
+  public:
+  // .google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];
+  [[nodiscard]] bool has_created_at()
+      const;
+  void clear_created_at() ;
+  [[nodiscard]] const ::google::protobuf::Timestamp& created_at() const;
+  [[nodiscard]] ::google::protobuf::Timestamp* PROTOBUF_NULLABLE release_created_at();
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL mutable_created_at();
+  void set_allocated_created_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_created_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value);
+  ::google::protobuf::Timestamp* PROTOBUF_NULLABLE unsafe_arena_release_created_at();
+
+  private:
+  const ::google::protobuf::Timestamp& _internal_created_at() const;
+  ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_created_at();
+
+  public:
+  // int64 amount = 4 [json_name = "amount"];
+  void clear_amount() ;
+  [[nodiscard]] ::int64_t amount() const;
+  void set_amount(::int64_t value);
+
+  private:
+  ::int64_t _internal_amount() const;
+  void _internal_set_amount(::int64_t value);
+
+  public:
+  // int64 charge_amount = 6 [json_name = "chargeAmount"];
+  void clear_charge_amount() ;
+  [[nodiscard]] ::int64_t charge_amount() const;
+  void set_charge_amount(::int64_t value);
+
+  private:
+  ::int64_t _internal_charge_amount() const;
+  void _internal_set_charge_amount(::int64_t value);
+
+  public:
+  // .gridx.billing.v1.DepositStatus status = 2 [json_name = "status"];
+  void clear_status() ;
+  [[nodiscard]] ::gridx::billing::v1::DepositStatus status() const;
+  void set_status(::gridx::billing::v1::DepositStatus value);
+
+  private:
+  ::gridx::billing::v1::DepositStatus _internal_status() const;
+  void _internal_set_status(::gridx::billing::v1::DepositStatus value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.DepositIntent)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<3, 8,
+                          2, 84,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const DepositIntent& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr deposit_id_;
+    ::google::protobuf::internal::ArenaStringPtr checkout_url_;
+    ::google::protobuf::internal::ArenaStringPtr charge_currency_;
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE expires_at_;
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE created_at_;
+    ::int64_t amount_;
+    ::int64_t charge_amount_;
+    int status_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ConfirmDepositRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.ConfirmDepositRequest) */ {
+ public:
+  inline ConfirmDepositRequest() : ConfirmDepositRequest(nullptr) {}
+  ~ConfirmDepositRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(ConfirmDepositRequest* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(ConfirmDepositRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr ConfirmDepositRequest(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline ConfirmDepositRequest(const ConfirmDepositRequest& from) : ConfirmDepositRequest(nullptr, from) {}
+  inline ConfirmDepositRequest(ConfirmDepositRequest&& from) noexcept : ConfirmDepositRequest(nullptr, ::std::move(from)) {}
+  inline ConfirmDepositRequest& operator=(const ConfirmDepositRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ConfirmDepositRequest& operator=(ConfirmDepositRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const ConfirmDepositRequest& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ConfirmDepositRequest>(&ConfirmDepositRequest_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 7;
+  friend void swap(ConfirmDepositRequest& a, ConfirmDepositRequest& b) { a.Swap(&b); }
+  inline void Swap(ConfirmDepositRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ConfirmDepositRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] ConfirmDepositRequest* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<ConfirmDepositRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const ConfirmDepositRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const ConfirmDepositRequest& from) { ConfirmDepositRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(ConfirmDepositRequest* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.ConfirmDepositRequest"; }
+
+  explicit ConfirmDepositRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  ConfirmDepositRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const ConfirmDepositRequest& from);
+  ConfirmDepositRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, ConfirmDepositRequest&& from) noexcept
+      : ConfirmDepositRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kRawBodyFieldNumber = 1,
+    kHeadersFieldNumber = 2,
+  };
+  // bytes raw_body = 1 [json_name = "rawBody"];
+  void clear_raw_body() ;
+  [[nodiscard]] const ::std::string& raw_body() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_raw_body(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_raw_body();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_raw_body();
+  void set_allocated_raw_body(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_raw_body() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_raw_body(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_raw_body();
+
+  public:
+  // map<string, string> headers = 2 [json_name = "headers"];
+  [[nodiscard]] int headers_size()
+      const;
+  private:
+  int _internal_headers_size() const;
+
+  public:
+  void clear_headers() ;
+  [[nodiscard]] const ::google::protobuf::Map<::std::string, ::std::string>& headers() const;
+  [[nodiscard]] ::google::protobuf::Map<::std::string, ::std::string>* PROTOBUF_NONNULL mutable_headers();
+
+  private:
+  const ::google::protobuf::Map<::std::string, ::std::string>& _internal_headers() const;
+  ::google::protobuf::Map<::std::string, ::std::string>* PROTOBUF_NONNULL _internal_mutable_headers();
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.ConfirmDepositRequest)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<0, 2,
+                          1, 54,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const ConfirmDepositRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr raw_body_;
+    ::google::protobuf::internal::MapField<ConfirmDepositRequest_HeadersEntry_DoNotUse, ::std::string, ::std::string> headers_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED RequestWithdrawalResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.RequestWithdrawalResponse) */ {
+ public:
+  inline RequestWithdrawalResponse() : RequestWithdrawalResponse(nullptr) {}
+  ~RequestWithdrawalResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(RequestWithdrawalResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(RequestWithdrawalResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr RequestWithdrawalResponse(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline RequestWithdrawalResponse(const RequestWithdrawalResponse& from) : RequestWithdrawalResponse(nullptr, from) {}
+  inline RequestWithdrawalResponse(RequestWithdrawalResponse&& from) noexcept : RequestWithdrawalResponse(nullptr, ::std::move(from)) {}
+  inline RequestWithdrawalResponse& operator=(const RequestWithdrawalResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RequestWithdrawalResponse& operator=(RequestWithdrawalResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const RequestWithdrawalResponse& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<RequestWithdrawalResponse>(&RequestWithdrawalResponse_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 13;
+  friend void swap(RequestWithdrawalResponse& a, RequestWithdrawalResponse& b) { a.Swap(&b); }
+  inline void Swap(RequestWithdrawalResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(RequestWithdrawalResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] RequestWithdrawalResponse* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<RequestWithdrawalResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const RequestWithdrawalResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const RequestWithdrawalResponse& from) { RequestWithdrawalResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(RequestWithdrawalResponse* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.RequestWithdrawalResponse"; }
+
+  explicit RequestWithdrawalResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  RequestWithdrawalResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const RequestWithdrawalResponse& from);
+  RequestWithdrawalResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, RequestWithdrawalResponse&& from) noexcept
+      : RequestWithdrawalResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kWithdrawalFieldNumber = 1,
+  };
+  // .gridx.billing.v1.Withdrawal withdrawal = 1 [json_name = "withdrawal"];
+  [[nodiscard]] bool has_withdrawal()
+      const;
+  void clear_withdrawal() ;
+  [[nodiscard]] const ::gridx::billing::v1::Withdrawal& withdrawal() const;
+  [[nodiscard]] ::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE release_withdrawal();
+  ::gridx::billing::v1::Withdrawal* PROTOBUF_NONNULL mutable_withdrawal();
+  void set_allocated_withdrawal(::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_withdrawal(::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE value);
+  ::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE unsafe_arena_release_withdrawal();
+
+  private:
+  const ::gridx::billing::v1::Withdrawal& _internal_withdrawal() const;
+  ::gridx::billing::v1::Withdrawal* PROTOBUF_NONNULL _internal_mutable_withdrawal();
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.RequestWithdrawalResponse)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<0, 1,
+                          1, 0,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const RequestWithdrawalResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE withdrawal_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ListWithdrawalsResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.ListWithdrawalsResponse) */ {
+ public:
+  inline ListWithdrawalsResponse() : ListWithdrawalsResponse(nullptr) {}
+  ~ListWithdrawalsResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(ListWithdrawalsResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(ListWithdrawalsResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr ListWithdrawalsResponse(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline ListWithdrawalsResponse(const ListWithdrawalsResponse& from) : ListWithdrawalsResponse(nullptr, from) {}
+  inline ListWithdrawalsResponse(ListWithdrawalsResponse&& from) noexcept : ListWithdrawalsResponse(nullptr, ::std::move(from)) {}
+  inline ListWithdrawalsResponse& operator=(const ListWithdrawalsResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ListWithdrawalsResponse& operator=(ListWithdrawalsResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const ListWithdrawalsResponse& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ListWithdrawalsResponse>(&ListWithdrawalsResponse_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 17;
+  friend void swap(ListWithdrawalsResponse& a, ListWithdrawalsResponse& b) { a.Swap(&b); }
+  inline void Swap(ListWithdrawalsResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ListWithdrawalsResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] ListWithdrawalsResponse* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<ListWithdrawalsResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const ListWithdrawalsResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const ListWithdrawalsResponse& from) { ListWithdrawalsResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(ListWithdrawalsResponse* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.ListWithdrawalsResponse"; }
+
+  explicit ListWithdrawalsResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  ListWithdrawalsResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const ListWithdrawalsResponse& from);
+  ListWithdrawalsResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, ListWithdrawalsResponse&& from) noexcept
+      : ListWithdrawalsResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kWithdrawalsFieldNumber = 1,
+    kNextPageTokenFieldNumber = 2,
+  };
+  // repeated .gridx.billing.v1.Withdrawal withdrawals = 1 [json_name = "withdrawals"];
+  [[nodiscard]] int withdrawals_size()
+      const;
+  private:
+  int _internal_withdrawals_size() const;
+
+  public:
+  void clear_withdrawals() ;
+  [[nodiscard]] const ::gridx::billing::v1::Withdrawal& withdrawals(int index) const;
+  [[nodiscard]] ::gridx::billing::v1::Withdrawal* PROTOBUF_NONNULL mutable_withdrawals(int index);
+  ::gridx::billing::v1::Withdrawal* PROTOBUF_NONNULL add_withdrawals();
+  [[nodiscard]] const ::google::protobuf::RepeatedPtrField<::gridx::billing::v1::Withdrawal>&
+  withdrawals() const;
+  [[nodiscard]] ::google::protobuf::RepeatedPtrField<::gridx::billing::v1::Withdrawal>* PROTOBUF_NONNULL
+  mutable_withdrawals();
+
+  private:
+  const ::google::protobuf::RepeatedPtrField<::gridx::billing::v1::Withdrawal>& _internal_withdrawals() const;
+  ::google::protobuf::RepeatedPtrField<::gridx::billing::v1::Withdrawal>* PROTOBUF_NONNULL _internal_mutable_withdrawals();
+
+  public:
+  // string next_page_token = 2 [json_name = "nextPageToken"];
+  void clear_next_page_token() ;
+  [[nodiscard]] const ::std::string& next_page_token() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_next_page_token(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_next_page_token();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_next_page_token();
+  void set_allocated_next_page_token(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_next_page_token() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_next_page_token(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_next_page_token();
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.ListWithdrawalsResponse)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<1, 2,
+                          1, 64,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const ListWithdrawalsResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::RepeatedPtrField< ::gridx::billing::v1::Withdrawal > withdrawals_;
+    ::google::protobuf::internal::ArenaStringPtr next_page_token_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ListTransactionsResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.ListTransactionsResponse) */ {
+ public:
+  inline ListTransactionsResponse() : ListTransactionsResponse(nullptr) {}
+  ~ListTransactionsResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(ListTransactionsResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(ListTransactionsResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr ListTransactionsResponse(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline ListTransactionsResponse(const ListTransactionsResponse& from) : ListTransactionsResponse(nullptr, from) {}
+  inline ListTransactionsResponse(ListTransactionsResponse&& from) noexcept : ListTransactionsResponse(nullptr, ::std::move(from)) {}
+  inline ListTransactionsResponse& operator=(const ListTransactionsResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ListTransactionsResponse& operator=(ListTransactionsResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const ListTransactionsResponse& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<ListTransactionsResponse>(&ListTransactionsResponse_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 20;
+  friend void swap(ListTransactionsResponse& a, ListTransactionsResponse& b) { a.Swap(&b); }
+  inline void Swap(ListTransactionsResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ListTransactionsResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] ListTransactionsResponse* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<ListTransactionsResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const ListTransactionsResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const ListTransactionsResponse& from) { ListTransactionsResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(ListTransactionsResponse* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.ListTransactionsResponse"; }
+
+  explicit ListTransactionsResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  ListTransactionsResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const ListTransactionsResponse& from);
+  ListTransactionsResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, ListTransactionsResponse&& from) noexcept
+      : ListTransactionsResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kTransactionsFieldNumber = 1,
+    kNextPageTokenFieldNumber = 2,
+  };
+  // repeated .gridx.billing.v1.TransactionItem transactions = 1 [json_name = "transactions"];
+  [[nodiscard]] int transactions_size()
+      const;
+  private:
+  int _internal_transactions_size() const;
+
+  public:
+  void clear_transactions() ;
+  [[nodiscard]] const ::gridx::billing::v1::TransactionItem& transactions(int index) const;
+  [[nodiscard]] ::gridx::billing::v1::TransactionItem* PROTOBUF_NONNULL mutable_transactions(int index);
+  ::gridx::billing::v1::TransactionItem* PROTOBUF_NONNULL add_transactions();
+  [[nodiscard]] const ::google::protobuf::RepeatedPtrField<::gridx::billing::v1::TransactionItem>&
+  transactions() const;
+  [[nodiscard]] ::google::protobuf::RepeatedPtrField<::gridx::billing::v1::TransactionItem>* PROTOBUF_NONNULL
+  mutable_transactions();
+
+  private:
+  const ::google::protobuf::RepeatedPtrField<::gridx::billing::v1::TransactionItem>& _internal_transactions() const;
+  ::google::protobuf::RepeatedPtrField<::gridx::billing::v1::TransactionItem>* PROTOBUF_NONNULL _internal_mutable_transactions();
+
+  public:
+  // string next_page_token = 2 [json_name = "nextPageToken"];
+  void clear_next_page_token() ;
+  [[nodiscard]] const ::std::string& next_page_token() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_next_page_token(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_next_page_token();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_next_page_token();
+  void set_allocated_next_page_token(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_next_page_token() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_next_page_token(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_next_page_token();
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.ListTransactionsResponse)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<1, 2,
+                          1, 65,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const ListTransactionsResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::RepeatedPtrField< ::gridx::billing::v1::TransactionItem > transactions_;
+    ::google::protobuf::internal::ArenaStringPtr next_page_token_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
+// -------------------------------------------------------------------
+
 class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetWalletResponse final : public ::google::protobuf::Message
 /* @@protoc_insertion_point(class_definition:gridx.billing.v1.GetWalletResponse) */ {
  public:
@@ -776,6 +4399,627 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetWalletResponse final : public ::
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::gridx::billing::v1::Wallet* PROTOBUF_NULLABLE wallet_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED GetDepositResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.GetDepositResponse) */ {
+ public:
+  inline GetDepositResponse() : GetDepositResponse(nullptr) {}
+  ~GetDepositResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(GetDepositResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(GetDepositResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr GetDepositResponse(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline GetDepositResponse(const GetDepositResponse& from) : GetDepositResponse(nullptr, from) {}
+  inline GetDepositResponse(GetDepositResponse&& from) noexcept : GetDepositResponse(nullptr, ::std::move(from)) {}
+  inline GetDepositResponse& operator=(const GetDepositResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetDepositResponse& operator=(GetDepositResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const GetDepositResponse& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<GetDepositResponse>(&GetDepositResponse_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 10;
+  friend void swap(GetDepositResponse& a, GetDepositResponse& b) { a.Swap(&b); }
+  inline void Swap(GetDepositResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetDepositResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] GetDepositResponse* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<GetDepositResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const GetDepositResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const GetDepositResponse& from) { GetDepositResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(GetDepositResponse* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.GetDepositResponse"; }
+
+  explicit GetDepositResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  GetDepositResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const GetDepositResponse& from);
+  GetDepositResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, GetDepositResponse&& from) noexcept
+      : GetDepositResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kDepositFieldNumber = 1,
+  };
+  // .gridx.billing.v1.DepositIntent deposit = 1 [json_name = "deposit"];
+  [[nodiscard]] bool has_deposit()
+      const;
+  void clear_deposit() ;
+  [[nodiscard]] const ::gridx::billing::v1::DepositIntent& deposit() const;
+  [[nodiscard]] ::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE release_deposit();
+  ::gridx::billing::v1::DepositIntent* PROTOBUF_NONNULL mutable_deposit();
+  void set_allocated_deposit(::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_deposit(::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE value);
+  ::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE unsafe_arena_release_deposit();
+
+  private:
+  const ::gridx::billing::v1::DepositIntent& _internal_deposit() const;
+  ::gridx::billing::v1::DepositIntent* PROTOBUF_NONNULL _internal_mutable_deposit();
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.GetDepositResponse)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<0, 1,
+                          1, 0,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const GetDepositResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE deposit_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CreateDepositIntentResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.CreateDepositIntentResponse) */ {
+ public:
+  inline CreateDepositIntentResponse() : CreateDepositIntentResponse(nullptr) {}
+  ~CreateDepositIntentResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(CreateDepositIntentResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(CreateDepositIntentResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr CreateDepositIntentResponse(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline CreateDepositIntentResponse(const CreateDepositIntentResponse& from) : CreateDepositIntentResponse(nullptr, from) {}
+  inline CreateDepositIntentResponse(CreateDepositIntentResponse&& from) noexcept : CreateDepositIntentResponse(nullptr, ::std::move(from)) {}
+  inline CreateDepositIntentResponse& operator=(const CreateDepositIntentResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CreateDepositIntentResponse& operator=(CreateDepositIntentResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const CreateDepositIntentResponse& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CreateDepositIntentResponse>(&CreateDepositIntentResponse_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 5;
+  friend void swap(CreateDepositIntentResponse& a, CreateDepositIntentResponse& b) { a.Swap(&b); }
+  inline void Swap(CreateDepositIntentResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CreateDepositIntentResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] CreateDepositIntentResponse* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<CreateDepositIntentResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const CreateDepositIntentResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const CreateDepositIntentResponse& from) { CreateDepositIntentResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(CreateDepositIntentResponse* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.CreateDepositIntentResponse"; }
+
+  explicit CreateDepositIntentResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  CreateDepositIntentResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const CreateDepositIntentResponse& from);
+  CreateDepositIntentResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, CreateDepositIntentResponse&& from) noexcept
+      : CreateDepositIntentResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kDepositFieldNumber = 1,
+  };
+  // .gridx.billing.v1.DepositIntent deposit = 1 [json_name = "deposit"];
+  [[nodiscard]] bool has_deposit()
+      const;
+  void clear_deposit() ;
+  [[nodiscard]] const ::gridx::billing::v1::DepositIntent& deposit() const;
+  [[nodiscard]] ::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE release_deposit();
+  ::gridx::billing::v1::DepositIntent* PROTOBUF_NONNULL mutable_deposit();
+  void set_allocated_deposit(::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_deposit(::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE value);
+  ::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE unsafe_arena_release_deposit();
+
+  private:
+  const ::gridx::billing::v1::DepositIntent& _internal_deposit() const;
+  ::gridx::billing::v1::DepositIntent* PROTOBUF_NONNULL _internal_mutable_deposit();
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.CreateDepositIntentResponse)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<0, 1,
+                          1, 0,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const CreateDepositIntentResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE deposit_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_gridx_2fbilling_2fv1_2fwallet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CancelWithdrawalResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:gridx.billing.v1.CancelWithdrawalResponse) */ {
+ public:
+  inline CancelWithdrawalResponse() : CancelWithdrawalResponse(nullptr) {}
+  ~CancelWithdrawalResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(CancelWithdrawalResponse* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(CancelWithdrawalResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr CancelWithdrawalResponse(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline CancelWithdrawalResponse(const CancelWithdrawalResponse& from) : CancelWithdrawalResponse(nullptr, from) {}
+  inline CancelWithdrawalResponse(CancelWithdrawalResponse&& from) noexcept : CancelWithdrawalResponse(nullptr, ::std::move(from)) {}
+  inline CancelWithdrawalResponse& operator=(const CancelWithdrawalResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CancelWithdrawalResponse& operator=(CancelWithdrawalResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const CancelWithdrawalResponse& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<CancelWithdrawalResponse>(&CancelWithdrawalResponse_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 15;
+  friend void swap(CancelWithdrawalResponse& a, CancelWithdrawalResponse& b) { a.Swap(&b); }
+  inline void Swap(CancelWithdrawalResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CancelWithdrawalResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] CancelWithdrawalResponse* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<CancelWithdrawalResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const CancelWithdrawalResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const CancelWithdrawalResponse& from) { CancelWithdrawalResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(CancelWithdrawalResponse* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "gridx.billing.v1.CancelWithdrawalResponse"; }
+
+  explicit CancelWithdrawalResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  CancelWithdrawalResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const CancelWithdrawalResponse& from);
+  CancelWithdrawalResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, CancelWithdrawalResponse&& from) noexcept
+      : CancelWithdrawalResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kWithdrawalFieldNumber = 1,
+  };
+  // .gridx.billing.v1.Withdrawal withdrawal = 1 [json_name = "withdrawal"];
+  [[nodiscard]] bool has_withdrawal()
+      const;
+  void clear_withdrawal() ;
+  [[nodiscard]] const ::gridx::billing::v1::Withdrawal& withdrawal() const;
+  [[nodiscard]] ::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE release_withdrawal();
+  ::gridx::billing::v1::Withdrawal* PROTOBUF_NONNULL mutable_withdrawal();
+  void set_allocated_withdrawal(::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_withdrawal(::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE value);
+  ::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE unsafe_arena_release_withdrawal();
+
+  private:
+  const ::gridx::billing::v1::Withdrawal& _internal_withdrawal() const;
+  ::gridx::billing::v1::Withdrawal* PROTOBUF_NONNULL _internal_mutable_withdrawal();
+
+  public:
+  // @@protoc_insertion_point(class_scope:gridx.billing.v1.CancelWithdrawalResponse)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<0, 1,
+                          1, 0,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const CancelWithdrawalResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE withdrawal_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -1221,6 +5465,2690 @@ inline void GetWalletResponse::set_allocated_wallet(::gridx::billing::v1::Wallet
   // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.GetWalletResponse.wallet)
 }
 
+// -------------------------------------------------------------------
+
+// DepositIntent
+
+// string deposit_id = 1 [json_name = "depositId"];
+inline void DepositIntent::clear_deposit_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.deposit_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& DepositIntent::deposit_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.DepositIntent.deposit_id)
+  return _internal_deposit_id();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void DepositIntent::set_deposit_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.deposit_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.DepositIntent.deposit_id)
+}
+inline ::std::string* PROTOBUF_NONNULL DepositIntent::mutable_deposit_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_deposit_id();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.DepositIntent.deposit_id)
+  return _s;
+}
+inline const ::std::string& DepositIntent::_internal_deposit_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.deposit_id_.Get();
+}
+inline void DepositIntent::_internal_set_deposit_id(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.deposit_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL DepositIntent::_internal_mutable_deposit_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.deposit_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE DepositIntent::release_deposit_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.DepositIntent.deposit_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.deposit_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.deposit_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void DepositIntent::set_allocated_deposit_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.deposit_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.deposit_id_.IsDefault()) {
+    _impl_.deposit_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.DepositIntent.deposit_id)
+}
+
+// .gridx.billing.v1.DepositStatus status = 2 [json_name = "status"];
+inline void DepositIntent::clear_status() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.status_ = 0;
+  ClearHasBit(_impl_._has_bits_[0], 0x00000080U);
+}
+inline ::gridx::billing::v1::DepositStatus DepositIntent::status() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.DepositIntent.status)
+  return _internal_status();
+}
+inline void DepositIntent::set_status(::gridx::billing::v1::DepositStatus value) {
+  _internal_set_status(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000080U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.DepositIntent.status)
+}
+inline ::gridx::billing::v1::DepositStatus DepositIntent::_internal_status() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return static_cast<::gridx::billing::v1::DepositStatus>(_impl_.status_);
+}
+inline void DepositIntent::_internal_set_status(::gridx::billing::v1::DepositStatus value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.status_ = value;
+}
+
+// string checkout_url = 3 [json_name = "checkoutUrl"];
+inline void DepositIntent::clear_checkout_url() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.checkout_url_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline const ::std::string& DepositIntent::checkout_url() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.DepositIntent.checkout_url)
+  return _internal_checkout_url();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void DepositIntent::set_checkout_url(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.checkout_url_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.DepositIntent.checkout_url)
+}
+inline ::std::string* PROTOBUF_NONNULL DepositIntent::mutable_checkout_url()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_checkout_url();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.DepositIntent.checkout_url)
+  return _s;
+}
+inline const ::std::string& DepositIntent::_internal_checkout_url() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.checkout_url_.Get();
+}
+inline void DepositIntent::_internal_set_checkout_url(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.checkout_url_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL DepositIntent::_internal_mutable_checkout_url() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.checkout_url_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE DepositIntent::release_checkout_url() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.DepositIntent.checkout_url)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.checkout_url_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.checkout_url_.Set("", GetArena());
+  }
+  return released;
+}
+inline void DepositIntent::set_allocated_checkout_url(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.checkout_url_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.checkout_url_.IsDefault()) {
+    _impl_.checkout_url_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.DepositIntent.checkout_url)
+}
+
+// int64 amount = 4 [json_name = "amount"];
+inline void DepositIntent::clear_amount() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.amount_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+}
+inline ::int64_t DepositIntent::amount() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.DepositIntent.amount)
+  return _internal_amount();
+}
+inline void DepositIntent::set_amount(::int64_t value) {
+  _internal_set_amount(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.DepositIntent.amount)
+}
+inline ::int64_t DepositIntent::_internal_amount() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.amount_;
+}
+inline void DepositIntent::_internal_set_amount(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.amount_ = value;
+}
+
+// string charge_currency = 5 [json_name = "chargeCurrency"];
+inline void DepositIntent::clear_charge_currency() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.charge_currency_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+}
+inline const ::std::string& DepositIntent::charge_currency() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.DepositIntent.charge_currency)
+  return _internal_charge_currency();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void DepositIntent::set_charge_currency(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  _impl_.charge_currency_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.DepositIntent.charge_currency)
+}
+inline ::std::string* PROTOBUF_NONNULL DepositIntent::mutable_charge_currency()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::std::string* _s = _internal_mutable_charge_currency();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.DepositIntent.charge_currency)
+  return _s;
+}
+inline const ::std::string& DepositIntent::_internal_charge_currency() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.charge_currency_.Get();
+}
+inline void DepositIntent::_internal_set_charge_currency(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.charge_currency_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL DepositIntent::_internal_mutable_charge_currency() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.charge_currency_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE DepositIntent::release_charge_currency() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.DepositIntent.charge_currency)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000004U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  auto* released = _impl_.charge_currency_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.charge_currency_.Set("", GetArena());
+  }
+  return released;
+}
+inline void DepositIntent::set_allocated_charge_currency(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  }
+  _impl_.charge_currency_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.charge_currency_.IsDefault()) {
+    _impl_.charge_currency_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.DepositIntent.charge_currency)
+}
+
+// int64 charge_amount = 6 [json_name = "chargeAmount"];
+inline void DepositIntent::clear_charge_amount() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.charge_amount_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000040U);
+}
+inline ::int64_t DepositIntent::charge_amount() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.DepositIntent.charge_amount)
+  return _internal_charge_amount();
+}
+inline void DepositIntent::set_charge_amount(::int64_t value) {
+  _internal_set_charge_amount(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000040U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.DepositIntent.charge_amount)
+}
+inline ::int64_t DepositIntent::_internal_charge_amount() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.charge_amount_;
+}
+inline void DepositIntent::_internal_set_charge_amount(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.charge_amount_ = value;
+}
+
+// .google.protobuf.Timestamp expires_at = 7 [json_name = "expiresAt"];
+inline bool DepositIntent::has_expires_at() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000008U);
+  PROTOBUF_ASSUME(!value || _impl_.expires_at_ != nullptr);
+  return value;
+}
+inline const ::google::protobuf::Timestamp& DepositIntent::_internal_expires_at() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  const ::google::protobuf::Timestamp* p = _impl_.expires_at_;
+  return p != nullptr ? *p : *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<::google::protobuf::Timestamp>(&::google::protobuf::Timestamp_globals_);
+}
+inline const ::google::protobuf::Timestamp& DepositIntent::expires_at() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.DepositIntent.expires_at)
+  return _internal_expires_at();
+}
+inline void DepositIntent::unsafe_arena_set_allocated_expires_at(
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.expires_at_);
+  }
+  _impl_.expires_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.billing.v1.DepositIntent.expires_at)
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE DepositIntent::release_expires_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  ::google::protobuf::Timestamp* released = _impl_.expires_at_;
+  _impl_.expires_at_ = nullptr;
+  if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
+    auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    if (GetArena() == nullptr) {
+      delete old;
+    }
+  } else {
+    if (GetArena() != nullptr) {
+      released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    }
+  }
+  return released;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE DepositIntent::unsafe_arena_release_expires_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.DepositIntent.expires_at)
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  ::google::protobuf::Timestamp* temp = _impl_.expires_at_;
+  _impl_.expires_at_ = nullptr;
+  return temp;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL DepositIntent::_internal_mutable_expires_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.expires_at_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::google::protobuf::Timestamp>(GetArena());
+    _impl_.expires_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(p);
+  }
+  return _impl_.expires_at_;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL DepositIntent::mutable_expires_at()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  ::google::protobuf::Timestamp* _msg = _internal_mutable_expires_at();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.DepositIntent.expires_at)
+  return _msg;
+}
+inline void DepositIntent::set_allocated_expires_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (message_arena == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.expires_at_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::Message*>(value)->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  }
+
+  _impl_.expires_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.DepositIntent.expires_at)
+}
+
+// .google.protobuf.Timestamp created_at = 8 [json_name = "createdAt"];
+inline bool DepositIntent::has_created_at() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000010U);
+  PROTOBUF_ASSUME(!value || _impl_.created_at_ != nullptr);
+  return value;
+}
+inline const ::google::protobuf::Timestamp& DepositIntent::_internal_created_at() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  const ::google::protobuf::Timestamp* p = _impl_.created_at_;
+  return p != nullptr ? *p : *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<::google::protobuf::Timestamp>(&::google::protobuf::Timestamp_globals_);
+}
+inline const ::google::protobuf::Timestamp& DepositIntent::created_at() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.DepositIntent.created_at)
+  return _internal_created_at();
+}
+inline void DepositIntent::unsafe_arena_set_allocated_created_at(
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.created_at_);
+  }
+  _impl_.created_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.billing.v1.DepositIntent.created_at)
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE DepositIntent::release_created_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  ::google::protobuf::Timestamp* released = _impl_.created_at_;
+  _impl_.created_at_ = nullptr;
+  if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
+    auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    if (GetArena() == nullptr) {
+      delete old;
+    }
+  } else {
+    if (GetArena() != nullptr) {
+      released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    }
+  }
+  return released;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE DepositIntent::unsafe_arena_release_created_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.DepositIntent.created_at)
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  ::google::protobuf::Timestamp* temp = _impl_.created_at_;
+  _impl_.created_at_ = nullptr;
+  return temp;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL DepositIntent::_internal_mutable_created_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.created_at_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::google::protobuf::Timestamp>(GetArena());
+    _impl_.created_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(p);
+  }
+  return _impl_.created_at_;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL DepositIntent::mutable_created_at()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  ::google::protobuf::Timestamp* _msg = _internal_mutable_created_at();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.DepositIntent.created_at)
+  return _msg;
+}
+inline void DepositIntent::set_allocated_created_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (message_arena == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.created_at_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::Message*>(value)->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+  }
+
+  _impl_.created_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.DepositIntent.created_at)
+}
+
+// -------------------------------------------------------------------
+
+// CreateDepositIntentRequest
+
+// string idempotency_key = 1 [json_name = "idempotencyKey"];
+inline void CreateDepositIntentRequest::clear_idempotency_key() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.idempotency_key_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& CreateDepositIntentRequest::idempotency_key() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.CreateDepositIntentRequest.idempotency_key)
+  return _internal_idempotency_key();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void CreateDepositIntentRequest::set_idempotency_key(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.idempotency_key_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.CreateDepositIntentRequest.idempotency_key)
+}
+inline ::std::string* PROTOBUF_NONNULL CreateDepositIntentRequest::mutable_idempotency_key()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_idempotency_key();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.CreateDepositIntentRequest.idempotency_key)
+  return _s;
+}
+inline const ::std::string& CreateDepositIntentRequest::_internal_idempotency_key() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.idempotency_key_.Get();
+}
+inline void CreateDepositIntentRequest::_internal_set_idempotency_key(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.idempotency_key_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL CreateDepositIntentRequest::_internal_mutable_idempotency_key() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.idempotency_key_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE CreateDepositIntentRequest::release_idempotency_key() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.CreateDepositIntentRequest.idempotency_key)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.idempotency_key_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.idempotency_key_.Set("", GetArena());
+  }
+  return released;
+}
+inline void CreateDepositIntentRequest::set_allocated_idempotency_key(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.idempotency_key_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.idempotency_key_.IsDefault()) {
+    _impl_.idempotency_key_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.CreateDepositIntentRequest.idempotency_key)
+}
+
+// int64 amount = 2 [json_name = "amount"];
+inline void CreateDepositIntentRequest::clear_amount() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.amount_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+}
+inline ::int64_t CreateDepositIntentRequest::amount() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.CreateDepositIntentRequest.amount)
+  return _internal_amount();
+}
+inline void CreateDepositIntentRequest::set_amount(::int64_t value) {
+  _internal_set_amount(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.CreateDepositIntentRequest.amount)
+}
+inline ::int64_t CreateDepositIntentRequest::_internal_amount() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.amount_;
+}
+inline void CreateDepositIntentRequest::_internal_set_amount(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.amount_ = value;
+}
+
+// string success_url = 3 [json_name = "successUrl"];
+inline void CreateDepositIntentRequest::clear_success_url() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.success_url_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline const ::std::string& CreateDepositIntentRequest::success_url() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.CreateDepositIntentRequest.success_url)
+  return _internal_success_url();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void CreateDepositIntentRequest::set_success_url(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.success_url_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.CreateDepositIntentRequest.success_url)
+}
+inline ::std::string* PROTOBUF_NONNULL CreateDepositIntentRequest::mutable_success_url()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_success_url();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.CreateDepositIntentRequest.success_url)
+  return _s;
+}
+inline const ::std::string& CreateDepositIntentRequest::_internal_success_url() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.success_url_.Get();
+}
+inline void CreateDepositIntentRequest::_internal_set_success_url(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.success_url_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL CreateDepositIntentRequest::_internal_mutable_success_url() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.success_url_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE CreateDepositIntentRequest::release_success_url() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.CreateDepositIntentRequest.success_url)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.success_url_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.success_url_.Set("", GetArena());
+  }
+  return released;
+}
+inline void CreateDepositIntentRequest::set_allocated_success_url(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.success_url_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.success_url_.IsDefault()) {
+    _impl_.success_url_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.CreateDepositIntentRequest.success_url)
+}
+
+// string cancel_url = 4 [json_name = "cancelUrl"];
+inline void CreateDepositIntentRequest::clear_cancel_url() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.cancel_url_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+}
+inline const ::std::string& CreateDepositIntentRequest::cancel_url() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.CreateDepositIntentRequest.cancel_url)
+  return _internal_cancel_url();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void CreateDepositIntentRequest::set_cancel_url(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  _impl_.cancel_url_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.CreateDepositIntentRequest.cancel_url)
+}
+inline ::std::string* PROTOBUF_NONNULL CreateDepositIntentRequest::mutable_cancel_url()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::std::string* _s = _internal_mutable_cancel_url();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.CreateDepositIntentRequest.cancel_url)
+  return _s;
+}
+inline const ::std::string& CreateDepositIntentRequest::_internal_cancel_url() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.cancel_url_.Get();
+}
+inline void CreateDepositIntentRequest::_internal_set_cancel_url(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.cancel_url_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL CreateDepositIntentRequest::_internal_mutable_cancel_url() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.cancel_url_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE CreateDepositIntentRequest::release_cancel_url() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.CreateDepositIntentRequest.cancel_url)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000004U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  auto* released = _impl_.cancel_url_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.cancel_url_.Set("", GetArena());
+  }
+  return released;
+}
+inline void CreateDepositIntentRequest::set_allocated_cancel_url(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  }
+  _impl_.cancel_url_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.cancel_url_.IsDefault()) {
+    _impl_.cancel_url_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.CreateDepositIntentRequest.cancel_url)
+}
+
+// -------------------------------------------------------------------
+
+// CreateDepositIntentResponse
+
+// .gridx.billing.v1.DepositIntent deposit = 1 [json_name = "deposit"];
+inline bool CreateDepositIntentResponse::has_deposit() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000001U);
+  PROTOBUF_ASSUME(!value || _impl_.deposit_ != nullptr);
+  return value;
+}
+inline void CreateDepositIntentResponse::clear_deposit() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.deposit_ != nullptr) _impl_.deposit_->Clear();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::gridx::billing::v1::DepositIntent& CreateDepositIntentResponse::_internal_deposit() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  const ::gridx::billing::v1::DepositIntent* p = _impl_.deposit_;
+  return p != nullptr ? *p : *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<::gridx::billing::v1::DepositIntent>(&::gridx::billing::v1::DepositIntent_globals_);
+}
+inline const ::gridx::billing::v1::DepositIntent& CreateDepositIntentResponse::deposit() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.CreateDepositIntentResponse.deposit)
+  return _internal_deposit();
+}
+inline void CreateDepositIntentResponse::unsafe_arena_set_allocated_deposit(
+    ::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.deposit_);
+  }
+  _impl_.deposit_ = reinterpret_cast<::gridx::billing::v1::DepositIntent*>(value);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.billing.v1.CreateDepositIntentResponse.deposit)
+}
+inline ::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE CreateDepositIntentResponse::release_deposit() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::gridx::billing::v1::DepositIntent* released = _impl_.deposit_;
+  _impl_.deposit_ = nullptr;
+  if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
+    auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    if (GetArena() == nullptr) {
+      delete old;
+    }
+  } else {
+    if (GetArena() != nullptr) {
+      released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    }
+  }
+  return released;
+}
+inline ::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE CreateDepositIntentResponse::unsafe_arena_release_deposit() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.CreateDepositIntentResponse.deposit)
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::gridx::billing::v1::DepositIntent* temp = _impl_.deposit_;
+  _impl_.deposit_ = nullptr;
+  return temp;
+}
+inline ::gridx::billing::v1::DepositIntent* PROTOBUF_NONNULL CreateDepositIntentResponse::_internal_mutable_deposit() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.deposit_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::gridx::billing::v1::DepositIntent>(GetArena());
+    _impl_.deposit_ = reinterpret_cast<::gridx::billing::v1::DepositIntent*>(p);
+  }
+  return _impl_.deposit_;
+}
+inline ::gridx::billing::v1::DepositIntent* PROTOBUF_NONNULL CreateDepositIntentResponse::mutable_deposit()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::gridx::billing::v1::DepositIntent* _msg = _internal_mutable_deposit();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.CreateDepositIntentResponse.deposit)
+  return _msg;
+}
+inline void CreateDepositIntentResponse::set_allocated_deposit(::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (message_arena == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.deposit_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = value->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+
+  _impl_.deposit_ = reinterpret_cast<::gridx::billing::v1::DepositIntent*>(value);
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.CreateDepositIntentResponse.deposit)
+}
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// ConfirmDepositRequest
+
+// bytes raw_body = 1 [json_name = "rawBody"];
+inline void ConfirmDepositRequest::clear_raw_body() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.raw_body_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& ConfirmDepositRequest::raw_body() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.ConfirmDepositRequest.raw_body)
+  return _internal_raw_body();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void ConfirmDepositRequest::set_raw_body(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.raw_body_.SetBytes(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.ConfirmDepositRequest.raw_body)
+}
+inline ::std::string* PROTOBUF_NONNULL ConfirmDepositRequest::mutable_raw_body()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_raw_body();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.ConfirmDepositRequest.raw_body)
+  return _s;
+}
+inline const ::std::string& ConfirmDepositRequest::_internal_raw_body() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.raw_body_.Get();
+}
+inline void ConfirmDepositRequest::_internal_set_raw_body(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.raw_body_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL ConfirmDepositRequest::_internal_mutable_raw_body() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.raw_body_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE ConfirmDepositRequest::release_raw_body() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.ConfirmDepositRequest.raw_body)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.raw_body_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.raw_body_.Set("", GetArena());
+  }
+  return released;
+}
+inline void ConfirmDepositRequest::set_allocated_raw_body(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.raw_body_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.raw_body_.IsDefault()) {
+    _impl_.raw_body_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.ConfirmDepositRequest.raw_body)
+}
+
+// map<string, string> headers = 2 [json_name = "headers"];
+inline int ConfirmDepositRequest::_internal_headers_size() const {
+  return _internal_headers().size();
+}
+inline int ConfirmDepositRequest::headers_size() const {
+  return _internal_headers_size();
+}
+inline void ConfirmDepositRequest::clear_headers() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.headers_.Clear();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline const ::google::protobuf::Map<::std::string, ::std::string>& ConfirmDepositRequest::_internal_headers() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.headers_.GetMap();
+}
+inline const ::google::protobuf::Map<::std::string, ::std::string>& ConfirmDepositRequest::headers() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_map:gridx.billing.v1.ConfirmDepositRequest.headers)
+  return _internal_headers();
+}
+inline ::google::protobuf::Map<::std::string, ::std::string>* PROTOBUF_NONNULL ConfirmDepositRequest::_internal_mutable_headers() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.headers_.MutableMap();
+}
+inline ::google::protobuf::Map<::std::string, ::std::string>* PROTOBUF_NONNULL ConfirmDepositRequest::mutable_headers()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  // @@protoc_insertion_point(field_mutable_map:gridx.billing.v1.ConfirmDepositRequest.headers)
+  return _internal_mutable_headers();
+}
+
+// -------------------------------------------------------------------
+
+// ConfirmDepositResponse
+
+// bool processed = 1 [json_name = "processed"];
+inline void ConfirmDepositResponse::clear_processed() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.processed_ = false;
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline bool ConfirmDepositResponse::processed() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.ConfirmDepositResponse.processed)
+  return _internal_processed();
+}
+inline void ConfirmDepositResponse::set_processed(bool value) {
+  _internal_set_processed(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.ConfirmDepositResponse.processed)
+}
+inline bool ConfirmDepositResponse::_internal_processed() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.processed_;
+}
+inline void ConfirmDepositResponse::_internal_set_processed(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.processed_ = value;
+}
+
+// string desposit_id = 2 [json_name = "despositId"];
+inline void ConfirmDepositResponse::clear_desposit_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.desposit_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& ConfirmDepositResponse::desposit_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.ConfirmDepositResponse.desposit_id)
+  return _internal_desposit_id();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void ConfirmDepositResponse::set_desposit_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.desposit_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.ConfirmDepositResponse.desposit_id)
+}
+inline ::std::string* PROTOBUF_NONNULL ConfirmDepositResponse::mutable_desposit_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_desposit_id();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.ConfirmDepositResponse.desposit_id)
+  return _s;
+}
+inline const ::std::string& ConfirmDepositResponse::_internal_desposit_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.desposit_id_.Get();
+}
+inline void ConfirmDepositResponse::_internal_set_desposit_id(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.desposit_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL ConfirmDepositResponse::_internal_mutable_desposit_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.desposit_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE ConfirmDepositResponse::release_desposit_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.ConfirmDepositResponse.desposit_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.desposit_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.desposit_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void ConfirmDepositResponse::set_allocated_desposit_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.desposit_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.desposit_id_.IsDefault()) {
+    _impl_.desposit_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.ConfirmDepositResponse.desposit_id)
+}
+
+// .gridx.billing.v1.DepositStatus status = 3 [json_name = "status"];
+inline void ConfirmDepositResponse::clear_status() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.status_ = 0;
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+}
+inline ::gridx::billing::v1::DepositStatus ConfirmDepositResponse::status() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.ConfirmDepositResponse.status)
+  return _internal_status();
+}
+inline void ConfirmDepositResponse::set_status(::gridx::billing::v1::DepositStatus value) {
+  _internal_set_status(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.ConfirmDepositResponse.status)
+}
+inline ::gridx::billing::v1::DepositStatus ConfirmDepositResponse::_internal_status() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return static_cast<::gridx::billing::v1::DepositStatus>(_impl_.status_);
+}
+inline void ConfirmDepositResponse::_internal_set_status(::gridx::billing::v1::DepositStatus value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.status_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// GetDepositRequest
+
+// string deposit_id = 1 [json_name = "depositId"];
+inline void GetDepositRequest::clear_deposit_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.deposit_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& GetDepositRequest::deposit_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.GetDepositRequest.deposit_id)
+  return _internal_deposit_id();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void GetDepositRequest::set_deposit_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.deposit_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.GetDepositRequest.deposit_id)
+}
+inline ::std::string* PROTOBUF_NONNULL GetDepositRequest::mutable_deposit_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_deposit_id();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.GetDepositRequest.deposit_id)
+  return _s;
+}
+inline const ::std::string& GetDepositRequest::_internal_deposit_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.deposit_id_.Get();
+}
+inline void GetDepositRequest::_internal_set_deposit_id(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.deposit_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL GetDepositRequest::_internal_mutable_deposit_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.deposit_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE GetDepositRequest::release_deposit_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.GetDepositRequest.deposit_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.deposit_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.deposit_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void GetDepositRequest::set_allocated_deposit_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.deposit_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.deposit_id_.IsDefault()) {
+    _impl_.deposit_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.GetDepositRequest.deposit_id)
+}
+
+// -------------------------------------------------------------------
+
+// GetDepositResponse
+
+// .gridx.billing.v1.DepositIntent deposit = 1 [json_name = "deposit"];
+inline bool GetDepositResponse::has_deposit() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000001U);
+  PROTOBUF_ASSUME(!value || _impl_.deposit_ != nullptr);
+  return value;
+}
+inline void GetDepositResponse::clear_deposit() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.deposit_ != nullptr) _impl_.deposit_->Clear();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::gridx::billing::v1::DepositIntent& GetDepositResponse::_internal_deposit() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  const ::gridx::billing::v1::DepositIntent* p = _impl_.deposit_;
+  return p != nullptr ? *p : *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<::gridx::billing::v1::DepositIntent>(&::gridx::billing::v1::DepositIntent_globals_);
+}
+inline const ::gridx::billing::v1::DepositIntent& GetDepositResponse::deposit() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.GetDepositResponse.deposit)
+  return _internal_deposit();
+}
+inline void GetDepositResponse::unsafe_arena_set_allocated_deposit(
+    ::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.deposit_);
+  }
+  _impl_.deposit_ = reinterpret_cast<::gridx::billing::v1::DepositIntent*>(value);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.billing.v1.GetDepositResponse.deposit)
+}
+inline ::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE GetDepositResponse::release_deposit() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::gridx::billing::v1::DepositIntent* released = _impl_.deposit_;
+  _impl_.deposit_ = nullptr;
+  if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
+    auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    if (GetArena() == nullptr) {
+      delete old;
+    }
+  } else {
+    if (GetArena() != nullptr) {
+      released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    }
+  }
+  return released;
+}
+inline ::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE GetDepositResponse::unsafe_arena_release_deposit() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.GetDepositResponse.deposit)
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::gridx::billing::v1::DepositIntent* temp = _impl_.deposit_;
+  _impl_.deposit_ = nullptr;
+  return temp;
+}
+inline ::gridx::billing::v1::DepositIntent* PROTOBUF_NONNULL GetDepositResponse::_internal_mutable_deposit() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.deposit_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::gridx::billing::v1::DepositIntent>(GetArena());
+    _impl_.deposit_ = reinterpret_cast<::gridx::billing::v1::DepositIntent*>(p);
+  }
+  return _impl_.deposit_;
+}
+inline ::gridx::billing::v1::DepositIntent* PROTOBUF_NONNULL GetDepositResponse::mutable_deposit()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::gridx::billing::v1::DepositIntent* _msg = _internal_mutable_deposit();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.GetDepositResponse.deposit)
+  return _msg;
+}
+inline void GetDepositResponse::set_allocated_deposit(::gridx::billing::v1::DepositIntent* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (message_arena == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.deposit_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = value->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+
+  _impl_.deposit_ = reinterpret_cast<::gridx::billing::v1::DepositIntent*>(value);
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.GetDepositResponse.deposit)
+}
+
+// -------------------------------------------------------------------
+
+// Withdrawal
+
+// string withdrawal_id = 1 [json_name = "withdrawalId"];
+inline void Withdrawal::clear_withdrawal_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.withdrawal_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& Withdrawal::withdrawal_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.Withdrawal.withdrawal_id)
+  return _internal_withdrawal_id();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void Withdrawal::set_withdrawal_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.withdrawal_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.Withdrawal.withdrawal_id)
+}
+inline ::std::string* PROTOBUF_NONNULL Withdrawal::mutable_withdrawal_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_withdrawal_id();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.Withdrawal.withdrawal_id)
+  return _s;
+}
+inline const ::std::string& Withdrawal::_internal_withdrawal_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.withdrawal_id_.Get();
+}
+inline void Withdrawal::_internal_set_withdrawal_id(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.withdrawal_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL Withdrawal::_internal_mutable_withdrawal_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.withdrawal_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE Withdrawal::release_withdrawal_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.Withdrawal.withdrawal_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.withdrawal_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.withdrawal_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void Withdrawal::set_allocated_withdrawal_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.withdrawal_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.withdrawal_id_.IsDefault()) {
+    _impl_.withdrawal_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.Withdrawal.withdrawal_id)
+}
+
+// string wallet_id = 2 [json_name = "walletId"];
+inline void Withdrawal::clear_wallet_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.wallet_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline const ::std::string& Withdrawal::wallet_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.Withdrawal.wallet_id)
+  return _internal_wallet_id();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void Withdrawal::set_wallet_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.wallet_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.Withdrawal.wallet_id)
+}
+inline ::std::string* PROTOBUF_NONNULL Withdrawal::mutable_wallet_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_wallet_id();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.Withdrawal.wallet_id)
+  return _s;
+}
+inline const ::std::string& Withdrawal::_internal_wallet_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.wallet_id_.Get();
+}
+inline void Withdrawal::_internal_set_wallet_id(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.wallet_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL Withdrawal::_internal_mutable_wallet_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.wallet_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE Withdrawal::release_wallet_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.Withdrawal.wallet_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.wallet_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.wallet_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void Withdrawal::set_allocated_wallet_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.wallet_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.wallet_id_.IsDefault()) {
+    _impl_.wallet_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.Withdrawal.wallet_id)
+}
+
+// int64 amount = 3 [json_name = "amount"];
+inline void Withdrawal::clear_amount() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.amount_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+}
+inline ::int64_t Withdrawal::amount() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.Withdrawal.amount)
+  return _internal_amount();
+}
+inline void Withdrawal::set_amount(::int64_t value) {
+  _internal_set_amount(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.Withdrawal.amount)
+}
+inline ::int64_t Withdrawal::_internal_amount() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.amount_;
+}
+inline void Withdrawal::_internal_set_amount(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.amount_ = value;
+}
+
+// .gridx.billing.v1.WithdrawalStatus status = 4 [json_name = "status"];
+inline void Withdrawal::clear_status() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.status_ = 0;
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+}
+inline ::gridx::billing::v1::WithdrawalStatus Withdrawal::status() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.Withdrawal.status)
+  return _internal_status();
+}
+inline void Withdrawal::set_status(::gridx::billing::v1::WithdrawalStatus value) {
+  _internal_set_status(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.Withdrawal.status)
+}
+inline ::gridx::billing::v1::WithdrawalStatus Withdrawal::_internal_status() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return static_cast<::gridx::billing::v1::WithdrawalStatus>(_impl_.status_);
+}
+inline void Withdrawal::_internal_set_status(::gridx::billing::v1::WithdrawalStatus value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.status_ = value;
+}
+
+// .google.protobuf.Timestamp created_at = 5 [json_name = "createdAt"];
+inline bool Withdrawal::has_created_at() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000004U);
+  PROTOBUF_ASSUME(!value || _impl_.created_at_ != nullptr);
+  return value;
+}
+inline const ::google::protobuf::Timestamp& Withdrawal::_internal_created_at() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  const ::google::protobuf::Timestamp* p = _impl_.created_at_;
+  return p != nullptr ? *p : *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<::google::protobuf::Timestamp>(&::google::protobuf::Timestamp_globals_);
+}
+inline const ::google::protobuf::Timestamp& Withdrawal::created_at() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.Withdrawal.created_at)
+  return _internal_created_at();
+}
+inline void Withdrawal::unsafe_arena_set_allocated_created_at(
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.created_at_);
+  }
+  _impl_.created_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.billing.v1.Withdrawal.created_at)
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE Withdrawal::release_created_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::google::protobuf::Timestamp* released = _impl_.created_at_;
+  _impl_.created_at_ = nullptr;
+  if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
+    auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    if (GetArena() == nullptr) {
+      delete old;
+    }
+  } else {
+    if (GetArena() != nullptr) {
+      released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    }
+  }
+  return released;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE Withdrawal::unsafe_arena_release_created_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.Withdrawal.created_at)
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::google::protobuf::Timestamp* temp = _impl_.created_at_;
+  _impl_.created_at_ = nullptr;
+  return temp;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL Withdrawal::_internal_mutable_created_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.created_at_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::google::protobuf::Timestamp>(GetArena());
+    _impl_.created_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(p);
+  }
+  return _impl_.created_at_;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL Withdrawal::mutable_created_at()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::google::protobuf::Timestamp* _msg = _internal_mutable_created_at();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.Withdrawal.created_at)
+  return _msg;
+}
+inline void Withdrawal::set_allocated_created_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (message_arena == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.created_at_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::Message*>(value)->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  }
+
+  _impl_.created_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.Withdrawal.created_at)
+}
+
+// .google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];
+inline bool Withdrawal::has_updated_at() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000008U);
+  PROTOBUF_ASSUME(!value || _impl_.updated_at_ != nullptr);
+  return value;
+}
+inline const ::google::protobuf::Timestamp& Withdrawal::_internal_updated_at() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  const ::google::protobuf::Timestamp* p = _impl_.updated_at_;
+  return p != nullptr ? *p : *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<::google::protobuf::Timestamp>(&::google::protobuf::Timestamp_globals_);
+}
+inline const ::google::protobuf::Timestamp& Withdrawal::updated_at() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.Withdrawal.updated_at)
+  return _internal_updated_at();
+}
+inline void Withdrawal::unsafe_arena_set_allocated_updated_at(
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.updated_at_);
+  }
+  _impl_.updated_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.billing.v1.Withdrawal.updated_at)
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE Withdrawal::release_updated_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  ::google::protobuf::Timestamp* released = _impl_.updated_at_;
+  _impl_.updated_at_ = nullptr;
+  if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
+    auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    if (GetArena() == nullptr) {
+      delete old;
+    }
+  } else {
+    if (GetArena() != nullptr) {
+      released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    }
+  }
+  return released;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE Withdrawal::unsafe_arena_release_updated_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.Withdrawal.updated_at)
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  ::google::protobuf::Timestamp* temp = _impl_.updated_at_;
+  _impl_.updated_at_ = nullptr;
+  return temp;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL Withdrawal::_internal_mutable_updated_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.updated_at_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::google::protobuf::Timestamp>(GetArena());
+    _impl_.updated_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(p);
+  }
+  return _impl_.updated_at_;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL Withdrawal::mutable_updated_at()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  ::google::protobuf::Timestamp* _msg = _internal_mutable_updated_at();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.Withdrawal.updated_at)
+  return _msg;
+}
+inline void Withdrawal::set_allocated_updated_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (message_arena == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.updated_at_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::Message*>(value)->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+  }
+
+  _impl_.updated_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.Withdrawal.updated_at)
+}
+
+// -------------------------------------------------------------------
+
+// RequestWithdrawalRequest
+
+// string idempotency_key = 1 [json_name = "idempotencyKey"];
+inline void RequestWithdrawalRequest::clear_idempotency_key() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.idempotency_key_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& RequestWithdrawalRequest::idempotency_key() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.RequestWithdrawalRequest.idempotency_key)
+  return _internal_idempotency_key();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void RequestWithdrawalRequest::set_idempotency_key(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.idempotency_key_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.RequestWithdrawalRequest.idempotency_key)
+}
+inline ::std::string* PROTOBUF_NONNULL RequestWithdrawalRequest::mutable_idempotency_key()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_idempotency_key();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.RequestWithdrawalRequest.idempotency_key)
+  return _s;
+}
+inline const ::std::string& RequestWithdrawalRequest::_internal_idempotency_key() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.idempotency_key_.Get();
+}
+inline void RequestWithdrawalRequest::_internal_set_idempotency_key(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.idempotency_key_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL RequestWithdrawalRequest::_internal_mutable_idempotency_key() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.idempotency_key_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE RequestWithdrawalRequest::release_idempotency_key() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.RequestWithdrawalRequest.idempotency_key)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.idempotency_key_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.idempotency_key_.Set("", GetArena());
+  }
+  return released;
+}
+inline void RequestWithdrawalRequest::set_allocated_idempotency_key(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.idempotency_key_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.idempotency_key_.IsDefault()) {
+    _impl_.idempotency_key_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.RequestWithdrawalRequest.idempotency_key)
+}
+
+// int64 amount = 2 [json_name = "amount"];
+inline void RequestWithdrawalRequest::clear_amount() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.amount_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+}
+inline ::int64_t RequestWithdrawalRequest::amount() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.RequestWithdrawalRequest.amount)
+  return _internal_amount();
+}
+inline void RequestWithdrawalRequest::set_amount(::int64_t value) {
+  _internal_set_amount(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.RequestWithdrawalRequest.amount)
+}
+inline ::int64_t RequestWithdrawalRequest::_internal_amount() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.amount_;
+}
+inline void RequestWithdrawalRequest::_internal_set_amount(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.amount_ = value;
+}
+
+// bytes destination_json = 3 [json_name = "destinationJson"];
+inline void RequestWithdrawalRequest::clear_destination_json() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.destination_json_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline const ::std::string& RequestWithdrawalRequest::destination_json() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.RequestWithdrawalRequest.destination_json)
+  return _internal_destination_json();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void RequestWithdrawalRequest::set_destination_json(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.destination_json_.SetBytes(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.RequestWithdrawalRequest.destination_json)
+}
+inline ::std::string* PROTOBUF_NONNULL RequestWithdrawalRequest::mutable_destination_json()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_destination_json();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.RequestWithdrawalRequest.destination_json)
+  return _s;
+}
+inline const ::std::string& RequestWithdrawalRequest::_internal_destination_json() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.destination_json_.Get();
+}
+inline void RequestWithdrawalRequest::_internal_set_destination_json(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.destination_json_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL RequestWithdrawalRequest::_internal_mutable_destination_json() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.destination_json_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE RequestWithdrawalRequest::release_destination_json() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.RequestWithdrawalRequest.destination_json)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.destination_json_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.destination_json_.Set("", GetArena());
+  }
+  return released;
+}
+inline void RequestWithdrawalRequest::set_allocated_destination_json(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.destination_json_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.destination_json_.IsDefault()) {
+    _impl_.destination_json_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.RequestWithdrawalRequest.destination_json)
+}
+
+// -------------------------------------------------------------------
+
+// RequestWithdrawalResponse
+
+// .gridx.billing.v1.Withdrawal withdrawal = 1 [json_name = "withdrawal"];
+inline bool RequestWithdrawalResponse::has_withdrawal() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000001U);
+  PROTOBUF_ASSUME(!value || _impl_.withdrawal_ != nullptr);
+  return value;
+}
+inline void RequestWithdrawalResponse::clear_withdrawal() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.withdrawal_ != nullptr) _impl_.withdrawal_->Clear();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::gridx::billing::v1::Withdrawal& RequestWithdrawalResponse::_internal_withdrawal() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  const ::gridx::billing::v1::Withdrawal* p = _impl_.withdrawal_;
+  return p != nullptr ? *p : *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<::gridx::billing::v1::Withdrawal>(&::gridx::billing::v1::Withdrawal_globals_);
+}
+inline const ::gridx::billing::v1::Withdrawal& RequestWithdrawalResponse::withdrawal() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.RequestWithdrawalResponse.withdrawal)
+  return _internal_withdrawal();
+}
+inline void RequestWithdrawalResponse::unsafe_arena_set_allocated_withdrawal(
+    ::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.withdrawal_);
+  }
+  _impl_.withdrawal_ = reinterpret_cast<::gridx::billing::v1::Withdrawal*>(value);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.billing.v1.RequestWithdrawalResponse.withdrawal)
+}
+inline ::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE RequestWithdrawalResponse::release_withdrawal() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::gridx::billing::v1::Withdrawal* released = _impl_.withdrawal_;
+  _impl_.withdrawal_ = nullptr;
+  if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
+    auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    if (GetArena() == nullptr) {
+      delete old;
+    }
+  } else {
+    if (GetArena() != nullptr) {
+      released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    }
+  }
+  return released;
+}
+inline ::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE RequestWithdrawalResponse::unsafe_arena_release_withdrawal() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.RequestWithdrawalResponse.withdrawal)
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::gridx::billing::v1::Withdrawal* temp = _impl_.withdrawal_;
+  _impl_.withdrawal_ = nullptr;
+  return temp;
+}
+inline ::gridx::billing::v1::Withdrawal* PROTOBUF_NONNULL RequestWithdrawalResponse::_internal_mutable_withdrawal() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.withdrawal_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::gridx::billing::v1::Withdrawal>(GetArena());
+    _impl_.withdrawal_ = reinterpret_cast<::gridx::billing::v1::Withdrawal*>(p);
+  }
+  return _impl_.withdrawal_;
+}
+inline ::gridx::billing::v1::Withdrawal* PROTOBUF_NONNULL RequestWithdrawalResponse::mutable_withdrawal()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::gridx::billing::v1::Withdrawal* _msg = _internal_mutable_withdrawal();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.RequestWithdrawalResponse.withdrawal)
+  return _msg;
+}
+inline void RequestWithdrawalResponse::set_allocated_withdrawal(::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (message_arena == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.withdrawal_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = value->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+
+  _impl_.withdrawal_ = reinterpret_cast<::gridx::billing::v1::Withdrawal*>(value);
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.RequestWithdrawalResponse.withdrawal)
+}
+
+// -------------------------------------------------------------------
+
+// CancelWithdrawalRequest
+
+// string withdrawal_id = 1 [json_name = "withdrawalId"];
+inline void CancelWithdrawalRequest::clear_withdrawal_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.withdrawal_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& CancelWithdrawalRequest::withdrawal_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.CancelWithdrawalRequest.withdrawal_id)
+  return _internal_withdrawal_id();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void CancelWithdrawalRequest::set_withdrawal_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.withdrawal_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.CancelWithdrawalRequest.withdrawal_id)
+}
+inline ::std::string* PROTOBUF_NONNULL CancelWithdrawalRequest::mutable_withdrawal_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_withdrawal_id();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.CancelWithdrawalRequest.withdrawal_id)
+  return _s;
+}
+inline const ::std::string& CancelWithdrawalRequest::_internal_withdrawal_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.withdrawal_id_.Get();
+}
+inline void CancelWithdrawalRequest::_internal_set_withdrawal_id(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.withdrawal_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL CancelWithdrawalRequest::_internal_mutable_withdrawal_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.withdrawal_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE CancelWithdrawalRequest::release_withdrawal_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.CancelWithdrawalRequest.withdrawal_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.withdrawal_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.withdrawal_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void CancelWithdrawalRequest::set_allocated_withdrawal_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.withdrawal_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.withdrawal_id_.IsDefault()) {
+    _impl_.withdrawal_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.CancelWithdrawalRequest.withdrawal_id)
+}
+
+// -------------------------------------------------------------------
+
+// CancelWithdrawalResponse
+
+// .gridx.billing.v1.Withdrawal withdrawal = 1 [json_name = "withdrawal"];
+inline bool CancelWithdrawalResponse::has_withdrawal() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000001U);
+  PROTOBUF_ASSUME(!value || _impl_.withdrawal_ != nullptr);
+  return value;
+}
+inline void CancelWithdrawalResponse::clear_withdrawal() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.withdrawal_ != nullptr) _impl_.withdrawal_->Clear();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::gridx::billing::v1::Withdrawal& CancelWithdrawalResponse::_internal_withdrawal() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  const ::gridx::billing::v1::Withdrawal* p = _impl_.withdrawal_;
+  return p != nullptr ? *p : *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<::gridx::billing::v1::Withdrawal>(&::gridx::billing::v1::Withdrawal_globals_);
+}
+inline const ::gridx::billing::v1::Withdrawal& CancelWithdrawalResponse::withdrawal() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.CancelWithdrawalResponse.withdrawal)
+  return _internal_withdrawal();
+}
+inline void CancelWithdrawalResponse::unsafe_arena_set_allocated_withdrawal(
+    ::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.withdrawal_);
+  }
+  _impl_.withdrawal_ = reinterpret_cast<::gridx::billing::v1::Withdrawal*>(value);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.billing.v1.CancelWithdrawalResponse.withdrawal)
+}
+inline ::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE CancelWithdrawalResponse::release_withdrawal() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::gridx::billing::v1::Withdrawal* released = _impl_.withdrawal_;
+  _impl_.withdrawal_ = nullptr;
+  if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
+    auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    if (GetArena() == nullptr) {
+      delete old;
+    }
+  } else {
+    if (GetArena() != nullptr) {
+      released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    }
+  }
+  return released;
+}
+inline ::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE CancelWithdrawalResponse::unsafe_arena_release_withdrawal() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.CancelWithdrawalResponse.withdrawal)
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::gridx::billing::v1::Withdrawal* temp = _impl_.withdrawal_;
+  _impl_.withdrawal_ = nullptr;
+  return temp;
+}
+inline ::gridx::billing::v1::Withdrawal* PROTOBUF_NONNULL CancelWithdrawalResponse::_internal_mutable_withdrawal() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.withdrawal_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::gridx::billing::v1::Withdrawal>(GetArena());
+    _impl_.withdrawal_ = reinterpret_cast<::gridx::billing::v1::Withdrawal*>(p);
+  }
+  return _impl_.withdrawal_;
+}
+inline ::gridx::billing::v1::Withdrawal* PROTOBUF_NONNULL CancelWithdrawalResponse::mutable_withdrawal()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::gridx::billing::v1::Withdrawal* _msg = _internal_mutable_withdrawal();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.CancelWithdrawalResponse.withdrawal)
+  return _msg;
+}
+inline void CancelWithdrawalResponse::set_allocated_withdrawal(::gridx::billing::v1::Withdrawal* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (message_arena == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.withdrawal_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = value->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+
+  _impl_.withdrawal_ = reinterpret_cast<::gridx::billing::v1::Withdrawal*>(value);
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.CancelWithdrawalResponse.withdrawal)
+}
+
+// -------------------------------------------------------------------
+
+// ListWithdrawalsRequest
+
+// int32 page_size = 1 [json_name = "pageSize"];
+inline void ListWithdrawalsRequest::clear_page_size() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.page_size_ = 0;
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline ::int32_t ListWithdrawalsRequest::page_size() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.ListWithdrawalsRequest.page_size)
+  return _internal_page_size();
+}
+inline void ListWithdrawalsRequest::set_page_size(::int32_t value) {
+  _internal_set_page_size(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.ListWithdrawalsRequest.page_size)
+}
+inline ::int32_t ListWithdrawalsRequest::_internal_page_size() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.page_size_;
+}
+inline void ListWithdrawalsRequest::_internal_set_page_size(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.page_size_ = value;
+}
+
+// string page_token = 2 [json_name = "pageToken"];
+inline void ListWithdrawalsRequest::clear_page_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.page_token_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& ListWithdrawalsRequest::page_token() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.ListWithdrawalsRequest.page_token)
+  return _internal_page_token();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void ListWithdrawalsRequest::set_page_token(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.page_token_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.ListWithdrawalsRequest.page_token)
+}
+inline ::std::string* PROTOBUF_NONNULL ListWithdrawalsRequest::mutable_page_token()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_page_token();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.ListWithdrawalsRequest.page_token)
+  return _s;
+}
+inline const ::std::string& ListWithdrawalsRequest::_internal_page_token() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.page_token_.Get();
+}
+inline void ListWithdrawalsRequest::_internal_set_page_token(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.page_token_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL ListWithdrawalsRequest::_internal_mutable_page_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.page_token_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE ListWithdrawalsRequest::release_page_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.ListWithdrawalsRequest.page_token)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.page_token_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.page_token_.Set("", GetArena());
+  }
+  return released;
+}
+inline void ListWithdrawalsRequest::set_allocated_page_token(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.page_token_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.page_token_.IsDefault()) {
+    _impl_.page_token_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.ListWithdrawalsRequest.page_token)
+}
+
+// -------------------------------------------------------------------
+
+// ListWithdrawalsResponse
+
+// repeated .gridx.billing.v1.Withdrawal withdrawals = 1 [json_name = "withdrawals"];
+inline int ListWithdrawalsResponse::_internal_withdrawals_size() const {
+  return _internal_withdrawals().size();
+}
+inline int ListWithdrawalsResponse::withdrawals_size() const {
+  return _internal_withdrawals_size();
+}
+inline void ListWithdrawalsResponse::clear_withdrawals() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.withdrawals_.Clear();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::gridx::billing::v1::Withdrawal& ListWithdrawalsResponse::withdrawals(int index) const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.ListWithdrawalsResponse.withdrawals)
+  return _internal_withdrawals().Get(index);
+}
+inline ::gridx::billing::v1::Withdrawal* PROTOBUF_NONNULL ListWithdrawalsResponse::mutable_withdrawals(int index)
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.ListWithdrawalsResponse.withdrawals)
+  return _internal_mutable_withdrawals()->Mutable(index);
+}
+inline ::gridx::billing::v1::Withdrawal* PROTOBUF_NONNULL ListWithdrawalsResponse::add_withdrawals()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::gridx::billing::v1::Withdrawal* _add =
+      _internal_mutable_withdrawals()->InternalAddWithArena(
+          ::google::protobuf::MessageLite::internal_visibility(), GetArena());
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  // @@protoc_insertion_point(field_add:gridx.billing.v1.ListWithdrawalsResponse.withdrawals)
+  return _add;
+}
+inline const ::google::protobuf::RepeatedPtrField<::gridx::billing::v1::Withdrawal>& ListWithdrawalsResponse::withdrawals() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_list:gridx.billing.v1.ListWithdrawalsResponse.withdrawals)
+  return _internal_withdrawals();
+}
+inline ::google::protobuf::RepeatedPtrField<::gridx::billing::v1::Withdrawal>* PROTOBUF_NONNULL
+ListWithdrawalsResponse::mutable_withdrawals() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  // @@protoc_insertion_point(field_mutable_list:gridx.billing.v1.ListWithdrawalsResponse.withdrawals)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _internal_mutable_withdrawals();
+}
+inline const ::google::protobuf::RepeatedPtrField<::gridx::billing::v1::Withdrawal>&
+ListWithdrawalsResponse::_internal_withdrawals() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.withdrawals_;
+}
+inline ::google::protobuf::RepeatedPtrField<::gridx::billing::v1::Withdrawal>* PROTOBUF_NONNULL
+ListWithdrawalsResponse::_internal_mutable_withdrawals() {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return &_impl_.withdrawals_;
+}
+
+// string next_page_token = 2 [json_name = "nextPageToken"];
+inline void ListWithdrawalsResponse::clear_next_page_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.next_page_token_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline const ::std::string& ListWithdrawalsResponse::next_page_token() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.ListWithdrawalsResponse.next_page_token)
+  return _internal_next_page_token();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void ListWithdrawalsResponse::set_next_page_token(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.next_page_token_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.ListWithdrawalsResponse.next_page_token)
+}
+inline ::std::string* PROTOBUF_NONNULL ListWithdrawalsResponse::mutable_next_page_token()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_next_page_token();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.ListWithdrawalsResponse.next_page_token)
+  return _s;
+}
+inline const ::std::string& ListWithdrawalsResponse::_internal_next_page_token() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.next_page_token_.Get();
+}
+inline void ListWithdrawalsResponse::_internal_set_next_page_token(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.next_page_token_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL ListWithdrawalsResponse::_internal_mutable_next_page_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.next_page_token_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE ListWithdrawalsResponse::release_next_page_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.ListWithdrawalsResponse.next_page_token)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.next_page_token_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.next_page_token_.Set("", GetArena());
+  }
+  return released;
+}
+inline void ListWithdrawalsResponse::set_allocated_next_page_token(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.next_page_token_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.next_page_token_.IsDefault()) {
+    _impl_.next_page_token_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.ListWithdrawalsResponse.next_page_token)
+}
+
+// -------------------------------------------------------------------
+
+// ListTransactionsRequest
+
+// int32 page_size = 1 [json_name = "pageSize"];
+inline void ListTransactionsRequest::clear_page_size() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.page_size_ = 0;
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline ::int32_t ListTransactionsRequest::page_size() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.ListTransactionsRequest.page_size)
+  return _internal_page_size();
+}
+inline void ListTransactionsRequest::set_page_size(::int32_t value) {
+  _internal_set_page_size(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.ListTransactionsRequest.page_size)
+}
+inline ::int32_t ListTransactionsRequest::_internal_page_size() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.page_size_;
+}
+inline void ListTransactionsRequest::_internal_set_page_size(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.page_size_ = value;
+}
+
+// string page_token = 2 [json_name = "pageToken"];
+inline void ListTransactionsRequest::clear_page_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.page_token_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& ListTransactionsRequest::page_token() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.ListTransactionsRequest.page_token)
+  return _internal_page_token();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void ListTransactionsRequest::set_page_token(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.page_token_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.ListTransactionsRequest.page_token)
+}
+inline ::std::string* PROTOBUF_NONNULL ListTransactionsRequest::mutable_page_token()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_page_token();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.ListTransactionsRequest.page_token)
+  return _s;
+}
+inline const ::std::string& ListTransactionsRequest::_internal_page_token() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.page_token_.Get();
+}
+inline void ListTransactionsRequest::_internal_set_page_token(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.page_token_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL ListTransactionsRequest::_internal_mutable_page_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.page_token_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE ListTransactionsRequest::release_page_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.ListTransactionsRequest.page_token)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.page_token_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.page_token_.Set("", GetArena());
+  }
+  return released;
+}
+inline void ListTransactionsRequest::set_allocated_page_token(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.page_token_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.page_token_.IsDefault()) {
+    _impl_.page_token_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.ListTransactionsRequest.page_token)
+}
+
+// -------------------------------------------------------------------
+
+// TransactionItem
+
+// int64 entry_id = 1 [json_name = "entryId"];
+inline void TransactionItem::clear_entry_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.entry_id_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000008U);
+}
+inline ::int64_t TransactionItem::entry_id() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.TransactionItem.entry_id)
+  return _internal_entry_id();
+}
+inline void TransactionItem::set_entry_id(::int64_t value) {
+  _internal_set_entry_id(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000008U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.TransactionItem.entry_id)
+}
+inline ::int64_t TransactionItem::_internal_entry_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.entry_id_;
+}
+inline void TransactionItem::_internal_set_entry_id(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.entry_id_ = value;
+}
+
+// string journal_id = 2 [json_name = "journalId"];
+inline void TransactionItem::clear_journal_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.journal_id_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& TransactionItem::journal_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.TransactionItem.journal_id)
+  return _internal_journal_id();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void TransactionItem::set_journal_id(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.journal_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.TransactionItem.journal_id)
+}
+inline ::std::string* PROTOBUF_NONNULL TransactionItem::mutable_journal_id()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_journal_id();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.TransactionItem.journal_id)
+  return _s;
+}
+inline const ::std::string& TransactionItem::_internal_journal_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.journal_id_.Get();
+}
+inline void TransactionItem::_internal_set_journal_id(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.journal_id_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL TransactionItem::_internal_mutable_journal_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.journal_id_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE TransactionItem::release_journal_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.TransactionItem.journal_id)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.journal_id_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.journal_id_.Set("", GetArena());
+  }
+  return released;
+}
+inline void TransactionItem::set_allocated_journal_id(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.journal_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.journal_id_.IsDefault()) {
+    _impl_.journal_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.TransactionItem.journal_id)
+}
+
+// string type = 3 [json_name = "type"];
+inline void TransactionItem::clear_type() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.type_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline const ::std::string& TransactionItem::type() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.TransactionItem.type)
+  return _internal_type();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void TransactionItem::set_type(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.type_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.TransactionItem.type)
+}
+inline ::std::string* PROTOBUF_NONNULL TransactionItem::mutable_type()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_type();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.TransactionItem.type)
+  return _s;
+}
+inline const ::std::string& TransactionItem::_internal_type() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.type_.Get();
+}
+inline void TransactionItem::_internal_set_type(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.type_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL TransactionItem::_internal_mutable_type() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.type_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE TransactionItem::release_type() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.TransactionItem.type)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.type_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.type_.Set("", GetArena());
+  }
+  return released;
+}
+inline void TransactionItem::set_allocated_type(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.type_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.type_.IsDefault()) {
+    _impl_.type_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.TransactionItem.type)
+}
+
+// int64 amount = 4 [json_name = "amount"];
+inline void TransactionItem::clear_amount() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.amount_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000010U);
+}
+inline ::int64_t TransactionItem::amount() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.TransactionItem.amount)
+  return _internal_amount();
+}
+inline void TransactionItem::set_amount(::int64_t value) {
+  _internal_set_amount(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000010U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.TransactionItem.amount)
+}
+inline ::int64_t TransactionItem::_internal_amount() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.amount_;
+}
+inline void TransactionItem::_internal_set_amount(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.amount_ = value;
+}
+
+// int64 balance_after = 5 [json_name = "balanceAfter"];
+inline void TransactionItem::clear_balance_after() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.balance_after_ = ::int64_t{0};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000020U);
+}
+inline ::int64_t TransactionItem::balance_after() const {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.TransactionItem.balance_after)
+  return _internal_balance_after();
+}
+inline void TransactionItem::set_balance_after(::int64_t value) {
+  _internal_set_balance_after(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000020U);
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.TransactionItem.balance_after)
+}
+inline ::int64_t TransactionItem::_internal_balance_after() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.balance_after_;
+}
+inline void TransactionItem::_internal_set_balance_after(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.balance_after_ = value;
+}
+
+// .google.protobuf.Timestamp created_at = 6 [json_name = "createdAt"];
+inline bool TransactionItem::has_created_at() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000004U);
+  PROTOBUF_ASSUME(!value || _impl_.created_at_ != nullptr);
+  return value;
+}
+inline const ::google::protobuf::Timestamp& TransactionItem::_internal_created_at() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  const ::google::protobuf::Timestamp* p = _impl_.created_at_;
+  return p != nullptr ? *p : *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<::google::protobuf::Timestamp>(&::google::protobuf::Timestamp_globals_);
+}
+inline const ::google::protobuf::Timestamp& TransactionItem::created_at() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.TransactionItem.created_at)
+  return _internal_created_at();
+}
+inline void TransactionItem::unsafe_arena_set_allocated_created_at(
+    ::google::protobuf::Timestamp* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.created_at_);
+  }
+  _impl_.created_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:gridx.billing.v1.TransactionItem.created_at)
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE TransactionItem::release_created_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::google::protobuf::Timestamp* released = _impl_.created_at_;
+  _impl_.created_at_ = nullptr;
+  if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
+    auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    if (GetArena() == nullptr) {
+      delete old;
+    }
+  } else {
+    if (GetArena() != nullptr) {
+      released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+    }
+  }
+  return released;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NULLABLE TransactionItem::unsafe_arena_release_created_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.TransactionItem.created_at)
+
+  ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::google::protobuf::Timestamp* temp = _impl_.created_at_;
+  _impl_.created_at_ = nullptr;
+  return temp;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL TransactionItem::_internal_mutable_created_at() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.created_at_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::google::protobuf::Timestamp>(GetArena());
+    _impl_.created_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(p);
+  }
+  return _impl_.created_at_;
+}
+inline ::google::protobuf::Timestamp* PROTOBUF_NONNULL TransactionItem::mutable_created_at()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  ::google::protobuf::Timestamp* _msg = _internal_mutable_created_at();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.TransactionItem.created_at)
+  return _msg;
+}
+inline void TransactionItem::set_allocated_created_at(::google::protobuf::Timestamp* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (message_arena == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.created_at_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::Message*>(value)->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    SetHasBit(_impl_._has_bits_[0], 0x00000004U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000004U);
+  }
+
+  _impl_.created_at_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.TransactionItem.created_at)
+}
+
+// -------------------------------------------------------------------
+
+// ListTransactionsResponse
+
+// repeated .gridx.billing.v1.TransactionItem transactions = 1 [json_name = "transactions"];
+inline int ListTransactionsResponse::_internal_transactions_size() const {
+  return _internal_transactions().size();
+}
+inline int ListTransactionsResponse::transactions_size() const {
+  return _internal_transactions_size();
+}
+inline void ListTransactionsResponse::clear_transactions() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.transactions_.Clear();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::gridx::billing::v1::TransactionItem& ListTransactionsResponse::transactions(int index) const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.ListTransactionsResponse.transactions)
+  return _internal_transactions().Get(index);
+}
+inline ::gridx::billing::v1::TransactionItem* PROTOBUF_NONNULL ListTransactionsResponse::mutable_transactions(int index)
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.ListTransactionsResponse.transactions)
+  return _internal_mutable_transactions()->Mutable(index);
+}
+inline ::gridx::billing::v1::TransactionItem* PROTOBUF_NONNULL ListTransactionsResponse::add_transactions()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::gridx::billing::v1::TransactionItem* _add =
+      _internal_mutable_transactions()->InternalAddWithArena(
+          ::google::protobuf::MessageLite::internal_visibility(), GetArena());
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  // @@protoc_insertion_point(field_add:gridx.billing.v1.ListTransactionsResponse.transactions)
+  return _add;
+}
+inline const ::google::protobuf::RepeatedPtrField<::gridx::billing::v1::TransactionItem>& ListTransactionsResponse::transactions() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_list:gridx.billing.v1.ListTransactionsResponse.transactions)
+  return _internal_transactions();
+}
+inline ::google::protobuf::RepeatedPtrField<::gridx::billing::v1::TransactionItem>* PROTOBUF_NONNULL
+ListTransactionsResponse::mutable_transactions() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  // @@protoc_insertion_point(field_mutable_list:gridx.billing.v1.ListTransactionsResponse.transactions)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _internal_mutable_transactions();
+}
+inline const ::google::protobuf::RepeatedPtrField<::gridx::billing::v1::TransactionItem>&
+ListTransactionsResponse::_internal_transactions() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.transactions_;
+}
+inline ::google::protobuf::RepeatedPtrField<::gridx::billing::v1::TransactionItem>* PROTOBUF_NONNULL
+ListTransactionsResponse::_internal_mutable_transactions() {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return &_impl_.transactions_;
+}
+
+// string next_page_token = 2 [json_name = "nextPageToken"];
+inline void ListTransactionsResponse::clear_next_page_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.next_page_token_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline const ::std::string& ListTransactionsResponse::next_page_token() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:gridx.billing.v1.ListTransactionsResponse.next_page_token)
+  return _internal_next_page_token();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void ListTransactionsResponse::set_next_page_token(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  _impl_.next_page_token_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:gridx.billing.v1.ListTransactionsResponse.next_page_token)
+}
+inline ::std::string* PROTOBUF_NONNULL ListTransactionsResponse::mutable_next_page_token()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  ::std::string* _s = _internal_mutable_next_page_token();
+  // @@protoc_insertion_point(field_mutable:gridx.billing.v1.ListTransactionsResponse.next_page_token)
+  return _s;
+}
+inline const ::std::string& ListTransactionsResponse::_internal_next_page_token() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.next_page_token_.Get();
+}
+inline void ListTransactionsResponse::_internal_set_next_page_token(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.next_page_token_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL ListTransactionsResponse::_internal_mutable_next_page_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.next_page_token_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE ListTransactionsResponse::release_next_page_token() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:gridx.billing.v1.ListTransactionsResponse.next_page_token)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  auto* released = _impl_.next_page_token_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.next_page_token_.Set("", GetArena());
+  }
+  return released;
+}
+inline void ListTransactionsResponse::set_allocated_next_page_token(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+  }
+  _impl_.next_page_token_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.next_page_token_.IsDefault()) {
+    _impl_.next_page_token_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:gridx.billing.v1.ListTransactionsResponse.next_page_token)
+}
+
 #ifdef __GNUC__
 #pragma GCC diagnostic pop
 #endif  // __GNUC__
@@ -1239,6 +8167,18 @@ struct is_proto_enum<::gridx::billing::v1::WalletStatus> : std::true_type {};
 template <>
 inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::gridx::billing::v1::WalletStatus>() {
   return ::gridx::billing::v1::WalletStatus_descriptor();
+}
+template <>
+struct is_proto_enum<::gridx::billing::v1::DepositStatus> : std::true_type {};
+template <>
+inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::gridx::billing::v1::DepositStatus>() {
+  return ::gridx::billing::v1::DepositStatus_descriptor();
+}
+template <>
+struct is_proto_enum<::gridx::billing::v1::WithdrawalStatus> : std::true_type {};
+template <>
+inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::gridx::billing::v1::WithdrawalStatus>() {
+  return ::gridx::billing::v1::WithdrawalStatus_descriptor();
 }
 
 }  // namespace protobuf
